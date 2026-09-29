@@ -7,3 +7,4 @@ logger = logging.getLogger("tinytroupe")
 ###########################################################################
 from .agents import *
 from .loaders import *
+from .shared_housing import *
