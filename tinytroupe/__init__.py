@@ -438,6 +438,16 @@ if config_manager.get("api_type") == "azure":
         api_version=config_manager.get("azure_embedding_model_api_version"),
         embed_batch_size=10,
     )
+elif config_manager.get("api_type") == "openrouter":
+    llamaindex_openai_embed_model = OpenAIEmbedding(
+        # LlamaIndex validates ``model`` against OpenAI's unprefixed enum,
+        # while ``model_name`` is the actual slug sent to OpenRouter.
+        model="text-embedding-3-small",
+        model_name=config_manager.get("embedding_model"),
+        embed_batch_size=10,
+        api_key=os.getenv("OPENROUTER_API_KEY"),
+        api_base=config_manager.get("base_url") or "https://openrouter.ai/api/v1",
+    )
 else:
     llamaindex_openai_embed_model = OpenAIEmbedding(
         model=config_manager.get("embedding_model"), embed_batch_size=10

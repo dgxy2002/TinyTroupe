@@ -203,14 +203,19 @@ You can find other examples in the [examples/](./examples/) folder.
 To run the library, you need:
   - Python 3.10 or higher. We'll assume you are using [Anaconda](https://docs.anaconda.com/anaconda/install/), but you can use other Python distributions.
   - [Git](https://git-scm.com/downloads) for cloning the repository and for installing the library via `pip`.
-  - Access to Azure OpenAI Service or Open AI GPT-4 APIs. You can get access to the Azure OpenAI Service [here](https://azure.microsoft.com/en-us/products/ai-services/openai-service), and to the OpenAI API [here](https://platform.openai.com/). 
+  - Access to Azure OpenAI Service, OpenAI, or OpenRouter. You can get access to the Azure OpenAI Service [here](https://azure.microsoft.com/en-us/products/ai-services/openai-service), to the OpenAI API [here](https://platform.openai.com/), and to OpenRouter [here](https://openrouter.ai/).
       * For Azure OpenAI Service, you will need to set the `AZURE_OPENAI_KEY` and `AZURE_OPENAI_ENDPOINT` environment variables to your API key and endpoint, respectively.
       * For OpenAI, you will need to set the `OPENAI_API_KEY` environment variable to your API key.
+      * For OpenRouter, set `TINY_TROUPE_API_TYPE=openrouter`, `OPENROUTER_API_KEY`, and `OPENROUTER_MODEL` in `.env`; see the [OpenRouter guide](./docs/guides/openrouter.md).
       * For example, on Linux/macOS: `export OPENAI_API_KEY=your-key-here`, or on Windows (PowerShell): `$env:OPENAI_API_KEY="your-key-here"`. To persist it, add it to your shell profile or use `setx OPENAI_API_KEY "your-key-here"` on Windows.
   - By default, TinyTroupe `config.ini` is set to use OpenAI API with `gpt-5-mini` as the main model. The previous default (`gpt-4.1-mini`) is now considered legacy but is still expected to work. You can customize these values by including your own `config.ini` file in the same folder as the program or notebook you are running. An example of a `config.ini` file is provided in the [examples/](./examples/) folder.
 
 >[!IMPORTANT]
 > **Content Filters**: To ensure no harmful content is generated during simulations, it is strongly recommended to use content filters whenever available at the API level. In particular, **if using Azure OpenAI, there's extensive support for content moderation, and we urge you to use it.** For details about how to do so, please consult [the corresponding Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/content-filter). If content filters are in place, and an API call is rejected by them, the library will raise an exception, as it will be unable to proceed with the simulation at that point.
+
+### OpenRouter Support
+
+OpenRouter is supported through its OpenAI-compatible chat and embeddings APIs. See [OpenRouter Support](./docs/guides/openrouter.md) for `.env` setup and model switching.
 
 ### Ollama Support
 TinyTroupe is developed primarily with OpenAI models and compatible endpoints in mind, in order to simplify development and focus on making the best use of specific models, instead of investing time to try to make it work well with any model (which might not be feasible anyway). **So, if you can, please use OpenAI models and compatible endpoints.** That said, there's significant community demand for local model support, so we are now experimenting with making this available via partial [Ollama](https://ollama.com/) support and the help of community contributors. Furtheremore, another reason to use local models would be to do research in custom models designed specifically for persona simulation -- ultimately, this might be the best reason to support such a feature. In any case, this is not currently a priority for the core team, though we are doing what we can to allow this possibility. 
@@ -231,7 +236,7 @@ See [Ollama Support](./docs/guides/ollama.md) for details on how to use Ollama w
       ```bash
       conda activate tinytroupe
       ```
-4. Make sure you have either Azure OpenAI or OpenAI API keys set as environment variables, as described in the [Pre-requisites](#pre-requisites) section.
+4. Make sure you have an Azure OpenAI, OpenAI, or OpenRouter API key configured as described in the [Pre-requisites](#pre-requisites) section.
 5. Use `pip` to install the library **directly from this repository** (we **will not install from PyPI**):
    ```bash
    pip install git+https://github.com/microsoft/TinyTroupe.git@main

@@ -5,6 +5,7 @@ from tinytroupe import config_manager, utils
 from .azure_client import AzureClient
 from .ollama_client import OllamaClient
 from .openai_client import LLMCacheBase, OpenAIClient
+from .openrouter_client import OpenRouterClient
 
 logger = logging.getLogger("tinytroupe")
 
@@ -35,7 +36,7 @@ class NonTerminalError(Exception):
 # We can have potentially different clients, so we need a place to
 # register them and retrieve them when needed.
 #
-# We support both OpenAI and Azure OpenAI Service API by default.
+# We support OpenAI, Azure OpenAI Service, OpenRouter, and Ollama by default.
 # Thus, we need to set the API parameters based on the choice of the user.
 # This is done within specialized classes.
 #
@@ -117,4 +118,5 @@ def force_api_cache(cache_api_calls, cache_file_name=None):
 # default client
 register_client("openai", OpenAIClient())
 register_client("azure", AzureClient())
+register_client("openrouter", OpenRouterClient())
 register_client("ollama", OllamaClient())

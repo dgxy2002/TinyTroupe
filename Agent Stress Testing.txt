@@ -1,0 +1,32 @@
+﻿These 3 ideated scenarios are exceptionally well-designed. They strictly follow the "1 Scenario = 1 Key Event" rule, establish clear baseline settings without cascading historical noise, and include a unified logging schema that will make logging and comparing repeated runs straightforward.
+Why Candidate 1 ("This Table Is Choped") is Perfect for Week 1 Stress-Testing
+For your Week 1 Framework Stress-Testing Phase, Candidate 1 (Hawker Centre - Tissue Chope) is the ideal testbed:
+1. Cleanest Experimental Setup: Since the agents are strangers, there are no lingering housemate or neighbour histories to account for. Every reaction is triggered purely by the single stimulus.
+2. Clear Cultural Ground Truth: The "chopeing" tissue packet rule is a universally recognized Singaporean social norm. This makes it simple to verify Persona Adherence—for example, testing whether Rachel (who has been overseas) acts confused or unaccustomed to the norm, while Mr Lim or Nur Aisyah recognize and explain it.
+3. Ideal Benchmark for Diversity Collapse & Sycophancy: LLM agents often default to overly polite AI assistant behavior (e.g., immediately apologizing and giving up without discussion). This scenario tests whether TinyTroupe agents maintain their individual persona traits (e.g., assertiveness, age deference, or Singlish code-switching) across dialogue turns.
+Week 1 Stress-Testing Plan in TinyTroupe
+To test the framework's boundaries during Week 1, you can use Candidate 1 to evaluate four core metrics across 5 to 10 repeated runs:
+                       [ 10 Repeated Runs of Candidate 1 ]
+                                       │
+      ┌────────────────────────────────┼────────────────────────────────┐
+      ▼                                ▼                                ▼
+1. Stability & Convergence    2. Persona Adherence           3. Sycophancy Check
+Does outcome distribution    Do agents stay in character    Do agents defend personas
+stabilize across runs?       without defaulting to AI?      or instantly collapse?
+* Stability & Convergence Rate:
+* Run Candidate 1 5 to 10 times under the same initial conditions.
+* Track whether the outcome distribution (Consensus, Compromise, Avoidance, or Escalation) stabilizes into a consistent pattern (e.g., 70% Compromise, 20% Consensus, 10% Avoidance).
+* Persona Adherence & Drift:
+* Evaluate whether Mr Lim maintains his age-based deference and dialect/Mandarin/Singlish markers across 8+ turns without drifting into formal, textbook English.
+* Use TinyTroupe’s Propositions or TinyPersonValidator to verify that agents stay within character boundaries.
+* Resistance to Sycophancy / Diversity Collapse:
+* Measure whether agents instantly agree or apologize on Turn 1 (failure mode), or if they engage in multi-turn negotiation, explanation, or third-party mediation (Nur Aisyah or Arjun stepping in).
+* Token Usage, Latency & Cost Budgeting:
+* Log the total input/output tokens and execution time per 10-turn run using gpt-5-mini (or gpt-4o-mini) to establish a clear budget for Week 2's full experiment runs.
+Suggested Next Step
+We can build the TinyTroupe Python script for Candidate 1. The script will:
+* Instantiate the 4 TinyPerson agents (Mr Lim, Rachel Pereira, Nur Aisyah, Arjun) using TinyTroupe persona definitions.
+* Set up a TinyWorld hawker centre environment.
+* Inject the single stimulus: Rachel moves Mr Lim's tissue packet and sits down just as Mr Lim returns with his food.
+* Run a 6–10 turn conversation loop and output structured logs matching the schema in [suspicious link removed].
+🇸🇬 Would you like me to write the complete starter Python script for this test harness so you can start running your first 5 stress-test runs?

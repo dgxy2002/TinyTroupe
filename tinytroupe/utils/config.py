@@ -1,9 +1,12 @@
 import configparser
 import logging
+import os
 import sys
 import threading
 from datetime import datetime
 from pathlib import Path
+
+from dotenv import find_dotenv, load_dotenv
 
 ################################################################################
 # Config and startup utilities
@@ -17,6 +20,43 @@ _console_level = None
 _file_level = None
 _include_thread_info = False
 _logging_lock = threading.RLock()
+
+
+def _apply_environment_overrides(config):
+    """Apply supported environment variables on top of INI configuration.
+
+    The ``TINY_TROUPE_*`` names work with every provider. OpenRouter also has
+    convenient provider-specific names so changing models only requires editing
+    one line in ``.env``.
+    """
+
+    overrides = {
+        "TINY_TROUPE_API_TYPE": "API_TYPE",
+        "TINY_TROUPE_MODEL": "MODEL",
+        "TINY_TROUPE_EMBEDDING_MODEL": "EMBEDDING_MODEL",
+        "TINY_TROUPE_BASE_URL": "BASE_URL",
+        "TINY_TROUPE_MAX_COMPLETION_TOKENS": "MAX_COMPLETION_TOKENS",
+    }
+
+    for environment_name, config_name in overrides.items():
+        value = os.getenv(environment_name)
+        if value:
+            config["OpenAI"][config_name] = value
+
+    if config["OpenAI"].get("API_TYPE", "").lower() == "openrouter":
+        openrouter_overrides = {
+            "OPENROUTER_MODEL": "MODEL",
+            "OPENROUTER_EMBEDDING_MODEL": "EMBEDDING_MODEL",
+            "OPENROUTER_BASE_URL": "BASE_URL",
+        }
+        for environment_name, config_name in openrouter_overrides.items():
+            value = os.getenv(environment_name)
+            if value:
+                config["OpenAI"][config_name] = value
+
+        config["OpenAI"].setdefault("BASE_URL", "https://openrouter.ai/api/v1")
+
+    return config
 
 _LOG_FORMAT_WITH_THREAD = (
     "%(asctime)s - %(threadName)s(%(thread)d) - %(name)s - %(levelname)s - %(message)s"
@@ -112,6 +152,10 @@ def read_config_file(use_cache=True, verbose=True) -> configparser.ConfigParser:
         return _config
 
     else:
+        dotenv_path = find_dotenv(usecwd=True)
+        if dotenv_path:
+            load_dotenv(dotenv_path, override=False)
+
         config = configparser.ConfigParser()
 
         # Read the default values in the module directory.
@@ -131,8 +175,6 @@ def read_config_file(use_cache=True, verbose=True) -> configparser.ConfigParser:
             config.read(
                 config_file_path
             )  # this only overrides the values that are present in the custom config
-            _config = config
-            return config
         else:
             if verbose:
                 (
@@ -148,7 +190,8 @@ def read_config_file(use_cache=True, verbose=True) -> configparser.ConfigParser:
                     else None
                 )
 
-        return config
+        _config = _apply_environment_overrides(config)
+        return _config
 
 
 def pretty_print_config(config):

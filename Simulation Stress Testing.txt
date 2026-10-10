@@ -1,0 +1,26 @@
+﻿During your Week 1 stress testing with Candidate 1 (Hawker Centre "This Table Is Choped"), your goal is to evaluate TinyTroupe's operational boundaries, stability, and persona fidelity across 5–10 repeated runs before conducting full scenario experiments.
+To give your advisor a complete, scientifically defensible evaluation, you should track four categories of metrics:
+1. Framework Stability & Convergence Metrics
+These metrics test whether the simulation produces stable, repeatable social outcomes across independent runs or diverges into random noise.
+* Macro-Outcome Distribution: Classify the final resolution of each run into one of four mutually exclusive categories: Consensus (all agents accept the norm), Compromise (a practical alternative is negotiated), Avoidance / Indirect Resolution (an agent yields without explicit resolution), or Escalation (disagreement intensifies). Track whether this distribution stabilizes across 5–10 repeated runs.
+* Turns-to-Resolution (Interaction Horizon): Count the number of dialogue turns required for agents to reach an outcome or issue the DONE action 1.
+* Trajectory Divergence & Dispersion: Calculate the semantic dispersion (e.g., Pairwise Cosine Distance of conversation embeddings across runs) to verify whether the global outcome stabilizes across runs while preserving local dialogue variation 2, 3.
+2. Persona Adherence & Cultural Fidelity Metrics
+These metrics measure how well agents stay in character without drifting into generic, overly polite AI assistants.
+* Persona Adherence Score: Utilize TinyTroupe's Propositions (which score adherence on a scale from 0 to 9 via LLM-as-a-Judge) to evaluate if actions directly match the agent's specified background (e.g., Mr. Lim's age/language profile vs. Rachel's overseas background) 4-6.
+* Profile Faithfulness & Self-Consistency: Monitor whether agents remain self-consistent over time and adhere to expected demographic behaviors (e.g., age deference toward senior citizens) 6, 7.
+* Norm Recognition & Violation Rate: Track whether agents recognize the tissue packet as a chope reservation norm and whether the target agent violates or respects the location-conditioned norm 7.
+3. Behavioral Integrity & Multi-Agent Dynamics
+These metrics monitor whether multi-agent interaction maintains diverse persona perspectives or suffers from structural failure modes.
+* Sycophancy & Diversity Collapse Rate: Track whether agents immediately cave into premature consensus on Turn 1 (a classic failure mode in multi-agent debate) or engage in multi-turn negotiation and stance defense 8-10.
+* Constructive Disagreement & Friction: Measure the ratio of turns where agents express genuine disagreement or offer explanations rather than immediate, superficial agreement 11, 12.
+* Linguistic & Communication Markers:
+* Code-Switching & Singlish Frequency: Count local particles (lah, leh, lor, uncle, auntie, Hokkien/Mandarin/Malay phrases) across agents.
+* Direct vs. Indirect Communication: Distinguish between direct statements ("I reserved this table") and face-saving indirect language ("Actually, I think this table got people already").
+* Politeness & Face-Saving Actions: Track apology counts and face-saving or mitigating statements.
+4. System Execution & Resource Metrics
+These metrics establish technical and financial baselines for scaling up your experiments.
+* Token Usage Statistics: Log the exact input and output token consumption per round and per episode on gpt-5-mini (or gpt-4o-mini) 13, 14.
+* API Latency & Execution Cost: Measure the average time cost per turn and identify any bottlenecks in LLM API response times 13, 15.
+* Action Correction Trigger Rate: Log how frequently TinyTroupe’s internal proposition and action-correction mechanism triggers to abort and regenerate out-of-character actions 16, 17.
+🇸🇬 Would you like to start building the Python test harness script for Candidate 1 that automatically logs these metrics into a CSV/JSON file after each run?
