@@ -60,6 +60,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+pytest-cache-files-*/
 cover/
 test-report.*
 test-results.*
@@ -176,3 +177,6 @@ cython_debug/
 test_credentials.ini
 tests/test_credentials.ini
 test-report-*.html
+
+# Local Chope experiment outputs can contain large transcripts and embeddings.
+data/chope_experiments/
