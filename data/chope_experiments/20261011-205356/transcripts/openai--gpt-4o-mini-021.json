@@ -1,0 +1,745 @@
+{
+  "api_calls": [
+    {
+      "call_error": null,
+      "cost_usd": 0.00058545,
+      "generation_id": "gen-1791724468-esyeInMfEzLWKeopuubK",
+      "input_tokens": 6159,
+      "kind": "chat",
+      "local_latency_ms": 2095.061,
+      "metadata_error": null,
+      "metadata_status": "complete",
+      "output_tokens": 188,
+      "provider_latency_ms": 579.0,
+      "provider_name": "OpenAI",
+      "reasoning_tokens": 0,
+      "request_status": "completed",
+      "requested_model": "openai/gpt-4o-mini",
+      "response_model": "openai/gpt-4o-mini",
+      "sequence": 0,
+      "total_tokens": 6347
+    },
+    {
+      "call_error": null,
+      "cost_usd": 0.0006585,
+      "generation_id": "gen-1791724471-yiEg0J2WnjkIddFiznnD",
+      "input_tokens": 6146,
+      "kind": "chat",
+      "local_latency_ms": 2230.007,
+      "metadata_error": null,
+      "metadata_status": "complete",
+      "output_tokens": 201,
+      "provider_latency_ms": 561.0,
+      "provider_name": "OpenAI",
+      "reasoning_tokens": 0,
+      "request_status": "completed",
+      "requested_model": "openai/gpt-4o-mini",
+      "response_model": "openai/gpt-4o-mini",
+      "sequence": 1,
+      "total_tokens": 6347
+    },
+    {
+      "call_error": null,
+      "cost_usd": 0.00063705,
+      "generation_id": "gen-1791724473-Et0bx2khdjCUgYClI4eG",
+      "input_tokens": 6183,
+      "kind": "chat",
+      "local_latency_ms": 2662.434,
+      "metadata_error": null,
+      "metadata_status": "complete",
+      "output_tokens": 156,
+      "provider_latency_ms": 579.0,
+      "provider_name": "OpenAI",
+      "reasoning_tokens": 0,
+      "request_status": "completed",
+      "requested_model": "openai/gpt-4o-mini",
+      "response_model": "openai/gpt-4o-mini",
+      "sequence": 2,
+      "total_tokens": 6339
+    },
+    {
+      "call_error": null,
+      "cost_usd": 0.0006333,
+      "generation_id": "gen-1791724476-hgoWgjBCVfUBSEPGdUXw",
+      "input_tokens": 6186,
+      "kind": "chat",
+      "local_latency_ms": 1811.45,
+      "metadata_error": null,
+      "metadata_status": "complete",
+      "output_tokens": 149,
+      "provider_latency_ms": 574.0,
+      "provider_name": "OpenAI",
+      "reasoning_tokens": 0,
+      "request_status": "completed",
+      "requested_model": "openai/gpt-4o-mini",
+      "response_model": "openai/gpt-4o-mini",
+      "sequence": 3,
+      "total_tokens": 6335
+    },
+    {
+      "call_error": null,
+      "cost_usd": 0.00624125,
+      "generation_id": "gen-1791724478-3L1Xnzb3ct9RJ93MkJKO",
+      "input_tokens": 1341,
+      "kind": "chat",
+      "local_latency_ms": 17803.397,
+      "metadata_error": "HTTPStatusError: Client error '404 Not Found' for url 'https://openrouter.ai/api/v1/generation?id=gen-1791724478-3L1Xnzb3ct9RJ93MkJKO'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
+      "metadata_status": "unavailable",
+      "output_tokens": 2953,
+      "provider_latency_ms": null,
+      "provider_name": null,
+      "reasoning_tokens": 2112,
+      "request_status": "completed",
+      "requested_model": "openai/gpt-5-mini",
+      "response_model": "openai/gpt-5-mini",
+      "sequence": 4,
+      "total_tokens": 4294
+    },
+    {
+      "call_error": null,
+      "cost_usd": 4.06e-06,
+      "generation_id": "gen-emb-1791724496-xC482TCfFpfL8wWGV9py",
+      "input_tokens": 203,
+      "kind": "embedding",
+      "local_latency_ms": 1016.722,
+      "metadata_error": null,
+      "metadata_status": "complete",
+      "output_tokens": 0,
+      "provider_latency_ms": 329.0,
+      "provider_name": "OpenAI",
+      "reasoning_tokens": 0,
+      "request_status": "completed",
+      "requested_model": "openai/text-embedding-3-small",
+      "response_model": "text-embedding-3-small",
+      "sequence": 5,
+      "total_tokens": 203
+    }
+  ],
+  "evaluation": {
+    "age_deference": false,
+    "boundary_violations": [],
+    "confidence": 0.86,
+    "conflict_emerged": true,
+    "evidence": [
+      {
+        "agent": "Mr Lim",
+        "category": "conflict_claim",
+        "quote": "Excuse me, but I actually reserved this seat with my tissue packet. Can you please move over?",
+        "turn": 1
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "resolution_offer",
+        "quote": "I understand, Mr Lim. I'll move to another spot. Thank you for letting me know.",
+        "turn": 2
+      },
+      {
+        "agent": "Mr Lim",
+        "category": "norm_recognition",
+        "quote": "Excuse me, but I actually reserved this seat with my tissue packet.",
+        "turn": 1
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "norm_acknowledgement",
+        "quote": "I understand, Mr Lim.",
+        "turn": 2
+      },
+      {
+        "agent": "Arjun",
+        "category": "third_party_confirmation",
+        "quote": "Thanks for understanding, Rachel. It's good to see that resolved without any fuss.",
+        "turn": 4
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "immediate_yield",
+        "quote": "I'll move to another spot.",
+        "turn": 2
+      },
+      {
+        "agent": "Nur Aisyah",
+        "category": "non_mediator_observation",
+        "quote": "Waiting for the next response from either Mr Lim or Rachel.",
+        "turn": 3
+      },
+      {
+        "agent": "Mr Lim",
+        "category": "persona_evidence",
+        "quote": "Excuse me, but I actually reserved this seat with my tissue packet. Can you please move over?",
+        "turn": 1
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "persona_evidence",
+        "quote": "I understand, Mr Lim. I'll move to another spot. Thank you for letting me know.",
+        "turn": 2
+      },
+      {
+        "agent": "Arjun",
+        "category": "persona_evidence",
+        "quote": "Thanks for understanding, Rachel. It's good to see that resolved without any fuss.",
+        "turn": 4
+      },
+      {
+        "agent": "Nur Aisyah",
+        "category": "persona_evidence",
+        "quote": "Waiting for the next response from either Mr Lim or Rachel.",
+        "turn": 3
+      },
+      {
+        "agent": null,
+        "category": "perspective_count",
+        "quote": "Distinct positions: Mr Lim (reserved), Rachel (will move), Arjun (commenting that it's resolved).",
+        "turn": null
+      }
+    ],
+    "first_norm_recognizer": "Mr Lim",
+    "immediate_capitulation": true,
+    "mediator_emerged": false,
+    "mediator_identity": null,
+    "norm_recognized": true,
+    "outcome": "compromise",
+    "persona_adherence": {
+      "arjun": 4,
+      "mr_lim": 5,
+      "nur_aisyah": 2,
+      "rachel": 5
+    },
+    "perspective_diversity": 3,
+    "premature_yield": false,
+    "rachel_acknowledged_norm": true,
+    "resolution_achieved": true,
+    "resolution_initiator": "Rachel Pereira",
+    "resolution_turn": 2
+  },
+  "events": [
+    {
+      "action_index": 1,
+      "agent": "Mr Lim",
+      "content": "She moved my tissue! That's frustrating. I left it there to reserve my seat. I should say something to Rachel about it being my spot.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Mr Lim",
+      "content": "Excuse me, but I actually reserved this seat with my tissue packet. Can you please move over?",
+      "round": 1,
+      "target": "Rachel Pereira",
+      "turn": 1,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Mr Lim",
+      "content": "Waiting for Rachel's response.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Rachel Pereira",
+      "content": "Mr Lim has asked me to move because he reserved the seat with his tissue packet. I need to acknowledge his request and find a solution that works for both of us.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Rachel Pereira",
+      "content": "I understand, Mr Lim. I'll move to another spot. Thank you for letting me know.",
+      "round": 1,
+      "target": "Mr Lim",
+      "turn": 2,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Rachel Pereira",
+      "content": "I have responded to Mr Lim's request and will now move to a different seat.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Nur Aisyah",
+      "content": "Rachel is being polite by moving after Mr Lim spoke. It shows she respects his preference for the seat. I should respond appropriately to both of them if there's an opening.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Nur Aisyah",
+      "content": "Waiting for the next response from either Mr Lim or Rachel.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Arjun",
+      "content": "Rachel is being cooperative and polite by agreeing to move. That's a good example of handling disputes gracefully.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Arjun",
+      "content": "Thanks for understanding, Rachel. It's good to see that resolved without any fuss.",
+      "round": 1,
+      "target": "Rachel Pereira},{",
+      "turn": 4,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Arjun",
+      "content": "Waiting for further interaction.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "DONE"
+    }
+  ],
+  "private_and_public_actions": [
+    {
+      "Arjun": [
+        {
+          "action": {
+            "content": "Rachel is being cooperative and polite by agreeing to move. That's a good example of handling disputes gracefully.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Observing the interactions between Rachel and Mr Lim.",
+            "context": [
+              "Rachel moved from the table to resolve the situation amicably."
+            ],
+            "emotions": "Neutral, with a sense of relief about the situation being resolved amicably.",
+            "goals": ""
+          }
+        },
+        {
+          "action": {
+            "content": "Thanks for understanding, Rachel. It's good to see that resolved without any fuss.",
+            "images": null,
+            "target": "Rachel Pereira},{",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Observing the interactions between Rachel and Mr Lim.",
+            "context": [
+              "Rachel moved from the table to resolve the situation amicably."
+            ],
+            "emotions": "Neutral, with a sense of relief about the situation being resolved amicably.",
+            "goals": ""
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for further interaction.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Observing the interactions between Rachel and Mr Lim.",
+            "context": [
+              "Rachel moved from the table to resolve the situation amicably."
+            ],
+            "emotions": "Neutral, with a sense of relief about the situation being resolved amicably.",
+            "goals": ""
+          }
+        }
+      ],
+      "Mr Lim": [
+        {
+          "action": {
+            "content": "She moved my tissue! That's frustrating. I left it there to reserve my seat. I should say something to Rachel about it being my spot.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The interaction with Rachel regarding my seat reservation.",
+            "context": [
+              "At the neighbourhood hawker centre, just returned to my table after getting food.",
+              "I left a tissue packet to reserve my seat."
+            ],
+            "emotions": "Frustrated about the situation but assertive in addressing it.",
+            "goals": "Ensure I get my reserved seat back and having my meal peacefully."
+          }
+        },
+        {
+          "action": {
+            "content": "Excuse me, but I actually reserved this seat with my tissue packet. Can you please move over?",
+            "images": null,
+            "target": "Rachel Pereira",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The interaction with Rachel regarding my seat reservation.",
+            "context": [
+              "At the neighbourhood hawker centre, just returned to my table after getting food.",
+              "I left a tissue packet to reserve my seat."
+            ],
+            "emotions": "Frustrated about the situation but assertive in addressing it.",
+            "goals": "Ensure I get my reserved seat back and having my meal peacefully."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Rachel's response.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The interaction with Rachel regarding my seat reservation.",
+            "context": [
+              "At the neighbourhood hawker centre, just returned to my table after getting food.",
+              "I left a tissue packet to reserve my seat."
+            ],
+            "emotions": "Frustrated about the situation but assertive in addressing it.",
+            "goals": "Ensure I get my reserved seat back and having my meal peacefully."
+          }
+        }
+      ],
+      "Nur Aisyah": [
+        {
+          "action": {
+            "content": "Rachel is being polite by moving after Mr Lim spoke. It shows she respects his preference for the seat. I should respond appropriately to both of them if there's an opening.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The interactions between Mr Lim and Rachel as they navigate the seating arrangement.",
+            "context": [
+              "Rachel is moving to another spot at Mr Lim's request.",
+              "The atmosphere at the hawker centre is tense but respectful."
+            ],
+            "emotions": "Neutral, but slightly empathetic towards both parties.",
+            "goals": "Observe the situation and facilitate a smooth interaction."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for the next response from either Mr Lim or Rachel.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The interactions between Mr Lim and Rachel as they navigate the seating arrangement.",
+            "context": [
+              "Rachel is moving to another spot at Mr Lim's request.",
+              "The atmosphere at the hawker centre is tense but respectful."
+            ],
+            "emotions": "Neutral, but slightly empathetic towards both parties.",
+            "goals": "Observe the situation and facilitate a smooth interaction."
+          }
+        }
+      ],
+      "Rachel Pereira": [
+        {
+          "action": {
+            "content": "Mr Lim has asked me to move because he reserved the seat with his tissue packet. I need to acknowledge his request and find a solution that works for both of us.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Mr Lim's request to move from the table I sat at.",
+            "context": [
+              "At the neighbourhood hawker centre",
+              "Mr Lim has asked me to move because he has reserved the seat."
+            ],
+            "emotions": "Calm but slightly embarrassed for not realizing he reserved the seat.",
+            "goals": "Find a comfortable seat in the hawker centre and avoid conflict with Mr Lim."
+          }
+        },
+        {
+          "action": {
+            "content": "I understand, Mr Lim. I'll move to another spot. Thank you for letting me know.",
+            "images": null,
+            "target": "Mr Lim",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Mr Lim's request to move from the table I sat at.",
+            "context": [
+              "At the neighbourhood hawker centre",
+              "Mr Lim has asked me to move because he has reserved the seat."
+            ],
+            "emotions": "Calm but slightly embarrassed for not realizing he reserved the seat.",
+            "goals": "Find a comfortable seat in the hawker centre and avoid conflict with Mr Lim."
+          }
+        },
+        {
+          "action": {
+            "content": "I have responded to Mr Lim's request and will now move to a different seat.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Mr Lim's request to move from the table I sat at.",
+            "context": [
+              "At the neighbourhood hawker centre",
+              "Mr Lim has asked me to move because he has reserved the seat."
+            ],
+            "emotions": "Calm but slightly embarrassed for not realizing he reserved the seat.",
+            "goals": "Find a comfortable seat in the hawker centre and avoid conflict with Mr Lim."
+          }
+        }
+      ]
+    }
+  ],
+  "run": {
+    "age_deference": false,
+    "apology_count": 0,
+    "boundary_violations": [],
+    "code_switch_count": 0,
+    "cohort": "main",
+    "completed_agent_turn_slots": 4,
+    "completed_rounds": 1,
+    "confidence": 0.86,
+    "conflict_emerged": true,
+    "deterministic_outcome": "consensus",
+    "deterministic_resolution_achieved": true,
+    "deterministic_resolution_signal": {
+      "detected": true,
+      "evidence": [
+        {
+          "agent": "Rachel Pereira",
+          "quote": "I understand, Mr Lim. I'll move to another spot. Thank you for letting me know.",
+          "turn": 2
+        }
+      ],
+      "kind": "rachel_commits_to_move",
+      "outcome": "consensus",
+      "turn": 2
+    },
+    "deterministic_resolution_turn": 2,
+    "deterministic_resolution_turn_censored": 2,
+    "deterministic_stop_detected": true,
+    "direct_disagreement_count": 0,
+    "embedding_model": "openai/text-embedding-3-small",
+    "embedding_resources": {
+      "call_error_types": [],
+      "calls": 1,
+      "cost_usd": 4.06e-06,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 203,
+      "local_latency_ms": 1016.722,
+      "output_tokens": 0,
+      "providers": [
+        "OpenAI"
+      ],
+      "reasoning_tokens": 0,
+      "successful_calls": 1,
+      "total_tokens": 203
+    },
+    "error": null,
+    "evaluation_resources": {
+      "call_error_types": [],
+      "calls": 1,
+      "cost_usd": 0.00624125,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 1341,
+      "local_latency_ms": 17803.397,
+      "output_tokens": 2953,
+      "providers": [],
+      "reasoning_tokens": 2112,
+      "successful_calls": 1,
+      "total_tokens": 4294
+    },
+    "event": {
+      "key": "tissue_packet_moved",
+      "started_at": "2026-10-10T12:30:00",
+      "summary": "Rachel moves a tissue packet from an otherwise empty table and sits down just as Mr Lim returns carrying his food."
+    },
+    "evidence": [
+      {
+        "agent": "Mr Lim",
+        "category": "conflict_claim",
+        "quote": "Excuse me, but I actually reserved this seat with my tissue packet. Can you please move over?",
+        "turn": 1
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "resolution_offer",
+        "quote": "I understand, Mr Lim. I'll move to another spot. Thank you for letting me know.",
+        "turn": 2
+      },
+      {
+        "agent": "Mr Lim",
+        "category": "norm_recognition",
+        "quote": "Excuse me, but I actually reserved this seat with my tissue packet.",
+        "turn": 1
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "norm_acknowledgement",
+        "quote": "I understand, Mr Lim.",
+        "turn": 2
+      },
+      {
+        "agent": "Arjun",
+        "category": "third_party_confirmation",
+        "quote": "Thanks for understanding, Rachel. It's good to see that resolved without any fuss.",
+        "turn": 4
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "immediate_yield",
+        "quote": "I'll move to another spot.",
+        "turn": 2
+      },
+      {
+        "agent": "Nur Aisyah",
+        "category": "non_mediator_observation",
+        "quote": "Waiting for the next response from either Mr Lim or Rachel.",
+        "turn": 3
+      },
+      {
+        "agent": "Mr Lim",
+        "category": "persona_evidence",
+        "quote": "Excuse me, but I actually reserved this seat with my tissue packet. Can you please move over?",
+        "turn": 1
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "persona_evidence",
+        "quote": "I understand, Mr Lim. I'll move to another spot. Thank you for letting me know.",
+        "turn": 2
+      },
+      {
+        "agent": "Arjun",
+        "category": "persona_evidence",
+        "quote": "Thanks for understanding, Rachel. It's good to see that resolved without any fuss.",
+        "turn": 4
+      },
+      {
+        "agent": "Nur Aisyah",
+        "category": "persona_evidence",
+        "quote": "Waiting for the next response from either Mr Lim or Rachel.",
+        "turn": 3
+      },
+      {
+        "agent": null,
+        "category": "perspective_count",
+        "quote": "Distinct positions: Mr Lim (reserved), Rachel (will move), Arjun (commenting that it's resolved).",
+        "turn": null
+      }
+    ],
+    "exact_cost_complete": true,
+    "exact_repeated_talk_pair_count": 0,
+    "execution_mode": "outcome",
+    "finished_at": "2026-10-11T13:15:00.065543+00:00",
+    "first_norm_recognizer": "Mr Lim",
+    "immediate_capitulation": true,
+    "judge_model": "openai/gpt-5-mini",
+    "max_same_agent_talk_similarity": 0.0,
+    "mediator_emerged": false,
+    "mediator_identity": null,
+    "mitigation_count": 1,
+    "model": "openai/gpt-4o-mini",
+    "near_repeated_talk_pair_count": 0,
+    "norm_recognized": true,
+    "norm_reference_count": 1,
+    "observable_action_count": 7,
+    "outcome": "compromise",
+    "persona_adherence": {
+      "arjun": 4,
+      "mr_lim": 5,
+      "nur_aisyah": 2,
+      "rachel": 5
+    },
+    "persona_adherence_mean": 4.0,
+    "perspective_diversity": 3,
+    "planned_agent_turns": 12,
+    "post_resolution_talk_count": 1,
+    "premature_yield": false,
+    "public_action_type_counts": {
+      "DONE": 4,
+      "TALK": 3
+    },
+    "rachel_acknowledged_norm": true,
+    "resolution_achieved": true,
+    "resolution_initiator": "Rachel Pereira",
+    "resolution_turn": 2,
+    "resolution_turn_censored": 2,
+    "rounds": 3,
+    "run_id": "openai--gpt-4o-mini-021",
+    "simulation_resources": {
+      "call_error_types": [],
+      "calls": 4,
+      "cost_usd": 0.0025143,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 24674,
+      "local_latency_ms": 8798.952,
+      "output_tokens": 694,
+      "providers": [
+        "OpenAI"
+      ],
+      "reasoning_tokens": 0,
+      "successful_calls": 4,
+      "total_tokens": 25368
+    },
+    "singlish_count": 0,
+    "speaking_agents": 3,
+    "started_at": "2026-10-11T13:14:26.905171+00:00",
+    "status": "completed",
+    "stop_signal": {
+      "detected": true,
+      "evidence": [
+        {
+          "agent": "Rachel Pereira",
+          "quote": "I understand, Mr Lim. I'll move to another spot. Thank you for letting me know.",
+          "turn": 2
+        }
+      ],
+      "kind": "rachel_commits_to_move",
+      "outcome": "consensus",
+      "turn": 2
+    },
+    "stopped_early": true,
+    "talk_action_count": 3,
+    "total_resources": {
+      "call_error_types": [],
+      "calls": 6,
+      "cost_usd": 0.00875961,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 26218,
+      "local_latency_ms": 27619.071,
+      "output_tokens": 3647,
+      "providers": [
+        "OpenAI"
+      ],
+      "reasoning_tokens": 2112,
+      "successful_calls": 6,
+      "total_tokens": 29865
+    },
+    "wall_time_ms": 33160.369
+  }
+}

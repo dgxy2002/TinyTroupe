@@ -1,0 +1,57 @@
+{
+  "detector_version": "v2_audit_calibrated",
+  "execution_mode": "outcome",
+  "experiment_id": "20261011-205356",
+  "manual_audit": {
+    "detector_v2_outcome_agreement": 1.0,
+    "detector_v2_resolution_agreement": 1.0,
+    "judge_boundary_agreement": 0.4,
+    "judge_outcome_agreement": 1.0,
+    "judge_resolution_agreement": 1.0,
+    "reviewed_runs": 10
+  },
+  "models": {
+    "openai/gpt-4o-mini": {
+      "actual_cost_usd": 0.34890205,
+      "converged": true,
+      "convergence_checkpoint": 25,
+      "detector_judge_outcome_disagreements": 14,
+      "detector_judge_resolution_disagreements": 11,
+      "deterministic_outcome_counts": {
+        "avoidance": 0,
+        "compromise": 13,
+        "consensus": 0,
+        "escalation": 0,
+        "unresolved": 12
+      },
+      "deterministic_resolution_rate": 0.52,
+      "judge_resolution_rate": 0.96,
+      "mean_actual_rounds": 2.6,
+      "mean_projected_stop_round_v2": 2.16,
+      "projected_cost_saved_usd_v2": 0.02991015,
+      "projected_cost_usd_v2": 0.3189919,
+      "runs": 25
+    },
+    "openai/gpt-5-mini": {
+      "actual_cost_usd": 1.0183209,
+      "converged": true,
+      "convergence_checkpoint": 25,
+      "detector_judge_outcome_disagreements": 6,
+      "detector_judge_resolution_disagreements": 5,
+      "deterministic_outcome_counts": {
+        "avoidance": 0,
+        "compromise": 19,
+        "consensus": 0,
+        "escalation": 0,
+        "unresolved": 6
+      },
+      "deterministic_resolution_rate": 0.76,
+      "judge_resolution_rate": 0.96,
+      "mean_actual_rounds": 2.48,
+      "mean_projected_stop_round_v2": 2.2,
+      "projected_cost_saved_usd_v2": 0.0947080834,
+      "projected_cost_usd_v2": 0.9236128166,
+      "runs": 25
+    }
+  }
+}

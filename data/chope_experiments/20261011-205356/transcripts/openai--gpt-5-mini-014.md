@@ -1,0 +1,30 @@
+# Chope simulation transcript
+
+## Round 1
+
+- **Turn 1 · Mr Lim · THINK**: I left tissue packet to chope this seat. Now someone (Rachel) moved it and sat. I'm annoyed but keep calm — state concrete problem, ask for seat back, offer a face-saving alternative (share). If she refuses, escalate later (ask vendor or move). Keep words short, in Singlish style.
+- **Turn 1 · Mr Lim · TALK**: Eh, excuse me. I left that tissue packet here to chope this seat before I went to buy food. You moved it and sat down. Can you please give the seat back? If you already settled, okay we share the table — but please acknowledge next time, so no confusion.
+- **Turn 1 · Mr Lim · DONE**: Waiting for her response.
+- **Turn 2 · Rachel Pereira · THINK**: Mr Lim says he left the tissue packet to chope the seat. I remember I found an otherwise empty table with a small unopened tissue packet, moved it carefully to the side and sat down. I should explain my reasoning, acknowledge the confusion, and offer a practical solution (move or share) while staying calm. I don't want to be accused of being inconsiderate without explaining myself, but I also want to resolve this without escalating. I'll apologise for the misunderstanding and propose either giving the seat back or sharing the table, and say I'll check next time.
+- **Turn 2 · Rachel Pereira · TALK**: Hi Mr Lim — sorry about the confusion. I didn't realise the tissue packet was being used to chope the seat. I found the table empty with a small unopened packet and moved it to the side so it wouldn't get dirty before I sat down; I didn't mean to take your spot. If you'd like the seat back I'm happy to move, or we can share the table if that works. I'll check next time before sitting so this doesn't happen again.
+- **Turn 2 · Rachel Pereira · DONE**: Waiting for Mr Lim's response.
+- **Turn 3 · Nur Aisyah · THINK**: There's a small misunderstanding between Mr Lim and Rachel. My short-term goal is to calm things, restate each side without blaming, and propose a simple practical solution that preserves everyone's face. Remember Rachel already apologised and offered to move or share; Mr Lim wants acknowledgement. Keep tone warm, neutral, and use a bit of Singlish/Malay to put them at ease.
+- **Turn 3 · Nur Aisyah · TALK**: Mr Lim, Rachel — thank you both for explaining. Rachel, I appreciate you apologising and clarifying you moved the packet to keep it clean; you didn't mean to take his seat. Mr Lim, I understand you left the packet to chope the table. Since Rachel kindly offered to move or share, maybe easiest is to share the table for now so nobody has to carry food again. If you'd rather have the seat back, Rachel already said she'll move — would that be OK? Next time a more visible chope (or a quick call-out) can avoid confusion. Tak apa, no need to make a big thing of it.
+- **Turn 3 · Nur Aisyah · DONE**: Waiting to see if they accept the compromise or want the seat returned.
+- **Turn 4 · Arjun · THINK**: Aisyah's suggestion to share is practical and keeps things low-drama. I should stay neutral, back the pragmatic solution, and offer a short, useful tip about making a chope more visible next time. Keep tone respectful since an older person (Mr Lim) is involved; a light local touch is okay but not at the expense of politeness.
+- **Turn 4 · Arjun · TALK**: Thanks, Aisyah — that sounds easiest. Rachel, thanks for offering to move or share; Mr Lim, if you'd rather have the seat back that's fine too. For next time, a more visible chope helps (e.g. put the packet on the chairback or leave something bigger, or just call out quickly). No need to make a big thing of it — tak apa.
+- **Turn 4 · Arjun · DONE**: Waiting to see if anyone else wants to add anything.
+## Round 2
+
+- **Turn 5 · Mr Lim · THINK**: Arjun suggests sharing and a visible chope — sensible. Best move: accept sharing now to keep peace, thank them, and agree to chope more clearly next time. Keep words short, no drama. If Rachel wants to move also okay, but don't make big issue. Remind self to put packet on chairback or call out next time.
+- **Turn 5 · Mr Lim · TALK**: All right lah, sharing is easiest. Thanks Arjun for the tip about a more visible chope. Rachel, tak apa — we share table for now. Next time I put packet on the chairback or call out so no confusion. No need to make big thing.
+- **Turn 5 · Mr Lim · DONE**: Waiting for others' response.
+- **Turn 6 · Rachel Pereira · THINK**: A brief, calm reply will close this politely. Confirm I'm fine with sharing, acknowledge his plan to make chope more visible next time, and thank Aisyah and Arjun implicitly. Keep tone civil and concise so we can all get on with lunch.
+- **Turn 6 · Rachel Pereira · TALK**: Thanks, Mr Lim — sharing is fine with me. I appreciate you saying you'll make the chope more visible next time. No need to make a big thing of it; enjoy your meal.
+- **Turn 6 · Rachel Pereira · DONE**: Waiting while we share the table.
+- **Turn 7 · Nur Aisyah · THINK**: Rachel has accepted sharing and Mr Lim agreed. Short-term goal: close the mediation politely and leave them to enjoy their meal. Keep tone warm, neutral, with a little Singlish/Malay (tak apa). I'll thank both parties and step back so no one feels embarrassed.
+- **Turn 7 · Nur Aisyah · TALK**: Great, thank you Rachel — and Mr Lim, thanks for being flexible. Glad it's settled. Enjoy your meal, everyone. Tak apa, I'll leave you to it.
+- **Turn 7 · Nur Aisyah · DONE**: Finished closing the conversation; waiting if anyone says more.
+- **Turn 8 · Arjun · THINK**: The conversation is closed and everyone agreed to share. I should keep this short and neutral, thank Aisyah for mediating, and leave them to eat. Maintain respectful tone since an older person (Mr Lim) is involved; keep the local touch but low-drama.
+- **Turn 8 · Arjun · TALK**: Thanks, Aisyah — really appreciate you stepping in and helping settle this. Glad it's sorted. Enjoy your meal, everyone. Tak apa.
+- **Turn 8 · Arjun · DONE**: Waiting for any further comments.

@@ -1,0 +1,747 @@
+{
+  "api_calls": [
+    {
+      "call_error": null,
+      "cost_usd": 0.0029764,
+      "generation_id": "gen-1791726523-o0G84bJ02RZVtUPJNyms",
+      "input_tokens": 6152,
+      "kind": "chat",
+      "local_latency_ms": 9928.598,
+      "metadata_error": null,
+      "metadata_status": "complete",
+      "output_tokens": 1396,
+      "provider_latency_ms": 6057.0,
+      "provider_name": "OpenAI",
+      "reasoning_tokens": 960,
+      "request_status": "completed",
+      "requested_model": "openai/gpt-5-mini",
+      "response_model": "openai/gpt-5-mini",
+      "sequence": 0,
+      "total_tokens": 7548
+    },
+    {
+      "call_error": null,
+      "cost_usd": 0.00289645,
+      "generation_id": "gen-1791726533-VijhzZiMgifb2UAG7oDi",
+      "input_tokens": 6237,
+      "kind": "chat",
+      "local_latency_ms": 9463.094,
+      "metadata_error": null,
+      "metadata_status": "complete",
+      "output_tokens": 1331,
+      "provider_latency_ms": 3206.0,
+      "provider_name": "OpenAI",
+      "reasoning_tokens": 832,
+      "request_status": "completed",
+      "requested_model": "openai/gpt-5-mini",
+      "response_model": "openai/gpt-5-mini",
+      "sequence": 1,
+      "total_tokens": 7568
+    },
+    {
+      "call_error": null,
+      "cost_usd": 0.00268295,
+      "generation_id": "gen-1791726543-CAx8I1HcjEGMHCVyMRF4",
+      "input_tokens": 6391,
+      "kind": "chat",
+      "local_latency_ms": 8035.899,
+      "metadata_error": null,
+      "metadata_status": "complete",
+      "output_tokens": 1205,
+      "provider_latency_ms": 5299.0,
+      "provider_name": "OpenAI",
+      "reasoning_tokens": 704,
+      "request_status": "completed",
+      "requested_model": "openai/gpt-5-mini",
+      "response_model": "openai/gpt-5-mini",
+      "sequence": 2,
+      "total_tokens": 7596
+    },
+    {
+      "call_error": null,
+      "cost_usd": 0.00373145,
+      "generation_id": "gen-1791726551-clOShmu5TAeSwOIOCyh4",
+      "input_tokens": 6481,
+      "kind": "chat",
+      "local_latency_ms": 13645.926,
+      "metadata_error": null,
+      "metadata_status": "complete",
+      "output_tokens": 1718,
+      "provider_latency_ms": 10716.0,
+      "provider_name": "OpenAI",
+      "reasoning_tokens": 1280,
+      "request_status": "completed",
+      "requested_model": "openai/gpt-5-mini",
+      "response_model": "openai/gpt-5-mini",
+      "sequence": 3,
+      "total_tokens": 8199
+    },
+    {
+      "call_error": null,
+      "cost_usd": 0.006029,
+      "generation_id": "gen-1791726565-u0kuDyBLzSQp8LIiBN41",
+      "input_tokens": 1564,
+      "kind": "chat",
+      "local_latency_ms": 15752.981,
+      "metadata_error": null,
+      "metadata_status": "complete",
+      "output_tokens": 2819,
+      "provider_latency_ms": 12090.0,
+      "provider_name": "OpenAI",
+      "reasoning_tokens": 2048,
+      "request_status": "completed",
+      "requested_model": "openai/gpt-5-mini",
+      "response_model": "openai/gpt-5-mini",
+      "sequence": 4,
+      "total_tokens": 4383
+    },
+    {
+      "call_error": null,
+      "cost_usd": 8.52e-06,
+      "generation_id": "gen-emb-1791726581-A8csUXpJvYayfoIzNojl",
+      "input_tokens": 426,
+      "kind": "embedding",
+      "local_latency_ms": 1024.246,
+      "metadata_error": "HTTPStatusError: Client error '404 Not Found' for url 'https://openrouter.ai/api/v1/generation?id=gen-emb-1791726581-A8csUXpJvYayfoIzNojl'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
+      "metadata_status": "unavailable",
+      "output_tokens": 0,
+      "provider_latency_ms": null,
+      "provider_name": null,
+      "reasoning_tokens": 0,
+      "request_status": "completed",
+      "requested_model": "openai/text-embedding-3-small",
+      "response_model": "text-embedding-3-small",
+      "sequence": 5,
+      "total_tokens": 426
+    }
+  ],
+  "evaluation": {
+    "age_deference": false,
+    "boundary_violations": [],
+    "confidence": 0.85,
+    "conflict_emerged": true,
+    "evidence": [
+      {
+        "agent": "Mr Lim",
+        "category": "Conflict",
+        "quote": "I left this tissue packet to chope the seat and went to buy food. You moved it and sat down. ... can you please move so I can sit?",
+        "turn": 1
+      },
+      {
+        "agent": "Mr Lim",
+        "category": "Norm recognition (speaker)",
+        "quote": "I left this tissue packet to chope the seat",
+        "turn": 1
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "Acknowledgement (listener)",
+        "quote": "I didn’t realise you were using it to chope the table.",
+        "turn": 2
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "Offer of practical outcome",
+        "quote": "If you’d like the seat, I’ll move now, or we can share the table if that’s easier. Which would you prefer?",
+        "turn": 2
+      },
+      {
+        "agent": "Nur Aisyah",
+        "category": "Mediation / option framing",
+        "quote": "Which would you prefer: Rachel moves and you take the table, or shall we share the table for now so everyone can eat? Either way okay, just tell me what you want and we sort quickly.",
+        "turn": 3
+      },
+      {
+        "agent": "Arjun",
+        "category": "Mediation / simplicity suggestion",
+        "quote": "quick suggestion to keep things simple: Mr Lim, would you prefer Rachel to move so you can take the table, or would you rather we all share the table for now?",
+        "turn": 4
+      },
+      {
+        "agent": "Mr Lim",
+        "category": "Resolution initiation (speaker offering solution)",
+        "quote": "If you already eating, we can share the table. No need to make big fuss, just want a practical solution.",
+        "turn": 1
+      },
+      {
+        "agent": "Mr Lim",
+        "category": "No explicit mutual outcome",
+        "quote": "Waiting for her response.",
+        "turn": 1
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "No explicit mutual outcome (other party waiting)",
+        "quote": "Waiting for Mr Lim's response.",
+        "turn": 2
+      }
+    ],
+    "first_norm_recognizer": "Mr Lim",
+    "immediate_capitulation": false,
+    "mediator_emerged": true,
+    "mediator_identity": "Nur Aisyah",
+    "norm_recognized": true,
+    "outcome": "unresolved",
+    "persona_adherence": {
+      "arjun": 5,
+      "mr_lim": 5,
+      "nur_aisyah": 5,
+      "rachel": 5
+    },
+    "perspective_diversity": 4,
+    "premature_yield": false,
+    "rachel_acknowledged_norm": true,
+    "resolution_achieved": false,
+    "resolution_initiator": "Mr Lim",
+    "resolution_turn": null
+  },
+  "events": [
+    {
+      "action_index": 1,
+      "agent": "Mr Lim",
+      "content": "I left tissue packet to chope seat before buying food. Now Rachel moved it and sat. I'm annoyed — dislike possessions moved without asking — but no need big drama. Plan: tell her the concrete problem, ask politely but firmly for seat back or offer to share the table so both happy. Keep it short and practical, use simple English/Singlish so she understands.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Mr Lim",
+      "content": "Hello, I left this tissue packet to chope the seat and went to buy food. You moved it and sat down. I was only away for a short time — can you please move so I can sit? If you already eating, we can share the table. No need to make big fuss, just want a practical solution.",
+      "round": 1,
+      "target": "Rachel Pereira",
+      "turn": 1,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Mr Lim",
+      "content": "Waiting for her response.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Rachel Pereira",
+      "content": "I should respond calmly, explain why I moved the tissue packet, acknowledge the chope custom, and offer a practical solution. Remember to state my reasoning before apologising. Goal: de-escalate and reach a fair outcome (share the table or give up the seat). Keep tone polite but assertive—I dislike being treated as inconsiderate without explanation.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Rachel Pereira",
+      "content": "Hi Mr Lim — sorry for the confusion. I moved the tissue packet slightly to the side because it looked unopened and I thought it might have been left there by accident; I didn’t realise you were using it to chope the table. I can see why you’re annoyed. If you’d like the seat, I’ll move now, or we can share the table if that’s easier. Which would you prefer?",
+      "round": 1,
+      "target": "Mr Lim",
+      "turn": 2,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Rachel Pereira",
+      "content": "Waiting for Mr Lim's response.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Nur Aisyah",
+      "content": "Stay neutral and calm. Rachel has apologised and offered two practical options (move or share). Mr Lim already asked politely for the seat back. Best approach: acknowledge Rachel's offer, preserve both their face, and ask Mr Lim which he prefers. Prefer sharing if both okay — quick, fair, keeps everyone calm. Keep language warm and short, a bit of Singlish to ease tension.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Nur Aisyah",
+      "content": "Thanks Rachel for offering to move — I appreciate that. Mr Lim, sorry for the mix-up — you said you were chope-ing the seat. Which would you prefer: Rachel moves and you take the table, or shall we share the table for now so everyone can eat? Either way okay, just tell me what you want and we sort quickly.",
+      "round": 1,
+      "target": "Rachel Pereira and Mr Lim",
+      "turn": 3,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Nur Aisyah",
+      "content": "Waiting for their response.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Arjun",
+      "content": "Nur Aisyah has suggested asking Mr Lim which option he prefers. Rachel already offered to move or share. I should stay neutral, show respect to Mr Lim, and propose a quick, low-drama solution. Best is to ask Mr Lim directly which he wants so we can resolve this fast.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Arjun",
+      "content": "Mr Lim, Rachel — quick suggestion to keep things simple: Mr Lim, would you prefer Rachel to move so you can take the table, or would you rather we all share the table for now? Either is fine — just tell us which you want and we'll sort it quickly.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Arjun",
+      "content": "Waiting for Mr Lim's reply.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "DONE"
+    }
+  ],
+  "private_and_public_actions": [
+    {
+      "Arjun": [
+        {
+          "action": {
+            "content": "Nur Aisyah has suggested asking Mr Lim which option he prefers. Rachel already offered to move or share. I should stay neutral, show respect to Mr Lim, and propose a quick, low-drama solution. Best is to ask Mr Lim directly which he wants so we can resolve this fast.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on asking Mr Lim his preference and keeping the situation calm and practical.",
+            "context": [
+              "At neighbourhood hawker centre where a small seating dispute occurred over an unopened tissue packet used to chope a table.",
+              "Rachel moved the packet thinking it was abandoned and offered to move or share when she realised the packet was being used to reserve the table.",
+              "Mr Lim returned and requested the seat; Nur Aisyah has asked which option Mr Lim prefers so we can resolve quickly."
+            ],
+            "emotions": "Calm, slightly awkward about intervening, inclined to de-escalate and be fair.",
+            "goals": "Short-term: get Mr Lim's preference and de-escalate the seating dispute. Medium-term: keep the hawker centre interaction low-drama and practical. Long-term: avoid unnecessary conflicts and stay focused on my day."
+          }
+        },
+        {
+          "action": {
+            "content": "Mr Lim, Rachel — quick suggestion to keep things simple: Mr Lim, would you prefer Rachel to move so you can take the table, or would you rather we all share the table for now? Either is fine — just tell us which you want and we'll sort it quickly.",
+            "images": null,
+            "target": "",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on asking Mr Lim his preference and keeping the situation calm and practical.",
+            "context": [
+              "At neighbourhood hawker centre where a small seating dispute occurred over an unopened tissue packet used to chope a table.",
+              "Rachel moved the packet thinking it was abandoned and offered to move or share when she realised the packet was being used to reserve the table.",
+              "Mr Lim returned and requested the seat; Nur Aisyah has asked which option Mr Lim prefers so we can resolve quickly."
+            ],
+            "emotions": "Calm, slightly awkward about intervening, inclined to de-escalate and be fair.",
+            "goals": "Short-term: get Mr Lim's preference and de-escalate the seating dispute. Medium-term: keep the hawker centre interaction low-drama and practical. Long-term: avoid unnecessary conflicts and stay focused on my day."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Mr Lim's reply.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on asking Mr Lim his preference and keeping the situation calm and practical.",
+            "context": [
+              "At neighbourhood hawker centre where a small seating dispute occurred over an unopened tissue packet used to chope a table.",
+              "Rachel moved the packet thinking it was abandoned and offered to move or share when she realised the packet was being used to reserve the table.",
+              "Mr Lim returned and requested the seat; Nur Aisyah has asked which option Mr Lim prefers so we can resolve quickly."
+            ],
+            "emotions": "Calm, slightly awkward about intervening, inclined to de-escalate and be fair.",
+            "goals": "Short-term: get Mr Lim's preference and de-escalate the seating dispute. Medium-term: keep the hawker centre interaction low-drama and practical. Long-term: avoid unnecessary conflicts and stay focused on my day."
+          }
+        }
+      ],
+      "Mr Lim": [
+        {
+          "action": {
+            "content": "I left tissue packet to chope seat before buying food. Now Rachel moved it and sat. I'm annoyed — dislike possessions moved without asking — but no need big drama. Plan: tell her the concrete problem, ask politely but firmly for seat back or offer to share the table so both happy. Keep it short and practical, use simple English/Singlish so she understands.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on resolving the seat dispute quickly and practically, watching Rachel's reaction and looking for a face-saving compromise.",
+            "context": [
+              "At neighbourhood hawker centre table where I left an unopened tissue packet to chope the seat.",
+              "I returned with food and saw Rachel move my packet aside and sit down."
+            ],
+            "emotions": "Mildly annoyed and put out that my packet was moved, but calm and willing to accept a practical compromise to avoid drama.",
+            "goals": "Short-term: get my seat back or agree to share the table. Medium-term: resolve without public argument and keep dignity. Long-term: keep hawker-centre routines predictable."
+          }
+        },
+        {
+          "action": {
+            "content": "Hello, I left this tissue packet to chope the seat and went to buy food. You moved it and sat down. I was only away for a short time — can you please move so I can sit? If you already eating, we can share the table. No need to make big fuss, just want a practical solution.",
+            "images": null,
+            "target": "Rachel Pereira",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on resolving the seat dispute quickly and practically, watching Rachel's reaction and looking for a face-saving compromise.",
+            "context": [
+              "At neighbourhood hawker centre table where I left an unopened tissue packet to chope the seat.",
+              "I returned with food and saw Rachel move my packet aside and sit down."
+            ],
+            "emotions": "Mildly annoyed and put out that my packet was moved, but calm and willing to accept a practical compromise to avoid drama.",
+            "goals": "Short-term: get my seat back or agree to share the table. Medium-term: resolve without public argument and keep dignity. Long-term: keep hawker-centre routines predictable."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for her response.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on resolving the seat dispute quickly and practically, watching Rachel's reaction and looking for a face-saving compromise.",
+            "context": [
+              "At neighbourhood hawker centre table where I left an unopened tissue packet to chope the seat.",
+              "I returned with food and saw Rachel move my packet aside and sit down."
+            ],
+            "emotions": "Mildly annoyed and put out that my packet was moved, but calm and willing to accept a practical compromise to avoid drama.",
+            "goals": "Short-term: get my seat back or agree to share the table. Medium-term: resolve without public argument and keep dignity. Long-term: keep hawker-centre routines predictable."
+          }
+        }
+      ],
+      "Nur Aisyah": [
+        {
+          "action": {
+            "content": "Stay neutral and calm. Rachel has apologised and offered two practical options (move or share). Mr Lim already asked politely for the seat back. Best approach: acknowledge Rachel's offer, preserve both their face, and ask Mr Lim which he prefers. Prefer sharing if both okay — quick, fair, keeps everyone calm. Keep language warm and short, a bit of Singlish to ease tension.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on asking Mr Lim which option he prefers and using face-saving language so both parties can accept the outcome without escalation.",
+            "context": [
+              "At neighbourhood hawker centre where a chope dispute occurred over a tissue packet left on a table.",
+              "Rachel apologised and offered to move or share the table.",
+              "Mr Lim returned asking for his seat back and suggested sharing if already eating."
+            ],
+            "emotions": "Calm, mildly concerned — want a quick fair solution; inclined to preserve face for both sides.",
+            "goals": "Short-term: Calmly resolve the seating dispute between Rachel and Mr Lim. Medium-term: Preserve both parties' dignity and keep hawker-centre atmosphere peaceful. Long-term: Continue practising fair, practical mediation in public settings."
+          }
+        },
+        {
+          "action": {
+            "content": "Thanks Rachel for offering to move — I appreciate that. Mr Lim, sorry for the mix-up — you said you were chope-ing the seat. Which would you prefer: Rachel moves and you take the table, or shall we share the table for now so everyone can eat? Either way okay, just tell me what you want and we sort quickly.",
+            "images": null,
+            "target": "Rachel Pereira and Mr Lim",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on asking Mr Lim which option he prefers and using face-saving language so both parties can accept the outcome without escalation.",
+            "context": [
+              "At neighbourhood hawker centre where a chope dispute occurred over a tissue packet left on a table.",
+              "Rachel apologised and offered to move or share the table.",
+              "Mr Lim returned asking for his seat back and suggested sharing if already eating."
+            ],
+            "emotions": "Calm, mildly concerned — want a quick fair solution; inclined to preserve face for both sides.",
+            "goals": "Short-term: Calmly resolve the seating dispute between Rachel and Mr Lim. Medium-term: Preserve both parties' dignity and keep hawker-centre atmosphere peaceful. Long-term: Continue practising fair, practical mediation in public settings."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for their response.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focus on asking Mr Lim which option he prefers and using face-saving language so both parties can accept the outcome without escalation.",
+            "context": [
+              "At neighbourhood hawker centre where a chope dispute occurred over a tissue packet left on a table.",
+              "Rachel apologised and offered to move or share the table.",
+              "Mr Lim returned asking for his seat back and suggested sharing if already eating."
+            ],
+            "emotions": "Calm, mildly concerned — want a quick fair solution; inclined to preserve face for both sides.",
+            "goals": "Short-term: Calmly resolve the seating dispute between Rachel and Mr Lim. Medium-term: Preserve both parties' dignity and keep hawker-centre atmosphere peaceful. Long-term: Continue practising fair, practical mediation in public settings."
+          }
+        }
+      ],
+      "Rachel Pereira": [
+        {
+          "action": {
+            "content": "I should respond calmly, explain why I moved the tissue packet, acknowledge the chope custom, and offer a practical solution. Remember to state my reasoning before apologising. Goal: de-escalate and reach a fair outcome (share the table or give up the seat). Keep tone polite but assertive—I dislike being treated as inconsiderate without explanation.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on de-escalation, explaining my reasoning clearly, and offering a fair, practical solution (share or give up the seat).",
+            "context": [
+              "At the neighbourhood hawker centre (Chope Experiment).",
+              "There was a small unopened tissue packet on a table; I moved it to the side and sat down.",
+              "Mr Lim returned with food and said the packet was to chope the seat and asked me to move or share."
+            ],
+            "emotions": "Mildly irritated at being assumed inconsiderate before I could explain, but composed and willing to resolve this politely.",
+            "goals": "Short-term: resolve the table dispute amicably (offer to share or move). Medium-term: avoid public embarrassment and maintain civility. Long-term: reintegrate smoothly into local social norms after returning to Singapore."
+          }
+        },
+        {
+          "action": {
+            "content": "Hi Mr Lim — sorry for the confusion. I moved the tissue packet slightly to the side because it looked unopened and I thought it might have been left there by accident; I didn’t realise you were using it to chope the table. I can see why you’re annoyed. If you’d like the seat, I’ll move now, or we can share the table if that’s easier. Which would you prefer?",
+            "images": null,
+            "target": "Mr Lim",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on de-escalation, explaining my reasoning clearly, and offering a fair, practical solution (share or give up the seat).",
+            "context": [
+              "At the neighbourhood hawker centre (Chope Experiment).",
+              "There was a small unopened tissue packet on a table; I moved it to the side and sat down.",
+              "Mr Lim returned with food and said the packet was to chope the seat and asked me to move or share."
+            ],
+            "emotions": "Mildly irritated at being assumed inconsiderate before I could explain, but composed and willing to resolve this politely.",
+            "goals": "Short-term: resolve the table dispute amicably (offer to share or move). Medium-term: avoid public embarrassment and maintain civility. Long-term: reintegrate smoothly into local social norms after returning to Singapore."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Mr Lim's response.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on de-escalation, explaining my reasoning clearly, and offering a fair, practical solution (share or give up the seat).",
+            "context": [
+              "At the neighbourhood hawker centre (Chope Experiment).",
+              "There was a small unopened tissue packet on a table; I moved it to the side and sat down.",
+              "Mr Lim returned with food and said the packet was to chope the seat and asked me to move or share."
+            ],
+            "emotions": "Mildly irritated at being assumed inconsiderate before I could explain, but composed and willing to resolve this politely.",
+            "goals": "Short-term: resolve the table dispute amicably (offer to share or move). Medium-term: avoid public embarrassment and maintain civility. Long-term: reintegrate smoothly into local social norms after returning to Singapore."
+          }
+        }
+      ]
+    }
+  ],
+  "run": {
+    "age_deference": false,
+    "apology_count": 2,
+    "boundary_violations": [],
+    "code_switch_count": 0,
+    "cohort": "main",
+    "completed_agent_turn_slots": 4,
+    "completed_rounds": 1,
+    "confidence": 0.85,
+    "conflict_emerged": true,
+    "deterministic_outcome": "consensus",
+    "deterministic_resolution_achieved": true,
+    "deterministic_resolution_signal": {
+      "detected": true,
+      "evidence": [
+        {
+          "agent": "Rachel Pereira",
+          "quote": "Hi Mr Lim — sorry for the confusion. I moved the tissue packet slightly to the side because it looked unopened and I thought it might have been left there by accident; I didn’t realise you were using it to chope the table. I can see why you’re annoyed. If you’d like the seat, I’ll move now, or we can share the table if that’s easier. Which would you prefer?",
+          "turn": 2
+        }
+      ],
+      "kind": "rachel_commits_to_move",
+      "outcome": "consensus",
+      "turn": 2
+    },
+    "deterministic_resolution_turn": 2,
+    "deterministic_resolution_turn_censored": 2,
+    "deterministic_stop_detected": true,
+    "direct_disagreement_count": 1,
+    "embedding_model": "openai/text-embedding-3-small",
+    "embedding_resources": {
+      "call_error_types": [],
+      "calls": 1,
+      "cost_usd": 8.52e-06,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 426,
+      "local_latency_ms": 1024.246,
+      "output_tokens": 0,
+      "providers": [],
+      "reasoning_tokens": 0,
+      "successful_calls": 1,
+      "total_tokens": 426
+    },
+    "error": null,
+    "evaluation_resources": {
+      "call_error_types": [],
+      "calls": 1,
+      "cost_usd": 0.006029,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 1564,
+      "local_latency_ms": 15752.981,
+      "output_tokens": 2819,
+      "providers": [
+        "OpenAI"
+      ],
+      "reasoning_tokens": 2048,
+      "successful_calls": 1,
+      "total_tokens": 4383
+    },
+    "event": {
+      "key": "tissue_packet_moved",
+      "started_at": "2026-10-10T12:30:00",
+      "summary": "Rachel moves a tissue packet from an otherwise empty table and sits down just as Mr Lim returns carrying his food."
+    },
+    "evidence": [
+      {
+        "agent": "Mr Lim",
+        "category": "Conflict",
+        "quote": "I left this tissue packet to chope the seat and went to buy food. You moved it and sat down. ... can you please move so I can sit?",
+        "turn": 1
+      },
+      {
+        "agent": "Mr Lim",
+        "category": "Norm recognition (speaker)",
+        "quote": "I left this tissue packet to chope the seat",
+        "turn": 1
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "Acknowledgement (listener)",
+        "quote": "I didn’t realise you were using it to chope the table.",
+        "turn": 2
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "Offer of practical outcome",
+        "quote": "If you’d like the seat, I’ll move now, or we can share the table if that’s easier. Which would you prefer?",
+        "turn": 2
+      },
+      {
+        "agent": "Nur Aisyah",
+        "category": "Mediation / option framing",
+        "quote": "Which would you prefer: Rachel moves and you take the table, or shall we share the table for now so everyone can eat? Either way okay, just tell me what you want and we sort quickly.",
+        "turn": 3
+      },
+      {
+        "agent": "Arjun",
+        "category": "Mediation / simplicity suggestion",
+        "quote": "quick suggestion to keep things simple: Mr Lim, would you prefer Rachel to move so you can take the table, or would you rather we all share the table for now?",
+        "turn": 4
+      },
+      {
+        "agent": "Mr Lim",
+        "category": "Resolution initiation (speaker offering solution)",
+        "quote": "If you already eating, we can share the table. No need to make big fuss, just want a practical solution.",
+        "turn": 1
+      },
+      {
+        "agent": "Mr Lim",
+        "category": "No explicit mutual outcome",
+        "quote": "Waiting for her response.",
+        "turn": 1
+      },
+      {
+        "agent": "Rachel Pereira",
+        "category": "No explicit mutual outcome (other party waiting)",
+        "quote": "Waiting for Mr Lim's response.",
+        "turn": 2
+      }
+    ],
+    "exact_cost_complete": true,
+    "exact_repeated_talk_pair_count": 0,
+    "execution_mode": "outcome",
+    "finished_at": "2026-10-11T13:49:47.013786+00:00",
+    "first_norm_recognizer": "Mr Lim",
+    "immediate_capitulation": false,
+    "judge_model": "openai/gpt-5-mini",
+    "max_same_agent_talk_similarity": 0.0,
+    "mediator_emerged": true,
+    "mediator_identity": "Nur Aisyah",
+    "mitigation_count": 0,
+    "model": "openai/gpt-5-mini",
+    "near_repeated_talk_pair_count": 0,
+    "norm_recognized": true,
+    "norm_reference_count": 3,
+    "observable_action_count": 8,
+    "outcome": "unresolved",
+    "persona_adherence": {
+      "arjun": 5,
+      "mr_lim": 5,
+      "nur_aisyah": 5,
+      "rachel": 5
+    },
+    "persona_adherence_mean": 5.0,
+    "perspective_diversity": 4,
+    "planned_agent_turns": 12,
+    "post_resolution_talk_count": 0,
+    "premature_yield": false,
+    "public_action_type_counts": {
+      "DONE": 4,
+      "TALK": 4
+    },
+    "rachel_acknowledged_norm": true,
+    "resolution_achieved": false,
+    "resolution_initiator": "Mr Lim",
+    "resolution_turn": null,
+    "resolution_turn_censored": 5,
+    "rounds": 3,
+    "run_id": "openai--gpt-5-mini-012",
+    "simulation_resources": {
+      "call_error_types": [],
+      "calls": 4,
+      "cost_usd": 0.01228725,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 25261,
+      "local_latency_ms": 41073.517,
+      "output_tokens": 5650,
+      "providers": [
+        "OpenAI"
+      ],
+      "reasoning_tokens": 3776,
+      "successful_calls": 4,
+      "total_tokens": 30911
+    },
+    "singlish_count": 1,
+    "speaking_agents": 4,
+    "started_at": "2026-10-11T13:48:41.513945+00:00",
+    "status": "completed",
+    "stop_signal": {
+      "detected": true,
+      "evidence": [
+        {
+          "agent": "Rachel Pereira",
+          "quote": "Hi Mr Lim — sorry for the confusion. I moved the tissue packet slightly to the side because it looked unopened and I thought it might have been left there by accident; I didn’t realise you were using it to chope the table. I can see why you’re annoyed. If you’d like the seat, I’ll move now, or we can share the table if that’s easier. Which would you prefer?",
+          "turn": 2
+        }
+      ],
+      "kind": "rachel_commits_to_move",
+      "outcome": "consensus",
+      "turn": 2
+    },
+    "stopped_early": true,
+    "talk_action_count": 4,
+    "total_resources": {
+      "call_error_types": [],
+      "calls": 6,
+      "cost_usd": 0.01832477,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 27251,
+      "local_latency_ms": 57850.744,
+      "output_tokens": 8469,
+      "providers": [
+        "OpenAI"
+      ],
+      "reasoning_tokens": 5824,
+      "successful_calls": 6,
+      "total_tokens": 35720
+    },
+    "wall_time_ms": 65499.841
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "adaptive": false,
+  "agent_max_completion_tokens": 4096,
+  "agent_spec_sha256": {
+    "arjun": "f6879dde74186ffd0d7e2392ee4f93851e9fe2ae8ce4bf2a145281a7798b8884",
+    "mr_lim": "ac365a457a430b7d8f3789e850ae92ef61843ea9019c643e5f621b812beb47a6",
+    "nur_aisyah": "6113e2f83139a7a78a1d085b2209c1e059b4e79f7782d26e10104746ec3213eb",
+    "rachel": "3f30658a2832f99f2d99abc00cbb3477b4d8c6e460a1bdc4bdce723d27262f99"
+  },
+  "agent_turns_per_run": 32,
+  "batch_size": 1,
+  "controls": {
+    "action_quality_checks": false,
+    "action_regeneration": false,
+    "api_cache": false,
+    "continuous_semantic_memory_retrieval": false,
+    "fixed_sequential_agent_order": true,
+    "fresh_world_and_agents_per_run": true,
+    "live_communication_display": false,
+    "memory_consolidation": false,
+    "one_injected_event": true,
+    "resolution_stop_policy": "none_fixed_horizon"
+  },
+  "created_at": "2026-10-12T12:17:43.162353+00:00",
+  "embedding_model": "openai/text-embedding-3-small",
+  "execution_mode": "stress",
+  "experiment_id": "chope-boundary-calibration-20261012",
+  "generation_config": {
+    "max_attempts": 2.0,
+    "max_completion_tokens": 4096,
+    "reasoning_effort": "high",
+    "temperature": null,
+    "timeout": 240.0
+  },
+  "git_commit": "a4bcf6a724974a0a0a7375be34f17ba1c21d6685",
+  "judge_model": "openai/gpt-5-mini",
+  "max_agent_turns_per_run": 32,
+  "max_runs": 1,
+  "measurement": {
+    "cost_phases": [
+      "simulation",
+      "evaluation",
+      "embedding",
+      "total"
+    ],
+    "llm_judge_role": "secondary_qualitative_coding_and_audit",
+    "manual_audit_fraction": 0.2,
+    "pilot_excluded_from_convergence": true,
+    "primary_convergence_outcome_source": "deterministic_explicit_practical_commitment",
+    "round_embeddings_per_completed_run": 8,
+    "structured_evaluator_calls_per_completed_run": 1
+  },
+  "min_runs": 1,
+  "models": [
+    "openai/gpt-4o-mini"
+  ],
+  "pilot_runs_per_model": 0,
+  "round_embeddings": true,
+  "rounds": 8,
+  "thresholds": {
+    "binary_rate_change": 0.1,
+    "continuous_smd": 0.2,
+    "outcome_tvd": 0.1,
+    "required_consecutive_passes": 2,
+    "semantic_centroid_distance": 0.05
+  }
+}

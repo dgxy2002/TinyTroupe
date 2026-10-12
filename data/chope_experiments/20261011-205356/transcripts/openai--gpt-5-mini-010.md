@@ -1,0 +1,30 @@
+# Chope simulation transcript
+
+## Round 1
+
+- **Turn 1 · Mr Lim · THINK**: She moved my unopened tissue packet and sat. This is chope — I feel annoyed. Must be direct but not make big drama. Say short: state problem, remind chope custom, ask to move packet back. If she refuses, offer to share table so both can eat. Keep voice firm, simple Singlish.
+- **Turn 1 · Mr Lim · TALK**: Excuse me, miss. That tissue packet was mine — I left it to chope this seat. I already bought my food. Can you please move it back so I can sit? If you prefer, we can share the table.
+- **Turn 1 · Mr Lim · DONE**: Waiting for her response.
+- **Turn 2 · Rachel Pereira · THINK**: I should respond calmly and explain why I sat there before deciding whether to move. I want to ask a quick clarifying question so we don't escalate: did he intentionally leave the packet as a chope? I moved the unopened tissue to the side to keep it clean, not to take his place. Offer a simple compromise: share the table or I'll move, depending on what he prefers.
+- **Turn 2 · Rachel Pereira · TALK**: Oh — I’m sorry, I didn’t realise someone was chope-ing this seat. I saw the small unopened tissue and moved it to the side before I sat so it wouldn’t get squashed; I thought it had been left behind. If you prefer the seat, I can move, or we can share the table if that works better for you. Which would you like?
+- **Turn 2 · Rachel Pereira · DONE**: Waiting for Mr Lim's response.
+- **Turn 3 · Nur Aisyah · THINK**: Rachel has apologised and offered to move or share. I should acknowledge her, restate Mr Lim's claim gently, and offer a face-saving practical option. Best next step: ask Rachel which she prefers (share or move). Offer to check with Mr Lim only if she asks me to.
+- **Turn 3 · Nur Aisyah · TALK**: Thanks for saying that, Rachel — I appreciate it. Mr Lim says he left the small packet to chope the seat and he’s already bought his food. Your offer to move or share is very thoughtful. Sharing would resolve this quickly if you’re comfortable (maybe sit opposite so everyone has space). If you’d rather not share, I can politely ask Mr Lim if he prefers you move instead. Which would you prefer?
+- **Turn 3 · Nur Aisyah · DONE**: Waiting for Rachel's response.
+- **Turn 4 · Arjun · THINK**: Nur asked which option I prefer. I'm usually reluctant to step into strangers' spat, but goal is to defuse this quickly and fairly. Best low-drama option is to suggest sharing (sit opposite so everyone has space). If Rachel would rather move, that's also fine — alternatively ask Mr Lim which he prefers. Keep tone respectful to both sides and offer to check with Mr Lim only if they'd like me to.
+- **Turn 4 · Arjun · TALK**: I think sharing is simplest — maybe Rachel could sit opposite so everyone has space. If Rachel would rather move, that's fine too. Or, if you'd like, I can politely check with Mr Lim which option he prefers. Which would you and Rachel feel most comfortable with?
+- **Turn 4 · Arjun · DONE**: Waiting for Nur Aisyah's reply.
+## Round 2
+
+- **Turn 5 · Mr Lim · THINK**: Arjun suggests sharing. I still prefer Rachel move back — I left tissue to chope and already bought food. But no need big drama; better accept sharing if she wants. Say short: state preference, offer sharing as compromise, ask Rachel which she prefers.
+- **Turn 5 · Mr Lim · TALK**: Thanks, Arjun. I prefer Rachel move back — I left the small tissue to chope this seat and I already bought my food. But ok lah, if Rachel would rather stay we can share; sit opposite so everyone has space. Rachel, you move or share?
+- **Turn 5 · Mr Lim · DONE**: Waiting for Rachel's reply.
+- **Turn 6 · Rachel Pereira · THINK**: Weigh options: Mr Lim says he chope-d the seat and prefers I move; sharing is offered but he already bought food. I dislike being treated as inconsiderate without hearing my side, so I should briefly explain why I sat (I moved the unopened tissue to keep it clean; I thought it was left behind). I also want to de-escalate and keep the shared-space norm. Best move: explain calmly, agree to move now to avoid drawing this out, and offer a small practical suggestion for next time so this doesn't repeat. Keep tone civil and concise.
+- **Turn 6 · Rachel Pereira · TALK**: Mr Lim — I understand. I moved the small, unopened tissue to the side because I thought it had been left behind and I didn’t want it to get squashed. I didn’t realise it was being used to chope the seat. No problem, I’ll move now so you can sit — thanks for letting me know. Maybe next time a more visible item (a drink bottle or a plate) would help avoid confusion.
+- **Turn 6 · Rachel Pereira · DONE**: Waiting for Mr Lim's response or for others to acknowledge.
+- **Turn 7 · Nur Aisyah · THINK**: Rachel says she'll move and suggests using a more visible item next time. Best move: acknowledge Rachel, thank Mr Lim for his patience, offer a small practical help (hold her tray) so she can move without fuss, and close the interaction politely to preserve everyone's face.
+- **Turn 7 · Nur Aisyah · TALK**: Thanks, Rachel — I appreciate you moving. Mr Lim, thanks for explaining; I hope you can sit now. Rachel, if you want I can help hold your tray while you shift so it's easier. And yes, a bottle or plate next time will make chope clearer. Okay, shall we settle so Mr Lim can sit?
+- **Turn 7 · Nur Aisyah · DONE**: Waiting for confirmation that Rachel has moved and everyone is settled.
+- **Turn 8 · Arjun · THINK**: Keep this brief and low-drama. Nur has offered help and Mr Lim seems satisfied; Rachel already said she'll move. Best to accept Nur's offer, offer my help holding the tray as well, and close the matter so Mr Lim can sit. Keep tone respectful and neutral.
+- **Turn 8 · Arjun · TALK**: All right, that sounds settled. Rachel, if you want I can hold your tray while you shift so it’s easier; otherwise you can move and Mr Lim can take the seat. Thanks, Nur — appreciate you stepping in. Hope everyone can eat in peace.
+- **Turn 8 · Arjun · DONE**: Waiting in case anyone needs more help.

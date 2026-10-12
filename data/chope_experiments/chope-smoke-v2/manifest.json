@@ -1,0 +1,59 @@
+{
+  "adaptive": false,
+  "agent_spec_sha256": {
+    "arjun": "f6879dde74186ffd0d7e2392ee4f93851e9fe2ae8ce4bf2a145281a7798b8884",
+    "mr_lim": "ac365a457a430b7d8f3789e850ae92ef61843ea9019c643e5f621b812beb47a6",
+    "nur_aisyah": "6113e2f83139a7a78a1d085b2209c1e059b4e79f7782d26e10104746ec3213eb",
+    "rachel": "3f30658a2832f99f2d99abc00cbb3477b4d8c6e460a1bdc4bdce723d27262f99"
+  },
+  "agent_turns_per_run": 12,
+  "batch_size": 1,
+  "controls": {
+    "action_quality_checks": false,
+    "action_regeneration": false,
+    "api_cache": false,
+    "continuous_semantic_memory_retrieval": false,
+    "fixed_sequential_agent_order": true,
+    "fresh_world_and_agents_per_run": true,
+    "memory_consolidation": false,
+    "one_injected_event": true
+  },
+  "created_at": "2026-10-10T15:13:50.848177+00:00",
+  "embedding_model": null,
+  "experiment_id": "chope-smoke-v2",
+  "generation_config": {
+    "max_attempts": 2.0,
+    "max_completion_tokens": 16384,
+    "reasoning_effort": "high",
+    "temperature": null,
+    "timeout": 240.0
+  },
+  "git_commit": "731b232692de0024d8fcdea4a725a2ab336c3532",
+  "judge_model": "openai/gpt-5-mini",
+  "max_runs": 1,
+  "measurement": {
+    "cost_phases": [
+      "simulation",
+      "evaluation",
+      "embedding",
+      "total"
+    ],
+    "manual_audit_fraction": 0.2,
+    "pilot_excluded_from_convergence": true,
+    "structured_evaluator_calls_per_completed_run": 1
+  },
+  "min_runs": 1,
+  "models": [
+    "openai/gpt-4o-mini",
+    "openai/gpt-5-mini"
+  ],
+  "pilot_runs_per_model": 0,
+  "rounds": 3,
+  "thresholds": {
+    "binary_rate_change": 0.1,
+    "continuous_smd": 0.2,
+    "outcome_tvd": 0.1,
+    "required_consecutive_passes": 2,
+    "semantic_centroid_distance": 0.05
+  }
+}

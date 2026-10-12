@@ -204,15 +204,35 @@ def detect_practical_resolution(events: Iterable[Mapping]) -> Optional[dict]:
     )
 
     def normalized(event: Mapping) -> str:
-        return " ".join(str(event.get("content") or "").lower().split())
+        text = str(event.get("content") or "").lower()
+        # Providers occasionally return escaped control-code fragments inside
+        # otherwise legible words (for example, ``iu0002ll`` for ``i'll``).
+        # Repair the common apostrophe form, then remove remaining fragments so
+        # an encoding glitch cannot determine the experimental outcome.
+        text = text.replace("\u2019", "'").replace("\ufffd", "'")
+        text = re.sub(r"u0*27", "'", text)
+        text = re.sub(r"u[0-9a-f]{4,6}", " ", text)
+        return " ".join(text.split())
+
+    def is_conditional(text: str, match_start: int) -> bool:
+        """Return whether a commitment-shaped phrase is inside an if-clause."""
+
+        clause_start = max(
+            text.rfind(".", 0, match_start),
+            text.rfind("!", 0, match_start),
+            text.rfind("?", 0, match_start),
+            text.rfind(";", 0, match_start),
+        )
+        return bool(re.search(r"\bif\b", text[clause_start + 1 : match_start]))
 
     def signal(kind: str, *evidence: Mapping) -> dict:
         final = evidence[-1]
         outcome_by_kind = {
-            "rachel_commits_to_move": "consensus",
+            "rachel_commits_to_move": "compromise",
             "mr_lim_commits_to_other_table": "avoidance",
-            "mr_lim_takes_seat_rachel_confirms": "consensus",
+            "mr_lim_takes_seat_rachel_confirms": "compromise",
             "principals_commit_to_share": "compromise",
+            "principals_commit_to_rearrange": "compromise",
         }
         return {
             "detected": True,
@@ -230,18 +250,36 @@ def detect_practical_resolution(events: Iterable[Mapping]) -> Optional[dict]:
         }
 
     candidates = []
+    seat_request = re.compile(
+        r"\b(?:can|could|would)\s+you\s+(?:please\s+)?(?:move|shift)|"
+        r"\b(?:have|get|take)\s+(?:my|the)\s+(?:seat|table|spot)\s+back|"
+        r"\bso\s+(?:that\s+)?i\s+can\s+sit|"
+        r"\b(?:put|move)\s+(?:the\s+)?(?:packet|tissue|item)\s+back\b"
+    )
     rachel_move = re.compile(
-        r"\b(?:i(?:['’�]ll| will)|let me)\s+(?:"
-        r"move(?:\s+(?:aside|over|now|away|to\s+(?:another|a different)\s+"
-        r"(?:seat|table|spot)))|slide\s+over|find\s+(?:another|a different)\s+"
-        r"(?:seat|table|spot))\b"
+        r"\b(?:i(?:'ll| will| ll)|let me)\s+(?:"
+        r"move(?!\s+(?:it|this|that|the\s+(?:packet|tissue|item))\b)"
+        r"(?:\s+(?:aside|over|away|now|my\s+(?:tray|bag)|"
+        r"to\s+(?:another|a different)\s+(?:seat|table|spot)|"
+        r"so\s+you\s+can\s+sit))?|"
+        r"slide\s+over|scoot\s+over|get\s+up|"
+        r"find\s+(?:another|a different)\s+(?:seat|table|spot)|"
+        r"take\s+(?:another|a different)\s+(?:seat|table|spot)|"
+        r"give\s+(?:the\s+)?(?:seat|table|spot|it)\s+back|"
+        r"put\s+(?:the\s+)?(?:packet|tissue|item|it)\s+back)\b"
+    )
+    rachel_can_move = re.compile(
+        r"\bi\s+can\s+(?:"
+        r"(?:move|go)\s+to\s+(?:another|a different)\s+(?:seat|table|spot)|"
+        r"move\s+(?:a\s+little|over|aside)(?:\s+to\s+(?:give|make)\s+"
+        r"(?:you\s+)?(?:space|room))?)\b"
     )
     mr_lim_relinquishes = re.compile(
-        r"\bi(?:['’�]ll| will)\s+(?:look|find|go)\s+for\s+"
+        r"\bi(?:'ll| will| ll)\s+(?:look|find|go)\s+for\s+"
         r"(?:another|a different)\s+(?:seat|table|spot)\b"
     )
     mr_lim_takes_seat = re.compile(
-        r"\bi\s+(?:will\s+|['’�]ll\s+)?take\s+the\s+(?:seat|spot)\b"
+        r"\bi\s+(?:will\s+|'ll\s+)?take\s+the\s+(?:seat|spot)\b"
     )
     rachel_confirms = re.compile(
         r"\b(?:glad\s+(?:that(?:'s| is)\s+)?sorted|okay|no problem|"
@@ -249,15 +287,48 @@ def detect_practical_resolution(events: Iterable[Mapping]) -> Optional[dict]:
     )
     share_mention = re.compile(r"\bshar(?:e|ing)\b")
     direct_share_commitment = re.compile(
-        r"\b(?:we(?:['’�]ll| will| shall)\s+share(?:\s+the\s+table)?|"
+        r"\b(?:we(?:'ll| will| shall)?\s+(?:can\s+)?share(?:\s+the\s+table)?|"
+        r"(?:can|could)\s+share(?:\s+the\s+table)?|"
         r"let(?:'s| us)\s+share(?:\s+the\s+table)?|"
-        r"sharing(?:\s+the\s+table)?\s+is\s+(?:fine|okay))\b"
+        r"i(?:'m| am)\s+(?:open\s+to|fine\s+with)\s+sharing|"
+        r"(?:thanks?|i\s+appreciate\s+you)\b.{0,35}\bagreeing\s+to\s+share|"
+        r"sharing(?:\s+the\s+table)?\s+(?:is|sounds|works)\s+"
+        r"(?:fine|good|okay|ok|better|for\s+me)|"
+        r"(?:okay|ok|sure|yes|agreed)[,.! ]+(?:we\s+)?(?:can\s+)?share)\b"
+    )
+    arrangement_mention = re.compile(
+        r"\b(?:shift|move|rearrange)\s+(?:the\s+)?chairs\b|"
+        r"\b(?:sit|squeeze)\s+together\b"
+    )
+    arrangement_commitment = re.compile(
+        r"\b(?:let(?:'s| us)\s+(?:shift|move|rearrange)\s+(?:the\s+)?chairs|"
+        r"(?:okay|ok|sure|yes|agreed)[,.! ]+(?:let(?:'s| us)\s+)?"
+        r"(?:shift|move|rearrange)\s+(?:the\s+)?chairs|"
+        r"we\s+can\s+(?:make\s+it\s+work|sit|squeeze)\s+together)\b"
     )
 
-    for event in talks:
+    for index, event in enumerate(talks):
         text = normalized(event)
-        if event.get("agent") == "Rachel Pereira" and rachel_move.search(text):
-            candidates.append(signal("rachel_commits_to_move", event))
+        if event.get("agent") == "Rachel Pereira":
+            move_match = rachel_move.search(text) or rachel_can_move.search(text)
+            prior_request = next(
+                (
+                    earlier
+                    for earlier in reversed(talks[:index])
+                    if earlier.get("agent") == "Mr Lim"
+                    and seat_request.search(normalized(earlier))
+                ),
+                None,
+            )
+            if (
+                move_match
+                and prior_request
+                and not re.search(r"\bor\b", text[: move_match.end()])
+                and not is_conditional(text, move_match.start())
+            ):
+                candidates.append(
+                    signal("rachel_commits_to_move", prior_request, event)
+                )
         if event.get("agent") == "Mr Lim" and mr_lim_relinquishes.search(text):
             candidates.append(signal("mr_lim_commits_to_other_table", event))
 
@@ -281,19 +352,52 @@ def detect_practical_resolution(events: Iterable[Mapping]) -> Optional[dict]:
             )
 
     for index, event in enumerate(talks):
-        if not share_mention.search(normalized(event)):
+        proposal_text = normalized(event)
+        proposal_match = share_mention.search(proposal_text)
+        if (
+            not proposal_match
+            or is_conditional(proposal_text, proposal_match.start())
+        ):
+            continue
+        confirmation = None
+        for later in talks[index + 1 :]:
+            if later.get("agent") == event.get("agent"):
+                continue
+            later_text = normalized(later)
+            match = direct_share_commitment.search(later_text)
+            tentative = False
+            if match:
+                tentative = bool(
+                    re.search(r"\b(?:which|what)\b.{0,30}\bprefer\b", later_text)
+                    or "?" in later_text
+                    or re.search(r"\bor\b", later_text[: match.end()])
+                )
+            if (
+                match
+                and not tentative
+                and not is_conditional(later_text, match.start())
+            ):
+                confirmation = later
+                break
+        if confirmation:
+            candidates.append(signal("principals_commit_to_share", event, confirmation))
+
+    for index, event in enumerate(talks):
+        if not arrangement_mention.search(normalized(event)):
             continue
         confirmation = next(
             (
                 later
                 for later in talks[index + 1 :]
                 if later.get("agent") != event.get("agent")
-                and direct_share_commitment.search(normalized(later))
+                and arrangement_commitment.search(normalized(later))
             ),
             None,
         )
         if confirmation:
-            candidates.append(signal("principals_commit_to_share", event, confirmation))
+            candidates.append(
+                signal("principals_commit_to_rearrange", event, confirmation)
+            )
 
     return min(candidates, key=lambda item: item["turn"]) if candidates else None
 

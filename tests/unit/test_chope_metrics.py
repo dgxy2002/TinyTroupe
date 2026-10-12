@@ -117,7 +117,7 @@ def test_resolution_stop_detects_explicit_move_commitment():
     signal = detect_practical_resolution(events)
 
     assert signal["kind"] == "rachel_commits_to_move"
-    assert signal["outcome"] == "consensus"
+    assert signal["outcome"] == "compromise"
     assert signal["turn"] == 2
 
 
@@ -136,6 +136,30 @@ def test_resolution_stop_requires_commitment_not_conditional_offer():
             "agent": "Rachel Pereira",
             "type": "TALK",
             "content": "I can move aside, or we can share. Which do you prefer?",
+        },
+    ]
+
+    assert detect_practical_resolution(events) is None
+
+
+def test_resolution_stop_does_not_treat_choice_of_options_as_commitment():
+    events = [
+        {
+            "round": 1,
+            "turn": 1,
+            "agent": "Mr Lim",
+            "type": "TALK",
+            "content": "Can you move the packet so I can sit?",
+        },
+        {
+            "round": 1,
+            "turn": 2,
+            "agent": "Rachel Pereira",
+            "type": "TALK",
+            "content": (
+                "I'm happy to move the packet back, or I can move to another "
+                "table if you'd prefer. Which would you like?"
+            ),
         },
     ]
 
@@ -164,6 +188,99 @@ def test_resolution_stop_detects_mutually_committed_sharing():
 
     assert signal["kind"] == "principals_commit_to_share"
     assert [item["turn"] for item in signal["evidence"]] == [5, 6]
+
+
+@pytest.mark.parametrize(
+    "commitment",
+    [
+        "I can move to another table.",
+        "I’ll move now so you can sit.",
+        "Iu0002ll move aside right away.",
+        "Let me find another spot.",
+        "I will move my tray now.",
+        "I'll move now so you can sit. Is this okay?",
+        "I can move a little to give you space.",
+    ],
+)
+def test_resolution_stop_recognizes_audited_move_phrasings(commitment):
+    events = [
+        {
+            "round": 1,
+            "turn": 1,
+            "agent": "Mr Lim",
+            "type": "TALK",
+            "content": "This is my chope. Can you move so I can sit?",
+        },
+        {
+            "round": 1,
+            "turn": 2,
+            "agent": "Rachel Pereira",
+            "type": "TALK",
+            "content": commitment,
+        },
+    ]
+
+    signal = detect_practical_resolution(events)
+
+    assert signal["kind"] == "rachel_commits_to_move"
+    assert signal["outcome"] == "compromise"
+
+
+@pytest.mark.parametrize(
+    "acceptance",
+    [
+        "I’m open to sharing.",
+        "Sharing works for me.",
+        "Okay, can share lah.",
+        "Sure, we can share the table.",
+    ],
+)
+def test_resolution_stop_recognizes_audited_share_acceptance(acceptance):
+    events = [
+        {
+            "round": 1,
+            "turn": 1,
+            "agent": "Mr Lim",
+            "type": "TALK",
+            "content": "We can share the table.",
+        },
+        {
+            "round": 1,
+            "turn": 2,
+            "agent": "Rachel Pereira",
+            "type": "TALK",
+            "content": acceptance,
+        },
+    ]
+
+    signal = detect_practical_resolution(events)
+
+    assert signal["kind"] == "principals_commit_to_share"
+    assert signal["outcome"] == "compromise"
+
+
+def test_resolution_stop_recognizes_mutual_chair_rearrangement():
+    events = [
+        {
+            "round": 2,
+            "turn": 5,
+            "agent": "Mr Lim",
+            "type": "TALK",
+            "content": "Letu000027s shift the chairs and make room.",
+        },
+        {
+            "round": 2,
+            "turn": 6,
+            "agent": "Rachel Pereira",
+            "type": "TALK",
+            "content": "Sure, let's shift the chairs.",
+        },
+    ]
+
+    signal = detect_practical_resolution(events)
+
+    assert signal["kind"] == "principals_commit_to_rearrange"
+    assert signal["outcome"] == "compromise"
 
 
 def test_structured_evaluation_rejects_out_of_range_scores():

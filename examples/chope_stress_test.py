@@ -181,6 +181,7 @@ def execute_run(
     model: str,
     judge_model: str,
     embedding_model: Optional[str],
+    round_embeddings: bool,
     rounds: int,
     execution_mode: str,
     output_dir: Path,
@@ -207,6 +208,7 @@ def execute_run(
     round_slices = []
     evaluation = None
     embedding = None
+    round_embedding_vectors = {}
     error = None
     status = "completed"
     stop_signal = None
@@ -255,6 +257,15 @@ def execute_run(
             embedding = llm_client.get_embedding(
                 public_transcript_text(events), model=embedding_model
             )
+            if round_embeddings:
+                for round_slice in round_slices:
+                    round_number = round_slice["round"]
+                    round_events = [
+                        event for event in events if event.get("round") == round_number
+                    ]
+                    round_embedding_vectors[str(round_number)] = llm_client.get_embedding(
+                        public_transcript_text(round_events), model=embedding_model
+                    )
         embedding_end = len(llm_client.get_call_records())
 
     except Exception as exc:
@@ -367,6 +378,7 @@ def execute_run(
             "private_and_public_actions": actions_over_time,
             "evaluation": evaluation.model_dump(mode="json") if evaluation else None,
             "api_calls": call_records,
+            "round_embeddings": round_embedding_vectors,
         },
     )
     (transcript_dir / f"{run_id}.md").write_text(
@@ -434,6 +446,7 @@ def create_manifest(args, output_dir: Path) -> dict:
         "models": list(args.models),
         "judge_model": args.judge_model,
         "embedding_model": args.embedding_model,
+        "round_embeddings": args.round_embeddings,
         "agent_max_completion_tokens": args.agent_max_completion_tokens,
         "execution_mode": args.execution_mode,
         "pilot_runs_per_model": args.pilot_runs,
@@ -471,6 +484,9 @@ def create_manifest(args, output_dir: Path) -> dict:
         },
         "measurement": {
             "structured_evaluator_calls_per_completed_run": 1,
+            "round_embeddings_per_completed_run": (
+                args.rounds if args.embedding_model and args.round_embeddings else 0
+            ),
             "primary_convergence_outcome_source": "deterministic_explicit_practical_commitment",
             "llm_judge_role": "secondary_qualitative_coding_and_audit",
             "manual_audit_fraction": 0.20,
@@ -766,6 +782,12 @@ def parse_args(argv=None):
     parser.add_argument("--judge-model", default=DEFAULT_JUDGE_MODEL)
     parser.add_argument("--embedding-model", default=DEFAULT_EMBEDDING_MODEL)
     parser.add_argument("--no-embeddings", action="store_true")
+    parser.add_argument(
+        "--round-embeddings",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help="Embed each completed round for within-run semantic-boundary analysis.",
+    )
     parser.add_argument("--agent-max-completion-tokens", type=int, default=4096)
     parser.add_argument(
         "--execution-mode",
@@ -827,6 +849,7 @@ def main(argv=None):
             raise ValueError("--models must match the manifest when resuming.")
         args.judge_model = manifest["judge_model"]
         args.embedding_model = manifest["embedding_model"]
+        args.round_embeddings = manifest.get("round_embeddings", False)
         # Historical manifests predate early stopping and therefore represent
         # fixed-horizon stress runs.
         args.execution_mode = manifest.get("execution_mode", "stress")
@@ -884,6 +907,7 @@ def main(argv=None):
                 model=model,
                 judge_model=args.judge_model,
                 embedding_model=args.embedding_model,
+                round_embeddings=args.round_embeddings,
                 rounds=args.rounds,
                 execution_mode=args.execution_mode,
                 output_dir=output_dir,
@@ -921,6 +945,7 @@ def main(argv=None):
                     model=model,
                     judge_model=args.judge_model,
                     embedding_model=args.embedding_model,
+                    round_embeddings=args.round_embeddings,
                     rounds=args.rounds,
                     execution_mode=args.execution_mode,
                     output_dir=output_dir,
