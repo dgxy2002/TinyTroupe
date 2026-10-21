@@ -67,6 +67,28 @@ def test_repetition_without_resolution_is_not_saturation():
     assert result["saturation_round"] is None
 
 
+def test_structured_evaluator_is_primary_resolution_source():
+    events = [
+        _talk(1, 1, "Mr Lim", "This seat was reserved with my tissue packet."),
+        _talk(2, 6, "Rachel Pereira", "Fine, we have worked something out."),
+    ]
+    run = {
+        "run_id": "test-003",
+        "model": "openai/gpt-4o-mini",
+        "completed_rounds": 4,
+        "planned_agent_turns": 16,
+        "resolution_achieved": True,
+        "resolution_turn": 6,
+    }
+
+    result, rounds = analyze_run(run, events)
+
+    assert result["resolution_source"] == "structured_evaluator"
+    assert result["resolution_round"] == 2
+    assert rounds[0]["resolution_detected_by_round"] is False
+    assert rounds[1]["resolution_detected_by_round"] is True
+
+
 def test_manual_review_is_not_overwritten():
     output = Mock()
     output.exists.return_value = True

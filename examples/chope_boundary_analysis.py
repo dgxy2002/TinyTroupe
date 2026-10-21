@@ -276,6 +276,33 @@ def analyze_run(
         previous_by_agent = current_by_agent
         previous_round_text = current_round_text
 
+    deterministic_resolution_round = resolution_round
+    if "resolution_achieved" in run:
+        resolution_source = "structured_evaluator"
+        resolution_turn = run.get("resolution_turn")
+        turns_per_round = max(
+            1,
+            int(run.get("planned_agent_turns") or max_round * 4) // max_round,
+        )
+        resolution_round = (
+            min(max_round, math.ceil(int(resolution_turn) / turns_per_round))
+            if run.get("resolution_achieved") and resolution_turn is not None
+            else None
+        )
+    else:
+        resolution_source = "deterministic_fallback"
+
+    # The structured evaluator is the primary resolution measure. Refresh fields
+    # populated during the deterministic pass so every exported row is consistent.
+    for row in round_rows:
+        row["resolution_detected_by_round"] = bool(
+            resolution_round is not None and row["round"] >= resolution_round
+        )
+        row["first_resolution_round"] = resolution_round
+        row["after_resolution"] = bool(
+            resolution_round is not None and row["round"] > resolution_round
+        )
+
     repetition_onset = _first_consecutive_round(
         round_rows, "repeated_round_candidate"
     )
@@ -320,6 +347,8 @@ def analyze_run(
         "completed_rounds": max_round,
         "resolution_detected": resolution_round is not None,
         "resolution_round": resolution_round,
+        "resolution_source": resolution_source,
+        "deterministic_resolution_round": deterministic_resolution_round,
         "deterministic_outcome": (
             resolution_signal["outcome"] if resolution_signal else "unresolved"
         ),
@@ -378,6 +407,26 @@ def build_summary(run_rows: list[dict], round_rows: list[dict], manifest: Mappin
     waste_cost = sum(row["post_saturation_cost_usd"] for row in run_rows)
     boundary_tokens = sum(row["post_boundary_tokens"] for row in run_rows)
     boundary_cost = sum(row["post_boundary_cost_usd"] for row in run_rows)
+    category_definitions = (
+        ("Resolved + repetitive", True, True),
+        ("Resolved + not repetitive", True, False),
+        ("Unresolved + repetitive", False, True),
+        ("Unresolved + not repetitive", False, False),
+    )
+    category_summary = []
+    for label, is_resolved, is_repetitive in category_definitions:
+        count = sum(
+            bool(row["resolution_detected"]) is is_resolved
+            and bool(row["repetition_onset_detected"]) is is_repetitive
+            for row in run_rows
+        )
+        category_summary.append(
+            {
+                "category": label,
+                "count": count,
+                "share": count / len(run_rows) if run_rows else 0.0,
+            }
+        )
 
     by_round = []
     for round_number in range(1, completed_rounds + 1):
@@ -451,6 +500,10 @@ def build_summary(run_rows: list[dict], round_rows: list[dict], manifest: Mappin
         "fixed_horizon_rounds": completed_rounds,
         "runs": len(run_rows),
         "definitions": {
+            "resolution": (
+                "The structured evaluator's first accepted practical-resolution "
+                "turn, converted to its simulation round."
+            ),
             "agent_repeat_threshold": AGENT_REPEAT_THRESHOLD,
             "mean_similarity_threshold": MEAN_SIMILARITY_THRESHOLD,
             "repeated_agent_fraction_threshold": REPEATED_AGENT_FRACTION_THRESHOLD,
@@ -464,10 +517,14 @@ def build_summary(run_rows: list[dict], round_rows: list[dict], manifest: Mappin
             ),
         },
         "resolution_rate": len(resolved) / len(run_rows) if run_rows else 0.0,
+        "resolved_count": len(resolved),
+        "unresolved_count": len(run_rows) - len(resolved),
         "median_resolution_round": _optional_median(
             [row["resolution_round"] for row in resolved]
         ),
         "repetition_onset_rate": len(repeated) / len(run_rows) if run_rows else 0.0,
+        "repetitive_count": len(repeated),
+        "not_repetitive_count": len(run_rows) - len(repeated),
         "median_repetition_onset_round": _optional_median(
             [row["repetition_onset_round"] for row in repeated]
         ),
@@ -511,6 +568,7 @@ def build_summary(run_rows: list[dict], round_rows: list[dict], manifest: Mappin
         "runs_with_control_fragments": sum(
             row["control_fragment_count"] > 0 for row in run_rows
         ),
+        "category_summary": category_summary,
         "by_round": by_round,
     }
 
@@ -519,40 +577,103 @@ def render_report(summary: Mapping) -> str:
     def value_or_na(value, suffix=""):
         return "n/a" if value is None else f"{value:g}{suffix}"
 
+    category_lines = [
+        "## Category summary",
+        "",
+        "| Final category | Runs | Share |",
+        "|---|---:|---:|",
+        *[
+            f"| {row['category']} | {row['count']} | {row['share']:.1%} |"
+            for row in summary["category_summary"]
+        ],
+        "",
+        (
+            f"Unresolved by round {summary['fixed_horizon_rounds']}: "
+            f"{summary['unresolved_count']}/{summary['runs']}.  "
+        ),
+        (
+            f"No repetition detected by round {summary['fixed_horizon_rounds']}: "
+            f"{summary['not_repetitive_count']}/{summary['runs']}."
+        ),
+        "",
+    ]
     return "\n".join(
         [
-            "# Chope long-horizon boundary report",
+            "# Chope resolution and repetition report",
             "",
             f"Experiment: `{summary['experiment_id']}`  ",
             f"Model: `{summary['model']}`  ",
             f"Fixed horizon: {summary['fixed_horizon_rounds']} rounds  ",
             f"Completed runs: {summary['runs']}  ",
             "",
-            "## Boundary results",
+            "## Main results",
             "",
-            f"- Practical-resolution rate: {summary['resolution_rate']:.1%}; median round: {value_or_na(summary['median_resolution_round'])}.",
-            f"- Topic-drift rate: {summary['topic_drift_rate']:.1%}; median onset: {value_or_na(summary['median_topic_drift_round'])}.",
-            f"- Repetition-onset rate: {summary['repetition_onset_rate']:.1%}; median round: {value_or_na(summary['median_repetition_onset_round'])}.",
-            f"- Saturation rate: {summary['saturation_rate']:.1%}; median round: {value_or_na(summary['median_saturation_round'])}.",
-            f"- Earliest detected boundary rate: {summary['boundary_rate']:.1%}; median round: {value_or_na(summary['median_boundary_round'])}.",
-            f"- Mean forced continuation after resolution: {summary['mean_post_resolution_rounds']:.2f} rounds.",
-            f"- Post-boundary simulation tokens: {summary['post_boundary_tokens']:,} ({summary['post_boundary_token_share']:.1%}).",
-            f"- Post-boundary simulation cost: ${summary['post_boundary_cost_usd']:.6f} ({summary['post_boundary_cost_share']:.1%}).",
-            f"- Post-saturation simulation tokens: {summary['post_saturation_tokens']:,} ({summary['post_saturation_token_share']:.1%}).",
-            f"- Post-saturation simulation cost: ${summary['post_saturation_cost_usd']:.6f} ({summary['post_saturation_cost_share']:.1%}).",
-            f"- Runs containing escaped control fragments: {summary['runs_with_control_fragments']}/{summary['runs']}.",
+            f"- Resolved: {summary['resolved_count']}/{summary['runs']} ({summary['resolution_rate']:.1%}); median first-resolution round: {value_or_na(summary['median_resolution_round'])}.",
+            f"- Repetitive: {summary['repetitive_count']}/{summary['runs']} ({summary['repetition_onset_rate']:.1%}); median first-repetition round: {value_or_na(summary['median_repetition_onset_round'])}.",
+            f"- Simulation tokens: {summary['simulation_tokens']:,}.",
+            f"- Simulation cost: ${summary['simulation_cost_usd']:.6f}.",
             "",
+            *category_lines,
             "## Operational definitions",
             "",
+            f"- Resolution: {summary['definitions']['resolution']}",
             f"- An agent utterance repeats when normalized sequence similarity is at least {summary['definitions']['agent_repeat_threshold']:.2f} relative to the same agent's preceding-round utterance.",
             f"- A repeated-round candidate requires mean same-agent similarity of at least {summary['definitions']['mean_similarity_threshold']:.2f} and at least {summary['definitions']['repeated_agent_fraction_threshold']:.0%} of comparable agents to repeat.",
             f"- With round embeddings, semantic similarity of at least {summary['definitions']['semantic_similarity_threshold']:.2f} plus a lexical floor of {summary['definitions']['semantic_lexical_floor']:.2f} also qualifies.",
-            f"- Topic drift requires two consecutive post-resolution rounds with semantic relevance to round 1 below {summary['definitions']['initial_relevance_threshold']:.2f}.",
-            f"- Saturation is the {summary['definitions']['saturation']}",
-            "- These are lexical operationalizations. Manual transcript review remains necessary for paraphrases and genuinely new social developments.",
+            f"- Repetition onset is the first of {summary['definitions']['required_consecutive_repeated_rounds']} consecutive repeated-round candidates.",
+            "- Manual transcript review remains necessary for ambiguous cases.",
             "",
         ]
     )
+
+
+def plot_first_event_counts(
+    run_rows: list[Mapping],
+    *,
+    round_field: str,
+    title: str,
+    color: str,
+    output: Path,
+    max_round: int,
+) -> None:
+    """Plot how many runs first met an event condition in each exact round."""
+
+    counts = Counter(
+        int(row[round_field])
+        for row in run_rows
+        if row.get(round_field) is not None
+    )
+    rounds = list(range(1, max_round + 1))
+    values = [counts.get(round_number, 0) for round_number in rounds]
+    fig, axis = plt.subplots(figsize=(15, 6), facecolor="#F7F5F0")
+    axis.set_facecolor("white")
+    bars = axis.bar(rounds, values, width=0.82, color=color)
+    axis.spines[["top", "right"]].set_visible(False)
+    axis.grid(axis="y", alpha=0.25)
+    axis.set_axisbelow(True)
+    axis.set_title(title, loc="left", fontsize=16, fontweight="bold")
+    axis.set_xlabel("Round (first detection)")
+    axis.set_ylabel("Number of runs")
+    tick_step = 1 if max_round <= 20 else 5
+    ticks = sorted(set([1, max_round, *range(tick_step, max_round + 1, tick_step)]))
+    axis.set_xticks(ticks)
+    axis.set_xlim(0.25, max_round + 0.75)
+    axis.set_ylim(0, max(1, max(values, default=0)) * 1.18)
+    axis.yaxis.get_major_locator().set_params(integer=True)
+    for bar, value in zip(bars, values):
+        if value:
+            axis.text(
+                bar.get_x() + bar.get_width() / 2,
+                value,
+                str(value),
+                ha="center",
+                va="bottom",
+                fontweight="bold",
+            )
+    fig.tight_layout()
+    fig.savefig(output, dpi=180, bbox_inches="tight", facecolor=fig.get_facecolor())
+    fig.savefig(output.with_suffix(".svg"), bbox_inches="tight", facecolor=fig.get_facecolor())
+    plt.close(fig)
 
 
 def plot_dashboard(summary: Mapping, output: Path) -> None:
@@ -778,10 +899,26 @@ def analyze_experiment(experiment: Path) -> dict:
     summary = build_summary(run_results, all_round_results, manifest)
     write_csv(output_dir / "boundary_runs.csv", run_results)
     write_csv(output_dir / "boundary_round_metrics.csv", all_round_results)
+    write_csv(output_dir / "category_summary.csv", summary["category_summary"])
     write_json(output_dir / "summary.json", summary)
     (output_dir / "report.md").write_text(render_report(summary), encoding="utf-8")
     create_manual_review(output_dir / "manual_review.csv", run_results)
-    plot_dashboard(summary, output_dir / "boundary_dashboard.png")
+    plot_first_event_counts(
+        run_results,
+        round_field="resolution_round",
+        title="Runs first resolved at each round",
+        color="#176B87",
+        output=output_dir / "resolution_by_round.png",
+        max_round=int(manifest["rounds"]),
+    )
+    plot_first_event_counts(
+        run_results,
+        round_field="repetition_onset_round",
+        title="Runs first becoming repetitive at each round",
+        color="#C84B31",
+        output=output_dir / "repetition_by_round.png",
+        max_round=int(manifest["rounds"]),
+    )
     return summary
 
 

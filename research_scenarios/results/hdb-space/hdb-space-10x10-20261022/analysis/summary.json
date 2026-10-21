@@ -1,0 +1,55 @@
+{
+  "category_summary": [
+    {
+      "category": "Resolved + repetitive",
+      "count": 2,
+      "share": 0.2
+    },
+    {
+      "category": "Resolved + not repetitive",
+      "count": 3,
+      "share": 0.3
+    },
+    {
+      "category": "Unresolved + repetitive",
+      "count": 3,
+      "share": 0.3
+    },
+    {
+      "category": "Unresolved + not repetitive",
+      "count": 2,
+      "share": 0.2
+    }
+  ],
+  "completed_runs": 10,
+  "definitions": {
+    "agent_repeat_threshold": 0.8,
+    "consecutive_rounds": 2,
+    "mean_similarity_threshold": 0.7,
+    "repeated_agent_fraction_threshold": 0.5,
+    "resolution": "The scenario-specific structured evaluator finds mutually accepted consensus or compromise; the first accepted turn is converted to a round.",
+    "semantic_lexical_floor": 0.15,
+    "semantic_similarity_threshold": 0.9
+  },
+  "exact_cost_complete": true,
+  "experiment_id": "hdb-space-10x10-20261022",
+  "fixed_horizon_rounds": 10,
+  "median_repetition_onset_round": 5,
+  "median_resolution_round": 3,
+  "model": "openai/gpt-4o-mini",
+  "not_repetitive_count": 5,
+  "outcomes": {
+    "compromise": 4,
+    "consensus": 1,
+    "unresolved": 5
+  },
+  "planned_runs": 10,
+  "repetition_rate": 0.5,
+  "repetitive_count": 5,
+  "resolution_rate": 0.5,
+  "resolved_count": 5,
+  "scenario": "hdb-space",
+  "total_cost_usd": 0.40588862,
+  "total_tokens": 3178540,
+  "unresolved_count": 5
+}

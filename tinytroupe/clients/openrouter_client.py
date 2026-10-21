@@ -173,6 +173,17 @@ class OpenRouterClient(OpenAIClient):
         with self._call_records_lock:
             self._call_records.clear()
 
+    def restore_call_records(self, records):
+        """Restore previously checkpointed usage records for a resumed run."""
+
+        restored = copy.deepcopy(list(records))
+        for sequence, record in enumerate(restored):
+            if not isinstance(record, dict):
+                raise TypeError("Each restored OpenRouter call record must be a dict.")
+            record["sequence"] = sequence
+        with self._call_records_lock:
+            self._call_records = restored
+
     def reset_usage_tracking(self):
         """Reset both legacy aggregate counters and detailed call records."""
 

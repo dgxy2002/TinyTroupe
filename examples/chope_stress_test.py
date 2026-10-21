@@ -50,9 +50,19 @@ from tinytroupe.examples.chope_metrics import (
 )
 
 
-DEFAULT_MODELS = ("openai/gpt-4o-mini", "openai/gpt-5-mini")
+DEFAULT_MODELS = ("openai/gpt-4o-mini",)
 DEFAULT_JUDGE_MODEL = "openai/gpt-5-mini"
 DEFAULT_EMBEDDING_MODEL = "openai/text-embedding-3-small"
+
+# Default long-horizon Chope cohort. CLI flags can still override every value.
+DEFAULT_EXECUTION_MODE = "stress"
+DEFAULT_ROUNDS = 50
+DEFAULT_PILOT_RUNS = 0
+DEFAULT_MAIN_RUNS = 20
+DEFAULT_BATCH_SIZE = 5
+DEFAULT_ROUND_EMBEDDINGS = True
+DEFAULT_FULL_RUN_EMBEDDING = False
+RUN_CHECKPOINT_VERSION = 1
 
 THRESHOLDS = {
     "outcome_tvd": 0.10,
@@ -95,18 +105,95 @@ def read_jsonl(path: Path) -> list[dict]:
     return rows
 
 
-def append_jsonl(path: Path, value: Mapping):
+def write_jsonl(path: Path, values: Sequence[Mapping]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a", encoding="utf-8") as stream:
-        stream.write(json_dumps(value) + "\n")
+    temporary_path = path.with_name(f".{path.name}.tmp")
+    temporary_path.write_text(
+        "".join(json_dumps(value) + "\n" for value in values),
+        encoding="utf-8",
+    )
+    temporary_path.replace(path)
 
 
 def write_json(path: Path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
+    temporary_path = path.with_name(f".{path.name}.tmp")
+    temporary_path.write_text(
         json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True, default=str),
         encoding="utf-8",
     )
+    temporary_path.replace(path)
+
+
+def run_checkpoint_path(output_dir: Path, run_id: str) -> Path:
+    return output_dir / "checkpoints" / f"{run_id}.json"
+
+
+def load_run_checkpoint(
+    output_dir: Path,
+    *,
+    run_id: str,
+    model: str,
+    rounds: int,
+    execution_mode: str,
+) -> Optional[dict]:
+    path = run_checkpoint_path(output_dir, run_id)
+    if not path.exists():
+        return None
+    checkpoint = json.loads(path.read_text(encoding="utf-8"))
+    expected = {
+        "version": RUN_CHECKPOINT_VERSION,
+        "run_id": run_id,
+        "model": model,
+        "rounds": rounds,
+        "execution_mode": execution_mode,
+    }
+    mismatches = {
+        key: (checkpoint.get(key), value)
+        for key, value in expected.items()
+        if checkpoint.get(key) != value
+    }
+    if mismatches:
+        raise ValueError(f"Checkpoint settings do not match this run: {mismatches}")
+    return checkpoint
+
+
+def save_run_checkpoint(
+    output_dir: Path,
+    *,
+    run_id: str,
+    model: str,
+    rounds: int,
+    execution_mode: str,
+    started_at: str,
+    elapsed_wall_time_ms: float,
+    scenario,
+    actions_over_time: Sequence,
+    round_slices: Sequence[Mapping],
+    call_records: Sequence[Mapping],
+) -> None:
+    write_json(
+        run_checkpoint_path(output_dir, run_id),
+        {
+            "version": RUN_CHECKPOINT_VERSION,
+            "run_id": run_id,
+            "model": model,
+            "rounds": rounds,
+            "execution_mode": execution_mode,
+            "started_at": started_at,
+            "checkpointed_at": utc_now(),
+            "elapsed_wall_time_ms": round(elapsed_wall_time_ms, 3),
+            "completed_rounds": len(round_slices),
+            "actions_over_time": actions_over_time,
+            "round_slices": round_slices,
+            "call_records": call_records,
+            "world_state": scenario.world.encode_complete_state(),
+        },
+    )
+
+
+def remove_run_checkpoint(output_dir: Path, run_id: str) -> None:
+    run_checkpoint_path(output_dir, run_id).unlink(missing_ok=True)
 
 
 def write_csv(path: Path, rows: Sequence[Mapping]):
@@ -182,10 +269,12 @@ def execute_run(
     judge_model: str,
     embedding_model: Optional[str],
     round_embeddings: bool,
+    full_run_embedding: bool,
     rounds: int,
     execution_mode: str,
     output_dir: Path,
     cohort: str = "main",
+    progress_label: Optional[str] = None,
 ) -> tuple[dict, Optional[list[float]], list[dict]]:
     """Execute one fresh scenario and persist its complete audit trail."""
 
@@ -202,10 +291,23 @@ def execute_run(
         raise RuntimeError("The Chope experiment requires API_TYPE=openrouter.")
     llm_client.reset_usage_tracking()
 
-    started_at = utc_now()
+    checkpoint = load_run_checkpoint(
+        output_dir,
+        run_id=run_id,
+        model=model,
+        rounds=rounds,
+        execution_mode=execution_mode,
+    )
+    if checkpoint:
+        llm_client.restore_call_records(checkpoint.get("call_records", []))
+    started_at = checkpoint.get("started_at", utc_now()) if checkpoint else utc_now()
+    prior_wall_time_ms = (
+        float(checkpoint.get("elapsed_wall_time_ms") or 0) if checkpoint else 0.0
+    )
     wall_start = time.perf_counter()
-    actions_over_time = []
-    round_slices = []
+    actions_over_time = list(checkpoint.get("actions_over_time", [])) if checkpoint else []
+    round_slices = list(checkpoint.get("round_slices", [])) if checkpoint else []
+    resumed_from_round = len(round_slices)
     evaluation = None
     embedding = None
     round_embedding_vectors = {}
@@ -216,7 +318,20 @@ def execute_run(
     try:
         scenario = create_chope_scenario()
         event_state = scenario.trigger()
-        for round_number in range(1, rounds + 1):
+        if checkpoint:
+            scenario.world.decode_complete_state(checkpoint["world_state"])
+            if progress_label:
+                print(
+                    f"[{progress_label}] resumed after round "
+                    f"{resumed_from_round}/{rounds}",
+                    flush=True,
+                )
+        for round_number in range(resumed_from_round + 1, rounds + 1):
+            if progress_label:
+                print(
+                    f"[{progress_label}] round {round_number}/{rounds} starting",
+                    flush=True,
+                )
             call_start = len(llm_client.get_call_records())
             round_start = time.perf_counter()
             actions = scenario.world.run(
@@ -235,6 +350,28 @@ def execute_run(
                     "wall_time_ms": round((time.perf_counter() - round_start) * 1000, 3),
                 }
             )
+            save_run_checkpoint(
+                output_dir,
+                run_id=run_id,
+                model=model,
+                rounds=rounds,
+                execution_mode=execution_mode,
+                started_at=started_at,
+                elapsed_wall_time_ms=(
+                    prior_wall_time_ms
+                    + (time.perf_counter() - wall_start) * 1000
+                ),
+                scenario=scenario,
+                actions_over_time=actions_over_time,
+                round_slices=round_slices,
+                call_records=llm_client.get_call_records(),
+            )
+            if progress_label:
+                print(
+                    f"[{progress_label}] round {round_number}/{rounds} complete "
+                    f"({round_slices[-1]['wall_time_ms'] / 1000:.1f}s)",
+                    flush=True,
+                )
             if execution_mode == "outcome":
                 stop_signal = detect_practical_resolution(
                     flatten_actions(actions_over_time)
@@ -249,14 +386,28 @@ def execute_run(
         )
 
         evaluation_start = simulation_end
+        if progress_label:
+            print(f"[{progress_label}] outcome evaluation starting", flush=True)
         evaluation = evaluate_chope_run(events, judge_model)
         evaluation_end = len(llm_client.get_call_records())
+        if progress_label:
+            print(f"[{progress_label}] outcome evaluation complete", flush=True)
 
         embedding_start = evaluation_end
         if embedding_model:
-            embedding = llm_client.get_embedding(
-                public_transcript_text(events), model=embedding_model
-            )
+            if progress_label:
+                embedding_count = (
+                    (1 if full_run_embedding else 0)
+                    + (len(round_slices) if round_embeddings else 0)
+                )
+                print(
+                    f"[{progress_label}] generating {embedding_count} embedding(s)",
+                    flush=True,
+                )
+            if full_run_embedding:
+                embedding = llm_client.get_embedding(
+                    public_transcript_text(events), model=embedding_model
+                )
             if round_embeddings:
                 for round_slice in round_slices:
                     round_number = round_slice["round"]
@@ -266,6 +417,14 @@ def execute_run(
                     round_embedding_vectors[str(round_number)] = llm_client.get_embedding(
                         public_transcript_text(round_events), model=embedding_model
                     )
+                    if progress_label and (
+                        round_number == len(round_slices) or round_number % 5 == 0
+                    ):
+                        print(
+                            f"[{progress_label}] round embeddings "
+                            f"{round_number}/{len(round_slices)} complete",
+                            flush=True,
+                        )
         embedding_end = len(llm_client.get_call_records())
 
     except Exception as exc:
@@ -348,7 +507,12 @@ def execute_run(
         else None,
         "started_at": started_at,
         "finished_at": utc_now(),
-        "wall_time_ms": round((time.perf_counter() - wall_start) * 1000, 3),
+        "wall_time_ms": round(
+            prior_wall_time_ms + (time.perf_counter() - wall_start) * 1000,
+            3,
+        ),
+        "resumed_from_checkpoint": checkpoint is not None,
+        "resumed_after_round": resumed_from_round if checkpoint else None,
         "simulation_resources": simulation_resources,
         "evaluation_resources": evaluation_resources,
         "embedding_resources": embedding_resources,
@@ -409,7 +573,7 @@ def convergence_for_model(
     completed = [row for row in rows if row.get("status") == "completed"]
     records = compute_convergence(
         completed,
-        embeddings if args.embedding_model else None,
+        embeddings if args.embedding_model and args.full_run_embedding else None,
         min_runs=args.min_runs,
         batch_size=args.batch_size,
         max_runs=args.max_runs,
@@ -447,6 +611,7 @@ def create_manifest(args, output_dir: Path) -> dict:
         "judge_model": args.judge_model,
         "embedding_model": args.embedding_model,
         "round_embeddings": args.round_embeddings,
+        "full_run_embedding": args.full_run_embedding,
         "agent_max_completion_tokens": args.agent_max_completion_tokens,
         "execution_mode": args.execution_mode,
         "pilot_runs_per_model": args.pilot_runs,
@@ -486,6 +651,9 @@ def create_manifest(args, output_dir: Path) -> dict:
             "structured_evaluator_calls_per_completed_run": 1,
             "round_embeddings_per_completed_run": (
                 args.rounds if args.embedding_model and args.round_embeddings else 0
+            ),
+            "full_run_embeddings_per_completed_run": (
+                1 if args.embedding_model and args.full_run_embedding else 0
             ),
             "primary_convergence_outcome_source": "deterministic_explicit_practical_commitment",
             "llm_judge_role": "secondary_qualitative_coding_and_audit",
@@ -756,7 +924,7 @@ def persist_analysis_outputs(
     args,
     manifest: Mapping,
 ) -> list[dict]:
-    """Materialize current checkpoints after every batch for safe resumption."""
+    """Atomically materialize all completed-run state after every run."""
 
     all_convergence = []
     for model in args.models:
@@ -773,7 +941,112 @@ def persist_analysis_outputs(
     (output_dir / "report.md").write_text(
         render_report(manifest, summary), encoding="utf-8"
     )
+    model_by_run = {row["run_id"]: row.get("model") for row in rows}
+    write_jsonl(
+        output_dir / "embeddings.jsonl",
+        [
+            {
+                "run_id": run_id,
+                "model": model_by_run.get(run_id),
+                "embedding": embedding,
+            }
+            for run_id, embedding in embeddings.items()
+            if run_id in model_by_run
+        ],
+    )
+    write_jsonl(
+        output_dir / "boundary_events.jsonl",
+        [event for row in rows for event in boundary_events(row)],
+    )
+    # runs.jsonl is the commit marker and is deliberately written last. On a
+    # restart, auxiliary rows without a committed run are discarded.
+    write_jsonl(output_dir / "runs.jsonl", rows)
     return all_convergence
+
+
+def recover_full_embedding_limit_failures(
+    output_dir: Path,
+    rows: list[dict],
+    *,
+    embedding_model: Optional[str],
+    round_embeddings: bool,
+    expected_rounds: int,
+) -> int:
+    """Backfill round embeddings for runs completed before a full-embedding failure."""
+
+    if not embedding_model or not round_embeddings:
+        return 0
+    recovered = 0
+    for index, original in enumerate(list(rows)):
+        error = str(original.get("error") or "")
+        if not (
+            original.get("status") == "failed"
+            and int(original.get("completed_rounds") or 0) == expected_rounds
+            and "maximum input length is 8192 tokens" in error
+            and "resolution_achieved" in original
+        ):
+            continue
+
+        run_id = original["run_id"]
+        transcript_path = output_dir / "transcripts" / f"{run_id}.json"
+        transcript = json.loads(transcript_path.read_text(encoding="utf-8"))
+        events = transcript["events"]
+        vectors = dict(transcript.get("round_embeddings") or {})
+        llm_client = client()
+        if not isinstance(llm_client, OpenRouterClient):
+            raise RuntimeError("Embedding recovery requires API_TYPE=openrouter.")
+        llm_client.reset_usage_tracking()
+        llm_client.restore_call_records(transcript.get("api_calls", []))
+        embedding_start = len(llm_client.get_call_records())
+
+        print(
+            f"Recovering {run_id}: generating per-round embeddings only",
+            flush=True,
+        )
+        for round_number in range(1, expected_rounds + 1):
+            key = str(round_number)
+            if key not in vectors:
+                round_events = [
+                    event for event in events if event.get("round") == round_number
+                ]
+                vectors[key] = llm_client.get_embedding(
+                    public_transcript_text(round_events), model=embedding_model
+                )
+            if round_number == expected_rounds or round_number % 5 == 0:
+                print(
+                    f"[recover {run_id}] round embeddings "
+                    f"{round_number}/{expected_rounds} complete",
+                    flush=True,
+                )
+
+        try:
+            llm_client.enrich_call_records(start=embedding_start)
+        except Exception as exc:
+            print(
+                f"Warning: could not enrich recovered embedding metadata: {exc}",
+                file=sys.stderr,
+            )
+        call_records = llm_client.get_call_records()
+        record = dict(original)
+        record["status"] = "completed"
+        record["error"] = None
+        record["recovered_from_full_embedding_limit_failure"] = True
+        record["recovered_at"] = utc_now()
+        record["embedding_resources"] = aggregate_resources(
+            call_records[embedding_start:]
+        )
+        record["total_resources"] = aggregate_resources(call_records)
+        record["exact_cost_complete"] = record["total_resources"][
+            "exact_cost_complete"
+        ]
+        transcript["run"] = record
+        transcript["api_calls"] = call_records
+        transcript["round_embeddings"] = vectors
+        write_json(transcript_path, transcript)
+        rows[index] = record
+        recovered += 1
+        print(f"Recovered {run_id} as a completed run.", flush=True)
+    return recovered
 
 
 def parse_args(argv=None):
@@ -785,26 +1058,35 @@ def parse_args(argv=None):
     parser.add_argument(
         "--round-embeddings",
         action=argparse.BooleanOptionalAction,
-        default=False,
+        default=DEFAULT_ROUND_EMBEDDINGS,
         help="Embed each completed round for within-run semantic-boundary analysis.",
+    )
+    parser.add_argument(
+        "--full-run-embedding",
+        action=argparse.BooleanOptionalAction,
+        default=DEFAULT_FULL_RUN_EMBEDDING,
+        help=(
+            "Embed the complete transcript for across-run semantic convergence. "
+            "Disabled by default because long transcripts can exceed model limits."
+        ),
     )
     parser.add_argument("--agent-max-completion-tokens", type=int, default=4096)
     parser.add_argument(
         "--execution-mode",
         choices=EXECUTION_MODES,
-        default="outcome",
+        default=DEFAULT_EXECUTION_MODE,
         help=(
             "outcome stops after a deterministic explicit settlement signal; "
             "stress always runs the fixed round horizon"
         ),
     )
-    parser.add_argument("--rounds", type=int, default=3)
-    parser.add_argument("--pilot-runs", type=int, default=1)
-    parser.add_argument("--min-runs", type=int, default=10)
-    parser.add_argument("--max-runs", type=int, default=30)
-    parser.add_argument("--batch-size", type=int, default=5)
+    parser.add_argument("--rounds", type=int, default=DEFAULT_ROUNDS)
+    parser.add_argument("--pilot-runs", type=int, default=DEFAULT_PILOT_RUNS)
+    parser.add_argument("--min-runs", type=int, default=DEFAULT_MAIN_RUNS)
+    parser.add_argument("--max-runs", type=int, default=DEFAULT_MAIN_RUNS)
+    parser.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE)
     parser.add_argument(
-        "--adaptive", action=argparse.BooleanOptionalAction, default=True
+        "--adaptive", action=argparse.BooleanOptionalAction, default=False
     )
     parser.add_argument("--output-root", type=Path, default=Path("data/chope_experiments"))
     parser.add_argument("--experiment-id")
@@ -850,6 +1132,7 @@ def main(argv=None):
         args.judge_model = manifest["judge_model"]
         args.embedding_model = manifest["embedding_model"]
         args.round_embeddings = manifest.get("round_embeddings", False)
+        args.full_run_embedding = manifest.get("full_run_embedding", False)
         # Historical manifests predate early stopping and therefore represent
         # fixed-horizon stress runs.
         args.execution_mode = manifest.get("execution_mode", "stress")
@@ -877,13 +1160,32 @@ def main(argv=None):
         write_json(output_dir / "manifest.json", manifest)
 
     runs_path = output_dir / "runs.jsonl"
-    embeddings_path = output_dir / "embeddings.jsonl"
-    boundary_path = output_dir / "boundary_events.jsonl"
     rows = read_jsonl(runs_path)
+    committed_run_ids = {row["run_id"] for row in rows}
     embeddings = {
-        row["run_id"]: row["embedding"] for row in read_jsonl(embeddings_path)
+        row["run_id"]: row["embedding"]
+        for row in read_jsonl(output_dir / "embeddings.jsonl")
+        if row.get("run_id") in committed_run_ids
     }
-    round_rows = read_csv(output_dir / "round_metrics.csv")
+    round_rows = [
+        row
+        for row in read_csv(output_dir / "round_metrics.csv")
+        if row.get("run_id") in committed_run_ids
+    ]
+    for committed_run_id in committed_run_ids:
+        remove_run_checkpoint(output_dir, committed_run_id)
+
+    recovered_count = recover_full_embedding_limit_failures(
+        output_dir,
+        rows,
+        embedding_model=args.embedding_model,
+        round_embeddings=args.round_embeddings,
+        expected_rounds=args.rounds,
+    )
+    if recovered_count:
+        persist_analysis_outputs(
+            output_dir, rows, embeddings, round_rows, args, manifest
+        )
 
     print(f"Experiment output: {output_dir}")
     for model in args.models:
@@ -901,23 +1203,27 @@ def main(argv=None):
         existing_pilots = len(existing_pilot_files)
         for number in range(existing_pilots + 1, args.pilot_runs + 1):
             run_id = f"{model_slug(model)}-pilot-{number:03d}"
-            print(f"Pilot {run_id}")
+            progress_label = f"pilot {number}/{args.pilot_runs} | {run_id}"
+            print(f"Starting {progress_label}", flush=True)
             pilot_record, _, _ = execute_run(
                 run_id=run_id,
                 model=model,
                 judge_model=args.judge_model,
                 embedding_model=args.embedding_model,
                 round_embeddings=args.round_embeddings,
+                full_run_embedding=args.full_run_embedding,
                 rounds=args.rounds,
                 execution_mode=args.execution_mode,
                 output_dir=output_dir,
                 cohort="pilot",
+                progress_label=progress_label,
             )
             if pilot_record["status"] != "completed":
                 raise RuntimeError(
                     f"Pilot {run_id} failed; inspect pilots/{run_id}.json before "
                     "starting paid main runs."
                 )
+            remove_run_checkpoint(output_dir, run_id)
 
         model_rows = [row for row in rows if row.get("model") == model]
         attempt_limit = args.max_runs * 2
@@ -939,34 +1245,39 @@ def main(argv=None):
             for _ in range(needed):
                 sequence = len(model_rows) + 1
                 run_id = f"{model_slug(model)}-{sequence:03d}"
-                print(f"Run {run_id}")
+                run_number = completed_count + 1
+                progress_label = (
+                    f"main run {run_number}/{args.max_runs} | {run_id}"
+                )
+                print(f"Starting {progress_label}", flush=True)
                 record, embedding, new_round_rows = execute_run(
                     run_id=run_id,
                     model=model,
                     judge_model=args.judge_model,
                     embedding_model=args.embedding_model,
                     round_embeddings=args.round_embeddings,
+                    full_run_embedding=args.full_run_embedding,
                     rounds=args.rounds,
                     execution_mode=args.execution_mode,
                     output_dir=output_dir,
+                    progress_label=progress_label,
                 )
-                append_jsonl(runs_path, record)
                 rows.append(record)
                 model_rows.append(record)
                 round_rows.extend(new_round_rows)
                 if embedding is not None:
                     embeddings[run_id] = embedding
-                    append_jsonl(
-                        embeddings_path,
-                        {"run_id": run_id, "model": model, "embedding": embedding},
-                    )
-                for event in boundary_events(record):
-                    append_jsonl(boundary_path, event)
-
-            persist_analysis_outputs(
-                output_dir, rows, embeddings, round_rows, args, manifest
-            )
-
+                if record.get("status") == "completed":
+                    completed_count += 1
+                persist_analysis_outputs(
+                    output_dir, rows, embeddings, round_rows, args, manifest
+                )
+                remove_run_checkpoint(output_dir, run_id)
+                print(
+                    f"Finished {progress_label}: {record.get('status')} "
+                    f"in {record.get('wall_time_ms', 0) / 1000:.1f}s",
+                    flush=True,
+                )
     persist_analysis_outputs(
         output_dir, rows, embeddings, round_rows, args, manifest
     )
