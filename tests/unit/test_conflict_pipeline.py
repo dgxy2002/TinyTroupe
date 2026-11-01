@@ -10,7 +10,12 @@ from research_questions.evaluator import public_transcript_text
 from research_questions.experiment_presets import RunSpec
 from research_questions.models import ConflictEvaluation
 from research_questions.scenario_presets import SCENARIOS
+from research_questions.scenario_presets.common import (
+    AGENT_DISPLAY_NAMES,
+    CULTURAL_DISPLAY_NAMES,
+)
 from research_questions.simulation import (
+    AGENT_PROMPT_PATH,
     create_scenario_instance,
     flatten_actions,
     inject_round_observation,
@@ -166,9 +171,20 @@ def test_evaluator_makes_one_blinded_structured_call(monkeypatch):
 def test_agent_factory_omits_c0_background_and_uses_custom_prompt():
     reset_simulation_state()
     c0 = create_scenario_instance(SCENARIOS["S04"], "C0")
-    assert all("cultural_background" not in person._persona for person in c0.participants.values())
+    assert {
+        agent_id: person.name for agent_id, person in c0.participants.items()
+    } == AGENT_DISPLAY_NAMES
+    assert all(
+        "cultural_background" not in person._persona
+        for person in c0.participants.values()
+    )
     assert all(
         "There is no required conflict" in person._init_system_message
+        for person in c0.participants.values()
+    )
+    assert all(
+        "OPEN:" in person._init_system_message
+        and "Never place an action after DONE" in person._init_system_message
         for person in c0.participants.values()
     )
 
@@ -176,7 +192,74 @@ def test_agent_factory_omits_c0_background_and_uses_custom_prompt():
     c2 = create_scenario_instance(SCENARIOS["S04"], "C2")
     assert c2.participants["A"]._persona["cultural_background"] == "Singaporean Malay"
     assert c2.participants["B"]._persona["cultural_background"] == "Singaporean Indian"
+    assert c2.participants["A"].name == CULTURAL_DISPLAY_NAMES["Singaporean Malay"]
+    assert c2.participants["B"].name == CULTURAL_DISPLAY_NAMES["Singaporean Indian"]
+    assert c2.world.seat_occupants["disputed_seat"] == c2.participants["B"].name
+    assert c2.world._resolve_talk_target("B") is c2.participants["B"]
+    assert c2.participants["A"].name in c2.preset["shared_trigger"]
     reset_simulation_state()
+
+
+def test_factorial_agents_receive_names_and_backgrounds_independently():
+    reset_simulation_state()
+    labels_only = create_scenario_instance(SCENARIOS["S02"], "F10")
+    assert labels_only.participants["A"].name == "Alex"
+    assert (
+        labels_only.participants["A"]._persona["cultural_background"]
+        == "Singaporean Chinese"
+    )
+
+    reset_simulation_state()
+    names_only = create_scenario_instance(SCENARIOS["S02"], "F01")
+    assert names_only.participants["A"].name == "John"
+    assert "cultural_background" not in names_only.participants["A"]._persona
+    reset_simulation_state()
+
+
+def test_evaluator_input_anonymizes_display_names_recursively():
+    transcript = {
+        "scenario": {
+            "shared_setting": "John and Fatimah share a kitchen.",
+            "shared_trigger": "Fatimah asks John about the stove.",
+            "agents": {
+                "A": {"display_name": "John"},
+                "B": {"display_name": "Fatimah"},
+                "C": {"display_name": "Arjun"},
+                "D": {"display_name": "Michelle"},
+            },
+        },
+        "events": [
+            {
+                "round": 1,
+                "agent": "John",
+                "type": "TALK",
+                "content": "Fatimah, I need the stove.",
+                "target": "Fatimah",
+            }
+        ],
+    }
+    events, setting = runner._anonymized_evaluator_input(transcript)
+    serialized = f"{events!r} {setting}"
+    assert events[0]["agent"] == "Agent A"
+    assert events[0]["target"] == "Agent B"
+    assert events[0]["content"] == "Agent B, I need the stove."
+    assert "Agent A and Agent B share a kitchen." in setting
+    assert all(
+        name not in serialized
+        for name in ("John", "Fatimah", "Arjun", "Michelle")
+    )
+
+
+def test_agent_prompt_has_one_turn_done_contract_and_complete_state_example():
+    prompt = AGENT_PROMPT_PATH.read_text(encoding="utf-8")
+    assert "DONE still waiting" not in prompt
+    assert "Never place an action after DONE" in prompt
+    assert '"goals": "OPEN: Reply to an urgent email from Deimos."' in prompt
+    assert '"context": ["An urgent email arrived about Mythos."]' in prompt
+    assert all(
+        status in prompt
+        for status in ("OPEN:", "SATISFIED:", "BLOCKED:", "ABANDONED:")
+    )
 
 
 def test_s04_seat_actions_change_public_world_state():
@@ -201,15 +284,48 @@ def test_s04_seat_actions_change_public_world_state():
         {"type": "TAKE_SEAT", "target": "disputed_seat"},
     )
 
-    assert instance.world.seat_occupants["alternative_seat"] == "Agent D"
+    assert instance.world.seat_occupants["alternative_seat"] == AGENT_DISPLAY_NAMES["D"]
     assert instance.world.seat_occupants["disputed_seat"] is None
     rendered = " ".join(
         event["content"] for event in instance.world.public_state_events
     )
-    assert "Agent D physically takes alternative_seat" in rendered
-    assert "occupied by Agent D" in rendered
-    assert "Agent B physically leaves disputed_seat" in rendered
+    assert f"{AGENT_DISPLAY_NAMES['D']} physically takes alternative_seat" in rendered
+    assert f"occupied by {AGENT_DISPLAY_NAMES['D']}" in rendered
+    assert f"{AGENT_DISPLAY_NAMES['B']} physically leaves disputed_seat" in rendered
     assert "already occupy alternative_seat" in rendered
+    reset_simulation_state()
+
+
+def test_s04_state_updates_follow_actions_instead_of_static_narration():
+    reset_simulation_state()
+    instance = create_scenario_instance(SCENARIOS["S04"], "C0")
+    inject_round_observation(instance, 4)
+    instance.world._handle_seat_action(
+        instance.participants["B"],
+        {"type": "LEAVE_SEAT", "target": "disputed_seat"},
+    )
+
+    round_five = instance.world.prepare_round(5, None)
+    assert f"{AGENT_DISPLAY_NAMES['B']} no longer occupies the disputed seat" in round_five
+    assert f"{AGENT_DISPLAY_NAMES['B']} bowl=empty" in round_five
+
+    instance.world._handle_seat_action(
+        instance.participants["D"],
+        {"type": "TAKE_SEAT", "target": "alternative_seat"},
+    )
+    assert (
+        f"alternative seat=occupied by {AGENT_DISPLAY_NAMES['D']}"
+        in instance.world._seat_state_text()
+    )
+    assert (
+        f"alternative seat={AGENT_DISPLAY_NAMES['D']} (available)"
+        not in instance.world._seat_state_text()
+    )
+    instance.world._handle_seat_action(
+        instance.participants["A"],
+        {"type": "TAKE_SEAT", "target": "disputed_seat"},
+    )
+    assert "standing seat-seekers=none" in instance.world._seat_state_text()
     reset_simulation_state()
 
 
@@ -228,7 +344,7 @@ def test_face_to_face_talk_distinguishes_addressee_from_overhearers():
     assert b_memory["content"]["stimuli"][0]["type"] == "CONVERSATION"
     assert c_memory["content"]["stimuli"][0]["type"] == "SOCIAL"
     assert (
-        "You overhear Agent A say to Agent B"
+        f"You overhear {AGENT_DISPLAY_NAMES['A']} say to {AGENT_DISPLAY_NAMES['B']}"
         in c_memory["content"]["stimuli"][0]["content"]
     )
     reset_simulation_state()
@@ -238,23 +354,23 @@ def test_hybrid_scheduler_prioritizes_direct_reply_then_rotates():
     reset_simulation_state()
     instance = create_scenario_instance(SCENARIOS["S04"], "C0")
     instance.world.scheduler_cursor = 2
-    instance.world.pending_reply_agent = "Agent B"
+    instance.world.pending_reply_agent = AGENT_DISPLAY_NAMES["B"]
 
     assert instance.world._scheduler_candidate_names() == [
-        "Agent B",
-        "Agent C",
-        "Agent D",
-        "Agent A",
+        AGENT_DISPLAY_NAMES["B"],
+        AGENT_DISPLAY_NAMES["C"],
+        AGENT_DISPLAY_NAMES["D"],
+        AGENT_DISPLAY_NAMES["A"],
     ]
 
     instance.world.scheduler_direct_reply_streak = 2
     assert instance.world._scheduler_candidate_names(
         defer_direct_reply=True
     ) == [
-        "Agent C",
-        "Agent D",
-        "Agent A",
-        "Agent B",
+        AGENT_DISPLAY_NAMES["C"],
+        AGENT_DISPLAY_NAMES["D"],
+        AGENT_DISPLAY_NAMES["A"],
+        AGENT_DISPLAY_NAMES["B"],
     ]
     reset_simulation_state()
 
@@ -308,8 +424,25 @@ def test_s02_kitchen_actions_keep_issues_and_access_observable():
     assert instance.world.window_open is True
     assert instance.world.laundry_protected is True
     assert instance.world.personal_utensils_labeled is True
-    assert instance.world.stove_occupant == "Agent D"
+    assert instance.world.stove_occupant == AGENT_DISPLAY_NAMES["D"]
     assert instance.world.shared_utensils_clean is False
+    reset_simulation_state()
+
+
+def test_s02_cultural_names_follow_roles_in_world_state_and_actions():
+    reset_simulation_state()
+    instance = create_scenario_instance(SCENARIOS["S02"], "C4")
+    assert instance.participants["A"].name == "Michelle"
+    assert instance.participants["B"].name == "John"
+    assert instance.participants["C"].name == "Fatimah"
+    assert instance.participants["D"].name == "Arjun"
+    assert instance.world.stove_occupant == "Michelle"
+
+    instance.world._handle_kitchen_action(
+        instance.participants["C"],
+        {"type": "LABEL_PERSONAL_UTENSILS", "target": "personal_utensils"},
+    )
+    assert "Fatimah visibly labels" in instance.world.public_state_events[-1]["content"]
     reset_simulation_state()
 
 
@@ -437,6 +570,12 @@ def test_execute_evaluation_writes_separate_artifact(monkeypatch, tmp_path):
         "scenario": {
             "shared_setting": "A hawker centre.",
             "shared_trigger": "The group must choose one table.",
+            "agents": {
+                "A": {"display_name": "Alex"},
+                "B": {"display_name": "Jamie"},
+                "C": {"display_name": "Casey"},
+                "D": {"display_name": "Robin"},
+            },
         },
         "events": [],
     }

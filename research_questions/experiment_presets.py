@@ -10,11 +10,17 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Iterator
 
-from .scenario_presets import BACKGROUND_CONFIGURATIONS, SCENARIOS
+from .scenario_presets import (
+    BACKGROUND_CONFIGURATIONS,
+    FACTORIAL_CONFIGURATIONS,
+    MATERIALIZATION_CONFIGURATION_IDS,
+    SCENARIOS,
+)
 
 
 ALL_SCENARIO_IDS = tuple(SCENARIOS)
 ALL_CONFIGURATION_IDS = tuple(BACKGROUND_CONFIGURATIONS)
+FACTORIAL_CONFIGURATION_IDS = tuple(FACTORIAL_CONFIGURATIONS)
 DEFAULT_ROUNDS_PER_RUN = 10
 
 
@@ -101,6 +107,20 @@ CALIBRATION_S04_HYBRID_PRESET = ExperimentPreset(
     ),
 )
 
+CALIBRATION_S04_CULTURAL_PRESET = ExperimentPreset(
+    name="calibration-s04-cultural",
+    scenario_ids=("S04",),
+    configuration_ids=ALL_CONFIGURATION_IDS,
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "Exploratory S04 batch across C0-C4 using neutral C0 names and "
+        "background-associated C1-C4 names, the same six timed intervals, and the "
+        "deterministic hybrid controller."
+    ),
+)
+
 CALIBRATION_S02_S06_PRESET = ExperimentPreset(
     name="calibration-s02-s06",
     scenario_ids=("S02", "S06"),
@@ -120,6 +140,32 @@ CALIBRATION_S02_PRESET = ExperimentPreset(
     repetitions_per_configuration=1,
     rounds_per_run=6,
     description="Six-round stateful C0 shared-kitchen calibration.",
+)
+
+CALIBRATION_S02_CULTURAL_PRESET = ExperimentPreset(
+    name="calibration-s02-cultural",
+    scenario_ids=("S02",),
+    configuration_ids=ALL_CONFIGURATION_IDS,
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "Exploratory shared-kitchen batch across C0-C4 using neutral C0 names and "
+        "background-associated C1-C4 names with the deterministic hybrid controller."
+    ),
+)
+
+CALIBRATION_S02_FACTORIAL_PRESET = ExperimentPreset(
+    name="calibration-s02-factorial",
+    scenario_ids=("S02",),
+    configuration_ids=FACTORIAL_CONFIGURATION_IDS,
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "One-run-per-cell S02 two-by-two screen of explicit cultural labels and "
+        "culturally associated names using the C1 role rotation."
+    ),
 )
 
 CALIBRATION_S06_PRESET = ExperimentPreset(
@@ -179,8 +225,11 @@ EXPERIMENT_PRESETS = {
         CALIBRATION_S04_PRESET,
         CALIBRATION_S04_LONG_PRESET,
         CALIBRATION_S04_HYBRID_PRESET,
+        CALIBRATION_S04_CULTURAL_PRESET,
         CALIBRATION_S02_S06_PRESET,
         CALIBRATION_S02_PRESET,
+        CALIBRATION_S02_CULTURAL_PRESET,
+        CALIBRATION_S02_FACTORIAL_PRESET,
         CALIBRATION_S06_PRESET,
         SMOKE_PRESET,
         FOCUSED_PILOT_PRESET,
@@ -198,7 +247,7 @@ def validate_experiment_preset(preset: ExperimentPreset) -> None:
         raise ValueError(f"Unknown scenarios: {sorted(unknown_scenarios)}")
 
     unknown_configs = set(preset.configuration_ids) - set(
-        BACKGROUND_CONFIGURATIONS
+        MATERIALIZATION_CONFIGURATION_IDS
     )
     if unknown_configs:
         raise ValueError(f"Unknown configurations: {sorted(unknown_configs)}")
@@ -268,13 +317,17 @@ __all__ = [
     "CALIBRATION_S04_PRESET",
     "CALIBRATION_S04_LONG_PRESET",
     "CALIBRATION_S04_HYBRID_PRESET",
+    "CALIBRATION_S04_CULTURAL_PRESET",
     "CALIBRATION_S02_S06_PRESET",
     "CALIBRATION_S02_PRESET",
+    "CALIBRATION_S02_CULTURAL_PRESET",
+    "CALIBRATION_S02_FACTORIAL_PRESET",
     "CALIBRATION_S06_PRESET",
     "DEFAULT_ROUNDS_PER_RUN",
     "EXPERIMENT_PRESETS",
     "EXPANDED_PRESET",
     "ExperimentPreset",
+    "FACTORIAL_CONFIGURATION_IDS",
     "FOCUSED_PILOT_PRESET",
     "FULL_PILOT_PRESET",
     "RunSpec",

@@ -1,19 +1,31 @@
 """Shared schemas and controlled cultural-background configurations.
 
 Scenario modules deliberately do not contain a cultural-background field. The
-field is added only when a C1-C4 run preset is materialized, and is omitted for
-C0. This makes it straightforward to verify that background assignment is the
-only configured difference between conditions.
+materializer controls background labels and display names for both the standard
+C0-C4 rotations and the exploratory factorial screen.
 """
 
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
 from datetime import datetime
+import re
 from typing import Any, Mapping
 
 
 AGENT_IDS = ("A", "B", "C", "D")
+AGENT_DISPLAY_NAMES = {
+    "A": "Alex",
+    "B": "Jamie",
+    "C": "Casey",
+    "D": "Robin",
+}
+CULTURAL_DISPLAY_NAMES = {
+    "Singaporean Chinese": "John",
+    "Singaporean Malay": "Fatimah",
+    "Singaporean Indian": "Arjun",
+    "Singaporean Eurasian": "Michelle",
+}
 CULTURAL_BACKGROUNDS = (
     "Singaporean Chinese",
     "Singaporean Malay",
@@ -48,6 +60,20 @@ BACKGROUND_CONFIGURATIONS: dict[str, dict[str, str | None]] = {
         "D": "Singaporean Indian",
     },
 }
+
+# Two-by-two exploratory treatment using the C1 role/background allocation.
+# The first bit controls explicit cultural-background fields; the second controls
+# culturally associated display names.
+FACTORIAL_CONFIGURATIONS = {
+    "F00": {"background_labels": False, "cultural_names": False},
+    "F10": {"background_labels": True, "cultural_names": False},
+    "F01": {"background_labels": False, "cultural_names": True},
+    "F11": {"background_labels": True, "cultural_names": True},
+}
+MATERIALIZATION_CONFIGURATION_IDS = (
+    *BACKGROUND_CONFIGURATIONS,
+    *FACTORIAL_CONFIGURATIONS,
+)
 
 
 @dataclass(frozen=True)
@@ -130,26 +156,91 @@ def materialize_configuration(
 ) -> dict[str, Any]:
     """Return a serializable run preset with the requested background rotation.
 
-    C0 does not contain a ``cultural_background`` key. C1-C4 add exactly one
-    background label to each agent without changing any other scenario field.
+    C0 does not contain a ``cultural_background`` key and uses neutral names.
+    C1-C4 add one background label and its associated name to each agent. The
+    Fxx cells independently switch labels and associated names using C1 roles.
     """
 
     validate_scenario(scenario)
-    try:
+    if config_id in BACKGROUND_CONFIGURATIONS:
         assignments = BACKGROUND_CONFIGURATIONS[config_id]
-    except KeyError as exc:
-        expected = ", ".join(BACKGROUND_CONFIGURATIONS)
-        raise KeyError(f"Unknown configuration {config_id!r}; expected {expected}.") from exc
+        name_assignments = assignments
+        factorial_treatment = None
+    elif config_id in FACTORIAL_CONFIGURATIONS:
+        factorial_treatment = FACTORIAL_CONFIGURATIONS[config_id]
+        c1_assignments = BACKGROUND_CONFIGURATIONS["C1"]
+        assignments = (
+            c1_assignments
+            if factorial_treatment["background_labels"]
+            else BACKGROUND_CONFIGURATIONS["C0"]
+        )
+        name_assignments = (
+            c1_assignments
+            if factorial_treatment["cultural_names"]
+            else BACKGROUND_CONFIGURATIONS["C0"]
+        )
+    else:
+        expected = ", ".join(MATERIALIZATION_CONFIGURATION_IDS)
+        raise KeyError(f"Unknown configuration {config_id!r}; expected {expected}.")
 
-    payload = asdict(scenario)
+    display_names = {
+        agent_id: (
+            AGENT_DISPLAY_NAMES[agent_id]
+            if cultural_background is None
+            else CULTURAL_DISPLAY_NAMES[cultural_background]
+        )
+        for agent_id, cultural_background in name_assignments.items()
+    }
+    payload = _render_agent_display_names(asdict(scenario), display_names)
     payload["configuration_id"] = config_id
+    if factorial_treatment is not None:
+        payload["factorial_treatment"] = {
+            **factorial_treatment,
+            "background_rotation": "C1",
+        }
     for agent_id, cultural_background in assignments.items():
+        payload["agents"][agent_id]["display_name"] = display_names[agent_id]
         if cultural_background is not None:
             payload["agents"][agent_id]["cultural_background"] = cultural_background
     return payload
 
 
+def _render_agent_display_names(
+    value: Any, display_names: Mapping[str, str]
+) -> Any:
+    """Replace role labels in materialized text while preserving A-D analysis keys."""
+
+    if isinstance(value, str):
+        rendered = value
+        for agent_id, display_name in display_names.items():
+            rendered = rendered.replace(f"Agent {agent_id}", display_name)
+        for agent_id, display_name in display_names.items():
+            rendered = re.sub(rf"\b{agent_id}\b", display_name, rendered)
+        names = "|".join(re.escape(name) for name in display_names.values())
+        rendered = re.sub(rf"\bAgents (?=(?:{names})\b)", "", rendered)
+        return rendered
+    if isinstance(value, dict):
+        return {
+            key: _render_agent_display_names(item, display_names)
+            for key, item in value.items()
+        }
+    if isinstance(value, list):
+        return [_render_agent_display_names(item, display_names) for item in value]
+    if isinstance(value, tuple):
+        return tuple(
+            _render_agent_display_names(item, display_names) for item in value
+        )
+    return value
+
+
 def _validate_background_design() -> None:
+    if set(CULTURAL_DISPLAY_NAMES) != set(CULTURAL_BACKGROUNDS):
+        raise ValueError("Every cultural background must have one associated display name.")
+    if len(set(CULTURAL_DISPLAY_NAMES.values())) != len(CULTURAL_DISPLAY_NAMES):
+        raise ValueError("Cultural display names must be unique.")
+    if set(FACTORIAL_CONFIGURATIONS) != {"F00", "F10", "F01", "F11"}:
+        raise ValueError("Factorial configurations must define the complete two-by-two design.")
+
     for config_id, assignments in BACKGROUND_CONFIGURATIONS.items():
         if set(assignments) != set(AGENT_IDS):
             raise ValueError(f"{config_id} does not assign all four agent slots.")
@@ -173,8 +264,12 @@ _validate_background_design()
 
 __all__ = [
     "AGENT_IDS",
+    "AGENT_DISPLAY_NAMES",
     "AgentPreset",
     "BACKGROUND_CONFIGURATIONS",
+    "CULTURAL_DISPLAY_NAMES",
+    "FACTORIAL_CONFIGURATIONS",
+    "MATERIALIZATION_CONFIGURATION_IDS",
     "CULTURAL_BACKGROUNDS",
     "ScenarioPreset",
     "materialize_configuration",

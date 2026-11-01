@@ -201,3 +201,111 @@ two-turn variant was the best efficiency/repetition trade-off.
 This remains a conversation-controller experiment, not evidence about cultural groups.
 Before using the mechanism in cultural comparisons, fixed and hybrid conditions require
 multiple C0 replications with identical models, scenarios, and evaluation prompts.
+
+## V9 prompt cleanliness and explicit action state
+
+V9 aligned the custom agent prompt with the behavior TinyTroupe actually executes. Each
+model response now has one final `DONE`; the obsolete examples showing repeated `DONE`
+actions were removed; the JSON example includes every required cognitive-state field; and
+goals use `OPEN`, `SATISFIED`, `BLOCKED`, or `ABANDONED` prefixes inside TinyTroupe's
+existing string-valued `goals` field. This avoids a framework schema change while making
+goal retirement observable in the private trace. Persona precedence was also stated once
+without the earlier alarmist wording, and unsupported extreme behavior is no longer
+encouraged.
+
+S04's world now reports a compact confirmed state after timed changes and seat actions:
+the disputed-seat occupant, whether the alternative seat is not yet open, empty, or
+occupied, Agent B's meal stage, and the remaining standing seat-seekers. Round-five
+narration is derived from the action state, so it no longer claims that B remains seated if
+B has already left. Speech still cannot mutate this state; only `TAKE_SEAT` and
+`LEAVE_SEAT` can.
+
+| Calibration | Public contributions | Simulation calls | Naturalness | Repetition | Grounding | Substantiveness | Independent reasoning | Main finding |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+| `calibration-s04-hybrid-v2-01-clean-state` | 12 | 14 | 5 | 1 | 5 | 4 | 4 | Clean first replication; goals changed to `SATISFIED` or `BLOCKED` after observable outcomes, and the seat state followed physical actions. |
+| `calibration-s04-hybrid-v2-02-clean-state-final` | 12 | 18 | 5 | 2 | 5 | 4 | 4 | Exact final prompt/state version; all three seat outcomes were explicit and internally consistent, but A repeated the same demand across rounds. |
+
+Both runs resolved in round 5 without premature consensus. D took the alternative seat,
+B left only after the bowl became empty, and A then physically took the disputed seat. The
+final evaluator identified the substantive distinction between a contested reservation
+norm and B's practical spill/aisle constraint. Prompt cleanliness and explicit state
+improved interpretability and naturalness, but did not raise substantiveness beyond 4/5.
+The stochastic increase from 14 to 18 simulation calls and repetition from 1 to 2 is a
+reason to use replicated comparisons rather than selecting the more favorable single run.
+
+## V10 named-agent cultural-label screen
+
+The external `CHANGES_SUMMARY.md` was reviewed as a proposal rather than applied wholesale.
+Its useful changes were a normal-silence framing for `DONE`, fixed human display names, and
+a neutral cultural-background rule that neither suppresses the field completely nor tells
+the model to perform cultural differences. Ethnicity-coded scenery, mood/backstory fields,
+random turn order, countdown hints, and stricter forced-resistance rules were rejected as
+confounds or outcome-shaping interventions.
+
+Role IDs remain A-D in analysis data, while the agents and public transcript use the stable
+names Alex, Jamie, Casey, and Robin. The same names are used in every configuration. A new
+`calibration-s04-cultural` preset runs one deterministic hybrid S04 replication for each of
+C0-C4 over six intervals.
+
+The first named-agent C0 calibration scored naturalness 5, repetition 2, grounding 5,
+substantiveness 4, and independent reasoning 4. It resolved in round 6 without premature
+consensus. The matched C0-C4 batch then produced the following results:
+
+| Config | Resolution round | Naturalness | Repetition | Grounding | Substantiveness | Independent reasoning |
+|---|---:|---:|---:|---:|---:|---:|
+| C0 | 5 | 5 | 1 | 5 | 4 | 4 |
+| C1 | 5 | 4 | 1 | 5 | 4 | 4 |
+| C2 | 5 | 5 | 1 | 5 | 4 | 4 |
+| C3 | 5 | 5 | 2 | 5 | 4 | 4 |
+| C4 | 5 | 4 | 2 | 5 | 3 | 4 |
+
+All five runs resolved through the same observable sequence: Robin took the alternative
+seat, Jamie left after the bowl emptied, and Alex took the disputed seat. There was no
+premature consensus and no cultural or ethnic reference in public dialogue or private
+action traces. The evaluator's `concession` label for C3 versus `accommodation` elsewhere
+did not correspond to a different physical mechanism.
+
+This single-repetition screen does not show a detectable cultural-label effect. A separate
+C0 run differed from the matched C0 in resolution round and repetition by about as much as
+the labeled conditions differed from C0, demonstrating material sampling variance. C1 and
+C2 also each required one discarded overlength-response retry, so efficiency comparisons
+are invalid. The detailed comparison is in `cultural_comparison_s04_v1.md`; any inferential
+follow-up requires multiple frozen-pipeline repetitions per configuration and supports
+claims about model label sensitivity, not real cultural groups.
+
+## V11 background-associated display names
+
+After the neutral-name V10 screen, future C1-C4 materializations were changed to pair each
+background label with a stable associated name: Singaporean Chinese=John, Singaporean
+Malay=Fatimah, Singaporean Indian=Arjun, and Singaporean Eurasian=Michelle. C0 retains
+Alex, Jamie, Casey, and Robin. Names follow backgrounds as the labels rotate across A-D,
+while the internal role IDs remain unchanged.
+
+This is a new experimental condition, not a cosmetic continuation of V10. A culturally
+associated name can independently cue ethnicity, gender, or religion, so future C0-C4
+differences estimate the combined effect of label plus name. The V10 neutral-name outputs
+must remain separate and continue to represent the cleaner label-only comparison.
+
+## V12 S02 cultural-name screen
+
+`calibration-s02-cultural-v1-c0-c4-names` ran one six-interval hybrid S02
+replication for each configuration. C0 was classified as `no_conflict`; C1, C2,
+and C4 resolved through clarification, compromise, and accommodation respectively;
+C3 remained unresolved after the extractor was turned off while a ventilation
+request persisted. Grounding was 5 and independent reasoning 4 in every run.
+
+| Config | Status | Resolution round | Naturalness | Repetition | Substantiveness |
+|---|---|---:|---:|---:|---:|
+| C0 | no conflict | - | 5 | 3 | 4 |
+| C1 | resolved | 2 | 5 | 0 | 4 |
+| C2 | resolved | 3 | 5 | 0 | 4 |
+| C3 | unresolved | - | 4 | 2 | 3 |
+| C4 | resolved | 4 | 4 | 1 | 4 |
+
+This is a larger between-condition difference than the S04 neutral-name screen,
+but it is not evidence of a cultural mechanism. No public speech or private action
+trace contained cultural, ethnic, religious, or dietary reasoning. One run per
+condition cannot distinguish the bundled label/name treatment from stochastic
+variation, names add gender and identity cues, and the evaluator sees those names.
+The detailed assessment and recommended factorial follow-up are in
+`cultural_comparison_s02_v1.md`.

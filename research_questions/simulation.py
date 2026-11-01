@@ -13,7 +13,11 @@ from tinytroupe.agent import TinyPerson
 from tinytroupe.agent.mental_faculty import CustomMentalFaculty
 from tinytroupe.environment import TinyWorld
 
-from .scenario_presets.common import ScenarioPreset, materialize_configuration
+from .scenario_presets.common import (
+    AGENT_DISPLAY_NAMES,
+    ScenarioPreset,
+    materialize_configuration,
+)
 
 
 AGENT_PROMPT_PATH = (
@@ -30,10 +34,20 @@ class FaceToFaceWorld(TinyWorld):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.agent_names_by_role = {
+            str(agent._persona.get("scenario_agent_id")): agent.name
+            for agent in self.agents
+            if agent._persona.get("scenario_agent_id")
+        }
         self.pending_reply_agent: str | None = None
         self.scheduler_cursor = 0
         self.scheduler_direct_reply_streak = 0
         self.scheduler_events: list[dict[str, Any]] = []
+
+    def role_name(self, agent_id: str) -> str:
+        """Return the materialized display name for an A-D analysis role."""
+
+        return self.agent_names_by_role.get(agent_id, AGENT_DISPLAY_NAMES[agent_id])
 
     def _resolve_talk_target(self, target: str) -> TinyPerson | None:
         if not target:
@@ -43,11 +57,11 @@ class FaceToFaceWorld(TinyWorld):
         if direct is not None:
             return direct
         if len(normalized) == 1 and normalized.upper() in {"A", "B", "C", "D"}:
-            return self.get_agent_by_name(f"Agent {normalized.upper()}")
+            return self.get_agent_by_name(self.role_name(normalized.upper()))
         if normalized.lower().startswith("agent "):
-            return self.get_agent_by_name(
-                f"Agent {normalized.split(maxsplit=1)[1].upper()}"
-            )
+            role_id = normalized.split(maxsplit=1)[1].upper()
+            if role_id in AGENT_DISPLAY_NAMES:
+                return self.get_agent_by_name(self.role_name(role_id))
         return None
 
     def _handle_talk(self, source_agent: TinyPerson, content: str, target: str):
@@ -203,7 +217,7 @@ class KitchenConflictWorld(FaceToFaceWorld):
         self.laundry_protected = False
         self.shared_utensils_clean = False
         self.personal_utensils_labeled = False
-        self.stove_occupant = "Agent A"
+        self.stove_occupant = self.role_name("A")
         self.public_state_events: list[dict[str, Any]] = []
 
     def _record_state_event(self, content: str) -> None:
@@ -231,7 +245,7 @@ class KitchenConflictWorld(FaceToFaceWorld):
             else "the aroma remains strong in the common area"
         )
         prefix = (
-            "Two minutes have passed. Agent A's dish is ready to remove from the heat, "
+            f"Two minutes have passed. {self.role_name('A')}'s dish is ready to remove from the heat, "
             "but the current stove occupant has not necessarily released it."
             if round_number == 2
             else "Two more minutes have passed."
@@ -284,13 +298,19 @@ class KitchenConflictWorld(FaceToFaceWorld):
                 self.shared_utensils_clean = True
                 result = f"{source_agent.name} washes the common utensils currently on the counter."
         elif action_type == "LABEL_PERSONAL_UTENSILS":
-            if source_agent.name != "Agent C":
-                result = f"{source_agent.name} cannot label Agent C's personal utensils."
+            if source_agent.name != self.role_name("C"):
+                result = (
+                    f"{source_agent.name} cannot label "
+                    f"{self.role_name('C')}'s personal utensils."
+                )
             elif self.personal_utensils_labeled:
-                result = "Agent C's personal utensils were already visibly labeled."
+                result = f"{self.role_name('C')}'s personal utensils were already visibly labeled."
             else:
                 self.personal_utensils_labeled = True
-                result = "Agent C visibly labels and separates Agent C's personal utensils."
+                result = (
+                    f"{self.role_name('C')} visibly labels and separates "
+                    f"{self.role_name('C')}'s personal utensils."
+                )
         elif action_type == "RELEASE_STOVE":
             if self.stove_occupant != source_agent.name:
                 result = f"{source_agent.name} cannot release the stove; they do not occupy it."
@@ -385,33 +405,34 @@ class OrderConflictWorld(FaceToFaceWorld):
     def _handle_order_action(self, source_agent: TinyPerson, action: Mapping) -> None:
         action_type = str(action.get("type") or "").upper()
         target = self._order_target(action)
-        if source_agent.name != "Agent B":
+        if source_agent.name != self.role_name("B"):
             self._record_state_event(
                 f"{source_agent.name} cannot perform {action_type}; only the stall operator records, prepares, corrects, or serves the order."
             )
             return
         if action_type != "SERVE_ORDER" and target not in self.ORDER_SPECS:
             self._record_state_event(
-                f"Agent B's {action_type} failed because {target or 'no specification'} is not a recognized order specification."
+                f"{self.role_name('B')}'s {action_type} failed because "
+                f"{target or 'no specification'} is not a recognized order specification."
             )
             return
         if action_type == "RECORD_ORDER":
             self.recorded_spec = target
-            result = f"Agent B records the order specification as {target}."
+            result = f"{self.role_name('B')} records the order specification as {target}."
         elif action_type == "START_PREPARATION":
             if self.served:
-                result = "Agent B cannot start preparation; an order has already been served."
+                result = f"{self.role_name('B')} cannot start preparation; an order has already been served."
             elif self.preparation_spec is not None:
                 result = f"Preparation had already started as {self.preparation_spec}."
             else:
                 self.preparation_spec = target
-                result = f"Agent B physically starts preparing {target}."
+                result = f"{self.role_name('B')} physically starts preparing {target}."
         elif action_type == "CORRECT_ORDER":
             if self.served:
-                result = "Agent B cannot correct the order in place because it has already been served."
+                result = f"{self.role_name('B')} cannot correct the order in place because it has already been served."
             elif self.preparation_spec is None:
                 self.recorded_spec = target
-                result = f"Agent B records {target} before preparation; no remake is needed."
+                result = f"{self.role_name('B')} records {target} before preparation; no remake is needed."
             elif self.preparation_spec == target:
                 result = f"The preparation was already {target}; no correction is needed."
             else:
@@ -420,17 +441,17 @@ class OrderConflictWorld(FaceToFaceWorld):
                 self.recorded_spec = target
                 self.correction_made = True
                 result = (
-                    f"Agent B stops the {previous} preparation and restarts it as {target}; "
+                    f"{self.role_name('B')} stops the {previous} preparation and restarts it as {target}; "
                     "this creates a visible delay and discarded ingredients."
                 )
         else:  # SERVE_ORDER
             if self.preparation_spec is None:
-                result = "Agent B cannot serve the order because preparation has not started."
+                result = f"{self.role_name('B')} cannot serve the order because preparation has not started."
             elif self.served:
                 result = "The prepared order was already served."
             else:
                 self.served = True
-                result = f"Agent B physically serves one {self.preparation_spec} order."
+                result = f"{self.role_name('B')} physically serves one {self.preparation_spec} order."
         self._record_state_event(result)
 
     def _handle_actions(self, source: TinyPerson, actions: list):
@@ -448,8 +469,8 @@ class SeatConflictWorld(FaceToFaceWorld):
         super().__init__(*args, **kwargs)
         self.current_round_number = 0
         self.seat_occupants = {
-            "disputed_seat": "Agent B",
-            "other_table_seat": "Agent C",
+            "disputed_seat": self.role_name("B"),
+            "other_table_seat": self.role_name("C"),
             "alternative_seat": None,
         }
         self.seat_available = {
@@ -457,13 +478,45 @@ class SeatConflictWorld(FaceToFaceWorld):
             "other_table_seat": True,
             "alternative_seat": False,
         }
+        self.b_meal_stage = "more than half full"
         self.public_state_events: list[dict[str, Any]] = []
+
+    def _seat_state_text(self) -> str:
+        seated_agents = {
+            occupant
+            for occupant in self.seat_occupants.values()
+            if occupant is not None
+        }
+        alternative_occupant = self.seat_occupants["alternative_seat"]
+        if not self.seat_available["alternative_seat"]:
+            alternative_state = "not yet open"
+        elif alternative_occupant is None:
+            alternative_state = "empty"
+        else:
+            alternative_state = f"occupied by {alternative_occupant}"
+        standing_seekers = [
+            agent_name
+            for agent_name in (self.role_name("A"), self.role_name("D"))
+            if agent_name not in seated_agents
+        ]
+        return (
+            f"disputed seat={self.seat_occupants['disputed_seat'] or 'empty'}; "
+            f"alternative seat={alternative_state}; "
+            f"{self.role_name('B')} bowl={self.b_meal_stage}; "
+            f"standing seat-seekers={', '.join(standing_seekers) if standing_seekers else 'none'}."
+        )
 
     def prepare_round(self, round_number: int, observation: str | None) -> str | None:
         self.current_round_number = round_number
+        if round_number == 2:
+            self.b_meal_stage = "more than half full"
+        elif round_number == 3:
+            self.b_meal_stage = "about one-third full"
         if round_number == 4:
+            self.b_meal_stage = "several spoonfuls left"
             self.seat_available["alternative_seat"] = True
         if round_number == 5:
+            self.b_meal_stage = "empty"
             alternative_occupant = self.seat_occupants["alternative_seat"]
             alternative_state = (
                 f"The alternative seat is now occupied by {alternative_occupant}."
@@ -473,19 +526,29 @@ class SeatConflictWorld(FaceToFaceWorld):
                     "a tray is approaching it from the opposite direction."
                 )
             )
+            b_position = (
+                f"{self.role_name('B')} remains in the disputed seat."
+                if self.seat_occupants["disputed_seat"] == self.role_name("B")
+                else (
+                    f"{self.role_name('B')} no longer occupies the disputed seat; its current occupant is "
+                    f"{self.seat_occupants['disputed_seat'] or 'nobody'}."
+                )
+            )
             return (
-                "Two more minutes have passed. Agent B's bowl is now empty, although "
-                f"Agent B remains in the disputed seat. {alternative_state}"
+                f"Two more minutes have passed. {self.role_name('B')}'s bowl is now empty. "
+                f"{b_position} {alternative_state} Confirmed state: {self._seat_state_text()}"
             )
         if round_number == 6:
             return (
-                "Two more minutes have passed. Current confirmed occupants: "
-                f"disputed seat = {self.seat_occupants['disputed_seat'] or 'empty'}; "
-                f"alternative seat = {self.seat_occupants['alternative_seat'] or 'empty'}."
+                "Two more minutes have passed. Confirmed state: "
+                f"{self._seat_state_text()}"
             )
-        return observation
+        if observation:
+            return f"{observation} Confirmed state: {self._seat_state_text()}"
+        return None
 
     def _record_state_event(self, content: str) -> None:
+        content = f"{content} Confirmed state: {self._seat_state_text()}"
         self.public_state_events.append(
             {
                 "round": self.current_round_number,
@@ -557,7 +620,7 @@ class SeatConflictWorld(FaceToFaceWorld):
                 super()._handle_actions(source, [action])
 
 
-def _seat_action_faculty() -> CustomMentalFaculty:
+def _seat_action_faculty(display_names: Mapping[str, str]) -> CustomMentalFaculty:
     return CustomMentalFaculty(
         "Observable seat actions",
         actions_configs={
@@ -580,13 +643,18 @@ def _seat_action_faculty() -> CustomMentalFaculty:
             "A spoken intention does not change seat occupancy; use TAKE_SEAT or LEAVE_SEAT.",
             "Do not TAKE_SEAT unless the environment has confirmed that the seat is empty.",
             "You may occupy at most one seat. Do not TAKE_SEAT while you already occupy another seat.",
-            "Use target=disputed_seat only for the original seat beside Agent C. Use target=alternative_seat only for the later seat about ten metres away. The target must match the seat described in the action content.",
+            (
+                "Use target=disputed_seat only for the original seat beside "
+                f"{display_names['C']}. Use target=alternative_seat only for the "
+                "later seat about ten metres away. The target must match the seat "
+                "described in the action content."
+            ),
             "If the practical reason for occupying a seat has ended and you decide to vacate, use LEAVE_SEAT.",
         ],
     )
 
 
-def _kitchen_action_faculty() -> CustomMentalFaculty:
+def _kitchen_action_faculty(display_names: Mapping[str, str]) -> CustomMentalFaculty:
     return CustomMentalFaculty(
         "Observable shared-kitchen actions",
         actions_configs={
@@ -614,7 +682,10 @@ def _kitchen_action_faculty() -> CustomMentalFaculty:
                 "function": None,
             },
             "LABEL_PERSONAL_UTENSILS": {
-                "description": "Agent C visibly labels and separates personal utensils. Set target=personal_utensils.",
+                "description": (
+                    f"{display_names['C']} visibly labels and separates personal "
+                    "utensils. Set target=personal_utensils."
+                ),
                 "function": None,
             },
             "RELEASE_STOVE": {
@@ -629,14 +700,17 @@ def _kitchen_action_faculty() -> CustomMentalFaculty:
         constraints=[
             "Promises do not change kitchen state; perform the matching action when you actually do it.",
             "Only the current stove occupant can RELEASE_STOVE, and nobody can TAKE_STOVE until it is confirmed free.",
-            "Only Agent C can label Agent C's personal utensils.",
+            (
+                f"Only {display_names['C']} can label "
+                f"{display_names['C']}'s personal utensils."
+            ),
             "The kitchen window cannot be opened safely until the laundry is moved away from the rain.",
             "Ventilation, utensil separation, cleanup, and stove access are distinct issues; one action does not settle the others.",
         ],
     )
 
 
-def _order_action_faculty() -> CustomMentalFaculty:
+def _order_action_faculty(display_names: Mapping[str, str]) -> CustomMentalFaculty:
     return CustomMentalFaculty(
         "Observable hawker-order actions",
         actions_configs={
@@ -667,7 +741,10 @@ def _order_action_faculty() -> CustomMentalFaculty:
             },
         },
         constraints=[
-            "Only Agent B, the stall operator, can record, prepare, correct, or serve the order.",
+            (
+                f"Only {display_names['B']}, the stall operator, can record, "
+                "prepare, correct, or serve the order."
+            ),
             "Speech does not record or prepare food; use the observable action in the same turn when acting.",
             "Use dry_no_chilli only for dry chicken noodles without chilli, and soup_with_chilli only for the stall default.",
             "Do not claim an order was corrected or served until the environment confirms it.",
@@ -734,16 +811,20 @@ def create_scenario_instance(
     """Create four fresh agents with shared and private facts correctly separated."""
 
     preset = materialize_configuration(scenario, configuration_id)
+    display_names = {
+        agent_id: agent_preset["display_name"]
+        for agent_id, agent_preset in preset["agents"].items()
+    }
     participants: dict[str, TinyPerson] = {}
     for agent_id, agent_preset in preset["agents"].items():
-        person = TinyPerson(name=f"Agent {agent_id}")
+        person = TinyPerson(name=agent_preset["display_name"])
         person._prompt_template_path = str(AGENT_PROMPT_PATH)
         if preset["scenario_id"] == "S02":
-            person.add_mental_faculty(_kitchen_action_faculty())
+            person.add_mental_faculty(_kitchen_action_faculty(display_names))
         elif preset["scenario_id"] == "S04":
-            person.add_mental_faculty(_seat_action_faculty())
+            person.add_mental_faculty(_seat_action_faculty(display_names))
         elif preset["scenario_id"] == "S06":
-            person.add_mental_faculty(_order_action_faculty())
+            person.add_mental_faculty(_order_action_faculty(display_names))
         person.include_persona_definitions(_agent_persona(agent_id, agent_preset))
         participants[agent_id] = person
 

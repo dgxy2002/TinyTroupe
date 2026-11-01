@@ -22,6 +22,11 @@ When an interaction ends naturally, agents should not start a new topic merely t
 
 Background assignments are maintained once in `scenario_presets/common.py` and applied to every scenario without altering any other field.
 
+The A-D role IDs remain stable in analysis data. C0 uses neutral role-stable names:
+A=Alex, B=Jamie, C=Casey, and D=Robin. In C1-C4, names follow the assigned background:
+Singaporean Chinese=John, Singaporean Malay=Fatimah, Singaporean Indian=Arjun, and
+Singaporean Eurasian=Michelle.
+
 | Config | Agent A | Agent B | Agent C | Agent D |
 |---|---|---|---|---|
 | C0 | Field omitted | Field omitted | Field omitted | Field omitted |
@@ -30,7 +35,11 @@ Background assignments are maintained once in `scenario_presets/common.py` and a
 | C3 | Singaporean Indian | Singaporean Eurasian | Singaporean Chinese | Singaporean Malay |
 | C4 | Singaporean Eurasian | Singaporean Chinese | Singaporean Malay | Singaporean Indian |
 
-The label is personal context only. It must not automatically imply religion, diet, language proficiency, values, temperament, or conflict style.
+The label is one biographical fact, not a behavior instruction. It must not automatically imply religion, diet, language proficiency, values, temperament, personality, or conflict style.
+
+Because C1-C4 now manipulate both the explicit background label and its associated name,
+comparisons against C0 estimate the combined prompt effect of label plus name. They no
+longer isolate the effect of the background field alone.
 
 ## Run and round presets
 
@@ -40,8 +49,10 @@ Experiment-level controls are defined in `experiment_presets.py`, separately fro
 |---|---:|---:|---:|---:|---:|---:|
 | `calibration-s04` | S04 only | C0 only | 1 | 6 | 1 | 6 |
 | `calibration-s04-hybrid` | S04 only | C0 only | 1 | 6 | 1 | 6 |
+| `calibration-s04-cultural` | S04 only | C0-C4 | 1 | 6 | 5 | 30 |
 | `calibration-s02-s06` | S02, S06 | C0 only | 1 | 6 | 2 | 12 |
 | `calibration-s02` | S02 only | C0 only | 1 | 6 | 1 | 6 |
+| `calibration-s02-cultural` | S02 only | C0-C4 | 1 | 6 | 5 | 30 |
 | `calibration-s06` | S06 only | C0 only | 1 | 4 | 1 | 4 |
 | `smoke` | S04 only | C0 only | 1 | 1 | 1 | 1 |
 | `focused-pilot` | S02, S04, S06 | C0-C4 | 3 | 10 | 45 | 450 |
@@ -50,12 +61,13 @@ Experiment-level controls are defined in `experiment_presets.py`, separately fro
 
 The calibration and smoke presets are diagnostic checks, not confirmatory research data. Research presets always complete their configured horizon, never stop on resolution, preserve fixed agent order, use sequential agent actions, and evaluate only after the full run. Run IDs use `Sxx-Cx-Rxx`, for example `S04-C2-R01`.
 
-`calibration-s04-hybrid` is the only current exception to mandatory round-robin
-participation. Within each of the same six timed environment intervals, a direct
+`calibration-s04-hybrid` and the exploratory `calibration-s04-cultural` preset are
+exceptions to mandatory round-robin participation. Within each of the same six timed environment intervals, a direct
 addressee receives priority, other agents can self-select by contributing or issuing
 `DONE`, and deterministic rotation opens the floor after two consecutive direct replies.
 At most two public contributions are selected per interval. This is a separate
-conversation-mechanism condition; it is not enabled for the cultural-background pilot.
+conversation-mechanism condition; the named cultural calibration holds it fixed across
+C0-C4.
 
 ## Scenario overview
 

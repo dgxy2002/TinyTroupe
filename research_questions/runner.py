@@ -29,7 +29,11 @@ from .experiment_presets import (
     get_experiment_preset,
     iter_run_specs,
 )
-from .scenario_presets import BACKGROUND_CONFIGURATIONS, SCENARIOS
+from .scenario_presets import (
+    BACKGROUND_CONFIGURATIONS,
+    MATERIALIZATION_CONFIGURATION_IDS,
+    SCENARIOS,
+)
 from .simulation import (
     AGENT_PROMPT_PATH,
     create_scenario_instance,
@@ -315,12 +319,9 @@ def execute_evaluation(
         return read_json(evaluation_path)
 
     before = len(_call_records())
-    evaluator_setting = (
-        f"{transcript['scenario']['shared_setting']}\n\n"
-        f"Opening situation: {transcript['scenario']['shared_trigger']}"
-    )
+    evaluator_events, evaluator_setting = _anonymized_evaluator_input(transcript)
     evaluation = evaluate_transcript(
-        events=transcript["events"],
+        events=evaluator_events,
         shared_setting=evaluator_setting,
         completed_rounds=run["completed_rounds"],
         evaluator_model=evaluator_model,
@@ -342,6 +343,7 @@ def execute_evaluation(
             "prompt_sha256": evaluator_prompt_sha256(),
             "evaluated_at": utc_now(),
             "normalizations": list(evaluation.normalization_notes),
+            "input_names_anonymized": True,
             "resources": aggregate_resources(evaluator_calls),
         },
         "evaluation": evaluation.model_dump(mode="json"),
@@ -355,6 +357,38 @@ def execute_evaluation(
     # as the marker that this stage completed successfully.
     write_json_once(evaluation_path, artifact)
     return artifact
+
+
+def _anonymized_evaluator_input(
+    transcript: dict[str, Any],
+) -> tuple[list[dict[str, Any]], str]:
+    """Hide treatment-associated display names from the independent evaluator."""
+
+    aliases = {
+        agent["display_name"]: f"Agent {agent_id}"
+        for agent_id, agent in transcript["scenario"]["agents"].items()
+    }
+
+    def replace_names(value: Any) -> Any:
+        if isinstance(value, str):
+            rendered = value
+            for display_name, alias in sorted(
+                aliases.items(), key=lambda item: len(item[0]), reverse=True
+            ):
+                rendered = rendered.replace(display_name, alias)
+            return rendered
+        if isinstance(value, dict):
+            return {key: replace_names(item) for key, item in value.items()}
+        if isinstance(value, list):
+            return [replace_names(item) for item in value]
+        return value
+
+    events = replace_names(transcript["events"])
+    setting = replace_names(
+        f"{transcript['scenario']['shared_setting']}\n\n"
+        f"Opening situation: {transcript['scenario']['shared_trigger']}"
+    )
+    return events, setting
 
 
 def _manifest(
@@ -436,7 +470,7 @@ def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--preset", choices=tuple(EXPERIMENT_PRESETS), default="smoke")
     parser.add_argument("--scenario", choices=tuple(SCENARIOS))
-    parser.add_argument("--configuration", choices=tuple(BACKGROUND_CONFIGURATIONS))
+    parser.add_argument("--configuration", choices=MATERIALIZATION_CONFIGURATION_IDS)
     parser.add_argument("--repetitions", type=int)
     parser.add_argument("--rounds", type=int)
     parser.add_argument("--max-runs", type=int)

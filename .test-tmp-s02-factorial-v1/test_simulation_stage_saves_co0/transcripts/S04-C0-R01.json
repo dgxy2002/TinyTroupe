@@ -1,0 +1,79 @@
+{
+  "events": [
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "Is this seat taken?",
+      "round": 1,
+      "target": "Agent B",
+      "turn": 1,
+      "type": "TALK"
+    }
+  ],
+  "private_and_public_actions": [
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "Is this seat taken?",
+            "target": "Agent B",
+            "type": "TALK"
+          }
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "agent_prompt_sha256": "03862a55b940cc7d9face03d9e56cbb184fbae98ca291bf8e1fa52ad5427286c",
+    "git_commit": "f58ded556a3a817e02a20fab86662c34e00df1bb",
+    "scenario_configuration_sha256": "2a5b25259371c0bfb9b6a088c9296ed67cbcbf0c3b5773411a0c10bc3741cca0"
+  },
+  "round_records": [
+    {
+      "call_end": 0,
+      "call_start": 0,
+      "public_observation": null,
+      "round": 1,
+      "wall_time_ms": 0.01
+    }
+  ],
+  "run": {
+    "completed_rounds": 1,
+    "configuration_id": "C0",
+    "conversation_mode": "fixed_round_robin",
+    "evaluate_after_run": true,
+    "experiment_name": "smoke",
+    "finished_at": "2026-10-30T05:34:38.938409+00:00",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetition": 1,
+    "resumed_from_checkpoint": false,
+    "rounds": 1,
+    "run_id": "S04-C0-R01",
+    "scenario_id": "S04",
+    "simulation_model": "simulation-model",
+    "simulation_resources": {
+      "calls": 0,
+      "cost_usd": 0,
+      "exact_cost_complete": null,
+      "failed_calls": 0,
+      "input_tokens": 0,
+      "local_latency_ms": 0,
+      "output_tokens": 0,
+      "reasoning_tokens": 0,
+      "successful_calls": 0,
+      "total_tokens": 0
+    },
+    "started_at": "2026-10-30T05:34:38.926296+00:00",
+    "stop_on_resolution": false
+  },
+  "scenario": {
+    "agents": {},
+    "configuration_id": "C0",
+    "scenario_id": "S04",
+    "shared_setting": "A hawker centre.",
+    "shared_trigger": "Agent A arrives at the table."
+  },
+  "scheduler_events": [],
+  "schema_version": 2
+}

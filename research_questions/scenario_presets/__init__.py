@@ -1,6 +1,11 @@
 """Registry of the ten editable conflict-scenario presets."""
 
-from .common import BACKGROUND_CONFIGURATIONS, materialize_configuration
+from .common import (
+    BACKGROUND_CONFIGURATIONS,
+    FACTORIAL_CONFIGURATIONS,
+    MATERIALIZATION_CONFIGURATION_IDS,
+    materialize_configuration,
+)
 from .s01_presets import SCENARIO as S01
 from .s02_presets import SCENARIO as S02
 from .s03_presets import SCENARIO as S03
@@ -31,6 +36,8 @@ def get_scenario(scenario_id: str):
 
 __all__ = [
     "BACKGROUND_CONFIGURATIONS",
+    "FACTORIAL_CONFIGURATIONS",
+    "MATERIALIZATION_CONFIGURATION_IDS",
     "SCENARIOS",
     "get_scenario",
     "materialize_configuration",

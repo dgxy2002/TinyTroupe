@@ -1,6 +1,9 @@
 from dataclasses import asdict
 
 from research_questions.experiment_presets import (
+    CALIBRATION_S02_FACTORIAL_PRESET,
+    CALIBRATION_S02_CULTURAL_PRESET,
+    CALIBRATION_S04_CULTURAL_PRESET,
     CALIBRATION_S04_HYBRID_PRESET,
     CALIBRATION_S04_PRESET,
     EXPANDED_PRESET,
@@ -11,10 +14,13 @@ from research_questions.experiment_presets import (
 )
 from research_questions.scenario_presets import (
     BACKGROUND_CONFIGURATIONS,
+    FACTORIAL_CONFIGURATIONS,
     SCENARIOS,
     materialize_configuration,
 )
 from research_questions.scenario_presets.common import (
+    AGENT_DISPLAY_NAMES,
+    CULTURAL_DISPLAY_NAMES,
     AGENT_IDS,
     CULTURAL_BACKGROUNDS,
 )
@@ -42,6 +48,14 @@ def test_background_rotation_is_balanced_for_every_agent_slot():
 def test_c0_omits_background_field_instead_of_assigning_a_baseline_identity():
     preset = materialize_configuration(SCENARIOS["S01"], "C0")
     assert all("cultural_background" not in agent for agent in preset["agents"].values())
+    assert {
+        agent_id: agent["display_name"]
+        for agent_id, agent in preset["agents"].items()
+    } == AGENT_DISPLAY_NAMES
+    assert "Agent A" not in preset["shared_setting"]
+    assert "Alex and Robin are still standing" in materialize_configuration(
+        SCENARIOS["S04"], "C0"
+    )["round_observations"][3]
 
 
 def test_only_materialized_configurations_contain_background_labels():
@@ -53,6 +67,47 @@ def test_only_materialized_configurations_contain_background_labels():
         agent_id: agent["cultural_background"]
         for agent_id, agent in configured["agents"].items()
     } == BACKGROUND_CONFIGURATIONS["C2"]
+    assert {
+        agent_id: agent["display_name"]
+        for agent_id, agent in configured["agents"].items()
+    } == {
+        agent_id: CULTURAL_DISPLAY_NAMES[background]
+        for agent_id, background in BACKGROUND_CONFIGURATIONS["C2"].items()
+    }
+
+
+def test_factorial_configuration_separates_background_labels_from_names():
+    expected_names = {
+        agent_id: CULTURAL_DISPLAY_NAMES[background]
+        for agent_id, background in BACKGROUND_CONFIGURATIONS["C1"].items()
+    }
+    expected = {
+        "F00": (AGENT_DISPLAY_NAMES, False, False),
+        "F10": (AGENT_DISPLAY_NAMES, True, False),
+        "F01": (expected_names, False, True),
+        "F11": (expected_names, True, True),
+    }
+
+    for config_id, (names, has_labels, has_cultural_names) in expected.items():
+        preset = materialize_configuration(SCENARIOS["S02"], config_id)
+        assert {
+            agent_id: agent["display_name"]
+            for agent_id, agent in preset["agents"].items()
+        } == names
+        assert all(
+            ("cultural_background" in agent) is has_labels
+            for agent in preset["agents"].values()
+        )
+        if has_labels:
+            assert {
+                agent_id: agent["cultural_background"]
+                for agent_id, agent in preset["agents"].items()
+            } == BACKGROUND_CONFIGURATIONS["C1"]
+        assert preset["factorial_treatment"] == {
+            **FACTORIAL_CONFIGURATIONS[config_id],
+            "background_rotation": "C1",
+        }
+        assert preset["factorial_treatment"]["cultural_names"] is has_cultural_names
 
 
 def test_all_fifty_scenario_configurations_materialize():
@@ -95,6 +150,32 @@ def test_experiment_presets_define_expected_run_and_round_counts():
         CALIBRATION_S04_PRESET.total_simulation_rounds,
     ) == (1, 6)
     assert CALIBRATION_S04_HYBRID_PRESET.conversation_mode == "hybrid_self_selection"
+    assert CALIBRATION_S04_CULTURAL_PRESET.configuration_ids == (
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+    )
+    assert CALIBRATION_S04_CULTURAL_PRESET.total_runs == 5
+    assert CALIBRATION_S02_CULTURAL_PRESET.configuration_ids == (
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+    )
+    assert CALIBRATION_S02_CULTURAL_PRESET.total_runs == 5
+    assert CALIBRATION_S02_FACTORIAL_PRESET.configuration_ids == (
+        "F00",
+        "F10",
+        "F01",
+        "F11",
+    )
+    assert (
+        CALIBRATION_S02_FACTORIAL_PRESET.total_runs,
+        CALIBRATION_S02_FACTORIAL_PRESET.total_simulation_rounds,
+    ) == (4, 24)
     assert (SMOKE_PRESET.total_runs, SMOKE_PRESET.total_simulation_rounds) == (1, 1)
     assert (
         FOCUSED_PILOT_PRESET.total_runs,
