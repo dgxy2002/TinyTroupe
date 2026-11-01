@@ -1,6 +1,7 @@
 from dataclasses import asdict
 
 from research_questions.experiment_presets import (
+    CALIBRATION_S02_EXPLICIT_PRESET,
     CALIBRATION_S02_FACTORIAL_PRESET,
     CALIBRATION_S02_CULTURAL_PRESET,
     CALIBRATION_S04_CULTURAL_PRESET,
@@ -53,6 +54,9 @@ def test_c0_omits_background_field_instead_of_assigning_a_baseline_identity():
         for agent_id, agent in preset["agents"].items()
     } == AGENT_DISPLAY_NAMES
     assert "Agent A" not in preset["shared_setting"]
+    assert "Alex solution" not in materialize_configuration(
+        SCENARIOS["S02"], "C0"
+    )["agents"]["C"]["normative_position"]
     assert "Alex and Robin are still standing" in materialize_configuration(
         SCENARIOS["S04"], "C0"
     )["round_observations"][3]
@@ -129,6 +133,14 @@ def test_all_fifty_scenario_configurations_materialize():
 
 
 def test_revised_information_boundaries_and_timing_are_explicit():
+    s02 = SCENARIOS["S02"]
+    assert s02.initial_interaction_type == "Active multi-issue conflict"
+    assert "A disagreement is already underway" in s02.shared_trigger
+    assert "explicitly rejected" in s02.agents["B"].private_knowledge
+    assert "all unsettled" in s02.shared_trigger
+    assert "work clothes" in s02.agents["C"].role
+    assert "prospective ventilation" in s02.agents["B"].immediate_priority
+
     s04 = SCENARIOS["S04"]
     assert "Every table currently visible" in s04.shared_setting
     assert "uncovered a bowl" in s04.shared_trigger
@@ -166,6 +178,11 @@ def test_experiment_presets_define_expected_run_and_round_counts():
         "C4",
     )
     assert CALIBRATION_S02_CULTURAL_PRESET.total_runs == 5
+    assert CALIBRATION_S02_EXPLICIT_PRESET.conversation_mode == "hybrid_self_selection"
+    assert (
+        CALIBRATION_S02_EXPLICIT_PRESET.total_runs,
+        CALIBRATION_S02_EXPLICIT_PRESET.total_simulation_rounds,
+    ) == (1, 6)
     assert CALIBRATION_S02_FACTORIAL_PRESET.configuration_ids == (
         "F00",
         "F10",

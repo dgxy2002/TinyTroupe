@@ -179,7 +179,7 @@ def test_agent_factory_omits_c0_background_and_uses_custom_prompt():
         for person in c0.participants.values()
     )
     assert all(
-        "There is no required conflict" in person._init_system_message
+        "Do not invent or force conflict beyond" in person._init_system_message
         for person in c0.participants.values()
     )
     assert all(
@@ -256,6 +256,8 @@ def test_agent_prompt_has_one_turn_done_contract_and_complete_state_example():
     assert "Never place an action after DONE" in prompt
     assert '"goals": "OPEN: Reply to an urgent email from Deimos."' in prompt
     assert '"context": ["An urgent email arrived about Mythos."]' in prompt
+    assert "division of responsibility" in prompt
+    assert "decide a concrete term" in prompt
     assert all(
         status in prompt
         for status in ("OPEN:", "SATISFIED:", "BLOCKED:", "ABANDONED:")
@@ -399,7 +401,7 @@ def test_flatten_actions_preserves_multiple_hybrid_turns_in_one_round():
     ]
 
 
-def test_s02_kitchen_actions_keep_issues_and_access_observable():
+def test_s02_kitchen_actions_keep_ventilation_and_access_observable():
     reset_simulation_state()
     instance = create_scenario_instance(SCENARIOS["S02"], "C0")
     inject_round_observation(instance, 2)
@@ -409,10 +411,6 @@ def test_s02_kitchen_actions_keep_issues_and_access_observable():
     )
     instance.world._handle_kitchen_action(
         instance.participants["B"], {"type": "OPEN_WINDOW", "target": "kitchen_window"}
-    )
-    instance.world._handle_kitchen_action(
-        instance.participants["C"],
-        {"type": "LABEL_PERSONAL_UTENSILS", "target": "personal_utensils"},
     )
     instance.world._handle_kitchen_action(
         instance.participants["A"], {"type": "RELEASE_STOVE", "target": "stove"}
@@ -425,7 +423,7 @@ def test_s02_kitchen_actions_keep_issues_and_access_observable():
     assert instance.world.laundry_protected is True
     assert instance.world.personal_utensils_labeled is True
     assert instance.world.stove_occupant == AGENT_DISPLAY_NAMES["D"]
-    assert instance.world.shared_utensils_clean is False
+    assert instance.world.shared_utensils_clean is True
     reset_simulation_state()
 
 
@@ -440,9 +438,9 @@ def test_s02_cultural_names_follow_roles_in_world_state_and_actions():
 
     instance.world._handle_kitchen_action(
         instance.participants["C"],
-        {"type": "LABEL_PERSONAL_UTENSILS", "target": "personal_utensils"},
+        {"type": "MOVE_LAUNDRY", "target": "drying_rack"},
     )
-    assert "Fatimah visibly labels" in instance.world.public_state_events[-1]["content"]
+    assert "Fatimah moves the drying rack" in instance.world.public_state_events[-1]["content"]
     reset_simulation_state()
 
 
@@ -545,7 +543,12 @@ def test_simulation_stage_saves_complete_immutable_transcript(monkeypatch, tmp_p
 
     transcript_path = tmp_path / "transcripts" / "S04-C0-R01.json"
     assert transcript_path.exists()
-    assert (tmp_path / "transcripts" / "S04-C0-R01.md").exists()
+    transcript_markdown = tmp_path / "transcripts" / "S04-C0-R01.md"
+    assert transcript_markdown.exists()
+    rendered = transcript_markdown.read_text(encoding="utf-8")
+    assert "## Opening situation" in rendered
+    assert "A hawker centre." in rendered
+    assert "Agent A arrives at the table." in rendered
     assert (tmp_path / "resources" / "S04-C0-R01.json").exists()
     assert not (tmp_path / "checkpoints" / "S04-C0-R01.json").exists()
     assert transcript["run"]["completed_rounds"] == 1

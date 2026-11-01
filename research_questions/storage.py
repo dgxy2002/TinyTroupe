@@ -83,8 +83,20 @@ def aggregate_resources(records: Sequence[Mapping]) -> dict[str, Any]:
     }
 
 
-def transcript_markdown(events: Sequence[Mapping], completed_rounds: int) -> str:
+def transcript_markdown(
+    events: Sequence[Mapping],
+    completed_rounds: int,
+    *,
+    opening_setting: str | None = None,
+    opening_trigger: str | None = None,
+) -> str:
     lines = ["# Public transcript", ""]
+    if opening_setting or opening_trigger:
+        lines.extend(["## Opening situation", ""])
+        if opening_setting:
+            lines.extend([str(opening_setting).strip(), ""])
+        if opening_trigger:
+            lines.extend([str(opening_trigger).strip(), ""])
     for round_number in range(1, completed_rounds + 1):
         lines.extend([f"## Round {round_number}", ""])
         public_events = [

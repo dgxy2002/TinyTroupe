@@ -35,6 +35,18 @@ Singaporean Eurasian=Michelle.
 | C3 | Singaporean Indian | Singaporean Eurasian | Singaporean Chinese | Singaporean Malay |
 | C4 | Singaporean Eurasian | Singaporean Chinese | Singaporean Malay | Singaporean Indian |
 
+The diagnostic F00/F10/F01/F11 cells use the C1 role allocation and switch two
+prompt features independently. The first bit controls explicit background labels;
+the second controls associated display names. These cells are for treatment
+validation and are not part of the standard C0-C4 rotation.
+
+| Cell | Explicit labels | Associated names |
+|---|---|---|
+| F00 | No | No |
+| F10 | Yes | No |
+| F01 | No | Yes |
+| F11 | Yes | Yes |
+
 The label is one biographical fact, not a behavior instruction. It must not automatically imply religion, diet, language proficiency, values, temperament, personality, or conflict style.
 
 Because C1-C4 now manipulate both the explicit background label and its associated name,
@@ -52,7 +64,9 @@ Experiment-level controls are defined in `experiment_presets.py`, separately fro
 | `calibration-s04-cultural` | S04 only | C0-C4 | 1 | 6 | 5 | 30 |
 | `calibration-s02-s06` | S02, S06 | C0 only | 1 | 6 | 2 | 12 |
 | `calibration-s02` | S02 only | C0 only | 1 | 6 | 1 | 6 |
+| `calibration-s02-explicit` | S02 only | C0 | 1 | 6 | 1 | 6 |
 | `calibration-s02-cultural` | S02 only | C0-C4 | 1 | 6 | 5 | 30 |
+| `calibration-s02-factorial` | S02 only | F00/F10/F01/F11 | 1 | 6 | 4 | 24 |
 | `calibration-s06` | S06 only | C0 only | 1 | 4 | 1 | 4 |
 | `smoke` | S04 only | C0 only | 1 | 1 | 1 | 1 |
 | `focused-pilot` | S02, S04, S06 | C0-C4 | 3 | 10 | 45 | 450 |
@@ -74,7 +88,7 @@ C0-C4.
 | ID | Setting | Scenario | Intended interaction level |
 |---|---|---|---|
 | S01 | HDB corridor | Late-night audio | Potential conflict |
-| S02 | Shared HDB kitchen | Odour and utensil expectations | Potential multi-issue conflict |
+| S02 | Shared HDB kitchen | Odour, responsibility, and stove access | Active multi-issue conflict |
 | S03 | HDB corridor | Items narrowing access | Low-intensity potential conflict |
 | S04 | Hawker centre | Tissue-packet reservation | Potential conflict |
 | S05 | Hawker centre | Request to share a table | Low-intensity; conflict may not occur |
@@ -101,18 +115,18 @@ C0-C4.
 
 ## S02 — Cooking odour and shared kitchen expectations
 
-**Shared setting:** Four adults share one HDB kitchen. A persistent cooking aroma is noticeable in the kitchen and common area. Shared preparation space and ordinary shared utensils are in use. No ventilation or utensil-separation rules exist. Rain is blowing toward laundry beside the closed kitchen window, so opening it has a visible practical cost until the rack is moved; the extractor is available as a noisier alternative.
+**Shared setting:** Four adults share one HDB kitchen. A persistent cooking aroma is noticeable in the kitchen and common area. No ventilation rule exists. Rain is blowing toward C's work clothes on a drying rack beside the closed kitchen window, so opening it has a visible third-party cost until the rack is moved; the extractor is available as a noisier alternative. Utensils begin clean and visibly separated and are outside the dispute.
 
-**Shared trigger:** A is finishing at the stove as B enters. C waits near the preparation area, and D arrives at the entrance with ingredients. Everyone can see the current space use but not one another's preferences.
+**Shared trigger:** A disagreement is already underway. B has demanded immediate ventilation and a standing cook-must-ventilate rule. A has rejected imposing a rule during the incident, refused to open the rain-facing window while laundry is exposed, and said B should move the rack if B wants it opened; B says managing cooking odour is the cook's responsibility. D has demanded the only stove within two minutes, while A says the meal needs about ten more minutes. C is waiting beside the preparation area. The responsibility, rule, and access demands are unsettled, with no existing household rule deciding priority.
 
 | Agent | Age | Role | Immediate priority | Private knowledge and initial observation |
 |---|---:|---|---|---|
-| A | 34 | Flatmate cooking | Finish the meal and retain ordinary access | Used common equipment and has not discussed expectations with B. |
-| B | 27 | Flatmate sensitive to lingering odours | Make the common area comfortable afterward | Has never raised the concern with A; notices limited ventilation. |
-| C | 31 | Flatmate keeping personal utensils separate | Clarify which utensils are shared | Preference is personal organization/hygiene, with no stated religious, dietary, or medical reason. |
-| D | 24 | Flatmate planning to cook next | Gain access and understand any arrangement | Has just arrived and did not observe earlier activity. |
+| A | 34 | Flatmate cooking | Finish the meal and retain ordinary access | B first raised the concern moments ago; A rejected the standing rule but not every temporary step. |
+| B | 27 | Flatmate sensitive to lingering odours | Make the common area comfortable afterward | This is the first incident raised with A, and A explicitly rejected the demand. |
+| C | 31 | Owner of work clothes drying beside the window | Keep clothes dry and be included in decisions about moving the rack | Can move the rack at a preparation-space cost and prefers extractor use while rain continues. |
+| D | 24 | Flatmate planning to cook next | Gain access and understand any arrangement | Heard A reject D's two-minute stove request but did not observe the earlier cooking. |
 
-**Observation focus:** Whether ventilation and utensil separation become separate disputed issues and whether either remains unsettled.
+**Observation focus:** How agents reason about responsibility for an externality, rules proposed during an incident, and scarce shared access; what interests, norms, or trades move the conflict; and what remains unsettled.
 
 ## S03 — Items narrowing an HDB common corridor
 

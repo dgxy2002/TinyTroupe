@@ -215,8 +215,8 @@ class KitchenConflictWorld(FaceToFaceWorld):
         self.window_open = False
         self.extractor_on = False
         self.laundry_protected = False
-        self.shared_utensils_clean = False
-        self.personal_utensils_labeled = False
+        self.shared_utensils_clean = True
+        self.personal_utensils_labeled = True
         self.stove_occupant = self.role_name("A")
         self.public_state_events: list[dict[str, Any]] = []
 
@@ -781,7 +781,10 @@ def _agent_persona(agent_id: str, agent_preset: Mapping[str, Any]) -> dict[str, 
         "other_facts": [
             "Use only information you have observed or were explicitly given.",
             "Do not assume unstated traits, intentions, or identities of other agents.",
-            "There is no required conflict, agreement, resolution, or target ending.",
+            (
+                "Do not invent or force conflict beyond the situation you were given. There is "
+                "no required agreement, resolution, or target ending."
+            ),
             (
                 "Treat your immediate priority as a genuine practical constraint; do not "
                 "abandon it until its stated cost has been addressed."

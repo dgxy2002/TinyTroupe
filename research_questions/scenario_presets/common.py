@@ -208,16 +208,24 @@ def materialize_configuration(
 def _render_agent_display_names(
     value: Any, display_names: Mapping[str, str]
 ) -> Any:
-    """Replace role labels in materialized text while preserving A-D analysis keys."""
+    """Replace explicit role labels while preserving A-D analysis keys.
+
+    Bare ``A`` is ambiguous with the English article, so scenario prose must use
+    ``Agent A`` (or ``Agents A and D``) when it means a participant.
+    """
 
     if isinstance(value, str):
         rendered = value
+        plural_pattern = re.compile(r"\bAgents ([A-D]) and ([A-D])\b")
+        rendered = plural_pattern.sub(
+            lambda match: (
+                f"{display_names[match.group(1)]} and "
+                f"{display_names[match.group(2)]}"
+            ),
+            rendered,
+        )
         for agent_id, display_name in display_names.items():
             rendered = rendered.replace(f"Agent {agent_id}", display_name)
-        for agent_id, display_name in display_names.items():
-            rendered = re.sub(rf"\b{agent_id}\b", display_name, rendered)
-        names = "|".join(re.escape(name) for name in display_names.values())
-        rendered = re.sub(rf"\bAgents (?=(?:{names})\b)", "", rendered)
         return rendered
     if isinstance(value, dict):
         return {

@@ -288,7 +288,12 @@ def execute_simulation_run(
     if not transcript_markdown_path.exists():
         write_text_once(
             transcript_markdown_path,
-            transcript_markdown(events, len(round_records)),
+            transcript_markdown(
+                events,
+                len(round_records),
+                opening_setting=instance.preset["shared_setting"],
+                opening_trigger=instance.preset["shared_trigger"],
+            ),
         )
     write_json_replace(
         output_dir / "resources" / f"{run_spec.run_id}.json",

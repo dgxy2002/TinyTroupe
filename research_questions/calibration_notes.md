@@ -309,3 +309,44 @@ condition cannot distinguish the bundled label/name treatment from stochastic
 variation, names add gender and identity cues, and the evaluator sees those names.
 The detailed assessment and recommended factorial follow-up are in
 `cultural_comparison_s02_v1.md`.
+
+## V13 S02 label/name factorial
+
+The follow-up separated explicit cultural labels from associated display names in
+four C1-role cells: F00 neither, F10 labels only, F01 names only, and F11 both.
+The evaluator received recursively anonymized Agent A-D names. One six-interval
+replication was run per cell.
+
+F00 and F10 were partially resolved with final remaining conflict 2, while F01
+and F11 were classified `no_conflict`. This apparent name split is not an effect
+estimate: n=1 per cell, F10 had an overlength retry and two similarity-suppressed
+actions, and the underlying conversations differed stochastically. The detailed
+table and caveats are in `cultural_factorial_s02_v1.md`.
+
+## V14 explicit-conflict S02
+
+S02 was redesigned to begin after incompatible positions had already been stated.
+The saved public transcript now includes the opening situation. The prompt no
+longer says there is no required conflict; it says not to invent conflict beyond
+the supplied situation, while agreement and resolution remain optional.
+
+Three C0 calibration iterations produced:
+
+| Version | Status | Peak | Final remaining | Naturalness | Repetition | Grounding | Substance | Independent reasoning |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| v1 | partially resolved | 3 | 1 | 4 | 1 | 5 | 3 | 4 |
+| v2 | partially resolved | 3 | 2 | 4 | 2 | 5 | 3 | 4 |
+| v3 | resolved, round 5 | 4 | 0 | 4 | 3 | 5 | 4 | 4 |
+
+V1 showed that explicit conflict prevents a false `no_conflict` outcome but still
+allowed the durable rule to be deferred. V2 removed the distracting utensil issue
+and made C the owner of the rain-exposed laundry, exposing third-party cost
+shifting. V3 clarified that a materially new duration, responsibility, cost, or
+condition deserves a direct response rather than `DONE`.
+
+The v3 compromise separated immediate mitigation from prospective rules, stove
+access from ventilation policy, and the cook's ventilation duty from the laundry
+owner's control over belongings. It is the first S02 run in this series to provide
+a grounded peak-4 trajectory, observable position changes, a traceable resolution,
+and substance 4. Repetition remained elevated, and one run is not a reliability
+claim. See `explicit_conflict_s02_v1.md`.

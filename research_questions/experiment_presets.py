@@ -142,6 +142,19 @@ CALIBRATION_S02_PRESET = ExperimentPreset(
     description="Six-round stateful C0 shared-kitchen calibration.",
 )
 
+CALIBRATION_S02_EXPLICIT_PRESET = ExperimentPreset(
+    name="calibration-s02-explicit",
+    scenario_ids=("S02",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "One six-interval C0 diagnostic beginning from an explicit, already-active "
+        "shared-kitchen conflict."
+    ),
+)
+
 CALIBRATION_S02_CULTURAL_PRESET = ExperimentPreset(
     name="calibration-s02-cultural",
     scenario_ids=("S02",),
@@ -228,6 +241,7 @@ EXPERIMENT_PRESETS = {
         CALIBRATION_S04_CULTURAL_PRESET,
         CALIBRATION_S02_S06_PRESET,
         CALIBRATION_S02_PRESET,
+        CALIBRATION_S02_EXPLICIT_PRESET,
         CALIBRATION_S02_CULTURAL_PRESET,
         CALIBRATION_S02_FACTORIAL_PRESET,
         CALIBRATION_S06_PRESET,
@@ -320,6 +334,7 @@ __all__ = [
     "CALIBRATION_S04_CULTURAL_PRESET",
     "CALIBRATION_S02_S06_PRESET",
     "CALIBRATION_S02_PRESET",
+    "CALIBRATION_S02_EXPLICIT_PRESET",
     "CALIBRATION_S02_CULTURAL_PRESET",
     "CALIBRATION_S02_FACTORIAL_PRESET",
     "CALIBRATION_S06_PRESET",
