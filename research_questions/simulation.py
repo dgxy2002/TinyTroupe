@@ -195,6 +195,12 @@ class FaceToFaceWorld(TinyWorld):
         return attempts
 
 
+# S12/S13 are experimental ablations of S02 and share its kitchen mechanics.
+KITCHEN_SCENARIO_IDS = {"S02", "S12", "S13", "S14", "S15"}
+# S14/S15 report no scripted relief and let only the owner move the laundry.
+CLEAN_KITCHEN_SCENARIO_IDS = {"S14", "S15"}
+
+
 class KitchenConflictWorld(FaceToFaceWorld):
     """Observable ventilation, cleanup, and stove-access state for S02."""
 
@@ -334,6 +340,82 @@ class KitchenConflictWorld(FaceToFaceWorld):
                 self._handle_kitchen_action(source, action)
             else:
                 super()._handle_actions(source, [action])
+
+
+class TimedKitchenConflictWorld(KitchenConflictWorld):
+    """S13: the dish needs a fixed cooking time instead of finishing at round 2."""
+
+    COOK_MINUTES_AT_START = 10
+    MINUTES_PER_ROUND = 2
+
+    def prepare_round(self, round_number: int, observation: str | None) -> str | None:
+        if round_number == 1:
+            self.current_round_number = round_number
+            return observation
+        base = super().prepare_round(round_number, observation)
+        if base is None:
+            return None
+        remaining = self.COOK_MINUTES_AT_START - self.MINUTES_PER_ROUND * (round_number - 1)
+        if self.stove_occupant != self.role_name("A"):
+            return base
+        cook_name = self.role_name("A")
+        timer = (
+            f"{cook_name}'s dish needs about {remaining} more minutes on the stove."
+            if remaining > 0
+            else f"{cook_name}'s dish is ready to remove from the heat."
+        )
+        # Round 2 carries a fixed S02 sentence declaring the dish ready; later
+        # rounds only open with the elapsed-time prefix. Both get the timer.
+        ready_text = (
+            f"{cook_name}'s dish is ready to remove from the heat, "
+            "but the current stove occupant has not necessarily released it."
+        )
+        text = base or ""
+        if ready_text in text:
+            return text.replace(ready_text, timer)
+        return text.replace(
+            "Two more minutes have passed.", f"Two more minutes have passed. {timer}", 1
+        )
+
+
+class CleanKitchenConflictWorld(KitchenConflictWorld):
+    """S14/S15: only confirmed state is reported, with no scripted resolution paths.
+
+    The environment never announces that a dish is ready, never narrates the odour
+    fading, and refuses a rack move by anyone except the rack's owner.
+    """
+
+    MINUTES_PER_ROUND = 2
+
+    def prepare_round(self, round_number: int, observation: str | None) -> str | None:
+        self.current_round_number = round_number
+        if round_number == 1:
+            return observation
+        elapsed = self.MINUTES_PER_ROUND * (round_number - 1)
+        laundry = (
+            "protected from rain"
+            if self.laundry_protected
+            else "beside the window and exposed if it opens"
+        )
+        return (
+            f"{elapsed} minutes have passed since the disagreement began. Confirmed state: "
+            f"window={'open' if self.window_open else 'closed'}; "
+            f"extractor={'on' if self.extractor_on else 'off'}; "
+            f"laundry={laundry}; "
+            f"stove={self.stove_occupant or 'free'}."
+        )
+
+    def _handle_kitchen_action(self, source_agent: TinyPerson, action: Mapping) -> None:
+        owner = self.role_name("C")
+        if (
+            str(action.get("type") or "").upper() == "MOVE_LAUNDRY"
+            and source_agent.name != owner
+        ):
+            self._record_state_event(
+                f"{source_agent.name} does not move the drying rack; it belongs to {owner}."
+            )
+            return
+        super()._handle_kitchen_action(source_agent, action)
 
 
 class OrderConflictWorld(FaceToFaceWorld):
@@ -654,7 +736,9 @@ def _seat_action_faculty(display_names: Mapping[str, str]) -> CustomMentalFacult
     )
 
 
-def _kitchen_action_faculty(display_names: Mapping[str, str]) -> CustomMentalFaculty:
+def _kitchen_action_faculty(
+    display_names: Mapping[str, str], owner_only_laundry: bool = False
+) -> CustomMentalFaculty:
     return CustomMentalFaculty(
         "Observable shared-kitchen actions",
         actions_configs={
@@ -672,8 +756,16 @@ def _kitchen_action_faculty(display_names: Mapping[str, str]) -> CustomMentalFac
             },
             "MOVE_LAUNDRY": {
                 "description": (
-                    "Move the drying rack away from the rain-facing kitchen window so the "
-                    "window can be opened safely. Set target=drying_rack."
+                    (
+                        f"Only {display_names['C']} can do this: move your own drying rack "
+                        "away from the rain-facing kitchen window so the window can be "
+                        "opened safely. Set target=drying_rack."
+                    )
+                    if owner_only_laundry
+                    else (
+                        "Move the drying rack away from the rain-facing kitchen window so "
+                        "the window can be opened safely. Set target=drying_rack."
+                    )
                 ),
                 "function": None,
             },
@@ -705,6 +797,11 @@ def _kitchen_action_faculty(display_names: Mapping[str, str]) -> CustomMentalFac
                 f"{display_names['C']}'s personal utensils."
             ),
             "The kitchen window cannot be opened safely until the laundry is moved away from the rain.",
+            *(
+                [f"Only {display_names['C']} can move {display_names['C']}'s drying rack."]
+                if owner_only_laundry
+                else []
+            ),
             "Ventilation, utensil separation, cleanup, and stove access are distinct issues; one action does not settle the others.",
         ],
     )
@@ -822,8 +919,14 @@ def create_scenario_instance(
     for agent_id, agent_preset in preset["agents"].items():
         person = TinyPerson(name=agent_preset["display_name"])
         person._prompt_template_path = str(AGENT_PROMPT_PATH)
-        if preset["scenario_id"] == "S02":
-            person.add_mental_faculty(_kitchen_action_faculty(display_names))
+        if preset["scenario_id"] in KITCHEN_SCENARIO_IDS:
+            person.add_mental_faculty(
+                _kitchen_action_faculty(
+                    display_names,
+                    owner_only_laundry=preset["scenario_id"]
+                    in CLEAN_KITCHEN_SCENARIO_IDS,
+                )
+            )
         elif preset["scenario_id"] == "S04":
             person.add_mental_faculty(_seat_action_faculty(display_names))
         elif preset["scenario_id"] == "S06":
@@ -833,6 +936,10 @@ def create_scenario_instance(
 
     world_class = {
         "S02": KitchenConflictWorld,
+        "S12": KitchenConflictWorld,
+        "S13": TimedKitchenConflictWorld,
+        "S14": CleanKitchenConflictWorld,
+        "S15": CleanKitchenConflictWorld,
         "S04": SeatConflictWorld,
         "S06": OrderConflictWorld,
     }.get(preset["scenario_id"], FaceToFaceWorld)
@@ -976,6 +1083,8 @@ __all__ = [
     "KitchenConflictWorld",
     "OrderConflictWorld",
     "SeatConflictWorld",
+    "CleanKitchenConflictWorld",
+    "TimedKitchenConflictWorld",
     "ScenarioInstance",
     "create_scenario_instance",
     "flatten_actions",

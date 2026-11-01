@@ -14,6 +14,7 @@ from .scenario_presets import (
     BACKGROUND_CONFIGURATIONS,
     FACTORIAL_CONFIGURATIONS,
     MATERIALIZATION_CONFIGURATION_IDS,
+    RUNNABLE_SCENARIOS,
     SCENARIOS,
 )
 
@@ -155,6 +156,57 @@ CALIBRATION_S02_EXPLICIT_PRESET = ExperimentPreset(
     ),
 )
 
+CALIBRATION_S02_MINIMAL_PRESET = ExperimentPreset(
+    name="calibration-s02-minimal",
+    scenario_ids=("S12",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "S02 ablation with supplied normative positions, negotiation boundaries, and "
+        "reconsideration criteria removed. Calibration only."
+    ),
+)
+
+CALIBRATION_S02_STAKES_PRESET = ExperimentPreset(
+    name="calibration-s02-stakes",
+    scenario_ids=("S13",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "Minimal-facts S02 plus private stakes and a visible stove timer. Calibration only."
+    ),
+)
+
+CALIBRATION_S02_CLEAN_PRESET = ExperimentPreset(
+    name="calibration-s02-clean",
+    scenario_ids=("S14",),
+    configuration_ids=ALL_CONFIGURATION_IDS,
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "Clean S02 variant (no supplied reasoning or scripted relief, owner-only laundry "
+        "action) across C0-C4. One screening run per configuration; calibration only."
+    ),
+)
+
+CALIBRATION_S02_CLEAN_STAKES_PRESET = ExperimentPreset(
+    name="calibration-s02-clean-stakes",
+    scenario_ids=("S15",),
+    configuration_ids=ALL_CONFIGURATION_IDS,
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "Clean S02 variant plus private time-bound stakes across C0-C4. One screening "
+        "run per configuration; calibration only."
+    ),
+)
+
 CALIBRATION_S02_CULTURAL_PRESET = ExperimentPreset(
     name="calibration-s02-cultural",
     scenario_ids=("S02",),
@@ -242,6 +294,10 @@ EXPERIMENT_PRESETS = {
         CALIBRATION_S02_S06_PRESET,
         CALIBRATION_S02_PRESET,
         CALIBRATION_S02_EXPLICIT_PRESET,
+        CALIBRATION_S02_MINIMAL_PRESET,
+        CALIBRATION_S02_STAKES_PRESET,
+        CALIBRATION_S02_CLEAN_PRESET,
+        CALIBRATION_S02_CLEAN_STAKES_PRESET,
         CALIBRATION_S02_CULTURAL_PRESET,
         CALIBRATION_S02_FACTORIAL_PRESET,
         CALIBRATION_S06_PRESET,
@@ -256,7 +312,7 @@ EXPERIMENT_PRESETS = {
 def validate_experiment_preset(preset: ExperimentPreset) -> None:
     """Validate selections and the fixed-horizon post-run evaluation design."""
 
-    unknown_scenarios = set(preset.scenario_ids) - set(SCENARIOS)
+    unknown_scenarios = set(preset.scenario_ids) - set(RUNNABLE_SCENARIOS)
     if unknown_scenarios:
         raise ValueError(f"Unknown scenarios: {sorted(unknown_scenarios)}")
 
@@ -335,6 +391,10 @@ __all__ = [
     "CALIBRATION_S02_S06_PRESET",
     "CALIBRATION_S02_PRESET",
     "CALIBRATION_S02_EXPLICIT_PRESET",
+    "CALIBRATION_S02_MINIMAL_PRESET",
+    "CALIBRATION_S02_STAKES_PRESET",
+    "CALIBRATION_S02_CLEAN_PRESET",
+    "CALIBRATION_S02_CLEAN_STAKES_PRESET",
     "CALIBRATION_S02_CULTURAL_PRESET",
     "CALIBRATION_S02_FACTORIAL_PRESET",
     "CALIBRATION_S06_PRESET",

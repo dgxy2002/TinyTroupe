@@ -32,7 +32,7 @@ from .experiment_presets import (
 from .scenario_presets import (
     BACKGROUND_CONFIGURATIONS,
     MATERIALIZATION_CONFIGURATION_IDS,
-    SCENARIOS,
+    RUNNABLE_SCENARIOS,
 )
 from .simulation import (
     AGENT_PROMPT_PATH,
@@ -187,7 +187,7 @@ def execute_simulation_run(
     config_manager.update("model", simulation_model)
     _reset_client_usage()
 
-    scenario = SCENARIOS[run_spec.scenario_id]
+    scenario = RUNNABLE_SCENARIOS[run_spec.scenario_id]
     instance = create_scenario_instance(scenario, run_spec.configuration_id)
     scenario_sha256 = _scenario_configuration_sha256(instance.preset)
     checkpoint_path = _checkpoint_path(output_dir, run_spec.run_id)
@@ -408,7 +408,7 @@ def _manifest(
     evaluator_max_completion_tokens: int,
 ) -> dict[str, Any]:
     scenario_hashes = {
-        scenario_id: _scenario_configuration_sha256(asdict(SCENARIOS[scenario_id]))
+        scenario_id: _scenario_configuration_sha256(asdict(RUNNABLE_SCENARIOS[scenario_id]))
         for scenario_id in preset.scenario_ids
     }
     return {
@@ -474,7 +474,7 @@ def _dry_run_payload(
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--preset", choices=tuple(EXPERIMENT_PRESETS), default="smoke")
-    parser.add_argument("--scenario", choices=tuple(SCENARIOS))
+    parser.add_argument("--scenario", choices=tuple(RUNNABLE_SCENARIOS))
     parser.add_argument("--configuration", choices=MATERIALIZATION_CONFIGURATION_IDS)
     parser.add_argument("--repetitions", type=int)
     parser.add_argument("--rounds", type=int)
