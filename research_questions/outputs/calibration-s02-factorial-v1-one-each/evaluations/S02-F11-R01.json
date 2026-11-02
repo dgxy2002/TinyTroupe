@@ -1,0 +1,103 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": false,
+    "conflict_topics": [],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agent B repeats the request for a ventilation rule multiple times (Rounds 1,2,3,4), creating modest repetition.",
+      "Practical actions are visible and grounded: A turns extractor on/off and washes utensils; B moves the drying rack.",
+      "Agent A uses conditional commitments (open window if laundry moved), which helps avoid conflict."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No substantive incompatible claims or demands were expressed. Potential tension points (window vs laundry, extractor use, utensil ownership) were addressed through cooperative actions and clarifying proposals before any conflict emerged.",
+    "final_status": "no_conflict",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: Initially kept extractor on while cooking, then briefly turned it off after smell faded, then explicitly committed to running the extractor (or opening the window if laundry is clear) when cooking (Rounds 1,4,5).",
+      "Agent B: Consistently advocated for a ventilation norm and took action (moved laundry) to enable window ventilation; position remained stable.",
+      "Agent C: Introduced a new, non-conflicting issue (utensil labeling) and agreed to label personal items (Rounds 5–6)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A states ongoing use of stove and offers extractor or window if laundry moved; Agent B supports extractor and requests a future ventilation agreement. No incompatible demands or unresolved opposition appear.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A frees the stove and reiterates laundry constraint for opening the window; Agent B moves the drying rack to allow window use and repeats the ventilation request. Actions taken remove the potential incompatibility about opening the window.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A washes shared utensils and keeps extractor on while smell fades; Agent B again requests a ventilation norm. Both parties act compatibly; no substantive disagreement arises.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A turns the extractor off after the smell fades and defers formal rule discussion; Agent B presses for a yes/no commitment but does not express an opposing demand. No incompatibility is enacted.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A affirms they will run extractor (and turns it on). Agent C raises a separate question about which utensils are personal vs shared. This is a request for clarification, not an expressed conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A proposes labeling/unclaimed items moved to shared pile; Agent C agrees to label and asks where to place labelled items. Parties are coordinating rather than opposing; no substantive incompatibility remains.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "There is a practical trade-off between ventilation (open window) and protecting laundry from rain; moving the drying rack removed this constraint.",
+      "Uncertainty about utensil ownership was resolved procedurally by proposing labeling and moving unclaimed items to a shared pile.",
+      "Explicit, small cooperative actions (moving laundry, turning extractor on/off, washing utensils) prevented escalation into a dispute."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-30T06:01:33.263680+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00464855,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2927,
+      "local_latency_ms": 17641.642,
+      "output_tokens": 2160,
+      "reasoning_tokens": 1152,
+      "successful_calls": 1,
+      "total_tokens": 5087
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "F11",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S02-F11-R01",
+    "scenario_id": "S02"
+  },
+  "schema_version": 2
+}

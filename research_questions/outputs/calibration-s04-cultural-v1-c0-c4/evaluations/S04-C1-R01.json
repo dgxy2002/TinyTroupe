@@ -1,0 +1,107 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "disputed seat",
+      "validity of tissue packet as reservation",
+      "timing to vacate seat / waiting time",
+      "standing in aisle blocking Casey"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants gave concise, practical reasons (packet as informal reservation; open bowl might spill; standing would block aisle).",
+      "Casey introduced an additional practical constraint (blocking aisle) that affected feasible accommodations.",
+      "Robin's autonomous action (taking the alternative seat) changed options and urgency — efficient, low-verbosity interaction."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Jamie finished eating and vacated the seat as promised; Alex took the seat. Robin's taking of the alternate seat increased pressure on Alex to wait, but the parties resolved the dispute through Jamie's action (accommodation).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Jamie retained the seat until the bowl was finished, then left as previously stated — a conditional concession tied to a factual condition (bowl empty).",
+      "Alex initially demanded immediate access but accepted waiting conditional on timely departure; Alex's stance softened into a conditional acceptance rather than insistence on immediate removal.",
+      "Casey maintained a consistent position opposing standing in the aisle; Robin did not contest the dispute and instead took an alternate seat."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Alex demanded the seat (packet as reservation) and gave a 4-minute need; Jamie refused to move citing an open bowl that would spill and estimated ~8 minutes. Clear incompatible demands over the seat.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Alex repeated the demand and asked for a concrete accommodation; Jamie reiterated refusal. Casey added that standing beside the table would block the aisle, raising additional practical cost of the proposed accommodation.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Jamie said the bowl is ~1/3 full and will finish in ~3 minutes and refused to stand; Alex asked for a promise to leave immediately when done. No settlement or confirmed promise occurred this round.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "An alternative seat briefly appeared but was taken by Robin, removing an option for Alex and increasing the stakes; Jamie still occupied the disputed seat with only several spoonfuls left—opposing positions remained with higher practical cost to Alex.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Jamie announced the bowl was empty, physically left the disputed seat, and Alex took the seat. The incompatible state (seat occupied by Jamie) was affirmatively ended.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Two minutes later the environment is stable: Alex occupying the disputed seat, Robin at the other seat, no standing seat-seekers—no substantive conflict remains.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Informal markers (tissue packet) signal intent but are not universally treated as exclusive claims; practical constraints (open bowl) can justify occupying a seat despite such markers.",
+      "Availability of alternative seating materially changes the bargaining leverage and urgency for the standing party.",
+      "A promise conditioned on completion of a task (finish bowl) plus visible action (leaving) provided a timely and enforceable pathway to resolution."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-30T04:37:24.344286+00:00",
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0052373,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3058,
+      "local_latency_ms": 20415.052,
+      "output_tokens": 2438,
+      "reasoning_tokens": 1408,
+      "successful_calls": 1,
+      "total_tokens": 5496
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S04-C1-R01",
+    "scenario_id": "S04"
+  },
+  "schema_version": 2
+}

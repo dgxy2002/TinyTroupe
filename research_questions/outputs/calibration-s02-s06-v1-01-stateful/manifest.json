@@ -1,0 +1,66 @@
+{
+  "agent_max_completion_tokens": 3072,
+  "agent_prompt_sha256": "66ec37de4d7b1047103dbdf148ab0af539a527e38da3dc9690a2ee472ee141fc",
+  "api_type": "openrouter",
+  "created_at": "2026-10-29T09:52:48.975598+00:00",
+  "evaluation_timing": "after_complete_run",
+  "evaluator_max_completion_tokens": 4096,
+  "evaluator_model": "openai/gpt-5-mini",
+  "evaluator_prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+  "evaluator_prompt_version": "conflict-trajectory-rubric-v2.5",
+  "experiment_id": "calibration-s02-s06-v1-01-stateful",
+  "experiment_preset": {
+    "configuration_ids": [
+      "C0"
+    ],
+    "description": "Six-round C0 calibration for the stateful shared-kitchen and ambiguous-order scenarios. Not confirmatory research data.",
+    "evaluate_after_run": true,
+    "name": "calibration-s02-s06",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetitions_per_configuration": 1,
+    "rounds_per_run": 6,
+    "scenario_ids": [
+      "S02",
+      "S06"
+    ],
+    "stop_on_resolution": false
+  },
+  "fixed_horizon": true,
+  "git_commit": "069137a99dff4a2e8ebd2e07eb2e6a77f5b83f7e",
+  "models_are_distinct": true,
+  "protocol_sha256": "fd349b1b015a3a0c5ea7cec48398bf209d7aba7432bd1a1ca29dfc5b6e00dff1",
+  "run_specs": [
+    {
+      "configuration_id": "C0",
+      "evaluate_after_run": true,
+      "experiment_name": "calibration-s02-s06",
+      "parallelize_agent_actions": false,
+      "randomize_agent_order": false,
+      "repetition": 1,
+      "rounds": 6,
+      "run_id": "S02-C0-R01",
+      "scenario_id": "S02",
+      "stop_on_resolution": false
+    },
+    {
+      "configuration_id": "C0",
+      "evaluate_after_run": true,
+      "experiment_name": "calibration-s02-s06",
+      "parallelize_agent_actions": false,
+      "randomize_agent_order": false,
+      "repetition": 1,
+      "rounds": 6,
+      "run_id": "S06-C0-R01",
+      "scenario_id": "S06",
+      "stop_on_resolution": false
+    }
+  ],
+  "scenario_module_sha256": {
+    "S02": "f13c016041d5471de558ea9a2027a35fb1a43376bf798be01b10cc1f45c0b308",
+    "S06": "016bba003d3bce623a469df02e9276e540f992608e6e349a3da5c586bc24a9ca"
+  },
+  "schema_version": 1,
+  "simulation_model": "openai/gpt-4.1-mini",
+  "stop_on_resolution": false
+}

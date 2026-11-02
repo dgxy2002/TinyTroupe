@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility (who runs extractor / opens window)",
+      "moving other people's laundry (who must move drying rack)",
+      "stove access timing"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agent B repeatedly restated the same proposed rule across multiple turns (Turns 2, 4, 9, 11).",
+      "Agents used concrete, actionable requests (e.g., 'ask me before moving it; I can move it once'), which grounded the negotiation.",
+      "No role confusion; public environment updates consistently tracked extractor, window, laundry, and stove state."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Participants agreed that cooks run the extractor while cooking and for 15 minutes after and open the window if weather allows; owners should be asked to move laundry and Agent C had already agreed to move the rack once when asked. These mutual concessions resolved the incompatible demands.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A initially refused a rule that would force cooks to move others' laundry but still proposed a mutual ventilation rule (Round 1). By Round 5 Agent A accepted the extractor/window rule with the condition that owners must be asked to move laundry.",
+      "Agent C moved from an implicit constraint (don't open window while my rack is there) to an explicit, limited concession: they can move the rack once if asked (Round 3).",
+      "Agent D accepted the ventilation rule with the practical caveat that they will ask Agent C to move the rack when needed (Round 4).",
+      "Agent B consistently advocated the proposed rule and did not change position, but ultimately got consensus."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent B demanded immediate ventilation and a standing rule (Turn 2). Agent A refused a rule that would force cooks to move others' laundry and insisted the window stay closed because of Agent C's drying rack, while turning the extractor on (Turn 1). Substantive dispute about who must move laundry and the ventilation rule remained unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A freed the stove and reiterated that the window stays closed because of the laundry (Turn 3). Agent B repeated the proposed rule that cooks run the extractor and open the window if weather allows (Turn 4). The central incompatibility (who must move laundry / whether the window may be opened) remained unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C demanded the window not be opened while their rack is there but said to ask before moving it and that they can move it once (Turn 6). Agent D said they'd ask Agent C to move the rack if they need the window (Turn 7) and then took the stove. The practical stove-access and an instance of moving the rack were negotiated, reducing but not eliminating the broader rule disagreement.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B repeated the proposed rule (Turn 9). Agent D accepted running the extractor and the post-cooking 15 minutes and said the window is fine 'if weather allows' but only if laundry isn't blocking it and that they will ask Agent C to move the rack if needed (Turn 10). Most practical objections were addressed, leaving only a minor remaining disagreement about general responsibility phrasing and earlier refusals.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B said the rule works for them (Turn 11). Agent A accepted the rule as well, with the explicit condition that they will not move someone else's laundry and that owners should be asked to move it when needed (Turn 13). With Agent C's earlier willingness to move the rack once when asked, the substantive disputes about ventilation responsibility and moving laundry were settled.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No new claims; public update shows extractor on, window closed, laundry in place, stove with Agent D. Previous round produced agreement; no substantive conflict reappeared.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "A practical compromise (owner moves laundry when asked) resolved the tension between cooks' need for ventilation and owners' interest in protecting laundry from rain.",
+      "Repeated, simple formulation of a rule by Agent B helped converge positions despite initial resistance.",
+      "Commitments tied to observable actions (Agent C offering to move the rack once; Agent A physically turning on extractor and later freeing stove) made settlement possible."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-01T11:58:16.833364+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0070178,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3044,
+      "local_latency_ms": 31892.992,
+      "output_tokens": 3330,
+      "reasoning_tokens": 2048,
+      "successful_calls": 1,
+      "total_tokens": 6374
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S02-C0-R01",
+    "scenario_id": "S02"
+  },
+  "schema_version": 2
+}

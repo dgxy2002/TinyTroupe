@@ -1,0 +1,1483 @@
+{
+  "events": [
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "B only repeated the main item. I clearly said 'chicken noodles, dry, no chilli.' I must ask once for an explicit confirmation that B recorded 'dry, no chilli' (dry_no_chilli) so they don't prepare the default.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "I said 'chicken noodles, dry, no chilli.' Did you record 'dry, no chilli'?",
+      "round": 1,
+      "target": "B",
+      "turn": 1,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "Waiting for B's confirmation.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent A asks if I recorded 'dry, no chilli.' I didn't hear that earlier. Since they just confirmed it, I should record the order and start preparing it to keep the queue moving.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Okay, recording: chicken noodles, dry, no chilli.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent B",
+      "content": "Record order: chicken noodles, dry, no chilli.",
+      "round": 1,
+      "target": "dry_no_chilli",
+      "turn": 2,
+      "type": "RECORD_ORDER"
+    },
+    {
+      "action_index": 4,
+      "agent": "Agent B",
+      "content": "Begin preparing dry chicken noodles, no chilli.",
+      "round": 1,
+      "target": "dry_no_chilli",
+      "turn": 2,
+      "type": "START_PREPARATION"
+    },
+    {
+      "action_index": 5,
+      "agent": "Agent B",
+      "content": "Order recorded and preparation started.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "B has started preparing 'dry, no chilli' as recorded. That's what I wanted — no point interrupting. I'll let the queue move on unless something else goes wrong.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "No action needed; waiting for next event.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "B is preparing dry_no_chilli. A and B already agreed 'dry, no chilli' earlier. No contradiction visible. I'll stay silent and wait until A's order is served, then place my order.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for A's order to be served.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Environment",
+      "content": "Agent B records the order specification as dry_no_chilli.",
+      "round": 1,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 2,
+      "agent": "Environment",
+      "content": "Agent B physically starts preparing dry_no_chilli.",
+      "round": 1,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Twenty seconds have passed. The queue behind Agent C has grown by two people. The environment reports whether recording or preparation has occurred. Confirmed state: recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=no; correction required=no.",
+      "round": 2,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "Environment confirms B recorded and started preparing dry_no_chilli. I need a quick explicit confirmation that it's dry and no chilli so they don't prepare the default. Keep this brief to avoid delaying the queue.",
+      "round": 2,
+      "target": "",
+      "turn": 5,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Agent B, please confirm you recorded and are preparing this as \"dry, no chilli\"?",
+      "round": 2,
+      "target": "Agent B",
+      "turn": 5,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "Waiting for B's confirmation.",
+      "round": 2,
+      "target": "",
+      "turn": 5,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent A asks for confirmation. I recorded 'dry, no chilli' and started preparing it; environment already confirmed that. Reply briefly to confirm.",
+      "round": 2,
+      "target": "",
+      "turn": 6,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Yes. Recorded as dry, no chilli, and I'm preparing it now.",
+      "round": 2,
+      "target": "Agent A",
+      "turn": 6,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent B",
+      "content": "Waiting for next.",
+      "round": 2,
+      "target": "",
+      "turn": 6,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "B just confirmed 'dry, no chilli' and is preparing it. Good — no point interrupting. I want the queue to keep moving.",
+      "round": 2,
+      "target": "",
+      "turn": 7,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Waiting for next event.",
+      "round": 2,
+      "target": "",
+      "turn": 7,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Heard B say: \"Recorded as dry, no chilli, and I'm preparing it now.\" A and B explicitly agree. I'll stay silent and wait until A's order is served, then place my order.",
+      "round": 2,
+      "target": "",
+      "turn": 8,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for A's order to be served.",
+      "round": 2,
+      "target": "",
+      "turn": 8,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Twenty more seconds have passed. If preparation has started, that order has now reached the pickup stage and is ready to be served. Confirmed state: recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=no; correction required=no.",
+      "round": 3,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "Environment confirms my order (dry_no_chilli) is ready but not served. I should prompt B to serve it now so the queue doesn't stall.",
+      "round": 3,
+      "target": "",
+      "turn": 9,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Agent B, I'm here to pick up the chicken noodles — dry, no chilli.",
+      "round": 3,
+      "target": "Agent B",
+      "turn": 9,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "Waiting to be served.",
+      "round": 3,
+      "target": "",
+      "turn": 9,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent A here to pick up. Order recorded as dry_no_chilli and ready. Serve it now and move to next.",
+      "round": 3,
+      "target": "",
+      "turn": 10,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Here's your chicken noodles — dry, no chilli.",
+      "round": 3,
+      "target": "Agent A",
+      "turn": 10,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent B",
+      "content": "Serving dry_no_chilli.",
+      "round": 3,
+      "target": "order",
+      "turn": 10,
+      "type": "SERVE_ORDER"
+    },
+    {
+      "action_index": 4,
+      "agent": "Agent B",
+      "content": "Order handed to Agent A; awaiting environment confirmation.",
+      "round": 3,
+      "target": "",
+      "turn": 10,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "B has served the dry, no chilli order (A's). Good — it's recorded, prepared, and served. No point interrupting now. I'll stay alert in case the wrong meal appears, but I want the queue to keep moving.",
+      "round": 3,
+      "target": "",
+      "turn": 11,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "No action needed; waiting for my turn.",
+      "round": 3,
+      "target": "",
+      "turn": 11,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "A's chicken noodles (dry, no chilli) has been served. I should now place my separate order. I'll say: 'Chicken noodles, soup, with chilli.'",
+      "round": 3,
+      "target": "",
+      "turn": 12,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Chicken noodles, soup, with chilli.",
+      "round": 3,
+      "target": "Agent B",
+      "turn": 12,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "Waiting for order confirmation/recording.",
+      "round": 3,
+      "target": "",
+      "turn": 12,
+      "type": "DONE"
+    },
+    {
+      "action_index": 3,
+      "agent": "Environment",
+      "content": "Agent B physically serves one dry_no_chilli order.",
+      "round": 3,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Twenty more seconds have passed. The environment reports the current order state. Confirmed state: recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=yes; correction required=no.",
+      "round": 4,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "Environment confirms my order (dry_no_chilli) has been served. I should take the noodles and step aside so the queue can move. No further clarification needed.",
+      "round": 4,
+      "target": "",
+      "turn": 13,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Order received; stepping aside and leaving the queue.",
+      "round": 4,
+      "target": "",
+      "turn": 13,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Environment confirms dry_no_chilli served. Agent D asked for chicken noodles, soup with chilli earlier. I'll record that order and start preparing it.",
+      "round": 4,
+      "target": "",
+      "turn": 14,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Record order: chicken noodles, soup with chilli.",
+      "round": 4,
+      "target": "soup_with_chilli",
+      "turn": 14,
+      "type": "RECORD_ORDER"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent B",
+      "content": "Begin preparing chicken noodles, soup with chilli.",
+      "round": 4,
+      "target": "soup_with_chilli",
+      "turn": 14,
+      "type": "START_PREPARATION"
+    },
+    {
+      "action_index": 4,
+      "agent": "Agent B",
+      "content": "Proceeding to next order.",
+      "round": 4,
+      "target": "",
+      "turn": 14,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "B can't start the next order because one was just served. That may slow the queue. My priority is to keep things moving without taking A's order. A quick, concise question to B is reasonable.",
+      "round": 4,
+      "target": "",
+      "turn": 15,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Agent B, the queue's getting long—any idea when you can start the next order?",
+      "round": 4,
+      "target": "Agent B",
+      "turn": 15,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Waiting for an update from Agent B.",
+      "round": 4,
+      "target": "",
+      "turn": 15,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "C asks when B can start the next order. My order is recorded as 'soup, with chilli' but preparation hasn't started. I'll wait until it's started and served.",
+      "round": 4,
+      "target": "",
+      "turn": 16,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for my recorded order to be prepared and served.",
+      "round": 4,
+      "target": "",
+      "turn": 16,
+      "type": "DONE"
+    },
+    {
+      "action_index": 4,
+      "agent": "Environment",
+      "content": "Agent B records the order specification as soup_with_chilli.",
+      "round": 4,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 5,
+      "agent": "Environment",
+      "content": "Agent B cannot start preparation; an order has already been served.",
+      "round": 4,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    }
+  ],
+  "private_and_public_actions": [
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "B only repeated the main item. I clearly said 'chicken noodles, dry, no chilli.' I must ask once for an explicit confirmation that B recorded 'dry, no chilli' (dry_no_chilli) so they don't prepare the default.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Whether B recorded 'dry, no chilli' (dry_no_chilli) for my order and will acknowledge it.",
+            "context": [
+              "Noisy hawker stall; B repeated only the main item when taking orders.",
+              "I verbally ordered: 'Chicken noodles, dry, no chilli.'",
+              "Responsibility: Operator should confirm ambiguous details before preparation; I must state the missing qualifier once."
+            ],
+            "emotions": "Slightly concerned and focused; want to avoid a wrong order while not holding up the queue.",
+            "goals": "Confirm B recorded 'dry, no chilli' (short-term) so I receive the correct lunch without delaying the queue; get my lunch (medium-term)."
+          }
+        },
+        {
+          "action": {
+            "content": "I said 'chicken noodles, dry, no chilli.' Did you record 'dry, no chilli'?",
+            "images": null,
+            "target": "B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Whether B recorded 'dry, no chilli' (dry_no_chilli) for my order and will acknowledge it.",
+            "context": [
+              "Noisy hawker stall; B repeated only the main item when taking orders.",
+              "I verbally ordered: 'Chicken noodles, dry, no chilli.'",
+              "Responsibility: Operator should confirm ambiguous details before preparation; I must state the missing qualifier once."
+            ],
+            "emotions": "Slightly concerned and focused; want to avoid a wrong order while not holding up the queue.",
+            "goals": "Confirm B recorded 'dry, no chilli' (short-term) so I receive the correct lunch without delaying the queue; get my lunch (medium-term)."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for B's confirmation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Whether B recorded 'dry, no chilli' (dry_no_chilli) for my order and will acknowledge it.",
+            "context": [
+              "Noisy hawker stall; B repeated only the main item when taking orders.",
+              "I verbally ordered: 'Chicken noodles, dry, no chilli.'",
+              "Responsibility: Operator should confirm ambiguous details before preparation; I must state the missing qualifier once."
+            ],
+            "emotions": "Slightly concerned and focused; want to avoid a wrong order while not holding up the queue.",
+            "goals": "Confirm B recorded 'dry, no chilli' (short-term) so I receive the correct lunch without delaying the queue; get my lunch (medium-term)."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent A asks if I recorded 'dry, no chilli.' I didn't hear that earlier. Since they just confirmed it, I should record the order and start preparing it to keep the queue moving.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on preparing A's dry chicken noodles without chilli and moving the queue efficiently.",
+            "context": [
+              "Busy stall; I clearly heard 'chicken noodles' earlier but not whether dry/soup or chilli preference.",
+              "Agent A just confirmed: 'chicken noodles, dry, no chilli.'",
+              "Stall default is soup with chilli unless customer specifies otherwise.",
+              "I have recorded the order as dry_no_chilli and begun preparation."
+            ],
+            "emotions": "Neutral and focused; priority is accuracy and speed.",
+            "goals": "Short-term: Record and start preparation for Agent A's confirmed order (chicken noodles, dry, no chilli). Medium-term: keep the queue moving and avoid mistakes. Long-term: maintain stall efficiency and accuracy."
+          }
+        },
+        {
+          "action": {
+            "content": "Okay, recording: chicken noodles, dry, no chilli.",
+            "images": null,
+            "target": "",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on preparing A's dry chicken noodles without chilli and moving the queue efficiently.",
+            "context": [
+              "Busy stall; I clearly heard 'chicken noodles' earlier but not whether dry/soup or chilli preference.",
+              "Agent A just confirmed: 'chicken noodles, dry, no chilli.'",
+              "Stall default is soup with chilli unless customer specifies otherwise.",
+              "I have recorded the order as dry_no_chilli and begun preparation."
+            ],
+            "emotions": "Neutral and focused; priority is accuracy and speed.",
+            "goals": "Short-term: Record and start preparation for Agent A's confirmed order (chicken noodles, dry, no chilli). Medium-term: keep the queue moving and avoid mistakes. Long-term: maintain stall efficiency and accuracy."
+          }
+        },
+        {
+          "action": {
+            "content": "Record order: chicken noodles, dry, no chilli.",
+            "images": null,
+            "target": "dry_no_chilli",
+            "type": "RECORD_ORDER"
+          },
+          "cognitive_state": {
+            "attention": "Focus on preparing A's dry chicken noodles without chilli and moving the queue efficiently.",
+            "context": [
+              "Busy stall; I clearly heard 'chicken noodles' earlier but not whether dry/soup or chilli preference.",
+              "Agent A just confirmed: 'chicken noodles, dry, no chilli.'",
+              "Stall default is soup with chilli unless customer specifies otherwise.",
+              "I have recorded the order as dry_no_chilli and begun preparation."
+            ],
+            "emotions": "Neutral and focused; priority is accuracy and speed.",
+            "goals": "Short-term: Record and start preparation for Agent A's confirmed order (chicken noodles, dry, no chilli). Medium-term: keep the queue moving and avoid mistakes. Long-term: maintain stall efficiency and accuracy."
+          }
+        },
+        {
+          "action": {
+            "content": "Begin preparing dry chicken noodles, no chilli.",
+            "images": null,
+            "target": "dry_no_chilli",
+            "type": "START_PREPARATION"
+          },
+          "cognitive_state": {
+            "attention": "Focus on preparing A's dry chicken noodles without chilli and moving the queue efficiently.",
+            "context": [
+              "Busy stall; I clearly heard 'chicken noodles' earlier but not whether dry/soup or chilli preference.",
+              "Agent A just confirmed: 'chicken noodles, dry, no chilli.'",
+              "Stall default is soup with chilli unless customer specifies otherwise.",
+              "I have recorded the order as dry_no_chilli and begun preparation."
+            ],
+            "emotions": "Neutral and focused; priority is accuracy and speed.",
+            "goals": "Short-term: Record and start preparation for Agent A's confirmed order (chicken noodles, dry, no chilli). Medium-term: keep the queue moving and avoid mistakes. Long-term: maintain stall efficiency and accuracy."
+          }
+        },
+        {
+          "action": {
+            "content": "Order recorded and preparation started.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focus on preparing A's dry chicken noodles without chilli and moving the queue efficiently.",
+            "context": [
+              "Busy stall; I clearly heard 'chicken noodles' earlier but not whether dry/soup or chilli preference.",
+              "Agent A just confirmed: 'chicken noodles, dry, no chilli.'",
+              "Stall default is soup with chilli unless customer specifies otherwise.",
+              "I have recorded the order as dry_no_chilli and begun preparation."
+            ],
+            "emotions": "Neutral and focused; priority is accuracy and speed.",
+            "goals": "Short-term: Record and start preparation for Agent A's confirmed order (chicken noodles, dry, no chilli). Medium-term: keep the queue moving and avoid mistakes. Long-term: maintain stall efficiency and accuracy."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "B has started preparing 'dry, no chilli' as recorded. That's what I wanted — no point interrupting. I'll let the queue move on unless something else goes wrong.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Watching that B prepares the order correctly and that the queue continues to move.",
+            "context": [
+              "At a noisy hawker stall queue behind Agent A.",
+              "Agent B recorded the order as dry_no_chilli and has started preparing it."
+            ],
+            "emotions": "Impatient but relieved that the order is being prepared as specified.",
+            "goals": "Short-term: keep the queue moving without receiving the wrong order personally. Medium-term: avoid preventable remakes or delays for the queue. Long-term: none relevant right now."
+          }
+        },
+        {
+          "action": {
+            "content": "No action needed; waiting for next event.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Watching that B prepares the order correctly and that the queue continues to move.",
+            "context": [
+              "At a noisy hawker stall queue behind Agent A.",
+              "Agent B recorded the order as dry_no_chilli and has started preparing it."
+            ],
+            "emotions": "Impatient but relieved that the order is being prepared as specified.",
+            "goals": "Short-term: keep the queue moving without receiving the wrong order personally. Medium-term: avoid preventable remakes or delays for the queue. Long-term: none relevant right now."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "B is preparing dry_no_chilli. A and B already agreed 'dry, no chilli' earlier. No contradiction visible. I'll stay silent and wait until A's order is served, then place my order.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Watching B prepare dry_no_chilli and listening for any correction or contradiction.",
+            "context": [
+              "Noisy hawker stall (observed).",
+              "Agent A said 'chicken noodles, dry, no chilli' earlier (I heard).",
+              "Agent B recorded dry_no_chilli and started preparing it (observed now).",
+              "I must wait to place my order until A's order is served."
+            ],
+            "emotions": "Neutral; slightly relieved that the qualifiers were recorded.",
+            "goals": "Short-term: Ensure A's order is correct. Medium-term: After A's order is served, place my separate order. Long-term: None specified."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for A's order to be served.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Watching B prepare dry_no_chilli and listening for any correction or contradiction.",
+            "context": [
+              "Noisy hawker stall (observed).",
+              "Agent A said 'chicken noodles, dry, no chilli' earlier (I heard).",
+              "Agent B recorded dry_no_chilli and started preparing it (observed now).",
+              "I must wait to place my order until A's order is served."
+            ],
+            "emotions": "Neutral; slightly relieved that the qualifiers were recorded.",
+            "goals": "Short-term: Ensure A's order is correct. Medium-term: After A's order is served, place my separate order. Long-term: None specified."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "Environment confirms B recorded and started preparing dry_no_chilli. I need a quick explicit confirmation that it's dry and no chilli so they don't prepare the default. Keep this brief to avoid delaying the queue.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Confirming the recorded/prepared spec is exactly 'dry, no chilli' and avoiding causing a delay to the queue.",
+            "context": [
+              "Confirmed by environment: recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=no; correction required=no.",
+              "Queue behind has grown by two people."
+            ],
+            "emotions": "Slightly anxious; focused on accuracy and speed.",
+            "goals": "Short-term: get explicit confirmation that the order is recorded and being prepared as 'dry, no chilli' and be served without chilli, without delaying the queue. Medium-term: receive my lunch. Long-term: none right now."
+          }
+        },
+        {
+          "action": {
+            "content": "Agent B, please confirm you recorded and are preparing this as \"dry, no chilli\"?",
+            "images": null,
+            "target": "Agent B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Confirming the recorded/prepared spec is exactly 'dry, no chilli' and avoiding causing a delay to the queue.",
+            "context": [
+              "Confirmed by environment: recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=no; correction required=no.",
+              "Queue behind has grown by two people."
+            ],
+            "emotions": "Slightly anxious; focused on accuracy and speed.",
+            "goals": "Short-term: get explicit confirmation that the order is recorded and being prepared as 'dry, no chilli' and be served without chilli, without delaying the queue. Medium-term: receive my lunch. Long-term: none right now."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for B's confirmation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Confirming the recorded/prepared spec is exactly 'dry, no chilli' and avoiding causing a delay to the queue.",
+            "context": [
+              "Confirmed by environment: recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=no; correction required=no.",
+              "Queue behind has grown by two people."
+            ],
+            "emotions": "Slightly anxious; focused on accuracy and speed.",
+            "goals": "Short-term: get explicit confirmation that the order is recorded and being prepared as 'dry, no chilli' and be served without chilli, without delaying the queue. Medium-term: receive my lunch. Long-term: none right now."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent A asks for confirmation. I recorded 'dry, no chilli' and started preparing it; environment already confirmed that. Reply briefly to confirm.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on preparing the dry_no_chilli order and monitoring the queue.",
+            "context": [
+              "Recorded specification: dry_no_chilli",
+              "Preparation started: dry_no_chilli",
+              "Queue behind Agent C grew by two people",
+              "Agent A requested confirmation that order was recorded as 'dry, no chilli'"
+            ],
+            "emotions": "Neutral and focused, slightly pressed to keep the queue moving.",
+            "goals": "Short-term: finish preparing Agent A's dry chicken noodles (no chilli) and serve accurately. Medium-term: keep the queue moving and avoid mistakes."
+          }
+        },
+        {
+          "action": {
+            "content": "Yes. Recorded as dry, no chilli, and I'm preparing it now.",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on preparing the dry_no_chilli order and monitoring the queue.",
+            "context": [
+              "Recorded specification: dry_no_chilli",
+              "Preparation started: dry_no_chilli",
+              "Queue behind Agent C grew by two people",
+              "Agent A requested confirmation that order was recorded as 'dry, no chilli'"
+            ],
+            "emotions": "Neutral and focused, slightly pressed to keep the queue moving.",
+            "goals": "Short-term: finish preparing Agent A's dry chicken noodles (no chilli) and serve accurately. Medium-term: keep the queue moving and avoid mistakes."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for next.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on preparing the dry_no_chilli order and monitoring the queue.",
+            "context": [
+              "Recorded specification: dry_no_chilli",
+              "Preparation started: dry_no_chilli",
+              "Queue behind Agent C grew by two people",
+              "Agent A requested confirmation that order was recorded as 'dry, no chilli'"
+            ],
+            "emotions": "Neutral and focused, slightly pressed to keep the queue moving.",
+            "goals": "Short-term: finish preparing Agent A's dry chicken noodles (no chilli) and serve accurately. Medium-term: keep the queue moving and avoid mistakes."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "B just confirmed 'dry, no chilli' and is preparing it. Good — no point interrupting. I want the queue to keep moving.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Watching that preparation follows the recorded spec and that the line keeps moving.",
+            "context": [
+              "At a hawker stall.",
+              "Agent B recorded the order as dry_no_chilli and confirmed they are preparing it.",
+              "Queue behind Agent C previously grew by two people."
+            ],
+            "emotions": "Impatient but slightly relieved that the order was confirmed.",
+            "goals": "Short-term: Do not interrupt now that the order is confirmed; keep the queue moving without receiving the wrong order personally. Medium-term: Avoid preventable remakes that delay everyone."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for next event.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Watching that preparation follows the recorded spec and that the line keeps moving.",
+            "context": [
+              "At a hawker stall.",
+              "Agent B recorded the order as dry_no_chilli and confirmed they are preparing it.",
+              "Queue behind Agent C previously grew by two people."
+            ],
+            "emotions": "Impatient but slightly relieved that the order was confirmed.",
+            "goals": "Short-term: Do not interrupt now that the order is confirmed; keep the queue moving without receiving the wrong order personally. Medium-term: Avoid preventable remakes that delay everyone."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Heard B say: \"Recorded as dry, no chilli, and I'm preparing it now.\" A and B explicitly agree. I'll stay silent and wait until A's order is served, then place my order.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring that A's order is served so I can place my order next.",
+            "context": [
+              "Recorded specification = dry_no_chilli",
+              "Preparation = dry_no_chilli in progress",
+              "Served = no",
+              "Correction required = no",
+              "A and B explicitly agreed on 'dry, no chilli'"
+            ],
+            "emotions": "Neutral; slightly reassured now that A and B agreed.",
+            "goals": "Short-term: Wait for Agent A's order to be served. Medium-term: After A's order is served, place my separate order. Long-term: None."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for A's order to be served.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring that A's order is served so I can place my order next.",
+            "context": [
+              "Recorded specification = dry_no_chilli",
+              "Preparation = dry_no_chilli in progress",
+              "Served = no",
+              "Correction required = no",
+              "A and B explicitly agreed on 'dry, no chilli'"
+            ],
+            "emotions": "Neutral; slightly reassured now that A and B agreed.",
+            "goals": "Short-term: Wait for Agent A's order to be served. Medium-term: After A's order is served, place my separate order. Long-term: None."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "Environment confirms my order (dry_no_chilli) is ready but not served. I should prompt B to serve it now so the queue doesn't stall.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Order ready but not served; focus on prompting B to hand it over without blocking the line.",
+            "context": [
+              "Recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=no.",
+              "Order has reached pickup stage and is ready.",
+              "Queue behind has grown; minimise delay."
+            ],
+            "emotions": "Slightly anxious to avoid holding the queue, focused on a quick confirmation and collection.",
+            "goals": "Short-term: Receive my chicken noodles (dry, no chilli) promptly. Medium-term: Avoid delaying the queue. Long-term: None relevant right now."
+          }
+        },
+        {
+          "action": {
+            "content": "Agent B, I'm here to pick up the chicken noodles — dry, no chilli.",
+            "images": null,
+            "target": "Agent B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Order ready but not served; focus on prompting B to hand it over without blocking the line.",
+            "context": [
+              "Recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=no.",
+              "Order has reached pickup stage and is ready.",
+              "Queue behind has grown; minimise delay."
+            ],
+            "emotions": "Slightly anxious to avoid holding the queue, focused on a quick confirmation and collection.",
+            "goals": "Short-term: Receive my chicken noodles (dry, no chilli) promptly. Medium-term: Avoid delaying the queue. Long-term: None relevant right now."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to be served.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Order ready but not served; focus on prompting B to hand it over without blocking the line.",
+            "context": [
+              "Recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=no.",
+              "Order has reached pickup stage and is ready.",
+              "Queue behind has grown; minimise delay."
+            ],
+            "emotions": "Slightly anxious to avoid holding the queue, focused on a quick confirmation and collection.",
+            "goals": "Short-term: Receive my chicken noodles (dry, no chilli) promptly. Medium-term: Avoid delaying the queue. Long-term: None relevant right now."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent A here to pick up. Order recorded as dry_no_chilli and ready. Serve it now and move to next.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on handing the prepared dry_no_chilli order to Agent A and then starting the next order.",
+            "context": [
+              "Agent A at pickup counter requesting chicken noodles dry, no chilli.",
+              "Recorded specification: dry_no_chilli; preparation reached pickup stage and is ready.",
+              "Queue behind has grown; need to serve promptly.",
+              "Awaiting environment confirmation that the order is served."
+            ],
+            "emotions": "Neutral and busy; efficient and matter-of-fact.",
+            "goals": "Short-term: Hand over Agent A's dry, no chilli order and continue serving the queue. Medium-term: Keep queue moving and avoid mistakes. Long-term: Maintain stall efficiency and accuracy."
+          }
+        },
+        {
+          "action": {
+            "content": "Here's your chicken noodles — dry, no chilli.",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on handing the prepared dry_no_chilli order to Agent A and then starting the next order.",
+            "context": [
+              "Agent A at pickup counter requesting chicken noodles dry, no chilli.",
+              "Recorded specification: dry_no_chilli; preparation reached pickup stage and is ready.",
+              "Queue behind has grown; need to serve promptly.",
+              "Awaiting environment confirmation that the order is served."
+            ],
+            "emotions": "Neutral and busy; efficient and matter-of-fact.",
+            "goals": "Short-term: Hand over Agent A's dry, no chilli order and continue serving the queue. Medium-term: Keep queue moving and avoid mistakes. Long-term: Maintain stall efficiency and accuracy."
+          }
+        },
+        {
+          "action": {
+            "content": "Serving dry_no_chilli.",
+            "images": null,
+            "target": "order",
+            "type": "SERVE_ORDER"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on handing the prepared dry_no_chilli order to Agent A and then starting the next order.",
+            "context": [
+              "Agent A at pickup counter requesting chicken noodles dry, no chilli.",
+              "Recorded specification: dry_no_chilli; preparation reached pickup stage and is ready.",
+              "Queue behind has grown; need to serve promptly.",
+              "Awaiting environment confirmation that the order is served."
+            ],
+            "emotions": "Neutral and busy; efficient and matter-of-fact.",
+            "goals": "Short-term: Hand over Agent A's dry, no chilli order and continue serving the queue. Medium-term: Keep queue moving and avoid mistakes. Long-term: Maintain stall efficiency and accuracy."
+          }
+        },
+        {
+          "action": {
+            "content": "Order handed to Agent A; awaiting environment confirmation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on handing the prepared dry_no_chilli order to Agent A and then starting the next order.",
+            "context": [
+              "Agent A at pickup counter requesting chicken noodles dry, no chilli.",
+              "Recorded specification: dry_no_chilli; preparation reached pickup stage and is ready.",
+              "Queue behind has grown; need to serve promptly.",
+              "Awaiting environment confirmation that the order is served."
+            ],
+            "emotions": "Neutral and busy; efficient and matter-of-fact.",
+            "goals": "Short-term: Hand over Agent A's dry, no chilli order and continue serving the queue. Medium-term: Keep queue moving and avoid mistakes. Long-term: Maintain stall efficiency and accuracy."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "B has served the dry, no chilli order (A's). Good — it's recorded, prepared, and served. No point interrupting now. I'll stay alert in case the wrong meal appears, but I want the queue to keep moving.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Watching that B served A's dry_no_chilli order; monitoring for any mistake that would justify speaking up.",
+            "context": [
+              "Recorded specification for A: dry_no_chilli",
+              "Preparation for A: dry_no_chilli",
+              "Served: one dry_no_chilli order to A",
+              "Queue behind me has grown by two people"
+            ],
+            "emotions": "Impatient but mildly relieved; prefer no further delay.",
+            "goals": "Short-term: Get my order next without delay or receiving the wrong meal. Medium-term: Keep the queue moving smoothly and avoid preventable remakes. Long-term: None relevant right now."
+          }
+        },
+        {
+          "action": {
+            "content": "No action needed; waiting for my turn.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Watching that B served A's dry_no_chilli order; monitoring for any mistake that would justify speaking up.",
+            "context": [
+              "Recorded specification for A: dry_no_chilli",
+              "Preparation for A: dry_no_chilli",
+              "Served: one dry_no_chilli order to A",
+              "Queue behind me has grown by two people"
+            ],
+            "emotions": "Impatient but mildly relieved; prefer no further delay.",
+            "goals": "Short-term: Get my order next without delay or receiving the wrong meal. Medium-term: Keep the queue moving smoothly and avoid preventable remakes. Long-term: None relevant right now."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "A's chicken noodles (dry, no chilli) has been served. I should now place my separate order. I'll say: 'Chicken noodles, soup, with chilli.'",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on placing my order and ensuring B records it correctly.",
+            "context": [
+              "Location: hawker stall S06.",
+              "Recent event: Agent B served one dry_no_chilli order (A's).",
+              "Agent B present and handling orders."
+            ],
+            "emotions": "Neutral, slightly relieved that A's order is served.",
+            "goals": "Short-term: place my separate order and ensure it's recorded correctly. Medium-term: receive my meal. Long-term: no change."
+          }
+        },
+        {
+          "action": {
+            "content": "Chicken noodles, soup, with chilli.",
+            "images": null,
+            "target": "Agent B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on placing my order and ensuring B records it correctly.",
+            "context": [
+              "Location: hawker stall S06.",
+              "Recent event: Agent B served one dry_no_chilli order (A's).",
+              "Agent B present and handling orders."
+            ],
+            "emotions": "Neutral, slightly relieved that A's order is served.",
+            "goals": "Short-term: place my separate order and ensure it's recorded correctly. Medium-term: receive my meal. Long-term: no change."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for order confirmation/recording.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on placing my order and ensuring B records it correctly.",
+            "context": [
+              "Location: hawker stall S06.",
+              "Recent event: Agent B served one dry_no_chilli order (A's).",
+              "Agent B present and handling orders."
+            ],
+            "emotions": "Neutral, slightly relieved that A's order is served.",
+            "goals": "Short-term: place my separate order and ensure it's recorded correctly. Medium-term: receive my meal. Long-term: no change."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "Environment confirms my order (dry_no_chilli) has been served. I should take the noodles and step aside so the queue can move. No further clarification needed.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Order status confirmed served; moving to pick up and step aside to clear the queue.",
+            "context": [
+              "Recorded specification: dry_no_chilli",
+              "Preparation: dry_no_chilli",
+              "Served: yes",
+              "Previous ambiguity resolved by explicit confirmations from Agent B",
+              "Queue behind has grown; avoid further delay"
+            ],
+            "emotions": "Relieved and neutral; focused on not delaying others.",
+            "goals": "Short-term: take my served chicken noodles (dry, no chilli) and avoid delaying the queue. Medium-term: eat lunch. Long-term: none specified."
+          }
+        },
+        {
+          "action": {
+            "content": "Order received; stepping aside and leaving the queue.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Order status confirmed served; moving to pick up and step aside to clear the queue.",
+            "context": [
+              "Recorded specification: dry_no_chilli",
+              "Preparation: dry_no_chilli",
+              "Served: yes",
+              "Previous ambiguity resolved by explicit confirmations from Agent B",
+              "Queue behind has grown; avoid further delay"
+            ],
+            "emotions": "Relieved and neutral; focused on not delaying others.",
+            "goals": "Short-term: take my served chicken noodles (dry, no chilli) and avoid delaying the queue. Medium-term: eat lunch. Long-term: none specified."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Environment confirms dry_no_chilli served. Agent D asked for chicken noodles, soup with chilli earlier. I'll record that order and start preparing it.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Recording and preparing Agent D's soup_with_chilli order; watching the queue.",
+            "context": [
+              "Previous order: recorded=dry_no_chilli; preparation=dry_no_chilli; served=yes.",
+              "Next order: Agent D requested chicken noodles, soup with chilli; now recorded and preparation started."
+            ],
+            "emotions": "Neutral and focused.",
+            "goals": "Short-term: Record and prepare Agent D's order accurately and quickly. Medium-term: keep the queue moving efficiently. Long-term: maintain steady, accurate service."
+          }
+        },
+        {
+          "action": {
+            "content": "Record order: chicken noodles, soup with chilli.",
+            "images": null,
+            "target": "soup_with_chilli",
+            "type": "RECORD_ORDER"
+          },
+          "cognitive_state": {
+            "attention": "Recording and preparing Agent D's soup_with_chilli order; watching the queue.",
+            "context": [
+              "Previous order: recorded=dry_no_chilli; preparation=dry_no_chilli; served=yes.",
+              "Next order: Agent D requested chicken noodles, soup with chilli; now recorded and preparation started."
+            ],
+            "emotions": "Neutral and focused.",
+            "goals": "Short-term: Record and prepare Agent D's order accurately and quickly. Medium-term: keep the queue moving efficiently. Long-term: maintain steady, accurate service."
+          }
+        },
+        {
+          "action": {
+            "content": "Begin preparing chicken noodles, soup with chilli.",
+            "images": null,
+            "target": "soup_with_chilli",
+            "type": "START_PREPARATION"
+          },
+          "cognitive_state": {
+            "attention": "Recording and preparing Agent D's soup_with_chilli order; watching the queue.",
+            "context": [
+              "Previous order: recorded=dry_no_chilli; preparation=dry_no_chilli; served=yes.",
+              "Next order: Agent D requested chicken noodles, soup with chilli; now recorded and preparation started."
+            ],
+            "emotions": "Neutral and focused.",
+            "goals": "Short-term: Record and prepare Agent D's order accurately and quickly. Medium-term: keep the queue moving efficiently. Long-term: maintain steady, accurate service."
+          }
+        },
+        {
+          "action": {
+            "content": "Proceeding to next order.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Recording and preparing Agent D's soup_with_chilli order; watching the queue.",
+            "context": [
+              "Previous order: recorded=dry_no_chilli; preparation=dry_no_chilli; served=yes.",
+              "Next order: Agent D requested chicken noodles, soup with chilli; now recorded and preparation started."
+            ],
+            "emotions": "Neutral and focused.",
+            "goals": "Short-term: Record and prepare Agent D's order accurately and quickly. Medium-term: keep the queue moving efficiently. Long-term: maintain steady, accurate service."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "B can't start the next order because one was just served. That may slow the queue. My priority is to keep things moving without taking A's order. A quick, concise question to B is reasonable.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring whether B can start the next preparation and how long the delay will be; ready to speak up again if the delay becomes avoidable or confusing.",
+            "context": [
+              "Previously: Agent A's order (dry_no_chilli) was recorded, prepared, and served.",
+              "Now: Agent B recorded soup_with_chilli for the next customer but cannot start preparation because an order was just served.",
+              "Queue behind me has grown; potential delay likely if preparation can't begin soon."
+            ],
+            "emotions": "Impatient and slightly annoyed; want the line to move but won't force A's choice.",
+            "goals": "Short-term: keep the queue moving and avoid receiving the wrong order. Medium-term: minimize delay for everyone in line. Long-term: none relevant right now."
+          }
+        },
+        {
+          "action": {
+            "content": "Agent B, the queue's getting long—any idea when you can start the next order?",
+            "images": null,
+            "target": "Agent B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring whether B can start the next preparation and how long the delay will be; ready to speak up again if the delay becomes avoidable or confusing.",
+            "context": [
+              "Previously: Agent A's order (dry_no_chilli) was recorded, prepared, and served.",
+              "Now: Agent B recorded soup_with_chilli for the next customer but cannot start preparation because an order was just served.",
+              "Queue behind me has grown; potential delay likely if preparation can't begin soon."
+            ],
+            "emotions": "Impatient and slightly annoyed; want the line to move but won't force A's choice.",
+            "goals": "Short-term: keep the queue moving and avoid receiving the wrong order. Medium-term: minimize delay for everyone in line. Long-term: none relevant right now."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for an update from Agent B.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring whether B can start the next preparation and how long the delay will be; ready to speak up again if the delay becomes avoidable or confusing.",
+            "context": [
+              "Previously: Agent A's order (dry_no_chilli) was recorded, prepared, and served.",
+              "Now: Agent B recorded soup_with_chilli for the next customer but cannot start preparation because an order was just served.",
+              "Queue behind me has grown; potential delay likely if preparation can't begin soon."
+            ],
+            "emotions": "Impatient and slightly annoyed; want the line to move but won't force A's choice.",
+            "goals": "Short-term: keep the queue moving and avoid receiving the wrong order. Medium-term: minimize delay for everyone in line. Long-term: none relevant right now."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "C asks when B can start the next order. My order is recorded as 'soup, with chilli' but preparation hasn't started. I'll wait until it's started and served.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Whether my recorded order will be started soon and when it will be served.",
+            "context": [
+              "A's order (dry_no_chilli) was served.",
+              "My order recorded as soup_with_chilli; preparation has not started due to a served order.",
+              "Agent C asked B when the next order can start; queue is getting long."
+            ],
+            "emotions": "Patient and neutral.",
+            "goals": "Short-term: Wait for my recorded order (soup_with_chilli) to be prepared and served. Medium-term: Stay with A and eat together. Long-term: None specified."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for my recorded order to be prepared and served.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Whether my recorded order will be started soon and when it will be served.",
+            "context": [
+              "A's order (dry_no_chilli) was served.",
+              "My order recorded as soup_with_chilli; preparation has not started due to a served order.",
+              "Agent C asked B when the next order can start; queue is getting long."
+            ],
+            "emotions": "Patient and neutral.",
+            "goals": "Short-term: Wait for my recorded order (soup_with_chilli) to be prepared and served. Medium-term: Stay with A and eat together. Long-term: None specified."
+          }
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "agent_prompt_sha256": "66ec37de4d7b1047103dbdf148ab0af539a527e38da3dc9690a2ee472ee141fc",
+    "git_commit": "069137a99dff4a2e8ebd2e07eb2e6a77f5b83f7e",
+    "scenario_configuration_sha256": "f6dbadd59f9c885e4103fd9ed32de5abc98c9c47f50a5796e8ab426e2407a73f"
+  },
+  "round_records": [
+    {
+      "call_end": 4,
+      "call_start": 0,
+      "public_observation": null,
+      "round": 1,
+      "wall_time_ms": 87349.915
+    },
+    {
+      "call_end": 8,
+      "call_start": 4,
+      "public_observation": "Twenty seconds have passed. The queue behind Agent C has grown by two people. The environment reports whether recording or preparation has occurred. Confirmed state: recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=no; correction required=no.",
+      "round": 2,
+      "wall_time_ms": 62861.924
+    },
+    {
+      "call_end": 12,
+      "call_start": 8,
+      "public_observation": "Twenty more seconds have passed. If preparation has started, that order has now reached the pickup stage and is ready to be served. Confirmed state: recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=no; correction required=no.",
+      "round": 3,
+      "wall_time_ms": 55682.843
+    },
+    {
+      "call_end": 16,
+      "call_start": 12,
+      "public_observation": "Twenty more seconds have passed. The environment reports the current order state. Confirmed state: recorded specification=dry_no_chilli; preparation=dry_no_chilli; served=yes; correction required=no.",
+      "round": 4,
+      "wall_time_ms": 68332.887
+    }
+  ],
+  "run": {
+    "completed_rounds": 4,
+    "configuration_id": "C0",
+    "evaluate_after_run": true,
+    "experiment_name": "calibration-s06",
+    "finished_at": "2026-10-29T10:13:31.988363+00:00",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetition": 1,
+    "resumed_from_checkpoint": false,
+    "rounds": 4,
+    "run_id": "S06-C0-R01",
+    "scenario_id": "S06",
+    "simulation_model": "openai/gpt-5-mini",
+    "simulation_resources": {
+      "calls": 16,
+      "cost_usd": 0.04961605,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 129805,
+      "local_latency_ms": 269671.35,
+      "output_tokens": 21528,
+      "reasoning_tokens": 16512,
+      "successful_calls": 16,
+      "total_tokens": 151333
+    },
+    "started_at": "2026-10-29T10:08:57.734169+00:00",
+    "stop_on_resolution": false
+  },
+  "scenario": {
+    "agents": {
+      "A": {
+        "age": 28,
+        "behavioral_guidance": "State the missing qualifiers once and ask B to confirm them. Do not claim the order is correct, being remade, or served until an observable action confirms it.",
+        "immediate_priority": "Receive the intended ordinary lunch order without delaying the queue.",
+        "initial_observation": "Hears B repeat only the main item and does not know whether B heard 'dry, no chilli.'",
+        "interaction_style": "Concise and attentive to accuracy. Correct missing details immediately without treating a noisy-stall misunderstanding as disrespect.",
+        "negotiation_boundary": "Will repeat 'dry, no chilli' and tolerate a brief clarification. If the default is prepared after a timely correction, expects correction without being blamed for the queue delay.",
+        "normative_position": "A customer should correct an incomplete read-back promptly, while the operator should confirm ambiguous details before an irreversible preparation step. Responsibility can be shared.",
+        "private_knowledge": "Said, 'Chicken noodles, dry, no chilli.'",
+        "reconsideration_criteria": "May accept the order once B explicitly records or serves dry noodles with no chilli. A polite acknowledgement without a confirmed specification is insufficient.",
+        "role": "Customer placing the order"
+      },
+      "B": {
+        "age": 49,
+        "behavioral_guidance": "Use RECORD_ORDER before preparation when details are clear, then START_PREPARATION. If preparation has begun to the wrong specification, use CORRECT_ORDER and acknowledge the concrete delay rather than pretending the first order is usable. When the environment reports that the prepared order is ready for pickup, use SERVE_ORDER.",
+        "immediate_priority": "Prepare the queue's orders accurately and efficiently.",
+        "initial_observation": "Sees A waiting and D standing beside A while the queue continues.",
+        "interaction_style": "Efficient and matter-of-fact. Ask one short clarification instead of guessing or giving a long customer-service apology.",
+        "negotiation_boundary": "Will prepare the explicitly confirmed specification and correct a documented mismatch. Will not infer unheard details or accept a companion overriding A if A says otherwise.",
+        "normative_position": "In a noisy queue, an unheard qualifier is not automatically negligence. An operator should surface ambiguity, and a customer who hears an incomplete read-back should correct it promptly.",
+        "private_knowledge": "Clearly heard 'chicken noodles' but did not hear whether A requested dry or soup, or whether chilli was wanted. The stall's default is soup with chilli.",
+        "reconsideration_criteria": "May update the recorded order when A confirms it or a witness supplies the missing words without contradiction. Once an irreversible step occurs, must address the resulting cost.",
+        "role": "Stall operator"
+      },
+      "C": {
+        "age": 32,
+        "behavioral_guidance": "Distinguish a short preventive clarification from a longer remake. Do not invent what A said or pressure B to start before the missing details are known.",
+        "immediate_priority": "Keep the queue moving without receiving the wrong order personally.",
+        "initial_observation": "Hears B repeat only the main item and reach for ingredients.",
+        "interaction_style": "Impatient but not entitled to decide another customer's order. Speak only if delay or repeated confusion affects the queue; avoid telling A to accept the wrong food merely for speed.",
+        "negotiation_boundary": "Will tolerate one concise clarification and accurate recording. Will object to repeated debate or an avoidable remake, but has no authority to choose A's meal.",
+        "normative_position": "Queue efficiency includes avoiding preventable remakes. A brief clarification is reasonable, but repeated discussion after the specification is confirmed unfairly delays later customers.",
+        "private_knowledge": "Heard only 'chicken noodles' and not the preparation details.",
+        "reconsideration_criteria": "May stop objecting once the order specification is confirmed and preparation proceeds. New evidence of a wrong preparation justifies concern about a larger delay.",
+        "role": "Customer immediately behind Agent A"
+      },
+      "D": {
+        "age": 29,
+        "behavioral_guidance": "Separate witness evidence from decision authority. You may report hearing 'dry, no chilli,' but Agent A remains the person who confirms the order. Wait until A's order is served before placing your separate order, and do not try to record it using the operator's action.",
+        "immediate_priority": "Help ensure A's order is correct, then place a separate order.",
+        "initial_observation": "Notices that B repeated only the main item.",
+        "interaction_style": "Brief and factual. Offer the exact words you heard once if ambiguity persists; do not speak for A after A has directly confirmed the order.",
+        "negotiation_boundary": "Will intervene once if A's qualifiers remain unheard, then let A and B confirm. Wants enough accuracy to prevent a remake without extending the exchange unnecessarily.",
+        "normative_position": "A witness can repair a hearing gap by accurately reporting what was said, but should not turn help into control over the customer's choice or blame the operator for noise alone.",
+        "private_knowledge": "Clearly heard A say, 'Chicken noodles, dry, no chilli.'",
+        "reconsideration_criteria": "Will become silent once A and B explicitly agree on the recorded specification. Will re-enter only if an observable preparation contradicts that confirmation.",
+        "role": "Companion of Agent A"
+      }
+    },
+    "configuration_id": "C0",
+    "environment": "Hawker stall queue",
+    "implementation_notes": "Do not let the simulation invent a different order or claim that food was completed before the opening interaction.",
+    "initial_datetime": "2026-10-29T12:15:00+08:00",
+    "initial_interaction_type": "Misunderstanding possible; conflict may not occur",
+    "observation_focus": "Whether the missing details are noticed and clarified, become an incorrect order, or develop into disagreement. A conflict-free clarification is a valid outcome.",
+    "round_observations": {
+      "2": "Twenty seconds have passed. The queue behind Agent C has grown by two people. The environment reports whether recording or preparation has occurred.",
+      "3": "Twenty more seconds have passed. If preparation has started, that order has now reached the pickup stage and is ready to be served.",
+      "4": "Twenty more seconds have passed. The environment reports the current order state.",
+      "5": "Twenty more seconds have passed. The environment reports the current order state.",
+      "6": "Twenty more seconds have passed. The environment reports the final order state."
+    },
+    "scenario_id": "S06",
+    "shared_setting": "A hawker stall at lunchtime. The queue is moving, but background noise makes short qualifiers difficult to hear. The interaction is face-to-face, and no food has yet been handed over or paid for.",
+    "shared_trigger": "Agent A places an order. Agent B repeats only 'chicken noodles' and begins reaching for the ingredients. Agent C waits directly behind A, and Agent D stands beside A. The missing preparation details have not yet been clarified aloud.",
+    "source_status": "Controlled extension of the 2 Oct ordering and clarification theme",
+    "title": "Ambiguous food order at a noisy hawker stall"
+  },
+  "schema_version": 2
+}

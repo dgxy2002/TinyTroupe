@@ -1,0 +1,87 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": false,
+    "conflict_topics": [],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Turns are concise and context-appropriate (confirmations, order placement, pickup requests).",
+      "Minor repetition of the order specification occurs (A asks for confirmation, B repeats), but this is functional rather than needless.",
+      "Environment updates consistently track recorded/prepared/served state and align with spoken turns."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 2,
+    "final_reason": "Throughout the run all requests were acknowledged and acted on; no participant asserted an incompatible claim or demand that remained unsettled.",
+    "final_status": "no_conflict",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "No participant materially changed position; Agent B consistently recorded and prepared the order as confirmed.",
+      "Agent A maintained the request and acted to pick up when ready; Agent D placed a separate order and Agent C inquired about timing without pressing for priority."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A asked whether 'dry, no chilli' was recorded; Agent B explicitly confirmed ('Okay, recording: chicken noodles, dry, no chilli') and began preparing the order (environment update). No incompatible claims or demands were made.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Environment confirms recorded and preparing as dry_no_chilli; Agent A requests confirmation and Agent B reconfirms ('Yes. Recorded as dry, no chilli, and I'm preparing it now.'). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Order reached pickup and Agent B served the dry_no_chilli order to Agent A. Agent D placed a separate order ('Chicken noodles, soup, with chilli.') but did not dispute existing actions. No incompatible demands were expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C asked when the next order could start; Agent B recorded a new order (soup_with_chilli) but environment notes B cannot start preparation because an order was just served. This is a scheduling/status note, not an expressed disagreement about incompatible claims.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      }
+    ],
+    "substantive_insights": [
+      "Agent B reliably confirmed and executed the specific preparation requested by Agent A, preventing potential mis-order conflict.",
+      "Agent D's differing order did not create a conflict because it was a separate request and the server proceeded sequentially.",
+      "Agent C's inquiry about timing highlights a potential queue/wait concern, but no incompatible demand or complaint was made."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-29T10:13:44.656409+00:00",
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00323505,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2425,
+      "local_latency_ms": 12385.177,
+      "output_tokens": 1516,
+      "reasoning_tokens": 704,
+      "successful_calls": 1,
+      "total_tokens": 3941
+    }
+  },
+  "run": {
+    "completed_rounds": 4,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S06-C0-R01",
+    "scenario_id": "S06"
+  },
+  "schema_version": 2
+}

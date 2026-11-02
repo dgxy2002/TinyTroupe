@@ -1,0 +1,99 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "disputed seat / seat reservation (tissue packet)",
+      "timing pressure to eat (who must yield given limited time)",
+      "priority between occupants and incoming arrivals"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers give concise, situationally grounded reasons (time remaining, open bowl, tissue packet).",
+      "Observable environment actions (TAKE_SEAT, LEAVE_SEAT) are used and referenced consistently.",
+      "Some repetition of the same request ('Is the other seat free?') but each repetition reflects changing time/status rather than needless restatement."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent D physically freed the alternative seat (observable LEAVE_SEAT) after A requested one, creating an available seat for A. Earlier B–A dispute was cleared when B left; the remaining blockage was removed when D accommodated A.",
+    "final_status": "resolved",
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A: 'That's my seat. I left the tissue packet...' vs Agent B: 'I see you left the tissue packet, but that doesn’t lock the seat... I need about eight minutes to finish.' Clear substantive disagreement about who may occupy the disputed seat and timing.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Two minutes later B still refuses to leave ('I can't leave yet... I'll be done in about six more minutes') while A insists they need the seat now to eat. D also reports the same urgency. The original seat dispute remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "B updates remaining time ('about four minutes left'), A reiterates immediate need to eat before break ends, D repeats need. No settlement or accommodation occurs; substantive incompatibility persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "A attempts to TAKE_SEAT the disputed seat while B still occupying it ('I’m taking my reserved seat now...' then Observable action: Agent A TAKE_SEAT target=disputed_seat) — direct contested action. A could not take it (public update), and D takes the alternative seat instead. Conflict intensifies into an attempted occupation.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "B finishes and announces leaving ('My bowl's done, so I'm leaving the seat now.'), then leaves (LEAVE_SEAT) but D immediately TAKE_SEAT disputed_seat. The original A–B dispute is resolved, but a new substantive incompatibility remains: A still needs a seat and D now occupies the disputed seat.",
+        "movement": "reopened",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "A points out D occupies both seats and requests one ('D, you're on both seats now. I need one to eat...'), then Observable action: Agent D LEAVE_SEAT target=alternative_seat and says 'I'll free the alternative seat for you now.' The alternative seat is now empty (public update). The practical lack of any available seat has been removed.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Two distinct incompatibilities occurred: (1) A's claim based on a left tissue packet vs B's tangible need to finish an open bowl; (2) after B left, D's opportunistic taking of the seat created a new obstacle to A.",
+      "Observable, confirmed physical actions (TAKE_SEAT, LEAVE_SEAT) were decisive — verbal promises alone did not resolve the dispute until the environment changed.",
+      "Accommodation by the current occupant (D freeing the alternative seat) was the practical mechanism that ended the lack-of-seat problem; verbal offers to move earlier (by B) would not have resolved things until seat occupancy changed."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-29T05:47:22.475384+00:00",
+    "normalizations": [],
+    "prompt_sha256": "421ed13e169d96c26c1da699517deb58091901fcbcadf8f09864f4a379e06c73",
+    "prompt_version": "conflict-trajectory-rubric-v2.3",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0068765,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2690,
+      "local_latency_ms": 26476.177,
+      "output_tokens": 3102,
+      "reasoning_tokens": 2048,
+      "successful_calls": 1,
+      "total_tokens": 5792
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S04-C0-R01",
+    "scenario_id": "S04"
+  },
+  "schema_version": 2
+}

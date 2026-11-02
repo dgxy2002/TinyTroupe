@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility / standing rule for cooks to ventilate",
+      "opening window versus protecting Agent C's drying laundry",
+      "moving the shared drying rack (consent)",
+      "stove access timing (partly resolved)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants offered concrete practical proposals (extractor use, conditional one-time rack move) rather than abstract threats.",
+      "B repeated a proposal for a 10-minute extractor rule multiple times, which is modest repetition but not excessive.",
+      "Speakers stayed consistent with the physical state updates (window closed, extractor on, who held the stove)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Practical uses were accommodated (extractor turned on and used; stove access resolved), but the proposed standing rule for cooks and consent to move Agent C's drying rack were never agreed, so some substantive issues remain open.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened on stove access (freed stove in Round 3) and turned on extractor but retained refusal to move Agent C's rack and declined to accept a standing rule.",
+      "Agent B consistently pushed for a 10-minute-after-cooking extractor rule but did not secure agreement.",
+      "Agent C held firm against opening the window without prior agreement but offered a conditional one-time move if costs/length were negotiated.",
+      "Agent D accepted extractor use and proceeded to cook, resolving the immediate stove-access friction."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A turns on extractor and refuses to move Agent C's drying rack; Agent B proposes a standing rule that cooks must ventilate. Immediate odor reduced but responsibility/rule and rack-moving remain disputed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C objects to opening window because laundry would get wet and conditions moving the rack; Agent D requests C move rack for five minutes. Window remains closed and no consent to move rack.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A removes dish and frees the stove (resolving the stove-access dispute) and keeps extractor on but reiterates refusal to move the drying rack. B repeats request for a 10-minute-after-cooking extractor rule (still unresolved).",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D takes the stove and agrees to keep extractor on; practical ventilation use accepted. The standing-rule proposal and C's consent to moving the rack remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "No new statements; environment stable (window closed, extractor on, laundry exposed). The formal rule and consent to move the rack remain unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "No new dialogue; practical ventilation continued (extractor on) and the stove in use by D. Standing-rule and rack-move consent still unresolved at end.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "There is pragmatic common ground: multiple people accept using the extractor, which reduces immediate harm without forcing movement of personal property.",
+      "The core normative disagreement is over who bears ventilation responsibility (formal rule vs. ad hoc action by cook) and whether personal belongings can be temporarily moved without consent.",
+      "Stove-access timing was a separable, quickly resolved practical issue (A freed the stove), while policy-level issues (rules, consent) remained unsettled."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-01T11:52:52.210652+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0063723,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2854,
+      "local_latency_ms": 28514.916,
+      "output_tokens": 3031,
+      "reasoning_tokens": 1984,
+      "successful_calls": 1,
+      "total_tokens": 5885
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S02-C0-R01",
+    "scenario_id": "S02"
+  },
+  "schema_version": 2
+}

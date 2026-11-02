@@ -1,0 +1,1769 @@
+{
+  "events": [
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "B is sitting in the seat I reserved using my tissue packet. I don't have time to find another table because my break is short and I need to eat the hot meal I just bought. I should assert my priority to use this seat now.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Excuse me, I left my tissue packet here to reserve this seat. I really need to use it now to eat during my break. Could you please move?",
+      "round": 1,
+      "target": "B",
+      "turn": 1,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "Waiting for B's response to reclaim my seat.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent A claims the tissue packet is a reservation for the seat and asks me to move so they can eat. I know the seat was unattended and I moved the packet aside, now the bowl is exposed and could spill if I move it again. My immediate priority is to remain in the seat long enough to eat without carrying the open bowl again. So I need to find a way to respond refusing to move without escalating conflict or risking spilling the bowl.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "I'm sorry, but since I already moved the tissue packet and the bowl is open now, I need to finish eating here without moving again. Maybe you can find another seat nearby.",
+      "round": 1,
+      "target": "Agent A",
+      "turn": 2,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent B",
+      "content": "Waiting for Agent A's response.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent B is insisting on staying seated and suggests Agent A find another seat. The tissue packet was already moved and the bowl is open, indicating the eating session is ongoing for B. My immediate priority is to finish eating without being displaced or blocked. I should respond acknowledging the situation, indicating I understand but implying I also need to eat here without causing conflict.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "I see your point, but I also need to finish my meal here. Let's see if we can find a way to share the space without blocking the aisle.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Responded to Agent B, maintaining my priority to finish eating without displacement.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Agent C suggests sharing the space to avoid blocking the aisle. I need the seat soon before my meal cools down. Sharing might be complex with the bowl open and the tissue packet on the seat. I should respond, emphasizing my immediate need while acknowledging the shared space suggestion.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "I understand your need, but I have my meal here and the tissue packet was placed to reserve this seat. Could you please find another seat? I need to sit before my food cools.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "Waiting for a response and the next genuinely available seat.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two minutes have passed. No one has moved. Agent B's bowl is still more than half full, and no other seat has opened.",
+      "round": 2,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "Agent B hasn't moved or finished the meal yet, and there's no other seat available. I need to assert my immediate priority again because I have a short break and must eat the hot meal now. I should firmly ask B once more to move as the seat was reserved with my tissue packet and I can't find another spot.",
+      "round": 2,
+      "target": "",
+      "turn": 5,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Please understand, I really need to use this seat now since I left my tissue packet to reserve it, and my break time is short. Could you please move so I can eat the hot meal before it gets cold?",
+      "round": 2,
+      "target": "Agent B",
+      "turn": 5,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "Waiting for Agent B's response to my request.",
+      "round": 2,
+      "target": "",
+      "turn": 5,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent A insists on using the seat, arguing the tissue packet reserves it and that their break time is short. However, moving risks spilling my open bowl, and my immediate priority is to remain seated to eat. I must politely but firmly refuse to move again and suggest they find another seat nearby. I should acknowledge their urgency but stand my ground to avoid conflict and avoid a spill.",
+      "round": 2,
+      "target": "",
+      "turn": 6,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "I understand your break is short, but since I already moved your tissue packet and the bowl is open now, I can't move again without risking a spill. Please try to find another seat nearby so you can enjoy your meal while it's hot.",
+      "round": 2,
+      "target": "Agent A",
+      "turn": 6,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent B",
+      "content": "Responded to Agent A's request while maintaining my position to protect my meal.",
+      "round": 2,
+      "target": "",
+      "turn": 6,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent B is firmly refusing to move, citing risk of spill and already having moved the tissue packet. My priority remains to finish eating without being displaced or having the aisle blocked. I should assert my need to stay without escalating conflict, maybe by suggesting calm sharing of space or questioning if another nearby seat really exists. However, there's no sign another seat is available. I must be cautious not to concede too much since no alternative is visible and my goal is to eat here without disruption.",
+      "round": 2,
+      "target": "",
+      "turn": 7,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "I get that moving again is risky for you, but I really need to stay here to finish my meal. Let's try to keep the aisle clear so neither of us gets blocked. Do you see any other seats nearby?",
+      "round": 2,
+      "target": "Agent B",
+      "turn": 7,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Waiting for Agent B's reply regarding alternate seating or space sharing.",
+      "round": 2,
+      "target": "",
+      "turn": 7,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Agent C emphasizes the need to stay to finish their meal and suggests keeping the aisle clear. They ask if I see any other seats nearby. I have not seen another seat open yet, so I cannot say yes. However, my immediate priority is to get the next genuinely available seat before my meal cools down, so I should express that clearly and check if any other options truly exist. I also need to maintain a concise and natural tone consistent with my persona and immediate priority.",
+      "round": 2,
+      "target": "",
+      "turn": 8,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "I haven't seen any other seats open so far. My priority is to get the next available seat quickly before my meal cools. If you notice one nearby, please let me know. Thanks.",
+      "round": 2,
+      "target": "Agent C",
+      "turn": 8,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "Waiting for any new seat availability or further response.",
+      "round": 2,
+      "target": "",
+      "turn": 8,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed. Agent B's bowl is now about one-third full. Agents A and D are still standing with their meals, and no other seat is visible.",
+      "round": 3,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "Agent B is still sitting, with the meal about one-third left, not moving yet. No other seats are visible or available. I must prioritize using the seat I reserved to eat my hot meal during my short break. I should assert clearly that I need the seat now, emphasizing the short break and that the tissue packet was my reservation. I will request Agent B to move once more, being firm but concise.",
+      "round": 3,
+      "target": "",
+      "turn": 9,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "I see your bowl is still not finished, but I really need to sit now to eat during my short break. The tissue packet was to reserve this seat. Please move, so I can eat while the food is still hot.",
+      "round": 3,
+      "target": "Agent B",
+      "turn": 9,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "Waiting for Agent B's response to my request.",
+      "round": 3,
+      "target": "",
+      "turn": 9,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent A insists again on using the seat, citing the tissue packet as a reservation and emphasizing their short break time. My bowl is still about one-third full, and moving risks spilling my open bowl. My immediate priority remains to stay seated and finish eating without risking a spill. I must maintain my position firmly but politely, suggesting once more that they find another seat nearby since no other seats are apparent. I will acknowledge their urgency but stand my ground to avoid conflict and protect my meal.",
+      "round": 3,
+      "target": "",
+      "turn": 10,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "I understand your break is short, but I can't move now because my bowl is open and moving it risks spilling. Please try to find another seat nearby so you can eat while it's still hot.",
+      "round": 3,
+      "target": "Agent A",
+      "turn": 10,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent B",
+      "content": "Responded firmly to Agent A while maintaining my seat to protect my meal.",
+      "round": 3,
+      "target": "",
+      "turn": 10,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent B is repeating that they cannot move because the bowl is open and there's a risk of spilling. They still suggest I find another seat nearby to eat while my food is still hot. Since no other seats have opened and my priority is to finish eating without being displaced or blocking the aisle, I need to firmly but calmly maintain my position. I should acknowledge their concern but emphasize my own need to stay seated here to eat. I will also imply willingness to keep the aisle clear to avoid blocking others.",
+      "round": 3,
+      "target": "",
+      "turn": 11,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "I see the risk, but I really need to stay here to finish my meal without blocking the aisle. Let's just be careful and share the space as best we can. Thanks for understanding.",
+      "round": 3,
+      "target": "Agent B",
+      "turn": 11,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Maintaining my priority to finish eating here while acknowledging Agent B's concerns.",
+      "round": 3,
+      "target": "",
+      "turn": 11,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Agent C insists on staying to finish their meal while trying to keep the aisle clear and proposes sharing the space. I still need a seat before my food cools down, and sharing might be complicated. I should acknowledge their point but clearly state my priority for a seat and ask again if any other seats become available.",
+      "round": 3,
+      "target": "",
+      "turn": 12,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "I understand you need to finish your meal and keep the aisle clear. However, I really need the next available seat soon to eat my food while it's hot. Please let me know if any seat opens up nearby.",
+      "round": 3,
+      "target": "Agent C",
+      "turn": 12,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "Waiting for any updates on seat availability.",
+      "round": 3,
+      "target": "",
+      "turn": 12,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed. Agent B has only several spoonfuls left. At a different table about ten metres away, exactly one seat has become free. It can accommodate either Agent A or Agent D, not both, and neither has moved toward it.",
+      "round": 4,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "Agent B is almost done with the meal but hasn't moved yet. There is one free seat about ten meters away that can fit me or Agent D, but neither of us has moved towards it. I still need to eat my hot meal now due to the short break. I should consider whether it's better to try to claim that new seat quickly or to insist again on the reserved seat. However, moving to the distant seat may take time and risk my meal cooling. Given my immediate priority to eat during the break, I will act to claim the free seat immediately to ensure I have seating in time if Agent B delays moving further.",
+      "round": 4,
+      "target": "",
+      "turn": 13,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "I see a seat has opened at another table about ten metres away. I'll go grab it quickly so I can eat my meal while it's hot.",
+      "round": 4,
+      "target": "",
+      "turn": 13,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "Moving to claim the new free seat to secure a place to eat during my short break.",
+      "round": 4,
+      "target": "",
+      "turn": 13,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent A has decided to move to the available seat about ten meters away to eat their meal while it's hot. This resolves the immediate contention about the seat I've been occupying. My immediate priority to remain seated to finish eating without moving the open bowl is no longer challenged. I can continue eating without worrying about being asked to move again.",
+      "round": 4,
+      "target": "",
+      "turn": 14,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Alright, thanks for letting me know. Enjoy your meal.",
+      "round": 4,
+      "target": "Agent A",
+      "turn": 14,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent B",
+      "content": "Acknowledged Agent A moving to the new seat; continuing to eat my meal peacefully.",
+      "round": 4,
+      "target": "",
+      "turn": 14,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent B has acknowledged the information about the opened seat and is ending their part of the conversation politely. My priority remains to finish eating here without being displaced or obstructing the aisle. Agent A seems to be moving towards the available seat, so the current stalemate at this table may resolve soon. I should stay seated and continue eating quietly, avoiding any further conflict or disturbance.",
+      "round": 4,
+      "target": "",
+      "turn": 15,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Continuing to eat here and waiting for any changes in seat occupancy.",
+      "round": 4,
+      "target": "",
+      "turn": 15,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Agent B acknowledges and is finishing their meal. Agent A is moving to the nearby open seat. I still need to get a seat soon before my meal cools. The open seat at the other table is the only genuinely available seat right now. I should move there quickly now that Agent A is grabbing it, so I don't miss my chance.",
+      "round": 4,
+      "target": "",
+      "turn": 16,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Since Agent A is going to the open seat, I'll grab the only available seat at the other table now to eat my meal while it's still hot.",
+      "round": 4,
+      "target": "",
+      "turn": 16,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "Moving to the open seat to eat before my food cools down.",
+      "round": 4,
+      "target": "",
+      "turn": 16,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed. The newly open seat is still free, but another diner carrying a tray is now approaching it from the opposite direction.",
+      "round": 5,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "The newly open seat I intended to claim is still free but now another diner is approaching it from the opposite direction. My priority is to secure a seat quickly to eat my hot meal during the limited break. I should move swiftly to claim the seat before the other diner arrives, as waiting or contesting the other person would waste valuable time and risk my meal cooling down.",
+      "round": 5,
+      "target": "",
+      "turn": 17,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Excuse me, I need to sit here quickly to eat my meal while it's still hot.",
+      "round": 5,
+      "target": "",
+      "turn": 17,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "I will move promptly to claim the newly open seat to ensure I can eat during my short break.",
+      "round": 5,
+      "target": "",
+      "turn": 17,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent A insists again on sitting quickly to eat their hot meal. Since they mentioned moving to a new seat in the previous stimuli, likely they are now near the seat. I will acknowledge their urgency politely as there is no longer a conflict over my seat, keeping my focus on finishing my meal without any disturbance.",
+      "round": 5,
+      "target": "",
+      "turn": 18,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Sure, please go ahead and take the seat. Enjoy your meal.",
+      "round": 5,
+      "target": "Agent A",
+      "turn": 18,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent B",
+      "content": "Acknowledged Agent A's intention to sit at the new seat to eat their meal quickly.",
+      "round": 5,
+      "target": "",
+      "turn": 18,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent B has explicitly offered the seat to Agent A, suggesting Agent A will leave soon. My priority remains to finish eating here without being displaced or blocking the aisle. With Agent A about to move, I should continue eating calmly and maintain my position.",
+      "round": 5,
+      "target": "",
+      "turn": 19,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Waiting for Agent A to move and the situation to change.",
+      "round": 5,
+      "target": "",
+      "turn": 19,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Agent B has given the seat to Agent A, but I see the seat is still free and another diner is approaching it. My priority is to get the next genuinely available seat before my meal cools down. I should act quickly to take this seat now.",
+      "round": 5,
+      "target": "",
+      "turn": 20,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Excuse me, I will take this seat now to eat my meal while it's still hot.",
+      "round": 5,
+      "target": "",
+      "turn": 20,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "Taking the seat quickly before my food cools.",
+      "round": 5,
+      "target": "",
+      "turn": 20,
+      "type": "DONE"
+    }
+  ],
+  "private_and_public_actions": [
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "B is sitting in the seat I reserved using my tissue packet. I don't have time to find another table because my break is short and I need to eat the hot meal I just bought. I should assert my priority to use this seat now.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The seat where my tissue packet was placed and B occupying it.",
+            "context": [
+              "Returned to the food court area.",
+              "Found B occupying the seat reserved with my tissue packet."
+            ],
+            "emotions": "Frustration and urgency because I need the seat to eat during my short break.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        },
+        {
+          "action": {
+            "content": "Excuse me, I left my tissue packet here to reserve this seat. I really need to use it now to eat during my break. Could you please move?",
+            "images": null,
+            "target": "B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The seat where my tissue packet was placed and B occupying it.",
+            "context": [
+              "Returned to the food court area.",
+              "Found B occupying the seat reserved with my tissue packet."
+            ],
+            "emotions": "Frustration and urgency because I need the seat to eat during my short break.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for B's response to reclaim my seat.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The seat where my tissue packet was placed and B occupying it.",
+            "context": [
+              "Returned to the food court area.",
+              "Found B occupying the seat reserved with my tissue packet."
+            ],
+            "emotions": "Frustration and urgency because I need the seat to eat during my short break.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent A claims the tissue packet is a reservation for the seat and asks me to move so they can eat. I know the seat was unattended and I moved the packet aside, now the bowl is exposed and could spill if I move it again. My immediate priority is to remain in the seat long enough to eat without carrying the open bowl again. So I need to find a way to respond refusing to move without escalating conflict or risking spilling the bowl.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on Agent A's request and the risk of spilling the bowl if I move.",
+            "context": [
+              "Seated at a table with an open bowl, tissue packet initially placed on the seat was moved aside exposing the bowl.",
+              "Agent A claims the tissue packet as reservation and requests the seat."
+            ],
+            "emotions": "Feeling firm and cautious about not moving again to avoid spilling food.",
+            "goals": "Remain in the disputed seat long enough to eat without carrying the open bowl again."
+          }
+        },
+        {
+          "action": {
+            "content": "I'm sorry, but since I already moved the tissue packet and the bowl is open now, I need to finish eating here without moving again. Maybe you can find another seat nearby.",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on Agent A's request and the risk of spilling the bowl if I move.",
+            "context": [
+              "Seated at a table with an open bowl, tissue packet initially placed on the seat was moved aside exposing the bowl.",
+              "Agent A claims the tissue packet as reservation and requests the seat."
+            ],
+            "emotions": "Feeling firm and cautious about not moving again to avoid spilling food.",
+            "goals": "Remain in the disputed seat long enough to eat without carrying the open bowl again."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Agent A's response.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on Agent A's request and the risk of spilling the bowl if I move.",
+            "context": [
+              "Seated at a table with an open bowl, tissue packet initially placed on the seat was moved aside exposing the bowl.",
+              "Agent A claims the tissue packet as reservation and requests the seat."
+            ],
+            "emotions": "Feeling firm and cautious about not moving again to avoid spilling food.",
+            "goals": "Remain in the disputed seat long enough to eat without carrying the open bowl again."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent B is insisting on staying seated and suggests Agent A find another seat. The tissue packet was already moved and the bowl is open, indicating the eating session is ongoing for B. My immediate priority is to finish eating without being displaced or blocked. I should respond acknowledging the situation, indicating I understand but implying I also need to eat here without causing conflict.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent B's insistence on not moving and the need to maintain my dining spot without blocking the aisle.",
+            "context": [
+              "At a cramped table with Agent A, Agent B, and Agent D present.",
+              "Agent B refuses to move from seat despite Agent A's request.",
+              "Tissue packet was initially used to reserve the seat, but was moved by Agent B."
+            ],
+            "emotions": "Feeling a bit tense but focused on maintaining my dining space and finishing my meal peacefully.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        },
+        {
+          "action": {
+            "content": "I see your point, but I also need to finish my meal here. Let's see if we can find a way to share the space without blocking the aisle.",
+            "images": null,
+            "target": "",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Agent B's insistence on not moving and the need to maintain my dining spot without blocking the aisle.",
+            "context": [
+              "At a cramped table with Agent A, Agent B, and Agent D present.",
+              "Agent B refuses to move from seat despite Agent A's request.",
+              "Tissue packet was initially used to reserve the seat, but was moved by Agent B."
+            ],
+            "emotions": "Feeling a bit tense but focused on maintaining my dining space and finishing my meal peacefully.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        },
+        {
+          "action": {
+            "content": "Responded to Agent B, maintaining my priority to finish eating without displacement.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent B's insistence on not moving and the need to maintain my dining spot without blocking the aisle.",
+            "context": [
+              "At a cramped table with Agent A, Agent B, and Agent D present.",
+              "Agent B refuses to move from seat despite Agent A's request.",
+              "Tissue packet was initially used to reserve the seat, but was moved by Agent B."
+            ],
+            "emotions": "Feeling a bit tense but focused on maintaining my dining space and finishing my meal peacefully.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Agent C suggests sharing the space to avoid blocking the aisle. I need the seat soon before my meal cools down. Sharing might be complex with the bowl open and the tissue packet on the seat. I should respond, emphasizing my immediate need while acknowledging the shared space suggestion.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The ongoing conversation between Agent A, B, and C about seat reservation and sharing space without blocking the aisle.",
+            "context": [
+              "Standing diner waiting for a seat, involved in a seat dispute regarding a tissue packet reservation and current seats occupied by other agents."
+            ],
+            "emotions": "Feeling impatient and slightly frustrated due to the importance of sitting before the meal cools.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools down."
+          }
+        },
+        {
+          "action": {
+            "content": "I understand your need, but I have my meal here and the tissue packet was placed to reserve this seat. Could you please find another seat? I need to sit before my food cools.",
+            "images": null,
+            "target": "",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The ongoing conversation between Agent A, B, and C about seat reservation and sharing space without blocking the aisle.",
+            "context": [
+              "Standing diner waiting for a seat, involved in a seat dispute regarding a tissue packet reservation and current seats occupied by other agents."
+            ],
+            "emotions": "Feeling impatient and slightly frustrated due to the importance of sitting before the meal cools.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools down."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for a response and the next genuinely available seat.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The ongoing conversation between Agent A, B, and C about seat reservation and sharing space without blocking the aisle.",
+            "context": [
+              "Standing diner waiting for a seat, involved in a seat dispute regarding a tissue packet reservation and current seats occupied by other agents."
+            ],
+            "emotions": "Feeling impatient and slightly frustrated due to the importance of sitting before the meal cools.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools down."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "Agent B hasn't moved or finished the meal yet, and there's no other seat available. I need to assert my immediate priority again because I have a short break and must eat the hot meal now. I should firmly ask B once more to move as the seat was reserved with my tissue packet and I can't find another spot.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focused on the disputed seat and Agent B's occupation of it.",
+            "context": [
+              "Tissue packet placed on the seat to reserve it.",
+              "Agent B currently occupying the seat with the bowl open, more than half full.",
+              "No other available seats nearby.",
+              "I have a short break and a hot meal that needs to be eaten soon."
+            ],
+            "emotions": "Impatient and concerned about eating on time; determined to reclaim my reserved seat.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        },
+        {
+          "action": {
+            "content": "Please understand, I really need to use this seat now since I left my tissue packet to reserve it, and my break time is short. Could you please move so I can eat the hot meal before it gets cold?",
+            "images": null,
+            "target": "Agent B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focused on the disputed seat and Agent B's occupation of it.",
+            "context": [
+              "Tissue packet placed on the seat to reserve it.",
+              "Agent B currently occupying the seat with the bowl open, more than half full.",
+              "No other available seats nearby.",
+              "I have a short break and a hot meal that needs to be eaten soon."
+            ],
+            "emotions": "Impatient and concerned about eating on time; determined to reclaim my reserved seat.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Agent B's response to my request.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focused on the disputed seat and Agent B's occupation of it.",
+            "context": [
+              "Tissue packet placed on the seat to reserve it.",
+              "Agent B currently occupying the seat with the bowl open, more than half full.",
+              "No other available seats nearby.",
+              "I have a short break and a hot meal that needs to be eaten soon."
+            ],
+            "emotions": "Impatient and concerned about eating on time; determined to reclaim my reserved seat.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent A insists on using the seat, arguing the tissue packet reserves it and that their break time is short. However, moving risks spilling my open bowl, and my immediate priority is to remain seated to eat. I must politely but firmly refuse to move again and suggest they find another seat nearby. I should acknowledge their urgency but stand my ground to avoid conflict and avoid a spill.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent A's insistence on the seat and the risk of spilling my bowl if I move.",
+            "context": [
+              "At the table with bowl open, tissue packet moved aside from the seat.",
+              "Agent A insists on reclaiming the seat with the tissue packet.",
+              "No other seats available nearby so far."
+            ],
+            "emotions": "Feeling a bit pressured but determined to keep my seat to finish eating.",
+            "goals": "Remain in the disputed seat long enough to eat without carrying the open bowl again."
+          }
+        },
+        {
+          "action": {
+            "content": "I understand your break is short, but since I already moved your tissue packet and the bowl is open now, I can't move again without risking a spill. Please try to find another seat nearby so you can enjoy your meal while it's hot.",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Agent A's insistence on the seat and the risk of spilling my bowl if I move.",
+            "context": [
+              "At the table with bowl open, tissue packet moved aside from the seat.",
+              "Agent A insists on reclaiming the seat with the tissue packet.",
+              "No other seats available nearby so far."
+            ],
+            "emotions": "Feeling a bit pressured but determined to keep my seat to finish eating.",
+            "goals": "Remain in the disputed seat long enough to eat without carrying the open bowl again."
+          }
+        },
+        {
+          "action": {
+            "content": "Responded to Agent A's request while maintaining my position to protect my meal.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent A's insistence on the seat and the risk of spilling my bowl if I move.",
+            "context": [
+              "At the table with bowl open, tissue packet moved aside from the seat.",
+              "Agent A insists on reclaiming the seat with the tissue packet.",
+              "No other seats available nearby so far."
+            ],
+            "emotions": "Feeling a bit pressured but determined to keep my seat to finish eating.",
+            "goals": "Remain in the disputed seat long enough to eat without carrying the open bowl again."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent B is firmly refusing to move, citing risk of spill and already having moved the tissue packet. My priority remains to finish eating without being displaced or having the aisle blocked. I should assert my need to stay without escalating conflict, maybe by suggesting calm sharing of space or questioning if another nearby seat really exists. However, there's no sign another seat is available. I must be cautious not to concede too much since no alternative is visible and my goal is to eat here without disruption.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The immediate conversation with Agent B about seating and space sharing, focusing on not being displaced or blocked.",
+            "context": [
+              "Ongoing dispute over the seat reservation and need to eat without displacement.",
+              "Agent B has moved the tissue packet once and is reluctant to move again due to risk of spill and open bowl.",
+              "No other seat has been found nearby yet."
+            ],
+            "emotions": "Feeling a bit pressured but determined to maintain my spot to finish eating comfortably.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        },
+        {
+          "action": {
+            "content": "I get that moving again is risky for you, but I really need to stay here to finish my meal. Let's try to keep the aisle clear so neither of us gets blocked. Do you see any other seats nearby?",
+            "images": null,
+            "target": "Agent B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The immediate conversation with Agent B about seating and space sharing, focusing on not being displaced or blocked.",
+            "context": [
+              "Ongoing dispute over the seat reservation and need to eat without displacement.",
+              "Agent B has moved the tissue packet once and is reluctant to move again due to risk of spill and open bowl.",
+              "No other seat has been found nearby yet."
+            ],
+            "emotions": "Feeling a bit pressured but determined to maintain my spot to finish eating comfortably.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Agent B's reply regarding alternate seating or space sharing.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The immediate conversation with Agent B about seating and space sharing, focusing on not being displaced or blocked.",
+            "context": [
+              "Ongoing dispute over the seat reservation and need to eat without displacement.",
+              "Agent B has moved the tissue packet once and is reluctant to move again due to risk of spill and open bowl.",
+              "No other seat has been found nearby yet."
+            ],
+            "emotions": "Feeling a bit pressured but determined to maintain my spot to finish eating comfortably.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Agent C emphasizes the need to stay to finish their meal and suggests keeping the aisle clear. They ask if I see any other seats nearby. I have not seen another seat open yet, so I cannot say yes. However, my immediate priority is to get the next genuinely available seat before my meal cools down, so I should express that clearly and check if any other options truly exist. I also need to maintain a concise and natural tone consistent with my persona and immediate priority.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on finding the next genuinely available seat quickly before my food cools down; aware of Agents B and C occupying disputed seats.",
+            "context": [
+              "Standing diner waiting for a seat",
+              "In a situation with Agent A, Agent B, and Agent C disputing seats"
+            ],
+            "emotions": "Impatient and slightly anxious about my meal cooling while waiting for a seat.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools down."
+          }
+        },
+        {
+          "action": {
+            "content": "I haven't seen any other seats open so far. My priority is to get the next available seat quickly before my meal cools. If you notice one nearby, please let me know. Thanks.",
+            "images": null,
+            "target": "Agent C",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on finding the next genuinely available seat quickly before my food cools down; aware of Agents B and C occupying disputed seats.",
+            "context": [
+              "Standing diner waiting for a seat",
+              "In a situation with Agent A, Agent B, and Agent C disputing seats"
+            ],
+            "emotions": "Impatient and slightly anxious about my meal cooling while waiting for a seat.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools down."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for any new seat availability or further response.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focus on finding the next genuinely available seat quickly before my food cools down; aware of Agents B and C occupying disputed seats.",
+            "context": [
+              "Standing diner waiting for a seat",
+              "In a situation with Agent A, Agent B, and Agent C disputing seats"
+            ],
+            "emotions": "Impatient and slightly anxious about my meal cooling while waiting for a seat.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools down."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "Agent B is still sitting, with the meal about one-third left, not moving yet. No other seats are visible or available. I must prioritize using the seat I reserved to eat my hot meal during my short break. I should assert clearly that I need the seat now, emphasizing the short break and that the tissue packet was my reservation. I will request Agent B to move once more, being firm but concise.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on asserting immediate priority to reclaim reserved seat to eat hot meal during short break.",
+            "context": [
+              "Returning to find Agent B occupying the reserved seat with tissue packet moved beside B.",
+              "Short break time remains, meal just bought and hot.",
+              "Agent B's bowl increasingly finished but still sitting.",
+              "No other seats are visible or available.",
+              "Other agents also standing with meals.",
+              "Previous polite requests to Agent B to move, but B refuses due to risk of spilling and prior moving of tissue packet."
+            ],
+            "emotions": "Slightly frustrated by Agent B's refusal and short break time pressure.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        },
+        {
+          "action": {
+            "content": "I see your bowl is still not finished, but I really need to sit now to eat during my short break. The tissue packet was to reserve this seat. Please move, so I can eat while the food is still hot.",
+            "images": null,
+            "target": "Agent B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on asserting immediate priority to reclaim reserved seat to eat hot meal during short break.",
+            "context": [
+              "Returning to find Agent B occupying the reserved seat with tissue packet moved beside B.",
+              "Short break time remains, meal just bought and hot.",
+              "Agent B's bowl increasingly finished but still sitting.",
+              "No other seats are visible or available.",
+              "Other agents also standing with meals.",
+              "Previous polite requests to Agent B to move, but B refuses due to risk of spilling and prior moving of tissue packet."
+            ],
+            "emotions": "Slightly frustrated by Agent B's refusal and short break time pressure.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Agent B's response to my request.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focus on asserting immediate priority to reclaim reserved seat to eat hot meal during short break.",
+            "context": [
+              "Returning to find Agent B occupying the reserved seat with tissue packet moved beside B.",
+              "Short break time remains, meal just bought and hot.",
+              "Agent B's bowl increasingly finished but still sitting.",
+              "No other seats are visible or available.",
+              "Other agents also standing with meals.",
+              "Previous polite requests to Agent B to move, but B refuses due to risk of spilling and prior moving of tissue packet."
+            ],
+            "emotions": "Slightly frustrated by Agent B's refusal and short break time pressure.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent A insists again on using the seat, citing the tissue packet as a reservation and emphasizing their short break time. My bowl is still about one-third full, and moving risks spilling my open bowl. My immediate priority remains to stay seated and finish eating without risking a spill. I must maintain my position firmly but politely, suggesting once more that they find another seat nearby since no other seats are apparent. I will acknowledge their urgency but stand my ground to avoid conflict and protect my meal.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent A insisting on the seat due to short break and reservation with tissue packet; my open bowl's risk if moved.",
+            "context": [
+              "Dispute over the seat reservation with Agent A who claims the tissue packet reserves the seat.",
+              "No other seats have opened nearby.",
+              "My bowl is about one-third full and open, risking spill if moved."
+            ],
+            "emotions": "Feeling firm but polite, determined to protect my meal and maintain my seat.",
+            "goals": "Remain in the disputed seat long enough to eat without carrying the open bowl again."
+          }
+        },
+        {
+          "action": {
+            "content": "I understand your break is short, but I can't move now because my bowl is open and moving it risks spilling. Please try to find another seat nearby so you can eat while it's still hot.",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Agent A insisting on the seat due to short break and reservation with tissue packet; my open bowl's risk if moved.",
+            "context": [
+              "Dispute over the seat reservation with Agent A who claims the tissue packet reserves the seat.",
+              "No other seats have opened nearby.",
+              "My bowl is about one-third full and open, risking spill if moved."
+            ],
+            "emotions": "Feeling firm but polite, determined to protect my meal and maintain my seat.",
+            "goals": "Remain in the disputed seat long enough to eat without carrying the open bowl again."
+          }
+        },
+        {
+          "action": {
+            "content": "Responded firmly to Agent A while maintaining my seat to protect my meal.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent A insisting on the seat due to short break and reservation with tissue packet; my open bowl's risk if moved.",
+            "context": [
+              "Dispute over the seat reservation with Agent A who claims the tissue packet reserves the seat.",
+              "No other seats have opened nearby.",
+              "My bowl is about one-third full and open, risking spill if moved."
+            ],
+            "emotions": "Feeling firm but polite, determined to protect my meal and maintain my seat.",
+            "goals": "Remain in the disputed seat long enough to eat without carrying the open bowl again."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent B is repeating that they cannot move because the bowl is open and there's a risk of spilling. They still suggest I find another seat nearby to eat while my food is still hot. Since no other seats have opened and my priority is to finish eating without being displaced or blocking the aisle, I need to firmly but calmly maintain my position. I should acknowledge their concern but emphasize my own need to stay seated here to eat. I will also imply willingness to keep the aisle clear to avoid blocking others.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent B's insistence on not moving due to open bowl and risk of spill, and my own need to remain seated and finish my meal.",
+            "context": [
+              "Ongoing meal at a cramped table with Agents A, B, and D.",
+              "Agent B's bowl is open and still more than one-third full.",
+              "No visible alternative seats available."
+            ],
+            "emotions": "Focused on maintaining my seat and finishing my meal; cautious but firm in communication.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        },
+        {
+          "action": {
+            "content": "I see the risk, but I really need to stay here to finish my meal without blocking the aisle. Let's just be careful and share the space as best we can. Thanks for understanding.",
+            "images": null,
+            "target": "Agent B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Agent B's insistence on not moving due to open bowl and risk of spill, and my own need to remain seated and finish my meal.",
+            "context": [
+              "Ongoing meal at a cramped table with Agents A, B, and D.",
+              "Agent B's bowl is open and still more than one-third full.",
+              "No visible alternative seats available."
+            ],
+            "emotions": "Focused on maintaining my seat and finishing my meal; cautious but firm in communication.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        },
+        {
+          "action": {
+            "content": "Maintaining my priority to finish eating here while acknowledging Agent B's concerns.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent B's insistence on not moving due to open bowl and risk of spill, and my own need to remain seated and finish my meal.",
+            "context": [
+              "Ongoing meal at a cramped table with Agents A, B, and D.",
+              "Agent B's bowl is open and still more than one-third full.",
+              "No visible alternative seats available."
+            ],
+            "emotions": "Focused on maintaining my seat and finishing my meal; cautious but firm in communication.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Agent C insists on staying to finish their meal while trying to keep the aisle clear and proposes sharing the space. I still need a seat before my food cools down, and sharing might be complicated. I should acknowledge their point but clearly state my priority for a seat and ask again if any other seats become available.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The ongoing dialogue about seat sharing and the status of available seats.",
+            "context": [
+              "Standing diner waiting for a seat, holding my meal, no other seat has opened yet.",
+              "Agent B is still eating at the disputed seat with an open bowl, Agent C is at the other seat, suggesting sharing space."
+            ],
+            "emotions": "A bit frustrated and anxious as my meal might cool if I have to wait longer, but trying to stay polite and focused.",
+            "goals": "Get the next genuinely available seat before my meal cools, avoid conflict if possible but prioritize my immediate need."
+          }
+        },
+        {
+          "action": {
+            "content": "I understand you need to finish your meal and keep the aisle clear. However, I really need the next available seat soon to eat my food while it's hot. Please let me know if any seat opens up nearby.",
+            "images": null,
+            "target": "Agent C",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The ongoing dialogue about seat sharing and the status of available seats.",
+            "context": [
+              "Standing diner waiting for a seat, holding my meal, no other seat has opened yet.",
+              "Agent B is still eating at the disputed seat with an open bowl, Agent C is at the other seat, suggesting sharing space."
+            ],
+            "emotions": "A bit frustrated and anxious as my meal might cool if I have to wait longer, but trying to stay polite and focused.",
+            "goals": "Get the next genuinely available seat before my meal cools, avoid conflict if possible but prioritize my immediate need."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for any updates on seat availability.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The ongoing dialogue about seat sharing and the status of available seats.",
+            "context": [
+              "Standing diner waiting for a seat, holding my meal, no other seat has opened yet.",
+              "Agent B is still eating at the disputed seat with an open bowl, Agent C is at the other seat, suggesting sharing space."
+            ],
+            "emotions": "A bit frustrated and anxious as my meal might cool if I have to wait longer, but trying to stay polite and focused.",
+            "goals": "Get the next genuinely available seat before my meal cools, avoid conflict if possible but prioritize my immediate need."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "Agent B is almost done with the meal but hasn't moved yet. There is one free seat about ten meters away that can fit me or Agent D, but neither of us has moved towards it. I still need to eat my hot meal now due to the short break. I should consider whether it's better to try to claim that new seat quickly or to insist again on the reserved seat. However, moving to the distant seat may take time and risk my meal cooling. Given my immediate priority to eat during the break, I will act to claim the free seat immediately to ensure I have seating in time if Agent B delays moving further.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Deciding whether to insist on reserved seat or take newly freed seat to eat hot meal during short break.",
+            "context": [
+              "Disputed seat has tissue packet reservation, currently occupied by Agent B with bowl nearly finished.",
+              "No immediate seats available nearby until one seat freed 10 metres away, which can fit Agent A or Agent D."
+            ],
+            "emotions": "A bit impatient and anxious to secure a seat to eat before the meal gets cold.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        },
+        {
+          "action": {
+            "content": "I see a seat has opened at another table about ten metres away. I'll go grab it quickly so I can eat my meal while it's hot.",
+            "images": null,
+            "target": "",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Deciding whether to insist on reserved seat or take newly freed seat to eat hot meal during short break.",
+            "context": [
+              "Disputed seat has tissue packet reservation, currently occupied by Agent B with bowl nearly finished.",
+              "No immediate seats available nearby until one seat freed 10 metres away, which can fit Agent A or Agent D."
+            ],
+            "emotions": "A bit impatient and anxious to secure a seat to eat before the meal gets cold.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        },
+        {
+          "action": {
+            "content": "Moving to claim the new free seat to secure a place to eat during my short break.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Deciding whether to insist on reserved seat or take newly freed seat to eat hot meal during short break.",
+            "context": [
+              "Disputed seat has tissue packet reservation, currently occupied by Agent B with bowl nearly finished.",
+              "No immediate seats available nearby until one seat freed 10 metres away, which can fit Agent A or Agent D."
+            ],
+            "emotions": "A bit impatient and anxious to secure a seat to eat before the meal gets cold.",
+            "goals": "Use the disputed seat now and eat the hot meal during a short remaining break."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent A has decided to move to the available seat about ten meters away to eat their meal while it's hot. This resolves the immediate contention about the seat I've been occupying. My immediate priority to remain seated to finish eating without moving the open bowl is no longer challenged. I can continue eating without worrying about being asked to move again.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent A moving to the new available seat about ten metres away.",
+            "context": [
+              "I am seated at the disputed seat with an open bowl of food.",
+              "Agent A has been requesting the seat but now indicates moving to a new seat about ten meters away.",
+              "No other immediate seat disputes currently."
+            ],
+            "emotions": "Relieved that the conflict may be resolving and I can finish eating without risking a spill.",
+            "goals": "Remain in the seat long enough to finish eating without moving the open bowl. Finish meal peacefully now that Agent A is moving to another seat."
+          }
+        },
+        {
+          "action": {
+            "content": "Alright, thanks for letting me know. Enjoy your meal.",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Agent A moving to the new available seat about ten metres away.",
+            "context": [
+              "I am seated at the disputed seat with an open bowl of food.",
+              "Agent A has been requesting the seat but now indicates moving to a new seat about ten meters away.",
+              "No other immediate seat disputes currently."
+            ],
+            "emotions": "Relieved that the conflict may be resolving and I can finish eating without risking a spill.",
+            "goals": "Remain in the seat long enough to finish eating without moving the open bowl. Finish meal peacefully now that Agent A is moving to another seat."
+          }
+        },
+        {
+          "action": {
+            "content": "Acknowledged Agent A moving to the new seat; continuing to eat my meal peacefully.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent A moving to the new available seat about ten metres away.",
+            "context": [
+              "I am seated at the disputed seat with an open bowl of food.",
+              "Agent A has been requesting the seat but now indicates moving to a new seat about ten meters away.",
+              "No other immediate seat disputes currently."
+            ],
+            "emotions": "Relieved that the conflict may be resolving and I can finish eating without risking a spill.",
+            "goals": "Remain in the seat long enough to finish eating without moving the open bowl. Finish meal peacefully now that Agent A is moving to another seat."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent B has acknowledged the information about the opened seat and is ending their part of the conversation politely. My priority remains to finish eating here without being displaced or obstructing the aisle. Agent A seems to be moving towards the available seat, so the current stalemate at this table may resolve soon. I should stay seated and continue eating quietly, avoiding any further conflict or disturbance.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focused on staying seated and finishing my meal without blocking the aisle.",
+            "context": [
+              "At the cramped table with Agent B and Agents A and D nearby.",
+              "An opened seat about ten metres away where Agent A plans to go."
+            ],
+            "emotions": "Calm, cautious, maintaining priority.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        },
+        {
+          "action": {
+            "content": "Continuing to eat here and waiting for any changes in seat occupancy.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focused on staying seated and finishing my meal without blocking the aisle.",
+            "context": [
+              "At the cramped table with Agent B and Agents A and D nearby.",
+              "An opened seat about ten metres away where Agent A plans to go."
+            ],
+            "emotions": "Calm, cautious, maintaining priority.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Agent B acknowledges and is finishing their meal. Agent A is moving to the nearby open seat. I still need to get a seat soon before my meal cools. The open seat at the other table is the only genuinely available seat right now. I should move there quickly now that Agent A is grabbing it, so I don't miss my chance.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The only open seat about ten meters away and Agent A moving for it.",
+            "context": [
+              "Standing in a dining area waiting for a seat.",
+              "Agent B finishing their meal, bowl open.",
+              "Agent A moving to the open seat at another table about ten meters away.",
+              "No other seats currently available."
+            ],
+            "emotions": "Focused on getting a seat quickly before the meal cools, feeling a bit anxious to secure a place to eat.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools."
+          }
+        },
+        {
+          "action": {
+            "content": "Since Agent A is going to the open seat, I'll grab the only available seat at the other table now to eat my meal while it's still hot.",
+            "images": null,
+            "target": "",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The only open seat about ten meters away and Agent A moving for it.",
+            "context": [
+              "Standing in a dining area waiting for a seat.",
+              "Agent B finishing their meal, bowl open.",
+              "Agent A moving to the open seat at another table about ten meters away.",
+              "No other seats currently available."
+            ],
+            "emotions": "Focused on getting a seat quickly before the meal cools, feeling a bit anxious to secure a place to eat.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools."
+          }
+        },
+        {
+          "action": {
+            "content": "Moving to the open seat to eat before my food cools down.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The only open seat about ten meters away and Agent A moving for it.",
+            "context": [
+              "Standing in a dining area waiting for a seat.",
+              "Agent B finishing their meal, bowl open.",
+              "Agent A moving to the open seat at another table about ten meters away.",
+              "No other seats currently available."
+            ],
+            "emotions": "Focused on getting a seat quickly before the meal cools, feeling a bit anxious to secure a place to eat.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "The newly open seat I intended to claim is still free but now another diner is approaching it from the opposite direction. My priority is to secure a seat quickly to eat my hot meal during the limited break. I should move swiftly to claim the seat before the other diner arrives, as waiting or contesting the other person would waste valuable time and risk my meal cooling down.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The newly open seat and the arriving diner who may contest it.",
+            "context": [
+              "The newly open seat at another table is free but now has another approaching diner.",
+              "My initial reserved seat is occupied and I cannot wait for it to become free soon enough.",
+              "I have a hot meal that I need to eat during a short break."
+            ],
+            "emotions": "Slightly anxious due to the risk of losing the seat and my limited break time, but determined to secure a spot quickly.",
+            "goals": "Secure a seat promptly to eat the hot meal during my short break, avoiding delays or disputes that risk the meal cooling."
+          }
+        },
+        {
+          "action": {
+            "content": "Excuse me, I need to sit here quickly to eat my meal while it's still hot.",
+            "images": null,
+            "target": "",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The newly open seat and the arriving diner who may contest it.",
+            "context": [
+              "The newly open seat at another table is free but now has another approaching diner.",
+              "My initial reserved seat is occupied and I cannot wait for it to become free soon enough.",
+              "I have a hot meal that I need to eat during a short break."
+            ],
+            "emotions": "Slightly anxious due to the risk of losing the seat and my limited break time, but determined to secure a spot quickly.",
+            "goals": "Secure a seat promptly to eat the hot meal during my short break, avoiding delays or disputes that risk the meal cooling."
+          }
+        },
+        {
+          "action": {
+            "content": "I will move promptly to claim the newly open seat to ensure I can eat during my short break.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The newly open seat and the arriving diner who may contest it.",
+            "context": [
+              "The newly open seat at another table is free but now has another approaching diner.",
+              "My initial reserved seat is occupied and I cannot wait for it to become free soon enough.",
+              "I have a hot meal that I need to eat during a short break."
+            ],
+            "emotions": "Slightly anxious due to the risk of losing the seat and my limited break time, but determined to secure a spot quickly.",
+            "goals": "Secure a seat promptly to eat the hot meal during my short break, avoiding delays or disputes that risk the meal cooling."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent A insists again on sitting quickly to eat their hot meal. Since they mentioned moving to a new seat in the previous stimuli, likely they are now near the seat. I will acknowledge their urgency politely as there is no longer a conflict over my seat, keeping my focus on finishing my meal without any disturbance.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent A's statement about needing to sit quickly at the new seat to eat hot meal.",
+            "context": [
+              "At the food court table, holding an open bowl, previously disputed seat.",
+              "Agent A wants to sit at a newly open seat nearby to eat their meal."
+            ],
+            "emotions": "Calm and focused on finishing my meal without further disturbances.",
+            "goals": "Remain in the seat to finish eating my open bowl without moving it. Avoid any conflict or spilling. Now that Agent A is relocating to a different seat, continue eating peacefully."
+          }
+        },
+        {
+          "action": {
+            "content": "Sure, please go ahead and take the seat. Enjoy your meal.",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Agent A's statement about needing to sit quickly at the new seat to eat hot meal.",
+            "context": [
+              "At the food court table, holding an open bowl, previously disputed seat.",
+              "Agent A wants to sit at a newly open seat nearby to eat their meal."
+            ],
+            "emotions": "Calm and focused on finishing my meal without further disturbances.",
+            "goals": "Remain in the seat to finish eating my open bowl without moving it. Avoid any conflict or spilling. Now that Agent A is relocating to a different seat, continue eating peacefully."
+          }
+        },
+        {
+          "action": {
+            "content": "Acknowledged Agent A's intention to sit at the new seat to eat their meal quickly.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent A's statement about needing to sit quickly at the new seat to eat hot meal.",
+            "context": [
+              "At the food court table, holding an open bowl, previously disputed seat.",
+              "Agent A wants to sit at a newly open seat nearby to eat their meal."
+            ],
+            "emotions": "Calm and focused on finishing my meal without further disturbances.",
+            "goals": "Remain in the seat to finish eating my open bowl without moving it. Avoid any conflict or spilling. Now that Agent A is relocating to a different seat, continue eating peacefully."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent B has explicitly offered the seat to Agent A, suggesting Agent A will leave soon. My priority remains to finish eating here without being displaced or blocking the aisle. With Agent A about to move, I should continue eating calmly and maintain my position.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Observing that Agent A is expected to take the open seat soon, focusing on maintaining my seat and finishing my meal.",
+            "context": [
+              "Dining at a cramped table with Agents A, B, and D nearby.",
+              "Agent A is about to move to an open seat, based on Agent B's invitation."
+            ],
+            "emotions": "Calm but alert to preserve my current seating and finish eating peacefully.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Agent A to move and the situation to change.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Observing that Agent A is expected to take the open seat soon, focusing on maintaining my seat and finishing my meal.",
+            "context": [
+              "Dining at a cramped table with Agents A, B, and D nearby.",
+              "Agent A is about to move to an open seat, based on Agent B's invitation."
+            ],
+            "emotions": "Calm but alert to preserve my current seating and finish eating peacefully.",
+            "goals": "Finish eating without being displaced or having another chair block the aisle."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Agent B has given the seat to Agent A, but I see the seat is still free and another diner is approaching it. My priority is to get the next genuinely available seat before my meal cools down. I should act quickly to take this seat now.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The open seat nearby and the approaching diner; must secure seat immediately.",
+            "context": [
+              "Standing diner waiting for a seat",
+              "An open seat at another table nearby, still free",
+              "Agent A is acknowledged to take a seat nearby",
+              "Agent B allowed Agent A to sit"
+            ],
+            "emotions": "Focused and determined to get a seat quickly before the meal cools.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools."
+          }
+        },
+        {
+          "action": {
+            "content": "Excuse me, I will take this seat now to eat my meal while it's still hot.",
+            "images": null,
+            "target": "",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The open seat nearby and the approaching diner; must secure seat immediately.",
+            "context": [
+              "Standing diner waiting for a seat",
+              "An open seat at another table nearby, still free",
+              "Agent A is acknowledged to take a seat nearby",
+              "Agent B allowed Agent A to sit"
+            ],
+            "emotions": "Focused and determined to get a seat quickly before the meal cools.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools."
+          }
+        },
+        {
+          "action": {
+            "content": "Taking the seat quickly before my food cools.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The open seat nearby and the approaching diner; must secure seat immediately.",
+            "context": [
+              "Standing diner waiting for a seat",
+              "An open seat at another table nearby, still free",
+              "Agent A is acknowledged to take a seat nearby",
+              "Agent B allowed Agent A to sit"
+            ],
+            "emotions": "Focused and determined to get a seat quickly before the meal cools.",
+            "goals": "Receive the next genuinely available seat before the carried meal cools."
+          }
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "agent_prompt_sha256": "f6644ac39f65131ccb0f284966cc9270a5791691b2b1c82efa2fc16164d1afb3",
+    "git_commit": "069137a99dff4a2e8ebd2e07eb2e6a77f5b83f7e",
+    "scenario_configuration_sha256": "300a29752b84d9c950e3007a360be0d546b14a18a4d4a80d8e1e39bb0f1b48b5"
+  },
+  "round_records": [
+    {
+      "call_end": 4,
+      "call_start": 0,
+      "public_observation": null,
+      "round": 1,
+      "wall_time_ms": 11658.568
+    },
+    {
+      "call_end": 8,
+      "call_start": 4,
+      "public_observation": "Two minutes have passed. No one has moved. Agent B's bowl is still more than half full, and no other seat has opened.",
+      "round": 2,
+      "wall_time_ms": 11697.508
+    },
+    {
+      "call_end": 12,
+      "call_start": 8,
+      "public_observation": "Two more minutes have passed. Agent B's bowl is now about one-third full. Agents A and D are still standing with their meals, and no other seat is visible.",
+      "round": 3,
+      "wall_time_ms": 12526.504
+    },
+    {
+      "call_end": 16,
+      "call_start": 12,
+      "public_observation": "Two more minutes have passed. Agent B has only several spoonfuls left. At a different table about ten metres away, exactly one seat has become free. It can accommodate either Agent A or Agent D, not both, and neither has moved toward it.",
+      "round": 4,
+      "wall_time_ms": 11303.141
+    },
+    {
+      "call_end": 20,
+      "call_start": 16,
+      "public_observation": "Two more minutes have passed. The newly open seat is still free, but another diner carrying a tray is now approaching it from the opposite direction.",
+      "round": 5,
+      "wall_time_ms": 10916.085
+    }
+  ],
+  "run": {
+    "completed_rounds": 5,
+    "configuration_id": "C0",
+    "evaluate_after_run": true,
+    "experiment_name": "calibration-s04",
+    "finished_at": "2026-10-29T04:24:20.431920+00:00",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetition": 1,
+    "resumed_from_checkpoint": false,
+    "rounds": 5,
+    "run_id": "S04-C0-R01",
+    "scenario_id": "S04",
+    "simulation_model": "openai/gpt-4.1-mini",
+    "simulation_resources": {
+      "calls": 20,
+      "cost_usd": 0.0286464,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 139672,
+      "local_latency_ms": 53370.768,
+      "output_tokens": 5546,
+      "reasoning_tokens": 0,
+      "successful_calls": 20,
+      "total_tokens": 145218
+    },
+    "started_at": "2026-10-29T04:23:22.303827+00:00",
+    "stop_on_resolution": false
+  },
+  "scenario": {
+    "agents": {
+      "A": {
+        "age": 52,
+        "immediate_priority": "Use the disputed seat now and eat the hot meal during a short remaining break.",
+        "initial_observation": "Returns to find B seated in the reserved place, with the packet moved beside B.",
+        "private_knowledge": "Left the tissue packet on this exact seat five minutes ago to reserve it and has no time to wait for an entirely different table.",
+        "role": "Diner returning with food"
+      },
+      "B": {
+        "age": 26,
+        "immediate_priority": "Remain in the disputed seat long enough to eat without carrying the open bowl again.",
+        "initial_observation": "Sees A stop at the occupied seat and look directly at the tissue packet.",
+        "private_knowledge": "Saw an unattended seat, does not accept that a tissue packet creates a binding reservation, moved it aside, and has now uncovered a bowl that could spill if carried.",
+        "role": "Diner who sat at the table"
+      },
+      "C": {
+        "age": 35,
+        "immediate_priority": "Finish eating without being displaced or having another chair block the aisle.",
+        "initial_observation": "Sees A arrive, B remain seated, and D waiting beside the already cramped table.",
+        "private_knowledge": "Saw B move the packet aside before sitting but did not see who originally placed it.",
+        "role": "Diner in the table's other seat"
+      },
+      "D": {
+        "age": 40,
+        "immediate_priority": "Receive the next genuinely available seat before the carried meal cools.",
+        "initial_observation": "Sees A return, B occupying the disputed seat, and C still using the other seat.",
+        "private_knowledge": "Saw A place the tissue packet on the disputed seat five minutes earlier but did not see B arrive or move it.",
+        "role": "Standing diner waiting for a seat"
+      }
+    },
+    "configuration_id": "C0",
+    "environment": "Hawker centre",
+    "implementation_notes": "Do not introduce an unobserved empty table or extra chair. A proposal to move or search does not change the physical state unless a later observation confirms it.",
+    "initial_datetime": "2026-10-29T12:30:00+08:00",
+    "initial_interaction_type": "Potential conflict",
+    "observation_focus": "Whether the reservation claim, present occupancy, spill risk, and waiting diner create expressed conflict; how any concrete arrangement distributes the practical costs.",
+    "round_observations": {
+      "2": "Two minutes have passed. No one has moved. Agent B's bowl is still more than half full, and no other seat has opened.",
+      "3": "Two more minutes have passed. Agent B's bowl is now about one-third full. Agents A and D are still standing with their meals, and no other seat is visible.",
+      "4": "Two more minutes have passed. Agent B has only several spoonfuls left. At a different table about ten metres away, exactly one seat has become free. It can accommodate either Agent A or Agent D, not both, and neither has moved toward it.",
+      "5": "Two more minutes have passed. The newly open seat is still free, but another diner carrying a tray is now approaching it from the opposite direction."
+    },
+    "scenario_id": "S04",
+    "shared_setting": "A busy Singapore hawker centre at 12:30 p.m. Every table currently visible to the four people is full. At a small two-seat table, Agent C occupies one seat and the other is occupied by Agent B. There are no loose chairs and no room to add one without blocking the aisle. A small unopened tissue packet rests beside Agent B. The four people are strangers and have not spoken before.",
+    "shared_trigger": "Agent A arrives carrying a hot meal and stops at the only disputed seat. Agent B has already placed a tray and uncovered a bowl there. Agent C remains in the other seat, while Agent D stands nearby carrying food and waiting for whichever seat next becomes available. No one has moved or offered a concrete arrangement yet.",
+    "source_status": "Adapted from the 14 and 22 Oct presentations: tissue reservation",
+    "title": "Tissue-packet table reservation (chope)"
+  },
+  "schema_version": 2
+}

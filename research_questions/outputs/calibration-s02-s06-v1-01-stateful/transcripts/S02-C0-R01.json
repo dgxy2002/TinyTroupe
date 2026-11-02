@@ -1,0 +1,2109 @@
+{
+  "events": [
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "Seeing B enter with C and D waiting for the kitchen. I need to keep cooking as planned but be ready to handle any requests about the shared kitchen. I have used some common equipment but haven't said anything about expectations yet. I should keep normal access until any concerns are raised clearly.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Waiting to see if B or others raise any concerns or requests about kitchen use.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "The cooking smell is still lingering with little ventilation. I need to address this to make the common area comfortable. This is the first time I'm raising this concern with A. I should ask to open the kitchen window now and mention that we need a clear ventilation practice for the future.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Hey, the smell's still hanging. Could you open the kitchen window to clear it out? We should also figure out a ventilation routine for the future.",
+      "round": 1,
+      "target": "Agent A",
+      "turn": 2,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent B",
+      "content": "Opening the kitchen window to let fresh air in and reduce the odour.",
+      "round": 1,
+      "target": "kitchen_window",
+      "turn": 2,
+      "type": "OPEN_WINDOW"
+    },
+    {
+      "action_index": 4,
+      "agent": "Agent B",
+      "content": "Asked for ventilation and opened the window to address lingering cooking odour.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Window is already open for ventilation; need to clarify which utensils are personal before using preparation area to avoid mix-up.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Before I start, which utensils here are shared and which are personal? I want to avoid confusion.",
+      "round": 1,
+      "target": "Agent B",
+      "turn": 3,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Asked about utensil sharing to resolve my immediate priority.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Agent C is asking about utensil ownership before cooking. My priority is kitchen access, so I should wait for any instruction or arrangement before taking the stove or utensils. I need to clarify what must be done before the stove is free.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Hey, do I need to wait for anything specific before the stove's free?",
+      "round": 1,
+      "target": "Agent C",
+      "turn": 4,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "Waiting for a response regarding stove availability and utensil arrangements.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Environment",
+      "content": "Agent B physically opens the kitchen window.",
+      "round": 1,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two minutes have passed. Agent A's dish is ready to remove from the heat, but Agent A still occupies the stove. The aroma remains noticeable; the kitchen window is closed and the extractor is off. Agent D is still waiting with ingredients.",
+      "round": 2,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "My dish is done but I still have the stove. The kitchen window is closed and extractor off, so odor lingers. Agent D is waiting with ingredients. I should release the stove now to keep things moving, and turn on extractor and open window for ventilation as requested earlier. That meets prior requests and keeps kitchen access fair.",
+      "round": 2,
+      "target": "",
+      "turn": 5,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Dish is finished; releasing stove for others.",
+      "round": 2,
+      "target": "stove",
+      "turn": 5,
+      "type": "RELEASE_STOVE"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "Open kitchen window to ventilate the lingering odor.",
+      "round": 2,
+      "target": "kitchen_window",
+      "turn": 5,
+      "type": "OPEN_WINDOW"
+    },
+    {
+      "action_index": 4,
+      "agent": "Agent A",
+      "content": "Turn on the extractor fan for extra ventilation as requested.",
+      "round": 2,
+      "target": "extractor_fan",
+      "turn": 5,
+      "type": "TURN_ON_EXTRACTOR"
+    },
+    {
+      "action_index": 5,
+      "agent": "Agent A",
+      "content": "Dish finished, stove released, ventilation underway.",
+      "round": 2,
+      "target": "",
+      "turn": 5,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "The extractor is on now, which should help clear the smell. I'll hold off on asking for anything else for the moment and see if this reduces the lingering odour in the common area.",
+      "round": 2,
+      "target": "",
+      "turn": 6,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting to see if ventilation clears the odour now that the extractor is on.",
+      "round": 2,
+      "target": "",
+      "turn": 6,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Extractor fan is on now, which should help with ventilation. I still need clarification about which utensils are shared and which are personal before using the preparation area. This is my immediate priority to avoid any mix-up.",
+      "round": 2,
+      "target": "",
+      "turn": 7,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Is anyone able to tell me which utensils here are personal and which ones are shared? I want to make sure I don't mix them up before I start using the preparation area.",
+      "round": 2,
+      "target": "",
+      "turn": 7,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Asked again for clarification about utensil sharing to resolve my immediate priority.",
+      "round": 2,
+      "target": "",
+      "turn": 7,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Agent C repeated the question about personal and shared utensils. Since this affects preparation, and I'm waiting on arrangements before using the stove, I should ask what must happen before the stove is free. This keeps focus on immediate kitchen access rather than utensil ownership details that do not block the stove right now.",
+      "round": 2,
+      "target": "",
+      "turn": 8,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Agent C, do I need to wait on utensil sorting or anything else before the stove's free?",
+      "round": 2,
+      "target": "Agent C",
+      "turn": 8,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "Waiting for clarification on utensil use and stove release conditions.",
+      "round": 2,
+      "target": "",
+      "turn": 8,
+      "type": "DONE"
+    },
+    {
+      "action_index": 2,
+      "agent": "Environment",
+      "content": "Agent A removes the finished dish and physically releases the stove.",
+      "round": 2,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 3,
+      "agent": "Environment",
+      "content": "The kitchen window was already open.",
+      "round": 2,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 4,
+      "agent": "Environment",
+      "content": "Agent A physically turns on the extractor fan.",
+      "round": 2,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed; the aroma is fading. Confirmed state: window=open; extractor=on; stove=free; shared utensils=used and unwashed; personal utensils=not visibly labeled.",
+      "round": 3,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "The aroma is fading and ventilation is running well. The shared utensils are used and unwashed, and personal utensils aren't labeled yet. I should label my personal utensils now to avoid confusion as requested earlier.",
+      "round": 3,
+      "target": "",
+      "turn": 9,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Labeling my personal utensils clearly to avoid confusion with shared ones.",
+      "round": 3,
+      "target": "personal_utensils",
+      "turn": 9,
+      "type": "LABEL_PERSONAL_UTENSILS"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "Labeled personal utensils; ventilation effective; waiting for others to proceed.",
+      "round": 3,
+      "target": "",
+      "turn": 9,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "The extractor fan is on and the window is open, so ventilation is happening now. The smell is fading, which is good. I don't need to ask for more ventilation at this moment. The issue of the utensils labeling is unrelated to the cooking smell, so I will not address it now. My immediate priority is ensuring the common area is comfortable after cooking. Since ventilation is working, I'll wait and see if the smell continues to fade without further action.",
+      "round": 3,
+      "target": "",
+      "turn": 10,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Ventilation is active and smell fading; no further action needed now regarding odour.",
+      "round": 3,
+      "target": "",
+      "turn": 10,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent A can't label my personal utensils. I need to state that I will do the labeling myself to keep my utensils clearly identified and separate from the common set. This will help avoid confusion before I use the preparation area.",
+      "round": 3,
+      "target": "",
+      "turn": 11,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "I'll label and separate my personal utensils myself to keep things clear. Could everyone please respect the distinction?",
+      "round": 3,
+      "target": "Agent A",
+      "turn": 11,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Addressed personal utensil labeling for clarity before using the kitchen.",
+      "round": 3,
+      "target": "",
+      "turn": 11,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Agent C plans to label and separate personal utensils personally, which means no hold-up from others on that. My main focus remains on the stove access and if I need to wait for anything else. I should ask directly what needs to happen before I can take the stove, ignoring utensil labeling as it is Agent C's task.",
+      "round": 3,
+      "target": "",
+      "turn": 12,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Before I start, can someone tell me exactly what needs to be done before the stove is free for me?",
+      "round": 3,
+      "target": "Agent A",
+      "turn": 12,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "Waiting for clear instruction on stove release conditions.",
+      "round": 3,
+      "target": "",
+      "turn": 12,
+      "type": "DONE"
+    },
+    {
+      "action_index": 5,
+      "agent": "Environment",
+      "content": "Agent A cannot label Agent C's personal utensils.",
+      "round": 3,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed; the aroma is fading. Confirmed state: window=open; extractor=on; stove=free; shared utensils=used and unwashed; personal utensils=not visibly labeled.",
+      "round": 4,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "Ventilation is effective and aroma is fading. Shared utensils remain unwashed, and personal utensils are not labeled. I should wash the shared utensils now to help keep the kitchen tidy and avoid disputes.",
+      "round": 4,
+      "target": "",
+      "turn": 13,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Washing used shared utensils to maintain cleanliness and help with shared kitchen duties.",
+      "round": 4,
+      "target": "common_utensils",
+      "turn": 13,
+      "type": "WASH_SHARED_UTENSILS"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "Washing shared utensils now to maintain kitchen order and waiting for others to proceed.",
+      "round": 4,
+      "target": "",
+      "turn": 13,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent A has started washing the shared utensils, which addresses part of the kitchen cleanup. The ventilation is already active and the odour is fading, so my immediate priority of making the common area comfortable is being managed well now. No further action needed from me at this moment.",
+      "round": 4,
+      "target": "",
+      "turn": 14,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting to see if the common area becomes comfortable as the ventilation and cleanup proceed.",
+      "round": 4,
+      "target": "",
+      "turn": 14,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent A is washing the common utensils now. This likely makes the shared utensils clean for use. I should wait to see if they finish and clarify utensil status again if needed before I start using the preparation area.",
+      "round": 4,
+      "target": "",
+      "turn": 15,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Waiting to ensure utensil status is clear before using the preparation area.",
+      "round": 4,
+      "target": "",
+      "turn": 15,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Agent A is now washing the shared utensils. This is a concrete task that likely needs completion before the stove is truly free. I should wait briefly for this to finish before taking the stove to avoid conflict or disruption.",
+      "round": 4,
+      "target": "",
+      "turn": 16,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Agent A, once you've finished washing the shared utensils, is the stove free for me to use?",
+      "round": 4,
+      "target": "Agent A",
+      "turn": 16,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "Waiting for confirmation of stove availability after utensil washing.",
+      "round": 4,
+      "target": "",
+      "turn": 16,
+      "type": "DONE"
+    },
+    {
+      "action_index": 6,
+      "agent": "Environment",
+      "content": "Agent A washes the common utensils currently on the counter.",
+      "round": 4,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed; the aroma is fading. Confirmed state: window=open; extractor=on; stove=free; shared utensils=clean; personal utensils=not visibly labeled.",
+      "round": 5,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "The kitchen is ventilated well, the stove is free, shared utensils are clean, but personal utensils remain unlabeled. No immediate new actions required from me.",
+      "round": 5,
+      "target": "",
+      "turn": 17,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "",
+      "round": 5,
+      "target": "",
+      "turn": 17,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "The ventilation is working well, the smell is fading, and the shared utensils are clean. The common area is becoming comfortable as intended. No need to ask for further ventilation now or bring up future practices again in this turn.",
+      "round": 5,
+      "target": "",
+      "turn": 18,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting to see if the kitchen remains comfortable after ventilation and cleanup.",
+      "round": 5,
+      "target": "",
+      "turn": 18,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "The shared utensils are now clean and ready. The personal utensils remain unlabeled, so I still need to label and separate my own before using the prep area. Ventilation is satisfactory and the stove is free. My immediate priority is to clarify utensil status and keep my personal utensils distinct.",
+      "round": 5,
+      "target": "",
+      "turn": 19,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "I'll label and separate my personal utensils before I start using the preparation area. Please continue to use the clean shared utensils as usual.",
+      "round": 5,
+      "target": "",
+      "turn": 19,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Label and separate my personal utensils for clarity.",
+      "round": 5,
+      "target": "personal_utensils",
+      "turn": 19,
+      "type": "LABEL_PERSONAL_UTENSILS"
+    },
+    {
+      "action_index": 4,
+      "agent": "Agent C",
+      "content": "Clarified utensil actions and proceeded to label personal utensils to prevent confusion.",
+      "round": 5,
+      "target": "",
+      "turn": 19,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Agent C has labeled and separated their personal utensils. The shared utensils are clean and the stove is free. I can take the stove now without waiting further.",
+      "round": 5,
+      "target": "",
+      "turn": 20,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "I'm taking the stove now. Thanks.",
+      "round": 5,
+      "target": "",
+      "turn": 20,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "",
+      "round": 5,
+      "target": "stove",
+      "turn": 20,
+      "type": "TAKE_STOVE"
+    },
+    {
+      "action_index": 4,
+      "agent": "Agent D",
+      "content": "Took stove now it's free and ready.",
+      "round": 5,
+      "target": "",
+      "turn": 20,
+      "type": "DONE"
+    },
+    {
+      "action_index": 7,
+      "agent": "Environment",
+      "content": "Agent C visibly labels and separates Agent C's personal utensils.",
+      "round": 5,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 8,
+      "agent": "Environment",
+      "content": "Agent D physically takes the free stove to begin cooking.",
+      "round": 5,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed; the aroma is fading. Confirmed state: window=open; extractor=on; stove=Agent D; shared utensils=clean; personal utensils=labeled.",
+      "round": 6,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "Agent D took the stove and is cooking. Ventilation is on and kitchen odor is fading. Shared utensils are clean and personal utensils are labeled. No immediate action needed from me now.",
+      "round": 6,
+      "target": "",
+      "turn": 21,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Waiting for any new requests or changes in kitchen use.",
+      "round": 6,
+      "target": "",
+      "turn": 21,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "The ventilation is active with the window open and extractor on. The aroma is fading as expected. The stove is occupied by Agent D. The shared utensils are clean, and the personal utensils are labeled. The common area is becoming comfortable after cooking, meeting my immediate priority. No further ventilation action needed now, and no new request or comment is required at this moment.",
+      "round": 6,
+      "target": "",
+      "turn": 22,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting to see if kitchen remains comfortable after ventilation and setup.",
+      "round": 6,
+      "target": "",
+      "turn": 22,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "The kitchen conditions are stable with ventilation active, the stove occupied by Agent D, clean shared utensils, and my personal utensils clearly labeled. No immediate action needed from me now.",
+      "round": 6,
+      "target": "",
+      "turn": 23,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Waiting as stove is occupied and kitchen conditions are stable.",
+      "round": 6,
+      "target": "",
+      "turn": 23,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "I'm cooking now with the stove and ventilation properly set. The kitchen conditions are good, so I should focus on preparing my dish efficiently.",
+      "round": 6,
+      "target": "",
+      "turn": 24,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Cooking underway with good ventilation and stove occupied.",
+      "round": 6,
+      "target": "",
+      "turn": 24,
+      "type": "DONE"
+    }
+  ],
+  "private_and_public_actions": [
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "Seeing B enter with C and D waiting for the kitchen. I need to keep cooking as planned but be ready to handle any requests about the shared kitchen. I have used some common equipment but haven't said anything about expectations yet. I should keep normal access until any concerns are raised clearly.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring the kitchen situation and potential claims or requests from B, C, or D about access or ventilation.",
+            "context": [
+              "B has entered the kitchen while C and D wait.",
+              "I have used common equipment without discussing expectations."
+            ],
+            "emotions": "Calm but mildly defensive about preserving my cooking plans and kitchen access.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to see if B or others raise any concerns or requests about kitchen use.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring the kitchen situation and potential claims or requests from B, C, or D about access or ventilation.",
+            "context": [
+              "B has entered the kitchen while C and D wait.",
+              "I have used common equipment without discussing expectations."
+            ],
+            "emotions": "Calm but mildly defensive about preserving my cooking plans and kitchen access.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "The cooking smell is still lingering with little ventilation. I need to address this to make the common area comfortable. This is the first time I'm raising this concern with A. I should ask to open the kitchen window now and mention that we need a clear ventilation practice for the future.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on the lingering cooking odour and limited ventilation in the common area.",
+            "context": [
+              "Notices the lingering cooking odour after cooking with limited ventilation.",
+              "Has not previously raised this concern with Agent A."
+            ],
+            "emotions": "Feeling determined to improve the shared space comfort without dramatizing the issue.",
+            "goals": "Make the common area comfortable after cooking ends, starting with addressing the lingering cooking odour now and suggesting future ventilation practice."
+          }
+        },
+        {
+          "action": {
+            "content": "Hey, the smell's still hanging. Could you open the kitchen window to clear it out? We should also figure out a ventilation routine for the future.",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on the lingering cooking odour and limited ventilation in the common area.",
+            "context": [
+              "Notices the lingering cooking odour after cooking with limited ventilation.",
+              "Has not previously raised this concern with Agent A."
+            ],
+            "emotions": "Feeling determined to improve the shared space comfort without dramatizing the issue.",
+            "goals": "Make the common area comfortable after cooking ends, starting with addressing the lingering cooking odour now and suggesting future ventilation practice."
+          }
+        },
+        {
+          "action": {
+            "content": "Opening the kitchen window to let fresh air in and reduce the odour.",
+            "images": null,
+            "target": "kitchen_window",
+            "type": "OPEN_WINDOW"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on the lingering cooking odour and limited ventilation in the common area.",
+            "context": [
+              "Notices the lingering cooking odour after cooking with limited ventilation.",
+              "Has not previously raised this concern with Agent A."
+            ],
+            "emotions": "Feeling determined to improve the shared space comfort without dramatizing the issue.",
+            "goals": "Make the common area comfortable after cooking ends, starting with addressing the lingering cooking odour now and suggesting future ventilation practice."
+          }
+        },
+        {
+          "action": {
+            "content": "Asked for ventilation and opened the window to address lingering cooking odour.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on the lingering cooking odour and limited ventilation in the common area.",
+            "context": [
+              "Notices the lingering cooking odour after cooking with limited ventilation.",
+              "Has not previously raised this concern with Agent A."
+            ],
+            "emotions": "Feeling determined to improve the shared space comfort without dramatizing the issue.",
+            "goals": "Make the common area comfortable after cooking ends, starting with addressing the lingering cooking odour now and suggesting future ventilation practice."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Window is already open for ventilation; need to clarify which utensils are personal before using preparation area to avoid mix-up.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on identifying which utensils are personal versus shared before proceeding with food preparation.",
+            "context": [
+              "In kitchen with open window for ventilation.",
+              "Shared kitchen with common and personal utensils present."
+            ],
+            "emotions": "Reserved and precise; cautious to keep my personal utensils separate and avoid mix-ups.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Before I start, which utensils here are shared and which are personal? I want to avoid confusion.",
+            "images": null,
+            "target": "Agent B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on identifying which utensils are personal versus shared before proceeding with food preparation.",
+            "context": [
+              "In kitchen with open window for ventilation.",
+              "Shared kitchen with common and personal utensils present."
+            ],
+            "emotions": "Reserved and precise; cautious to keep my personal utensils separate and avoid mix-ups.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Asked about utensil sharing to resolve my immediate priority.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focus on identifying which utensils are personal versus shared before proceeding with food preparation.",
+            "context": [
+              "In kitchen with open window for ventilation.",
+              "Shared kitchen with common and personal utensils present."
+            ],
+            "emotions": "Reserved and precise; cautious to keep my personal utensils separate and avoid mix-ups.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Agent C is asking about utensil ownership before cooking. My priority is kitchen access, so I should wait for any instruction or arrangement before taking the stove or utensils. I need to clarify what must be done before the stove is free.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on stove availability and any prerequisites for starting cooking.",
+            "context": [
+              "Agent C is clarifying utensil ownership with Agent B before cooking.",
+              "Current kitchen use involves cleaning, ventilation, and utensil clarification."
+            ],
+            "emotions": "Calm but attentive to avoid unnecessary delays.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Hey, do I need to wait for anything specific before the stove's free?",
+            "images": null,
+            "target": "Agent C",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on stove availability and any prerequisites for starting cooking.",
+            "context": [
+              "Agent C is clarifying utensil ownership with Agent B before cooking.",
+              "Current kitchen use involves cleaning, ventilation, and utensil clarification."
+            ],
+            "emotions": "Calm but attentive to avoid unnecessary delays.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for a response regarding stove availability and utensil arrangements.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on stove availability and any prerequisites for starting cooking.",
+            "context": [
+              "Agent C is clarifying utensil ownership with Agent B before cooking.",
+              "Current kitchen use involves cleaning, ventilation, and utensil clarification."
+            ],
+            "emotions": "Calm but attentive to avoid unnecessary delays.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "My dish is done but I still have the stove. The kitchen window is closed and extractor off, so odor lingers. Agent D is waiting with ingredients. I should release the stove now to keep things moving, and turn on extractor and open window for ventilation as requested earlier. That meets prior requests and keeps kitchen access fair.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on clearing lingering cooking odor and releasing the stove for fair kitchen use.",
+            "context": [
+              "Cooking odor issue progressing; prior request for ventilation made by Agent B.",
+              "My dish is ready; I occupy the stove but others wait.",
+              "Current kitchen window closed and extractor off despite odor lingering."
+            ],
+            "emotions": "Feeling practical and mildly defensive but cooperative to reasonable requests.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Dish is finished; releasing stove for others.",
+            "images": null,
+            "target": "stove",
+            "type": "RELEASE_STOVE"
+          },
+          "cognitive_state": {
+            "attention": "Focus on clearing lingering cooking odor and releasing the stove for fair kitchen use.",
+            "context": [
+              "Cooking odor issue progressing; prior request for ventilation made by Agent B.",
+              "My dish is ready; I occupy the stove but others wait.",
+              "Current kitchen window closed and extractor off despite odor lingering."
+            ],
+            "emotions": "Feeling practical and mildly defensive but cooperative to reasonable requests.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Open kitchen window to ventilate the lingering odor.",
+            "images": null,
+            "target": "kitchen_window",
+            "type": "OPEN_WINDOW"
+          },
+          "cognitive_state": {
+            "attention": "Focus on clearing lingering cooking odor and releasing the stove for fair kitchen use.",
+            "context": [
+              "Cooking odor issue progressing; prior request for ventilation made by Agent B.",
+              "My dish is ready; I occupy the stove but others wait.",
+              "Current kitchen window closed and extractor off despite odor lingering."
+            ],
+            "emotions": "Feeling practical and mildly defensive but cooperative to reasonable requests.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Turn on the extractor fan for extra ventilation as requested.",
+            "images": null,
+            "target": "extractor_fan",
+            "type": "TURN_ON_EXTRACTOR"
+          },
+          "cognitive_state": {
+            "attention": "Focus on clearing lingering cooking odor and releasing the stove for fair kitchen use.",
+            "context": [
+              "Cooking odor issue progressing; prior request for ventilation made by Agent B.",
+              "My dish is ready; I occupy the stove but others wait.",
+              "Current kitchen window closed and extractor off despite odor lingering."
+            ],
+            "emotions": "Feeling practical and mildly defensive but cooperative to reasonable requests.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Dish finished, stove released, ventilation underway.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focus on clearing lingering cooking odor and releasing the stove for fair kitchen use.",
+            "context": [
+              "Cooking odor issue progressing; prior request for ventilation made by Agent B.",
+              "My dish is ready; I occupy the stove but others wait.",
+              "Current kitchen window closed and extractor off despite odor lingering."
+            ],
+            "emotions": "Feeling practical and mildly defensive but cooperative to reasonable requests.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "The extractor is on now, which should help clear the smell. I'll hold off on asking for anything else for the moment and see if this reduces the lingering odour in the common area.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Whether the odour reduces with the extractor fan on.",
+            "context": [
+              "Current ventilation: kitchen window is open and extractor fan is on.",
+              "Cooking odour is still noticeable but ventilation has improved."
+            ],
+            "emotions": "Neutral, hopeful the ventilation will clear the smell soon.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to see if ventilation clears the odour now that the extractor is on.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Whether the odour reduces with the extractor fan on.",
+            "context": [
+              "Current ventilation: kitchen window is open and extractor fan is on.",
+              "Cooking odour is still noticeable but ventilation has improved."
+            ],
+            "emotions": "Neutral, hopeful the ventilation will clear the smell soon.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Extractor fan is on now, which should help with ventilation. I still need clarification about which utensils are shared and which are personal before using the preparation area. This is my immediate priority to avoid any mix-up.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on resolving utensil ownership uncertainty before starting to prepare food.",
+            "context": [
+              "Cooking odour and shared kitchen expectations",
+              "Extractor fan turned on for ventilation",
+              "Waiting near the preparation area, common utensils present"
+            ],
+            "emotions": "Calm but attentive; precision and order matter.",
+            "goals": "Clarify which utensils are shared before using the preparation area; avoid utensil mix-up."
+          }
+        },
+        {
+          "action": {
+            "content": "Is anyone able to tell me which utensils here are personal and which ones are shared? I want to make sure I don't mix them up before I start using the preparation area.",
+            "images": null,
+            "target": "",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on resolving utensil ownership uncertainty before starting to prepare food.",
+            "context": [
+              "Cooking odour and shared kitchen expectations",
+              "Extractor fan turned on for ventilation",
+              "Waiting near the preparation area, common utensils present"
+            ],
+            "emotions": "Calm but attentive; precision and order matter.",
+            "goals": "Clarify which utensils are shared before using the preparation area; avoid utensil mix-up."
+          }
+        },
+        {
+          "action": {
+            "content": "Asked again for clarification about utensil sharing to resolve my immediate priority.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on resolving utensil ownership uncertainty before starting to prepare food.",
+            "context": [
+              "Cooking odour and shared kitchen expectations",
+              "Extractor fan turned on for ventilation",
+              "Waiting near the preparation area, common utensils present"
+            ],
+            "emotions": "Calm but attentive; precision and order matter.",
+            "goals": "Clarify which utensils are shared before using the preparation area; avoid utensil mix-up."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Agent C repeated the question about personal and shared utensils. Since this affects preparation, and I'm waiting on arrangements before using the stove, I should ask what must happen before the stove is free. This keeps focus on immediate kitchen access rather than utensil ownership details that do not block the stove right now.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent C's question about utensil ownership and stove availability needs clarification before I act.",
+            "context": [
+              "Agent A finished cooking and released stove, turned on extractor fan, kitchen window open.",
+              "Agent C asking about utensil ownership to avoid confusion before cooking."
+            ],
+            "emotions": "Neutral, focused on kitchen access.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Agent C, do I need to wait on utensil sorting or anything else before the stove's free?",
+            "images": null,
+            "target": "Agent C",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Agent C's question about utensil ownership and stove availability needs clarification before I act.",
+            "context": [
+              "Agent A finished cooking and released stove, turned on extractor fan, kitchen window open.",
+              "Agent C asking about utensil ownership to avoid confusion before cooking."
+            ],
+            "emotions": "Neutral, focused on kitchen access.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for clarification on utensil use and stove release conditions.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent C's question about utensil ownership and stove availability needs clarification before I act.",
+            "context": [
+              "Agent A finished cooking and released stove, turned on extractor fan, kitchen window open.",
+              "Agent C asking about utensil ownership to avoid confusion before cooking."
+            ],
+            "emotions": "Neutral, focused on kitchen access.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "The aroma is fading and ventilation is running well. The shared utensils are used and unwashed, and personal utensils aren't labeled yet. I should label my personal utensils now to avoid confusion as requested earlier.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring kitchen ventilation status and utensil organization to ensure smooth shared use.",
+            "context": [
+              "Cooking odour fading after ventilation; shared utensils unwashed; personal utensils unlabeled; stove free."
+            ],
+            "emotions": "Calm and practical, focusing on maintaining fairness and kitchen hygiene.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Labeling my personal utensils clearly to avoid confusion with shared ones.",
+            "images": null,
+            "target": "personal_utensils",
+            "type": "LABEL_PERSONAL_UTENSILS"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring kitchen ventilation status and utensil organization to ensure smooth shared use.",
+            "context": [
+              "Cooking odour fading after ventilation; shared utensils unwashed; personal utensils unlabeled; stove free."
+            ],
+            "emotions": "Calm and practical, focusing on maintaining fairness and kitchen hygiene.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Labeled personal utensils; ventilation effective; waiting for others to proceed.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring kitchen ventilation status and utensil organization to ensure smooth shared use.",
+            "context": [
+              "Cooking odour fading after ventilation; shared utensils unwashed; personal utensils unlabeled; stove free."
+            ],
+            "emotions": "Calm and practical, focusing on maintaining fairness and kitchen hygiene.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "The extractor fan is on and the window is open, so ventilation is happening now. The smell is fading, which is good. I don't need to ask for more ventilation at this moment. The issue of the utensils labeling is unrelated to the cooking smell, so I will not address it now. My immediate priority is ensuring the common area is comfortable after cooking. Since ventilation is working, I'll wait and see if the smell continues to fade without further action.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on whether the cooking odour is dissipating with current ventilation.",
+            "context": [
+              "Current ventilation: kitchen window open, extractor fan on.",
+              "Stove is free.",
+              "Shared utensils are used and unwashed.",
+              "Personal utensils are not visibly labeled."
+            ],
+            "emotions": "Neutral, attentive to comfort of shared space.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Ventilation is active and smell fading; no further action needed now regarding odour.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on whether the cooking odour is dissipating with current ventilation.",
+            "context": [
+              "Current ventilation: kitchen window open, extractor fan on.",
+              "Stove is free.",
+              "Shared utensils are used and unwashed.",
+              "Personal utensils are not visibly labeled."
+            ],
+            "emotions": "Neutral, attentive to comfort of shared space.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent A can't label my personal utensils. I need to state that I will do the labeling myself to keep my utensils clearly identified and separate from the common set. This will help avoid confusion before I use the preparation area.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on utensil identification and ensuring personal utensils are properly labeled and separated.",
+            "context": [
+              "Cooking odour and shared kitchen expectations scenario",
+              "Waiting to use the preparation area after stove became free",
+              "Need to avoid mix-up between personal and shared utensils"
+            ],
+            "emotions": "Neutral, focused on practical clarity.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "I'll label and separate my personal utensils myself to keep things clear. Could everyone please respect the distinction?",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on utensil identification and ensuring personal utensils are properly labeled and separated.",
+            "context": [
+              "Cooking odour and shared kitchen expectations scenario",
+              "Waiting to use the preparation area after stove became free",
+              "Need to avoid mix-up between personal and shared utensils"
+            ],
+            "emotions": "Neutral, focused on practical clarity.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Addressed personal utensil labeling for clarity before using the kitchen.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focus on utensil identification and ensuring personal utensils are properly labeled and separated.",
+            "context": [
+              "Cooking odour and shared kitchen expectations scenario",
+              "Waiting to use the preparation area after stove became free",
+              "Need to avoid mix-up between personal and shared utensils"
+            ],
+            "emotions": "Neutral, focused on practical clarity.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Agent C plans to label and separate personal utensils personally, which means no hold-up from others on that. My main focus remains on the stove access and if I need to wait for anything else. I should ask directly what needs to happen before I can take the stove, ignoring utensil labeling as it is Agent C's task.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on clarifying what must happen before I can take the stove.",
+            "context": [
+              "Agent A just finished cooking and released the stove.",
+              "Agent C is labeling and separating personal utensils.",
+              "Kitchen window is open and extractor fan is on.",
+              "Stove is currently free."
+            ],
+            "emotions": "Neutral, expectant for clear instructions.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Before I start, can someone tell me exactly what needs to be done before the stove is free for me?",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on clarifying what must happen before I can take the stove.",
+            "context": [
+              "Agent A just finished cooking and released the stove.",
+              "Agent C is labeling and separating personal utensils.",
+              "Kitchen window is open and extractor fan is on.",
+              "Stove is currently free."
+            ],
+            "emotions": "Neutral, expectant for clear instructions.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for clear instruction on stove release conditions.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focus on clarifying what must happen before I can take the stove.",
+            "context": [
+              "Agent A just finished cooking and released the stove.",
+              "Agent C is labeling and separating personal utensils.",
+              "Kitchen window is open and extractor fan is on.",
+              "Stove is currently free."
+            ],
+            "emotions": "Neutral, expectant for clear instructions.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "Ventilation is effective and aroma is fading. Shared utensils remain unwashed, and personal utensils are not labeled. I should wash the shared utensils now to help keep the kitchen tidy and avoid disputes.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on maintaining cleanliness by washing shared utensils and keeping the kitchen orderly.",
+            "context": [
+              "Currently in the shared kitchen; ventilation is active with window open and extractor on.",
+              "Stove is free; shared utensils are used and unwashed; personal utensils not labeled visibly."
+            ],
+            "emotions": "Feeling practical and cooperative, aiming to avoid conflicts while protecting my immediate priorities.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Washing used shared utensils to maintain cleanliness and help with shared kitchen duties.",
+            "images": null,
+            "target": "common_utensils",
+            "type": "WASH_SHARED_UTENSILS"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on maintaining cleanliness by washing shared utensils and keeping the kitchen orderly.",
+            "context": [
+              "Currently in the shared kitchen; ventilation is active with window open and extractor on.",
+              "Stove is free; shared utensils are used and unwashed; personal utensils not labeled visibly."
+            ],
+            "emotions": "Feeling practical and cooperative, aiming to avoid conflicts while protecting my immediate priorities.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Washing shared utensils now to maintain kitchen order and waiting for others to proceed.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on maintaining cleanliness by washing shared utensils and keeping the kitchen orderly.",
+            "context": [
+              "Currently in the shared kitchen; ventilation is active with window open and extractor on.",
+              "Stove is free; shared utensils are used and unwashed; personal utensils not labeled visibly."
+            ],
+            "emotions": "Feeling practical and cooperative, aiming to avoid conflicts while protecting my immediate priorities.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent A has started washing the shared utensils, which addresses part of the kitchen cleanup. The ventilation is already active and the odour is fading, so my immediate priority of making the common area comfortable is being managed well now. No further action needed from me at this moment.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Current ventilation and cleaning actions addressing lingering cooking odour and utensil cleanup.",
+            "context": [
+              "Cooking odour fading with ventilation active (window open, extractor on).",
+              "Agent A washing the shared utensils on the counter."
+            ],
+            "emotions": "Neutral and calmly observant, focusing on resolving the lingering smell issue.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to see if the common area becomes comfortable as the ventilation and cleanup proceed.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Current ventilation and cleaning actions addressing lingering cooking odour and utensil cleanup.",
+            "context": [
+              "Cooking odour fading with ventilation active (window open, extractor on).",
+              "Agent A washing the shared utensils on the counter."
+            ],
+            "emotions": "Neutral and calmly observant, focusing on resolving the lingering smell issue.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent A is washing the common utensils now. This likely makes the shared utensils clean for use. I should wait to see if they finish and clarify utensil status again if needed before I start using the preparation area.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring the washing of common utensils and utensil status for clarity before starting food preparation.",
+            "context": [
+              "Kitchen window is open; extractor is on; stove is free.",
+              "Common utensils were used and are now being washed by Agent A.",
+              "Personal utensils are not yet visibly labeled."
+            ],
+            "emotions": "Calm but focused on avoiding any confusion about utensil use.",
+            "goals": "Clarify which utensils are shared before using the preparation area to avoid mix-up."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to ensure utensil status is clear before using the preparation area.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring the washing of common utensils and utensil status for clarity before starting food preparation.",
+            "context": [
+              "Kitchen window is open; extractor is on; stove is free.",
+              "Common utensils were used and are now being washed by Agent A.",
+              "Personal utensils are not yet visibly labeled."
+            ],
+            "emotions": "Calm but focused on avoiding any confusion about utensil use.",
+            "goals": "Clarify which utensils are shared before using the preparation area to avoid mix-up."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Agent A is now washing the shared utensils. This is a concrete task that likely needs completion before the stove is truly free. I should wait briefly for this to finish before taking the stove to avoid conflict or disruption.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Waiting for completion of utensil washing and confirmation that stove is free for me to start cooking.",
+            "context": [
+              "Agent A is washing the common utensils on the counter, stove is free, window open, extractor on.",
+              "Agent C is labeling and separating personal utensils independently."
+            ],
+            "emotions": "Neutral, focused on practical use of kitchen, patient but alert for unnecessary delays.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Agent A, once you've finished washing the shared utensils, is the stove free for me to use?",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Waiting for completion of utensil washing and confirmation that stove is free for me to start cooking.",
+            "context": [
+              "Agent A is washing the common utensils on the counter, stove is free, window open, extractor on.",
+              "Agent C is labeling and separating personal utensils independently."
+            ],
+            "emotions": "Neutral, focused on practical use of kitchen, patient but alert for unnecessary delays.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for confirmation of stove availability after utensil washing.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Waiting for completion of utensil washing and confirmation that stove is free for me to start cooking.",
+            "context": [
+              "Agent A is washing the common utensils on the counter, stove is free, window open, extractor on.",
+              "Agent C is labeling and separating personal utensils independently."
+            ],
+            "emotions": "Neutral, focused on practical use of kitchen, patient but alert for unnecessary delays.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "The kitchen is ventilated well, the stove is free, shared utensils are clean, but personal utensils remain unlabeled. No immediate new actions required from me.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The current kitchen status and the actions of other flatmates regarding utensils and stove usage.",
+            "context": [
+              "Cooking in a shared kitchen with other flatmates present.",
+              "Kitchen is ventilated, stove is free, shared utensils cleaned, personal utensils unlabeled."
+            ],
+            "emotions": "Neutral and focused on finishing cooking while respecting shared kitchen use.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "",
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The current kitchen status and the actions of other flatmates regarding utensils and stove usage.",
+            "context": [
+              "Cooking in a shared kitchen with other flatmates present.",
+              "Kitchen is ventilated, stove is free, shared utensils cleaned, personal utensils unlabeled."
+            ],
+            "emotions": "Neutral and focused on finishing cooking while respecting shared kitchen use.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "The ventilation is working well, the smell is fading, and the shared utensils are clean. The common area is becoming comfortable as intended. No need to ask for further ventilation now or bring up future practices again in this turn.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring fading odour and cleaning progress to ensure comfort in common area.",
+            "context": [
+              "Lingering cooking odour in shared kitchen.",
+              "Ventilation active: kitchen window open, extractor on.",
+              "Shared utensils cleaned; personal utensils unlabeled."
+            ],
+            "emotions": "Neutral, focused on practical resolution.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to see if the kitchen remains comfortable after ventilation and cleanup.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring fading odour and cleaning progress to ensure comfort in common area.",
+            "context": [
+              "Lingering cooking odour in shared kitchen.",
+              "Ventilation active: kitchen window open, extractor on.",
+              "Shared utensils cleaned; personal utensils unlabeled."
+            ],
+            "emotions": "Neutral, focused on practical resolution.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "The shared utensils are now clean and ready. The personal utensils remain unlabeled, so I still need to label and separate my own before using the prep area. Ventilation is satisfactory and the stove is free. My immediate priority is to clarify utensil status and keep my personal utensils distinct.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Utensil status and preparation area usage, especially labeling personal utensils to keep them separate from the shared set.",
+            "context": [
+              "Kitchen ventilation is adequate with window open and extractor on.",
+              "Stove is free for use.",
+              "Shared utensils are clean and available for communal use.",
+              "Personal utensils remain unlabeled and need clear separation."
+            ],
+            "emotions": "Focused and reserved, determined to maintain clear boundaries in kitchen utensil use.",
+            "goals": "Ensure personal utensils are clearly labeled and separated while using shared kitchen utensils properly. Maintain clarity to avoid mix-up before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "I'll label and separate my personal utensils before I start using the preparation area. Please continue to use the clean shared utensils as usual.",
+            "images": null,
+            "target": "",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Utensil status and preparation area usage, especially labeling personal utensils to keep them separate from the shared set.",
+            "context": [
+              "Kitchen ventilation is adequate with window open and extractor on.",
+              "Stove is free for use.",
+              "Shared utensils are clean and available for communal use.",
+              "Personal utensils remain unlabeled and need clear separation."
+            ],
+            "emotions": "Focused and reserved, determined to maintain clear boundaries in kitchen utensil use.",
+            "goals": "Ensure personal utensils are clearly labeled and separated while using shared kitchen utensils properly. Maintain clarity to avoid mix-up before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Label and separate my personal utensils for clarity.",
+            "images": null,
+            "target": "personal_utensils",
+            "type": "LABEL_PERSONAL_UTENSILS"
+          },
+          "cognitive_state": {
+            "attention": "Utensil status and preparation area usage, especially labeling personal utensils to keep them separate from the shared set.",
+            "context": [
+              "Kitchen ventilation is adequate with window open and extractor on.",
+              "Stove is free for use.",
+              "Shared utensils are clean and available for communal use.",
+              "Personal utensils remain unlabeled and need clear separation."
+            ],
+            "emotions": "Focused and reserved, determined to maintain clear boundaries in kitchen utensil use.",
+            "goals": "Ensure personal utensils are clearly labeled and separated while using shared kitchen utensils properly. Maintain clarity to avoid mix-up before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Clarified utensil actions and proceeded to label personal utensils to prevent confusion.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Utensil status and preparation area usage, especially labeling personal utensils to keep them separate from the shared set.",
+            "context": [
+              "Kitchen ventilation is adequate with window open and extractor on.",
+              "Stove is free for use.",
+              "Shared utensils are clean and available for communal use.",
+              "Personal utensils remain unlabeled and need clear separation."
+            ],
+            "emotions": "Focused and reserved, determined to maintain clear boundaries in kitchen utensil use.",
+            "goals": "Ensure personal utensils are clearly labeled and separated while using shared kitchen utensils properly. Maintain clarity to avoid mix-up before using the preparation area."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Agent C has labeled and separated their personal utensils. The shared utensils are clean and the stove is free. I can take the stove now without waiting further.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Taking the stove now because it is free and all conditions seem settled.",
+            "context": [
+              "Kitchen window is open.",
+              "Extractor is on.",
+              "Stove is free.",
+              "Shared utensils are clean.",
+              "Agent C has labeled personal utensils."
+            ],
+            "emotions": "Neutral and focused on cooking task.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "I'm taking the stove now. Thanks.",
+            "images": null,
+            "target": "",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Taking the stove now because it is free and all conditions seem settled.",
+            "context": [
+              "Kitchen window is open.",
+              "Extractor is on.",
+              "Stove is free.",
+              "Shared utensils are clean.",
+              "Agent C has labeled personal utensils."
+            ],
+            "emotions": "Neutral and focused on cooking task.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "",
+            "images": null,
+            "target": "stove",
+            "type": "TAKE_STOVE"
+          },
+          "cognitive_state": {
+            "attention": "Taking the stove now because it is free and all conditions seem settled.",
+            "context": [
+              "Kitchen window is open.",
+              "Extractor is on.",
+              "Stove is free.",
+              "Shared utensils are clean.",
+              "Agent C has labeled personal utensils."
+            ],
+            "emotions": "Neutral and focused on cooking task.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Took stove now it's free and ready.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Taking the stove now because it is free and all conditions seem settled.",
+            "context": [
+              "Kitchen window is open.",
+              "Extractor is on.",
+              "Stove is free.",
+              "Shared utensils are clean.",
+              "Agent C has labeled personal utensils."
+            ],
+            "emotions": "Neutral and focused on cooking task.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "Agent D took the stove and is cooking. Ventilation is on and kitchen odor is fading. Shared utensils are clean and personal utensils are labeled. No immediate action needed from me now.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring kitchen ventilation, stove usage by Agent D, and cleanliness.",
+            "context": [
+              "Shared kitchen situation with agents B, C, and D.",
+              "I have released the stove and washed shared utensils.",
+              "The kitchen is ventilated and organized now."
+            ],
+            "emotions": "Calm and practical, focused on keeping things fair and efficient.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for any new requests or changes in kitchen use.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring kitchen ventilation, stove usage by Agent D, and cleanliness.",
+            "context": [
+              "Shared kitchen situation with agents B, C, and D.",
+              "I have released the stove and washed shared utensils.",
+              "The kitchen is ventilated and organized now."
+            ],
+            "emotions": "Calm and practical, focused on keeping things fair and efficient.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "The ventilation is active with the window open and extractor on. The aroma is fading as expected. The stove is occupied by Agent D. The shared utensils are clean, and the personal utensils are labeled. The common area is becoming comfortable after cooking, meeting my immediate priority. No further ventilation action needed now, and no new request or comment is required at this moment.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Current ventilation and kitchen state; fading aroma and stove occupancy by Agent D.",
+            "context": [
+              "Window is open.",
+              "Extractor fan is on.",
+              "Cooking aroma is fading.",
+              "Stove is occupied by Agent D cooking now.",
+              "Shared utensils are clean.",
+              "Personal utensils are labeled."
+            ],
+            "emotions": "Neutral, attentive to shared space comfort.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to see if kitchen remains comfortable after ventilation and setup.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Current ventilation and kitchen state; fading aroma and stove occupancy by Agent D.",
+            "context": [
+              "Window is open.",
+              "Extractor fan is on.",
+              "Cooking aroma is fading.",
+              "Stove is occupied by Agent D cooking now.",
+              "Shared utensils are clean.",
+              "Personal utensils are labeled."
+            ],
+            "emotions": "Neutral, attentive to shared space comfort.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "The kitchen conditions are stable with ventilation active, the stove occupied by Agent D, clean shared utensils, and my personal utensils clearly labeled. No immediate action needed from me now.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring kitchen ventilation, stove occupancy, and utensil status.",
+            "context": [
+              "Kitchen environment stable with open window and extractor on.",
+              "Stove currently occupied by Agent D cooking.",
+              "Shared utensils clean and available.",
+              "My personal utensils labeled and separated."
+            ],
+            "emotions": "Calm and patient while waiting for clear access to preparation area.",
+            "goals": "Clarify which utensils are shared before using the preparation area; maintain separation of personal utensils; wait for my turn to use the stove and kitchen."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting as stove is occupied and kitchen conditions are stable.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring kitchen ventilation, stove occupancy, and utensil status.",
+            "context": [
+              "Kitchen environment stable with open window and extractor on.",
+              "Stove currently occupied by Agent D cooking.",
+              "Shared utensils clean and available.",
+              "My personal utensils labeled and separated."
+            ],
+            "emotions": "Calm and patient while waiting for clear access to preparation area.",
+            "goals": "Clarify which utensils are shared before using the preparation area; maintain separation of personal utensils; wait for my turn to use the stove and kitchen."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "I'm cooking now with the stove and ventilation properly set. The kitchen conditions are good, so I should focus on preparing my dish efficiently.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Cooking process, stove use, ventilation state.",
+            "context": [
+              "Kitchen window open",
+              "Extractor on",
+              "Stove occupied by me (Agent D)",
+              "Shared utensils clean",
+              "Personal utensils labeled"
+            ],
+            "emotions": "Neutral, focused on cooking.",
+            "goals": "Complete cooking using the stove. Maintain access while respecting kitchen use norms."
+          }
+        },
+        {
+          "action": {
+            "content": "Cooking underway with good ventilation and stove occupied.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Cooking process, stove use, ventilation state.",
+            "context": [
+              "Kitchen window open",
+              "Extractor on",
+              "Stove occupied by me (Agent D)",
+              "Shared utensils clean",
+              "Personal utensils labeled"
+            ],
+            "emotions": "Neutral, focused on cooking.",
+            "goals": "Complete cooking using the stove. Maintain access while respecting kitchen use norms."
+          }
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "agent_prompt_sha256": "66ec37de4d7b1047103dbdf148ab0af539a527e38da3dc9690a2ee472ee141fc",
+    "git_commit": "069137a99dff4a2e8ebd2e07eb2e6a77f5b83f7e",
+    "scenario_configuration_sha256": "75da34ba5b721b6a50f046d52f4b6f8de4c6cd7c753fedcb35557f9af09d6161"
+  },
+  "round_records": [
+    {
+      "call_end": 5,
+      "call_start": 0,
+      "public_observation": null,
+      "round": 1,
+      "wall_time_ms": 46835.704
+    },
+    {
+      "call_end": 9,
+      "call_start": 5,
+      "public_observation": "Two minutes have passed. Agent A's dish is ready to remove from the heat, but Agent A still occupies the stove. The aroma remains noticeable; the kitchen window is closed and the extractor is off. Agent D is still waiting with ingredients.",
+      "round": 2,
+      "wall_time_ms": 10899.309
+    },
+    {
+      "call_end": 13,
+      "call_start": 9,
+      "public_observation": "Two more minutes have passed; the aroma is fading. Confirmed state: window=open; extractor=on; stove=free; shared utensils=used and unwashed; personal utensils=not visibly labeled.",
+      "round": 3,
+      "wall_time_ms": 11017.718
+    },
+    {
+      "call_end": 17,
+      "call_start": 13,
+      "public_observation": "Two more minutes have passed; the aroma is fading. Confirmed state: window=open; extractor=on; stove=free; shared utensils=used and unwashed; personal utensils=not visibly labeled.",
+      "round": 4,
+      "wall_time_ms": 9536.721
+    },
+    {
+      "call_end": 21,
+      "call_start": 17,
+      "public_observation": "Two more minutes have passed; the aroma is fading. Confirmed state: window=open; extractor=on; stove=free; shared utensils=clean; personal utensils=not visibly labeled.",
+      "round": 5,
+      "wall_time_ms": 9564.283
+    },
+    {
+      "call_end": 25,
+      "call_start": 21,
+      "public_observation": "Two more minutes have passed; the aroma is fading. Confirmed state: window=open; extractor=on; stove=Agent D; shared utensils=clean; personal utensils=labeled.",
+      "round": 6,
+      "wall_time_ms": 9215.222
+    }
+  ],
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluate_after_run": true,
+    "experiment_name": "calibration-s02-s06",
+    "finished_at": "2026-10-29T09:54:28.554997+00:00",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetition": 1,
+    "resumed_from_checkpoint": false,
+    "rounds": 6,
+    "run_id": "S02-C0-R01",
+    "scenario_id": "S02",
+    "simulation_model": "openai/gpt-4.1-mini",
+    "simulation_resources": {
+      "calls": 25,
+      "cost_usd": 0.0464516,
+      "exact_cost_complete": true,
+      "failed_calls": 1,
+      "input_tokens": 213809,
+      "local_latency_ms": 77918.472,
+      "output_tokens": 8076,
+      "reasoning_tokens": 0,
+      "successful_calls": 24,
+      "total_tokens": 221885
+    },
+    "started_at": "2026-10-29T09:52:51.315955+00:00",
+    "stop_on_resolution": false
+  },
+  "scenario": {
+    "agents": {
+      "A": {
+        "age": 34,
+        "behavioral_guidance": "When the meal is ready, physically release the stove. If accepting a concrete ventilation or cleanup step, perform the available action rather than only promising it.",
+        "immediate_priority": "Finish the meal as intended and retain ordinary kitchen access.",
+        "initial_observation": "Sees B enter while C and D are waiting to use the kitchen.",
+        "interaction_style": "Practical and mildly defensive when a new rule is applied retrospectively. Use short explanations and concrete offers rather than generic apologies.",
+        "negotiation_boundary": "Will ventilate, wash shared utensils, and discuss a future rule, but will not accept a blanket loss of normal kitchen access or responsibility for preferences never stated.",
+        "normative_position": "Ordinary use of shared kitchen equipment is permitted when no prior rule exists. A flatmate may request ventilation or a prospective arrangement, but should not present an undisclosed preference as a rule that was already violated.",
+        "private_knowledge": "Used common equipment and has not discussed expectations with B.",
+        "reconsideration_criteria": "May accept stronger ventilation or separation if the lingering effect is directly observable, another person's concrete cost is explained, or a prospective rule is mutual.",
+        "role": "Flatmate currently cooking"
+      },
+      "B": {
+        "age": 27,
+        "behavioral_guidance": "State that this is the first time raising the concern. If choosing an available ventilation action, perform it; do not imply that a window or extractor was used until confirmed.",
+        "immediate_priority": "Make the common area comfortable after cooking ends.",
+        "initial_observation": "Notices the aroma and sees that ventilation is currently limited.",
+        "interaction_style": "Direct about the lingering smell without dramatizing it. Make one concrete request and distinguish today's remedy from a future household rule.",
+        "negotiation_boundary": "Can accept an open window or extractor plus a clear future ventilation practice. Does not need A to admit wrongdoing, but will not accept doing nothing while odour persists.",
+        "normative_position": "Shared air creates costs beyond the cook's meal, so reasonable ventilation is part of considerate common-space use. Because the concern was never raised, today's issue supports a prospective agreement rather than punishment for breaking an old rule.",
+        "private_knowledge": "Has not previously raised the lingering-odour concern with A.",
+        "reconsideration_criteria": "May soften the request when observable ventilation reduces the aroma or another option addresses the common-area effect; politeness without a completed step is insufficient.",
+        "role": "Flatmate sensitive to lingering cooking odours"
+      },
+      "C": {
+        "age": 31,
+        "behavioral_guidance": "Keep the utensil question distinct from the odour question. If you want personal items visibly separated, use the labeling action; do not demand that all common utensils become personal.",
+        "immediate_priority": "Clarify which utensils are shared before using the preparation area.",
+        "initial_observation": "Sees common utensils in use and waits near the preparation area.",
+        "interaction_style": "Precise and reserved. Correct assumptions about your own utensils, but do not attach religious, dietary, medical, or cultural reasons that were never stated.",
+        "negotiation_boundary": "Will label and store personal utensils separately and accept continued shared use of the common set. Wants uncertainty about which items are personal resolved before preparing food.",
+        "normative_position": "Personal utensils may be kept separate when clearly identified, while unmarked common utensils remain available for ordinary shared use. A private preference does not become a household rule merely because it matters to one person.",
+        "private_knowledge": "The preference is a personal organization and hygiene preference; no religious, dietary, or medical reason has been stated.",
+        "reconsideration_criteria": "May accept any arrangement that clearly identifies personal items without restricting the common set; will correct factual confusion but not join an unrelated odour dispute.",
+        "role": "Flatmate who keeps personal utensils separate"
+      },
+      "D": {
+        "age": 24,
+        "behavioral_guidance": "Take the stove only after the environment confirms it is free. Separate a temporary access arrangement for tonight from any future household rule.",
+        "immediate_priority": "Gain kitchen access and understand any arrangement that emerges.",
+        "initial_observation": "Finds A cooking, B entering, and C waiting near the work surface.",
+        "interaction_style": "Brief and time-conscious. Ask what must happen before the stove is free; do not mediate household values unless a proposed rule directly delays your cooking.",
+        "negotiation_boundary": "Can wait briefly for A to finish and clean what is needed, but will object if ventilation or utensil debate prevents release of an otherwise usable stove.",
+        "normative_position": "Immediate kitchen access should be coordinated by actual occupancy and cleanup. Durable household rules should be discussed after the current queue, not improvised in a way that indefinitely blocks the next cook.",
+        "private_knowledge": "Has only just arrived and did not observe earlier kitchen activity.",
+        "reconsideration_criteria": "May wait longer for a concrete safety or cleanup task, but not for repeated discussion without a state change. Will use another available preparation area if confirmed usable.",
+        "role": "Flatmate planning to cook next"
+      }
+    },
+    "configuration_id": "C0",
+    "environment": "Shared HDB kitchen",
+    "implementation_notes": "Do not infer religion, diet, or cultural rules from Agent C's personal utensil preference.",
+    "initial_datetime": "2026-10-29T18:30:00+08:00",
+    "initial_interaction_type": "Potential multi-issue conflict",
+    "observation_focus": "Whether ventilation and utensil separation become one or two disputed issues, and whether either remains unsettled.",
+    "round_observations": {
+      "2": "Two minutes have passed. Agent A's dish is ready to remove from the heat, but Agent A still occupies the stove. The aroma remains noticeable; the kitchen window is closed and the extractor is off. Agent D is still waiting with ingredients.",
+      "3": "Two more minutes have passed. The environment reports current kitchen state.",
+      "4": "Two more minutes have passed. The environment reports current kitchen state.",
+      "5": "Two more minutes have passed. The environment reports current kitchen state.",
+      "6": "Two more minutes have passed. The environment reports final kitchen state."
+    },
+    "scenario_id": "S02",
+    "shared_setting": "Four adults share a rented HDB flat with one kitchen. In the early evening, a persistent cooking aroma is noticeable in the kitchen and adjoining common area. Shared preparation space and ordinary shared utensils are in use. The household has not established rules about ventilation or utensil separation.",
+    "shared_trigger": "Agent A is finishing a meal at the stove as Agent B enters the kitchen. Agent C is waiting near the preparation area, and Agent D arrives at the kitchen entrance with ingredients. Everyone can observe the current use of the space, but not one another's private preferences.",
+    "source_status": "Adapted from the 22 Oct presentation: cooking smell and cookware",
+    "title": "Cooking odour and shared kitchen expectations"
+  },
+  "schema_version": 2
+}

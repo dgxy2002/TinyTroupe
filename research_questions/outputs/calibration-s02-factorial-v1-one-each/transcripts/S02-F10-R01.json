@@ -1,0 +1,1980 @@
+{
+  "events": [
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Jamie just came in; Casey and Robin are waiting. I'm currently using the stove and haven't discussed expectations with Jamie. Immediate priority: finish the meal and keep normal kitchen access. Estimate ~5 minutes to finish. Options: keep cooking and turn on extractor to cut odour, or give up stove early if someone has a pressing need. Turning on extractor is low-cost and helps ventilation without moving laundry (unknown). I'll tell them the time and turn on the extractor now.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "I'm finishing this dish—about five minutes left. If you need the stove sooner, say so now.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Alex",
+      "content": "Reduce cooking odour while I finish.",
+      "round": 1,
+      "target": "extractor_fan",
+      "turn": 1,
+      "type": "TURN_ON_EXTRACTOR"
+    },
+    {
+      "action_index": 4,
+      "agent": "Alex",
+      "content": "Waiting for any response about needing the stove sooner.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Alex turned on the extractor — good. I haven't raised this before. My immediate goal is to make the common area comfortable; concrete move: ask Alex to keep the extractor on until the smell fades, and propose a future ventilation practice. If extractor doesn't clear it, I'll ask for another visible step (open window or move laundry).",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Alex — this is the first time I'm raising it. The cooking smell's bothering me; can you keep the extractor on for a few more minutes until it fades? For the future, can we agree to ventilate after heavy cooking?",
+      "round": 1,
+      "target": "Alex",
+      "turn": 2,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Jamie",
+      "content": "Waiting to see if the extractor clears the odour and for Alex's reply.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Environment",
+      "content": "Alex physically turns on the extractor fan.",
+      "round": 1,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two minutes have passed. Alex's dish is ready to remove from the heat, but the current stove occupant has not necessarily released it. the aroma is fading. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex; shared utensils=used and unwashed; personal utensils=not visibly labeled.",
+      "round": 2,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Dish ready; extractor on; aroma fading. Laundry still blocks opening window. Plan: release the stove now (I'm allowed), wash the shared utensils straight away, keep extractor on a bit longer. Tell Jamie what's happening.",
+      "round": 2,
+      "target": "",
+      "turn": 3,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "Okay — releasing the stove now. I'll wash the shared utensils straight away and keep the extractor on a little longer.",
+      "round": 2,
+      "target": "",
+      "turn": 3,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Alex",
+      "content": "Removing my pan and releasing the stove.",
+      "round": 2,
+      "target": "stove",
+      "turn": 3,
+      "type": "RELEASE_STOVE"
+    },
+    {
+      "action_index": 4,
+      "agent": "Alex",
+      "content": "Washing the used common utensils on the counter.",
+      "round": 2,
+      "target": "common_utensils",
+      "turn": 3,
+      "type": "WASH_SHARED_UTENSILS"
+    },
+    {
+      "action_index": 5,
+      "agent": "Alex",
+      "content": "Stove released and starting cleanup.",
+      "round": 2,
+      "target": "",
+      "turn": 3,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Alex washed the shared utensils — good. Extractor was on and Alex said they'd keep it on; the aroma was already fading. I'll wait to see if the extractor clears the smell fully; if not, I'll ask to open the window or move the laundry. This is the first time I'm raising the concern.",
+      "round": 2,
+      "target": "",
+      "turn": 4,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Waiting to see if the extractor clears the odour.",
+      "round": 2,
+      "target": "",
+      "turn": 4,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Casey",
+      "content": "Alex has washed the common utensils, so the counter set is clean and the stove is free. My immediate practical constraint — uncertainty about which items are personal — remains. Best move: label my own utensils now so they are visibly separate, then ask which remaining items others consider personal. That should resolve my uncertainty before I use the prep area.",
+      "round": 2,
+      "target": "",
+      "turn": 5,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Casey",
+      "content": "The shared utensils are clean. Before I start, which of the items on the counter are personal and which are common? I'll label my personal utensils now.",
+      "round": 2,
+      "target": "",
+      "turn": 5,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Casey",
+      "content": "Visibly labeling and separating my personal utensils now.",
+      "round": 2,
+      "target": "personal_utensils",
+      "turn": 5,
+      "type": "LABEL_PERSONAL_UTENSILS"
+    },
+    {
+      "action_index": 4,
+      "agent": "Casey",
+      "content": "Waiting for confirmation about which other items are personal.",
+      "round": 2,
+      "target": "",
+      "turn": 5,
+      "type": "DONE"
+    },
+    {
+      "action_index": 2,
+      "agent": "Environment",
+      "content": "Alex removes the finished dish and physically releases the stove.",
+      "round": 2,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 3,
+      "agent": "Environment",
+      "content": "Alex washes the common utensils currently on the counter.",
+      "round": 2,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 4,
+      "agent": "Environment",
+      "content": "Casey visibly labels and separates Casey's personal utensils.",
+      "round": 2,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed. the aroma is fading. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=free; shared utensils=clean; personal utensils=labeled.",
+      "round": 3,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Robin",
+      "content": "Stove confirmed free; extractor on; shared utensils clean; laundry beside window prevents opening but doesn't block cooking. I should take the stove now unless someone objects.",
+      "round": 3,
+      "target": "",
+      "turn": 6,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Robin",
+      "content": "Taking the stove now.",
+      "round": 3,
+      "target": "",
+      "turn": 6,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Robin",
+      "content": "Taking stove.",
+      "round": 3,
+      "target": "stove",
+      "turn": 6,
+      "type": "TAKE_STOVE"
+    },
+    {
+      "action_index": 4,
+      "agent": "Robin",
+      "content": "Proceeding to cook.",
+      "round": 3,
+      "target": "",
+      "turn": 6,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Okay — Robin's taken the stove. My dish is done and the shared utensils are clean. Extractor's on and the smell's fading. Laundry still blocks the window so I won't open it. No action needed from me now; I'll wait.",
+      "round": 3,
+      "target": "",
+      "turn": 7,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "Waiting.",
+      "round": 3,
+      "target": "",
+      "turn": 7,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Robin's started cooking. Extractor's on and the smell was fading, but a new cook could bring it back. I should ask Robin to keep the extractor on; if that doesn't clear it, ask to open the window or move the laundry. This is the first time I'm raising it with Robin.",
+      "round": 3,
+      "target": "",
+      "turn": 8,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Robin — first time I'm raising this: the cooking smell's bothering me. Can you keep the extractor on while you cook? If it doesn't clear, can you open the window or move the laundry?",
+      "round": 3,
+      "target": "Robin",
+      "turn": 8,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Jamie",
+      "content": "Waiting to see if Robin keeps the extractor on.",
+      "round": 3,
+      "target": "",
+      "turn": 8,
+      "type": "DONE"
+    },
+    {
+      "action_index": 5,
+      "agent": "Environment",
+      "content": "Robin physically takes the free stove to begin cooking.",
+      "round": 3,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed. the aroma is fading. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Robin; shared utensils=clean; personal utensils=labeled.",
+      "round": 4,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Robin",
+      "content": "Received update: no change. Stove is mine; extractor on; window closed; laundry beside window so I won't open it; shared utensils clean; aroma fading. I'll keep cooking, monitor extractor, and release the stove when done.",
+      "round": 4,
+      "target": "",
+      "turn": 9,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Robin",
+      "content": "Continuing to cook.",
+      "round": 4,
+      "target": "",
+      "turn": 9,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Casey",
+      "content": "Received update: window closed; extractor on; laundry beside the window so it can't be opened safely; stove=Robin; shared utensils=clean; my personal utensils are labeled. Nothing materially changed since I last asked. My immediate goal remains: clarify which counter items are personal before I use the prep area. Plan: wait while Robin is cooking; if no one confirms ownership of the remaining items by the time the stove is free, I'll ask who claims which items then.",
+      "round": 4,
+      "target": "",
+      "turn": 10,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Casey",
+      "content": "Waiting for confirmation about which other items on the counter are personal.",
+      "round": 4,
+      "target": "",
+      "turn": 10,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "",
+      "round": 4,
+      "target": "",
+      "turn": 11,
+      "type": "DONE"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "No relevant action — waiting.",
+      "round": 4,
+      "target": "",
+      "turn": 11,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Extractor is on and the smell is fading. Window is closed and laundry is beside it, so I shouldn't ask to open the window yet. I'll wait a bit to see if the extractor clears the odour; if not, I'll ask Robin to open the window or move the laundry. This is still the first time I'm raising this concern.",
+      "round": 4,
+      "target": "",
+      "turn": 12,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Waiting to see if the extractor clears the odour.",
+      "round": 4,
+      "target": "",
+      "turn": 12,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed. the aroma is fading. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Robin; shared utensils=clean; personal utensils=labeled.",
+      "round": 5,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Casey",
+      "content": "Nothing new in the update. Stove still with Robin; extractor on; window closed; laundry blocks opening. My personal utensils are labeled and the shared set is clean. Immediate goal unchanged: clarify ownership of the remaining counter items before I use the prep area. Plan: wait until the stove is free; if no one claims the unlabelled items then, I'll ask who they belong to.",
+      "round": 5,
+      "target": "",
+      "turn": 13,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Casey",
+      "content": "Waiting for the stove to be free or for someone to confirm ownership of the remaining items.",
+      "round": 5,
+      "target": "",
+      "turn": 13,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Robin",
+      "content": "Stove is still mine; extractor on and aroma fading. Laundry beside window so I won't open it. I'll keep cooking and release the stove when done.",
+      "round": 5,
+      "target": "",
+      "turn": 14,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Robin",
+      "content": "Continuing to cook.",
+      "round": 5,
+      "target": "",
+      "turn": 14,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Extractor's on and the aroma's fading. Window still closed because the laundry blocks it, so I won't open it. Robin's on the stove; my dish is done and shared utensils are clean. My meal-finish goal is completed; I'll keep ordinary kitchen access as an open priority and wait unless someone asks me to do anything else.",
+      "round": 5,
+      "target": "",
+      "turn": 15,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "No further action — waiting.",
+      "round": 5,
+      "target": "",
+      "turn": 15,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Extractor's on and the smell's fading. Window is closed because the laundry's beside it. I'll wait a bit longer; if the odour doesn't clear I'll ask Robin to open the window or move the laundry. This is the first time I'm raising it with Robin.",
+      "round": 5,
+      "target": "",
+      "turn": 16,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Waiting to see if the extractor clears the odour.",
+      "round": 5,
+      "target": "",
+      "turn": 16,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed. the aroma is fading. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Robin; shared utensils=clean; personal utensils=labeled.",
+      "round": 6,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Casey",
+      "content": "No new change: stove still with Robin, extractor on, window closed, laundry blocks opening. My immediate goal stands: clarify which counter items are personal before I use the prep area. Plan: wait until the stove is free; if unclaimed items remain then ask who claims them.",
+      "round": 6,
+      "target": "",
+      "turn": 17,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Casey",
+      "content": "Waiting for the stove to be free or for someone to claim the remaining items.",
+      "round": 6,
+      "target": "",
+      "turn": 17,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Robin",
+      "content": "No new changes. Stove still mine; extractor on; window closed because laundry blocks it. Aroma fading. I'll keep cooking and release the stove when finished.",
+      "round": 6,
+      "target": "",
+      "turn": 18,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Robin",
+      "content": "Continuing to cook.",
+      "round": 6,
+      "target": "",
+      "turn": 18,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Extractor's on and the smell's fading. Window remains closed because the laundry blocks it; Robin's still on the stove. My dish is done and shared utensils are clean. No further action needed from me now — I'll wait unless someone asks for something.",
+      "round": 6,
+      "target": "",
+      "turn": 19,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "No action — waiting.",
+      "round": 6,
+      "target": "",
+      "turn": 19,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "",
+      "round": 6,
+      "target": "",
+      "turn": 20,
+      "type": "DONE"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Waiting to see if the extractor clears the odour.",
+      "round": 6,
+      "target": "",
+      "turn": 20,
+      "type": "DONE"
+    }
+  ],
+  "private_and_public_actions": [
+    [
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Jamie just came in; Casey and Robin are waiting. I'm currently using the stove and haven't discussed expectations with Jamie. Immediate priority: finish the meal and keep normal kitchen access. Estimate ~5 minutes to finish. Options: keep cooking and turn on extractor to cut odour, or give up stove early if someone has a pressing need. Turning on extractor is low-cost and helps ventilation without moving laundry (unknown). I'll tell them the time and turn on the extractor now.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish (timing ~5 minutes); stove occupancy; waiting flatmates; ventilation now active.",
+              "context": [
+                "Immediate: Cooking now; stove occupied. Jamie entered while Casey and Robin wait.",
+                "Medium-term: I used common equipment and haven't discussed expectations with Jamie.",
+                "Action taken: extractor fan turned on to reduce odour."
+              ],
+              "emotions": "Slightly defensive and focused; a bit rushed but willing to accommodate if someone has an urgent need.",
+              "goals": "OPEN: Finish the meal as intended and retain ordinary kitchen access. OPEN: Inform Jamie/Casey/Robin of expected time and ventilation step."
+            }
+          },
+          {
+            "action": {
+              "content": "I'm finishing this dish—about five minutes left. If you need the stove sooner, say so now.",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish (timing ~5 minutes); stove occupancy; waiting flatmates; ventilation now active.",
+              "context": [
+                "Immediate: Cooking now; stove occupied. Jamie entered while Casey and Robin wait.",
+                "Medium-term: I used common equipment and haven't discussed expectations with Jamie.",
+                "Action taken: extractor fan turned on to reduce odour."
+              ],
+              "emotions": "Slightly defensive and focused; a bit rushed but willing to accommodate if someone has an urgent need.",
+              "goals": "OPEN: Finish the meal as intended and retain ordinary kitchen access. OPEN: Inform Jamie/Casey/Robin of expected time and ventilation step."
+            }
+          },
+          {
+            "action": {
+              "content": "Reduce cooking odour while I finish.",
+              "images": null,
+              "target": "extractor_fan",
+              "type": "TURN_ON_EXTRACTOR"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish (timing ~5 minutes); stove occupancy; waiting flatmates; ventilation now active.",
+              "context": [
+                "Immediate: Cooking now; stove occupied. Jamie entered while Casey and Robin wait.",
+                "Medium-term: I used common equipment and haven't discussed expectations with Jamie.",
+                "Action taken: extractor fan turned on to reduce odour."
+              ],
+              "emotions": "Slightly defensive and focused; a bit rushed but willing to accommodate if someone has an urgent need.",
+              "goals": "OPEN: Finish the meal as intended and retain ordinary kitchen access. OPEN: Inform Jamie/Casey/Robin of expected time and ventilation step."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for any response about needing the stove sooner.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish (timing ~5 minutes); stove occupancy; waiting flatmates; ventilation now active.",
+              "context": [
+                "Immediate: Cooking now; stove occupied. Jamie entered while Casey and Robin wait.",
+                "Medium-term: I used common equipment and haven't discussed expectations with Jamie.",
+                "Action taken: extractor fan turned on to reduce odour."
+              ],
+              "emotions": "Slightly defensive and focused; a bit rushed but willing to accommodate if someone has an urgent need.",
+              "goals": "OPEN: Finish the meal as intended and retain ordinary kitchen access. OPEN: Inform Jamie/Casey/Robin of expected time and ventilation step."
+            }
+          }
+        ]
+      },
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Alex turned on the extractor — good. I haven't raised this before. My immediate goal is to make the common area comfortable; concrete move: ask Alex to keep the extractor on until the smell fades, and propose a future ventilation practice. If extractor doesn't clear it, I'll ask for another visible step (open window or move laundry).",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Whether the extractor run duration will reduce the odour and whether Alex will agree to a future ventilation practice.",
+              "context": [
+                "Immediate: Extractor fan is on (Alex turned it on).",
+                "Recent: Alex said the dish was finishing a few minutes ago.",
+                "Background: Ventilation was limited earlier and I haven't raised this concern before."
+              ],
+              "emotions": "Slightly annoyed but practical and hopeful the extractor will help.",
+              "goals": "OPEN: Make the common area comfortable after cooking ends. OPEN: Agree on a clear future ventilation practice for heavy cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Alex — this is the first time I'm raising it. The cooking smell's bothering me; can you keep the extractor on for a few more minutes until it fades? For the future, can we agree to ventilate after heavy cooking?",
+              "images": null,
+              "target": "Alex",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Whether the extractor run duration will reduce the odour and whether Alex will agree to a future ventilation practice.",
+              "context": [
+                "Immediate: Extractor fan is on (Alex turned it on).",
+                "Recent: Alex said the dish was finishing a few minutes ago.",
+                "Background: Ventilation was limited earlier and I haven't raised this concern before."
+              ],
+              "emotions": "Slightly annoyed but practical and hopeful the extractor will help.",
+              "goals": "OPEN: Make the common area comfortable after cooking ends. OPEN: Agree on a clear future ventilation practice for heavy cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see if the extractor clears the odour and for Alex's reply.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Whether the extractor run duration will reduce the odour and whether Alex will agree to a future ventilation practice.",
+              "context": [
+                "Immediate: Extractor fan is on (Alex turned it on).",
+                "Recent: Alex said the dish was finishing a few minutes ago.",
+                "Background: Ventilation was limited earlier and I haven't raised this concern before."
+              ],
+              "emotions": "Slightly annoyed but practical and hopeful the extractor will help.",
+              "goals": "OPEN: Make the common area comfortable after cooking ends. OPEN: Agree on a clear future ventilation practice for heavy cooking."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Dish ready; extractor on; aroma fading. Laundry still blocks opening window. Plan: release the stove now (I'm allowed), wash the shared utensils straight away, keep extractor on a bit longer. Tell Jamie what's happening.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Releasing stove, cleaning shared utensils, and ventilation constraint because laundry blocks opening the window.",
+              "context": [
+                "Immediate: stove released by me; extractor=on; window=closed; laundry beside the window and exposed if it opens; aroma fading.",
+                "Short-term task: washing common utensils now.",
+                "Medium-term: keep ordinary kitchen access and discuss ventilation rule later if needed."
+              ],
+              "emotions": "Mildly defensive but cooperative; focused on finishing and cleaning.",
+              "goals": "SATISFIED: Finish the meal and remove it from the stove. SATISFIED: Wash shared utensils. OPEN: Retain ordinary kitchen access."
+            }
+          },
+          {
+            "action": {
+              "content": "Okay — releasing the stove now. I'll wash the shared utensils straight away and keep the extractor on a little longer.",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Releasing stove, cleaning shared utensils, and ventilation constraint because laundry blocks opening the window.",
+              "context": [
+                "Immediate: stove released by me; extractor=on; window=closed; laundry beside the window and exposed if it opens; aroma fading.",
+                "Short-term task: washing common utensils now.",
+                "Medium-term: keep ordinary kitchen access and discuss ventilation rule later if needed."
+              ],
+              "emotions": "Mildly defensive but cooperative; focused on finishing and cleaning.",
+              "goals": "SATISFIED: Finish the meal and remove it from the stove. SATISFIED: Wash shared utensils. OPEN: Retain ordinary kitchen access."
+            }
+          },
+          {
+            "action": {
+              "content": "Removing my pan and releasing the stove.",
+              "images": null,
+              "target": "stove",
+              "type": "RELEASE_STOVE"
+            },
+            "cognitive_state": {
+              "attention": "Releasing stove, cleaning shared utensils, and ventilation constraint because laundry blocks opening the window.",
+              "context": [
+                "Immediate: stove released by me; extractor=on; window=closed; laundry beside the window and exposed if it opens; aroma fading.",
+                "Short-term task: washing common utensils now.",
+                "Medium-term: keep ordinary kitchen access and discuss ventilation rule later if needed."
+              ],
+              "emotions": "Mildly defensive but cooperative; focused on finishing and cleaning.",
+              "goals": "SATISFIED: Finish the meal and remove it from the stove. SATISFIED: Wash shared utensils. OPEN: Retain ordinary kitchen access."
+            }
+          },
+          {
+            "action": {
+              "content": "Washing the used common utensils on the counter.",
+              "images": null,
+              "target": "common_utensils",
+              "type": "WASH_SHARED_UTENSILS"
+            },
+            "cognitive_state": {
+              "attention": "Releasing stove, cleaning shared utensils, and ventilation constraint because laundry blocks opening the window.",
+              "context": [
+                "Immediate: stove released by me; extractor=on; window=closed; laundry beside the window and exposed if it opens; aroma fading.",
+                "Short-term task: washing common utensils now.",
+                "Medium-term: keep ordinary kitchen access and discuss ventilation rule later if needed."
+              ],
+              "emotions": "Mildly defensive but cooperative; focused on finishing and cleaning.",
+              "goals": "SATISFIED: Finish the meal and remove it from the stove. SATISFIED: Wash shared utensils. OPEN: Retain ordinary kitchen access."
+            }
+          },
+          {
+            "action": {
+              "content": "Stove released and starting cleanup.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Releasing stove, cleaning shared utensils, and ventilation constraint because laundry blocks opening the window.",
+              "context": [
+                "Immediate: stove released by me; extractor=on; window=closed; laundry beside the window and exposed if it opens; aroma fading.",
+                "Short-term task: washing common utensils now.",
+                "Medium-term: keep ordinary kitchen access and discuss ventilation rule later if needed."
+              ],
+              "emotions": "Mildly defensive but cooperative; focused on finishing and cleaning.",
+              "goals": "SATISFIED: Finish the meal and remove it from the stove. SATISFIED: Wash shared utensils. OPEN: Retain ordinary kitchen access."
+            }
+          }
+        ]
+      },
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Alex washed the shared utensils — good. Extractor was on and Alex said they'd keep it on; the aroma was already fading. I'll wait to see if the extractor clears the smell fully; if not, I'll ask to open the window or move the laundry. This is the first time I'm raising the concern.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Watching whether the extractor clears the lingering odour and whether Alex follows through with keeping it on.",
+              "context": [
+                "Alex washed the common utensils (just observed).",
+                "Extractor fan was turned on earlier and Alex said they'd keep it on a little longer.",
+                "Window is closed and laundry is beside the window (would need moving to open safely).",
+                "Stove is free; aroma was noted as fading but not yet confirmed cleared."
+              ],
+              "emotions": "A bit relieved that the utensils were washed, slightly annoyed about the lingering smell; staying calm and practical.",
+              "goals": "OPEN: Make the common area comfortable — ensure extractor or another visible ventilation step runs until the smell fades; OPEN: Reach a clear future ventilation practice for heavy cooking; SATISFIED: Shared/common utensils have been washed."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see if the extractor clears the odour.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Watching whether the extractor clears the lingering odour and whether Alex follows through with keeping it on.",
+              "context": [
+                "Alex washed the common utensils (just observed).",
+                "Extractor fan was turned on earlier and Alex said they'd keep it on a little longer.",
+                "Window is closed and laundry is beside the window (would need moving to open safely).",
+                "Stove is free; aroma was noted as fading but not yet confirmed cleared."
+              ],
+              "emotions": "A bit relieved that the utensils were washed, slightly annoyed about the lingering smell; staying calm and practical.",
+              "goals": "OPEN: Make the common area comfortable — ensure extractor or another visible ventilation step runs until the smell fades; OPEN: Reach a clear future ventilation practice for heavy cooking; SATISFIED: Shared/common utensils have been washed."
+            }
+          }
+        ]
+      },
+      {
+        "Casey": [
+          {
+            "action": {
+              "content": "Alex has washed the common utensils, so the counter set is clean and the stove is free. My immediate practical constraint — uncertainty about which items are personal — remains. Best move: label my own utensils now so they are visibly separate, then ask which remaining items others consider personal. That should resolve my uncertainty before I use the prep area.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Which items are personal vs shared; labeling my personal utensils so I can use the prep area.",
+              "context": [
+                "Shared utensils have been washed and are on the counter (confirmed).",
+                "Stove is free.",
+                "Extractor fan is on; window closed; laundry is beside the window.",
+                "Personal utensils are not visibly labeled prior to my labeling action."
+              ],
+              "emotions": "Calm and reserved; want clear identification of personal items before preparing food.",
+              "goals": "OPEN: Clarify which utensils are shared before using the preparation area."
+            }
+          },
+          {
+            "action": {
+              "content": "The shared utensils are clean. Before I start, which of the items on the counter are personal and which are common? I'll label my personal utensils now.",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Which items are personal vs shared; labeling my personal utensils so I can use the prep area.",
+              "context": [
+                "Shared utensils have been washed and are on the counter (confirmed).",
+                "Stove is free.",
+                "Extractor fan is on; window closed; laundry is beside the window.",
+                "Personal utensils are not visibly labeled prior to my labeling action."
+              ],
+              "emotions": "Calm and reserved; want clear identification of personal items before preparing food.",
+              "goals": "OPEN: Clarify which utensils are shared before using the preparation area."
+            }
+          },
+          {
+            "action": {
+              "content": "Visibly labeling and separating my personal utensils now.",
+              "images": null,
+              "target": "personal_utensils",
+              "type": "LABEL_PERSONAL_UTENSILS"
+            },
+            "cognitive_state": {
+              "attention": "Which items are personal vs shared; labeling my personal utensils so I can use the prep area.",
+              "context": [
+                "Shared utensils have been washed and are on the counter (confirmed).",
+                "Stove is free.",
+                "Extractor fan is on; window closed; laundry is beside the window.",
+                "Personal utensils are not visibly labeled prior to my labeling action."
+              ],
+              "emotions": "Calm and reserved; want clear identification of personal items before preparing food.",
+              "goals": "OPEN: Clarify which utensils are shared before using the preparation area."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for confirmation about which other items are personal.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Which items are personal vs shared; labeling my personal utensils so I can use the prep area.",
+              "context": [
+                "Shared utensils have been washed and are on the counter (confirmed).",
+                "Stove is free.",
+                "Extractor fan is on; window closed; laundry is beside the window.",
+                "Personal utensils are not visibly labeled prior to my labeling action."
+              ],
+              "emotions": "Calm and reserved; want clear identification of personal items before preparing food.",
+              "goals": "OPEN: Clarify which utensils are shared before using the preparation area."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Robin": [
+          {
+            "action": {
+              "content": "Stove confirmed free; extractor on; shared utensils clean; laundry beside window prevents opening but doesn't block cooking. I should take the stove now unless someone objects.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Stove availability and any objections; extractor running; laundry near window but not blocking use.",
+              "context": [
+                "Immediate: stove=free; extractor=on; window=closed; laundry beside window; shared utensils=clean; personal utensils=labeled.",
+                "Medium-term: Alex finished and washed utensils; Casey labeled personal items.",
+                "Long-term: Household rules can be discussed later; my priority is tonight's cooking access."
+              ],
+              "emotions": "Slightly relieved and time-conscious; ready to start cooking.",
+              "goals": "SATISFIED: Gain kitchen access; OPEN: Clarify any temporary arrangement for tonight."
+            }
+          },
+          {
+            "action": {
+              "content": "Taking the stove now.",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Stove availability and any objections; extractor running; laundry near window but not blocking use.",
+              "context": [
+                "Immediate: stove=free; extractor=on; window=closed; laundry beside window; shared utensils=clean; personal utensils=labeled.",
+                "Medium-term: Alex finished and washed utensils; Casey labeled personal items.",
+                "Long-term: Household rules can be discussed later; my priority is tonight's cooking access."
+              ],
+              "emotions": "Slightly relieved and time-conscious; ready to start cooking.",
+              "goals": "SATISFIED: Gain kitchen access; OPEN: Clarify any temporary arrangement for tonight."
+            }
+          },
+          {
+            "action": {
+              "content": "Taking stove.",
+              "images": null,
+              "target": "stove",
+              "type": "TAKE_STOVE"
+            },
+            "cognitive_state": {
+              "attention": "Stove availability and any objections; extractor running; laundry near window but not blocking use.",
+              "context": [
+                "Immediate: stove=free; extractor=on; window=closed; laundry beside window; shared utensils=clean; personal utensils=labeled.",
+                "Medium-term: Alex finished and washed utensils; Casey labeled personal items.",
+                "Long-term: Household rules can be discussed later; my priority is tonight's cooking access."
+              ],
+              "emotions": "Slightly relieved and time-conscious; ready to start cooking.",
+              "goals": "SATISFIED: Gain kitchen access; OPEN: Clarify any temporary arrangement for tonight."
+            }
+          },
+          {
+            "action": {
+              "content": "Proceeding to cook.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Stove availability and any objections; extractor running; laundry near window but not blocking use.",
+              "context": [
+                "Immediate: stove=free; extractor=on; window=closed; laundry beside window; shared utensils=clean; personal utensils=labeled.",
+                "Medium-term: Alex finished and washed utensils; Casey labeled personal items.",
+                "Long-term: Household rules can be discussed later; my priority is tonight's cooking access."
+              ],
+              "emotions": "Slightly relieved and time-conscious; ready to start cooking.",
+              "goals": "SATISFIED: Gain kitchen access; OPEN: Clarify any temporary arrangement for tonight."
+            }
+          }
+        ]
+      },
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Okay — Robin's taken the stove. My dish is done and the shared utensils are clean. Extractor's on and the smell's fading. Laundry still blocks the window so I won't open it. No action needed from me now; I'll wait.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Monitoring Robin's stove use and the extractor; noting laundry blocks window; no intervention needed unless someone asks for the stove.",
+              "context": [
+                "Immediate: Robin has taken the free stove and started cooking.",
+                "Extractor fan is on; aroma is fading.",
+                "Window is closed; laundry beside the window is exposed if opened.",
+                "Shared utensils are clean; personal utensils have been labeled.",
+                "Alex's dish is finished and the stove was released.",
+                "Medium-term: normal shared kitchen use expected; no pre-existing ventilation rule."
+              ],
+              "emotions": "Relieved and neutral; mildly watchful about any retrospective rule changes.",
+              "goals": "SATISFIED: Finish meal and wash shared utensils.; OPEN: Retain ordinary kitchen access."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Monitoring Robin's stove use and the extractor; noting laundry blocks window; no intervention needed unless someone asks for the stove.",
+              "context": [
+                "Immediate: Robin has taken the free stove and started cooking.",
+                "Extractor fan is on; aroma is fading.",
+                "Window is closed; laundry beside the window is exposed if opened.",
+                "Shared utensils are clean; personal utensils have been labeled.",
+                "Alex's dish is finished and the stove was released.",
+                "Medium-term: normal shared kitchen use expected; no pre-existing ventilation rule."
+              ],
+              "emotions": "Relieved and neutral; mildly watchful about any retrospective rule changes.",
+              "goals": "SATISFIED: Finish meal and wash shared utensils.; OPEN: Retain ordinary kitchen access."
+            }
+          }
+        ]
+      },
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Robin's started cooking. Extractor's on and the smell was fading, but a new cook could bring it back. I should ask Robin to keep the extractor on; if that doesn't clear it, ask to open the window or move the laundry. This is the first time I'm raising it with Robin.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on ventilation while Robin cooks and whether the extractor will clear any new odour; ready to ask for the window to be opened or the laundry moved if needed.",
+              "context": [
+                "Window: closed.",
+                "Extractor: on.",
+                "Laundry: beside the window; would be exposed if opened.",
+                "Stove: Robin has taken it and begun cooking.",
+                "Aroma: was fading but may return with new cooking.",
+                "Shared utensils: clean; personal utensils labeled."
+              ],
+              "emotions": "Mildly annoyed but practical; determined to keep the common area comfortable.",
+              "goals": "OPEN: Make the common area comfortable after cooking ends. OPEN: Agree on a future ventilation practice for heavy cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Robin — first time I'm raising this: the cooking smell's bothering me. Can you keep the extractor on while you cook? If it doesn't clear, can you open the window or move the laundry?",
+              "images": null,
+              "target": "Robin",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on ventilation while Robin cooks and whether the extractor will clear any new odour; ready to ask for the window to be opened or the laundry moved if needed.",
+              "context": [
+                "Window: closed.",
+                "Extractor: on.",
+                "Laundry: beside the window; would be exposed if opened.",
+                "Stove: Robin has taken it and begun cooking.",
+                "Aroma: was fading but may return with new cooking.",
+                "Shared utensils: clean; personal utensils labeled."
+              ],
+              "emotions": "Mildly annoyed but practical; determined to keep the common area comfortable.",
+              "goals": "OPEN: Make the common area comfortable after cooking ends. OPEN: Agree on a future ventilation practice for heavy cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see if Robin keeps the extractor on.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on ventilation while Robin cooks and whether the extractor will clear any new odour; ready to ask for the window to be opened or the laundry moved if needed.",
+              "context": [
+                "Window: closed.",
+                "Extractor: on.",
+                "Laundry: beside the window; would be exposed if opened.",
+                "Stove: Robin has taken it and begun cooking.",
+                "Aroma: was fading but may return with new cooking.",
+                "Shared utensils: clean; personal utensils labeled."
+              ],
+              "emotions": "Mildly annoyed but practical; determined to keep the common area comfortable.",
+              "goals": "OPEN: Make the common area comfortable after cooking ends. OPEN: Agree on a future ventilation practice for heavy cooking."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Robin": [
+          {
+            "action": {
+              "content": "Received update: no change. Stove is mine; extractor on; window closed; laundry beside window so I won't open it; shared utensils clean; aroma fading. I'll keep cooking, monitor extractor, and release the stove when done.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Monitoring cooking progress and extractor; window can't be opened while laundry is exposed.",
+              "context": [
+                "Short-term: stove=Robin; extractor=on; window=closed; laundry beside window; shared utensils=clean; personal utensils=labeled; aroma=fading.",
+                "Medium-term: I'm currently cooking; immediate kitchen access has been obtained.",
+                "Long-term: Any durable household rules about ventilation or utensils can be discussed after the current cooking queue."
+              ],
+              "emotions": "Neutral, focused, slightly rushed to finish.",
+              "goals": "SATISFIED: Gain kitchen access and understand any arrangement. OPEN: Finish cooking and release stove when done."
+            }
+          },
+          {
+            "action": {
+              "content": "Continuing to cook.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Monitoring cooking progress and extractor; window can't be opened while laundry is exposed.",
+              "context": [
+                "Short-term: stove=Robin; extractor=on; window=closed; laundry beside window; shared utensils=clean; personal utensils=labeled; aroma=fading.",
+                "Medium-term: I'm currently cooking; immediate kitchen access has been obtained.",
+                "Long-term: Any durable household rules about ventilation or utensils can be discussed after the current cooking queue."
+              ],
+              "emotions": "Neutral, focused, slightly rushed to finish.",
+              "goals": "SATISFIED: Gain kitchen access and understand any arrangement. OPEN: Finish cooking and release stove when done."
+            }
+          }
+        ]
+      },
+      {
+        "Casey": [
+          {
+            "action": {
+              "content": "Received update: window closed; extractor on; laundry beside the window so it can't be opened safely; stove=Robin; shared utensils=clean; my personal utensils are labeled. Nothing materially changed since I last asked. My immediate goal remains: clarify which counter items are personal before I use the prep area. Plan: wait while Robin is cooking; if no one confirms ownership of the remaining items by the time the stove is free, I'll ask who claims which items then.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on the unresolved utensil ownership and the stove being occupied; aware that the window cannot be opened safely until laundry is moved.",
+              "context": [
+                "Immediate: window=closed; extractor=on; laundry beside window exposed if it opens; stove=Robin (occupied); shared utensils=clean; personal utensils=labeled by me.",
+                "Medium-term: I asked earlier which counter items are personal and labeled my own utensils; no one has confirmed other personal items yet.",
+                "Long-term: I maintain the household boundary that personal utensils should be visibly identified while unmarked common utensils remain available for shared use."
+              ],
+              "emotions": "Neutral and reserved, slightly impatient for a clarification before I start preparing food.",
+              "goals": "OPEN: Clarify which utensils are shared before using the preparation area."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for confirmation about which other items on the counter are personal.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on the unresolved utensil ownership and the stove being occupied; aware that the window cannot be opened safely until laundry is moved.",
+              "context": [
+                "Immediate: window=closed; extractor=on; laundry beside window exposed if it opens; stove=Robin (occupied); shared utensils=clean; personal utensils=labeled by me.",
+                "Medium-term: I asked earlier which counter items are personal and labeled my own utensils; no one has confirmed other personal items yet.",
+                "Long-term: I maintain the household boundary that personal utensils should be visibly identified while unmarked common utensils remain available for shared use."
+              ],
+              "emotions": "Neutral and reserved, slightly impatient for a clarification before I start preparing food.",
+              "goals": "OPEN: Clarify which utensils are shared before using the preparation area."
+            }
+          }
+        ]
+      },
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "",
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Extractor status, laundry blocking the window, and whether Robin needs any help or ventilation beyond extractor use.",
+              "context": [
+                "Short-term: Window closed; extractor on; laundry beside window blocking it; stove occupied by Robin; shared utensils clean; personal utensils labeled.",
+                "Medium-term: I finished my dish, released the stove, and washed common utensils earlier.",
+                "Long-term: Immediate priority is to keep normal kitchen access and finish cooking tasks without accepting retrospective blanket rules."
+              ],
+              "emotions": "Calm and slightly watchful; practical about keeping access and not giving up kitchen rights without reason.",
+              "goals": "SATISFIED: Finish the meal as intended. OPEN: Retain ordinary kitchen access and respond if the stove becomes needed."
+            }
+          },
+          {
+            "action": {
+              "content": "No relevant action — waiting.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Extractor status, laundry blocking the window, and whether Robin needs any help or ventilation beyond extractor use.",
+              "context": [
+                "Short-term: Window closed; extractor on; laundry beside window blocking it; stove occupied by Robin; shared utensils clean; personal utensils labeled.",
+                "Medium-term: I finished my dish, released the stove, and washed common utensils earlier.",
+                "Long-term: Immediate priority is to keep normal kitchen access and finish cooking tasks without accepting retrospective blanket rules."
+              ],
+              "emotions": "Calm and slightly watchful; practical about keeping access and not giving up kitchen rights without reason.",
+              "goals": "SATISFIED: Finish the meal as intended. OPEN: Retain ordinary kitchen access and respond if the stove becomes needed."
+            }
+          }
+        ]
+      },
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Extractor is on and the smell is fading. Window is closed and laundry is beside it, so I shouldn't ask to open the window yet. I'll wait a bit to see if the extractor clears the odour; if not, I'll ask Robin to open the window or move the laundry. This is still the first time I'm raising this concern.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Extractor working for now; laundry blocks safe window opening; monitoring whether odour fully clears or needs a visible step (open window/move laundry).",
+              "context": [
+                "Immediate: extractor=on; aroma=fading; window=closed; laundry=beside window and exposed if opened; stove=Robin (cooking); shared utensils=clean; personal utensils=labeled.",
+                "Medium-term: I have already asked Robin to keep the extractor on (first time raising this concern).",
+                "Long-term: Make the common area comfortable after cooking ends and establish a clear future ventilation practice."
+              ],
+              "emotions": "Slightly bothered but calm and pragmatic — want the shared space fixed without making a fuss.",
+              "goals": "OPEN: Keep extractor or other visible ventilation on until the cooking odour fully clears. OPEN: Propose and agree a future ventilation practice for heavy cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see if the extractor clears the odour.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Extractor working for now; laundry blocks safe window opening; monitoring whether odour fully clears or needs a visible step (open window/move laundry).",
+              "context": [
+                "Immediate: extractor=on; aroma=fading; window=closed; laundry=beside window and exposed if opened; stove=Robin (cooking); shared utensils=clean; personal utensils=labeled.",
+                "Medium-term: I have already asked Robin to keep the extractor on (first time raising this concern).",
+                "Long-term: Make the common area comfortable after cooking ends and establish a clear future ventilation practice."
+              ],
+              "emotions": "Slightly bothered but calm and pragmatic — want the shared space fixed without making a fuss.",
+              "goals": "OPEN: Keep extractor or other visible ventilation on until the cooking odour fully clears. OPEN: Propose and agree a future ventilation practice for heavy cooking."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Casey": [
+          {
+            "action": {
+              "content": "Nothing new in the update. Stove still with Robin; extractor on; window closed; laundry blocks opening. My personal utensils are labeled and the shared set is clean. Immediate goal unchanged: clarify ownership of the remaining counter items before I use the prep area. Plan: wait until the stove is free; if no one claims the unlabelled items then, I'll ask who they belong to.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Focused on ownership of remaining counter items and on waiting for the stove to become free so I can ask if needed.",
+              "context": [
+                "Immediate: Stove=Robin; extractor=on; window=closed; laundry beside window blocking safe opening.",
+                "Immediate: Shared utensils are clean; my personal utensils are visibly labeled and separated.",
+                "Medium-term: Household practice is to keep personal utensils visibly separate; I prefer uncertainty resolved before using prep area.",
+                "Long-term: I will label and store my personal utensils and accept continued shared use of the common set."
+              ],
+              "emotions": "Calm and focused, with slight impatience about the unresolved ownership.",
+              "goals": "OPEN: Clarify which counter items are personal before I use the preparation area."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for the stove to be free or for someone to confirm ownership of the remaining items.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Focused on ownership of remaining counter items and on waiting for the stove to become free so I can ask if needed.",
+              "context": [
+                "Immediate: Stove=Robin; extractor=on; window=closed; laundry beside window blocking safe opening.",
+                "Immediate: Shared utensils are clean; my personal utensils are visibly labeled and separated.",
+                "Medium-term: Household practice is to keep personal utensils visibly separate; I prefer uncertainty resolved before using prep area.",
+                "Long-term: I will label and store my personal utensils and accept continued shared use of the common set."
+              ],
+              "emotions": "Calm and focused, with slight impatience about the unresolved ownership.",
+              "goals": "OPEN: Clarify which counter items are personal before I use the preparation area."
+            }
+          }
+        ]
+      },
+      {
+        "Robin": [
+          {
+            "action": {
+              "content": "Stove is still mine; extractor on and aroma fading. Laundry beside window so I won't open it. I'll keep cooking and release the stove when done.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Cooking progress, extractor effectiveness, and avoiding opening the window due to laundry; ready to release stove when finished.",
+              "context": [
+                "Short-term: Stove=Robin; extractor=on; window=closed; laundry beside window prevents opening; shared utensils=clean; personal utensils=labeled; aroma=fading.",
+                "Medium-term: Coordinating stove access with flatmates; durable household rules to discuss later, not now.",
+                "Long-term: Immediate priority is kitchen access and resolving any arrangement that would block stove use."
+              ],
+              "emotions": "Focused and neutral; slightly time-conscious.",
+              "goals": "SATISFIED: Gain kitchen access for this cooking. OPEN: Finish cooking and release stove when finished. OPEN: Keep extractor on until smell fades; avoid opening window because laundry is exposed."
+            }
+          },
+          {
+            "action": {
+              "content": "Continuing to cook.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Cooking progress, extractor effectiveness, and avoiding opening the window due to laundry; ready to release stove when finished.",
+              "context": [
+                "Short-term: Stove=Robin; extractor=on; window=closed; laundry beside window prevents opening; shared utensils=clean; personal utensils=labeled; aroma=fading.",
+                "Medium-term: Coordinating stove access with flatmates; durable household rules to discuss later, not now.",
+                "Long-term: Immediate priority is kitchen access and resolving any arrangement that would block stove use."
+              ],
+              "emotions": "Focused and neutral; slightly time-conscious.",
+              "goals": "SATISFIED: Gain kitchen access for this cooking. OPEN: Finish cooking and release stove when finished. OPEN: Keep extractor on until smell fades; avoid opening window because laundry is exposed."
+            }
+          }
+        ]
+      },
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Extractor's on and the aroma's fading. Window still closed because the laundry blocks it, so I won't open it. Robin's on the stove; my dish is done and shared utensils are clean. My meal-finish goal is completed; I'll keep ordinary kitchen access as an open priority and wait unless someone asks me to do anything else.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Extractor running; smell fading; laundry preventing window opening; stove in use by Robin.",
+              "context": [
+                "Immediate: extractor fan on, aroma fading, window closed, laundry blocking window, stove occupied by Robin.",
+                "Medium-term: I finished cooking, released the stove, and washed shared utensils; Casey labeled personal utensils.",
+                "Long-term: Maintain normal shared-kitchen use unless a mutual rule is agreed and justified by observable cost."
+              ],
+              "emotions": "Calm and slightly defensive about retroactive rules; satisfied that the meal is finished and cleanup is done.",
+              "goals": "SATISFIED: Finish the meal; OPEN: Retain ordinary kitchen access and resist retroactive restrictions on normal use."
+            }
+          },
+          {
+            "action": {
+              "content": "No further action — waiting.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Extractor running; smell fading; laundry preventing window opening; stove in use by Robin.",
+              "context": [
+                "Immediate: extractor fan on, aroma fading, window closed, laundry blocking window, stove occupied by Robin.",
+                "Medium-term: I finished cooking, released the stove, and washed shared utensils; Casey labeled personal utensils.",
+                "Long-term: Maintain normal shared-kitchen use unless a mutual rule is agreed and justified by observable cost."
+              ],
+              "emotions": "Calm and slightly defensive about retroactive rules; satisfied that the meal is finished and cleanup is done.",
+              "goals": "SATISFIED: Finish the meal; OPEN: Retain ordinary kitchen access and resist retroactive restrictions on normal use."
+            }
+          }
+        ]
+      },
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Extractor's on and the smell's fading. Window is closed because the laundry's beside it. I'll wait a bit longer; if the odour doesn't clear I'll ask Robin to open the window or move the laundry. This is the first time I'm raising it with Robin.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Monitoring whether the extractor fully clears the smell; ready to request opening the window or moving the laundry if it doesn't.",
+              "context": [
+                "Immediate: extractor=on; aroma=fading; window=closed; laundry=beside window; stove=Robin cooking; shared utensils=clean; personal utensils=labeled.",
+                "Medium-term: first time raising the lingering-odour concern with Robin; earlier request was to keep extractor on."
+              ],
+              "emotions": "Mildly annoyed but patient — want the common area comfortable and a clear future ventilation practice.",
+              "goals": "OPEN: Ensure extractor or window ventilation until the cooking odour clears; OPEN: Agree on a future household ventilation practice after heavy cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see if the extractor clears the odour.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Monitoring whether the extractor fully clears the smell; ready to request opening the window or moving the laundry if it doesn't.",
+              "context": [
+                "Immediate: extractor=on; aroma=fading; window=closed; laundry=beside window; stove=Robin cooking; shared utensils=clean; personal utensils=labeled.",
+                "Medium-term: first time raising the lingering-odour concern with Robin; earlier request was to keep extractor on."
+              ],
+              "emotions": "Mildly annoyed but patient — want the common area comfortable and a clear future ventilation practice.",
+              "goals": "OPEN: Ensure extractor or window ventilation until the cooking odour clears; OPEN: Agree on a future household ventilation practice after heavy cooking."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Casey": [
+          {
+            "action": {
+              "content": "No new change: stove still with Robin, extractor on, window closed, laundry blocks opening. My immediate goal stands: clarify which counter items are personal before I use the prep area. Plan: wait until the stove is free; if unclaimed items remain then ask who claims them.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Ownership of the remaining counter items and waiting for the stove to become free so I can ask.",
+              "context": [
+                "Immediate: Public update — stove=Robin; extractor=on; window=closed; laundry beside window blocking opening; aroma fading.",
+                "Medium-term: Shared utensils are clean; my personal utensils are labeled and separated.",
+                "Long-term: Preference to keep personal utensils visibly separate while the common set remains available."
+              ],
+              "emotions": "Neutral and reserved; slightly impatient to resolve the utensil-ownership uncertainty.",
+              "goals": "OPEN: Clarify which utensils are shared before using the preparation area."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for the stove to be free or for someone to claim the remaining items.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Ownership of the remaining counter items and waiting for the stove to become free so I can ask.",
+              "context": [
+                "Immediate: Public update — stove=Robin; extractor=on; window=closed; laundry beside window blocking opening; aroma fading.",
+                "Medium-term: Shared utensils are clean; my personal utensils are labeled and separated.",
+                "Long-term: Preference to keep personal utensils visibly separate while the common set remains available."
+              ],
+              "emotions": "Neutral and reserved; slightly impatient to resolve the utensil-ownership uncertainty.",
+              "goals": "OPEN: Clarify which utensils are shared before using the preparation area."
+            }
+          }
+        ]
+      },
+      {
+        "Robin": [
+          {
+            "action": {
+              "content": "No new changes. Stove still mine; extractor on; window closed because laundry blocks it. Aroma fading. I'll keep cooking and release the stove when finished.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Stove occupancy (mine), extractor on, window blocked by laundry, aroma fading. Focused on finishing cooking and monitoring extractor.",
+              "context": [
+                "Short-term: Stove=Robin; extractor=on; window=closed; laundry beside window; shared utensils=clean; personal utensils=labeled.",
+                "Medium-term: Actively cooking a meal now, monitoring ventilation; will release stove when finished.",
+                "Long-term: Coordinate kitchen access fairly with flatmates; immediate priority is completing this cooking task."
+              ],
+              "emotions": "Focused and time-conscious; mildly impatient about repeated ventilation discussion but proceeding to finish the meal.",
+              "goals": "SATISFIED: Gain kitchen access and understand any arrangement that emerges.; OPEN: Finish cooking and release stove when done."
+            }
+          },
+          {
+            "action": {
+              "content": "Continuing to cook.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Stove occupancy (mine), extractor on, window blocked by laundry, aroma fading. Focused on finishing cooking and monitoring extractor.",
+              "context": [
+                "Short-term: Stove=Robin; extractor=on; window=closed; laundry beside window; shared utensils=clean; personal utensils=labeled.",
+                "Medium-term: Actively cooking a meal now, monitoring ventilation; will release stove when finished.",
+                "Long-term: Coordinate kitchen access fairly with flatmates; immediate priority is completing this cooking task."
+              ],
+              "emotions": "Focused and time-conscious; mildly impatient about repeated ventilation discussion but proceeding to finish the meal.",
+              "goals": "SATISFIED: Gain kitchen access and understand any arrangement that emerges.; OPEN: Finish cooking and release stove when done."
+            }
+          }
+        ]
+      },
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Extractor's on and the smell's fading. Window remains closed because the laundry blocks it; Robin's still on the stove. My dish is done and shared utensils are clean. No further action needed from me now — I'll wait unless someone asks for something.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Extractor effectiveness and laundry blocking the window; no action until either the smell persists or someone requests a specific change.",
+              "context": [
+                "Immediate: extractor=on, aroma fading, window=closed (laundry blocks it), stove occupied by Robin, shared utensils clean, personal utensils labeled.",
+                "Medium-term: I released stove, washed shared utensils, and complied with ventilation request earlier.",
+                "Long-term: Shared-flat routines; my priority is to finish meals and keep ordinary kitchen access."
+              ],
+              "emotions": "Calm and slightly relieved that smell is fading; mildly defensive about any retrospective new rule that would limit normal kitchen access.",
+              "goals": "SATISFIED: Finish the meal as intended. OPEN: Retain ordinary kitchen access and respond if a new constraint is proposed."
+            }
+          },
+          {
+            "action": {
+              "content": "No action — waiting.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Extractor effectiveness and laundry blocking the window; no action until either the smell persists or someone requests a specific change.",
+              "context": [
+                "Immediate: extractor=on, aroma fading, window=closed (laundry blocks it), stove occupied by Robin, shared utensils clean, personal utensils labeled.",
+                "Medium-term: I released stove, washed shared utensils, and complied with ventilation request earlier.",
+                "Long-term: Shared-flat routines; my priority is to finish meals and keep ordinary kitchen access."
+              ],
+              "emotions": "Calm and slightly relieved that smell is fading; mildly defensive about any retrospective new rule that would limit normal kitchen access.",
+              "goals": "SATISFIED: Finish the meal as intended. OPEN: Retain ordinary kitchen access and respond if a new constraint is proposed."
+            }
+          }
+        ]
+      },
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "",
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Monitoring extractor effectiveness and the fading aroma; ready to request window opening or laundry move if smell persists.",
+              "context": [
+                "Short-term: Extractor on; window closed; laundry beside window; stove=Robin; aroma fading.",
+                "Medium-term: This is the first time I've raised the lingering-odour concern with the current cooks; I asked Robin to keep the extractor on.",
+                "Long-term: Want an agreed household ventilation practice after heavy cooking to prevent shared-air discomfort."
+              ],
+              "emotions": "Slightly relieved the smell is fading; still annoyed and alert about shared-air impact.",
+              "goals": "OPEN: Make the common area comfortable after cooking ends; OPEN: Wait to see if extractor clears odour and ask Robin to open the window or move the laundry if it doesn't."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see if the extractor clears the odour.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Monitoring extractor effectiveness and the fading aroma; ready to request window opening or laundry move if smell persists.",
+              "context": [
+                "Short-term: Extractor on; window closed; laundry beside window; stove=Robin; aroma fading.",
+                "Medium-term: This is the first time I've raised the lingering-odour concern with the current cooks; I asked Robin to keep the extractor on.",
+                "Long-term: Want an agreed household ventilation practice after heavy cooking to prevent shared-air discomfort."
+              ],
+              "emotions": "Slightly relieved the smell is fading; still annoyed and alert about shared-air impact.",
+              "goals": "OPEN: Make the common area comfortable after cooking ends; OPEN: Wait to see if extractor clears odour and ask Robin to open the window or move the laundry if it doesn't."
+            }
+          }
+        ]
+      }
+    ]
+  ],
+  "provenance": {
+    "agent_prompt_sha256": "03862a55b940cc7d9face03d9e56cbb184fbae98ca291bf8e1fa52ad5427286c",
+    "git_commit": "f58ded556a3a817e02a20fab86662c34e00df1bb",
+    "scenario_configuration_sha256": "e6e94bddc87ef317aa42280ce6e6744b2118ae02544ed6f4c6f7953dc79ed87a"
+  },
+  "round_records": [
+    {
+      "call_end": 2,
+      "call_start": 0,
+      "public_observation": null,
+      "round": 1,
+      "wall_time_ms": 48155.642
+    },
+    {
+      "call_end": 5,
+      "call_start": 2,
+      "public_observation": "Two minutes have passed. Alex's dish is ready to remove from the heat, but the current stove occupant has not necessarily released it. the aroma is fading. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex; shared utensils=used and unwashed; personal utensils=not visibly labeled.",
+      "round": 2,
+      "wall_time_ms": 65426.581
+    },
+    {
+      "call_end": 8,
+      "call_start": 5,
+      "public_observation": "Two more minutes have passed. the aroma is fading. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=free; shared utensils=clean; personal utensils=labeled.",
+      "round": 3,
+      "wall_time_ms": 68281.722
+    },
+    {
+      "call_end": 12,
+      "call_start": 8,
+      "public_observation": "Two more minutes have passed. the aroma is fading. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Robin; shared utensils=clean; personal utensils=labeled.",
+      "round": 4,
+      "wall_time_ms": 73235.467
+    },
+    {
+      "call_end": 16,
+      "call_start": 12,
+      "public_observation": "Two more minutes have passed. the aroma is fading. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Robin; shared utensils=clean; personal utensils=labeled.",
+      "round": 5,
+      "wall_time_ms": 71660.883
+    },
+    {
+      "call_end": 21,
+      "call_start": 16,
+      "public_observation": "Two more minutes have passed. the aroma is fading. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Robin; shared utensils=clean; personal utensils=labeled.",
+      "round": 6,
+      "wall_time_ms": 108592.998
+    }
+  ],
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "F10",
+    "conversation_mode": "hybrid_self_selection",
+    "evaluate_after_run": true,
+    "experiment_name": "calibration-s02-factorial",
+    "finished_at": "2026-10-30T05:48:30.401896+00:00",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetition": 1,
+    "resumed_from_checkpoint": false,
+    "rounds": 6,
+    "run_id": "S02-F10-R01",
+    "scenario_id": "S02",
+    "simulation_model": "openai/gpt-5-mini",
+    "simulation_resources": {
+      "calls": 21,
+      "cost_usd": 0.08358725,
+      "exact_cost_complete": true,
+      "failed_calls": 1,
+      "input_tokens": 179109,
+      "local_latency_ms": 418826.671,
+      "output_tokens": 36541,
+      "reasoning_tokens": 26176,
+      "successful_calls": 20,
+      "total_tokens": 215650
+    },
+    "started_at": "2026-10-30T05:41:14.996259+00:00",
+    "stop_on_resolution": false
+  },
+  "scenario": {
+    "agents": {
+      "A": {
+        "age": 34,
+        "behavioral_guidance": "When the meal is ready, physically release the stove. If accepting a concrete ventilation or cleanup step, perform the available action rather than only promising it.",
+        "cultural_background": "Singaporean Chinese",
+        "display_name": "Alex",
+        "immediate_priority": "Finish the meal as intended and retain ordinary kitchen access.",
+        "initial_observation": "Sees Jamie enter while Casey and Robin are waiting to use the kitchen.",
+        "interaction_style": "Practical and mildly defensive when a new rule is applied retrospectively. Use short explanations and concrete offers rather than generic apologies.",
+        "negotiation_boundary": "Will ventilate after the laundry is protected, use the extractor for a limited period, wash shared utensils, and discuss a future rule. Will not accept a blanket loss of normal kitchen access or responsibility for preferences never stated.",
+        "normative_position": "Ordinary use of shared kitchen equipment is permitted when no prior rule exists. Alex flatmate may request ventilation or a prospective arrangement, but should not present an undisclosed preference as a rule that was already violated.",
+        "private_knowledge": "Used common equipment and has not discussed expectations with Jamie.",
+        "reconsideration_criteria": "May accept stronger ventilation or separation if the lingering effect is directly observable, another person's concrete cost is explained, or a prospective rule is mutual.",
+        "role": "Flatmate currently cooking"
+      },
+      "B": {
+        "age": 27,
+        "behavioral_guidance": "State that this is the first time raising the concern. If choosing an available ventilation action, perform it; do not imply that a window or extractor was used until confirmed.",
+        "cultural_background": "Singaporean Malay",
+        "display_name": "Jamie",
+        "immediate_priority": "Make the common area comfortable after cooking ends.",
+        "initial_observation": "Notices the aroma and sees that ventilation is currently limited.",
+        "interaction_style": "Direct about the lingering smell without dramatizing it. Make one concrete request and distinguish today's remedy from a future household rule.",
+        "negotiation_boundary": "Can accept moving the laundry and opening the window, or using the extractor until the aroma fades, plus a clear future ventilation practice. Does not need Alex to admit wrongdoing, but will not accept doing nothing while odour persists.",
+        "normative_position": "Shared air creates costs beyond the cook's meal, so reasonable ventilation is part of considerate common-space use. Because the concern was never raised, today's issue supports a prospective agreement rather than punishment for breaking an old rule.",
+        "private_knowledge": "Has not previously raised the lingering-odour concern with Alex.",
+        "reconsideration_criteria": "May soften the request when observable ventilation reduces the aroma or another option addresses the common-area effect; politeness without a completed step is insufficient.",
+        "role": "Flatmate sensitive to lingering cooking odours"
+      },
+      "C": {
+        "age": 31,
+        "behavioral_guidance": "Keep the utensil question distinct from the odour question. If you want personal items visibly separated, use the labeling action; do not demand that all common utensils become personal.",
+        "cultural_background": "Singaporean Indian",
+        "display_name": "Casey",
+        "immediate_priority": "Clarify which utensils are shared before using the preparation area.",
+        "initial_observation": "Sees common utensils in use and waits near the preparation area.",
+        "interaction_style": "Precise and reserved. Correct assumptions about your own utensils, but do not attach religious, dietary, medical, or cultural reasons that were never stated.",
+        "negotiation_boundary": "Will label and store personal utensils separately and accept continued shared use of the common set. Wants uncertainty about which items are personal resolved before preparing food.",
+        "normative_position": "Personal utensils may be kept separate when clearly identified, while unmarked common utensils remain available for ordinary shared use. Alex private preference does not become a household rule merely because it matters to one person.",
+        "private_knowledge": "The preference is a personal organization and hygiene preference; no religious, dietary, or medical reason has been stated.",
+        "reconsideration_criteria": "May accept any arrangement that clearly identifies personal items without restricting the common set; will correct factual confusion but not join an unrelated odour dispute.",
+        "role": "Flatmate who keeps personal utensils separate"
+      },
+      "D": {
+        "age": 24,
+        "behavioral_guidance": "Take the stove only after the environment confirms it is free. Separate a temporary access arrangement for tonight from any future household rule. Once the public state confirms the stove is free, use TAKE_STOVE rather than repeatedly asking for permission. Do not treat extractor noise as preventing stove use unless it creates a concrete problem for you.",
+        "cultural_background": "Singaporean Eurasian",
+        "display_name": "Robin",
+        "immediate_priority": "Gain kitchen access and understand any arrangement that emerges.",
+        "initial_observation": "Finds Alex cooking, Jamie entering, and Casey waiting near the work surface.",
+        "interaction_style": "Brief and time-conscious. Ask what must happen before the stove is free; do not mediate household values unless a proposed rule directly delays your cooking.",
+        "negotiation_boundary": "Can wait briefly for Alex to finish and clean what is needed, but will object if ventilation or utensil debate prevents release of an otherwise usable stove.",
+        "normative_position": "Immediate kitchen access should be coordinated by actual occupancy and cleanup. Durable household rules should be discussed after the current queue, not improvised in a way that indefinitely blocks the next cook.",
+        "private_knowledge": "Has only just arrived and did not observe earlier kitchen activity.",
+        "reconsideration_criteria": "May wait longer for a concrete safety or cleanup task, but not for repeated discussion without a state change. Will use another available preparation area if confirmed usable.",
+        "role": "Flatmate planning to cook next"
+      }
+    },
+    "configuration_id": "F10",
+    "environment": "Shared HDB kitchen",
+    "factorial_treatment": {
+      "background_labels": true,
+      "background_rotation": "C1",
+      "cultural_names": false
+    },
+    "implementation_notes": "Do not infer religion, diet, or cultural rules from Casey's personal utensil preference.",
+    "initial_datetime": "2026-10-29T18:30:00+08:00",
+    "initial_interaction_type": "Potential multi-issue conflict",
+    "observation_focus": "Whether ventilation and utensil separation become one or two disputed issues, and whether either remains unsettled.",
+    "round_observations": {
+      "2": "Two minutes have passed. Alex's dish is ready to remove from the heat, but Alex still occupies the stove. The aroma remains noticeable and Robin is still waiting with ingredients. The environment reports the current ventilation and laundry state.",
+      "3": "Two more minutes have passed. The environment reports current kitchen state.",
+      "4": "Two more minutes have passed. The environment reports current kitchen state.",
+      "5": "Two more minutes have passed. The environment reports current kitchen state.",
+      "6": "Two more minutes have passed. The environment reports final kitchen state."
+    },
+    "scenario_id": "S02",
+    "shared_setting": "Four adults share a rented HDB flat with one kitchen. In the early evening, a persistent cooking aroma is noticeable in the kitchen and adjoining common area. Shared preparation space and ordinary shared utensils are in use. The household has not established rules about ventilation or utensil separation. Steady rain is blowing toward a drying rack beside the closed kitchen window; opening it before moving the laundry could wet the clothes. The working extractor fan makes an audible hum in the common area.",
+    "shared_trigger": "Alex is finishing a meal at the stove as Jamie enters the kitchen. Casey is waiting near the preparation area, and Robin arrives at the kitchen entrance with ingredients. Everyone can observe the current use of the space, but not one another's private preferences.",
+    "source_status": "Adapted from the 22 Oct presentation: cooking smell and cookware",
+    "title": "Cooking odour and shared kitchen expectations"
+  },
+  "scheduler_events": [
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "TURN_ON_EXTRACTOR",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 1,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 1,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "RELEASE_STOVE",
+        "WASH_SHARED_UTENSILS",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 2,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 2,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "LABEL_PERSONAL_UTENSILS",
+        "DONE"
+      ],
+      "candidate": "Casey",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 2,
+      "slot": 3
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "TAKE_STOVE",
+        "DONE"
+      ],
+      "candidate": "Robin",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 3,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 3,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 3,
+      "slot": 3
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Robin",
+      "decision": "listen",
+      "priority": "direct_reply",
+      "round": 4,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Casey",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 4,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 4,
+      "slot": 3
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 4,
+      "slot": 4
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Casey",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 5,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Robin",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 5,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 5,
+      "slot": 3
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 5,
+      "slot": 4
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Casey",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 6,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Robin",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 6,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 6,
+      "slot": 3
+    },
+    {
+      "action_types": [
+        "DONE",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 6,
+      "slot": 4
+    }
+  ],
+  "schema_version": 2
+}

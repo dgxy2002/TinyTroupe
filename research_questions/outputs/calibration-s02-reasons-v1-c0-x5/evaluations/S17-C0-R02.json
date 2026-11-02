@@ -1,0 +1,112 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility",
+      "extractor duration/power",
+      "opening the window vs protecting drying laundry",
+      "stove access timing",
+      "establishing future household rule about ventilation"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers give clear, situationally grounded reasons (drying work clothes, odour nuisance, stove timing).",
+      "Repeated negotiation about extractor duration (ten vs seven vs five) is the main repetition.",
+      "Agents introduce specific practical proposals (run extractor on high, cover clothes) rather than vague concessions.",
+      "No role confusion; environmental updates anchor actions (extractor on, window closed, laundry location)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Participants reached partial agreement on a practical mitigation (Agent A will run the extractor on high for five minutes after cooking and restart if the smell persists), but the central incompatibility—opening the window while Agent C's drying rack is exposed and any standing rule assigning ventilation responsibility—remains unresolved. Agent C's firm refusal to move the rack leaves the window option blocked unless a separate compromise (covering or explicit permission) is accepted.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened from refusing any imposed rule to accepting a concrete operational compromise: run extractor on high for five minutes after cooking (evidence: Turns 1,3,5,7,9).",
+      "Agent B moved from demanding ten minutes to accepting five as a minimum while requesting high power and the ability to restart (evidence: Turns 2,4,6,8,10).",
+      "Agent C maintained a firm position against moving the drying rack and against opening the window without safeguards (evidence: Turn 12).",
+      "Agent D introduced a new compromise option (cover clothes or move them with consent) and deferred to Agent C's consent (evidence: Turn 13)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Opening situation: disagreement already underway about ventilation responsibility and stove access. Turn 1 — Agent A refuses a rule assigning cooks sole ventilation responsibility and turns the extractor on while insisting on five minutes to finish. Turn 2 — Agent B asks Agent A to leave extractor on for ten minutes after finishing. Substantive disagreement about who must manage ventilation and how long the extractor should run remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Public update confirms extractor on and stove with A. Turn 3 — Agent A offers five minutes after finishing (refuses ten/seven). Turn 4 — Agent B says five is minimum but asks for seven if possible. Both sides narrow the gap (B accepts five as minimum) but disagreement about the preferred duration and underlying responsibility remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "State: extractor on, window closed, laundry exposed. Turn 5 — Agent A: one minute left, will leave extractor on five minutes and says window can't be opened unless laundry moved. Turn 6 — Agent B: demands extractor on high and to restart if smell persists. Dispute persists over opening the window (laundry) and whether extractor will run on high; no resolution yet.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Public update same. Turn 7 — Agent A agrees to run extractor on high for five minutes after finishing (reduces prior refusal). Turn 8 — Agent B accepts five minutes on high and asks to restart if smell remains. Agreement reached on extractor power/duration, but the laundry/window issue and any standing rule remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Public update: extractor on, stove still with A. Turn 9 — Agent A reiterates freeing stove soon and five minutes on high. Turn 10 — Agent B states they cannot move the laundry (only Agent C can). Extractor arrangement is stable for now, but who may open the window or move the drying rack is unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Public update: laundry still exposed. Turn 12 — Agent C firmly refuses to move the drying rack or allow the window to be opened without a plan to prevent wetting; demands to be asked and for a proposal. Turn 13 — Agent D offers to move the rack, cover clothes with plastic, or use extractor and take the stove later. Agent C's explicit refusal sharpens the conflict between protecting personal property (drying work clothes) and ventilation needs; no agreement reached on moving/covering the rack.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Agreement on extractor power/duration served as a workable partial mitigation without resolving the underlying property-vs-common-good tension.",
+      "The critical bottleneck for opening the window is control over the drying rack (Agent C's property), not mere willingness to ventilate.",
+      "Lack of a standing household rule produced negotiation dynamics where practical short-term compromises substitute for policy.",
+      "Agent D's willingness to propose covering or moving the rack is a potential path to resolution but was not yet accepted by Agent C."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-02T04:48:53.597447+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00740505,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2993,
+      "local_latency_ms": 40028.568,
+      "output_tokens": 3530,
+      "reasoning_tokens": 2112,
+      "successful_calls": 1,
+      "total_tokens": 6523
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 2,
+    "run_id": "S17-C0-R02",
+    "scenario_id": "S17"
+  },
+  "schema_version": 2
+}

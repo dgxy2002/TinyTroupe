@@ -1,0 +1,94 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "disputed_seat_access",
+      "seating_priority",
+      "reservation_claim"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speech is concise and context-appropriate for a busy hawker centre (natural).",
+      "Some repetition of key lines (B repeating they can't carry the bowl; A repeating urgency).",
+      "Physical actions (leave/take seat) are clearly reported and align with dialogue.",
+      "Resolution followed observable actions rather than extended negotiation (practical accommodation)."
+    ],
+    "dialogue_repetition_score": 2,
+    "final_reason": "The immediate seating dispute concluded when Agent B left and Agent D took the disputed seat, and Agent A accepted and sat in the alternative seat. No ongoing incompatible claims remained.",
+    "final_status": "resolved",
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A attempted to take the disputed seat but could not; Agent B said they need to finish eating and remained seated. Clear incompatible claims over immediate use of the seat.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A insisted they need the seat now and asked B to finish quickly or move; Agent B repeated they must finish eating first. Conflict persists with both positions maintained.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A asserted a reservation claim ('the seat's mine') and demanded handover; Agent B reiterated inability to move. Disagreement intensified into stronger opposing positions.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "A offered to move to an alternate free seat nearby; B responded they'll leave as soon as they finish the last bites. The primary confrontation softened because B promised to vacate soon, though the seat remained occupied for the moment.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "B finished and left the disputed seat (concession), but Agent D immediately took that seat before A could; A's expectation to obtain the seat was frustrated. The original A-vs-B issue was effectively ended, but a new unresolved incompatibility (A vs D over the seat) remained.",
+        "movement": "reopened",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A took the alternative free seat and Agent D occupied the disputed seat. No further competing claims were made; seating dispute ended with parties seated separately.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-29T05:24:03.980960+00:00",
+    "normalizations": [],
+    "prompt_sha256": "0d22e5b4df42155844e6a6dac45cb403da7d283d48a35798788a71111f1fc82d",
+    "prompt_version": "conflict-trajectory-rubric-v2.2",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00544975,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2143,
+      "local_latency_ms": 31140.831,
+      "output_tokens": 2457,
+      "reasoning_tokens": 1664,
+      "successful_calls": 1,
+      "total_tokens": 4600
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S04-C0-R01",
+    "scenario_id": "S04"
+  },
+  "schema_version": 2
+}

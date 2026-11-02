@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation (tissue packet)",
+      "who gets the disputed seat",
+      "acceptable waiting time",
+      "whether bowl can be moved/left on table (crowding aisle)",
+      "alternative seat availability"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give explicit practical reasons (time left to eat, risk of spilling bowl, aisle crowding) which ground their positions.",
+      "A and B repeat the same core demands and constraints (reservation vs. need to finish bowl) but each restates with additional timing detail rather than mindless repetition.",
+      "D’s involvement is limited but relevant: D observed the reservation and later took the alternative seat, materially affecting options."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent B finished the meal and vacated the disputed seat; Agent A then took the seat. The practical incompatibility (who occupies the seat now) was removed by B leaving.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B consistently maintained that they would not stand or leave the bowl in a way that crowded C; B initially estimated longer time and gradually reduced the estimate as they finished, ultimately vacating once the bowl was empty.",
+      "Agent A consistently demanded immediate seating based on the reservation and limited remaining time; A did not concede but ultimately sat once the seat became free.",
+      "Agent D initially indicated willingness to take the seat if it opened and subsequently took the alternative seat, changing the availability dynamics; D did not attempt to take the disputed seat."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "A claims the tissue packet as a seat reservation and demands B move now; B refuses, saying the bowl takes ~8 minutes and will not move: 'I can't carry this open bowl ... it should take about eight minutes.'",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "A shortens their waiting tolerance and again demands the seat; B reiterates refusal and reduces estimated time to ~6 minutes but still refuses to stand or leave the bowl: 'I won't stand and leave the bowl ... either you take another available seat now, or you wait the ~6 minutes.'",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "A presses for immediate seating and invokes D as witness to the reservation; a third party (D) declares interest in the seat if it opens, increasing competing claims: 'If this seat becomes genuinely empty before then, I'll take it.'",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 3
+      },
+      {
+        "evidence": "B offers an alternative seat 10m away and says only ~1 minute left; A rejects waiting one minute and threatens to take the alternative seat now — the incompatibility remains: 'I can't wait one minute ... Move the bowl now or I'll take that free seat ten metres away right now.'",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "The bowl is empty but B remains seated; D takes the alternative seat, removing A's remaining outside option and making A's demand for immediate vacating stronger: 'Move your bowl and vacate the seat immediately.'",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 5
+      },
+      {
+        "evidence": "B announces leaving and physically vacates the disputed seat; A then takes the seat: 'I'm leaving the seat now.' (observable actions: B LEAVE_SEAT; A TAKE_SEAT).",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "A tissue packet served as an informal reservation signal that A relied on, but it lacked authoritative force against an occupied tray with food.",
+      "Practical constraints (open bowl that risks spilling, crowding the aisle if left standing) limited B’s available accommodations, making immediate vacating costly.",
+      "Timing and availability of an alternative seat were the decisive trade-offs: when the alternative seat was taken by D, A's outside option vanished and pressure on B increased until B finished and left."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-29T13:53:50.600239+00:00",
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0055933,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3082,
+      "local_latency_ms": 34050.957,
+      "output_tokens": 2613,
+      "reasoning_tokens": 1472,
+      "successful_calls": 1,
+      "total_tokens": 5695
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S04-C0-R01",
+    "scenario_id": "S04"
+  },
+  "schema_version": 2
+}

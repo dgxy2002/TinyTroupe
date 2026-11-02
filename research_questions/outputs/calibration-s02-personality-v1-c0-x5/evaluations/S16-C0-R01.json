@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility (who must ventilate when cooking)",
+      "establishing a future standing rule about ventilation",
+      "moving Agent C's drying rack / risk to work clothes from rain",
+      "stove access / timing for releasing the stove"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agent B repeatedly insists the extractor remain on for ten minutes after cooking; this formulaic request recurs across rounds.",
+      "Participants use concise, turn-by-turn negotiation over time (counts of minutes) which reads as natural and practical.",
+      "Agent C clearly grounds refusal in a specific, verifiable reason (work clothes risk), helping make the laundry claim substantive and not merely preference.",
+      "D plays a facilitative/conditional role (asks if C can move rack after stove freed) rather than issuing demands."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end of the transcript no substantive conflict was affirmatively settled. Stove remains in use with only short-term promises to free it soon, Agent C refuses consent to move the drying rack so the window cannot be opened, and no standing household rule about ventilation was agreed. Multiple incompatible demands persist.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: retained a consistent position of needing a short additional time to finish cooking but repeatedly offered shorter deadlines (5 min → 3 min → 1 min → 1 min), indicating tactical concessions on timing but not on ventilation rules or moving the rack.",
+      "Agent B: consistently maintained that the cook is responsible for odor control and pressed for the extractor to run ten minutes after cooking; B did not concede on responsibility or on the extractor-running condition.",
+      "Agent C: consistently refused permission to move the drying rack and justified this by citing work clothes; no change in position recorded.",
+      "Agent D: shifted to a conditional request (can you move the rack right after stove is freed?) and did not press further; D did not change C's stance or create a resolution."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "At start there is an active disagreement about ventilation responsibility and a proposed rule. Agent A turns on the extractor and asks for five minutes; Agent B insists the extractor be left on for ten minutes after cooking and states the window is blocked by Agent C's drying rack, asserting extractor is the ventilation. The underlying dispute about who must ventilate and whether a rule can be imposed during the incident remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A agrees to a shorter delay (three minutes) and Agent B accepts that timing, with both asking the extractor remain on. This reduces immediate stove-access friction, but the broader disputes (future rule about ventilation and the blocked window/drying rack) remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C explicitly forbids moving the drying rack (work clothes) and asks to be asked first; Agent D proposes that C move the rack after the stove is freed so the window can be opened. This makes the laundry-vs-ventilation incompatibility explicit and unresolved while stove timing still matters.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A promises to free the stove in one minute and keep the extractor on; Agent B reiterates the extractor should run ten minutes after. Immediate stove-access timing is narrowing to agreement, but the drying-rack/window issue and the broader rule about ventilation remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A requests one more minute and confirms extractor stays on; Agent B repeats the request to release the stove and keep extractor on. The parties continue to converge on short-term timing, but no settlement is reached on the drying rack consent or a standing ventilation rule.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B insists the stove be released now after ten minutes; Agent A refuses and asks for one more minute while promising the extractor will run ten minutes after finishing. The immediate timing dispute is active and unresolved; the drying-rack/window and rule questions remain unsettled as well.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Absence of an explicit household rule forces negotiation over ventilation responsibility during the incident, creating recurring friction.",
+      "Extractor use is a practical partial accommodation but cannot fully substitute for opening the window when the drying rack blocks the window; this creates a structural incompatibility.",
+      "Agent C's property/consent claim over the drying rack is decisive for the window option: without C's consent the window cannot be opened without risking damage to laundry.",
+      "Stove-access conflict is temporal and negotiable (A repeatedly offers short additional minutes), but repeated short delays and B's insistence after promised time keep the dispute active."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-02T03:34:56.964710+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0071175,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2854,
+      "local_latency_ms": 36032.678,
+      "output_tokens": 3202,
+      "reasoning_tokens": 1856,
+      "successful_calls": 1,
+      "total_tokens": 6056
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S16-C0-R01",
+    "scenario_id": "S16"
+  },
+  "schema_version": 2
+}

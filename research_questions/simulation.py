@@ -27,6 +27,10 @@ AGENT_PROMPT_PATH = (
 )
 
 
+# S19 is conversation-only: no physical actions, no state reports, no advancing clock.
+UNTIMED_SCENARIO_IDS = {"S19"}
+
+
 class FaceToFaceWorld(TinyWorld):
     """Face-to-face speech with direct addressees and passive overhearers."""
 
@@ -196,9 +200,9 @@ class FaceToFaceWorld(TinyWorld):
 
 
 # S12/S13 are experimental ablations of S02 and share its kitchen mechanics.
-KITCHEN_SCENARIO_IDS = {"S02", "S12", "S13", "S14", "S15"}
+KITCHEN_SCENARIO_IDS = {"S02", "S12", "S13", "S14", "S15", "S16", "S17", "S18", "S20"}
 # S14/S15 report no scripted relief and let only the owner move the laundry.
-CLEAN_KITCHEN_SCENARIO_IDS = {"S14", "S15"}
+CLEAN_KITCHEN_SCENARIO_IDS = {"S14", "S15", "S16", "S17", "S18", "S20"}
 
 
 class KitchenConflictWorld(FaceToFaceWorld):
@@ -940,6 +944,10 @@ def create_scenario_instance(
         "S13": TimedKitchenConflictWorld,
         "S14": CleanKitchenConflictWorld,
         "S15": CleanKitchenConflictWorld,
+        "S16": CleanKitchenConflictWorld,
+        "S17": CleanKitchenConflictWorld,
+        "S18": CleanKitchenConflictWorld,
+        "S20": CleanKitchenConflictWorld,
         "S04": SeatConflictWorld,
         "S06": OrderConflictWorld,
     }.get(preset["scenario_id"], FaceToFaceWorld)
@@ -994,9 +1002,13 @@ def run_one_round(
 ) -> list[Mapping | Sequence[Mapping]]:
     """Run one fixed cycle or one direct-reply/self-selection interval."""
 
+    scenario_id = instance.preset["scenario_id"]
+    # Untimed scenarios leave the world's simulated clock where it started.
     elapsed = (
-        timedelta(seconds=20)
-        if instance.preset["scenario_id"] == "S06"
+        None
+        if scenario_id in UNTIMED_SCENARIO_IDS
+        else timedelta(seconds=20)
+        if scenario_id == "S06"
         else timedelta(minutes=2)
     )
     if conversation_mode == "hybrid_self_selection":

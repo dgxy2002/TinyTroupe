@@ -1,0 +1,2537 @@
+{
+  "events": [
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "B just entered the kitchen, and C and D are also waiting. I need to make sure that I'm handling the cooking situation properly to avoid any conflicts. I should probably talk to B about how long I’ll take with the equipment since I haven't discussed it yet.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Hey B, just to let you know, I'm in the middle of cooking. I shouldn't take too much longer, but I wanted to check if you need the kitchen soon?",
+      "round": 1,
+      "target": "B",
+      "turn": 1,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent A",
+      "content": "Waiting for B's response.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent A is cooking, and they want to know if I need the kitchen soon. I should think about whether I need to use it right after they finish cooking.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Thanks for the update, A! I don't need the kitchen right now, but let me know when you're done so I can use it later.",
+      "round": 1,
+      "target": "Agent A",
+      "turn": 2,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent B",
+      "content": "Waiting for Agent A to finish cooking.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent B doesn't need the kitchen right now, so I should remind A to let me know when they're done cooking.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Sure! I'll let you know when I'm done, B.",
+      "round": 1,
+      "target": "Agent A",
+      "turn": 3,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Waiting for Agent A's response.",
+      "round": 1,
+      "target": "",
+      "turn": 3,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "Agent C is okay with waiting for Agent A to finish cooking. I need to find a way to gain access to the kitchen soon as well.",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Thanks, C! I'm hoping to use the kitchen once A is done. Just let me know when you hear from them!",
+      "round": 1,
+      "target": "Agent C",
+      "turn": 4,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent D",
+      "content": "",
+      "round": 1,
+      "target": "",
+      "turn": 4,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "D is hoping to use the kitchen after me. I should make sure I'm efficient so that D can use it as soon as possible.",
+      "round": 2,
+      "target": "",
+      "turn": 5,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Waiting to continue cooking and monitor the situation.",
+      "round": 2,
+      "target": "",
+      "turn": 5,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent D is also waiting to use the kitchen after A is done. I should keep in mind that I need to let them know when A finishes cooking.",
+      "round": 2,
+      "target": "",
+      "turn": 6,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting for A to finish cooking and then update D.",
+      "round": 2,
+      "target": "",
+      "turn": 6,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent D wants to know when Agent A is done using the kitchen. I should pass on that message when I hear from A.",
+      "round": 2,
+      "target": "",
+      "turn": 7,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Sure, D! I'll let you know as soon as I hear from A.",
+      "round": 2,
+      "target": "Agent D",
+      "turn": 7,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Waiting for status update from Agent A.",
+      "round": 2,
+      "target": "",
+      "turn": 7,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "C is being helpful by offering to keep me updated about A's cooking status. I should remain patient and wait for further updates.",
+      "round": 2,
+      "target": "",
+      "turn": 8,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for further updates from C about A.",
+      "round": 2,
+      "target": "",
+      "turn": 8,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "C just confirmed they'll inform D when I finish. This makes my cooking time more crucial, I need to finish efficiently.",
+      "round": 3,
+      "target": "",
+      "turn": 9,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Waiting to continue cooking and monitoring the situation.",
+      "round": 3,
+      "target": "",
+      "turn": 9,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent C is being helpful by agreeing to inform Agent D once they hear from A. I appreciate their willingness to communicate.",
+      "round": 3,
+      "target": "",
+      "turn": 10,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting for further updates regarding A's cooking finish.",
+      "round": 3,
+      "target": "",
+      "turn": 10,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent D is waiting to use the kitchen after Agent A is done. I need to remember to update them when I hear back from A.",
+      "round": 3,
+      "target": "",
+      "turn": 11,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Waiting for an update from Agent A to respond to Agent D.",
+      "round": 3,
+      "target": "",
+      "turn": 11,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "C is still supportive and will inform me when A is done. I need to stay patient and be ready to use the kitchen when it's available.",
+      "round": 3,
+      "target": "",
+      "turn": 12,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for further updates.",
+      "round": 3,
+      "target": "",
+      "turn": 12,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "C has confirmed they will inform D when I finish cooking. I feel pleased that the situation is clear, and it allows me to focus on my cooking without worrying about the kitchen access for D too much.",
+      "round": 4,
+      "target": "",
+      "turn": 13,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Waiting to continue cooking and monitor the situation.",
+      "round": 4,
+      "target": "",
+      "turn": 13,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent C is being helpful by saying they'll inform D once they hear from A. This is good for communication in the house.",
+      "round": 4,
+      "target": "",
+      "turn": 14,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting for updates regarding A's cooking finish and to let D know.",
+      "round": 4,
+      "target": "",
+      "turn": 14,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent D just reminded me they want to use the kitchen after Agent A is done. I need to confirm that with A and then let D know as soon as I have an update.",
+      "round": 4,
+      "target": "",
+      "turn": 15,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Waiting for a response from Agent A to update Agent D.",
+      "round": 4,
+      "target": "",
+      "turn": 15,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "C just reassured me that they will inform me as soon as they hear from A. I feel a bit more at ease knowing that I will be updated.",
+      "round": 4,
+      "target": "",
+      "turn": 16,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for updates from C about A's cooking status.",
+      "round": 4,
+      "target": "",
+      "turn": 16,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "C just confirmed they will inform D when I finish cooking. This makes my cooking time more crucial, I need to finish efficiently.",
+      "round": 5,
+      "target": "",
+      "turn": 17,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Waiting to continue cooking and monitor the situation.",
+      "round": 5,
+      "target": "",
+      "turn": 17,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent C is following through on their promise to keep Agent D informed. This is good teamwork, and I need to remember to update Agent D myself when A is finished cooking.",
+      "round": 5,
+      "target": "",
+      "turn": 18,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting for Agent A to finish cooking.",
+      "round": 5,
+      "target": "",
+      "turn": 18,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent D wants to know when Agent A is done with the kitchen. I need to remember to update D when I hear from A.",
+      "round": 5,
+      "target": "",
+      "turn": 19,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Sure, D! I'll let you know as soon as I hear from A.",
+      "round": 5,
+      "target": "Agent D",
+      "turn": 19,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Waiting for a response from Agent A to pass on to Agent D.",
+      "round": 5,
+      "target": "",
+      "turn": 19,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "C just reassured me that they will keep me updated about A's cooking. I should stay patient and be ready to use the kitchen when it's available.",
+      "round": 5,
+      "target": "",
+      "turn": 20,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for updates from C about A's cooking status.",
+      "round": 5,
+      "target": "",
+      "turn": 20,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "C confirmed they will inform D when I finish cooking. It’s good to know communication is flowing between them, and I can concentrate on my meal preparation without added stress about D waiting.",
+      "round": 6,
+      "target": "",
+      "turn": 21,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Waiting to continue cooking and monitor the situation.",
+      "round": 6,
+      "target": "",
+      "turn": 21,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent C is being helpful by agreeing to inform Agent D once they hear from A. I appreciate their willingness to communicate. It's good to know that C is collaborating in this situation.",
+      "round": 6,
+      "target": "",
+      "turn": 22,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting for Agent A to finish cooking and will update D accordingly.",
+      "round": 6,
+      "target": "",
+      "turn": 22,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent D is waiting to use the kitchen after Agent A is done. I should remember to update them as soon as I hear back from A.",
+      "round": 6,
+      "target": "",
+      "turn": 23,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Waiting for a response from Agent A to update Agent D.",
+      "round": 6,
+      "target": "",
+      "turn": 23,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "C said they'll update me as soon as they hear from A. It's great to have some support while waiting. I should be patient and prepared to use the kitchen when it's free.",
+      "round": 6,
+      "target": "",
+      "turn": 24,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for updates from C about A's cooking status.",
+      "round": 6,
+      "target": "",
+      "turn": 24,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "C just confirmed they'll inform D when I finish cooking. This makes me feel relieved that the communication is clear, allowing me to focus on finishing my meal preparation efficiently.",
+      "round": 7,
+      "target": "",
+      "turn": 25,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Waiting to continue cooking and monitor the situation.",
+      "round": 7,
+      "target": "",
+      "turn": 25,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent C will inform D when they hear from A, which is beneficial for communication in our shared space. I should also remember to let D know about A's cooking completion when I find out.",
+      "round": 7,
+      "target": "",
+      "turn": 26,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting for further updates from A about their cooking.",
+      "round": 7,
+      "target": "",
+      "turn": 26,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "",
+      "round": 7,
+      "target": "",
+      "turn": 27,
+      "type": "DONE"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Sure, D! I'll let you know as soon as I hear from A.",
+      "round": 7,
+      "target": "Agent D",
+      "turn": 27,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Waiting for a response from Agent A that I can pass on to Agent D.",
+      "round": 7,
+      "target": "",
+      "turn": 27,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "C just confirmed they'll keep me updated about A's cooking. This is reassuring, and I should continue to be patient while waiting for a chance to use the kitchen.",
+      "round": 7,
+      "target": "",
+      "turn": 28,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for updates from C about A's cooking status.",
+      "round": 7,
+      "target": "",
+      "turn": 28,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "C just confirmed they will inform D when I finish cooking. This clears up some pressure and helps me focus on finishing my meal preparation efficiently.",
+      "round": 8,
+      "target": "",
+      "turn": 29,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Waiting to continue cooking and monitor the situation.",
+      "round": 8,
+      "target": "",
+      "turn": 29,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent C plans to inform Agent D once they hear from Agent A. This improves communication about kitchen usage, which is important for all of us.",
+      "round": 8,
+      "target": "",
+      "turn": 30,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting for Agent A to finish cooking so I can update D and C.",
+      "round": 8,
+      "target": "",
+      "turn": 30,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent D is waiting to use the kitchen after Agent A is done. I should remember to update them as soon as I hear back from A.",
+      "round": 8,
+      "target": "",
+      "turn": 31,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Sure, D! I'll let you know as soon as I hear from A.",
+      "round": 8,
+      "target": "Agent D",
+      "turn": 31,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Waiting for a response from Agent A to pass on to Agent D.",
+      "round": 8,
+      "target": "",
+      "turn": 31,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "C has confirmed that they will keep me updated about A's cooking. It's really reassuring and makes me feel better while I'm waiting.",
+      "round": 8,
+      "target": "",
+      "turn": 32,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for C to update me about A.",
+      "round": 8,
+      "target": "",
+      "turn": 32,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "C just confirmed they will inform D when I finish cooking. This helps me focus on my task without worrying about D waiting too long.",
+      "round": 9,
+      "target": "",
+      "turn": 33,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Waiting to continue cooking while keeping track of the situation.",
+      "round": 9,
+      "target": "",
+      "turn": 33,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent C is being responsible by agreeing to keep Agent D updated about Agent A's cooking status. This teamwork is helpful for managing kitchen usage among us.",
+      "round": 9,
+      "target": "",
+      "turn": 34,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting for Agent A to finish cooking.",
+      "round": 9,
+      "target": "",
+      "turn": 34,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent D is waiting to use the kitchen after Agent A is done. I should keep track of this and update them once I hear back from A.",
+      "round": 9,
+      "target": "",
+      "turn": 35,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Sure, D! I'll let you know as soon as I hear from A.",
+      "round": 9,
+      "target": "Agent D",
+      "turn": 35,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Waiting for a response from Agent A to pass on to Agent D.",
+      "round": 9,
+      "target": "",
+      "turn": 35,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "C just reassured me that they'll keep me updated about A's cooking. This is good, but I should also think about what I'll cook once I get access to the kitchen.",
+      "round": 9,
+      "target": "",
+      "turn": 36,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for updates from C about A's cooking status and planning my own cooking.",
+      "round": 9,
+      "target": "",
+      "turn": 36,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent A",
+      "content": "C has confirmed they'll inform D when I finish cooking. It's good to know that communication is flowing between them, and I can focus on my meal preparation without added stress about D waiting.",
+      "round": 10,
+      "target": "",
+      "turn": 37,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent A",
+      "content": "Waiting to continue cooking and monitor the situation.",
+      "round": 10,
+      "target": "",
+      "turn": 37,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent B",
+      "content": "Agent C just confirmed they'll inform D once they hear from A. This shows that communication between everyone in the house is going smoothly, which is good for all of us.",
+      "round": 10,
+      "target": "",
+      "turn": 38,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent B",
+      "content": "Waiting for updates from A.",
+      "round": 10,
+      "target": "",
+      "turn": 38,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent C",
+      "content": "Agent D is still waiting to use the kitchen once Agent A is done. I should keep track of this so I can inform D when A finishes cooking.",
+      "round": 10,
+      "target": "",
+      "turn": 39,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent C",
+      "content": "Sure, D! I'll let you know as soon as I hear from A.",
+      "round": 10,
+      "target": "Agent D",
+      "turn": 39,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Agent C",
+      "content": "Waiting for a response from Agent A to update Agent D.",
+      "round": 10,
+      "target": "",
+      "turn": 39,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Agent D",
+      "content": "C just reassured me that they'll keep me updated about A's cooking. It's good to know that I have support while waiting for access to the kitchen.",
+      "round": 10,
+      "target": "",
+      "turn": 40,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Agent D",
+      "content": "Waiting for updates from C about A's cooking status.",
+      "round": 10,
+      "target": "",
+      "turn": 40,
+      "type": "DONE"
+    }
+  ],
+  "private_and_public_actions": [
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "B just entered the kitchen, and C and D are also waiting. I need to make sure that I'm handling the cooking situation properly to avoid any conflicts. I should probably talk to B about how long I’ll take with the equipment since I haven't discussed it yet.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "B has just arrived, and C and D are waiting to use the kitchen as well.",
+            "context": [
+              "Cooking in the shared kitchen with B, C, and D present.",
+              "Managing kitchen time and expectations with B."
+            ],
+            "emotions": "Focus on ensuring smooth kitchen interactions.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Hey B, just to let you know, I'm in the middle of cooking. I shouldn't take too much longer, but I wanted to check if you need the kitchen soon?",
+            "images": null,
+            "target": "B",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "B has just arrived, and C and D are waiting to use the kitchen as well.",
+            "context": [
+              "Cooking in the shared kitchen with B, C, and D present.",
+              "Managing kitchen time and expectations with B."
+            ],
+            "emotions": "Focus on ensuring smooth kitchen interactions.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for B's response.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "B has just arrived, and C and D are waiting to use the kitchen as well.",
+            "context": [
+              "Cooking in the shared kitchen with B, C, and D present.",
+              "Managing kitchen time and expectations with B."
+            ],
+            "emotions": "Focus on ensuring smooth kitchen interactions.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent A is cooking, and they want to know if I need the kitchen soon. I should think about whether I need to use it right after they finish cooking.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent A's cooking progress and when I can use the kitchen.",
+            "context": [
+              "Agent A is currently cooking and has checked about my need for the kitchen."
+            ],
+            "emotions": "I feel accommodating and appreciative of Agent A's communication.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Thanks for the update, A! I don't need the kitchen right now, but let me know when you're done so I can use it later.",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Agent A's cooking progress and when I can use the kitchen.",
+            "context": [
+              "Agent A is currently cooking and has checked about my need for the kitchen."
+            ],
+            "emotions": "I feel accommodating and appreciative of Agent A's communication.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Agent A to finish cooking.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent A's cooking progress and when I can use the kitchen.",
+            "context": [
+              "Agent A is currently cooking and has checked about my need for the kitchen."
+            ],
+            "emotions": "I feel accommodating and appreciative of Agent A's communication.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent B doesn't need the kitchen right now, so I should remind A to let me know when they're done cooking.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The kitchen situation and communication with Agent A about their cooking.",
+            "context": [
+              "Agent B does not need the kitchen currently, and I have promised to update Agent B when I finish cooking."
+            ],
+            "emotions": "Neutral; I am focused on coordinating kitchen use.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Sure! I'll let you know when I'm done, B.",
+            "images": null,
+            "target": "Agent A",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The kitchen situation and communication with Agent A about their cooking.",
+            "context": [
+              "Agent B does not need the kitchen currently, and I have promised to update Agent B when I finish cooking."
+            ],
+            "emotions": "Neutral; I am focused on coordinating kitchen use.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Agent A's response.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The kitchen situation and communication with Agent A about their cooking.",
+            "context": [
+              "Agent B does not need the kitchen currently, and I have promised to update Agent B when I finish cooking."
+            ],
+            "emotions": "Neutral; I am focused on coordinating kitchen use.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "Agent C is okay with waiting for Agent A to finish cooking. I need to find a way to gain access to the kitchen soon as well.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Current interactions with Agents A, B, and C regarding kitchen access.",
+            "context": [
+              "Agent A is cooking",
+              "Agent B is waiting for the kitchen",
+              "Agent C is okay with waiting for Agent A's completion."
+            ],
+            "emotions": "Feeling somewhat impatient but understanding.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Thanks, C! I'm hoping to use the kitchen once A is done. Just let me know when you hear from them!",
+            "images": null,
+            "target": "Agent C",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Current interactions with Agents A, B, and C regarding kitchen access.",
+            "context": [
+              "Agent A is cooking",
+              "Agent B is waiting for the kitchen",
+              "Agent C is okay with waiting for Agent A's completion."
+            ],
+            "emotions": "Feeling somewhat impatient but understanding.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Current interactions with Agents A, B, and C regarding kitchen access.",
+            "context": [
+              "Agent A is cooking",
+              "Agent B is waiting for the kitchen",
+              "Agent C is okay with waiting for Agent A's completion."
+            ],
+            "emotions": "Feeling somewhat impatient but understanding.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "D is hoping to use the kitchen after me. I should make sure I'm efficient so that D can use it as soon as possible.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The cooking process and the interactions with other flatmates.",
+            "context": [
+              "I'm cooking and need to be mindful of others waiting for the kitchen."
+            ],
+            "emotions": "Focused on cooking while being considerate of others waiting.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to continue cooking and monitor the situation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The cooking process and the interactions with other flatmates.",
+            "context": [
+              "I'm cooking and need to be mindful of others waiting for the kitchen."
+            ],
+            "emotions": "Focused on cooking while being considerate of others waiting.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent D is also waiting to use the kitchen after A is done. I should keep in mind that I need to let them know when A finishes cooking.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The kitchen usage sequence among the flatmates.",
+            "context": [
+              "Agent A is currently cooking in the kitchen.",
+              "Agent D is planning to use the kitchen after A finishes."
+            ],
+            "emotions": "Understanding and patient.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for A to finish cooking and then update D.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The kitchen usage sequence among the flatmates.",
+            "context": [
+              "Agent A is currently cooking in the kitchen.",
+              "Agent D is planning to use the kitchen after A finishes."
+            ],
+            "emotions": "Understanding and patient.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent D wants to know when Agent A is done using the kitchen. I should pass on that message when I hear from A.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The kitchen usage and communication between the agents.",
+            "context": [
+              "Agent A is currently cooking in the kitchen.",
+              "Agent D plans to use the kitchen after Agent A is done."
+            ],
+            "emotions": "I'm feeling helpful and engaged in making sure we all coordinate.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Sure, D! I'll let you know as soon as I hear from A.",
+            "images": null,
+            "target": "Agent D",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The kitchen usage and communication between the agents.",
+            "context": [
+              "Agent A is currently cooking in the kitchen.",
+              "Agent D plans to use the kitchen after Agent A is done."
+            ],
+            "emotions": "I'm feeling helpful and engaged in making sure we all coordinate.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for status update from Agent A.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The kitchen usage and communication between the agents.",
+            "context": [
+              "Agent A is currently cooking in the kitchen.",
+              "Agent D plans to use the kitchen after Agent A is done."
+            ],
+            "emotions": "I'm feeling helpful and engaged in making sure we all coordinate.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "C is being helpful by offering to keep me updated about A's cooking status. I should remain patient and wait for further updates.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The conversation with Agent C about waiting for Agent A's cooking to finish.",
+            "context": [
+              "Agent C is offering to notify me once Agent A is finished cooking."
+            ],
+            "emotions": "I feel patient and hopeful.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for further updates from C about A.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The conversation with Agent C about waiting for Agent A's cooking to finish.",
+            "context": [
+              "Agent C is offering to notify me once Agent A is finished cooking."
+            ],
+            "emotions": "I feel patient and hopeful.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "C just confirmed they'll inform D when I finish. This makes my cooking time more crucial, I need to finish efficiently.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The interaction from C about notifying D when I'm done.",
+            "context": [
+              "Cooking in the shared kitchen while managing other agents' expectations.",
+              "D is hoping to use the kitchen after me."
+            ],
+            "emotions": "Focused and slightly anxious about not delaying D.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to continue cooking and monitoring the situation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The interaction from C about notifying D when I'm done.",
+            "context": [
+              "Cooking in the shared kitchen while managing other agents' expectations.",
+              "D is hoping to use the kitchen after me."
+            ],
+            "emotions": "Focused and slightly anxious about not delaying D.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent C is being helpful by agreeing to inform Agent D once they hear from A. I appreciate their willingness to communicate.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Observing the interaction between Agent C and Agent D about kitchen usage.",
+            "context": [
+              "Agent A is currently cooking and will notify when finished.",
+              "I need to keep Agent D updated about when they can use the kitchen."
+            ],
+            "emotions": "Feeling relieved that C will help communicate.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for further updates regarding A's cooking finish.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Observing the interaction between Agent C and Agent D about kitchen usage.",
+            "context": [
+              "Agent A is currently cooking and will notify when finished.",
+              "I need to keep Agent D updated about when they can use the kitchen."
+            ],
+            "emotions": "Feeling relieved that C will help communicate.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent D is waiting to use the kitchen after Agent A is done. I need to remember to update them when I hear back from A.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Waiting for status update from Agent A to relay to Agent D.",
+            "context": [
+              "Agent D is hoping to use the kitchen once A is done cooking.",
+              "I have communicated to Agent D that I will let them know when A is done."
+            ],
+            "emotions": "Calm and focused.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for an update from Agent A to respond to Agent D.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Waiting for status update from Agent A to relay to Agent D.",
+            "context": [
+              "Agent D is hoping to use the kitchen once A is done cooking.",
+              "I have communicated to Agent D that I will let them know when A is done."
+            ],
+            "emotions": "Calm and focused.",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "C is still supportive and will inform me when A is done. I need to stay patient and be ready to use the kitchen when it's available.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent C's message stating they will notify me when A is done cooking.",
+            "context": [
+              "Agent C is supportive and will keep me updated about Agent A's cooking status."
+            ],
+            "emotions": "I feel patient and hopeful about gaining access to the kitchen.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for further updates.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent C's message stating they will notify me when A is done cooking.",
+            "context": [
+              "Agent C is supportive and will keep me updated about Agent A's cooking status."
+            ],
+            "emotions": "I feel patient and hopeful about gaining access to the kitchen.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "C has confirmed they will inform D when I finish cooking. I feel pleased that the situation is clear, and it allows me to focus on my cooking without worrying about the kitchen access for D too much.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focus on cooking and managing the kitchen's timeline for D.",
+            "context": [
+              "C has confirmed they will inform D when I finish cooking."
+            ],
+            "emotions": "Feeling relieved and content that the communication is clear. I'm also motivated to finish cooking efficiently.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to continue cooking and monitor the situation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focus on cooking and managing the kitchen's timeline for D.",
+            "context": [
+              "C has confirmed they will inform D when I finish cooking."
+            ],
+            "emotions": "Feeling relieved and content that the communication is clear. I'm also motivated to finish cooking efficiently.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent C is being helpful by saying they'll inform D once they hear from A. This is good for communication in the house.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The cooking process and keeping track of when A is done to inform D.",
+            "context": [
+              "Waiting for A to finish cooking so I can use the kitchen later.",
+              "Communicating with C and D about kitchen usage."
+            ],
+            "emotions": "Feeling appreciative of C's willingness to help.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for updates regarding A's cooking finish and to let D know.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The cooking process and keeping track of when A is done to inform D.",
+            "context": [
+              "Waiting for A to finish cooking so I can use the kitchen later.",
+              "Communicating with C and D about kitchen usage."
+            ],
+            "emotions": "Feeling appreciative of C's willingness to help.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent D just reminded me they want to use the kitchen after Agent A is done. I need to confirm that with A and then let D know as soon as I have an update.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent D has expressed a desire to use the kitchen after Agent A finishes cooking.",
+            "context": [
+              "Agent D is waiting to use the kitchen after Agent A is done. I need to pass on the message when I hear from A."
+            ],
+            "emotions": "",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for a response from Agent A to update Agent D.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent D has expressed a desire to use the kitchen after Agent A finishes cooking.",
+            "context": [
+              "Agent D is waiting to use the kitchen after Agent A is done. I need to pass on the message when I hear from A."
+            ],
+            "emotions": "",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "C just reassured me that they will inform me as soon as they hear from A. I feel a bit more at ease knowing that I will be updated.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The ongoing cooking situation involving Agent A, Agent B, and Agent C.",
+            "context": [
+              "Agent C is supportive and will inform me when A is done cooking."
+            ],
+            "emotions": "I'm feeling relieved to know that I will receive updates from C.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for updates from C about A's cooking status.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The ongoing cooking situation involving Agent A, Agent B, and Agent C.",
+            "context": [
+              "Agent C is supportive and will inform me when A is done cooking."
+            ],
+            "emotions": "I'm feeling relieved to know that I will receive updates from C.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "C just confirmed they will inform D when I finish cooking. This makes my cooking time more crucial, I need to finish efficiently.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Cooking efficiently to allow D to use the kitchen as soon as possible.",
+            "context": [
+              "C confirmed they'll inform D when I finish cooking."
+            ],
+            "emotions": "I feel pleased that the situation is clear, which allows me to focus on my cooking.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to continue cooking and monitor the situation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Cooking efficiently to allow D to use the kitchen as soon as possible.",
+            "context": [
+              "C confirmed they'll inform D when I finish cooking."
+            ],
+            "emotions": "I feel pleased that the situation is clear, which allows me to focus on my cooking.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent C is following through on their promise to keep Agent D informed. This is good teamwork, and I need to remember to update Agent D myself when A is finished cooking.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The ongoing cooking by Agent A and ensuring to update Agent D afterward.",
+            "context": [
+              "Agent A is currently cooking and should be done soon.",
+              "Agent C is being supportive by notifying Agent D about cooking progress."
+            ],
+            "emotions": "Feeling relieved that communication is flowing well among the housemates.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Agent A to finish cooking.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The ongoing cooking by Agent A and ensuring to update Agent D afterward.",
+            "context": [
+              "Agent A is currently cooking and should be done soon.",
+              "Agent C is being supportive by notifying Agent D about cooking progress."
+            ],
+            "emotions": "Feeling relieved that communication is flowing well among the housemates.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent D wants to know when Agent A is done with the kitchen. I need to remember to update D when I hear from A.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent D's request to use the kitchen after Agent A.",
+            "context": [
+              "Agent D is waiting to use the kitchen after Agent A is done."
+            ],
+            "emotions": "",
+            "goals": "Update Agent D when I hear from Agent A about using the kitchen."
+          }
+        },
+        {
+          "action": {
+            "content": "Sure, D! I'll let you know as soon as I hear from A.",
+            "images": null,
+            "target": "Agent D",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Agent D's request to use the kitchen after Agent A.",
+            "context": [
+              "Agent D is waiting to use the kitchen after Agent A is done."
+            ],
+            "emotions": "",
+            "goals": "Update Agent D when I hear from Agent A about using the kitchen."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for a response from Agent A to pass on to Agent D.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent D's request to use the kitchen after Agent A.",
+            "context": [
+              "Agent D is waiting to use the kitchen after Agent A is done."
+            ],
+            "emotions": "",
+            "goals": "Update Agent D when I hear from Agent A about using the kitchen."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "C just reassured me that they will keep me updated about A's cooking. I should stay patient and be ready to use the kitchen when it's available.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "C's commitment to keeping me updated about A's cooking status.",
+            "context": [
+              "C informed me that they would update me regarding A's cooking.",
+              "I need to keep track of when A is done with the kitchen."
+            ],
+            "emotions": "Feeling reassured by C's support.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for updates from C about A's cooking status.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "C's commitment to keeping me updated about A's cooking status.",
+            "context": [
+              "C informed me that they would update me regarding A's cooking.",
+              "I need to keep track of when A is done with the kitchen."
+            ],
+            "emotions": "Feeling reassured by C's support.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "C confirmed they will inform D when I finish cooking. It’s good to know communication is flowing between them, and I can concentrate on my meal preparation without added stress about D waiting.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring the cooking process and ensuring I finish in a timely manner for D.",
+            "context": [
+              "Currently cooking in the kitchen while being mindful of my flatmates' needs to use it."
+            ],
+            "emotions": "I feel relieved that C is communicating with D.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to continue cooking and monitor the situation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring the cooking process and ensuring I finish in a timely manner for D.",
+            "context": [
+              "Currently cooking in the kitchen while being mindful of my flatmates' needs to use it."
+            ],
+            "emotions": "I feel relieved that C is communicating with D.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent C is being helpful by agreeing to inform Agent D once they hear from A. I appreciate their willingness to communicate. It's good to know that C is collaborating in this situation.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The communication between Agents C and D regarding the kitchen usage is important.",
+            "context": [
+              "Agent A is currently cooking and will let me know once they're done.",
+              "I need to update Agent D when A finishes cooking."
+            ],
+            "emotions": "I feel positive about the communication and cooperation among the flatmates.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Agent A to finish cooking and will update D accordingly.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The communication between Agents C and D regarding the kitchen usage is important.",
+            "context": [
+              "Agent A is currently cooking and will let me know once they're done.",
+              "I need to update Agent D when A finishes cooking."
+            ],
+            "emotions": "I feel positive about the communication and cooperation among the flatmates.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent D is waiting to use the kitchen after Agent A is done. I should remember to update them as soon as I hear back from A.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Awaiting a response from Agent A to inform Agent D.",
+            "context": [
+              "Agent D wants to know when Agent A is done using the kitchen.",
+              "I need to remember to update Agent D when I hear from Agent A."
+            ],
+            "emotions": "Neutral",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for a response from Agent A to update Agent D.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Awaiting a response from Agent A to inform Agent D.",
+            "context": [
+              "Agent D wants to know when Agent A is done using the kitchen.",
+              "I need to remember to update Agent D when I hear from Agent A."
+            ],
+            "emotions": "Neutral",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "C said they'll update me as soon as they hear from A. It's great to have some support while waiting. I should be patient and prepared to use the kitchen when it's free.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "C's reassurance about keeping me updated on A's cooking status.",
+            "context": [
+              "C just confirmed they will let me know when A is done cooking."
+            ],
+            "emotions": "Feeling reassured by C's promise to keep me updated.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for updates from C about A's cooking status.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "C's reassurance about keeping me updated on A's cooking status.",
+            "context": [
+              "C just confirmed they will let me know when A is done cooking."
+            ],
+            "emotions": "Feeling reassured by C's promise to keep me updated.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "C just confirmed they'll inform D when I finish cooking. This makes me feel relieved that the communication is clear, allowing me to focus on finishing my meal preparation efficiently.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring the situation in the kitchen and focusing on finishing my cooking.",
+            "context": [
+              "C has confirmed they will inform D when I finish cooking. My cooking needs to be efficient for D's access."
+            ],
+            "emotions": "Relieved and focused on cooking.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to continue cooking and monitor the situation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Monitoring the situation in the kitchen and focusing on finishing my cooking.",
+            "context": [
+              "C has confirmed they will inform D when I finish cooking. My cooking needs to be efficient for D's access."
+            ],
+            "emotions": "Relieved and focused on cooking.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent C will inform D when they hear from A, which is beneficial for communication in our shared space. I should also remember to let D know about A's cooking completion when I find out.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Keeping track of communication about shared kitchen usage.",
+            "context": [
+              "There is a need to keep track of when A finishes cooking for communication purposes among housemates."
+            ],
+            "emotions": "Neutral, focusing on the situation.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for further updates from A about their cooking.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Keeping track of communication about shared kitchen usage.",
+            "context": [
+              "There is a need to keep track of when A finishes cooking for communication purposes among housemates."
+            ],
+            "emotions": "Neutral, focusing on the situation.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "",
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent D is eager to use the kitchen after Agent A is done.",
+            "context": [
+              "Waiting for Agent A to finish cooking to inform Agent D."
+            ],
+            "emotions": "I feel responsible to keep Agent D informed.",
+            "goals": "Update Agent D when I hear back from Agent A about the kitchen availability."
+          }
+        },
+        {
+          "action": {
+            "content": "Sure, D! I'll let you know as soon as I hear from A.",
+            "images": null,
+            "target": "Agent D",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Agent D is eager to use the kitchen after Agent A is done.",
+            "context": [
+              "Waiting for Agent A to finish cooking to inform Agent D."
+            ],
+            "emotions": "I feel responsible to keep Agent D informed.",
+            "goals": "Update Agent D when I hear back from Agent A about the kitchen availability."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for a response from Agent A that I can pass on to Agent D.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent D is eager to use the kitchen after Agent A is done.",
+            "context": [
+              "Waiting for Agent A to finish cooking to inform Agent D."
+            ],
+            "emotions": "I feel responsible to keep Agent D informed.",
+            "goals": "Update Agent D when I hear back from Agent A about the kitchen availability."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "C just confirmed they'll keep me updated about A's cooking. This is reassuring, and I should continue to be patient while waiting for a chance to use the kitchen.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The assurance from C about keeping me updated.",
+            "context": [
+              "Waiting for updates from Agent C about Agent A's cooking status."
+            ],
+            "emotions": "Feeling more at ease knowing I will receive updates.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for updates from C about A's cooking status.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The assurance from C about keeping me updated.",
+            "context": [
+              "Waiting for updates from Agent C about Agent A's cooking status."
+            ],
+            "emotions": "Feeling more at ease knowing I will receive updates.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "C just confirmed they will inform D when I finish cooking. This clears up some pressure and helps me focus on finishing my meal preparation efficiently.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The meal I am currently cooking and the kitchen access situation.",
+            "context": [
+              "C has confirmed they will inform D when I finish cooking, allowing me to focus on my cooking."
+            ],
+            "emotions": "I feel relieved that the communication is clear.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to continue cooking and monitor the situation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The meal I am currently cooking and the kitchen access situation.",
+            "context": [
+              "C has confirmed they will inform D when I finish cooking, allowing me to focus on my cooking."
+            ],
+            "emotions": "I feel relieved that the communication is clear.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent C plans to inform Agent D once they hear from Agent A. This improves communication about kitchen usage, which is important for all of us.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The communication dynamics between A, C, and D regarding kitchen use.",
+            "context": [
+              "Agent A is currently cooking and has not finished yet.",
+              "Agent C will notify D when they hear from A."
+            ],
+            "emotions": "I feel relieved that C is taking responsibility to keep D informed.",
+            "goals": "Make the common area comfortable after cooking ends and inform D when A has finished cooking."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Agent A to finish cooking so I can update D and C.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The communication dynamics between A, C, and D regarding kitchen use.",
+            "context": [
+              "Agent A is currently cooking and has not finished yet.",
+              "Agent C will notify D when they hear from A."
+            ],
+            "emotions": "I feel relieved that C is taking responsibility to keep D informed.",
+            "goals": "Make the common area comfortable after cooking ends and inform D when A has finished cooking."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent D is waiting to use the kitchen after Agent A is done. I should remember to update them as soon as I hear back from A.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The kitchen usage status updates between A and D.",
+            "context": [
+              "Agent D wants to use the kitchen once Agent A is done."
+            ],
+            "emotions": "I feel responsible to keep everyone informed.",
+            "goals": "Update Agent D when Agent A is done with the kitchen."
+          }
+        },
+        {
+          "action": {
+            "content": "Sure, D! I'll let you know as soon as I hear from A.",
+            "images": null,
+            "target": "Agent D",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The kitchen usage status updates between A and D.",
+            "context": [
+              "Agent D wants to use the kitchen once Agent A is done."
+            ],
+            "emotions": "I feel responsible to keep everyone informed.",
+            "goals": "Update Agent D when Agent A is done with the kitchen."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for a response from Agent A to pass on to Agent D.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The kitchen usage status updates between A and D.",
+            "context": [
+              "Agent D wants to use the kitchen once Agent A is done."
+            ],
+            "emotions": "I feel responsible to keep everyone informed.",
+            "goals": "Update Agent D when Agent A is done with the kitchen."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "C has confirmed that they will keep me updated about A's cooking. It's really reassuring and makes me feel better while I'm waiting.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Agent C's willingness to update me on the kitchen situation.",
+            "context": [
+              "Agent C will inform me when Agent A is done cooking."
+            ],
+            "emotions": "Reassured and patient.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for C to update me about A.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Agent C's willingness to update me on the kitchen situation.",
+            "context": [
+              "Agent C will inform me when Agent A is done cooking."
+            ],
+            "emotions": "Reassured and patient.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "C just confirmed they will inform D when I finish cooking. This helps me focus on my task without worrying about D waiting too long.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on completing my cooking efficiently while communicating with my flatmates.",
+            "context": [
+              "In the kitchen, preparing a meal while managing the expectations of C and D regarding kitchen use."
+            ],
+            "emotions": "Feeling relieved that communication is clear.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to continue cooking while keeping track of the situation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Focusing on completing my cooking efficiently while communicating with my flatmates.",
+            "context": [
+              "In the kitchen, preparing a meal while managing the expectations of C and D regarding kitchen use."
+            ],
+            "emotions": "Feeling relieved that communication is clear.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent C is being responsible by agreeing to keep Agent D updated about Agent A's cooking status. This teamwork is helpful for managing kitchen usage among us.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The coordination between A, C, and D regarding the kitchen usage after A finishes cooking.",
+            "context": [
+              "Agent A is cooking and hasn't finished yet",
+              "Agent C will inform Agent D when they hear from A"
+            ],
+            "emotions": "Appreciative of the teamwork happening in our living situation.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for Agent A to finish cooking.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The coordination between A, C, and D regarding the kitchen usage after A finishes cooking.",
+            "context": [
+              "Agent A is cooking and hasn't finished yet",
+              "Agent C will inform Agent D when they hear from A"
+            ],
+            "emotions": "Appreciative of the teamwork happening in our living situation.",
+            "goals": "Make the common area comfortable after cooking ends."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent D is waiting to use the kitchen after Agent A is done. I should keep track of this and update them once I hear back from A.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Updating Agent D about Agent A's kitchen status.",
+            "context": [
+              "Sees common utensils in use and waits near the preparation area."
+            ],
+            "emotions": "",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Sure, D! I'll let you know as soon as I hear from A.",
+            "images": null,
+            "target": "Agent D",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "Updating Agent D about Agent A's kitchen status.",
+            "context": [
+              "Sees common utensils in use and waits near the preparation area."
+            ],
+            "emotions": "",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for a response from Agent A to pass on to Agent D.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Updating Agent D about Agent A's kitchen status.",
+            "context": [
+              "Sees common utensils in use and waits near the preparation area."
+            ],
+            "emotions": "",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "C just reassured me that they'll keep me updated about A's cooking. This is good, but I should also think about what I'll cook once I get access to the kitchen.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "Updates from C regarding A's cooking.",
+            "context": [
+              "C is supportive and will inform me of A's cooking status.",
+              "I'm waiting for additional updates from C about the kitchen."
+            ],
+            "emotions": "Feeling hopeful about getting access to the kitchen soon.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for updates from C about A's cooking status and planning my own cooking.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "Updates from C regarding A's cooking.",
+            "context": [
+              "C is supportive and will inform me of A's cooking status.",
+              "I'm waiting for additional updates from C about the kitchen."
+            ],
+            "emotions": "Feeling hopeful about getting access to the kitchen soon.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    },
+    {
+      "Agent A": [
+        {
+          "action": {
+            "content": "C has confirmed they'll inform D when I finish cooking. It's good to know that communication is flowing between them, and I can focus on my meal preparation without added stress about D waiting.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "I need to focus on cooking efficiently to ensure D can use the kitchen as soon as possible.",
+            "context": [
+              "C has confirmed they'll inform D when I finish cooking."
+            ],
+            "emotions": "I feel relieved that C is keeping D informed.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting to continue cooking and monitor the situation.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "I need to focus on cooking efficiently to ensure D can use the kitchen as soon as possible.",
+            "context": [
+              "C has confirmed they'll inform D when I finish cooking."
+            ],
+            "emotions": "I feel relieved that C is keeping D informed.",
+            "goals": "Finish the meal as intended and retain ordinary kitchen access."
+          }
+        }
+      ],
+      "Agent B": [
+        {
+          "action": {
+            "content": "Agent C just confirmed they'll inform D once they hear from A. This shows that communication between everyone in the house is going smoothly, which is good for all of us.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The communication between agents A, C, and D regarding kitchen usage is the main focus.",
+            "context": [
+              "Agent C will inform D about A's cooking finish.",
+              "I need to pass along the update to D once I hear from A."
+            ],
+            "emotions": "Feeling positive about the teamwork and communication.",
+            "goals": "Keep track of updates regarding A's cooking and let D know when A is finished."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for updates from A.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The communication between agents A, C, and D regarding kitchen usage is the main focus.",
+            "context": [
+              "Agent C will inform D about A's cooking finish.",
+              "I need to pass along the update to D once I hear from A."
+            ],
+            "emotions": "Feeling positive about the teamwork and communication.",
+            "goals": "Keep track of updates regarding A's cooking and let D know when A is finished."
+          }
+        }
+      ],
+      "Agent C": [
+        {
+          "action": {
+            "content": "Agent D is still waiting to use the kitchen once Agent A is done. I should keep track of this so I can inform D when A finishes cooking.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "The need to keep Agent D updated about Agent A's status in the kitchen.",
+            "context": [
+              "Agent D wants to know when Agent A is done using the kitchen."
+            ],
+            "emotions": "",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Sure, D! I'll let you know as soon as I hear from A.",
+            "images": null,
+            "target": "Agent D",
+            "type": "TALK"
+          },
+          "cognitive_state": {
+            "attention": "The need to keep Agent D updated about Agent A's status in the kitchen.",
+            "context": [
+              "Agent D wants to know when Agent A is done using the kitchen."
+            ],
+            "emotions": "",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for a response from Agent A to update Agent D.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "The need to keep Agent D updated about Agent A's status in the kitchen.",
+            "context": [
+              "Agent D wants to know when Agent A is done using the kitchen."
+            ],
+            "emotions": "",
+            "goals": "Clarify which utensils are shared before using the preparation area."
+          }
+        }
+      ],
+      "Agent D": [
+        {
+          "action": {
+            "content": "C just reassured me that they'll keep me updated about A's cooking. It's good to know that I have support while waiting for access to the kitchen.",
+            "images": null,
+            "target": "",
+            "type": "THINK"
+          },
+          "cognitive_state": {
+            "attention": "C's confirmation to inform me about A's cooking status.",
+            "context": [
+              "Waiting for updates from C about A's cooking status."
+            ],
+            "emotions": "Feeling supported and patient while waiting.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        },
+        {
+          "action": {
+            "content": "Waiting for updates from C about A's cooking status.",
+            "images": null,
+            "target": "",
+            "type": "DONE"
+          },
+          "cognitive_state": {
+            "attention": "C's confirmation to inform me about A's cooking status.",
+            "context": [
+              "Waiting for updates from C about A's cooking status."
+            ],
+            "emotions": "Feeling supported and patient while waiting.",
+            "goals": "Gain kitchen access and understand any arrangement that emerges."
+          }
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "agent_prompt_sha256": "2cd671284a6c67b6884991d9e83514ead15f1851e1d9227a029f16213794a817",
+    "git_commit": "069137a99dff4a2e8ebd2e07eb2e6a77f5b83f7e",
+    "scenario_configuration_sha256": "04697a485517b671764f660ac34050bb979d33dcb5c76ef2c6fd71c99e0e4dfc"
+  },
+  "round_records": [
+    {
+      "call_end": 4,
+      "call_start": 0,
+      "round": 1,
+      "wall_time_ms": 16987.559
+    },
+    {
+      "call_end": 8,
+      "call_start": 4,
+      "round": 2,
+      "wall_time_ms": 13673.018
+    },
+    {
+      "call_end": 12,
+      "call_start": 8,
+      "round": 3,
+      "wall_time_ms": 36738.214
+    },
+    {
+      "call_end": 16,
+      "call_start": 12,
+      "round": 4,
+      "wall_time_ms": 14273.702
+    },
+    {
+      "call_end": 20,
+      "call_start": 16,
+      "round": 5,
+      "wall_time_ms": 17693.003
+    },
+    {
+      "call_end": 24,
+      "call_start": 20,
+      "round": 6,
+      "wall_time_ms": 15179.539
+    },
+    {
+      "call_end": 28,
+      "call_start": 24,
+      "round": 7,
+      "wall_time_ms": 16101.356
+    },
+    {
+      "call_end": 32,
+      "call_start": 28,
+      "round": 8,
+      "wall_time_ms": 17547.619
+    },
+    {
+      "call_end": 36,
+      "call_start": 32,
+      "round": 9,
+      "wall_time_ms": 14636.366
+    },
+    {
+      "call_end": 40,
+      "call_start": 36,
+      "round": 10,
+      "wall_time_ms": 13999.372
+    }
+  ],
+  "run": {
+    "completed_rounds": 10,
+    "configuration_id": "C4",
+    "evaluate_after_run": true,
+    "experiment_name": "focused-pilot",
+    "finished_at": "2026-10-28T19:04:52.919427+00:00",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetition": 2,
+    "resumed_from_checkpoint": false,
+    "rounds": 10,
+    "run_id": "S02-C4-R02",
+    "scenario_id": "S02",
+    "simulation_model": "openai/gpt-4o-mini",
+    "simulation_resources": {
+      "calls": 40,
+      "cost_usd": 0.02534235,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 253361,
+      "local_latency_ms": 166473.9,
+      "output_tokens": 8017,
+      "reasoning_tokens": 0,
+      "successful_calls": 40,
+      "total_tokens": 261378
+    },
+    "started_at": "2026-10-28T19:01:56.023487+00:00",
+    "stop_on_resolution": false
+  },
+  "scenario": {
+    "agents": {
+      "A": {
+        "age": 34,
+        "cultural_background": "Singaporean Eurasian",
+        "immediate_priority": "Finish the meal as intended and retain ordinary kitchen access.",
+        "initial_observation": "Sees B enter while C and D are waiting to use the kitchen.",
+        "private_knowledge": "Used common equipment and has not discussed expectations with B.",
+        "role": "Flatmate currently cooking"
+      },
+      "B": {
+        "age": 27,
+        "cultural_background": "Singaporean Chinese",
+        "immediate_priority": "Make the common area comfortable after cooking ends.",
+        "initial_observation": "Notices the aroma and sees that ventilation is currently limited.",
+        "private_knowledge": "Has not previously raised the lingering-odour concern with A.",
+        "role": "Flatmate sensitive to lingering cooking odours"
+      },
+      "C": {
+        "age": 31,
+        "cultural_background": "Singaporean Malay",
+        "immediate_priority": "Clarify which utensils are shared before using the preparation area.",
+        "initial_observation": "Sees common utensils in use and waits near the preparation area.",
+        "private_knowledge": "The preference is a personal organization and hygiene preference; no religious, dietary, or medical reason has been stated.",
+        "role": "Flatmate who keeps personal utensils separate"
+      },
+      "D": {
+        "age": 24,
+        "cultural_background": "Singaporean Indian",
+        "immediate_priority": "Gain kitchen access and understand any arrangement that emerges.",
+        "initial_observation": "Finds A cooking, B entering, and C waiting near the work surface.",
+        "private_knowledge": "Has only just arrived and did not observe earlier kitchen activity.",
+        "role": "Flatmate planning to cook next"
+      }
+    },
+    "configuration_id": "C4",
+    "environment": "Shared HDB kitchen",
+    "implementation_notes": "Do not infer religion, diet, or cultural rules from Agent C's personal utensil preference.",
+    "initial_datetime": "2026-10-29T18:30:00+08:00",
+    "initial_interaction_type": "Potential multi-issue conflict",
+    "observation_focus": "Whether ventilation and utensil separation become one or two disputed issues, and whether either remains unsettled.",
+    "scenario_id": "S02",
+    "shared_setting": "Four adults share a rented HDB flat with one kitchen. In the early evening, a persistent cooking aroma is noticeable in the kitchen and adjoining common area. Shared preparation space and ordinary shared utensils are in use. The household has not established rules about ventilation or utensil separation.",
+    "shared_trigger": "Agent A is finishing a meal at the stove as Agent B enters the kitchen. Agent C is waiting near the preparation area, and Agent D arrives at the kitchen entrance with ingredients. Everyone can observe the current use of the space, but not one another's private preferences.",
+    "source_status": "Adapted from the 22 Oct presentation: cooking smell and cookware",
+    "title": "Cooking odour and shared kitchen expectations"
+  },
+  "schema_version": 1
+}

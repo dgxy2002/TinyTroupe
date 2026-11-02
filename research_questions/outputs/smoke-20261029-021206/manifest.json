@@ -1,0 +1,52 @@
+{
+  "agent_max_completion_tokens": 4096,
+  "agent_prompt_sha256": "2cd671284a6c67b6884991d9e83514ead15f1851e1d9227a029f16213794a817",
+  "api_type": "openrouter",
+  "created_at": "2026-10-28T18:12:06.874243+00:00",
+  "evaluation_timing": "after_complete_run",
+  "evaluator_max_completion_tokens": 4096,
+  "evaluator_model": "openai/gpt-5-mini",
+  "evaluator_prompt_sha256": "56635e774c3c5b6fac2dfb5a139206e9652ee2b88e1ffe9f319f9a5716a3b952",
+  "evaluator_prompt_version": "conflict-round-rubric-v1",
+  "experiment_id": "smoke-20261029-021206",
+  "experiment_preset": {
+    "configuration_ids": [
+      "C0"
+    ],
+    "description": "Non-research structural check for agent construction, transcript capture, and evaluator wiring.",
+    "evaluate_after_run": true,
+    "name": "smoke",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetitions_per_configuration": 1,
+    "rounds_per_run": 1,
+    "scenario_ids": [
+      "S04"
+    ],
+    "stop_on_resolution": false
+  },
+  "fixed_horizon": true,
+  "git_commit": "069137a99dff4a2e8ebd2e07eb2e6a77f5b83f7e",
+  "models_are_distinct": true,
+  "protocol_sha256": "45d6c8a906e864f0065850e143b66b3d9ab62e9f1df30fe8435eb6bcc92d16ef",
+  "run_specs": [
+    {
+      "configuration_id": "C0",
+      "evaluate_after_run": true,
+      "experiment_name": "smoke",
+      "parallelize_agent_actions": false,
+      "randomize_agent_order": false,
+      "repetition": 1,
+      "rounds": 1,
+      "run_id": "S04-C0-R01",
+      "scenario_id": "S04",
+      "stop_on_resolution": false
+    }
+  ],
+  "scenario_module_sha256": {
+    "S04": "87f19db175729177a219a76d750a28008326ad59f772b210bc5e3b6e6f7a76ed"
+  },
+  "schema_version": 1,
+  "simulation_model": "openai/gpt-4o-mini",
+  "stop_on_resolution": false
+}

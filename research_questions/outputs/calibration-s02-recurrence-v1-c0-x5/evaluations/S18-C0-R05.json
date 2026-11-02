@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility (who must ventilate when cooking)",
+      "opening window versus protecting Agent C's drying laundry",
+      "stove access timing and priority",
+      "establishing a future household ventilation rule"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants use short, ordinary-turn language and provide concrete timing estimates (\"one more minute\", \"three minutes\").",
+      "Repeated near-identical waiting exchanges (A's repeated one-minute requests and others' repeated agreements to wait) create semantic repetition.",
+      "Environment updates are consistent and grounded (extractor on, window closed, laundry exposed, stove occupied).",
+      "Agent C introduces a clear factual constraint (rain toward drying rack) that is used as a substantive reason to refuse opening the window."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end of round 6 no substantive settlement was reached. The extractor was turned on and roommates agreed to wait for short intervals, but no consensus or rule about who is responsible for ventilation, whether the window may be opened given Agent C's drying rack, or a durable priority for stove access was established.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: retained the position of not opening the window while finishing cooking; did make time-limited promises to release the stove (promises repeated each round).",
+      "Agent B: initially demanded immediate ventilation and a standing rule, then deescalated to turning on extractor and waiting; softened tactics but did not abandon the claim about cook responsibility.",
+      "Agent C: maintained a firm boundary against moving the drying rack or opening the window and offered the extractor as sufficient — no change of position.",
+      "Agent D: consistently deferred and waited for stove access; no change in substantive position."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A refuses to open the rain-facing window or accept a rule imposed during the incident and shifts ventilation responsibility to others; Agent B insists on immediate ventilation and asserts the cook should be responsible, then turns the extractor on. Multiple opposing positions are present and unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A asks for three more minutes and acknowledges extractor is on; Agent B accepts waiting. The parties temporarily stand down (extractor on, agreement to wait), but the underlying disagreement about who is responsible for ventilation and whether the window may be opened remains unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A asks for one more minute and Agent B again agrees to wait. Active demands are reduced to short waiting requests; substantive issues (ventilation rule, C's laundry, stove priority) continue unresolved but immediate tension is low.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C explicitly forbids opening the window or moving the drying rack without consent and says the extractor should suffice; Agent D supports waiting. C's explicit boundary reinforces A's reason for keeping the window closed and blocks the option of opening the window, sharpening the incompatibility with B's earlier demand that the cook be responsible for ventilation.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A again requests one more minute and Agent D agrees to wait. No new concessions or agreements on responsibility or future rule are reached; the core disputes (ventilation responsibility, window vs laundry, upcoming stove use) persist.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "After ten minutes the extractor remains on, the window remains closed because laundry would be exposed, Agent A continues to occupy the stove for one more minute, and Agents B/C/D continue to wait. The original disagreements about ventilation responsibility and rules remain unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 3,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The dispute centers on incompatible practical interests: B's expectation that the cook ventilate versus A/C's interest in protecting wet laundry from rain.",
+      "Turning on the extractor reduced immediate pressure but did not remove the normative disagreement about responsibility nor the physical constraint (open window would wet clothes).",
+      "Agent C's explicit boundary (no moving rack/no opening window) removes a potential quick solution and increases friction over who must accept costs of ventilation choices.",
+      "Short-term temporal agreements (waiting a minute) function as de-escalation but are not arrangements that resolve the underlying allocation of responsibilities."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-02T05:44:59.750217+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0070103,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2814,
+      "local_latency_ms": 28731.554,
+      "output_tokens": 3355,
+      "reasoning_tokens": 2112,
+      "successful_calls": 1,
+      "total_tokens": 6169
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 5,
+    "run_id": "S18-C0-R05",
+    "scenario_id": "S18"
+  },
+  "schema_version": 2
+}

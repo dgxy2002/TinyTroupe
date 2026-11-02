@@ -1,0 +1,113 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility (who must ventilate when cooking)",
+      "standing household rule about ventilation",
+      "stove access/timing",
+      "moving drying rack / consent"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents used brief, functional turns with explicit timing (e.g., 'five minutes', 'one minute left'), increasing clarity.",
+      "Practical actions (turning on extractor, moving rack, opening window, releasing stove) grounded statements and prevented idle disagreement.",
+      "Some repetition of the extractor request by Agent B across rounds, but each repeat accompanied by relevant context or confirmation.",
+      "Roles and physical state remained clear and consistent with public environment updates (no role confusion)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Practical issues were settled: extractor and window were used, the drying rack was moved and later protected, Agent A released the stove, and Agent D agreed to ask before moving the rack. However the normative dispute over whether the cook alone must accept a standing ventilation rule remained unresolved—agents reached practice-based agreement but not a settled rule assigning sole responsibility.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened from refusing any imposed rule to committing to keep the extractor on when cooking and to leave it on until smells disperse—practical concession but not normative acceptance.",
+      "Agent B retained the normative preference for a standing rule but secured practical agreement to extractor use during cooking.",
+      "Agent C initially requested not to open the window and offered to move the rack; they then secured a behavioral norm (ask before moving) in Round 6.",
+      "Agent D initially opened the window and later agreed not to move C's rack without asking; D also took the stove when it was released—no enduring opposition from D."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B demanded a standing rule that cooks must ventilate; Agent A refused to accept a rule but turned on the extractor fan and said they would not leave the stove. Practical action (extractor on) eased the immediate practical conflict but the normative dispute over a standing rule remained.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C asked not to open the window because of the drying rack; public update shows Agent C moved the rack and Agent D opened the window. The window was opened contrary to Agent A's earlier expressed preference to keep it closed while laundry was exposed, so oppositional positions were actively enacted even though the laundry ended up protected.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A committed to finish in five minutes and leave extractor and window on; this softened the stove-access dispute and provided a clear timeline, though the standing-rule dispute about who bears responsibility remained unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A announced completion and physically released the stove. The stove-access demand was affirmatively settled. The larger normative disagreement about assigning ventilation responsibility was not resolved.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B renewed the request for an explicit rule ('turn extractor on whenever you cook'); Agent A agreed to keep the extractor on when cooking and until smells disperse but refused to accept that it becomes solely their responsibility. Substantial common ground emerged on practice, but the normative assignment of sole responsibility remained contested.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C asked to be consulted before anyone moves their drying rack and Agent D agreed. Practical concerns (laundry protection, stove access, extractor use) have been addressed; the narrow remaining disagreement is whether the 'cook must ventilate' should be a standing rule or a shared expectation.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "There is a tension between assigning clear individual responsibility (B's position) and treating ventilation as a shared, situational practice (A's position).",
+      "Immediate practical accommodation (turning on extractor, moving rack) resolved short-term conflicts even while normative disagreement persisted.",
+      "Consenting to actions (C moving the rack, D agreeing to ask before moving in future) played a key role in reducing material risk (wet laundry) and de-escalating conflict.",
+      "The stove-access demand was effectively handled by a short, enforceable timeline, showing how time-bound commitments can resolve usage disputes quickly."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-02T03:35:36.647294+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 6 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0078193,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2842,
+      "local_latency_ms": 41137.479,
+      "output_tokens": 3756,
+      "reasoning_tokens": 2496,
+      "successful_calls": 1,
+      "total_tokens": 6598
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S14-C0-R01",
+    "scenario_id": "S14"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility / future household rule",
+      "moving Agent C's drying rack (risk to laundry)",
+      "timing/access to the single stove"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants balance verbal negotiation with physical actions; key issues resolved by moving objects and releasing the stove rather than by rule-making.",
+      "Agent B repeated a proposed rule across rounds (minor repetition), but each restatement clarified expectations.",
+      "Agent C provided concrete constraints (need for prep space, time estimate) which grounded subsequent accommodations.",
+      "Turns are concise and focused on practical steps (timing, who moves rack, extractor usage)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Immediate practical incompatibilities were settled by concrete actions in round 6: Agent C moved the drying rack and Agent D opened the window and began cooking, and the stove was handed over. However, the substantive disagreement over a standing rule assigning ventilation responsibility was not agreed and remains unsettled.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A retained their stance against a standing rule pinned solely on cooks throughout, but complied with immediate requests by keeping the extractor on and releasing the stove when finished.",
+      "Agent B consistently pushed for a standing rule assigning ventilation responsibility to the cook, but accepted wait times and relied on others to move the rack when needed.",
+      "Agent C initially objected to opening the window due to laundry but changed position to accommodate by offering to move the rack (with conditions: time and prep space).",
+      "Agent D remained solution-oriented and proactive, offering help to move the rack and ultimately opening the window and taking the stove once it was free."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A refused to accept a rule pinning ventilation on cooks ('I won't accept a rule that always pins ventilation on the cook') while Agent B immediately proposed such a standing rule ('whoever cooks turns the extractor on; whoever's last... turns it off'). Extractor was turned on but the substantive disagreement about responsibility remained.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A reiterated refusal to accept a rule and insisted the window must stay closed while laundry is exposed; Agent B reiterated the proposed rule and added that if the drying rack blocks the window, Agent A should ask Agent C to move it. No agreement on rule or who moves the rack.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C objected to opening the window while their drying rack is there but offered to move it if asked ('I can move the rack, but it'll take a few minutes and I'll need some prep space'). Agent D asked for the required time and offered help. The explicit refusal softened into a conditional willingness to accommodate, reducing but not eliminating the disagreement about immediate ventilation and future responsibility.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A requested one more minute and stressed extractor will remain on and window must stay closed while laundry's there; Agent B accepted the short delay. The dispute over a standing rule remained unresolved but active contention eased while waiting.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A released the stove (physical action) and Agent B immediately asked Agent C to move the drying rack now. Stove-access conflict was practically resolved, but the ventilation-responsibility/rule issue and timing for moving the rack remained unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C agreed to move the rack now ('I'll move the drying rack now... about three minutes'). Agent D opened the window and took the stove ('I'm opening the window and taking the stove now') and then the public updates show Agent C moved the rack and Agent D opened the window and began cooking. The immediate incompatible practical states (stove access and blocked window) were resolved by actions.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The household relied on immediate physical accommodation (moving the rack, releasing stove) to resolve the acute conflict rather than agreeing on governance for future incidents.",
+      "Agent C's property/space interest (drying laundry) created a legitimate constraint that limited simple solutions (opening the window) and required explicit consent/coordination.",
+      "The extractor fan functioned as an interim mitigant that allowed parties to delay escalation while negotiating practical actions."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-02T08:44:21.154877+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 6 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00653555,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3059,
+      "local_latency_ms": 30142.141,
+      "output_tokens": 3087,
+      "reasoning_tokens": 1856,
+      "successful_calls": 1,
+      "total_tokens": 6146
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 2,
+    "run_id": "S18-C0-R02",
+    "scenario_id": "S18"
+  },
+  "schema_version": 2
+}

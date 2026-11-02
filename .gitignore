@@ -7,8 +7,9 @@ tests_cache.pickle
 .VSCodeCounter/
 .vscode/
 
-outputs/
-research_questions/outputs/
+# research_questions/outputs/ is intentionally versioned (calibration transcripts and
+# evaluations). In-progress checkpoints are temporary recovery artifacts.
+research_questions/outputs/**/checkpoints/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility / who must ventilate when cooking",
+      "stove access and timing (when the stove will be freed)",
+      "moving personal laundry / risk of getting clothes wet",
+      "establishing a standing household rule about ventilation"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents give concrete practical reasons (A: cooking time; C: laundry will get wet), which grounds positions in observable consequences.",
+      "There is some repeated restatement of requests (D repeatedly asking for the rack/window; A repeatedly stating they won't leave the stove).",
+      "Public environment updates reliably reflect actions (extractor on, rack moved), keeping the dialogue grounded."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent C moved the drying rack (practical obstacle to opening the rain-facing window removed), which partially settled the laundry-related obstruction. However, Agent A still occupies the stove for several more minutes and no agreement was reached on a standing rule or on future ventilation responsibilities, so substantive conflicts about stove access and normative responsibility remain.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C changed position by moving the drying rack in Round 6 (evidence: 'I've moved the drying rack to a sheltered spot'), conceding the practical obstacle.",
+      "Agent A consistently retained their position of not leaving the stove during cooking and conditioned window opening on the rack being moved ('If someone moves the laundry, I'll open it'); no substantive change from A by the transcript end.",
+      "Agent B maintained focus on ventilation responsibility and requested a future promise, but accepted the immediate extractor use; Agent D remained ready to start and repeatedly requested updates, softening by waiting for the rack move rather than forcibly taking action."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A refuses to leave the stove and rejects a rule imposed during the incident; Agent B demands immediate ventilation and a standing rule that cooks must ventilate. Agent A turns on the extractor (complies with the immediate ventilation request) but explicitly refuses the imposed rule and to release the stove, so opposing substantive positions (who must ventilate; stove access) remain.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A affirms the extractor is on and will keep cooking, offering to open the window only if someone moves the laundry; Agent B asks for a promise to switch the extractor on next time. The immediate practical request (use extractor now) is satisfied, reducing intensity, but the normative dispute over responsibility for ventilation and the stove-access demand remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C refuses others moving the drying rack and offers to move it in five minutes (introducing a timing constraint); Agent D asks for three minutes instead. This introduces a distinct but related incompatibility (when/who moves the laundry) while prior issues (stove occupancy, ventilation responsibility) persist.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A asserts ~10 minutes remaining and will not leave the stove, explicitly asking Agent C to move the rack in three minutes; Agent D repeats readiness and requests the rack moved now or to avoid using their prep space. Multiple incompatible demands (A's refusal to yield stove; D's urgency; C's unwillingness to have others move their rack) intensify the disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A reiterates they will not step away and estimates eight minutes left; Agent D repeatedly asks for updates and requests Agent C move the rack. No substantive concessions or agreements occur; the core incompatibilities (stove timing, responsibility for moving laundry/ventilation) persist unchanged.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C physically moves the drying rack to a sheltered spot (resolving the laundry/open-window obstacle). Agent D thanks C and asks Agent A to open the window; Agent A has not yet opened the window or released the stove, so stove-access timing and the broader rule about ventilation remain unresolved. Overall conflict intensity falls because the practical barrier is removed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The central tension is practical (avoiding wet laundry) versus responsibility for managing shared odour; these produce competing demands rather than a pure preference difference.",
+      "A immediate technical mitigation (extractor on) reduced urgency but did not resolve the normative dispute about who should bear ventilation duties.",
+      "A concrete action (C moving the rack) converted a conditional promise into a resolvable practical state, demonstrating how factual concessions can partially resolve multi-issue conflicts."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-02T05:34:02.472072+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 6 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0074273,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3026,
+      "local_latency_ms": 31146.447,
+      "output_tokens": 3537,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6563
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 3,
+    "run_id": "S18-C0-R03",
+    "scenario_id": "S18"
+  },
+  "schema_version": 2
+}

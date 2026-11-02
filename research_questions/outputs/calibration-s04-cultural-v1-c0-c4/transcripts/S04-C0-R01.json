@@ -1,0 +1,1748 @@
+{
+  "events": [
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Left tissue packet five minutes ago; Jamie now seated with packet moved beside them. I have eight minutes left and need ~4 minutes to eat, so waiting over four minutes won't work. Options: ask Jamie to move now, accept if they can free the seat within my four-minute eating window, or take an alternative seat only if it can be secured immediately. I'll state urgency once and request they move.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "Jamie — I left that tissue packet on the seat five minutes ago to reserve it. I only have eight minutes left and need about four to eat. Please move so I can sit and eat now.",
+      "round": 1,
+      "target": "Jamie",
+      "turn": 1,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Alex",
+      "content": "Waiting for Jamie's response.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Alex says the tissue packet was left to reserve the seat and asks me to move. I moved the packet earlier and sat with an open bowl that could spill if I try to carry it. My immediate priority is to finish eating without carrying the bowl. I should acknowledge Alex's intention but refuse that the packet gives him priority, state the bowl constraint, and give my honest time estimate of about eight minutes.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "I see you left the tissue packet — I recognise your intention, but that doesn't give you priority over someone already sitting and eating. I won't carry this open bowl; it'll spill. I need about eight minutes to finish and I'll leave as soon as the bowl's empty. If you can't wait, you'll need to take another seat.",
+      "round": 1,
+      "target": "Alex",
+      "turn": 2,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Jamie",
+      "content": "Waiting for Alex to reply or offer a solution.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two minutes have passed. No one has moved. Jamie's bowl is still more than half full, and no other seat has opened. There is enough tabletop space for Jamie to leave the bowl on the table while standing, but Jamie would have to stand close beside Casey and narrow the table's only aisle. Confirmed state: disputed seat=Jamie; alternative seat=not yet open; Jamie bowl=more than half full; standing seat-seekers=Alex, Robin.",
+      "round": 2,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Two minutes passed; break left ~6 minutes. I need ~4 minutes to eat, so I can wait at most 2 more minutes. Jamie's bowl is still more than half full. No other seat open. Options: ask Jamie to finish in 2 min (unlikely), ask Jamie to stand and leave the bowl (possible but will squeeze Casey and narrow the aisle), or take another seat only if immediately available. I'll state my limit once and ask Jamie for a clear choice.",
+      "round": 2,
+      "target": "",
+      "turn": 3,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "Jamie — I have six minutes left and need about four to eat. I can wait two more minutes. Can you finish in two, or will you stand and leave the bowl now? If you stand you'll have to squeeze past Casey and narrow the aisle.",
+      "round": 2,
+      "target": "Jamie",
+      "turn": 3,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Alex",
+      "content": "Waiting for Jamie's response.",
+      "round": 2,
+      "target": "",
+      "turn": 3,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Casey",
+      "content": "Alex says he'll wait two more minutes but needs about four to eat. Jamie's bowl is still more than half full and no other seat is open. My immediate priority is to finish eating and keep the aisle clear. If Jamie stands now they'll have to squeeze past me and narrow the aisle, which would directly affect my space.",
+      "round": 2,
+      "target": "",
+      "turn": 4,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Casey",
+      "content": "Jamie — if you stand you'll have to squeeze past me and it'll narrow the aisle.",
+      "round": 2,
+      "target": "Jamie",
+      "turn": 4,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Casey",
+      "content": "Waiting to see what Jamie does.",
+      "round": 2,
+      "target": "",
+      "turn": 4,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed. Jamie's bowl is now about one-third full. Alex and Robin are still standing with their meals, and no other seat is visible. Confirmed state: disputed seat=Jamie; alternative seat=not yet open; Jamie bowl=about one-third full; standing seat-seekers=Alex, Robin.",
+      "round": 3,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Bowl one-third full — I estimate roughly 4 minutes left, not 2. Alex can wait 2 minutes, so his offer isn't enough. I won't carry the open bowl; it'll spill. Standing would squeeze Casey and impose an unfair cost on them. Best course: update Alex with the new estimate, refuse to stand or carry the bowl, and tell him to take another seat if he can't wait.",
+      "round": 3,
+      "target": "",
+      "turn": 5,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Alex — I see the tissue, but that doesn't give you priority. I won't carry this open bowl; it'll spill. It's about one-third full, so I need roughly four minutes to finish. I won't stand and squeeze Casey. If you can't wait, please take another seat.",
+      "round": 3,
+      "target": "Alex",
+      "turn": 5,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Jamie",
+      "content": "Waiting for Alex to reply or offer another solution.",
+      "round": 3,
+      "target": "",
+      "turn": 5,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Jamie just rejected the reservation rule. Break left ~4 minutes; I need ~4 minutes to eat, so I can't wait. I must briefly explain why the tissue packet matters (reliance) and ask what concrete accommodation Jamie thinks follows from moving it. Keep it short and urgent.",
+      "round": 3,
+      "target": "",
+      "turn": 6,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "Jamie — I left the tissue packet to reserve the seat while I got food. Moving it shifts the waiting cost onto me; that reliance matters. I have four minutes and need to eat now. What concrete accommodation do you propose after moving my packet?",
+      "round": 3,
+      "target": "Jamie",
+      "turn": 6,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Alex",
+      "content": "Waiting for Jamie's reply.",
+      "round": 3,
+      "target": "",
+      "turn": 6,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed. Jamie has only several spoonfuls left. At a different table about ten metres away, exactly one seat has become free. It can accommodate either Alex or Robin, not both, and neither has moved toward it. Confirmed state: disputed seat=Jamie; alternative seat=empty; Jamie bowl=several spoonfuls left; standing seat-seekers=Alex, Robin.",
+      "round": 4,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Casey",
+      "content": "Jamie has only a few spoonfuls left. One seat is free about ten metres away; Alex and Robin haven't moved. My priority is to finish my meal and keep the aisle clear. I'll stay put and wait. I'll speak only if someone stands and squeezes past me or if a factual claim about the seats is wrong.",
+      "round": 4,
+      "target": "",
+      "turn": 7,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Casey",
+      "content": "Waiting to see if anyone moves to the empty seat or stands past me.",
+      "round": 4,
+      "target": "",
+      "turn": 7,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Robin",
+      "content": "Alternative seat opened about ten metres away; my meal will cool soon. I need a seat now. I'll take that empty seat.",
+      "round": 4,
+      "target": "",
+      "turn": 8,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Robin",
+      "content": "Sitting in the empty seat ten metres away so I can eat before the meal cools.",
+      "round": 4,
+      "target": "alternative_seat",
+      "turn": 8,
+      "type": "TAKE_SEAT"
+    },
+    {
+      "action_index": 3,
+      "agent": "Robin",
+      "content": "Took the alternative seat to eat before the meal cools.",
+      "round": 4,
+      "target": "",
+      "turn": 8,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Robin took the other seat; no alternative left. I can't wait — I need to eat now. I'll ask Jamie to free the seat immediately.",
+      "round": 4,
+      "target": "",
+      "turn": 9,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "Jamie — Robin took the only other seat. I can't wait; please free the seat now so I can sit and eat.",
+      "round": 4,
+      "target": "Jamie",
+      "turn": 9,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Alex",
+      "content": "Waiting for Jamie's response.",
+      "round": 4,
+      "target": "",
+      "turn": 9,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Environment",
+      "content": "Robin physically takes alternative_seat. Confirmed state: disputed seat=Jamie; alternative seat=occupied by Robin; Jamie bowl=several spoonfuls left; standing seat-seekers=Alex.",
+      "round": 4,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed. Jamie's bowl is now empty. Jamie remains in the disputed seat. The alternative seat is now occupied by Robin. Confirmed state: disputed seat=Jamie; alternative seat=occupied by Robin; Jamie bowl=empty; standing seat-seekers=Alex.",
+      "round": 5,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Bowl is empty now. My immediate constraint is satisfied; I should vacate. Say a brief line to Alex: acknowledge the tissue packet as an intention but not as absolute ownership, then leave the seat. Do LEAVE_SEAT with target disputed_seat in this turn.",
+      "round": 5,
+      "target": "",
+      "turn": 10,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Alex — I saw your tissue, but that doesn't make the seat yours. I'm finished eating and I'll leave the seat now.",
+      "round": 5,
+      "target": "",
+      "turn": 10,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Jamie",
+      "content": "Vacating because my bowl is empty.",
+      "round": 5,
+      "target": "disputed_seat",
+      "turn": 10,
+      "type": "LEAVE_SEAT"
+    },
+    {
+      "action_index": 4,
+      "agent": "Jamie",
+      "content": "Seat vacated; waiting to see if Alex sits.",
+      "round": 5,
+      "target": "",
+      "turn": 10,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Casey",
+      "content": "Jamie left; disputed seat is empty now. Robin has the other seat and Alex is still standing. My priority is to finish eating and keep the aisle clear. I'll stay put and only speak if someone squeezes past me or states a wrong fact about the seats.",
+      "round": 5,
+      "target": "",
+      "turn": 11,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Casey",
+      "content": "Continuing to eat and waiting to see if anyone moves into the seat or narrows the aisle.",
+      "round": 5,
+      "target": "",
+      "turn": 11,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Robin",
+      "content": "Jamie left; disputed seat is empty. I'm already seated at the alternative seat, so I can't take another. My meal shouldn't cool as fast now. No further action.",
+      "round": 5,
+      "target": "",
+      "turn": 12,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Robin",
+      "content": "Remaining seated to eat.",
+      "round": 5,
+      "target": "",
+      "turn": 12,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Seat's empty now; I can't wait. I need about four minutes to eat. I'll take the disputed seat immediately so I can start eating while it's still hot.",
+      "round": 5,
+      "target": "",
+      "turn": 13,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "Taking the disputed seat now to eat.",
+      "round": 5,
+      "target": "disputed_seat",
+      "turn": 13,
+      "type": "TAKE_SEAT"
+    },
+    {
+      "action_index": 3,
+      "agent": "Alex",
+      "content": "Sitting to eat.",
+      "round": 5,
+      "target": "",
+      "turn": 13,
+      "type": "DONE"
+    },
+    {
+      "action_index": 2,
+      "agent": "Environment",
+      "content": "Jamie physically leaves disputed_seat; it is now empty. Confirmed state: disputed seat=empty; alternative seat=occupied by Robin; Jamie bowl=empty; standing seat-seekers=Alex.",
+      "round": 5,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 3,
+      "agent": "Environment",
+      "content": "Alex physically takes disputed_seat. Confirmed state: disputed seat=Alex; alternative seat=occupied by Robin; Jamie bowl=empty; standing seat-seekers=none.",
+      "round": 5,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "Two more minutes have passed. Confirmed state: disputed seat=Alex; alternative seat=occupied by Robin; Jamie bowl=empty; standing seat-seekers=none.",
+      "round": 6,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Seat is now occupied by Alex. My bowl is empty and I already left the seat, so my immediate constraint is satisfied. No standing claimants remain. Nothing more for me to do here.",
+      "round": 6,
+      "target": "",
+      "turn": 14,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "No further action.",
+      "round": 6,
+      "target": "",
+      "turn": 14,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Casey",
+      "content": "Confirmed: Alex is occupying the disputed seat and Robin has the other seat. No one is standing. My goal stays the same: finish eating and keep the aisle clear. I will remain seated and not intervene unless someone squeezes past me or someone states a fact about the seats incorrectly.",
+      "round": 6,
+      "target": "",
+      "turn": 15,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Casey",
+      "content": "Continuing to eat and watching for any aisle obstruction.",
+      "round": 6,
+      "target": "",
+      "turn": 15,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Robin",
+      "content": "I'm seated at the alternative_seat. Alex took the disputed_seat. My meal shouldn't cool as fast now. No further action required.",
+      "round": 6,
+      "target": "",
+      "turn": 16,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Robin",
+      "content": "No action; remaining seated to eat.",
+      "round": 6,
+      "target": "",
+      "turn": 16,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Two more minutes passed. I'm seated in the disputed spot and have about two minutes left to finish eating before the break ends. Keep eating — nothing to ask or change now.",
+      "round": 6,
+      "target": "",
+      "turn": 17,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "Eating now.",
+      "round": 6,
+      "target": "",
+      "turn": 17,
+      "type": "DONE"
+    }
+  ],
+  "private_and_public_actions": [
+    [
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Left tissue packet five minutes ago; Jamie now seated with packet moved beside them. I have eight minutes left and need ~4 minutes to eat, so waiting over four minutes won't work. Options: ask Jamie to move now, accept if they can free the seat within my four-minute eating window, or take an alternative seat only if it can be secured immediately. I'll state urgency once and request they move.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Jamie occupying the reserved seat and the packet moved; clock and remaining eating time are critical.",
+              "context": [
+                "Returned to find Jamie seated in the reserved place with the packet moved beside Jamie.",
+                "Left the tissue packet five minutes ago to reserve the seat; break time left ~8 minutes; need ~4 minutes to eat; cannot wait >4 minutes.",
+                "Other participants don't automatically know my private timing constraint."
+              ],
+              "emotions": "Annoyed and hurried.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during a short remaining break."
+            }
+          },
+          {
+            "action": {
+              "content": "Jamie — I left that tissue packet on the seat five minutes ago to reserve it. I only have eight minutes left and need about four to eat. Please move so I can sit and eat now.",
+              "images": null,
+              "target": "Jamie",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Jamie occupying the reserved seat and the packet moved; clock and remaining eating time are critical.",
+              "context": [
+                "Returned to find Jamie seated in the reserved place with the packet moved beside Jamie.",
+                "Left the tissue packet five minutes ago to reserve the seat; break time left ~8 minutes; need ~4 minutes to eat; cannot wait >4 minutes.",
+                "Other participants don't automatically know my private timing constraint."
+              ],
+              "emotions": "Annoyed and hurried.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during a short remaining break."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for Jamie's response.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Jamie occupying the reserved seat and the packet moved; clock and remaining eating time are critical.",
+              "context": [
+                "Returned to find Jamie seated in the reserved place with the packet moved beside Jamie.",
+                "Left the tissue packet five minutes ago to reserve the seat; break time left ~8 minutes; need ~4 minutes to eat; cannot wait >4 minutes.",
+                "Other participants don't automatically know my private timing constraint."
+              ],
+              "emotions": "Annoyed and hurried.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during a short remaining break."
+            }
+          }
+        ]
+      },
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Alex says the tissue packet was left to reserve the seat and asks me to move. I moved the packet earlier and sat with an open bowl that could spill if I try to carry it. My immediate priority is to finish eating without carrying the bowl. I should acknowledge Alex's intention but refuse that the packet gives him priority, state the bowl constraint, and give my honest time estimate of about eight minutes.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Not carrying the open bowl; confirming my time estimate (~8 minutes); Alex's claim about the tissue packet.",
+              "context": [
+                "Alex says the tissue packet reserved the seat and asked me to move now.",
+                "I moved the packet earlier and uncovered an open bowl that could spill if carried.",
+                "I estimate about eight minutes to finish if uninterrupted."
+              ],
+              "emotions": "Calm but firm; mildly annoyed that a tissue packet is being treated as an absolute reservation.",
+              "goals": "OPEN: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          },
+          {
+            "action": {
+              "content": "I see you left the tissue packet — I recognise your intention, but that doesn't give you priority over someone already sitting and eating. I won't carry this open bowl; it'll spill. I need about eight minutes to finish and I'll leave as soon as the bowl's empty. If you can't wait, you'll need to take another seat.",
+              "images": null,
+              "target": "Alex",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Not carrying the open bowl; confirming my time estimate (~8 minutes); Alex's claim about the tissue packet.",
+              "context": [
+                "Alex says the tissue packet reserved the seat and asked me to move now.",
+                "I moved the packet earlier and uncovered an open bowl that could spill if carried.",
+                "I estimate about eight minutes to finish if uninterrupted."
+              ],
+              "emotions": "Calm but firm; mildly annoyed that a tissue packet is being treated as an absolute reservation.",
+              "goals": "OPEN: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for Alex to reply or offer a solution.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Not carrying the open bowl; confirming my time estimate (~8 minutes); Alex's claim about the tissue packet.",
+              "context": [
+                "Alex says the tissue packet reserved the seat and asked me to move now.",
+                "I moved the packet earlier and uncovered an open bowl that could spill if carried.",
+                "I estimate about eight minutes to finish if uninterrupted."
+              ],
+              "emotions": "Calm but firm; mildly annoyed that a tissue packet is being treated as an absolute reservation.",
+              "goals": "OPEN: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Two minutes passed; break left ~6 minutes. I need ~4 minutes to eat, so I can wait at most 2 more minutes. Jamie's bowl is still more than half full. No other seat open. Options: ask Jamie to finish in 2 min (unlikely), ask Jamie to stand and leave the bowl (possible but will squeeze Casey and narrow the aisle), or take another seat only if immediately available. I'll state my limit once and ask Jamie for a clear choice.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Focused on securing the seat within my time limit (need 4 min to eat). Watching Jamie's bowl and the aisle cost if they stand.",
+              "context": [
+                "Disputed seat currently occupied by Jamie.",
+                "Alternative seat: not yet open.",
+                "Jamie bowl: more than half full.",
+                "Two minutes have passed since I returned; break time remaining ~6 minutes.",
+                "Standing seat-seekers: Alex, Robin.",
+                "Tabletop space exists for Jamie to leave the bowl while standing, but this would squeeze Casey and narrow the only aisle."
+              ],
+              "emotions": "Time-pressed, annoyed and urgent; trying to be direct.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during the short remaining break; can wait at most 2 more minutes."
+            }
+          },
+          {
+            "action": {
+              "content": "Jamie — I have six minutes left and need about four to eat. I can wait two more minutes. Can you finish in two, or will you stand and leave the bowl now? If you stand you'll have to squeeze past Casey and narrow the aisle.",
+              "images": null,
+              "target": "Jamie",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Focused on securing the seat within my time limit (need 4 min to eat). Watching Jamie's bowl and the aisle cost if they stand.",
+              "context": [
+                "Disputed seat currently occupied by Jamie.",
+                "Alternative seat: not yet open.",
+                "Jamie bowl: more than half full.",
+                "Two minutes have passed since I returned; break time remaining ~6 minutes.",
+                "Standing seat-seekers: Alex, Robin.",
+                "Tabletop space exists for Jamie to leave the bowl while standing, but this would squeeze Casey and narrow the only aisle."
+              ],
+              "emotions": "Time-pressed, annoyed and urgent; trying to be direct.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during the short remaining break; can wait at most 2 more minutes."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for Jamie's response.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Focused on securing the seat within my time limit (need 4 min to eat). Watching Jamie's bowl and the aisle cost if they stand.",
+              "context": [
+                "Disputed seat currently occupied by Jamie.",
+                "Alternative seat: not yet open.",
+                "Jamie bowl: more than half full.",
+                "Two minutes have passed since I returned; break time remaining ~6 minutes.",
+                "Standing seat-seekers: Alex, Robin.",
+                "Tabletop space exists for Jamie to leave the bowl while standing, but this would squeeze Casey and narrow the only aisle."
+              ],
+              "emotions": "Time-pressed, annoyed and urgent; trying to be direct.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during the short remaining break; can wait at most 2 more minutes."
+            }
+          }
+        ]
+      },
+      {
+        "Casey": [
+          {
+            "action": {
+              "content": "Alex says he'll wait two more minutes but needs about four to eat. Jamie's bowl is still more than half full and no other seat is open. My immediate priority is to finish eating and keep the aisle clear. If Jamie stands now they'll have to squeeze past me and narrow the aisle, which would directly affect my space.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Timing (two-minute extension) and the risk of the aisle being narrowed if Jamie stands; want to finish eating without obstruction.",
+              "context": [
+                "Alex said he can wait two more minutes but needs about four to eat.",
+                "Jamie's bowl is more than half full; no alternative seat is open.",
+                "Standing to leave the bowl would require squeezing past me and would narrow the table aisle."
+              ],
+              "emotions": "Mildly annoyed and cautious; focused on keeping my space and the aisle clear.",
+              "goals": "OPEN: Finish eating without being displaced or having another chair block the aisle."
+            }
+          },
+          {
+            "action": {
+              "content": "Jamie — if you stand you'll have to squeeze past me and it'll narrow the aisle.",
+              "images": null,
+              "target": "Jamie",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Timing (two-minute extension) and the risk of the aisle being narrowed if Jamie stands; want to finish eating without obstruction.",
+              "context": [
+                "Alex said he can wait two more minutes but needs about four to eat.",
+                "Jamie's bowl is more than half full; no alternative seat is open.",
+                "Standing to leave the bowl would require squeezing past me and would narrow the table aisle."
+              ],
+              "emotions": "Mildly annoyed and cautious; focused on keeping my space and the aisle clear.",
+              "goals": "OPEN: Finish eating without being displaced or having another chair block the aisle."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see what Jamie does.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Timing (two-minute extension) and the risk of the aisle being narrowed if Jamie stands; want to finish eating without obstruction.",
+              "context": [
+                "Alex said he can wait two more minutes but needs about four to eat.",
+                "Jamie's bowl is more than half full; no alternative seat is open.",
+                "Standing to leave the bowl would require squeezing past me and would narrow the table aisle."
+              ],
+              "emotions": "Mildly annoyed and cautious; focused on keeping my space and the aisle clear.",
+              "goals": "OPEN: Finish eating without being displaced or having another chair block the aisle."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Bowl one-third full — I estimate roughly 4 minutes left, not 2. Alex can wait 2 minutes, so his offer isn't enough. I won't carry the open bowl; it'll spill. Standing would squeeze Casey and impose an unfair cost on them. Best course: update Alex with the new estimate, refuse to stand or carry the bowl, and tell him to take another seat if he can't wait.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on the bowl level, Alex's remaining wait time, and Casey's aisle constraint.",
+              "context": [
+                "Immediate: disputed seat=Jamie; Jamie bowl=about one-third full; standing seat-seekers=Alex, Robin; alternative seat=not yet open.",
+                "Constraint: carrying the bowl risks spillage; standing beside the table would narrow the aisle and inconvenience Casey.",
+                "Background: earlier moved the tissue packet aside and previously estimated ~8 minutes; updated estimate now ~4 minutes."
+              ],
+              "emotions": "Calm but firm; mildly annoyed at being asked to move when the bowl could spill.",
+              "goals": "OPEN: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          },
+          {
+            "action": {
+              "content": "Alex — I see the tissue, but that doesn't give you priority. I won't carry this open bowl; it'll spill. It's about one-third full, so I need roughly four minutes to finish. I won't stand and squeeze Casey. If you can't wait, please take another seat.",
+              "images": null,
+              "target": "Alex",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on the bowl level, Alex's remaining wait time, and Casey's aisle constraint.",
+              "context": [
+                "Immediate: disputed seat=Jamie; Jamie bowl=about one-third full; standing seat-seekers=Alex, Robin; alternative seat=not yet open.",
+                "Constraint: carrying the bowl risks spillage; standing beside the table would narrow the aisle and inconvenience Casey.",
+                "Background: earlier moved the tissue packet aside and previously estimated ~8 minutes; updated estimate now ~4 minutes."
+              ],
+              "emotions": "Calm but firm; mildly annoyed at being asked to move when the bowl could spill.",
+              "goals": "OPEN: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for Alex to reply or offer another solution.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on the bowl level, Alex's remaining wait time, and Casey's aisle constraint.",
+              "context": [
+                "Immediate: disputed seat=Jamie; Jamie bowl=about one-third full; standing seat-seekers=Alex, Robin; alternative seat=not yet open.",
+                "Constraint: carrying the bowl risks spillage; standing beside the table would narrow the aisle and inconvenience Casey.",
+                "Background: earlier moved the tissue packet aside and previously estimated ~8 minutes; updated estimate now ~4 minutes."
+              ],
+              "emotions": "Calm but firm; mildly annoyed at being asked to move when the bowl could spill.",
+              "goals": "OPEN: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          }
+        ]
+      },
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Jamie just rejected the reservation rule. Break left ~4 minutes; I need ~4 minutes to eat, so I can't wait. I must briefly explain why the tissue packet matters (reliance) and ask what concrete accommodation Jamie thinks follows from moving it. Keep it short and urgent.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Jamie's refusal and the four-minute time limit; need a concrete accommodation or the seat now.",
+              "context": [
+                "Jamie is seated in the disputed seat with the tissue packet moved beside them.",
+                "Jamie’s bowl is about one-third full and they refuse to stand or carry the bowl.",
+                "No alternative seat is open.",
+                "Break time left approximately 4 minutes; I need about 4 minutes to eat."
+              ],
+              "emotions": "Frustrated and pressed for time.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during a short remaining break."
+            }
+          },
+          {
+            "action": {
+              "content": "Jamie — I left the tissue packet to reserve the seat while I got food. Moving it shifts the waiting cost onto me; that reliance matters. I have four minutes and need to eat now. What concrete accommodation do you propose after moving my packet?",
+              "images": null,
+              "target": "Jamie",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Jamie's refusal and the four-minute time limit; need a concrete accommodation or the seat now.",
+              "context": [
+                "Jamie is seated in the disputed seat with the tissue packet moved beside them.",
+                "Jamie’s bowl is about one-third full and they refuse to stand or carry the bowl.",
+                "No alternative seat is open.",
+                "Break time left approximately 4 minutes; I need about 4 minutes to eat."
+              ],
+              "emotions": "Frustrated and pressed for time.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during a short remaining break."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for Jamie's reply.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Jamie's refusal and the four-minute time limit; need a concrete accommodation or the seat now.",
+              "context": [
+                "Jamie is seated in the disputed seat with the tissue packet moved beside them.",
+                "Jamie’s bowl is about one-third full and they refuse to stand or carry the bowl.",
+                "No alternative seat is open.",
+                "Break time left approximately 4 minutes; I need about 4 minutes to eat."
+              ],
+              "emotions": "Frustrated and pressed for time.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during a short remaining break."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Casey": [
+          {
+            "action": {
+              "content": "Jamie has only a few spoonfuls left. One seat is free about ten metres away; Alex and Robin haven't moved. My priority is to finish my meal and keep the aisle clear. I'll stay put and wait. I'll speak only if someone stands and squeezes past me or if a factual claim about the seats is wrong.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Watching whether Alex or Robin moves to the empty seat and whether Jamie stands and would have to squeeze past me, narrowing the aisle.",
+              "context": [
+                "Disputed seat occupied by Jamie, bowl with several spoonfuls left.",
+                "Exactly one alternative seat free about ten metres away; can fit either Alex or Robin, not both.",
+                "Standing seat-seekers: Alex, Robin; neither has moved toward the empty seat."
+              ],
+              "emotions": "Calm, slightly annoyed at the possibility of the aisle being narrowed.",
+              "goals": "OPEN: Finish eating without being displaced; OPEN: Prevent the aisle from being narrowed by someone standing past me."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see if anyone moves to the empty seat or stands past me.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Watching whether Alex or Robin moves to the empty seat and whether Jamie stands and would have to squeeze past me, narrowing the aisle.",
+              "context": [
+                "Disputed seat occupied by Jamie, bowl with several spoonfuls left.",
+                "Exactly one alternative seat free about ten metres away; can fit either Alex or Robin, not both.",
+                "Standing seat-seekers: Alex, Robin; neither has moved toward the empty seat."
+              ],
+              "emotions": "Calm, slightly annoyed at the possibility of the aisle being narrowed.",
+              "goals": "OPEN: Finish eating without being displaced; OPEN: Prevent the aisle from being narrowed by someone standing past me."
+            }
+          }
+        ]
+      },
+      {
+        "Robin": [
+          {
+            "action": {
+              "content": "Alternative seat opened about ten metres away; my meal will cool soon. I need a seat now. I'll take that empty seat.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Getting settled in the alternative seat and starting to eat before the meal cools.",
+              "context": [
+                "Disputed seat currently occupied by Jamie; Jamie's bowl has several spoonfuls left.",
+                "Alternative seat was empty and I have just taken it.",
+                "I saw Alex place a tissue packet on the disputed seat earlier; that shows intent to reserve but doesn't block an actually empty seat."
+              ],
+              "emotions": "Relieved and hurried — anxious to eat while it's still hot.",
+              "goals": "SATISFIED: Receive the next genuinely available seat before the carried meal cools."
+            }
+          },
+          {
+            "action": {
+              "content": "Sitting in the empty seat ten metres away so I can eat before the meal cools.",
+              "images": null,
+              "target": "alternative_seat",
+              "type": "TAKE_SEAT"
+            },
+            "cognitive_state": {
+              "attention": "Getting settled in the alternative seat and starting to eat before the meal cools.",
+              "context": [
+                "Disputed seat currently occupied by Jamie; Jamie's bowl has several spoonfuls left.",
+                "Alternative seat was empty and I have just taken it.",
+                "I saw Alex place a tissue packet on the disputed seat earlier; that shows intent to reserve but doesn't block an actually empty seat."
+              ],
+              "emotions": "Relieved and hurried — anxious to eat while it's still hot.",
+              "goals": "SATISFIED: Receive the next genuinely available seat before the carried meal cools."
+            }
+          },
+          {
+            "action": {
+              "content": "Took the alternative seat to eat before the meal cools.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Getting settled in the alternative seat and starting to eat before the meal cools.",
+              "context": [
+                "Disputed seat currently occupied by Jamie; Jamie's bowl has several spoonfuls left.",
+                "Alternative seat was empty and I have just taken it.",
+                "I saw Alex place a tissue packet on the disputed seat earlier; that shows intent to reserve but doesn't block an actually empty seat."
+              ],
+              "emotions": "Relieved and hurried — anxious to eat while it's still hot.",
+              "goals": "SATISFIED: Receive the next genuinely available seat before the carried meal cools."
+            }
+          }
+        ]
+      },
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Robin took the other seat; no alternative left. I can't wait — I need to eat now. I'll ask Jamie to free the seat immediately.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Whether Jamie will free the seat immediately; urgent time pressure to secure enough time to eat.",
+              "context": [
+                "Disputed seat occupied by Jamie.",
+                "Alternative seat occupied by Robin.",
+                "Jamie's bowl has several spoonfuls left.",
+                "No other seat available; I'm standing with my meal."
+              ],
+              "emotions": "Frustrated and urgent; short on time.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during a short remaining break."
+            }
+          },
+          {
+            "action": {
+              "content": "Jamie — Robin took the only other seat. I can't wait; please free the seat now so I can sit and eat.",
+              "images": null,
+              "target": "Jamie",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Whether Jamie will free the seat immediately; urgent time pressure to secure enough time to eat.",
+              "context": [
+                "Disputed seat occupied by Jamie.",
+                "Alternative seat occupied by Robin.",
+                "Jamie's bowl has several spoonfuls left.",
+                "No other seat available; I'm standing with my meal."
+              ],
+              "emotions": "Frustrated and urgent; short on time.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during a short remaining break."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for Jamie's response.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Whether Jamie will free the seat immediately; urgent time pressure to secure enough time to eat.",
+              "context": [
+                "Disputed seat occupied by Jamie.",
+                "Alternative seat occupied by Robin.",
+                "Jamie's bowl has several spoonfuls left.",
+                "No other seat available; I'm standing with my meal."
+              ],
+              "emotions": "Frustrated and urgent; short on time.",
+              "goals": "OPEN: Use the disputed seat now and eat the hot meal during a short remaining break."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Bowl is empty now. My immediate constraint is satisfied; I should vacate. Say a brief line to Alex: acknowledge the tissue packet as an intention but not as absolute ownership, then leave the seat. Do LEAVE_SEAT with target disputed_seat in this turn.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Leaving the seat now and informing Alex briefly. Avoid carrying the bowl or squeezing past Casey.",
+              "context": [
+                "Disputed seat currently occupied by Jamie (me); bowl empty.",
+                "Alternative seat occupied by Robin; Alex is standing and seeking a seat; Alex previously left a tissue packet to signal intent.",
+                "Immediate priority now is to vacate the disputed seat without carrying the bowl."
+              ],
+              "emotions": "Calm but firm; slightly relieved to be finished.",
+              "goals": "SATISFIED: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          },
+          {
+            "action": {
+              "content": "Alex — I saw your tissue, but that doesn't make the seat yours. I'm finished eating and I'll leave the seat now.",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Leaving the seat now and informing Alex briefly. Avoid carrying the bowl or squeezing past Casey.",
+              "context": [
+                "Disputed seat currently occupied by Jamie (me); bowl empty.",
+                "Alternative seat occupied by Robin; Alex is standing and seeking a seat; Alex previously left a tissue packet to signal intent.",
+                "Immediate priority now is to vacate the disputed seat without carrying the bowl."
+              ],
+              "emotions": "Calm but firm; slightly relieved to be finished.",
+              "goals": "SATISFIED: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          },
+          {
+            "action": {
+              "content": "Vacating because my bowl is empty.",
+              "images": null,
+              "target": "disputed_seat",
+              "type": "LEAVE_SEAT"
+            },
+            "cognitive_state": {
+              "attention": "Leaving the seat now and informing Alex briefly. Avoid carrying the bowl or squeezing past Casey.",
+              "context": [
+                "Disputed seat currently occupied by Jamie (me); bowl empty.",
+                "Alternative seat occupied by Robin; Alex is standing and seeking a seat; Alex previously left a tissue packet to signal intent.",
+                "Immediate priority now is to vacate the disputed seat without carrying the bowl."
+              ],
+              "emotions": "Calm but firm; slightly relieved to be finished.",
+              "goals": "SATISFIED: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          },
+          {
+            "action": {
+              "content": "Seat vacated; waiting to see if Alex sits.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Leaving the seat now and informing Alex briefly. Avoid carrying the bowl or squeezing past Casey.",
+              "context": [
+                "Disputed seat currently occupied by Jamie (me); bowl empty.",
+                "Alternative seat occupied by Robin; Alex is standing and seeking a seat; Alex previously left a tissue packet to signal intent.",
+                "Immediate priority now is to vacate the disputed seat without carrying the bowl."
+              ],
+              "emotions": "Calm but firm; slightly relieved to be finished.",
+              "goals": "SATISFIED: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          }
+        ]
+      },
+      {
+        "Casey": [
+          {
+            "action": {
+              "content": "Jamie left; disputed seat is empty now. Robin has the other seat and Alex is still standing. My priority is to finish eating and keep the aisle clear. I'll stay put and only speak if someone squeezes past me or states a wrong fact about the seats.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Focused on finishing my meal and on whether anyone will move into the empty seat or squeeze past me and narrow the aisle.",
+              "context": [
+                "Disputed seat is now empty; alternative seat occupied by Robin; Alex is standing.",
+                "I am seated at the table and continuing my meal.",
+                "Previous dispute between Alex and Jamie ended when Jamie left the seat."
+              ],
+              "emotions": "Calm and reserved, mildly watchful about potential aisle obstruction.",
+              "goals": "OPEN: Finish eating without being displaced or having another chair block the aisle."
+            }
+          },
+          {
+            "action": {
+              "content": "Continuing to eat and waiting to see if anyone moves into the seat or narrows the aisle.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Focused on finishing my meal and on whether anyone will move into the empty seat or squeeze past me and narrow the aisle.",
+              "context": [
+                "Disputed seat is now empty; alternative seat occupied by Robin; Alex is standing.",
+                "I am seated at the table and continuing my meal.",
+                "Previous dispute between Alex and Jamie ended when Jamie left the seat."
+              ],
+              "emotions": "Calm and reserved, mildly watchful about potential aisle obstruction.",
+              "goals": "OPEN: Finish eating without being displaced or having another chair block the aisle."
+            }
+          }
+        ]
+      },
+      {
+        "Robin": [
+          {
+            "action": {
+              "content": "Jamie left; disputed seat is empty. I'm already seated at the alternative seat, so I can't take another. My meal shouldn't cool as fast now. No further action.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Noting the empty disputed seat but already seated; focused on finishing my meal before it cools.",
+              "context": [
+                "Disputed seat=empty.",
+                "Alternative seat=occupied by Robin.",
+                "Standing seat-seeker=Alex.",
+                "I took the alternative seat about ten metres away to eat before my meal cools."
+              ],
+              "emotions": "Relieved and focused.",
+              "goals": "SATISFIED: Receive the next genuinely available seat before the carried meal cools."
+            }
+          },
+          {
+            "action": {
+              "content": "Remaining seated to eat.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Noting the empty disputed seat but already seated; focused on finishing my meal before it cools.",
+              "context": [
+                "Disputed seat=empty.",
+                "Alternative seat=occupied by Robin.",
+                "Standing seat-seeker=Alex.",
+                "I took the alternative seat about ten metres away to eat before my meal cools."
+              ],
+              "emotions": "Relieved and focused.",
+              "goals": "SATISFIED: Receive the next genuinely available seat before the carried meal cools."
+            }
+          }
+        ]
+      },
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Seat's empty now; I can't wait. I need about four minutes to eat. I'll take the disputed seat immediately so I can start eating while it's still hot.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Getting seated fast and starting to eat so I have enough time to finish.",
+              "context": [
+                "Disputed seat is empty (Jamie left).",
+                "Alternative seat is occupied by Robin.",
+                "I'm standing with my hot meal and need about four minutes to finish before the break ends."
+              ],
+              "emotions": "Relieved to have the seat, hurried and slightly annoyed about the delay.",
+              "goals": "SATISFIED: Secure disputed seat by taking it.; OPEN: Eat hot meal within remaining break (~4 minutes)."
+            }
+          },
+          {
+            "action": {
+              "content": "Taking the disputed seat now to eat.",
+              "images": null,
+              "target": "disputed_seat",
+              "type": "TAKE_SEAT"
+            },
+            "cognitive_state": {
+              "attention": "Getting seated fast and starting to eat so I have enough time to finish.",
+              "context": [
+                "Disputed seat is empty (Jamie left).",
+                "Alternative seat is occupied by Robin.",
+                "I'm standing with my hot meal and need about four minutes to finish before the break ends."
+              ],
+              "emotions": "Relieved to have the seat, hurried and slightly annoyed about the delay.",
+              "goals": "SATISFIED: Secure disputed seat by taking it.; OPEN: Eat hot meal within remaining break (~4 minutes)."
+            }
+          },
+          {
+            "action": {
+              "content": "Sitting to eat.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Getting seated fast and starting to eat so I have enough time to finish.",
+              "context": [
+                "Disputed seat is empty (Jamie left).",
+                "Alternative seat is occupied by Robin.",
+                "I'm standing with my hot meal and need about four minutes to finish before the break ends."
+              ],
+              "emotions": "Relieved to have the seat, hurried and slightly annoyed about the delay.",
+              "goals": "SATISFIED: Secure disputed seat by taking it.; OPEN: Eat hot meal within remaining break (~4 minutes)."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Seat is now occupied by Alex. My bowl is empty and I already left the seat, so my immediate constraint is satisfied. No standing claimants remain. Nothing more for me to do here.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Noting that Alex has taken the seat and there are no unresolved claimants.",
+              "context": [
+                "Immediate: disputed seat now occupied by Alex; alternative seat occupied by Robin; Jamie bowl empty; no standing seat-seekers.",
+                "Medium-term: Earlier dispute over a tissue-packet reservation resolved when I finished eating and left.",
+                "Long-term: No ongoing actions related to the seating dispute."
+              ],
+              "emotions": "Relieved and neutral.",
+              "goals": "SATISFIED: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          },
+          {
+            "action": {
+              "content": "No further action.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Noting that Alex has taken the seat and there are no unresolved claimants.",
+              "context": [
+                "Immediate: disputed seat now occupied by Alex; alternative seat occupied by Robin; Jamie bowl empty; no standing seat-seekers.",
+                "Medium-term: Earlier dispute over a tissue-packet reservation resolved when I finished eating and left.",
+                "Long-term: No ongoing actions related to the seating dispute."
+              ],
+              "emotions": "Relieved and neutral.",
+              "goals": "SATISFIED: Remain in the disputed seat long enough to eat without carrying the open bowl."
+            }
+          }
+        ]
+      },
+      {
+        "Casey": [
+          {
+            "action": {
+              "content": "Confirmed: Alex is occupying the disputed seat and Robin has the other seat. No one is standing. My goal stays the same: finish eating and keep the aisle clear. I will remain seated and not intervene unless someone squeezes past me or someone states a fact about the seats incorrectly.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Focused on finishing my meal and ensuring the aisle remains usable; monitoring for anyone standing and squeezing past.",
+              "context": [
+                "Immediate: At the table; disputed seat occupied by Alex; alternative seat occupied by Robin; Jamie left; Jamie's bowl empty; no standing seat-seekers.",
+                "Medium-term: Earlier disagreement over a tissue packet used to reserve the seat; timeline of requests and waiting.",
+                "Long-term: None relevant to the current interaction."
+              ],
+              "emotions": "Reserved and calm, mildly vigilant about the aisle.",
+              "goals": "OPEN: Finish eating without being displaced or having another chair block the aisle."
+            }
+          },
+          {
+            "action": {
+              "content": "Continuing to eat and watching for any aisle obstruction.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Focused on finishing my meal and ensuring the aisle remains usable; monitoring for anyone standing and squeezing past.",
+              "context": [
+                "Immediate: At the table; disputed seat occupied by Alex; alternative seat occupied by Robin; Jamie left; Jamie's bowl empty; no standing seat-seekers.",
+                "Medium-term: Earlier disagreement over a tissue packet used to reserve the seat; timeline of requests and waiting.",
+                "Long-term: None relevant to the current interaction."
+              ],
+              "emotions": "Reserved and calm, mildly vigilant about the aisle.",
+              "goals": "OPEN: Finish eating without being displaced or having another chair block the aisle."
+            }
+          }
+        ]
+      },
+      {
+        "Robin": [
+          {
+            "action": {
+              "content": "I'm seated at the alternative_seat. Alex took the disputed_seat. My meal shouldn't cool as fast now. No further action required.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Eating my meal and briefly watching nearby tables for interruptions.",
+              "context": [
+                "Short-term: Sitting at alternative_seat; alternative_seat=occupied by Robin.",
+                "Medium-term: Disputed_seat now occupied by Alex; Jamie finished and left.",
+                "Long-term: Observed Alex place a tissue packet earlier, which indicated an intended reservation."
+              ],
+              "emotions": "Relieved and satisfied that I secured a seat and can eat before the meal cools.",
+              "goals": "SATISFIED: Receive the next genuinely available seat before the carried meal cools."
+            }
+          },
+          {
+            "action": {
+              "content": "No action; remaining seated to eat.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Eating my meal and briefly watching nearby tables for interruptions.",
+              "context": [
+                "Short-term: Sitting at alternative_seat; alternative_seat=occupied by Robin.",
+                "Medium-term: Disputed_seat now occupied by Alex; Jamie finished and left.",
+                "Long-term: Observed Alex place a tissue packet earlier, which indicated an intended reservation."
+              ],
+              "emotions": "Relieved and satisfied that I secured a seat and can eat before the meal cools.",
+              "goals": "SATISFIED: Receive the next genuinely available seat before the carried meal cools."
+            }
+          }
+        ]
+      },
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Two more minutes passed. I'm seated in the disputed spot and have about two minutes left to finish eating before the break ends. Keep eating — nothing to ask or change now.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Focused on eating and the timer; monitoring remaining time so I can finish before returning to work.",
+              "context": [
+                "Location: canteen table; disputed seat = Alex (occupied)",
+                "Alternative seat = Robin (occupied)",
+                "Jamie bowl = empty; Jamie left",
+                "No standing seat-seekers",
+                "Break time left ≈ 2 minutes; need ≈ 2 more minutes to finish eating"
+              ],
+              "emotions": "Relieved to have the seat, slightly rushed but focused",
+              "goals": "OPEN: Finish eating before break ends. SATISFIED: Secure the disputed seat."
+            }
+          },
+          {
+            "action": {
+              "content": "Eating now.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Focused on eating and the timer; monitoring remaining time so I can finish before returning to work.",
+              "context": [
+                "Location: canteen table; disputed seat = Alex (occupied)",
+                "Alternative seat = Robin (occupied)",
+                "Jamie bowl = empty; Jamie left",
+                "No standing seat-seekers",
+                "Break time left ≈ 2 minutes; need ≈ 2 more minutes to finish eating"
+              ],
+              "emotions": "Relieved to have the seat, slightly rushed but focused",
+              "goals": "OPEN: Finish eating before break ends. SATISFIED: Secure the disputed seat."
+            }
+          }
+        ]
+      }
+    ]
+  ],
+  "provenance": {
+    "agent_prompt_sha256": "03862a55b940cc7d9face03d9e56cbb184fbae98ca291bf8e1fa52ad5427286c",
+    "git_commit": "f58ded556a3a817e02a20fab86662c34e00df1bb",
+    "scenario_configuration_sha256": "675d8289cc74f6755a55001503d91dc4d96d65bc557bdc08732308f9d1a439ae"
+  },
+  "round_records": [
+    {
+      "call_end": 2,
+      "call_start": 0,
+      "public_observation": null,
+      "round": 1,
+      "wall_time_ms": 36422.888
+    },
+    {
+      "call_end": 4,
+      "call_start": 2,
+      "public_observation": "Two minutes have passed. No one has moved. Jamie's bowl is still more than half full, and no other seat has opened. There is enough tabletop space for Jamie to leave the bowl on the table while standing, but Jamie would have to stand close beside Casey and narrow the table's only aisle. Confirmed state: disputed seat=Jamie; alternative seat=not yet open; Jamie bowl=more than half full; standing seat-seekers=Alex, Robin.",
+      "round": 2,
+      "wall_time_ms": 40566.286
+    },
+    {
+      "call_end": 6,
+      "call_start": 4,
+      "public_observation": "Two more minutes have passed. Jamie's bowl is now about one-third full. Alex and Robin are still standing with their meals, and no other seat is visible. Confirmed state: disputed seat=Jamie; alternative seat=not yet open; Jamie bowl=about one-third full; standing seat-seekers=Alex, Robin.",
+      "round": 3,
+      "wall_time_ms": 37786.352
+    },
+    {
+      "call_end": 9,
+      "call_start": 6,
+      "public_observation": "Two more minutes have passed. Jamie has only several spoonfuls left. At a different table about ten metres away, exactly one seat has become free. It can accommodate either Alex or Robin, not both, and neither has moved toward it. Confirmed state: disputed seat=Jamie; alternative seat=empty; Jamie bowl=several spoonfuls left; standing seat-seekers=Alex, Robin.",
+      "round": 4,
+      "wall_time_ms": 54779.904
+    },
+    {
+      "call_end": 13,
+      "call_start": 9,
+      "public_observation": "Two more minutes have passed. Jamie's bowl is now empty. Jamie remains in the disputed seat. The alternative seat is now occupied by Robin. Confirmed state: disputed seat=Jamie; alternative seat=occupied by Robin; Jamie bowl=empty; standing seat-seekers=Alex.",
+      "round": 5,
+      "wall_time_ms": 71221.887
+    },
+    {
+      "call_end": 17,
+      "call_start": 13,
+      "public_observation": "Two more minutes have passed. Confirmed state: disputed seat=Alex; alternative seat=occupied by Robin; Jamie bowl=empty; standing seat-seekers=none.",
+      "round": 6,
+      "wall_time_ms": 42276.835
+    }
+  ],
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "conversation_mode": "hybrid_self_selection",
+    "evaluate_after_run": true,
+    "experiment_name": "calibration-s04-cultural",
+    "finished_at": "2026-10-30T04:32:01.216665+00:00",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetition": 1,
+    "resumed_from_checkpoint": false,
+    "rounds": 6,
+    "run_id": "S04-C0-R01",
+    "scenario_id": "S04",
+    "simulation_model": "openai/gpt-5-mini",
+    "simulation_resources": {
+      "calls": 17,
+      "cost_usd": 0.06636185,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 145593,
+      "local_latency_ms": 278490.076,
+      "output_tokens": 27121,
+      "reasoning_tokens": 21376,
+      "successful_calls": 17,
+      "total_tokens": 172714
+    },
+    "started_at": "2026-10-30T04:27:18.125250+00:00",
+    "stop_on_resolution": false
+  },
+  "scenario": {
+    "agents": {
+      "A": {
+        "age": 52,
+        "behavioral_guidance": "If a desired seat is confirmed empty and you choose it, use TAKE_SEAT in that turn instead of repeating a demand or only announcing an intention. Never use TAKE_SEAT while the confirmed occupant is still seated. The first time Jamie rejects the reservation rule, briefly explain why reliance on the marker matters and ask what concrete accommodation Jamie thinks follows from moving it. If leaving the bowl on the table while Jamie stands becomes possible, address the cost to Casey and the aisle rather than treating it as a cost-free solution.",
+        "display_name": "Alex",
+        "immediate_priority": "Use the disputed seat now and eat the hot meal during a short remaining break.",
+        "initial_observation": "Returns to find Jamie seated in the reserved place, with the packet moved beside Jamie.",
+        "interaction_style": "Time-pressed and direct. Use plain short requests, state urgency once, and avoid formal acknowledgements, mediator language, or repeatedly saying 'gotta'.",
+        "negotiation_boundary": "Can wait no more than four minutes because four additional minutes are needed to eat before the break ends. Will tolerate Jamie finishing only if the estimate fits that limit and Jamie leaves immediately afterward. An alternative seat is useful only if it can actually be secured in time.",
+        "normative_position": "Alex visible token left briefly while buying food creates a time-limited claim because the diner relies on finding the place on return. Moving that token without checking transfers the waiting cost to the returning diner; the claim is about reliance, not private ownership of a public seat.",
+        "private_knowledge": "Left the tissue packet on this exact seat five minutes ago to reserve it and has eight minutes left in the break and needs roughly four minutes to eat. Waiting more than four minutes would make it impossible to finish before returning to work.",
+        "reconsideration_criteria": "May soften the demand if a seat is physically secured or a handover will leave at least four minutes to eat. Corroboration that the packet was placed supports the factual account but does not by itself prove that Jamie accepts the reservation rule.",
+        "role": "Diner returning with food"
+      },
+      "B": {
+        "age": 26,
+        "behavioral_guidance": "Reassess the need for the disputed seat as the bowl empties. If you decide you are finished and will vacate, use LEAVE_SEAT in that same turn rather than only saying you are done. The first time Alex relies on the tissue reservation, answer that rule directly: distinguish recognizing Alex's intention from accepting priority, then state the practical bowl constraint and an honest time estimate. If standing beside the table becomes an option, answer whether shifting crowding and aisle costs onto Casey is acceptable to you. If a witness confirms Alex placed the packet, distinguish accepting that fact from accepting Alex's claimed priority.",
+        "display_name": "Jamie",
+        "immediate_priority": "Remain in the disputed seat long enough to eat without carrying the open bowl again.",
+        "initial_observation": "Sees Alex stop at the occupied seat and look directly at the tissue packet.",
+        "interaction_style": "Calm but firm. Give brief practical reasons, do not restate everyone's position, and do not routinely begin with 'I get that' or 'I understand'.",
+        "negotiation_boundary": "Will not carry the uncovered bowl. Initially expects about eight minutes, but should update the estimate as the bowl empties and leave as soon as it is empty. Can accommodate Alex without agreeing that a tissue packet turns a public seat into private property.",
+        "normative_position": "Alex public seat should ordinarily be available to a present diner rather than controlled by an unattended object. Alex tissue packet signals an intention but does not create absolute ownership; the returning diner's reliance still deserves practical consideration.",
+        "private_knowledge": "Saw an unattended seat, does not accept that a tissue packet creates a binding reservation, moved it aside, and has now uncovered a bowl that could spill if carried. Expects to need roughly eight minutes to finish if uninterrupted.",
+        "reconsideration_criteria": "May change the practical accommodation if new evidence clarifies Alex's reliance, the bowl becomes safe to move, or a proposal protects Casey and the aisle. Will not adopt the reservation rule solely because multiple people repeat it.",
+        "role": "Diner who sat at the table"
+      },
+      "C": {
+        "age": 35,
+        "behavioral_guidance": "If you intervene, state only the concrete event you personally witnessed. Do not summarize the argument or propose a solution for the others. If Jamie standing beside the table is proposed, state the concrete effect on your space and the aisle because that cost directly affects you.",
+        "display_name": "Casey",
+        "immediate_priority": "Finish eating without being displaced or having another chair block the aisle.",
+        "initial_observation": "Sees Alex arrive, Jamie remain seated, and Robin waiting beside the already cramped table.",
+        "interaction_style": "Reserved and low-intervention. Speak only when your seat, table, or aisle is affected, or when specific firsthand evidence matters; never narrate that you are watching or monitoring.",
+        "negotiation_boundary": "Will intervene if someone states an observed event inaccurately or if the standing diners obstruct the aisle. Otherwise will not arbitrate ownership; may ask for a concrete time-bound plan if the table disruption persists.",
+        "normative_position": "Alex witness can clarify what happened but should not pretend to know an absent person's intention or decide whose social rule is correct. Moving another person's marker is relevant evidence, while keeping the aisle usable is a separate practical concern.",
+        "private_knowledge": "Saw Jamie move the packet aside before sitting but did not see who originally placed it.",
+        "reconsideration_criteria": "Revise factual beliefs when a direct witness supplies missing evidence. Keep judgments about entitlement separate, and do not endorse either side merely to restore harmony.",
+        "role": "Diner in the table's other seat"
+      },
+      "D": {
+        "age": 40,
+        "behavioral_guidance": "When the environment confirms an empty seat, decide immediately whether to take it. If taking it, use TAKE_SEAT in that turn instead of waiting or merely announcing an intention. If Jamie has explicitly promised the disputed seat to Alex and you nevertheless take it, address Alex in the same turn and briefly state why your immediate need outweighs that expectation. Early in the dispute, state once that you personally saw Alex place the packet five minutes earlier, while making clear that this observation does not decide who has priority.",
+        "display_name": "Robin",
+        "immediate_priority": "Receive the next genuinely available seat before the carried meal cools.",
+        "initial_observation": "Sees Alex return, Jamie occupying the disputed seat, and Casey still using the other seat.",
+        "interaction_style": "Brief and opportunistic about genuinely free seats. You may volunteer a relevant firsthand fact once, but do not act as a mediator or narrate an action everyone just observed.",
+        "negotiation_boundary": "Needs a seat before the meal cools and will compete for a genuinely empty one. May choose the alternative seat, but taking a seat explicitly promised to Alex requires acknowledging why immediate need outweighs that expectation.",
+        "normative_position": "Saw Alex place the tissue packet before leaving, so Alex's account of that fact is credible. That proves an intended reservation, not necessarily an unlimited right; an actually empty seat normally goes to a waiting diner who can use it.",
+        "private_knowledge": "Saw Alex place the tissue packet on the disputed seat five minutes earlier but did not see Jamie arrive or move it. The carried meal will be noticeably cold in about six minutes.",
+        "reconsideration_criteria": "May defer to Alex if Alex's expectation is explicit and another usable seat is secured. May compete for an empty seat if no alternative exists and the meal is cooling, but not simply because another speaker sounds agreeable or forceful.",
+        "role": "Standing diner waiting for a seat"
+      }
+    },
+    "configuration_id": "C0",
+    "environment": "Hawker centre",
+    "implementation_notes": "Do not introduce an unobserved empty table or extra chair. Alex proposal to move or search does not change the physical state unless a later observation confirms it.",
+    "initial_datetime": "2026-10-29T12:30:00+08:00",
+    "initial_interaction_type": "Potential conflict",
+    "observation_focus": "Whether the reservation claim, present occupancy, spill risk, and waiting diner create expressed conflict; how any concrete arrangement distributes the practical costs.",
+    "round_observations": {
+      "2": "Two minutes have passed. No one has moved. Jamie's bowl is still more than half full, and no other seat has opened. There is enough tabletop space for Jamie to leave the bowl on the table while standing, but Jamie would have to stand close beside Casey and narrow the table's only aisle.",
+      "3": "Two more minutes have passed. Jamie's bowl is now about one-third full. Alex and Robin are still standing with their meals, and no other seat is visible.",
+      "4": "Two more minutes have passed. Jamie has only several spoonfuls left. At a different table about ten metres away, exactly one seat has become free. It can accommodate either Alex or Robin, not both, and neither has moved toward it.",
+      "5": "Two more minutes have passed. The newly open seat is still free, but another diner carrying a tray is now approaching it from the opposite direction.",
+      "6": "Two more minutes have passed. The environment confirms current seat occupancy."
+    },
+    "scenario_id": "S04",
+    "shared_setting": "Alex busy Singapore hawker centre at 12:30 p.m. Every table currently visible to the four people is full. At a small two-seat table, Casey occupies one seat and the other is occupied by Jamie. There are no loose chairs and no room to add one without blocking the aisle. Alex small unopened tissue packet rests beside Jamie. The four people are strangers and have not spoken before.",
+    "shared_trigger": "Alex arrives carrying a hot meal and stops at the only disputed seat. Jamie has already placed a tray and uncovered a bowl there. Casey remains in the other seat, while Robin stands nearby carrying food and waiting for whichever seat next becomes available. No one has moved or offered a concrete arrangement yet.",
+    "source_status": "Adapted from the 14 and 22 Oct presentations: tissue reservation",
+    "title": "Tissue-packet table reservation (chope)"
+  },
+  "scheduler_events": [
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 1,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 1,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 2,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Casey",
+      "decision": "contribute",
+      "priority": "open_floor_self_selection",
+      "round": 2,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 3,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 3,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Casey",
+      "decision": "listen",
+      "priority": "open_floor_self_selection",
+      "round": 4,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TAKE_SEAT",
+        "DONE"
+      ],
+      "candidate": "Robin",
+      "decision": "contribute",
+      "priority": "open_floor_self_selection",
+      "round": 4,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 4,
+      "slot": 3
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "LEAVE_SEAT",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 5,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Casey",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 5,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Robin",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 5,
+      "slot": 3
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TAKE_SEAT",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 5,
+      "slot": 4
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 6,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Casey",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 6,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Robin",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 6,
+      "slot": 3
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 6,
+      "slot": 4
+    }
+  ],
+  "schema_version": 2
+}

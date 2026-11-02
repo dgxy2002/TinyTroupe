@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility / future rule about who must ventilate",
+      "moving drying rack without consent (privacy/possession of personal laundry)",
+      "stove access / scheduling"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants used concrete time estimates (e.g., 'about 6 minutes'), which supported scheduling and coordination.",
+      "Physical actions (B moving the rack, A turning on extractor, A releasing stove) were used to implement solutions and made exchanges verifiable.",
+      "Apology from B reduced interpersonal friction; however, no explicit negotiation of a future ventilation rule occurred."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The immediate scheduling conflict over the stove was resolved in round 6 when Agent A finished cooking and released the stove (accommodation). However, the normative disagreement about who should be responsible for ventilating and the consent issue around moving Agent C's drying rack were not settled by the end of the transcript.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B softened position by apologizing to Agent C and promising to return the rack after A finishes (documented in Round 2).",
+      "Agent A maintained refusal to accept a standing rule imposed during the incident but took pragmatic steps (turned on extractor, gave time estimates, released stove when done).",
+      "Agent D moved from demanding immediate access to waiting and received the stove when A finished (request in Round 3 and handover in Round 6)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A refused to release the stove and rejected a standing rule; Agent B unilaterally moved Agent C's drying rack and opened the window while Agent C had not consented; extractor was turned on. Multiple incompatible claims (who must ventilate, consent to moving laundry, stove access) were active and actions increased tension.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C objected that B moved the drying rack without asking; Agent B apologized and offered to put the rack back after Agent A finishes and asked if C needed it sooner. Immediate unilateral action was acknowledged and partly remedied, but the underlying ventilation/responsibility rule remained unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D requested timing for stove use and Agent A committed to free it in ~6 minutes. The exchange reduced immediate competition for the stove, though the broader disagreement over ventilation responsibility and moving the rack persists.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agents confirm timing and A promises to call when the stove is free; no active disagreement in this round. Underlying normative dispute about who must ventilate and consent for moving laundry was not addressed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "No dialogue; dish nearing completion, window remains open and extractor on. The practical situation is stable but the normative issues (future rule about ventilation, consent to move laundry) remain unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D requested the stove and Agent A released it and physically freed the stove. This settled the immediate scheduling conflict, but the ventilation responsibility and consent-for-moving-rack disputes remained unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Immediate practical needs (remove odour, prevent laundry from getting wet, get stove access) were resolved through visible actions rather than rule-making, leaving normative questions open.",
+      "Unilateral corrective action (B moving the rack) effectively addressed the practical problem but created a consent/possession complaint from C.",
+      "Scheduling and brief commitments (A's time estimates and promise to call) effectively resolved the short-term resource conflict over the stove."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-01T14:04:04.177100+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 6 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0080298,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2948,
+      "local_latency_ms": 33425.237,
+      "output_tokens": 3848,
+      "reasoning_tokens": 2752,
+      "successful_calls": 1,
+      "total_tokens": 6796
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 3,
+    "run_id": "S13-C0-R03",
+    "scenario_id": "S13"
+  },
+  "schema_version": 2
+}

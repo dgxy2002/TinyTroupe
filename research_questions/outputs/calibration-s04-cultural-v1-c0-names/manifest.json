@@ -1,0 +1,54 @@
+{
+  "agent_max_completion_tokens": 4096,
+  "agent_prompt_sha256": "03862a55b940cc7d9face03d9e56cbb184fbae98ca291bf8e1fa52ad5427286c",
+  "api_type": "openrouter",
+  "created_at": "2026-10-30T04:21:57.395454+00:00",
+  "evaluation_timing": "after_complete_run",
+  "evaluator_max_completion_tokens": 4096,
+  "evaluator_model": "openai/gpt-5-mini",
+  "evaluator_prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+  "evaluator_prompt_version": "conflict-trajectory-rubric-v2.5",
+  "experiment_id": "calibration-s04-cultural-v1-c0-names",
+  "experiment_preset": {
+    "configuration_ids": [
+      "C0"
+    ],
+    "conversation_mode": "hybrid_self_selection",
+    "description": "Exploratory matched S04 batch across C0-C4 using fixed neutral display names, the same six timed intervals, and the deterministic hybrid controller.",
+    "evaluate_after_run": true,
+    "name": "calibration-s04-cultural",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetitions_per_configuration": 1,
+    "rounds_per_run": 6,
+    "scenario_ids": [
+      "S04"
+    ],
+    "stop_on_resolution": false
+  },
+  "fixed_horizon": true,
+  "git_commit": "f58ded556a3a817e02a20fab86662c34e00df1bb",
+  "models_are_distinct": false,
+  "protocol_sha256": "fd349b1b015a3a0c5ea7cec48398bf209d7aba7432bd1a1ca29dfc5b6e00dff1",
+  "run_specs": [
+    {
+      "configuration_id": "C0",
+      "conversation_mode": "hybrid_self_selection",
+      "evaluate_after_run": true,
+      "experiment_name": "calibration-s04-cultural",
+      "parallelize_agent_actions": false,
+      "randomize_agent_order": false,
+      "repetition": 1,
+      "rounds": 6,
+      "run_id": "S04-C0-R01",
+      "scenario_id": "S04",
+      "stop_on_resolution": false
+    }
+  ],
+  "scenario_module_sha256": {
+    "S04": "d9df789c6d88c46c2e12715e59b26ab07d62a6e795b701af87c57a2d1a731dc9"
+  },
+  "schema_version": 1,
+  "simulation_model": "openai/gpt-5-mini",
+  "stop_on_resolution": false
+}

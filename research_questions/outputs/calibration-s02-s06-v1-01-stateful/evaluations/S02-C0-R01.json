@@ -1,0 +1,106 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "stove access/timing",
+      "utensil ownership and cleanliness",
+      "kitchen ventilation/routine (minor)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Practical, action-oriented conversation with participants following up verbal requests by physical actions (opening window, washing, labeling, taking stove).",
+      "Minor redundant questioning: C asked about utensil ownership more than once before labeling.",
+      "Clear use of public environment updates to confirm actions; one small confusion in round 2 environment wording was resolved by later updates."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Practical actions settled the substantive issues: A washed shared utensils, C labeled personal utensils, and D physically took the stove; ventilation was enacted early (window/extractor). These actions removed the incompatible states about utensil ownership/cleanliness and stove access.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: shifted from waiting/asking about stove availability to actually taking the stove once the shared utensils were cleaned (evidence: Turn 20 and public update).",
+      "Agent C: moved from inquiring about utensil ownership to labeling and separating personal utensils (evidence: Turns 7, 11, 19 and public update).",
+      "Agent A: accommodated others by washing shared utensils and turning on extractor, enabling stove handover and ventilation (evidence: public updates across rounds)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "B requested opening the window and then opened it; C asked which utensils are shared vs personal; D asked about waiting for the stove. No incompatible demands or refusals were expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "D's interest in using the stove while A still occupied it created a mild practical conflict (who uses stove and when). A removed the finished dish, released the stove, and turned on the extractor during the round, resolving access and ventilation concerns.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Shared utensils remained used and unwashed and personal utensils were not visibly labeled. C expressed intent to label and asked for respect for the distinction; A cannot label C's utensils—this introduced a minor unresolved issue about utensil ownership/cleanliness.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "D asked whether the stove would be free once A finished washing shared utensils (conflicting timing/expectation). A began washing the common utensils, which de-escalated the timing/access tension but left the arrangement not yet fully confirmed until the stove was actually taken.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "C visibly labeled and separated personal utensils and A washed the shared utensils; D then physically took the stove. The previously outstanding issues (utensil ownership/cleanliness and stove access timing) were settled by these actions.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Two minutes later the environment is stable: window open, extractor on, stove occupied by D, shared utensils clean, personal utensils labeled—no substantive conflicts remain.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Immediate, observable actions (opening window, turning on extractor, washing utensils, labeling) effectively resolved practical conflicts more than extended discussion would have.",
+      "Unlabeled personal utensils and unwashed shared utensils constitute a persistent but easily remediable source of household tension; explicit labeling plus washing resolved the ambiguity here.",
+      "Stove access conflicts were primarily about timing; explicit confirmation and physical handover (D taking the stove) provided the definitive resolution."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-29T09:54:54.693265+00:00",
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0066675,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2678,
+      "local_latency_ms": 25834.682,
+      "output_tokens": 2999,
+      "reasoning_tokens": 1920,
+      "successful_calls": 1,
+      "total_tokens": 5677
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S02-C0-R01",
+    "scenario_id": "S02"
+  },
+  "schema_version": 2
+}

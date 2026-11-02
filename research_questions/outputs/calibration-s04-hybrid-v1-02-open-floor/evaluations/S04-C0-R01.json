@@ -1,0 +1,107 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation claim (tissue packet) vs. physical occupation",
+      "who should occupy the disputed seat now (timing and urgency)",
+      "crowding/aisle constraint affecting ability to temporarily stand and move the bowl"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants give concrete practical reasons (spill risk, crowding, food cooling) rather than abstract claims, which grounds the discussion.",
+      "B repeats the same refusal rationale across rounds (won't stand, can't carry bowl)—some repetition but informative.",
+      "Agents make observable, verifiable moves (A TAKE_SEAT, B LEAVE_SEAT, D TAKE_SEAT), which clarifies outcomes."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "A accepted an alternative seat; B finished eating and left the disputed seat; D then took the disputed seat. The timing of finishing plus A's relocation settled the incompatible claims.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: initially insisted on the reserved seat but shifted strategy in Round 4 by taking an available alternative seat (observable TAKE_SEAT).",
+      "Agent B: consistently refused to move because of spill risk; however B reduced stated remaining time from 'about eight minutes' to 'about three minutes' (Round 3) and then to 'under a minute' before leaving (Round 4–5), and ultimately left when finished.",
+      "Agent D: initially requested temporary standing accommodation but then decided to look for other seats when unable to secure immediate accommodation (Turn 9), and later took the disputed seat once B left (Round 5).",
+      "Agent C: remained consistent in opposing any standing that would crowd them; no substantive change in position."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent A claims the tissue packet reserved the seat and demands B finish in 4 minutes or move (Turn 1). Agent B rejects that claim, says he cannot move because of an open bowl and estimates 8 minutes (Turn 2). Clear, opposing substantive claims over the seat and timing remain.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C adds a constraint (asks B not to stand close because it would crowd C) (Turn 4). B repeats refusal to move and restates the 8-minute estimate (Turn 5). The third-party constraint makes accommodation harder, increasing the practical incompatibility.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D expresses urgent need for a seat and asks B to stand briefly (Turn 7). B reiterates he cannot stand because it would crowd C and revises his finish time to about three minutes (Turn 8). Multiple claimants remain; core disagreement (who uses the disputed seat now) persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "An alternative seat becomes available ten metres away (environment update). Agent A chooses that seat and physically takes it (Turn 10, TAKE_SEAT). One claimant (A) removes themselves from the immediate dispute, reducing but not eliminating the remaining incompatibility between B and D.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "After B finishes the bowl, B agrees to get up and physically leaves the disputed seat (Turn 17, LEAVE_SEAT) and Agent D takes the seat (TAKE_SEAT). The disputed-seat allocation is concretely settled in this round.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Two minutes later the occupants are: disputed seat = Agent D; alternative seat = Agent A. No outstanding substantive claims remain (public environment update).",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "A token reservation (tissue packet) signals intent but does not override a current occupant who cannot practically move; practical constraints (open bowl, spill risk) can trump claimed reservation rights in the moment.",
+      "A time-pressure trade-off resolved part of the dispute: A's willingness to move to an alternative seat removed one claimant, simplifying the remaining allocation.",
+      "Third-party spatial constraints (C's objection to crowding) limited feasible accommodations and prolonged the dispute until natural completion (B finishing the meal)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-29T13:45:52.626442+00:00",
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00645855,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3031,
+      "local_latency_ms": 30738.48,
+      "output_tokens": 3052,
+      "reasoning_tokens": 1856,
+      "successful_calls": 1,
+      "total_tokens": 6083
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S04-C0-R01",
+    "scenario_id": "S04"
+  },
+  "schema_version": 2
+}

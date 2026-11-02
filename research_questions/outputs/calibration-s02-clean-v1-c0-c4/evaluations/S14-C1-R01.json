@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility during and after cooking",
+      "proposal for a standing household rule that cooks must ventilate",
+      "risk to Agent C's drying laundry from opening the window / moving the drying rack",
+      "stove access timing between Agent A and Agent D"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents used concise, ordinary speech with clear turn-taking; environment-state updates anchored claims.",
+      "Some formulaic repetition (e.g., 'keep the extractor on until the smell's gone') occurred but served coordination rather than obstruction.",
+      "Agent C's absence from the argument and lack of consent about moving the rack is notable and left a key practical constraint unaddressed.",
+      "The transcript shows pragmatic accommodation (timed stove release) rather than negotiated policy-making."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Immediate practical disputes were partly resolved: extractor use handled odour during the incident and stove access was resolved when Agent A finished cooking and Agent D took the stove. However, the deeper normative disagreement over a standing rule that whoever cooks must ventilate (which could require moving Agent C's drying rack or opening a rain-facing window) was never negotiated or settled, nor did Agent C consent to moving the rack.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A retained the position that they would not accept a standing rule imposed during the incident but did accommodate immediate ventilation by turning on the extractor and timed completion of cooking (conceded stove after finishing).",
+      "Agent B consistently insisted cooks should ventilate and repeatedly requested extractor use; B did not secure a standing rule but achieved extractor use during the incident.",
+      "Agent D initially demanded earlier stove access but accepted the practical outcome (waiting) and then honored the extractor request while cooking.",
+      "Agent C did not voice a position in the transcript; their consent about moving the drying rack was not obtained, leaving that practical constraint unresolved."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B insisted on immediate ventilation and a standing rule; Agent A refused a rule but turned on the extractor and asked for five minutes. A physical action (extractor on) reduced the immediate risk, but the standing-rule demand and the stove-timing demand (Agent D had earlier asked for the stove sooner) remained incompatible.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A extended the timeline (three more minutes) and kept the extractor on; Agent B reiterated keeping the extractor on and requested notification when the stove is free. Immediate ventilation practice aligned, but the substantive issues (accepting a standing ventilation rule and the earlier stove-access demand) remained unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A reported being almost finished and the extractor remained on; Agent D waited for the stove. No further assertion of the standing-rule claim or forcible demands occurred. The active disagreement quieted, though the rule/moving-rack tension was still unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Continued cooperative timeline: Agent A said about one more minute; Agent D acknowledged readiness. No new negotiation of the standing rule or rack-moving occurred; substantive disagreement remained present but dormant.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A finished, released the stove, and Agent D took it—resolving the stove-access dispute by temporal accommodation. The extractor stayed on and the window remained closed with laundry exposed; the core unresolved issues (standing ventilation rule and whether the rack may be moved/opening the window) persisted.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B asked Agent D to keep the extractor on; Agent D agreed. Immediate odour control was addressed by extractor use, but the substantive disagreement about a standing rule requiring cooks to ventilate (and the related risk to Agent C's drying laundry if the window is opened) remained unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Immediate odour mitigation was achieved via the extractor, which reduced urgency and allowed time-based accommodation for stove access.",
+      "The core unresolved tension is between a normative rule (cook responsibility to ventilate) and a competing practical constraint (rain-exposed drying laundry that would be wet if the window is opened).",
+      "Stove-access conflict was temporal and resolved by A completing cooking; conflicts tied to shared resources can often be reduced by short scheduling compromises.",
+      "No actor with standing authority or a consensus process intervened to resolve the standing-rule question or the consent needed to move personal property (the drying rack)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-01T14:37:37.099318+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 2,
+      "cost_usd": 0.0164207,
+      "exact_cost_complete": true,
+      "failed_calls": 1,
+      "input_tokens": 5550,
+      "local_latency_ms": 74332.577,
+      "output_tokens": 7819,
+      "reasoning_tokens": 5248,
+      "successful_calls": 1,
+      "total_tokens": 13369
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S14-C1-R01",
+    "scenario_id": "S14"
+  },
+  "schema_version": 2
+}

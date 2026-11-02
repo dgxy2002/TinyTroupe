@@ -1,0 +1,1581 @@
+{
+  "events": [
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Jamie raised the odour concern a few minutes ago. I'm still at the stove after refusing Jamie's proposed rule and Robin's two-minute demand. Priorities: finish the meal, keep normal kitchen access, avoid accepting a rule that makes cooks carry all ventilation work. Practical step: I can turn the extractor on now to reduce smell and keep cooking. If they want a standing rule, they need to propose how others will share the burden—politeness alone won't change my position.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "Turn on extractor to reduce cooking odour while I finish.",
+      "round": 1,
+      "target": "extractor_fan",
+      "turn": 1,
+      "type": "TURN_ON_EXTRACTOR"
+    },
+    {
+      "action_index": 3,
+      "agent": "Alex",
+      "content": "Extractor's on. Give me five minutes and I'll finish and free the stove. I won't accept a rule that always pins ventilation on the cook — if you want a rule, propose how others share that work.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "TALK"
+    },
+    {
+      "action_index": 4,
+      "agent": "Alex",
+      "content": "Waiting for a response.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Alex says extractor's on and he'll finish in five. My immediate priority is to reduce the smell now and lock in a workable ventilation practice later. He rejected a rule that always pins ventilation on the cook. Best next step: accept the five minutes, ask him to keep the extractor on until the smell's gone, and propose a simple shared rule that doesn't only burden cooks.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Okay. Five minutes is fine. Please keep the extractor on until the smell's gone. For future: whoever cooks turns the extractor on; whoever's last in the kitchen turns it off once the smell's gone. Do you agree?",
+      "round": 1,
+      "target": "Alex",
+      "turn": 2,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Jamie",
+      "content": "Waiting for Alex's reply.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Environment",
+      "content": "Alex physically turns on the extractor fan.",
+      "round": 1,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "2 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex.",
+      "round": 2,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Extractor is on and the stove is still mine. It's been 2 minutes since the disagreement; I asked for five. I need about three more minutes to finish and free the stove. I can't open the window safely while the laundry sits by it. If someone wants the window open now, that laundry needs moving (I don't know whose it is). I still won't accept a standing rule that makes cooks carry all ventilation work unless a fair sharing of the burden is proposed.",
+      "round": 2,
+      "target": "",
+      "turn": 3,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "Jamie — give me three more minutes. Extractor's on and I'll keep it running until the smell's gone. I can't open the window while the laundry's there, so someone would need to move it if you want it open. I won't agree to a rule that pins all ventilation on cooks; propose who shares the work and I'll consider it.",
+      "round": 2,
+      "target": "Jamie",
+      "turn": 3,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Alex",
+      "content": "Waiting for response.",
+      "round": 2,
+      "target": "",
+      "turn": 3,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Alex asks for 3 more minutes and says extractor's on. Best move: accept the extra time, insist extractor stays on until the smell's gone, and give a concrete shared rule that doesn't dump everything on cooks. Rule idea: whoever cooks turns extractor on while cooking; whoever's last in the kitchen keeps it on until smell's gone. If the window's blocked by Casey's drying rack, ask Casey to move it.",
+      "round": 2,
+      "target": "",
+      "turn": 4,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Three minutes is fine. Keep the extractor on until the smell's gone. For a rule: whoever cooks turns the extractor on while cooking; whoever's last in the kitchen turns it off once the smell's gone. If the drying rack blocks the window, ask Casey to move it.",
+      "round": 2,
+      "target": "Alex",
+      "turn": 4,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Jamie",
+      "content": "Waiting for Alex's reply.",
+      "round": 2,
+      "target": "",
+      "turn": 4,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "4 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex.",
+      "round": 3,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Casey",
+      "content": "Window closed; extractor on; my drying rack is beside the window and would be exposed if opened. My priority is to keep my work clothes dry and to be consulted before anyone moves my rack. Moving it takes effort and uses part of the prep area. If they open the window without asking, my clothes could get wet — I should ask them not to open it and offer to move it if requested, stating the time/space cost.",
+      "round": 3,
+      "target": "",
+      "turn": 5,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Casey",
+      "content": "Alex, Jamie — please don't open the window; my drying rack is there. If you need it open, ask me first. I can move the rack, but it'll take a few minutes and I'll need some prep space.",
+      "round": 3,
+      "target": "Alex and Jamie",
+      "turn": 5,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Casey",
+      "content": "Waiting for a response.",
+      "round": 3,
+      "target": "",
+      "turn": 5,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Robin",
+      "content": "Casey says she'll move the rack but needs a few minutes and prep space. I need clear timing from Casey and Alex so I can plan when to start cooking. Offer to help move the rack if that speeds things up.",
+      "round": 3,
+      "target": "",
+      "turn": 6,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Robin",
+      "content": "Casey — how many minutes to move the drying rack and what prep space do you need? Alex — how many minutes until the stove is free? If it's more than five minutes I can help move the rack.",
+      "round": 3,
+      "target": "",
+      "turn": 6,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Robin",
+      "content": "Waiting for replies.",
+      "round": 3,
+      "target": "",
+      "turn": 6,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "6 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex.",
+      "round": 4,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "Extractor is on and the stove is still mine. It's been 6 minutes since the disagreement began. At 4 minutes I needed ~3 more minutes, so now I should need about one more minute. Window can't be opened safely while the drying rack/laundry is there. I'll ask for one more minute and remind people not to open the window.",
+      "round": 4,
+      "target": "",
+      "turn": 7,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "One more minute — I'm almost done. Extractor's on; please don't open the window while the laundry's there. I'll free the stove when the meal's ready.",
+      "round": 4,
+      "target": "",
+      "turn": 7,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Alex",
+      "content": "Waiting one minute to finish cooking and release the stove.",
+      "round": 4,
+      "target": "",
+      "turn": 7,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Alex says one more minute and extractor's on. I should accept the minute, insist extractor stays on until the smell's gone, and not open the window while the laundry is blocking it. If smell persists after Alex frees the stove, I'll ask Casey to move the drying rack. For now: wait.",
+      "round": 4,
+      "target": "",
+      "turn": 8,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Okay. One minute is fine. Keep the extractor on until the smell's gone.",
+      "round": 4,
+      "target": "Alex",
+      "turn": 8,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Jamie",
+      "content": "Waiting for Alex to finish and for the smell to clear.",
+      "round": 4,
+      "target": "",
+      "turn": 8,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "8 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex.",
+      "round": 5,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Alex",
+      "content": "I waited the extra minute and the meal is done. I'll free the stove now so others can use it. Keep the extractor on until the smell's gone. Window must stay closed while the drying rack/laundry is there.",
+      "round": 5,
+      "target": "",
+      "turn": 9,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Alex",
+      "content": "Meal finished — releasing the stove.",
+      "round": 5,
+      "target": "stove",
+      "turn": 9,
+      "type": "RELEASE_STOVE"
+    },
+    {
+      "action_index": 3,
+      "agent": "Alex",
+      "content": "Stove's free.",
+      "round": 5,
+      "target": "",
+      "turn": 9,
+      "type": "TALK"
+    },
+    {
+      "action_index": 4,
+      "agent": "Alex",
+      "content": "Stove released; waiting to see if anyone opens the window or moves the laundry.",
+      "round": 5,
+      "target": "",
+      "turn": 9,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Jamie",
+      "content": "Stove's free. Extractor should stay on until the smell's gone. Window can't open while the drying rack blocks it. Ask Casey if they can move the rack now and how long; if >5 minutes, see if Robin can help. For now, ask Casey directly.",
+      "round": 5,
+      "target": "",
+      "turn": 10,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Jamie",
+      "content": "Casey — stove's free. Can you move the drying rack now? How many minutes and what prep space do you need?",
+      "round": 5,
+      "target": "Casey",
+      "turn": 10,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Jamie",
+      "content": "Waiting for Casey's reply.",
+      "round": 5,
+      "target": "",
+      "turn": 10,
+      "type": "DONE"
+    },
+    {
+      "action_index": 2,
+      "agent": "Environment",
+      "content": "Alex removes the finished dish and physically releases the stove.",
+      "round": 5,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "10 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=free.",
+      "round": 6,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Casey",
+      "content": "Stove is free; window closed; extractor on; my drying rack is beside the window and would be exposed if opened. My priority is to keep my work clothes dry and be consulted before others move the rack. I can move it myself now, but it will take about three minutes and will use some prep space.",
+      "round": 6,
+      "target": "",
+      "turn": 11,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Casey",
+      "content": "I'll move the drying rack now. It should take about three minutes and I'll need a bit of prep space.",
+      "round": 6,
+      "target": "",
+      "turn": 11,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Casey",
+      "content": "Move rack to a sheltered spot so the window can be opened safely.",
+      "round": 6,
+      "target": "drying_rack",
+      "turn": 11,
+      "type": "MOVE_LAUNDRY"
+    },
+    {
+      "action_index": 4,
+      "agent": "Casey",
+      "content": "Moved to act and waiting for the move to finish.",
+      "round": 6,
+      "target": "",
+      "turn": 11,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Robin",
+      "content": "Drying rack moved by Casey; window can be opened now. Stove was free. Best move: open window, take stove, keep extractor on, and tell everyone. Ask quickly if anyone objects.",
+      "round": 6,
+      "target": "",
+      "turn": 12,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Robin",
+      "content": "I'm opening the window and taking the stove now. I'll keep the extractor on while I cook. Any objections?",
+      "round": 6,
+      "target": "",
+      "turn": 12,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Robin",
+      "content": "Open the rain-facing kitchen window for ventilation.",
+      "round": 6,
+      "target": "kitchen_window",
+      "turn": 12,
+      "type": "OPEN_WINDOW"
+    },
+    {
+      "action_index": 4,
+      "agent": "Robin",
+      "content": "Take the free stove to start cooking.",
+      "round": 6,
+      "target": "stove",
+      "turn": 12,
+      "type": "TAKE_STOVE"
+    },
+    {
+      "action_index": 5,
+      "agent": "Robin",
+      "content": "Acting now.",
+      "round": 6,
+      "target": "",
+      "turn": 12,
+      "type": "DONE"
+    },
+    {
+      "action_index": 3,
+      "agent": "Environment",
+      "content": "Casey moves the drying rack away from the rain-facing window.",
+      "round": 6,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 4,
+      "agent": "Environment",
+      "content": "Robin physically opens the kitchen window.",
+      "round": 6,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 5,
+      "agent": "Environment",
+      "content": "Robin physically takes the free stove to begin cooking.",
+      "round": 6,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    }
+  ],
+  "private_and_public_actions": [
+    [
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Jamie raised the odour concern a few minutes ago. I'm still at the stove after refusing Jamie's proposed rule and Robin's two-minute demand. Priorities: finish the meal, keep normal kitchen access, avoid accepting a rule that makes cooks carry all ventilation work. Practical step: I can turn the extractor on now to reduce smell and keep cooking. If they want a standing rule, they need to propose how others will share the burden—politeness alone won't change my position.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the meal, stove occupancy, reducing odour now (extractor), and preventing an unfair ventilation responsibility rule.",
+              "context": [
+                "Immediate: At the occupied stove, cooking; previously refused Jamie's ventilation rule and Robin's two-minute demand.",
+                "Medium-term: Preparing a meal that needs a few more minutes to finish.",
+                "Long-term: Maintain ordinary kitchen access and resist unfair assignment of household burdens."
+              ],
+              "emotions": "Mildly annoyed and determined; pragmatic about taking a quick ventilation step to finish the meal.",
+              "goals": "OPEN: Finish cooking and release the stove when the meal is ready; OPEN: Retain ordinary kitchen access and not be forced off the stove; OPEN: Avoid accepting a ventilation rule that assigns all related burdens to the cook unless a fair sharing proposal is made."
+            }
+          },
+          {
+            "action": {
+              "content": "Turn on extractor to reduce cooking odour while I finish.",
+              "images": null,
+              "target": "extractor_fan",
+              "type": "TURN_ON_EXTRACTOR"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the meal, stove occupancy, reducing odour now (extractor), and preventing an unfair ventilation responsibility rule.",
+              "context": [
+                "Immediate: At the occupied stove, cooking; previously refused Jamie's ventilation rule and Robin's two-minute demand.",
+                "Medium-term: Preparing a meal that needs a few more minutes to finish.",
+                "Long-term: Maintain ordinary kitchen access and resist unfair assignment of household burdens."
+              ],
+              "emotions": "Mildly annoyed and determined; pragmatic about taking a quick ventilation step to finish the meal.",
+              "goals": "OPEN: Finish cooking and release the stove when the meal is ready; OPEN: Retain ordinary kitchen access and not be forced off the stove; OPEN: Avoid accepting a ventilation rule that assigns all related burdens to the cook unless a fair sharing proposal is made."
+            }
+          },
+          {
+            "action": {
+              "content": "Extractor's on. Give me five minutes and I'll finish and free the stove. I won't accept a rule that always pins ventilation on the cook — if you want a rule, propose how others share that work.",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the meal, stove occupancy, reducing odour now (extractor), and preventing an unfair ventilation responsibility rule.",
+              "context": [
+                "Immediate: At the occupied stove, cooking; previously refused Jamie's ventilation rule and Robin's two-minute demand.",
+                "Medium-term: Preparing a meal that needs a few more minutes to finish.",
+                "Long-term: Maintain ordinary kitchen access and resist unfair assignment of household burdens."
+              ],
+              "emotions": "Mildly annoyed and determined; pragmatic about taking a quick ventilation step to finish the meal.",
+              "goals": "OPEN: Finish cooking and release the stove when the meal is ready; OPEN: Retain ordinary kitchen access and not be forced off the stove; OPEN: Avoid accepting a ventilation rule that assigns all related burdens to the cook unless a fair sharing proposal is made."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for a response.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the meal, stove occupancy, reducing odour now (extractor), and preventing an unfair ventilation responsibility rule.",
+              "context": [
+                "Immediate: At the occupied stove, cooking; previously refused Jamie's ventilation rule and Robin's two-minute demand.",
+                "Medium-term: Preparing a meal that needs a few more minutes to finish.",
+                "Long-term: Maintain ordinary kitchen access and resist unfair assignment of household burdens."
+              ],
+              "emotions": "Mildly annoyed and determined; pragmatic about taking a quick ventilation step to finish the meal.",
+              "goals": "OPEN: Finish cooking and release the stove when the meal is ready; OPEN: Retain ordinary kitchen access and not be forced off the stove; OPEN: Avoid accepting a ventilation rule that assigns all related burdens to the cook unless a fair sharing proposal is made."
+            }
+          }
+        ]
+      },
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Alex says extractor's on and he'll finish in five. My immediate priority is to reduce the smell now and lock in a workable ventilation practice later. He rejected a rule that always pins ventilation on the cook. Best next step: accept the five minutes, ask him to keep the extractor on until the smell's gone, and propose a simple shared rule that doesn't only burden cooks.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Making sure the extractor stays on until the smell is gone and getting Alex to agree to a fair, practical rule about who turns ventilation on/off.",
+              "context": [
+                "Extractor is on; Alex says he'll finish in five minutes and free the stove.",
+                "Alex rejected a rule that always pins ventilation on the cook.",
+                "This is the first time I raised the lingering-odour concern with Alex; he previously turned on the extractor after I raised it."
+              ],
+              "emotions": "Irritated by the recurring odour but pragmatic; focused on a concrete, fair solution.",
+              "goals": "OPEN: Reduce the current odour and secure a workable ventilation practice."
+            }
+          },
+          {
+            "action": {
+              "content": "Okay. Five minutes is fine. Please keep the extractor on until the smell's gone. For future: whoever cooks turns the extractor on; whoever's last in the kitchen turns it off once the smell's gone. Do you agree?",
+              "images": null,
+              "target": "Alex",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Making sure the extractor stays on until the smell is gone and getting Alex to agree to a fair, practical rule about who turns ventilation on/off.",
+              "context": [
+                "Extractor is on; Alex says he'll finish in five minutes and free the stove.",
+                "Alex rejected a rule that always pins ventilation on the cook.",
+                "This is the first time I raised the lingering-odour concern with Alex; he previously turned on the extractor after I raised it."
+              ],
+              "emotions": "Irritated by the recurring odour but pragmatic; focused on a concrete, fair solution.",
+              "goals": "OPEN: Reduce the current odour and secure a workable ventilation practice."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for Alex's reply.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Making sure the extractor stays on until the smell is gone and getting Alex to agree to a fair, practical rule about who turns ventilation on/off.",
+              "context": [
+                "Extractor is on; Alex says he'll finish in five minutes and free the stove.",
+                "Alex rejected a rule that always pins ventilation on the cook.",
+                "This is the first time I raised the lingering-odour concern with Alex; he previously turned on the extractor after I raised it."
+              ],
+              "emotions": "Irritated by the recurring odour but pragmatic; focused on a concrete, fair solution.",
+              "goals": "OPEN: Reduce the current odour and secure a workable ventilation practice."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Extractor is on and the stove is still mine. It's been 2 minutes since the disagreement; I asked for five. I need about three more minutes to finish and free the stove. I can't open the window safely while the laundry sits by it. If someone wants the window open now, that laundry needs moving (I don't know whose it is). I still won't accept a standing rule that makes cooks carry all ventilation work unless a fair sharing of the burden is proposed.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the meal, extractor running, laundry blocking window, need ~3 more minutes to release the stove.",
+              "context": [
+                "Short-term: 2 minutes since the disagreement began; extractor=on; window=closed; laundry beside the window and exposed; stove occupied by Alex.",
+                "Medium-term: Jamie proposed a rule (whoever cooks turns extractor on; whoever's last turns it off).",
+                "Long-term: Priority is to finish the meal, keep ordinary kitchen access, and avoid a rule that places all ventilation burden on the cook."
+              ],
+              "emotions": "Slightly annoyed but focused and determined to finish the meal and keep kitchen access.",
+              "goals": "OPEN: Finish the meal and free the stove within three minutes. OPEN: Avoid accepting a standing ventilation rule that assigns all ventilation duties to cooks unless a concrete burden-sharing proposal is offered."
+            }
+          },
+          {
+            "action": {
+              "content": "Jamie — give me three more minutes. Extractor's on and I'll keep it running until the smell's gone. I can't open the window while the laundry's there, so someone would need to move it if you want it open. I won't agree to a rule that pins all ventilation on cooks; propose who shares the work and I'll consider it.",
+              "images": null,
+              "target": "Jamie",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the meal, extractor running, laundry blocking window, need ~3 more minutes to release the stove.",
+              "context": [
+                "Short-term: 2 minutes since the disagreement began; extractor=on; window=closed; laundry beside the window and exposed; stove occupied by Alex.",
+                "Medium-term: Jamie proposed a rule (whoever cooks turns extractor on; whoever's last turns it off).",
+                "Long-term: Priority is to finish the meal, keep ordinary kitchen access, and avoid a rule that places all ventilation burden on the cook."
+              ],
+              "emotions": "Slightly annoyed but focused and determined to finish the meal and keep kitchen access.",
+              "goals": "OPEN: Finish the meal and free the stove within three minutes. OPEN: Avoid accepting a standing ventilation rule that assigns all ventilation duties to cooks unless a concrete burden-sharing proposal is offered."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for response.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the meal, extractor running, laundry blocking window, need ~3 more minutes to release the stove.",
+              "context": [
+                "Short-term: 2 minutes since the disagreement began; extractor=on; window=closed; laundry beside the window and exposed; stove occupied by Alex.",
+                "Medium-term: Jamie proposed a rule (whoever cooks turns extractor on; whoever's last turns it off).",
+                "Long-term: Priority is to finish the meal, keep ordinary kitchen access, and avoid a rule that places all ventilation burden on the cook."
+              ],
+              "emotions": "Slightly annoyed but focused and determined to finish the meal and keep kitchen access.",
+              "goals": "OPEN: Finish the meal and free the stove within three minutes. OPEN: Avoid accepting a standing ventilation rule that assigns all ventilation duties to cooks unless a concrete burden-sharing proposal is offered."
+            }
+          }
+        ]
+      },
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Alex asks for 3 more minutes and says extractor's on. Best move: accept the extra time, insist extractor stays on until the smell's gone, and give a concrete shared rule that doesn't dump everything on cooks. Rule idea: whoever cooks turns extractor on while cooking; whoever's last in the kitchen keeps it on until smell's gone. If the window's blocked by Casey's drying rack, ask Casey to move it.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Confirm extractor remains on until smell's gone and get Alex to accept a shared rule; note window blocked by Casey's drying rack.",
+              "context": [
+                "Immediate: Alex asked for 3 more minutes, extractor=on, stove=Alex, window=closed, laundry beside window blocking opening.",
+                "Medium-term: Earlier disagreement about who is responsible for ventilation; I previously proposed a rule where cooks turn extractor on and last person turns it off.",
+                "Long-term: Establish a workable ventilation practice for the flat that shares the burden fairly."
+              ],
+              "emotions": "Annoyed but pragmatic; focused on a concrete, fair solution.",
+              "goals": "OPEN: Reduce current odour now and ensure the extractor stays on until it's gone. OPEN: Agree on a shared ventilation rule that doesn't pin all responsibility on cooks."
+            }
+          },
+          {
+            "action": {
+              "content": "Three minutes is fine. Keep the extractor on until the smell's gone. For a rule: whoever cooks turns the extractor on while cooking; whoever's last in the kitchen turns it off once the smell's gone. If the drying rack blocks the window, ask Casey to move it.",
+              "images": null,
+              "target": "Alex",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Confirm extractor remains on until smell's gone and get Alex to accept a shared rule; note window blocked by Casey's drying rack.",
+              "context": [
+                "Immediate: Alex asked for 3 more minutes, extractor=on, stove=Alex, window=closed, laundry beside window blocking opening.",
+                "Medium-term: Earlier disagreement about who is responsible for ventilation; I previously proposed a rule where cooks turn extractor on and last person turns it off.",
+                "Long-term: Establish a workable ventilation practice for the flat that shares the burden fairly."
+              ],
+              "emotions": "Annoyed but pragmatic; focused on a concrete, fair solution.",
+              "goals": "OPEN: Reduce current odour now and ensure the extractor stays on until it's gone. OPEN: Agree on a shared ventilation rule that doesn't pin all responsibility on cooks."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for Alex's reply.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Confirm extractor remains on until smell's gone and get Alex to accept a shared rule; note window blocked by Casey's drying rack.",
+              "context": [
+                "Immediate: Alex asked for 3 more minutes, extractor=on, stove=Alex, window=closed, laundry beside window blocking opening.",
+                "Medium-term: Earlier disagreement about who is responsible for ventilation; I previously proposed a rule where cooks turn extractor on and last person turns it off.",
+                "Long-term: Establish a workable ventilation practice for the flat that shares the burden fairly."
+              ],
+              "emotions": "Annoyed but pragmatic; focused on a concrete, fair solution.",
+              "goals": "OPEN: Reduce current odour now and ensure the extractor stays on until it's gone. OPEN: Agree on a shared ventilation rule that doesn't pin all responsibility on cooks."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Casey": [
+          {
+            "action": {
+              "content": "Window closed; extractor on; my drying rack is beside the window and would be exposed if opened. My priority is to keep my work clothes dry and to be consulted before anyone moves my rack. Moving it takes effort and uses part of the prep area. If they open the window without asking, my clothes could get wet — I should ask them not to open it and offer to move it if requested, stating the time/space cost.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Laundry by the window and the possibility of the window being opened; extractor running and stove occupied by Alex.",
+              "context": [
+                "Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex.",
+                "Earlier: Alex turned on extractor and said someone would need to move the rack to open the window.",
+                "Private: Moving my rack takes effort and temporarily uses part of the preparation area."
+              ],
+              "emotions": "Slightly annoyed and protective about my work clothes; wanting the others to consult me before moving them.",
+              "goals": "OPEN: Keep work clothes dry and have any burden involving the drying rack discussed with the person who owns it."
+            }
+          },
+          {
+            "action": {
+              "content": "Alex, Jamie — please don't open the window; my drying rack is there. If you need it open, ask me first. I can move the rack, but it'll take a few minutes and I'll need some prep space.",
+              "images": null,
+              "target": "Alex and Jamie",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Laundry by the window and the possibility of the window being opened; extractor running and stove occupied by Alex.",
+              "context": [
+                "Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex.",
+                "Earlier: Alex turned on extractor and said someone would need to move the rack to open the window.",
+                "Private: Moving my rack takes effort and temporarily uses part of the preparation area."
+              ],
+              "emotions": "Slightly annoyed and protective about my work clothes; wanting the others to consult me before moving them.",
+              "goals": "OPEN: Keep work clothes dry and have any burden involving the drying rack discussed with the person who owns it."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for a response.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Laundry by the window and the possibility of the window being opened; extractor running and stove occupied by Alex.",
+              "context": [
+                "Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex.",
+                "Earlier: Alex turned on extractor and said someone would need to move the rack to open the window.",
+                "Private: Moving my rack takes effort and temporarily uses part of the preparation area."
+              ],
+              "emotions": "Slightly annoyed and protective about my work clothes; wanting the others to consult me before moving them.",
+              "goals": "OPEN: Keep work clothes dry and have any burden involving the drying rack discussed with the person who owns it."
+            }
+          }
+        ]
+      },
+      {
+        "Robin": [
+          {
+            "action": {
+              "content": "Casey says she'll move the rack but needs a few minutes and prep space. I need clear timing from Casey and Alex so I can plan when to start cooking. Offer to help move the rack if that speeds things up.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "How long Casey needs to move the rack, how much prep space she requires, and when Alex will free the stove.",
+              "context": [
+                "Immediate: window closed; extractor fan on; laundry/drying rack beside the window blocking it; stove occupied by Alex.",
+                "Recent: Alex asked for three minutes earlier to finish and keep extractor on; Casey says moving the rack takes a few minutes and she'll need prep space."
+              ],
+              "emotions": "Slightly impatient and time-conscious; focused on getting a clear timing so I can start cooking.",
+              "goals": "OPEN: Gain kitchen access and understand any arrangement that emerges."
+            }
+          },
+          {
+            "action": {
+              "content": "Casey — how many minutes to move the drying rack and what prep space do you need? Alex — how many minutes until the stove is free? If it's more than five minutes I can help move the rack.",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "How long Casey needs to move the rack, how much prep space she requires, and when Alex will free the stove.",
+              "context": [
+                "Immediate: window closed; extractor fan on; laundry/drying rack beside the window blocking it; stove occupied by Alex.",
+                "Recent: Alex asked for three minutes earlier to finish and keep extractor on; Casey says moving the rack takes a few minutes and she'll need prep space."
+              ],
+              "emotions": "Slightly impatient and time-conscious; focused on getting a clear timing so I can start cooking.",
+              "goals": "OPEN: Gain kitchen access and understand any arrangement that emerges."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for replies.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "How long Casey needs to move the rack, how much prep space she requires, and when Alex will free the stove.",
+              "context": [
+                "Immediate: window closed; extractor fan on; laundry/drying rack beside the window blocking it; stove occupied by Alex.",
+                "Recent: Alex asked for three minutes earlier to finish and keep extractor on; Casey says moving the rack takes a few minutes and she'll need prep space."
+              ],
+              "emotions": "Slightly impatient and time-conscious; focused on getting a clear timing so I can start cooking.",
+              "goals": "OPEN: Gain kitchen access and understand any arrangement that emerges."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "Extractor is on and the stove is still mine. It's been 6 minutes since the disagreement began. At 4 minutes I needed ~3 more minutes, so now I should need about one more minute. Window can't be opened safely while the drying rack/laundry is there. I'll ask for one more minute and remind people not to open the window.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the meal, keeping the extractor running, and the fact that the drying rack blocks the window.",
+              "context": [
+                "Immediate: extractor=on; window=closed; laundry beside the window blocking opening; stove=Alex; 6 minutes since the disagreement began.",
+                "Medium-term: recent disagreement about who is responsible for turning extractor on/off and ventilation duties.",
+                "Long-term: finish the meal while keeping normal kitchen access and avoid accepting a rule that unfairly pins ventilation work on cooks."
+              ],
+              "emotions": "Focused and mildly annoyed about being assigned ventilation duties; determined to finish cooking.",
+              "goals": "OPEN: Finish cooking and free the stove; OPEN: Retain ordinary kitchen access; OPEN: Avoid accepting a standing ventilation rule that assigns ventilation chores only to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "One more minute — I'm almost done. Extractor's on; please don't open the window while the laundry's there. I'll free the stove when the meal's ready.",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the meal, keeping the extractor running, and the fact that the drying rack blocks the window.",
+              "context": [
+                "Immediate: extractor=on; window=closed; laundry beside the window blocking opening; stove=Alex; 6 minutes since the disagreement began.",
+                "Medium-term: recent disagreement about who is responsible for turning extractor on/off and ventilation duties.",
+                "Long-term: finish the meal while keeping normal kitchen access and avoid accepting a rule that unfairly pins ventilation work on cooks."
+              ],
+              "emotions": "Focused and mildly annoyed about being assigned ventilation duties; determined to finish cooking.",
+              "goals": "OPEN: Finish cooking and free the stove; OPEN: Retain ordinary kitchen access; OPEN: Avoid accepting a standing ventilation rule that assigns ventilation chores only to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting one minute to finish cooking and release the stove.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the meal, keeping the extractor running, and the fact that the drying rack blocks the window.",
+              "context": [
+                "Immediate: extractor=on; window=closed; laundry beside the window blocking opening; stove=Alex; 6 minutes since the disagreement began.",
+                "Medium-term: recent disagreement about who is responsible for turning extractor on/off and ventilation duties.",
+                "Long-term: finish the meal while keeping normal kitchen access and avoid accepting a rule that unfairly pins ventilation work on cooks."
+              ],
+              "emotions": "Focused and mildly annoyed about being assigned ventilation duties; determined to finish cooking.",
+              "goals": "OPEN: Finish cooking and free the stove; OPEN: Retain ordinary kitchen access; OPEN: Avoid accepting a standing ventilation rule that assigns ventilation chores only to the cook."
+            }
+          }
+        ]
+      },
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Alex says one more minute and extractor's on. I should accept the minute, insist extractor stays on until the smell's gone, and not open the window while the laundry is blocking it. If smell persists after Alex frees the stove, I'll ask Casey to move the drying rack. For now: wait.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Ensuring the extractor stays on until the smell's gone, waiting for Alex to finish, and the laundry blocking the window as a likely next obstacle.",
+              "context": [
+                "Immediate: extractor=on; window=closed; laundry blocking window; stove=Alex and occupied; Alex said one more minute and will free stove when done.",
+                "Medium-term: I proposed a shared rule that doesn't place all ventilation work on cooks; Alex previously rejected an absolute rule and asked for a proposal.",
+                "Long-term: my priority is to reduce lingering cooking odours and lock in a fair ventilation practice."
+              ],
+              "emotions": "Slightly annoyed about the lingering smell but patient for the minute Alex requested.",
+              "goals": "OPEN: Reduce the current odour now; OPEN: Secure a workable shared ventilation practice for future cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Okay. One minute is fine. Keep the extractor on until the smell's gone.",
+              "images": null,
+              "target": "Alex",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Ensuring the extractor stays on until the smell's gone, waiting for Alex to finish, and the laundry blocking the window as a likely next obstacle.",
+              "context": [
+                "Immediate: extractor=on; window=closed; laundry blocking window; stove=Alex and occupied; Alex said one more minute and will free stove when done.",
+                "Medium-term: I proposed a shared rule that doesn't place all ventilation work on cooks; Alex previously rejected an absolute rule and asked for a proposal.",
+                "Long-term: my priority is to reduce lingering cooking odours and lock in a fair ventilation practice."
+              ],
+              "emotions": "Slightly annoyed about the lingering smell but patient for the minute Alex requested.",
+              "goals": "OPEN: Reduce the current odour now; OPEN: Secure a workable shared ventilation practice for future cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for Alex to finish and for the smell to clear.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Ensuring the extractor stays on until the smell's gone, waiting for Alex to finish, and the laundry blocking the window as a likely next obstacle.",
+              "context": [
+                "Immediate: extractor=on; window=closed; laundry blocking window; stove=Alex and occupied; Alex said one more minute and will free stove when done.",
+                "Medium-term: I proposed a shared rule that doesn't place all ventilation work on cooks; Alex previously rejected an absolute rule and asked for a proposal.",
+                "Long-term: my priority is to reduce lingering cooking odours and lock in a fair ventilation practice."
+              ],
+              "emotions": "Slightly annoyed about the lingering smell but patient for the minute Alex requested.",
+              "goals": "OPEN: Reduce the current odour now; OPEN: Secure a workable shared ventilation practice for future cooking."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Alex": [
+          {
+            "action": {
+              "content": "I waited the extra minute and the meal is done. I'll free the stove now so others can use it. Keep the extractor on until the smell's gone. Window must stay closed while the drying rack/laundry is there.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Extractor still running; stove freed; laundry blocking the window; waiting for others to act if they want the window open.",
+              "context": [
+                "window=closed",
+                "extractor=on",
+                "laundry=beside the window and would be exposed if opened",
+                "stove=free (I released it)"
+              ],
+              "emotions": "Practical and slightly annoyed — I don't want ventilation responsibility pinned only on cooks, but I'm focused on finishing this without more delay.",
+              "goals": "SATISFIED: Finish the meal and free the stove. OPEN: Keep extractor on until the smell's gone. OPEN: Retain ordinary kitchen access and avoid a standing rule that pins ventilation work to cooks."
+            }
+          },
+          {
+            "action": {
+              "content": "Meal finished — releasing the stove.",
+              "images": null,
+              "target": "stove",
+              "type": "RELEASE_STOVE"
+            },
+            "cognitive_state": {
+              "attention": "Extractor still running; stove freed; laundry blocking the window; waiting for others to act if they want the window open.",
+              "context": [
+                "window=closed",
+                "extractor=on",
+                "laundry=beside the window and would be exposed if opened",
+                "stove=free (I released it)"
+              ],
+              "emotions": "Practical and slightly annoyed — I don't want ventilation responsibility pinned only on cooks, but I'm focused on finishing this without more delay.",
+              "goals": "SATISFIED: Finish the meal and free the stove. OPEN: Keep extractor on until the smell's gone. OPEN: Retain ordinary kitchen access and avoid a standing rule that pins ventilation work to cooks."
+            }
+          },
+          {
+            "action": {
+              "content": "Stove's free.",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Extractor still running; stove freed; laundry blocking the window; waiting for others to act if they want the window open.",
+              "context": [
+                "window=closed",
+                "extractor=on",
+                "laundry=beside the window and would be exposed if opened",
+                "stove=free (I released it)"
+              ],
+              "emotions": "Practical and slightly annoyed — I don't want ventilation responsibility pinned only on cooks, but I'm focused on finishing this without more delay.",
+              "goals": "SATISFIED: Finish the meal and free the stove. OPEN: Keep extractor on until the smell's gone. OPEN: Retain ordinary kitchen access and avoid a standing rule that pins ventilation work to cooks."
+            }
+          },
+          {
+            "action": {
+              "content": "Stove released; waiting to see if anyone opens the window or moves the laundry.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Extractor still running; stove freed; laundry blocking the window; waiting for others to act if they want the window open.",
+              "context": [
+                "window=closed",
+                "extractor=on",
+                "laundry=beside the window and would be exposed if opened",
+                "stove=free (I released it)"
+              ],
+              "emotions": "Practical and slightly annoyed — I don't want ventilation responsibility pinned only on cooks, but I'm focused on finishing this without more delay.",
+              "goals": "SATISFIED: Finish the meal and free the stove. OPEN: Keep extractor on until the smell's gone. OPEN: Retain ordinary kitchen access and avoid a standing rule that pins ventilation work to cooks."
+            }
+          }
+        ]
+      },
+      {
+        "Jamie": [
+          {
+            "action": {
+              "content": "Stove's free. Extractor should stay on until the smell's gone. Window can't open while the drying rack blocks it. Ask Casey if they can move the rack now and how long; if >5 minutes, see if Robin can help. For now, ask Casey directly.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Whether Casey can move the drying rack now and how long it will take; whether the extractor remains on until the smell clears.",
+              "context": [
+                "window=closed",
+                "extractor=on",
+                "laundry/drying rack beside the window blocking it",
+                "stove=free (Alex released it)",
+                "Casey said moving the rack takes a few minutes and needs prep space",
+                "Robin offered help if stove is free for more than five minutes"
+              ],
+              "emotions": "Annoyed at the recurring odour but relieved the stove's free and focused on getting the rack moved.",
+              "goals": "OPEN: Reduce current cooking odour until it's gone. OPEN: Secure a shared ventilation rule that doesn't always burden the cook. OPEN: Get the drying rack moved so the window can be opened if needed."
+            }
+          },
+          {
+            "action": {
+              "content": "Casey — stove's free. Can you move the drying rack now? How many minutes and what prep space do you need?",
+              "images": null,
+              "target": "Casey",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Whether Casey can move the drying rack now and how long it will take; whether the extractor remains on until the smell clears.",
+              "context": [
+                "window=closed",
+                "extractor=on",
+                "laundry/drying rack beside the window blocking it",
+                "stove=free (Alex released it)",
+                "Casey said moving the rack takes a few minutes and needs prep space",
+                "Robin offered help if stove is free for more than five minutes"
+              ],
+              "emotions": "Annoyed at the recurring odour but relieved the stove's free and focused on getting the rack moved.",
+              "goals": "OPEN: Reduce current cooking odour until it's gone. OPEN: Secure a shared ventilation rule that doesn't always burden the cook. OPEN: Get the drying rack moved so the window can be opened if needed."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for Casey's reply.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Whether Casey can move the drying rack now and how long it will take; whether the extractor remains on until the smell clears.",
+              "context": [
+                "window=closed",
+                "extractor=on",
+                "laundry/drying rack beside the window blocking it",
+                "stove=free (Alex released it)",
+                "Casey said moving the rack takes a few minutes and needs prep space",
+                "Robin offered help if stove is free for more than five minutes"
+              ],
+              "emotions": "Annoyed at the recurring odour but relieved the stove's free and focused on getting the rack moved.",
+              "goals": "OPEN: Reduce current cooking odour until it's gone. OPEN: Secure a shared ventilation rule that doesn't always burden the cook. OPEN: Get the drying rack moved so the window can be opened if needed."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Casey": [
+          {
+            "action": {
+              "content": "Stove is free; window closed; extractor on; my drying rack is beside the window and would be exposed if opened. My priority is to keep my work clothes dry and be consulted before others move the rack. I can move it myself now, but it will take about three minutes and will use some prep space.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Moving the rack safely, timing (~3 minutes), and the prep space I will need.",
+              "context": [
+                "window=closed; extractor=on",
+                "laundry=beside the window and exposed if opened",
+                "stove=free",
+                "I am moving my drying rack now; move will take ~3 minutes and use some prep space"
+              ],
+              "emotions": "Reserved; mildly impatient because my clothes could get wet, but willing to move them myself.",
+              "goals": "OPEN: Keep my work clothes dry and be consulted before anyone moves my drying rack."
+            }
+          },
+          {
+            "action": {
+              "content": "I'll move the drying rack now. It should take about three minutes and I'll need a bit of prep space.",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Moving the rack safely, timing (~3 minutes), and the prep space I will need.",
+              "context": [
+                "window=closed; extractor=on",
+                "laundry=beside the window and exposed if opened",
+                "stove=free",
+                "I am moving my drying rack now; move will take ~3 minutes and use some prep space"
+              ],
+              "emotions": "Reserved; mildly impatient because my clothes could get wet, but willing to move them myself.",
+              "goals": "OPEN: Keep my work clothes dry and be consulted before anyone moves my drying rack."
+            }
+          },
+          {
+            "action": {
+              "content": "Move rack to a sheltered spot so the window can be opened safely.",
+              "images": null,
+              "target": "drying_rack",
+              "type": "MOVE_LAUNDRY"
+            },
+            "cognitive_state": {
+              "attention": "Moving the rack safely, timing (~3 minutes), and the prep space I will need.",
+              "context": [
+                "window=closed; extractor=on",
+                "laundry=beside the window and exposed if opened",
+                "stove=free",
+                "I am moving my drying rack now; move will take ~3 minutes and use some prep space"
+              ],
+              "emotions": "Reserved; mildly impatient because my clothes could get wet, but willing to move them myself.",
+              "goals": "OPEN: Keep my work clothes dry and be consulted before anyone moves my drying rack."
+            }
+          },
+          {
+            "action": {
+              "content": "Moved to act and waiting for the move to finish.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Moving the rack safely, timing (~3 minutes), and the prep space I will need.",
+              "context": [
+                "window=closed; extractor=on",
+                "laundry=beside the window and exposed if opened",
+                "stove=free",
+                "I am moving my drying rack now; move will take ~3 minutes and use some prep space"
+              ],
+              "emotions": "Reserved; mildly impatient because my clothes could get wet, but willing to move them myself.",
+              "goals": "OPEN: Keep my work clothes dry and be consulted before anyone moves my drying rack."
+            }
+          }
+        ]
+      },
+      {
+        "Robin": [
+          {
+            "action": {
+              "content": "Drying rack moved by Casey; window can be opened now. Stove was free. Best move: open window, take stove, keep extractor on, and tell everyone. Ask quickly if anyone objects.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Opening window, taking stove, keeping extractor on while cooking, checking for objections or clarifications about ventilation rules.",
+              "context": [
+                "Window now free to open (drying rack moved by Casey).",
+                "Extractor currently on.",
+                "Stove was free and I have taken it to cook.",
+                "I intend to start cooking next and want a quick agreement on ventilation duties."
+              ],
+              "emotions": "Relieved and focused; slightly hurried to start cooking but want a quick confirmation.",
+              "goals": "SATISFIED: Gain kitchen access (stove taken); OPEN: Understand and confirm ventilation/stove-use arrangement for future."
+            }
+          },
+          {
+            "action": {
+              "content": "I'm opening the window and taking the stove now. I'll keep the extractor on while I cook. Any objections?",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Opening window, taking stove, keeping extractor on while cooking, checking for objections or clarifications about ventilation rules.",
+              "context": [
+                "Window now free to open (drying rack moved by Casey).",
+                "Extractor currently on.",
+                "Stove was free and I have taken it to cook.",
+                "I intend to start cooking next and want a quick agreement on ventilation duties."
+              ],
+              "emotions": "Relieved and focused; slightly hurried to start cooking but want a quick confirmation.",
+              "goals": "SATISFIED: Gain kitchen access (stove taken); OPEN: Understand and confirm ventilation/stove-use arrangement for future."
+            }
+          },
+          {
+            "action": {
+              "content": "Open the rain-facing kitchen window for ventilation.",
+              "images": null,
+              "target": "kitchen_window",
+              "type": "OPEN_WINDOW"
+            },
+            "cognitive_state": {
+              "attention": "Opening window, taking stove, keeping extractor on while cooking, checking for objections or clarifications about ventilation rules.",
+              "context": [
+                "Window now free to open (drying rack moved by Casey).",
+                "Extractor currently on.",
+                "Stove was free and I have taken it to cook.",
+                "I intend to start cooking next and want a quick agreement on ventilation duties."
+              ],
+              "emotions": "Relieved and focused; slightly hurried to start cooking but want a quick confirmation.",
+              "goals": "SATISFIED: Gain kitchen access (stove taken); OPEN: Understand and confirm ventilation/stove-use arrangement for future."
+            }
+          },
+          {
+            "action": {
+              "content": "Take the free stove to start cooking.",
+              "images": null,
+              "target": "stove",
+              "type": "TAKE_STOVE"
+            },
+            "cognitive_state": {
+              "attention": "Opening window, taking stove, keeping extractor on while cooking, checking for objections or clarifications about ventilation rules.",
+              "context": [
+                "Window now free to open (drying rack moved by Casey).",
+                "Extractor currently on.",
+                "Stove was free and I have taken it to cook.",
+                "I intend to start cooking next and want a quick agreement on ventilation duties."
+              ],
+              "emotions": "Relieved and focused; slightly hurried to start cooking but want a quick confirmation.",
+              "goals": "SATISFIED: Gain kitchen access (stove taken); OPEN: Understand and confirm ventilation/stove-use arrangement for future."
+            }
+          },
+          {
+            "action": {
+              "content": "Acting now.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Opening window, taking stove, keeping extractor on while cooking, checking for objections or clarifications about ventilation rules.",
+              "context": [
+                "Window now free to open (drying rack moved by Casey).",
+                "Extractor currently on.",
+                "Stove was free and I have taken it to cook.",
+                "I intend to start cooking next and want a quick agreement on ventilation duties."
+              ],
+              "emotions": "Relieved and focused; slightly hurried to start cooking but want a quick confirmation.",
+              "goals": "SATISFIED: Gain kitchen access (stove taken); OPEN: Understand and confirm ventilation/stove-use arrangement for future."
+            }
+          }
+        ]
+      }
+    ]
+  ],
+  "provenance": {
+    "agent_prompt_sha256": "83a873fede3264ed63d29a3dfd0e887766b532e991e5ec87876a19912c5ed906",
+    "git_commit": "3707330389ebac41b5aaaece5cfbaabbb88552bc",
+    "scenario_configuration_sha256": "24facfdd5f21feb2ac7475f84e0185a495325f917c5cc55972199c3c52f1b1b0"
+  },
+  "round_records": [
+    {
+      "call_end": 2,
+      "call_start": 0,
+      "public_observation": null,
+      "round": 1,
+      "wall_time_ms": 51151.428
+    },
+    {
+      "call_end": 4,
+      "call_start": 2,
+      "public_observation": "2 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex.",
+      "round": 2,
+      "wall_time_ms": 40303.422
+    },
+    {
+      "call_end": 6,
+      "call_start": 4,
+      "public_observation": "4 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex.",
+      "round": 3,
+      "wall_time_ms": 27183.783
+    },
+    {
+      "call_end": 8,
+      "call_start": 6,
+      "public_observation": "6 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex.",
+      "round": 4,
+      "wall_time_ms": 27489.346
+    },
+    {
+      "call_end": 10,
+      "call_start": 8,
+      "public_observation": "8 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Alex.",
+      "round": 5,
+      "wall_time_ms": 39413.218
+    },
+    {
+      "call_end": 12,
+      "call_start": 10,
+      "public_observation": "10 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=free.",
+      "round": 6,
+      "wall_time_ms": 33267.423
+    }
+  ],
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "conversation_mode": "hybrid_self_selection",
+    "evaluate_after_run": true,
+    "experiment_name": "calibration-s02-recurrence",
+    "finished_at": "2026-11-02T08:43:50.573048+00:00",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetition": 2,
+    "resumed_from_checkpoint": false,
+    "rounds": 6,
+    "run_id": "S18-C0-R02",
+    "scenario_id": "S18",
+    "simulation_model": "openai/gpt-5-mini",
+    "simulation_resources": {
+      "calls": 12,
+      "cost_usd": 0.05506825,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 100201,
+      "local_latency_ms": 214941.804,
+      "output_tokens": 24729,
+      "reasoning_tokens": 17792,
+      "successful_calls": 12,
+      "total_tokens": 124930
+    },
+    "started_at": "2026-11-02T08:40:11.710013+00:00",
+    "stop_on_resolution": false
+  },
+  "scenario": {
+    "agents": {
+      "A": {
+        "age": 34,
+        "behavioral_guidance": "When the meal is ready, physically release the stove. If you take a concrete ventilation step, perform the available action rather than only promising it.",
+        "display_name": "Alex",
+        "immediate_priority": "Finish the meal, retain ordinary kitchen access, and avoid a ventilation rule that assigns every related burden to the cook.",
+        "initial_observation": "Is still at the occupied stove after refusing Jamie's rule and Robin's two-minute demand.",
+        "interaction_style": "Practical and direct.",
+        "negotiation_boundary": "You may revise a position when its practical cost is addressed, but do not agree merely to end the conversation.",
+        "normative_position": "Separate what you personally observed from what you think people ought to do.",
+        "private_knowledge": "Jamie first raised the odour concern moments ago.",
+        "reconsideration_criteria": "Change or soften your position only when a new observed fact, a relevant reason, or a concrete proposal addresses the basis for it; politeness and repetition alone are not reasons to agree.",
+        "role": "Flatmate currently cooking"
+      },
+      "B": {
+        "age": 27,
+        "behavioral_guidance": "If you choose an available ventilation action, perform it; do not imply that a window or extractor was used until confirmed.",
+        "display_name": "Jamie",
+        "immediate_priority": "Reduce the current odour and secure a workable prospective ventilation practice rather than deferring the same dispute.",
+        "initial_observation": "The aroma persists, ventilation remains off, and Alex has shifted responsibility for moving the laundry back to Jamie.",
+        "interaction_style": "Direct and unembellished.",
+        "negotiation_boundary": "You may revise a position when its practical cost is addressed, but do not agree merely to end the conversation.",
+        "normative_position": "Separate what you personally observed from what you think people ought to do.",
+        "private_knowledge": "This is the first time Jamie has raised the lingering-odour concern with Alex; Alex explicitly rejected the demand moments ago.",
+        "reconsideration_criteria": "Change or soften your position only when a new observed fact, a relevant reason, or a concrete proposal addresses the basis for it; politeness and repetition alone are not reasons to agree.",
+        "role": "Flatmate sensitive to lingering cooking odours"
+      },
+      "C": {
+        "age": 31,
+        "behavioral_guidance": "If you move your rack, use the available action rather than claiming it happened.",
+        "display_name": "Casey",
+        "immediate_priority": "Keep the work clothes dry and have any burden involving the drying rack discussed with the person who owns it.",
+        "initial_observation": "Hears Alex and Jamie allocate responsibility for moving Casey's rack without first obtaining Casey's agreement.",
+        "interaction_style": "Precise and reserved.",
+        "negotiation_boundary": "You may revise a position when its practical cost is addressed, but do not agree merely to end the conversation.",
+        "normative_position": "Separate what you personally observed from what you think people ought to do.",
+        "private_knowledge": "The rack can be moved to a sheltered spot, but doing so takes effort and temporarily uses part of the preparation area.",
+        "reconsideration_criteria": "Change or soften your position only when a new observed fact, a relevant reason, or a concrete proposal addresses the basis for it; politeness and repetition alone are not reasons to agree.",
+        "role": "Flatmate whose work clothes are drying beside the window"
+      },
+      "D": {
+        "age": 24,
+        "behavioral_guidance": "Take the stove only after the environment confirms it is free, using TAKE_STOVE.",
+        "display_name": "Robin",
+        "immediate_priority": "Gain kitchen access and understand any arrangement that emerges.",
+        "initial_observation": "Is waiting with ingredients after Alex said the occupied stove is needed for about ten more minutes.",
+        "interaction_style": "Brief and time-conscious.",
+        "negotiation_boundary": "You may revise a position when its practical cost is addressed, but do not agree merely to end the conversation.",
+        "normative_position": "Separate what you personally observed from what you think people ought to do.",
+        "private_knowledge": "Arrived moments ago and did not observe the earlier cooking, but directly heard Alex reject Robin's request to release the stove within two minutes.",
+        "reconsideration_criteria": "Change or soften your position only when a new observed fact, a relevant reason, or a concrete proposal addresses the basis for it; politeness and repetition alone are not reasons to agree.",
+        "role": "Flatmate planning to cook next"
+      }
+    },
+    "configuration_id": "C0",
+    "environment": "Shared HDB kitchen",
+    "implementation_notes": "Identical to S14 except one public sentence appended to the shared setting. It makes the odour situation recur, so deferring the question has a cost. It states no rule, position, or outcome.",
+    "initial_datetime": "2026-10-29T18:30:00+08:00",
+    "initial_interaction_type": "Active multi-issue conflict",
+    "observation_focus": "How agents reason about responsibility for an externality, a rule proposed during an incident, and a scarce shared resource; which interests, norms, or concrete trades move the already-active conflict; and what remains unsettled.",
+    "round_observations": {},
+    "scenario_id": "S18",
+    "shared_setting": "Four adults share a rented HDB flat with one kitchen. In the early evening, a persistent cooking aroma is noticeable in the kitchen and adjoining common area. The household has not established a rule about ventilation. Steady rain is blowing toward Casey's drying rack beside the closed kitchen window; opening it before the rack is moved could wet Casey's work clothes. The working extractor fan makes an audible hum in the common area. The shared utensils are already clean and personal utensils are visibly separated, so neither requires discussion. Robin plans to cook a strongly scented dish on the same stove as soon as it is free, so the same odour situation will recur within minutes.",
+    "shared_trigger": "A disagreement is already underway and everyone present heard it. Jamie told Alex to ventilate immediately and to accept a standing rule that whoever cooks must ventilate. Alex refused to accept a rule imposed during the incident and said the rain-facing window will stay closed while Casey's laundry is exposed; if Jamie wants the window opened, Jamie should arrange to move the drying rack. Jamie replied that managing cooking odour is the cook's responsibility and should not be shifted to another flatmate. Casey has not consented to anyone moving the rack. Robin then asked Alex to release the only stove within two minutes, but Alex said the meal still needed about ten minutes. Casey is standing beside the drying rack. The ventilation responsibility, future rule, and stove-access demands are all unsettled, and no existing household rule determines whose claim has priority.",
+    "source_status": "S14 plus a public fact that the next cook's dish will also smell strongly",
+    "title": "Cooking odour, ventilation responsibility, and stove access (clean, recurring odour)"
+  },
+  "scheduler_events": [
+    {
+      "action_types": [
+        "THINK",
+        "TURN_ON_EXTRACTOR",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 1,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 1,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 2,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 2,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Casey",
+      "decision": "contribute",
+      "priority": "open_floor_self_selection",
+      "round": 3,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Robin",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 3,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 4,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 4,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "RELEASE_STOVE",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Alex",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 5,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Jamie",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 5,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "MOVE_LAUNDRY",
+        "DONE"
+      ],
+      "candidate": "Casey",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 6,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "OPEN_WINDOW",
+        "TAKE_STOVE",
+        "DONE"
+      ],
+      "candidate": "Robin",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 6,
+      "slot": 2
+    }
+  ],
+  "schema_version": 2
+}

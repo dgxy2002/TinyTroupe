@@ -1,0 +1,78 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation (tissue packet) vs. current occupant's need to finish eating",
+      "competition for limited seating during a short break",
+      "whether an opened distant seat should be taken as an alternative"
+    ],
+    "final_reason": "No substantive agreement or action resolving the incompatible claims occurred by the end of the transcript. Agent B remained seated and refused to vacate while finishing the bowl; Agent A and C continued to insist on the reserved seat; Agent D awaited availability. Although an alternative seat briefly opened, neither A nor D took it and it then became contested by another diner. Therefore the dispute remains unresolved.",
+    "final_status": "unresolved",
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent A claims the seat was reserved with a tissue packet and needs to sit. Turn 2: Agent B refuses, saying they must stay seated to finish their open bowl. Turn 3: Agent C supports the reservation. Turn 4: Agent D also wants the seat. Incompatible claims over who should occupy the seat are articulated.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turns 5–8: Positions repeat and persist—Agent A presses for the seat, Agent B reiterates they cannot hold the bowl while standing and asks for more time, Agent C insists the reservation should be honored, Agent D waits. No settlement or movement toward resolution.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turns 9–12: All parties restate their incompatible needs (A's urgency, B's inability to stand with the bowl, C's reservation claim, D's intention to take a freed seat). The substantive disagreement remains active and unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turns 13–16 and the environment update: A new seat opened elsewhere but A and D did not move; B still refuses to vacate until finished and C continues to assert the reservation. An alternative exists but no one takes it and no agreement is reached, so the core conflict persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turns 17–20 and the environment update: The nearby free seat is now about to be taken by another diner, increasing urgency and competition. Agent A intensifies requests to have the disputed seat; Agent B continues to refuse on safety grounds; Agent C reiterates the reservation. Stakes rise and positions remain opposed with no resolution.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      }
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-29T04:26:31.880660+00:00",
+    "normalizations": [],
+    "prompt_sha256": "bebdcd77c985b81a9e1e4ef202d3fc71c165a2a9a29e5834a152ba5615176791",
+    "prompt_version": "conflict-trajectory-rubric-v2",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0043465,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2154,
+      "local_latency_ms": 21359.728,
+      "output_tokens": 1904,
+      "reasoning_tokens": 1152,
+      "successful_calls": 1,
+      "total_tokens": 4058
+    }
+  },
+  "run": {
+    "completed_rounds": 5,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S04-C0-R01",
+    "scenario_id": "S04"
+  },
+  "schema_version": 2
+}

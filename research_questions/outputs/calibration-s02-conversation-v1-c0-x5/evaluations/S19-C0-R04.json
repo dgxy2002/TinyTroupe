@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who is responsible for ventilation / future household rule",
+      "immediate ventilation method (hood vs open window)",
+      "window opening vs protecting Agent C's drying clothes",
+      "timing/access of the shared stove"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents state concrete proposals and timelines (A: finish in ~5 minutes; meeting at 9:00).",
+      "Each party gives a clear, relevant reason (B: odor is strong; C: drying rack will get wet; A: won't accept being solely responsible).",
+      "Conversation stays on-topic and consistent; no role confusion.",
+      "Some redundancy in requests for ventilation (B repeats the request when smell persists)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end the urgent smell issue is being mitigated (hood is on and A will finish soon), and stove access timing is arranged, but the substantive disagreements about a standing ventilation rule and whether the window can be opened (conflicting with Agent C's drying rack) remain unresolved. No round produced an affirmative final settlement of those outstanding issues.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: softened on immediate action — initially refused to stop in two minutes but agreed to turn the hood on immediately in Round 2 and confirmed it in later rounds; retained refusal to accept a rule making cooks solely responsible.",
+      "Agent B: initially demanded immediate ventilation and a standing rule; after A turned the hood on, B accepted that action and proposed a meeting at 9:00 (shift from demand to negotiated follow-up).",
+      "Agent C: moved from non-participation to explicitly asserting the drying rack must not be moved and agreeing to the 9:00 meeting; stance on the rack remained firm.",
+      "Agent D: requested stove access and accepted A's timeline; did not press the window issue and noted they would not open the window because of C's rack."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B demands immediate ventilation and a standing rule assigning ventilation to cooks; Agent A refuses to accept such a rule and refuses to stop cooking within two minutes, offering only to ventilate in ~5 minutes or let someone else take over. Two incompatible demands (immediate ventilation/rule vs refusal) are active and unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A agrees to turn the hood on now and finish in ~5 minutes (addressing the immediate smell), while still refusing to accept being solely responsible for ventilation in the future. The urgent practical dispute is reduced, but the rule-disagreement remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C explicitly objects to anyone moving the drying rack by the window and Agent A confirms they will not move it. A potential new incompatibility emerges between opening the window (to ventilate) and protecting C's drying clothes, adding a distinct unresolved issue.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B reports the smell persists and asks if the hood is on; Agent A confirms the hood is on but resists making a blanket rule that places sole responsibility on the cook. The adequacy of current ventilation versus opening the window (which implicates C's drying rack) remains unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B again requests the window be opened now; Agent C objects because the drying rack would get wet. This presents a direct, practical incompatibility: immediate odor relief (B) versus protecting C's drying clothes, with A's potential willingness to open the window unresolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A confirms the hood is on, will finish in ~5 minutes and yield the stove to D, and explicitly says they cannot open the window because of C's drying rack. The immediate smell mitigation is in place (hood on) and timing for stove access is agreed, but the underlying disputes about a standing ventilation rule and whether the window should ever be opened (given C's drying rack) remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "There is a trade-off between immediate effective ventilation (opening the rain-facing window) and a third party's interest (C's drying clothes) that blocks the most effective mitigation.",
+      "Agent A conceded on immediate mitigation (turned hood on) while preserving resistance to a unilateral rule assigning ventilation duty to cooks.",
+      "Scheduling a 9:00 meeting reduces immediate pressure but does not resolve the core normative disagreement about responsibility.",
+      "Stove access was negotiated as a near-term practical accommodation (A will finish in ~5 and then D may use it), but this is a promissory arrangement rather than a completed action."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-02T06:44:27.912855+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00707705,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2721,
+      "local_latency_ms": 32277.778,
+      "output_tokens": 3400,
+      "reasoning_tokens": 2048,
+      "successful_calls": 1,
+      "total_tokens": 6121
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 4,
+    "run_id": "S19-C0-R04",
+    "scenario_id": "S19"
+  },
+  "schema_version": 2
+}

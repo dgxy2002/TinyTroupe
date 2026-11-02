@@ -1,0 +1,52 @@
+{
+  "agent_max_completion_tokens": 3072,
+  "agent_prompt_sha256": "5fee01af8a114f91888b247023614a317b51c94535773b675beb8e44aad37252",
+  "api_type": "openrouter",
+  "created_at": "2026-10-29T05:45:47.994983+00:00",
+  "evaluation_timing": "after_complete_run",
+  "evaluator_max_completion_tokens": 4096,
+  "evaluator_model": "openai/gpt-5-mini",
+  "evaluator_prompt_sha256": "421ed13e169d96c26c1da699517deb58091901fcbcadf8f09864f4a379e06c73",
+  "evaluator_prompt_version": "conflict-trajectory-rubric-v2.3",
+  "experiment_id": "calibration-s04-v4-02-time-norms",
+  "experiment_preset": {
+    "configuration_ids": [
+      "C0"
+    ],
+    "description": "Calibration run for scenario grounding, natural dialogue, and the peak-versus-remaining conflict evaluator. Not confirmatory research data.",
+    "evaluate_after_run": true,
+    "name": "calibration-s04",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetitions_per_configuration": 1,
+    "rounds_per_run": 6,
+    "scenario_ids": [
+      "S04"
+    ],
+    "stop_on_resolution": false
+  },
+  "fixed_horizon": true,
+  "git_commit": "069137a99dff4a2e8ebd2e07eb2e6a77f5b83f7e",
+  "models_are_distinct": true,
+  "protocol_sha256": "fd349b1b015a3a0c5ea7cec48398bf209d7aba7432bd1a1ca29dfc5b6e00dff1",
+  "run_specs": [
+    {
+      "configuration_id": "C0",
+      "evaluate_after_run": true,
+      "experiment_name": "calibration-s04",
+      "parallelize_agent_actions": false,
+      "randomize_agent_order": false,
+      "repetition": 1,
+      "rounds": 6,
+      "run_id": "S04-C0-R01",
+      "scenario_id": "S04",
+      "stop_on_resolution": false
+    }
+  ],
+  "scenario_module_sha256": {
+    "S04": "e0946418c12849d0f21b6afcd3638f8978a8ebf43380f20778ff2b6ab5d7acc1"
+  },
+  "schema_version": 1,
+  "simulation_model": "openai/gpt-4.1-mini",
+  "stop_on_resolution": false
+}

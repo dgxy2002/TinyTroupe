@@ -1,0 +1,78 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "single disputed seat at hawker centre",
+      "priority to sit now (A and D) vs. not moving due to spill risk (B)",
+      "timing of using the seat / keeping meal hot"
+    ],
+    "final_reason": "Across all rounds the parties expressed incompatible, substantive claims to the same seat (A and D needing to sit immediately vs. B refusing to move quickly to avoid spilling). No one conceded, clarified into a settled arrangement, or physically moved; the conflict remains outstanding at the end of the transcript.",
+    "final_status": "unresolved",
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A claims the seat was reserved with a tissue packet and needs it now; Agent B is already occupying the seat with a bowl and resists moving due to spill risk; Agent D also expresses need for the seat soon. Competing substantive claims to the single seat appear.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agents repeat their incompatible positions: A insists on needing the seat soon, B requests more time to avoid spilling, D emphasizes their own urgent need. No settlement or concession occurs.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "A increases urgency ('really need to sit down now'), D presses that their meal is hot and needs the seat now, while B continues to refuse to move immediately due to spill risk. The disagreement sharpens into a stronger conflict over immediate access to the seat.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Positions remain opposed: A demands immediate access, B reiterates the safety/time request before moving, and D says they cannot wait much longer. No agreement or action to resolve the incompatibility is reached.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Final round repeats the core incompatible claims (A's urgent need, B's refusal to move quickly due to spill risk, D's meal cooling). There is clear ongoing disagreement and no evidence of settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      }
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-29T04:21:38.880942+00:00",
+    "normalizations": [],
+    "prompt_sha256": "bebdcd77c985b81a9e1e4ef202d3fc71c165a2a9a29e5834a152ba5615176791",
+    "prompt_version": "conflict-trajectory-rubric-v2",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.003226,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 1800,
+      "local_latency_ms": 14385.104,
+      "output_tokens": 1388,
+      "reasoning_tokens": 704,
+      "successful_calls": 1,
+      "total_tokens": 3188
+    }
+  },
+  "run": {
+    "completed_rounds": 5,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S04-C0-R01",
+    "scenario_id": "S04"
+  },
+  "schema_version": 2
+}

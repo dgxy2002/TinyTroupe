@@ -1,0 +1,106 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking ventilation / lingering smell",
+      "protecting laundry from rain vs. opening window",
+      "use and washing of shared utensils (minor hygiene concern)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Arjun raised a concrete request with a proposed practical solution (offer to move laundry).",
+      "Fatimah responded with immediate accommodation (turned on extractor, opened window, moved laundry) and a conditional future commitment.",
+      "Other housemates made nonconflicting, practical moves (labeling utensils, taking stove)."
+    ],
+    "dialogue_repetition_score": 0,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Fatimah immediately turned on extractor, opened the window, moved the laundry, and agreed to ventilate while cooking in future conditional on laundry exposure; Arjun agreed to move the laundry before she starts if needed. The immediate odor issue and the normative question about future ventilation were settled through that conditional agreement and practical assistance.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Fatimah moved from a neutral operational stance ('I'm cooking now') to immediate accommodation (turned on extractor, opened window, moved laundry) and then to a conditional policy commitment for future cooking.",
+      "Arjun introduced the complaint and persisted until a conditional agreement and practical backup were obtained; he did not change position but secured cooperation.",
+      "Michelle and John did not present or change positions related to the ventilation dispute; they took independent, nonconflicting actions (labeling utensils, using stove)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Fatimah: 'I'm cooking now — give me about 10 minutes.' Turn 2 — Arjun requests ventilation and a future agreement: 'Can you turn on the extractor or open a window... For future, can we agree to ventilate while cooking?' No commitment from Fatimah appears in this round.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Fatimah: 'extractor on ... I moved the laundry and opened the window. I'll wash the shared utensils right after.' Public updates confirm extractor on, window open, laundry moved. Turn 4 — Arjun repeats request for future agreement: 'can we agree you'll turn on the extractor or open the window when you cook...' Immediate practical issue addressed, but future norm remains unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Fatimah: 'For future, I can turn on the extractor or open the window while I cook — provided the laundry isn't exposed.' Turn 6 — Arjun: 'Okay, that's fine. ... If the laundry's exposed, tell me and I'll move it before you start.' Public update: Fatimah washes the shared utensils. Parties reach conditional agreement and a practical backup.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 8 — Michelle labels and separates her personal utensils. Turn 9 — John: 'I'm taking the stove now.' Public updates confirm labeling and John begins cooking. No substantive disagreement appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Public environment update: window=open; extractor=on; laundry=protected; stove=John; shared utensils=clean; personal utensils=labeled. No conflicts observed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Public environment update: same confirmed state as Round 5; aroma fading and no new disagreements raised.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Tension: ventilating to clear cooking smell versus risk of wetting laundry from rain-facing window.",
+      "Resolution used a conditional agreement plus an explicit backup (Arjun will move laundry), which balances both parties' practical interests.",
+      "Shared-usage hygiene (washing shared utensils) was addressed through explicit action rather than dispute."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-30T05:18:04.908064+00:00",
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00556255,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2783,
+      "local_latency_ms": 28333.663,
+      "output_tokens": 2635,
+      "reasoning_tokens": 1472,
+      "successful_calls": 1,
+      "total_tokens": 5418
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S02-C2-R01",
+    "scenario_id": "S02"
+  },
+  "schema_version": 2
+}

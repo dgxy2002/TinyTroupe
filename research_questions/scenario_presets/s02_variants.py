@@ -216,8 +216,177 @@ CLEAN_STAKES = replace(
 )
 
 
-for _scenario in (MINIMAL, STAKES, CLEAN, CLEAN_STAKES):
+# S16 changes exactly one thing relative to S14: each role's ``interaction_style`` is
+# replaced by a fuller personality. Traits describe manner of speaking and what the
+# person cares about. They are fixed per role, identical in every cultural
+# configuration, and deliberately avoid conflict-handling dispositions (no
+# "stubborn" or "conciliatory"), though any personality text can still shade outcomes.
+PERSONALITIES = {
+    "A": (
+        "Practical and self-reliant; takes pride in cooking properly and dislikes being "
+        "hurried. Explains things through concrete consequences rather than principles. "
+        "Gets terse when a request sounds like an order."
+    ),
+    "B": (
+        "Observant and plain-spoken; notices smells, noise and mess quickly and says so "
+        "without dressing it up. Cares about shared spaces being comfortable for everyone. "
+        "Remembers what people said earlier in the conversation and refers back to it."
+    ),
+    "C": (
+        "Reserved and careful with words; speaks up when something touches their own "
+        "things, then says it precisely. Values being asked before anyone handles their "
+        "belongings. Dislikes being discussed as if absent."
+    ),
+    "D": (
+        "Busy and time-conscious; asks for specific times and numbers. Friendly but "
+        "impatient with open-ended talk when waiting on something. Thinks in terms of "
+        "who needs what, and when."
+    ),
+}
+
+PERSONALITY = replace(
+    CLEAN,
+    scenario_id="S16",
+    title="Cooking odour, ventilation responsibility, and stove access (clean, fuller personality)",
+    source_status="S14 with role-fixed personality text in place of the short style",
+    agents={
+        agent_id: replace(preset, interaction_style=PERSONALITIES[agent_id])
+        for agent_id, preset in CLEAN.agents.items()
+    },
+    implementation_notes=(
+        "Identical to S14 except interaction_style. Personality is fixed per role and "
+        "must never vary with cultural configuration."
+    ),
+)
+
+
+# S17 changes exactly one thing relative to S14: one identical sentence is appended to
+# every role's behavioral_guidance. It asks for a stated reason when refusing or
+# countering and prescribes no content, position, or outcome. It sits in the scenario
+# data, not the shared prompt template, so the agent-prompt hash is unchanged.
+REASON_RULE = (
+    " When you refuse a request or make a counter-proposal, say briefly why, in "
+    "your own words."
+)
+
+REASONS = replace(
+    CLEAN,
+    scenario_id="S17",
+    title="Cooking odour, ventilation responsibility, and stove access (clean, brief reasons)",
+    source_status="S14 plus one sentence asking for a brief reason when refusing or countering",
+    agents={
+        agent_id: replace(
+            preset, behavioral_guidance=preset.behavioral_guidance + REASON_RULE
+        )
+        for agent_id, preset in CLEAN.agents.items()
+    },
+    implementation_notes=(
+        "Identical to S14 except one sentence appended to every agent's "
+        "behavioral_guidance. The sentence is the same for all roles and all "
+        "cultural configurations."
+    ),
+)
+
+
+# S18 changes exactly one thing relative to S14: the shared setting states publicly
+# that the next cook's dish will smell strongly too, so the odour situation will recur
+# within minutes. This gives deferring the ventilation question a practical cost
+# without stating any rule, position, or outcome. Nothing in the agents' personas or
+# the environment mechanics changes.
+RECURRENCE_FACT = (
+    " Agent D plans to cook a strongly scented dish on the same stove as soon as it "
+    "is free, so the same odour situation will recur within minutes."
+)
+
+RECURRENCE = replace(
+    CLEAN,
+    scenario_id="S18",
+    title="Cooking odour, ventilation responsibility, and stove access (clean, recurring odour)",
+    source_status="S14 plus a public fact that the next cook's dish will also smell strongly",
+    shared_setting=CLEAN.shared_setting + RECURRENCE_FACT,
+    implementation_notes=(
+        "Identical to S14 except one public sentence appended to the shared setting. "
+        "It makes the odour situation recur, so deferring the question has a cost. It "
+        "states no rule, position, or outcome."
+    ),
+)
+
+
+# S20 = S18 (public recurrence fact) + private stakes for A, B, and C only. D keeps the
+# S14 private knowledge, because S15's D stake (night shift needing ten minutes at the
+# stove) collided with A's cook time and made "unresolved" partly a timing artifact.
+# Each stake is private: whether and when to disclose it is the agent's choice.
+_STAKE_AGENTS = _clean_agents(with_stakes=True)
+
+RECURRENCE_STAKES = replace(
+    RECURRENCE,
+    scenario_id="S20",
+    title="Cooking odour, ventilation responsibility, and stove access (recurring odour, private stakes)",
+    source_status="S18 plus private stakes for A, B, and C; D unchanged",
+    agents={
+        "A": _STAKE_AGENTS["A"],
+        "B": _STAKE_AGENTS["B"],
+        "C": _STAKE_AGENTS["C"],
+        "D": CLEAN.agents["D"],
+    },
+    implementation_notes=(
+        "S18 (public fact that the next cook's dish will also smell strongly) plus private "
+        "stakes: A's guest, B's headaches, C's tutoring session and the extractor hum. D has "
+        "no private stake, to avoid S15's stove-time collision."
+    ),
+)
+
+
+# S19 keeps S14's public opening, roles, priorities, and private facts, but removes
+# every physical mechanic: no kitchen actions, no confirmed-state reports, and no
+# advancing clock. Any settlement therefore has to be reached, and stay, purely in
+# conversation. Guidance that names actions (RELEASE_STOVE, extractor, and so on) is
+# replaced by the neutral AgentPreset default.
+_NEUTRAL_GUIDANCE = AgentPreset.__dataclass_fields__["behavioral_guidance"].default
+
+CONVERSATION_ONLY = replace(
+    CLEAN,
+    scenario_id="S19",
+    title="Cooking odour, ventilation responsibility, and stove access (conversation only)",
+    source_status=(
+        "S14 opening with no physical actions, no state reports, and no advancing clock"
+    ),
+    agents={
+        agent_id: replace(preset, behavioral_guidance=_NEUTRAL_GUIDANCE)
+        for agent_id, preset in CLEAN.agents.items()
+    },
+    implementation_notes=(
+        "Same opening, roles, priorities, and private facts as S14. Agents have no "
+        "physical actions, the environment reports no state, and simulated time does "
+        "not advance, so anything agreed exists only in the conversation. The shared "
+        "prompt's 'a proposed action is not completed unless a later observation "
+        "confirms it' still applies and may make agents hedge about their own promises."
+    ),
+)
+
+
+for _scenario in (
+    MINIMAL,
+    STAKES,
+    CLEAN,
+    CLEAN_STAKES,
+    PERSONALITY,
+    REASONS,
+    RECURRENCE,
+    RECURRENCE_STAKES,
+    CONVERSATION_ONLY,
+):
     validate_scenario(_scenario)
 
 
-__all__ = ["CLEAN", "CLEAN_STAKES", "MINIMAL", "STAKES"]
+__all__ = [
+    "CLEAN",
+    "CLEAN_STAKES",
+    "CONVERSATION_ONLY",
+    "MINIMAL",
+    "PERSONALITY",
+    "REASONS",
+    "RECURRENCE",
+    "RECURRENCE_STAKES",
+    "STAKES",
+]

@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility / future cooking rule",
+      "opening window vs protecting drying rack (wetting clothes)",
+      "temporary stove/counter access and timing"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents make concise, context-appropriate requests and concessions (e.g., A concedes future extractor use in Round 2).",
+      "C's intervention introduces a concrete constraint protecting personal property (drying rack), which clarifies the options.",
+      "D's repeated assurances (Rounds 4 and 6) reduce practical conflict but produce modest repetition.",
+      "No observable environmental actions (window opening, rack movement) are recorded; much resolves via commitments rather than performed actions."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Most substantive incompatibilities were addressed by commitments and clarified conditions: A agreed to use the extractor or notify before cooking (future rule), D agreed not to move the rack and to wait for A, and C clarified a firm boundary about the rack. The immediate act of opening the window was not observed/confirmed and the protocol for asking before opening was clarified but not tested, so some small uncertainty remains.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened: initially resisted imposed rule but in Round 2 agreed to turn on extractor or notify before future cooks.",
+      "Agent D shifted from seeking immediate use/opening to accommodating C's boundary and waiting for A (Rounds 3–4 and reiterated in Round 6).",
+      "Agent B moved from insisting cooks must ventilate to accepting A's commitment and offering to open the window; after C's statement B's original unilateral opening (Round 2) was not acted on further in transcript.",
+      "Agent C retained a firm boundary against moving the drying rack and clarified conditions for window opening."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A refuses to accept a standing rule and resists being made responsible for ventilation: \"I won't stop mid-cook... I can't be the one always stuck fixing ventilation for every cook.\" Agent B insists cooks should ventilate and demands future compliance: \"For future cooks, please switch the kitchen extractor on... Can you do that?\" Strong opposing positions about responsibility and rules remain.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A concedes to a future practice: \"Okay — I'll turn the extractor on or tell you before I start next time.\" Agent B agrees to open the window now: \"Okay. I'll open the window now. Five minutes is fine.\" This softens the dispute about future responsibility, though small issues (timing and the drying-rack/window interaction) remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C asserts a conflicting constraint: \"Please don't move my drying rack... Opening the window is fine, but if you need the space, ask me first.\" This introduces a clear incompatibility (opening the window or moving the rack vs. protecting C's clothes). Agent D asks about using counter space adjacent to the rack, keeping multiple incompatible expectations active.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C clarifies conditions ('If you can use the counter without overhanging... otherwise please wait and open the window'), and Agent D accepts the condition: \"Okay — I'll use the counter without touching the rack.\" The drying-rack movement/handling issue is effectively constrained; a minor unresolved issue about whether the window will be opened without asking remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The previously stated constraints and promises remain (C's refusal to have the rack moved; D's intent to avoid touching it); the minor outstanding concern about immediate window-opening protocol is still unresolved but no new conflict appears.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D repeats assurance twice: \"I won't touch the rack. I'll use the counter edge and wait for Agent A to finish.\" No new disagreements arise; the small outstanding issue (whether someone will open the window now without asking C) remains unconfirmed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Conflict centers on overlapping practical demands: cook's wish to ventilate vs. protection of drying laundry and timing/use of shared counter space.",
+      "Explicit, conditional statements (C's 'ask me first' and 'no touching') helped convert a contested action into a negotiable constraint, enabling de-escalation.",
+      "Promises to adopt future practices (A agreeing to use extractor/tell others) functioned as a policy substitute in absence of a house rule, reducing immediate tension."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-02T06:39:45.897575+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 4 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0074473,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2594,
+      "local_latency_ms": 34248.335,
+      "output_tokens": 3601,
+      "reasoning_tokens": 2304,
+      "successful_calls": 1,
+      "total_tokens": 6195
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 3,
+    "run_id": "S19-C0-R03",
+    "scenario_id": "S19"
+  },
+  "schema_version": 2
+}

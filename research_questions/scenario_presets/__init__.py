@@ -16,7 +16,17 @@ from .s07_presets import SCENARIO as S07
 from .s08_presets import SCENARIO as S08
 from .s09_presets import SCENARIO as S09
 from .s10_presets import SCENARIO as S10
-from .s02_variants import CLEAN as S14, CLEAN_STAKES as S15, MINIMAL as S12, STAKES as S13
+from .s02_variants import (
+    CLEAN as S14,
+    CLEAN_STAKES as S15,
+    CONVERSATION_ONLY as S19,
+    MINIMAL as S12,
+    PERSONALITY as S16,
+    REASONS as S17,
+    RECURRENCE as S18,
+    RECURRENCE_STAKES as S20,
+    STAKES as S13,
+)
 
 
 SCENARIOS = {
@@ -26,12 +36,12 @@ SCENARIOS = {
 
 # Calibration-only ablations. They are runnable by id but deliberately excluded
 # from SCENARIOS so full-pilot and expanded presets keep their S01-S10 scope.
-EXPERIMENTAL_SCENARIOS = {scenario.scenario_id: scenario for scenario in (S12, S13, S14, S15)}
+EXPERIMENTAL_SCENARIOS = {scenario.scenario_id: scenario for scenario in (S12, S13, S14, S15, S16, S17, S18, S19, S20)}
 RUNNABLE_SCENARIOS = {**SCENARIOS, **EXPERIMENTAL_SCENARIOS}
 
 
 def get_scenario(scenario_id: str):
-    """Return one scenario by its S01-S10 (or experimental S12-S13) identifier."""
+    """Return one scenario by its S01-S10 (or experimental S12-S20) identifier."""
 
     try:
         return RUNNABLE_SCENARIOS[scenario_id.upper()]

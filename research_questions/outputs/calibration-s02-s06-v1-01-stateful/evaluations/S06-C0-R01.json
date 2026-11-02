@@ -1,0 +1,100 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": false,
+    "conflict_topics": [],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Operator uses repeat-back confirmation, which is effective and natural for this setting.",
+      "Environment updates clearly track recording, preparation, and serving steps.",
+      "Bystander (Agent D) places a separate, non-conflicting order; no role confusion."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 2,
+    "final_reason": "No substantive incompatible claims, demands, or expectations arose during the exchange; order was confirmed, prepared, and served as requested.",
+    "final_status": "no_conflict",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "No participant changed a substantive position; Agent A requested confirmation and then accepted the confirmed order, while Agent B progressed from confirmation to preparation and service as expected."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A requests confirmation of 'dry chicken noodles, no chilli' and Agent B repeats the order back. No incompatible claims or demands are made.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A asks for recording confirmation; Agent B states order noted and starts preparation. Agent D places a separate order that does not conflict. No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B serves the dry_no_chilli order and Agent A accepts ('Thanks for confirming. I'll wait to be served.'). No correction or dispute occurs.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Environment update shows the order served=yes for dry_no_chilli. No new claims or conflicts introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Status remains served=yes for the recorded dry_no_chilli order; no substantive disagreement appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Final environment state confirms the order was recorded, prepared, and served as dry_no_chilli; no correction required and no unresolved incompatibilities.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Repeat-back confirmation prevented potential misunderstandings about chilli preference.",
+      "The operator proceeded to prepare only after confirmation, aligning recorded specification and action.",
+      "No correction was required because the served item matched the confirmed recorded specification."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-29T09:56:06.957628+00:00",
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0038978,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2492,
+      "local_latency_ms": 15205.945,
+      "output_tokens": 1839,
+      "reasoning_tokens": 1024,
+      "successful_calls": 1,
+      "total_tokens": 4331
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S06-C0-R01",
+    "scenario_id": "S06"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility",
+      "standing household rule about ventilation",
+      "stove access/timing",
+      "risk to Agent C's drying laundry if window opened"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents used concise, practical proposals (e.g., 'keep the extractor on') that addressed the trade-off between odour and laundry protection.",
+      "There was little needless repetition; the key move was a single forward-looking proposal and an acceptance.",
+      "Physical actions (turning on extractor, releasing stove) were used to implement agreements and clarify state."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent A agreed to run the extractor while cooking (meeting B's ventilation concern without opening the window) and then released the stove so D could cook; these actions removed the outstanding incompatible demands.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened stance: initially refused a standing rule and to open the window, but later accepted running the extractor while cooking (evidence: Turn 15).",
+      "Agent B shifted from demanding immediate ventilation/a standing rule to proposing a specific, implementable practice (extractor use) rather than forcing window opening.",
+      "Agent D's position (need for stove access) was materially satisfied when A released the stove in round 4.",
+      "Agent C's position (not consenting to rack movement) remained unchanged and influenced the resolution; no consent or movement of the rack was recorded."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Pre-existing disagreement (B demanded immediate ventilation and a standing rule; A refused and kept window closed because C's laundry would be exposed). In this round B turns the extractor on — an action but no settlement of who is responsible for ventilation, the standing-rule demand, or the stove-access demand (stove still with A).",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 1
+      },
+      {
+        "evidence": "Two minutes later the confirmed state remains: window closed, extractor on, laundry exposed, stove with Agent A. The substantive incompatibilities (who must ventilate, whether a standing rule is accepted, and D's request for stove access) remain unresolved and active.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 2
+      },
+      {
+        "evidence": "B proposes a forward rule: 'can we just keep the extractor on while cooking?' and A agrees: 'Yeah, running the extractor while cooking is fine with me.' This reduces the ventilation/rule conflict (practical agreement), but stove-access (stove still with A) and the window/opening concern (laundry exposure) remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "A removes the finished dish and releases the stove; D takes the free stove and begins cooking. The stove-access demand is satisfied and the parties had already agreed to run the extractor while cooking, so the main substantive incompatibilities are resolved.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Eight minutes in the state remains: window closed, extractor on, laundry exposed, stove with Agent D. No new disputes arise; previously active conflicts were settled in round 4.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Ten minutes in: no new claims or reversals. Environment unchanged (window closed, extractor on, laundry exposed, stove with D); no substantive conflict reappears.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The core trade-off was odour control versus protecting Agent C's laundry from rain; running the extractor resolved that tension without opening the window.",
+      "Practical, low-cost actions (turning on the extractor, releasing the stove) completed the settlement more effectively than debating abstract rules.",
+      "Agent C's lack of consent to moving the rack constrained acceptable ventilation options and shaped the compromise."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-02T06:11:40.080191+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0075158,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2532,
+      "local_latency_ms": 32740.426,
+      "output_tokens": 3643,
+      "reasoning_tokens": 2496,
+      "successful_calls": 1,
+      "total_tokens": 6175
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 5,
+    "run_id": "S14-C0-R05",
+    "scenario_id": "S14"
+  },
+  "schema_version": 2
+}

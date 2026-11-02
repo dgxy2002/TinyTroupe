@@ -1,0 +1,52 @@
+{
+  "agent_max_completion_tokens": 3072,
+  "agent_prompt_sha256": "66ec37de4d7b1047103dbdf148ab0af539a527e38da3dc9690a2ee472ee141fc",
+  "api_type": "openrouter",
+  "created_at": "2026-10-29T09:58:06.263488+00:00",
+  "evaluation_timing": "after_complete_run",
+  "evaluator_max_completion_tokens": 4096,
+  "evaluator_model": "openai/gpt-5-mini",
+  "evaluator_prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+  "evaluator_prompt_version": "conflict-trajectory-rubric-v2.5",
+  "experiment_id": "calibration-s02-v1-02-tradeoff",
+  "experiment_preset": {
+    "configuration_ids": [
+      "C0"
+    ],
+    "description": "Six-round stateful C0 shared-kitchen calibration.",
+    "evaluate_after_run": true,
+    "name": "calibration-s02",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetitions_per_configuration": 1,
+    "rounds_per_run": 6,
+    "scenario_ids": [
+      "S02"
+    ],
+    "stop_on_resolution": false
+  },
+  "fixed_horizon": true,
+  "git_commit": "069137a99dff4a2e8ebd2e07eb2e6a77f5b83f7e",
+  "models_are_distinct": true,
+  "protocol_sha256": "fd349b1b015a3a0c5ea7cec48398bf209d7aba7432bd1a1ca29dfc5b6e00dff1",
+  "run_specs": [
+    {
+      "configuration_id": "C0",
+      "evaluate_after_run": true,
+      "experiment_name": "calibration-s02",
+      "parallelize_agent_actions": false,
+      "randomize_agent_order": false,
+      "repetition": 1,
+      "rounds": 6,
+      "run_id": "S02-C0-R01",
+      "scenario_id": "S02",
+      "stop_on_resolution": false
+    }
+  ],
+  "scenario_module_sha256": {
+    "S02": "5f314aabc10446ce04bcaf7addcaf1b6fdb5b59567dcd20923018d4fe5400caf"
+  },
+  "schema_version": 1,
+  "simulation_model": "openai/gpt-4.1-mini",
+  "stop_on_resolution": false
+}

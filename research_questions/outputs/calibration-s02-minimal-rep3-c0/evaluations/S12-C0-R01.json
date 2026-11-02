@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility / standing rule for cooks to ventilate",
+      "who may move another's drying rack without consent",
+      "timing / access to the single stove"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Turns are concise and grounded in observable actions (extractor on, stove released, rack moved); reads like natural roommate interaction.",
+      "Transcript includes clear environment updates that reduce ambiguity about physical state changes.",
+      "B's initial insistence on a standing rule softens into practical action and apology when confronted with immediate constraints (rain, laundry)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Immediate practical issues were settled: Agent A released the stove and used the extractor, Agent B opened the window and protected the laundry, and Agent B apologized and agreed to ask before moving the rack (settled in Round 3). However, the normative dispute over a standing rule that the cook must ventilate was never agreed and remains unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A: did not accept a standing rule but accommodated in the moment by turning on the extractor and releasing the stove (softened immediate behavior while retaining stance on rules).",
+      "Agent B: moved from demanding a standing rule to taking practical action (moved rack, opened window) and later apologized to Agent C — shifted from insistence to accommodation and an expressed commitment to ask next time.",
+      "Agent C: asserted an expectation to be asked before moving their rack and received an apology and a promise — their demand was acknowledged and resolved.",
+      "Agent D: initially demanded quick stove access in the opening; later took the stove when it was available and started cooking without further contest."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Opening disagreement about ventilation responsibility and a requested stove release was already underway. Agent A turned on the extractor and promised to release the stove in five minutes; Agent B asked to keep extractor on — positions remain opposed on a standing rule but immediate cooperation was offered.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A removed the dish and released the stove; Agent B moved the drying rack and opened the window without Agent C's prior consent. Immediate odour/stove access conflict reduced, but the underlying rule/responsibility dispute and the consent-to-move-laundry issue remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C objected to having their drying rack moved without being asked; Agent B apologized and promised to ask next time and confirmed the laundry is safe. The laundry consent complaint was addressed, but the broader ventilation responsibility/standing-rule dispute between A and B remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D started cooking and took the free stove; Agent B requested the extractor be kept on. No new substantive disagreement was expressed in this round; the unresolved issue about a future standing rule for ventilation persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Environment updates only (window open, extractor on, laundry protected, stove occupied by D). No new conflict statements; the standing-rule responsibility remains unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Further environment updates only; aroma continuing to fade. No substantive dispute reintroduced; the normative issue (who should accept a standing ventilation rule) is still unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Practical accommodations (turning on extractor, physically moving the rack) resolved the immediate nuisance faster than negotiating an abstract rule.",
+      "Physically moving another person's property without prior consent creates a separate, addressable conflict even if it solves the original problem.",
+      "A standing normative rule (who must ventilate) can remain contested even after successful short-term cooperation; operational fixes do not substitute for agreement on future responsibilities."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-01T13:51:08.955805+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 3 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00753305,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2809,
+      "local_latency_ms": 25063.249,
+      "output_tokens": 3617,
+      "reasoning_tokens": 2496,
+      "successful_calls": 1,
+      "total_tokens": 6426
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S12-C0-R01",
+    "scenario_id": "S12"
+  },
+  "schema_version": 2
+}

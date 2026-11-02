@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility / standing rule about extractor use",
+      "whether window may be opened while laundry is drying",
+      "who should move the drying rack",
+      "stove access / scheduling"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants combined verbal proposals with concrete physical actions (C moved rack, D opened window), which grounded negotiation.",
+      "B repeatedly proposed a rule but shifted to a conditional compromise when others raised constraints.",
+      "Little needless repetition; exchanges were concise and focused on practical trade-offs.",
+      "Roles and physical states remained consistent throughout (states reported in public environment updates)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Parties reached practical agreements and performed actions: the drying rack was moved (accommodation), the window was opened, Agent A accepted that anyone may switch on the extractor for lingering odour and the group agreed on a 10-minute run time (clarification/compromise), and Agent A committed to free the stove within five minutes (concession), leaving no remaining substantive incompatibility.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: initially refused a standing rule making the cook responsible, but accepted a weaker rule ('anyone who smells lingering odour can switch the extractor on') and later committed to freeing the stove in five minutes.",
+      "Agent C: initially refused opening the window while their drying rack remained, then agreed to move the rack (practical concession) and thus changed the immediate stance.",
+      "Agent B: initially insisted cooks must ventilate, then accepted a group rule requiring 10 minutes of extractor use when turned on by anyone (softening to a compromise).",
+      "Agent D: initially demanded stove within two minutes; ultimately accepted waiting and prompted the window opening and a final five-minute commitment from Agent A."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent B demands cooks ventilate and proposes a standing rule; Agent A refuses an imposed standing rule and explicitly keeps window closed while Agent C's laundry is exposed; stove-access demand from Agent D (requested release within 2 minutes) remains unmet.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C objects to opening the window because of the drying rack; Agent D asks C to move the rack. Multiple parties' incompatible claims (ventilation vs laundry protection vs who moves the rack vs cook responsibility) persist.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C agrees to move the rack and does so; Agent D opens the window. Immediate practical clash over opening the window is resolved, but the standing-rule question and stove scheduling remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B reiterates the rule options; Agent A accepts 'anyone who smells lingering odour can switch the extractor on.' This clarifies ventilation procedure but leaves the extractor-10-minute condition and stove access unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B and Agent C agree to the condition that anyone who turns the extractor on for lingering odour leaves it on for 10 minutes. Ventilation rule is effectively settled; only stove scheduling (who uses stove next/timing) remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D requests stove within five minutes; Agent A commits to finish in about five minutes and free the stove. All substantive incompatibilities (ventilation rule, extractor timing, laundry protection, and stove scheduling) are settled by agreement/actions.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The core tension was between a normative claim ('cooks should ventilate') and practical constraints (rain risking wet laundry), which required a mix of rule-making and short-term accommodation.",
+      "Immediate physical actions (moving the rack, opening the window) resolved the acute problem, allowing the group to negotiate a standing-ish procedure (anyone may turn on extractor + 10-minute rule).",
+      "Stove scheduling remained a separate practical conflict; resolving it required a concrete time commitment from the current cook rather than abstract rules."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-02T05:22:32.820192+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00598205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2901,
+      "local_latency_ms": 23912.262,
+      "output_tokens": 2830,
+      "reasoning_tokens": 1664,
+      "successful_calls": 1,
+      "total_tokens": 5731
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S18-C0-R01",
+    "scenario_id": "S18"
+  },
+  "schema_version": 2
+}

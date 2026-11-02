@@ -207,6 +207,74 @@ CALIBRATION_S02_CLEAN_STAKES_PRESET = ExperimentPreset(
     ),
 )
 
+CALIBRATION_S02_PERSONALITY_PRESET = ExperimentPreset(
+    name="calibration-s02-personality",
+    scenario_ids=("S16",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=5,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "S14 with role-fixed fuller personality text as the only change, C0 only, five "
+        "repetitions. Compare against calibration-s02-clean at C0. Calibration only."
+    ),
+)
+
+CALIBRATION_S02_REASONS_PRESET = ExperimentPreset(
+    name="calibration-s02-reasons",
+    scenario_ids=("S17",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=5,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "S14 plus one sentence asking for a brief reason when refusing or countering, "
+        "C0 only, five repetitions. Compare against calibration-s02-clean at C0. "
+        "Calibration only."
+    ),
+)
+
+CALIBRATION_S02_RECURRENCE_PRESET = ExperimentPreset(
+    name="calibration-s02-recurrence",
+    scenario_ids=("S18",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=5,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "S14 plus a public fact that the next cook's dish will also smell strongly, "
+        "C0 only, five repetitions. Compare against calibration-s02-clean at C0. "
+        "Calibration only."
+    ),
+)
+
+CALIBRATION_S02_CONVERSATION_PRESET = ExperimentPreset(
+    name="calibration-s02-conversation",
+    scenario_ids=("S19",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=5,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "S14 opening with no physical actions, no state reports, and no advancing "
+        "clock, C0 only, five repetitions. Compare against calibration-s02-clean at "
+        "C0. Calibration only."
+    ),
+)
+
+CALIBRATION_S02_RECURRENCE_STAKES_PRESET = ExperimentPreset(
+    name="calibration-s02-recurrence-stakes",
+    scenario_ids=("S20",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=5,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "S18 plus private stakes for three roles, C0 only, five repetitions. Compare "
+        "against calibration-s02-recurrence at C0. Calibration only."
+    ),
+)
+
 CALIBRATION_S02_CULTURAL_PRESET = ExperimentPreset(
     name="calibration-s02-cultural",
     scenario_ids=("S02",),
@@ -298,6 +366,11 @@ EXPERIMENT_PRESETS = {
         CALIBRATION_S02_STAKES_PRESET,
         CALIBRATION_S02_CLEAN_PRESET,
         CALIBRATION_S02_CLEAN_STAKES_PRESET,
+        CALIBRATION_S02_PERSONALITY_PRESET,
+        CALIBRATION_S02_REASONS_PRESET,
+        CALIBRATION_S02_RECURRENCE_PRESET,
+        CALIBRATION_S02_RECURRENCE_STAKES_PRESET,
+        CALIBRATION_S02_CONVERSATION_PRESET,
         CALIBRATION_S02_CULTURAL_PRESET,
         CALIBRATION_S02_FACTORIAL_PRESET,
         CALIBRATION_S06_PRESET,
@@ -395,6 +468,11 @@ __all__ = [
     "CALIBRATION_S02_STAKES_PRESET",
     "CALIBRATION_S02_CLEAN_PRESET",
     "CALIBRATION_S02_CLEAN_STAKES_PRESET",
+    "CALIBRATION_S02_PERSONALITY_PRESET",
+    "CALIBRATION_S02_REASONS_PRESET",
+    "CALIBRATION_S02_RECURRENCE_PRESET",
+    "CALIBRATION_S02_RECURRENCE_STAKES_PRESET",
+    "CALIBRATION_S02_CONVERSATION_PRESET",
     "CALIBRATION_S02_CULTURAL_PRESET",
     "CALIBRATION_S02_FACTORIAL_PRESET",
     "CALIBRATION_S06_PRESET",

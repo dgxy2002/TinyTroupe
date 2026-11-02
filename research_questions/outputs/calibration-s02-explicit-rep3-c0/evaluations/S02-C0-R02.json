@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility / standing rule for cooks",
+      "whether anyone may move another's laundry to open window",
+      "stove access timing"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents give concrete, situation-specific reasons (rain risk to laundry, extractor as partial mitigation).",
+      "Agent B repeats the proposed rule to different cook (Turn 8), modestly redundant but clarifying.",
+      "No role confusion; environment updates are consistent and helpful."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The main policy dispute over who is responsible for ventilation was clarified and largely agreed (cooks run extractor and open window when safe, Round 2). Stove access was resolved when Agent A released the stove. A remaining practical incompatibility — whether the window may be opened when Agent C's drying rack is in place and who will move it in rain — was not definitively settled.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened position on the standing rule: initially refused to accept a rule during the incident (Round 1) but then agreed to a rule that cooks run extractor and open window when safe (Round 2).",
+      "Agent B maintained the initial preference for cook responsibility but clarified they would not ask others to move laundry (Turn 2), narrowing the claim.",
+      "Agent C maintained opposition to having their drying rack moved without consent but offered to move it once if needed (Turn 4).",
+      "Agent D did not express a position change; proceeded to cook after the rule was reiterated (Round 3)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "clarification",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B demanded a standing rule that cooks ventilate; Agent A refused to accept a rule during the incident and refused to move others' laundry (Turn 1). Agent A did, however, turn on the extractor for ten minutes (Turn 1), reducing immediate tension but leaving the rule and laundry responsibilities unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A accepted running the extractor and agreed to a rule that cooks run the extractor and open the window when safe, but reiterated won't move others' laundry (Turn 3). Agent C said they won't have their rack moved without asking and offered to move it once if needed but preferred extractor while it's raining (Turn 4). This largely resolves the ventilation-responsibility dispute but leaves a minor unresolved logistic about opening the window when laundry is present.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B reiterated the agreed-on ventilation expectation to Agent D and Agent D began cooking (Turn 8 and stove taken). No new substantive disagreement was expressed during the round; the minor unresolved issue about window vs. drying rack remains unaddressed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "No new statements; environment status unchanged (window closed; extractor on; laundry exposed; stove with Agent D). The small unresolved practical conflict about opening the window when laundry is present persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "No new turns; conditions unchanged. The previously reduced-but-still-present disagreement about handling the drying rack if the window is to be opened remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "No new dialogue; extractor still on, window closed, laundry exposed. The minor unresolved practical incompatibility (window vs. drying rack in rain) persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Participants reached agreement on a normative rule (cooks should ventilate when safe) while leaving local operational details (what is 'safe' when laundry is present) unspecified.",
+      "Immediate accommodation (Agent A running extractor and releasing stove) reduced acute conflict even while normative disagreement persisted.",
+      "Laundry near the window functions as a conditional veto: the drying occupant prefers extractor while raining and is only willing to move the rack once if asked."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-01T13:56:17.072161+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 2 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0075768,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2816,
+      "local_latency_ms": 29818.526,
+      "output_tokens": 3638,
+      "reasoning_tokens": 2496,
+      "successful_calls": 1,
+      "total_tokens": 6454
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 2,
+    "run_id": "S02-C0-R02",
+    "scenario_id": "S02"
+  },
+  "schema_version": 2
+}

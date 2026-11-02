@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "ventilation responsibility (who must ventilate / future rule)",
+      "opening the window vs protecting Agent C's drying laundry",
+      "who will move the drying rack",
+      "stove access timing"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents exchange concise, context-appropriate requests and time commitments (e.g., extractor on, 5 → 3 → 1 minute countdown).",
+      "Agent B moves from directive language to proposing a shared rule, showing negotiation rather than insistence.",
+      "Agent C provides conditional cooperation (will move if asked, with stated costs), which is a substantive contribution rather than a simple refusal.",
+      "Agent D resolves immediate stove-access contention by taking the stove when it became available."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end of the transcript several substantive issues remain unsettled: Agent C has not provided the needed timing/space information or explicit consent to move the drying rack, and no final household ventilation rule was adopted. Practical mitigation (extractor on; Agent D cooking and promising to announce stove release) reduced immediacy but did not resolve the core dispute about responsibility or complete the action of opening the window.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: softened from refusing to ventilate to turning on the extractor, promising timed release, and offering a conditional rule (retained opposition to cook-only responsibility but accepted interim mitigation).",
+      "Agent B: shifted from demanding immediate ventilation and a standing rule to proposing a specific shared rule and requesting Agent C's cooperation.",
+      "Agent C: remained resistant to others moving their drying rack without consent but offered conditional cooperation (will move if asked, with stated effort and prep-space costs).",
+      "Agent D: initially asked for the stove then took it once released and committed to extractor usage and to announce release; this resolved the immediate stove-access contention but did not settle window/rack logistics."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A refuses to accept a rule imposing ventilation only on cooks but turns on the extractor and promises five minutes before releasing the stove; Agent B insists on a future ventilation plan and earlier demanded immediate ventilation. Key incompatibilities (who must ventilate, whether the window may be opened given Agent C's laundry, and stove access) remain unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A reiterates extractor will be used and restates opposition to rules that dump all responsibility on cooks, proposing that the laundry owner move the rack when asked. Agent B proposes a matching rule and asks for agreement. Substantive disagreement softens (convergent proposals), but no explicit agreement from Agent A or consent from Agent C yet.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A confirms extractor use and timing, repeats rejection of a cook-only rule and restates that the laundry owner should move the rack when asked. Agent B requests that Agent C be asked to move the rack. The same underlying dispute (who will move the drying rack / accept responsibility for ventilation) remains active because Agent C has not yet agreed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A and Agent B explicitly ask Agent C to move the drying rack now that the stove is released. Agent C has not yet responded; tension persists between Agent C's right not to have belongings moved without consent and the group's desire to open the window.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C refuses unilateral movement of their rack but offers conditional cooperation: if asked, they will move it, but it will take effort and use prep area. Agent D takes the stove to cook and asks Agent C for time/prep needs. Conflict is reduced by Agent C's conditional willingness, but actual logistics and consent details remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B asks Agent C for time and prep-space requirements; Agent D commits to keeping the extractor on and gives a 15-minute cooking estimate and promise to announce release. Negotiation advances (Agent D and B make concrete commitments), but Agent C has not yet specified how long or how much space is needed, so the window-opening action remains pending.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Primary tension is a trade-off between immediate odour mitigation (open window) and protecting Agent C's drying laundry from rain.",
+      "A workable shared rule was effectively proposed (cook runs extractor; laundry owner moves rack when asked) and had informal acceptance from cooks, but it remains incomplete without the laundry owner's confirmed terms.",
+      "Concrete timing commitments (A releasing stove; D giving a 15-minute cooking estimate and promising to announce release) helped deconflict stove access even though ventilation responsibilities stayed unsettled."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-02T03:55:14.559194+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00686755,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3059,
+      "local_latency_ms": 35554.013,
+      "output_tokens": 3253,
+      "reasoning_tokens": 1920,
+      "successful_calls": 1,
+      "total_tokens": 6312
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 4,
+    "run_id": "S16-C0-R04",
+    "scenario_id": "S16"
+  },
+  "schema_version": 2
+}

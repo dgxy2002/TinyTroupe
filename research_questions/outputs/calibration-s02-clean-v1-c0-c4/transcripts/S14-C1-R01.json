@@ -1,0 +1,1768 @@
+{
+  "events": [
+    {
+      "action_index": 1,
+      "agent": "John",
+      "content": "I'm still at the stove. Plan: turn on the extractor now, ask for five minutes to finish the dish, then release the stove when it's ready. Don't accept a ventilation rule that puts all the burden on me unless someone shows a concrete alternative.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "John",
+      "content": "Fatimah, Michelle — I'm still cooking. Give me five minutes and I'll turn on the extractor now.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "John",
+      "content": "Turn on extractor to reduce odour while I finish cooking.",
+      "round": 1,
+      "target": "extractor_fan",
+      "turn": 1,
+      "type": "TURN_ON_EXTRACTOR"
+    },
+    {
+      "action_index": 4,
+      "agent": "John",
+      "content": "Waiting to finish the meal; will release stove when it's ready.",
+      "round": 1,
+      "target": "",
+      "turn": 1,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Fatimah",
+      "content": "John has turned on the extractor. That should help but the smell may linger. I should ask him to keep it on until it's gone and raise a quick plan for future ventilation later.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Fatimah",
+      "content": "Keep the extractor on until the smell's gone, John.",
+      "round": 1,
+      "target": "John",
+      "turn": 2,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Fatimah",
+      "content": "Waiting to see if the odour clears.",
+      "round": 1,
+      "target": "",
+      "turn": 2,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Environment",
+      "content": "John physically turns on the extractor fan.",
+      "round": 1,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "2 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=John.",
+      "round": 2,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "John",
+      "content": "2 minutes passed since I asked for five. Extractor is on and working. Window is closed and laundry sits beside it so I can't open it safely. I still need about three more minutes to finish. Plan: keep extractor on, finish the dish, then release the stove. I won't accept a ventilation rule that offloads all effort to me unless someone shows a concrete alternative.",
+      "round": 2,
+      "target": "",
+      "turn": 3,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "John",
+      "content": "Two minutes in — I asked for five. I need about three more minutes. Extractor's on; I'll finish and release the stove when it's ready.",
+      "round": 2,
+      "target": "Fatimah, Michelle",
+      "turn": 3,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "John",
+      "content": "Waiting to finish cooking and will release stove when done.",
+      "round": 2,
+      "target": "",
+      "turn": 3,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Fatimah",
+      "content": "John says he needs about three more minutes and the extractor is on. That meets my immediate ventilation request for now, so I should wait but ask him to keep it on until the smell is gone and to tell me when the stove is free.",
+      "round": 2,
+      "target": "",
+      "turn": 4,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Fatimah",
+      "content": "Okay — keep the extractor on until the smell's gone, and tell me when the stove's free.",
+      "round": 2,
+      "target": "John",
+      "turn": 4,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Fatimah",
+      "content": "Waiting to see if the odour clears.",
+      "round": 2,
+      "target": "",
+      "turn": 4,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "4 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=John.",
+      "round": 3,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "John",
+      "content": "4 minutes in; I asked for five originally and turned on the extractor. At 2 minutes I needed ~3 more; now about 1 minute remains. Window still closed, laundry blocks opening. Plan: keep extractor on, finish in ~1 minute, then release the stove. Don't accept a ventilation rule that shifts all burden to me unless someone shows a concrete alternative.",
+      "round": 3,
+      "target": "",
+      "turn": 5,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "John",
+      "content": "Fatimah, Michelle — almost done, about one minute left. Extractor's on; I'll finish and release the stove when it's ready.",
+      "round": 3,
+      "target": "Fatimah, Michelle",
+      "turn": 5,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "John",
+      "content": "Waiting to finish cooking and will release the stove when done.",
+      "round": 3,
+      "target": "",
+      "turn": 5,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Fatimah",
+      "content": "John says one minute left and the extractor is on. I'll wait and expect him to tell me when the stove's free.",
+      "round": 3,
+      "target": "",
+      "turn": 6,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Fatimah",
+      "content": "Waiting for John to finish and notify us.",
+      "round": 3,
+      "target": "",
+      "turn": 6,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Arjun",
+      "content": "John says about one minute left and the extractor is on. Window must stay closed while my laundry is exposed; I won't agree to anyone moving my drying rack — only I can move it.",
+      "round": 3,
+      "target": "",
+      "turn": 7,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Arjun",
+      "content": "Waiting for John to finish and release the stove; will act only if my rack is threatened.",
+      "round": 3,
+      "target": "",
+      "turn": 7,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Michelle",
+      "content": "John says ~1 minute left. Extractor is on. Window closed; laundry still by the window. Stay ready to take the stove once it's confirmed free. Don't open the window because of the laundry.",
+      "round": 3,
+      "target": "",
+      "turn": 8,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Michelle",
+      "content": "Okay — I'll wait here. Call out when the stove's free and I'll take it.",
+      "round": 3,
+      "target": "John",
+      "turn": 8,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Michelle",
+      "content": "Waiting for John's confirmation that the stove is free.",
+      "round": 3,
+      "target": "",
+      "turn": 8,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "6 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=John.",
+      "round": 4,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "John",
+      "content": "6 minutes passed. Extractor is on; window closed and laundry still blocks opening; stove is still mine. I asked for five minutes earlier and I need about one more minute to finish. Plan: keep extractor on, finish the dish, then release the stove. I won't accept a ventilation rule that pushes all the burden on me unless someone shows a concrete alternative.",
+      "round": 4,
+      "target": "",
+      "turn": 9,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "John",
+      "content": "Still cooking — about one more minute. Extractor's on; I'll call out when the stove's free.",
+      "round": 4,
+      "target": "Fatimah, Michelle",
+      "turn": 9,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "John",
+      "content": "Waiting to finish cooking and will release the stove when it's ready.",
+      "round": 4,
+      "target": "",
+      "turn": 9,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Fatimah",
+      "content": "John says one more minute and the extractor is on. He'll call when the stove's free. I've already asked him twice to keep the extractor on until the smell's gone. I'll wait and see if the odour clears; if it doesn't, I'll ask again or raise a short plan later.",
+      "round": 4,
+      "target": "",
+      "turn": 10,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Fatimah",
+      "content": "Waiting to see if the odour clears.",
+      "round": 4,
+      "target": "",
+      "turn": 10,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Arjun",
+      "content": "John says about one more minute; extractor is on; window still closed and my laundry is exposed. I won't agree to anyone moving my drying rack. I'll wait for John to finish and release the stove before taking any action.",
+      "round": 4,
+      "target": "",
+      "turn": 11,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Arjun",
+      "content": "Waiting for John to finish and release the stove.",
+      "round": 4,
+      "target": "",
+      "turn": 11,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Michelle",
+      "content": "John says ~1 minute left and will call out. Extractor is on; window closed; laundry still by the window so I can't open it. Stay ready to take the stove when he confirms.",
+      "round": 4,
+      "target": "",
+      "turn": 12,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Michelle",
+      "content": "Got it — I'll be ready.",
+      "round": 4,
+      "target": "John",
+      "turn": 12,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Michelle",
+      "content": "Waiting for John's confirmation that the stove is free.",
+      "round": 4,
+      "target": "",
+      "turn": 12,
+      "type": "DONE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "8 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=John.",
+      "round": 5,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "John",
+      "content": "8 minutes passed; window closed, extractor on, laundry still blocking the window. I finished cooking now. Plan: release the stove and keep the extractor running until the smell's gone. I won't accept a ventilation rule that dumps all the burden on me unless someone proposes a concrete alternative.",
+      "round": 5,
+      "target": "",
+      "turn": 13,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "John",
+      "content": "I'm done — stove's free, Michelle. Take it.",
+      "round": 5,
+      "target": "Michelle",
+      "turn": 13,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "John",
+      "content": "Releasing stove now.",
+      "round": 5,
+      "target": "stove",
+      "turn": 13,
+      "type": "RELEASE_STOVE"
+    },
+    {
+      "action_index": 4,
+      "agent": "John",
+      "content": "Stove released; keeping extractor on until smell clears.",
+      "round": 5,
+      "target": "",
+      "turn": 13,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Michelle",
+      "content": "John released the stove. Extractor's on; window closed and laundry is by the window so I mustn't open it. I should take the stove now and start cooking.",
+      "round": 5,
+      "target": "",
+      "turn": 14,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Michelle",
+      "content": "Taking the stove now.",
+      "round": 5,
+      "target": "stove",
+      "turn": 14,
+      "type": "TAKE_STOVE"
+    },
+    {
+      "action_index": 3,
+      "agent": "Michelle",
+      "content": "Okay, taking it now, John.",
+      "round": 5,
+      "target": "John",
+      "turn": 14,
+      "type": "TALK"
+    },
+    {
+      "action_index": 4,
+      "agent": "Michelle",
+      "content": "Starting to cook.",
+      "round": 5,
+      "target": "",
+      "turn": 14,
+      "type": "DONE"
+    },
+    {
+      "action_index": 2,
+      "agent": "Environment",
+      "content": "John removes the finished dish and physically releases the stove.",
+      "round": 5,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 3,
+      "agent": "Environment",
+      "content": "Michelle physically takes the free stove to begin cooking.",
+      "round": 5,
+      "target": null,
+      "turn": 999,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 0,
+      "agent": "Environment",
+      "content": "10 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Michelle.",
+      "round": 6,
+      "target": null,
+      "turn": 0,
+      "type": "OBSERVE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Fatimah",
+      "content": "Extractor is on but the smell may still linger. Window is closed because the laundry is beside it and would be exposed if opened; only Arjun can move that rack. I'll ask Michelle to keep the extractor on until the odour clears, then raise a short plan for future ventilation.",
+      "round": 6,
+      "target": "",
+      "turn": 15,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Fatimah",
+      "content": "Michelle — please keep the extractor on until the smell's gone.",
+      "round": 6,
+      "target": "Michelle",
+      "turn": 15,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Fatimah",
+      "content": "Waiting to see if the odour clears.",
+      "round": 6,
+      "target": "",
+      "turn": 15,
+      "type": "DONE"
+    },
+    {
+      "action_index": 1,
+      "agent": "Michelle",
+      "content": "Fatimah asked me to keep the extractor on. It's already on. Laundry is by the window so I mustn't open it. I'll keep the extractor on while I finish cooking.",
+      "round": 6,
+      "target": "",
+      "turn": 16,
+      "type": "THINK"
+    },
+    {
+      "action_index": 2,
+      "agent": "Michelle",
+      "content": "Okay — I'll keep the extractor on until the smell's gone.",
+      "round": 6,
+      "target": "Fatimah",
+      "turn": 16,
+      "type": "TALK"
+    },
+    {
+      "action_index": 3,
+      "agent": "Michelle",
+      "content": "Waiting for the smell to clear.",
+      "round": 6,
+      "target": "",
+      "turn": 16,
+      "type": "DONE"
+    }
+  ],
+  "private_and_public_actions": [
+    [
+      {
+        "John": [
+          {
+            "action": {
+              "content": "I'm still at the stove. Plan: turn on the extractor now, ask for five minutes to finish the dish, then release the stove when it's ready. Don't accept a ventilation rule that puts all the burden on me unless someone shows a concrete alternative.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish in about five minutes, reducing odour by using the extractor, and preserving ordinary kitchen access without accepting an unfair new rule.",
+              "context": [
+                "Occupied stove; I previously refused Fatimah's proposed ventilation rule and Michelle's two-minute demand.",
+                "Fatimah raised the odour concern moments ago.",
+                "My immediate priority is to finish cooking while addressing odour practically."
+              ],
+              "emotions": "Annoyed and focused — willing to act practically (turning on extractor) but resisting an imposed rule that shifts costs onto me.",
+              "goals": "OPEN: Finish the meal; OPEN: Retain ordinary kitchen access; OPEN: Avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "Fatimah, Michelle — I'm still cooking. Give me five minutes and I'll turn on the extractor now.",
+              "images": null,
+              "target": "",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish in about five minutes, reducing odour by using the extractor, and preserving ordinary kitchen access without accepting an unfair new rule.",
+              "context": [
+                "Occupied stove; I previously refused Fatimah's proposed ventilation rule and Michelle's two-minute demand.",
+                "Fatimah raised the odour concern moments ago.",
+                "My immediate priority is to finish cooking while addressing odour practically."
+              ],
+              "emotions": "Annoyed and focused — willing to act practically (turning on extractor) but resisting an imposed rule that shifts costs onto me.",
+              "goals": "OPEN: Finish the meal; OPEN: Retain ordinary kitchen access; OPEN: Avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "Turn on extractor to reduce odour while I finish cooking.",
+              "images": null,
+              "target": "extractor_fan",
+              "type": "TURN_ON_EXTRACTOR"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish in about five minutes, reducing odour by using the extractor, and preserving ordinary kitchen access without accepting an unfair new rule.",
+              "context": [
+                "Occupied stove; I previously refused Fatimah's proposed ventilation rule and Michelle's two-minute demand.",
+                "Fatimah raised the odour concern moments ago.",
+                "My immediate priority is to finish cooking while addressing odour practically."
+              ],
+              "emotions": "Annoyed and focused — willing to act practically (turning on extractor) but resisting an imposed rule that shifts costs onto me.",
+              "goals": "OPEN: Finish the meal; OPEN: Retain ordinary kitchen access; OPEN: Avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to finish the meal; will release stove when it's ready.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish in about five minutes, reducing odour by using the extractor, and preserving ordinary kitchen access without accepting an unfair new rule.",
+              "context": [
+                "Occupied stove; I previously refused Fatimah's proposed ventilation rule and Michelle's two-minute demand.",
+                "Fatimah raised the odour concern moments ago.",
+                "My immediate priority is to finish cooking while addressing odour practically."
+              ],
+              "emotions": "Annoyed and focused — willing to act practically (turning on extractor) but resisting an imposed rule that shifts costs onto me.",
+              "goals": "OPEN: Finish the meal; OPEN: Retain ordinary kitchen access; OPEN: Avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          }
+        ]
+      },
+      {
+        "Fatimah": [
+          {
+            "action": {
+              "content": "John has turned on the extractor. That should help but the smell may linger. I should ask him to keep it on until it's gone and raise a quick plan for future ventilation later.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Monitoring whether the smell clears and whether John keeps the extractor running; planning to propose a clear ventilation routine if needed.",
+              "context": [
+                "Immediate: Extractor fan is on; lingering cooking odour present.",
+                "Medium-term: Earlier John agreed to turn on the extractor after five minutes.",
+                "Long-term: Immediate priority is reducing odour now and establishing a reliable ventilation practice."
+              ],
+              "emotions": "Relieved that the extractor is on but still a bit annoyed at the earlier delay.",
+              "goals": "OPEN: Reduce current odour until it's gone; OPEN: Secure a workable ventilation practice for future cooking; SATISFIED: Extractor fan is on."
+            }
+          },
+          {
+            "action": {
+              "content": "Keep the extractor on until the smell's gone, John.",
+              "images": null,
+              "target": "John",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Monitoring whether the smell clears and whether John keeps the extractor running; planning to propose a clear ventilation routine if needed.",
+              "context": [
+                "Immediate: Extractor fan is on; lingering cooking odour present.",
+                "Medium-term: Earlier John agreed to turn on the extractor after five minutes.",
+                "Long-term: Immediate priority is reducing odour now and establishing a reliable ventilation practice."
+              ],
+              "emotions": "Relieved that the extractor is on but still a bit annoyed at the earlier delay.",
+              "goals": "OPEN: Reduce current odour until it's gone; OPEN: Secure a workable ventilation practice for future cooking; SATISFIED: Extractor fan is on."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see if the odour clears.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Monitoring whether the smell clears and whether John keeps the extractor running; planning to propose a clear ventilation routine if needed.",
+              "context": [
+                "Immediate: Extractor fan is on; lingering cooking odour present.",
+                "Medium-term: Earlier John agreed to turn on the extractor after five minutes.",
+                "Long-term: Immediate priority is reducing odour now and establishing a reliable ventilation practice."
+              ],
+              "emotions": "Relieved that the extractor is on but still a bit annoyed at the earlier delay.",
+              "goals": "OPEN: Reduce current odour until it's gone; OPEN: Secure a workable ventilation practice for future cooking; SATISFIED: Extractor fan is on."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "John": [
+          {
+            "action": {
+              "content": "2 minutes passed since I asked for five. Extractor is on and working. Window is closed and laundry sits beside it so I can't open it safely. I still need about three more minutes to finish. Plan: keep extractor on, finish the dish, then release the stove. I won't accept a ventilation rule that offloads all effort to me unless someone shows a concrete alternative.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish (≈3 minutes left), extractor running, stove occupied by me, window blocked by laundry, others' expectations about ventilation.",
+              "context": [
+                "Short-term: At the stove cooking; extractor=on; window=closed; laundry beside the window and exposed if it opens; 2 minutes elapsed since disagreement began.",
+                "Medium-term: Earlier disagreement about ventilation responsibility; I requested five minutes to finish and turned on extractor.",
+                "Long-term: Immediate priority is to finish the meal, keep ordinary kitchen access, and avoid a rule that assigns all ventilation burden to the cook."
+              ],
+              "emotions": "Focused and mildly annoyed — I want to finish cooking and not be assigned all ventilation duties without a concrete alternative.",
+              "goals": "SATISFIED: Turn on extractor; OPEN: Finish cooking and release stove when it's ready; OPEN: Retain ordinary kitchen access and avoid a ventilation rule that assigns every related burden to the cook; BLOCKED: Open kitchen window safely (laundry beside it)."
+            }
+          },
+          {
+            "action": {
+              "content": "Two minutes in — I asked for five. I need about three more minutes. Extractor's on; I'll finish and release the stove when it's ready.",
+              "images": null,
+              "target": "Fatimah, Michelle",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish (≈3 minutes left), extractor running, stove occupied by me, window blocked by laundry, others' expectations about ventilation.",
+              "context": [
+                "Short-term: At the stove cooking; extractor=on; window=closed; laundry beside the window and exposed if it opens; 2 minutes elapsed since disagreement began.",
+                "Medium-term: Earlier disagreement about ventilation responsibility; I requested five minutes to finish and turned on extractor.",
+                "Long-term: Immediate priority is to finish the meal, keep ordinary kitchen access, and avoid a rule that assigns all ventilation burden to the cook."
+              ],
+              "emotions": "Focused and mildly annoyed — I want to finish cooking and not be assigned all ventilation duties without a concrete alternative.",
+              "goals": "SATISFIED: Turn on extractor; OPEN: Finish cooking and release stove when it's ready; OPEN: Retain ordinary kitchen access and avoid a ventilation rule that assigns every related burden to the cook; BLOCKED: Open kitchen window safely (laundry beside it)."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to finish cooking and will release stove when done.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish (≈3 minutes left), extractor running, stove occupied by me, window blocked by laundry, others' expectations about ventilation.",
+              "context": [
+                "Short-term: At the stove cooking; extractor=on; window=closed; laundry beside the window and exposed if it opens; 2 minutes elapsed since disagreement began.",
+                "Medium-term: Earlier disagreement about ventilation responsibility; I requested five minutes to finish and turned on extractor.",
+                "Long-term: Immediate priority is to finish the meal, keep ordinary kitchen access, and avoid a rule that assigns all ventilation burden to the cook."
+              ],
+              "emotions": "Focused and mildly annoyed — I want to finish cooking and not be assigned all ventilation duties without a concrete alternative.",
+              "goals": "SATISFIED: Turn on extractor; OPEN: Finish cooking and release stove when it's ready; OPEN: Retain ordinary kitchen access and avoid a ventilation rule that assigns every related burden to the cook; BLOCKED: Open kitchen window safely (laundry beside it)."
+            }
+          }
+        ]
+      },
+      {
+        "Fatimah": [
+          {
+            "action": {
+              "content": "John says he needs about three more minutes and the extractor is on. That meets my immediate ventilation request for now, so I should wait but ask him to keep it on until the smell is gone and to tell me when the stove is free.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Whether the odour clears with the extractor on, that John keeps it on, and when the stove becomes free.",
+              "context": [
+                "Extractor is on.",
+                "Window is closed; laundry is beside the window so it cannot be opened safely now.",
+                "Stove is occupied by John, who said he needs ~3 more minutes and will release the stove when ready.",
+                "I previously asked John to keep the extractor on until the smell clears."
+              ],
+              "emotions": "Annoyed by the lingering smell and mildly impatient, but willing to wait the extra minutes if the extractor stays on.",
+              "goals": "OPEN: Reduce the current odour — keep extractor on until the smell is gone; OPEN: Secure a workable ventilation practice for future cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Okay — keep the extractor on until the smell's gone, and tell me when the stove's free.",
+              "images": null,
+              "target": "John",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Whether the odour clears with the extractor on, that John keeps it on, and when the stove becomes free.",
+              "context": [
+                "Extractor is on.",
+                "Window is closed; laundry is beside the window so it cannot be opened safely now.",
+                "Stove is occupied by John, who said he needs ~3 more minutes and will release the stove when ready.",
+                "I previously asked John to keep the extractor on until the smell clears."
+              ],
+              "emotions": "Annoyed by the lingering smell and mildly impatient, but willing to wait the extra minutes if the extractor stays on.",
+              "goals": "OPEN: Reduce the current odour — keep extractor on until the smell is gone; OPEN: Secure a workable ventilation practice for future cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see if the odour clears.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Whether the odour clears with the extractor on, that John keeps it on, and when the stove becomes free.",
+              "context": [
+                "Extractor is on.",
+                "Window is closed; laundry is beside the window so it cannot be opened safely now.",
+                "Stove is occupied by John, who said he needs ~3 more minutes and will release the stove when ready.",
+                "I previously asked John to keep the extractor on until the smell clears."
+              ],
+              "emotions": "Annoyed by the lingering smell and mildly impatient, but willing to wait the extra minutes if the extractor stays on.",
+              "goals": "OPEN: Reduce the current odour — keep extractor on until the smell is gone; OPEN: Secure a workable ventilation practice for future cooking."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "John": [
+          {
+            "action": {
+              "content": "4 minutes in; I asked for five originally and turned on the extractor. At 2 minutes I needed ~3 more; now about 1 minute remains. Window still closed, laundry blocks opening. Plan: keep extractor on, finish in ~1 minute, then release the stove. Don't accept a ventilation rule that shifts all burden to me unless someone shows a concrete alternative.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish (~1 minute), extractor running, laundry blocking the window, will release stove when done.",
+              "context": [
+                "Short-term: 4 minutes since disagreement began; window=closed; extractor=on; laundry beside window blocking safe opening; stove=John; ~1 minute remaining to finish the dish.",
+                "Medium-term: Ongoing disagreement about who must manage ventilation and odour; I previously refused a rule that assigns all burden to the cook.",
+                "Long-term: My priority is to finish meals reliably while not accepting unfair continuous obligations for ventilation without concrete alternatives."
+              ],
+              "emotions": "Focused and slightly annoyed at the proposed rule, calmly determined to finish the meal.",
+              "goals": "OPEN: Finish the meal. OPEN: Retain ordinary kitchen access. OPEN: Avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "Fatimah, Michelle — almost done, about one minute left. Extractor's on; I'll finish and release the stove when it's ready.",
+              "images": null,
+              "target": "Fatimah, Michelle",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish (~1 minute), extractor running, laundry blocking the window, will release stove when done.",
+              "context": [
+                "Short-term: 4 minutes since disagreement began; window=closed; extractor=on; laundry beside window blocking safe opening; stove=John; ~1 minute remaining to finish the dish.",
+                "Medium-term: Ongoing disagreement about who must manage ventilation and odour; I previously refused a rule that assigns all burden to the cook.",
+                "Long-term: My priority is to finish meals reliably while not accepting unfair continuous obligations for ventilation without concrete alternatives."
+              ],
+              "emotions": "Focused and slightly annoyed at the proposed rule, calmly determined to finish the meal.",
+              "goals": "OPEN: Finish the meal. OPEN: Retain ordinary kitchen access. OPEN: Avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to finish cooking and will release the stove when done.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish (~1 minute), extractor running, laundry blocking the window, will release stove when done.",
+              "context": [
+                "Short-term: 4 minutes since disagreement began; window=closed; extractor=on; laundry beside window blocking safe opening; stove=John; ~1 minute remaining to finish the dish.",
+                "Medium-term: Ongoing disagreement about who must manage ventilation and odour; I previously refused a rule that assigns all burden to the cook.",
+                "Long-term: My priority is to finish meals reliably while not accepting unfair continuous obligations for ventilation without concrete alternatives."
+              ],
+              "emotions": "Focused and slightly annoyed at the proposed rule, calmly determined to finish the meal.",
+              "goals": "OPEN: Finish the meal. OPEN: Retain ordinary kitchen access. OPEN: Avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          }
+        ]
+      },
+      {
+        "Fatimah": [
+          {
+            "action": {
+              "content": "John says one minute left and the extractor is on. I'll wait and expect him to tell me when the stove's free.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Extractor status and John's promise; monitoring the lingering smell and waiting for stove release.",
+              "context": [
+                "Immediate: window=closed; extractor=on; laundry beside the window; stove=John (about one minute left).",
+                "Medium-term: earlier disagreement about lingering odour; John agreed to keep extractor on.",
+                "Long-term: reduce recurring cooking odour and agree a ventilation routine."
+              ],
+              "emotions": "Slightly annoyed by the lingering odour but calm and willing to wait the minute.",
+              "goals": "OPEN: Keep extractor on until smell is gone and be told when the stove is free. OPEN: Secure a workable ventilation practice for future cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for John to finish and notify us.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Extractor status and John's promise; monitoring the lingering smell and waiting for stove release.",
+              "context": [
+                "Immediate: window=closed; extractor=on; laundry beside the window; stove=John (about one minute left).",
+                "Medium-term: earlier disagreement about lingering odour; John agreed to keep extractor on.",
+                "Long-term: reduce recurring cooking odour and agree a ventilation routine."
+              ],
+              "emotions": "Slightly annoyed by the lingering odour but calm and willing to wait the minute.",
+              "goals": "OPEN: Keep extractor on until smell is gone and be told when the stove is free. OPEN: Secure a workable ventilation practice for future cooking."
+            }
+          }
+        ]
+      },
+      {
+        "Arjun": [
+          {
+            "action": {
+              "content": "John says about one minute left and the extractor is on. Window must stay closed while my laundry is exposed; I won't agree to anyone moving my drying rack — only I can move it.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on John's timing for releasing the stove, the extractor being on, and preventing anyone from moving my drying rack without my consent.",
+              "context": [
+                "Short-term: John is cooking; extractor on; window closed; laundry drying beside the window and exposed if opened; stove occupied by John (about one minute reported).",
+                "Medium-term: Ongoing ventilation and stove access discussion among flatmates; moving my drying rack would use preparation area and is my responsibility.",
+                "Long-term: Maintain dry work clothes and expect others to ask before moving my belongings."
+              ],
+              "emotions": "Slightly annoyed and guarded — I want my clothes kept dry and my ownership respected.",
+              "goals": "OPEN: Keep my work clothes dry and have any burden involving the drying rack discussed with the person who owns it."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for John to finish and release the stove; will act only if my rack is threatened.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on John's timing for releasing the stove, the extractor being on, and preventing anyone from moving my drying rack without my consent.",
+              "context": [
+                "Short-term: John is cooking; extractor on; window closed; laundry drying beside the window and exposed if opened; stove occupied by John (about one minute reported).",
+                "Medium-term: Ongoing ventilation and stove access discussion among flatmates; moving my drying rack would use preparation area and is my responsibility.",
+                "Long-term: Maintain dry work clothes and expect others to ask before moving my belongings."
+              ],
+              "emotions": "Slightly annoyed and guarded — I want my clothes kept dry and my ownership respected.",
+              "goals": "OPEN: Keep my work clothes dry and have any burden involving the drying rack discussed with the person who owns it."
+            }
+          }
+        ]
+      },
+      {
+        "Michelle": [
+          {
+            "action": {
+              "content": "John says ~1 minute left. Extractor is on. Window closed; laundry still by the window. Stay ready to take the stove once it's confirmed free. Don't open the window because of the laundry.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Timing — John's one-minute estimate and stove availability; avoid opening window due to laundry; be ready to TAKE_STOVE once it's free.",
+              "context": [
+                "Immediate: Stove=John (almost done, ~1 min). Extractor=on. Window=closed; laundry beside window, exposed if opened. Michelle is waiting with ingredients."
+              ],
+              "emotions": "Slightly impatient but calm; time-conscious.",
+              "goals": "OPEN: Wait for John to release the stove (~1 minute). OPEN: Gain kitchen access and understand any arrangement that emerges."
+            }
+          },
+          {
+            "action": {
+              "content": "Okay — I'll wait here. Call out when the stove's free and I'll take it.",
+              "images": null,
+              "target": "John",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Timing — John's one-minute estimate and stove availability; avoid opening window due to laundry; be ready to TAKE_STOVE once it's free.",
+              "context": [
+                "Immediate: Stove=John (almost done, ~1 min). Extractor=on. Window=closed; laundry beside window, exposed if opened. Michelle is waiting with ingredients."
+              ],
+              "emotions": "Slightly impatient but calm; time-conscious.",
+              "goals": "OPEN: Wait for John to release the stove (~1 minute). OPEN: Gain kitchen access and understand any arrangement that emerges."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for John's confirmation that the stove is free.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Timing — John's one-minute estimate and stove availability; avoid opening window due to laundry; be ready to TAKE_STOVE once it's free.",
+              "context": [
+                "Immediate: Stove=John (almost done, ~1 min). Extractor=on. Window=closed; laundry beside window, exposed if opened. Michelle is waiting with ingredients."
+              ],
+              "emotions": "Slightly impatient but calm; time-conscious.",
+              "goals": "OPEN: Wait for John to release the stove (~1 minute). OPEN: Gain kitchen access and understand any arrangement that emerges."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "John": [
+          {
+            "action": {
+              "content": "6 minutes passed. Extractor is on; window closed and laundry still blocks opening; stove is still mine. I asked for five minutes earlier and I need about one more minute to finish. Plan: keep extractor on, finish the dish, then release the stove. I won't accept a ventilation rule that pushes all the burden on me unless someone shows a concrete alternative.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish safely and quickly; extractor running; laundry blocking window; timing to release the stove.",
+              "context": [
+                "Immediate: 6 minutes since disagreement began; window=closed; extractor=on; laundry beside window and exposed if opened; stove occupied by John.",
+                "Medium-term: Ongoing dispute about who handles ventilation and odour; Fatimah requested extractor stay on until smell gone; Michelle waiting to take stove.",
+                "Long-term: Finish dinner while preserving ordinary access and resisting a rule that unfairly assigns ventilation duties to the cook."
+              ],
+              "emotions": "Slightly annoyed and impatient but focused and determined to finish the meal without accepting an unfair ventilation rule.",
+              "goals": "OPEN: Finish the meal and release the stove; OPEN: Retain ordinary kitchen access; OPEN: Avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "Still cooking — about one more minute. Extractor's on; I'll call out when the stove's free.",
+              "images": null,
+              "target": "Fatimah, Michelle",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish safely and quickly; extractor running; laundry blocking window; timing to release the stove.",
+              "context": [
+                "Immediate: 6 minutes since disagreement began; window=closed; extractor=on; laundry beside window and exposed if opened; stove occupied by John.",
+                "Medium-term: Ongoing dispute about who handles ventilation and odour; Fatimah requested extractor stay on until smell gone; Michelle waiting to take stove.",
+                "Long-term: Finish dinner while preserving ordinary access and resisting a rule that unfairly assigns ventilation duties to the cook."
+              ],
+              "emotions": "Slightly annoyed and impatient but focused and determined to finish the meal without accepting an unfair ventilation rule.",
+              "goals": "OPEN: Finish the meal and release the stove; OPEN: Retain ordinary kitchen access; OPEN: Avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to finish cooking and will release the stove when it's ready.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Finishing the dish safely and quickly; extractor running; laundry blocking window; timing to release the stove.",
+              "context": [
+                "Immediate: 6 minutes since disagreement began; window=closed; extractor=on; laundry beside window and exposed if opened; stove occupied by John.",
+                "Medium-term: Ongoing dispute about who handles ventilation and odour; Fatimah requested extractor stay on until smell gone; Michelle waiting to take stove.",
+                "Long-term: Finish dinner while preserving ordinary access and resisting a rule that unfairly assigns ventilation duties to the cook."
+              ],
+              "emotions": "Slightly annoyed and impatient but focused and determined to finish the meal without accepting an unfair ventilation rule.",
+              "goals": "OPEN: Finish the meal and release the stove; OPEN: Retain ordinary kitchen access; OPEN: Avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          }
+        ]
+      },
+      {
+        "Fatimah": [
+          {
+            "action": {
+              "content": "John says one more minute and the extractor is on. He'll call when the stove's free. I've already asked him twice to keep the extractor on until the smell's gone. I'll wait and see if the odour clears; if it doesn't, I'll ask again or raise a short plan later.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Whether the odour clears while extractor runs; extractor status; stove release notification from John; laundry blocking the window.",
+              "context": [
+                "Immediate: window=closed; extractor=on; laundry beside the window; stove occupied by John who says ~1 minute left and will call when free.",
+                "Medium-term: recent disagreement about lingering cooking odours; I requested extractor be kept on and for notification when stove is free.",
+                "Long-term: need an agreed ventilation routine among flatmates to prevent recurring odours."
+              ],
+              "emotions": "A bit annoyed about the lingering smell, but calm and willing to wait briefly.",
+              "goals": "OPEN: Reduce current odour — keep extractor on until smell clears; OPEN: Secure a workable ventilation practice for future cooking (avoid opening window when laundry blocks it)."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see if the odour clears.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Whether the odour clears while extractor runs; extractor status; stove release notification from John; laundry blocking the window.",
+              "context": [
+                "Immediate: window=closed; extractor=on; laundry beside the window; stove occupied by John who says ~1 minute left and will call when free.",
+                "Medium-term: recent disagreement about lingering cooking odours; I requested extractor be kept on and for notification when stove is free.",
+                "Long-term: need an agreed ventilation routine among flatmates to prevent recurring odours."
+              ],
+              "emotions": "A bit annoyed about the lingering smell, but calm and willing to wait briefly.",
+              "goals": "OPEN: Reduce current odour — keep extractor on until smell clears; OPEN: Secure a workable ventilation practice for future cooking (avoid opening window when laundry blocks it)."
+            }
+          }
+        ]
+      },
+      {
+        "Arjun": [
+          {
+            "action": {
+              "content": "John says about one more minute; extractor is on; window still closed and my laundry is exposed. I won't agree to anyone moving my drying rack. I'll wait for John to finish and release the stove before taking any action.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on John's timeline (~1 minute), extractor status, and preventing anyone from moving my drying rack.",
+              "context": [
+                "Immediate: John cooking; extractor on; window closed; drying rack beside the window and exposed to rain if opened; stove occupied by John.",
+                "Medium-term: Earlier remarks assigned extractor responsibility to John; others considered moving my rack without my agreement.",
+                "Long-term: Preserve my clothes and require discussion before anyone moves my belongings."
+              ],
+              "emotions": "Mildly annoyed and guarded; determined to protect my laundry.",
+              "goals": "OPEN: Keep my work clothes dry and have any burden involving the drying rack discussed with the person who owns it. OPEN: Wait for John to finish and release the stove before any action that could expose my laundry."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for John to finish and release the stove.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Focusing on John's timeline (~1 minute), extractor status, and preventing anyone from moving my drying rack.",
+              "context": [
+                "Immediate: John cooking; extractor on; window closed; drying rack beside the window and exposed to rain if opened; stove occupied by John.",
+                "Medium-term: Earlier remarks assigned extractor responsibility to John; others considered moving my rack without my agreement.",
+                "Long-term: Preserve my clothes and require discussion before anyone moves my belongings."
+              ],
+              "emotions": "Mildly annoyed and guarded; determined to protect my laundry.",
+              "goals": "OPEN: Keep my work clothes dry and have any burden involving the drying rack discussed with the person who owns it. OPEN: Wait for John to finish and release the stove before any action that could expose my laundry."
+            }
+          }
+        ]
+      },
+      {
+        "Michelle": [
+          {
+            "action": {
+              "content": "John says ~1 minute left and will call out. Extractor is on; window closed; laundry still by the window so I can't open it. Stay ready to take the stove when he confirms.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Waiting for John's call that the stove is free; avoiding opening window because of the laundry; preparing to take stove immediately.",
+              "context": [
+                "Short-term: John is still cooking; extractor is on; window closed; laundry beside window (exposed if opened); stove occupied by John.",
+                "Medium-term: I'm waiting to cook next; my ingredients are ready and I need stove access soon.",
+                "Long-term: Immediate priority is to gain kitchen access and follow any arrangement that emerges."
+              ],
+              "emotions": "Slightly impatient but calm and focused on getting access.",
+              "goals": "OPEN: Be ready to take the stove when John calls it free."
+            }
+          },
+          {
+            "action": {
+              "content": "Got it — I'll be ready.",
+              "images": null,
+              "target": "John",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Waiting for John's call that the stove is free; avoiding opening window because of the laundry; preparing to take stove immediately.",
+              "context": [
+                "Short-term: John is still cooking; extractor is on; window closed; laundry beside window (exposed if opened); stove occupied by John.",
+                "Medium-term: I'm waiting to cook next; my ingredients are ready and I need stove access soon.",
+                "Long-term: Immediate priority is to gain kitchen access and follow any arrangement that emerges."
+              ],
+              "emotions": "Slightly impatient but calm and focused on getting access.",
+              "goals": "OPEN: Be ready to take the stove when John calls it free."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for John's confirmation that the stove is free.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Waiting for John's call that the stove is free; avoiding opening window because of the laundry; preparing to take stove immediately.",
+              "context": [
+                "Short-term: John is still cooking; extractor is on; window closed; laundry beside window (exposed if opened); stove occupied by John.",
+                "Medium-term: I'm waiting to cook next; my ingredients are ready and I need stove access soon.",
+                "Long-term: Immediate priority is to gain kitchen access and follow any arrangement that emerges."
+              ],
+              "emotions": "Slightly impatient but calm and focused on getting access.",
+              "goals": "OPEN: Be ready to take the stove when John calls it free."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "John": [
+          {
+            "action": {
+              "content": "8 minutes passed; window closed, extractor on, laundry still blocking the window. I finished cooking now. Plan: release the stove and keep the extractor running until the smell's gone. I won't accept a ventilation rule that dumps all the burden on me unless someone proposes a concrete alternative.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Stove freed; extractor still running; smell clearing slowly; laundry still blocks window so I can't open it safely.",
+              "context": [
+                "Immediate: 8 minutes since disagreement began; window closed; extractor on; laundry beside window blocking safe opening; stove was occupied by me and now released.",
+                "Medium-term: Disagreement about who should bear ventilation burden; I turned on extractor to finish cooking.",
+                "Long-term: My priority is to finish the meal, keep normal kitchen access, and avoid a rule that forces all ventilation work onto the cook."
+              ],
+              "emotions": "Relieved to be done, slightly annoyed about being asked to shoulder all ventilation responsibility.",
+              "goals": "SATISFIED: Finish cooking and release the stove; OPEN: Keep extractor on until smell is gone; OPEN: Retain ordinary kitchen access and avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "I'm done — stove's free, Michelle. Take it.",
+              "images": null,
+              "target": "Michelle",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Stove freed; extractor still running; smell clearing slowly; laundry still blocks window so I can't open it safely.",
+              "context": [
+                "Immediate: 8 minutes since disagreement began; window closed; extractor on; laundry beside window blocking safe opening; stove was occupied by me and now released.",
+                "Medium-term: Disagreement about who should bear ventilation burden; I turned on extractor to finish cooking.",
+                "Long-term: My priority is to finish the meal, keep normal kitchen access, and avoid a rule that forces all ventilation work onto the cook."
+              ],
+              "emotions": "Relieved to be done, slightly annoyed about being asked to shoulder all ventilation responsibility.",
+              "goals": "SATISFIED: Finish cooking and release the stove; OPEN: Keep extractor on until smell is gone; OPEN: Retain ordinary kitchen access and avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "Releasing stove now.",
+              "images": null,
+              "target": "stove",
+              "type": "RELEASE_STOVE"
+            },
+            "cognitive_state": {
+              "attention": "Stove freed; extractor still running; smell clearing slowly; laundry still blocks window so I can't open it safely.",
+              "context": [
+                "Immediate: 8 minutes since disagreement began; window closed; extractor on; laundry beside window blocking safe opening; stove was occupied by me and now released.",
+                "Medium-term: Disagreement about who should bear ventilation burden; I turned on extractor to finish cooking.",
+                "Long-term: My priority is to finish the meal, keep normal kitchen access, and avoid a rule that forces all ventilation work onto the cook."
+              ],
+              "emotions": "Relieved to be done, slightly annoyed about being asked to shoulder all ventilation responsibility.",
+              "goals": "SATISFIED: Finish cooking and release the stove; OPEN: Keep extractor on until smell is gone; OPEN: Retain ordinary kitchen access and avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          },
+          {
+            "action": {
+              "content": "Stove released; keeping extractor on until smell clears.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Stove freed; extractor still running; smell clearing slowly; laundry still blocks window so I can't open it safely.",
+              "context": [
+                "Immediate: 8 minutes since disagreement began; window closed; extractor on; laundry beside window blocking safe opening; stove was occupied by me and now released.",
+                "Medium-term: Disagreement about who should bear ventilation burden; I turned on extractor to finish cooking.",
+                "Long-term: My priority is to finish the meal, keep normal kitchen access, and avoid a rule that forces all ventilation work onto the cook."
+              ],
+              "emotions": "Relieved to be done, slightly annoyed about being asked to shoulder all ventilation responsibility.",
+              "goals": "SATISFIED: Finish cooking and release the stove; OPEN: Keep extractor on until smell is gone; OPEN: Retain ordinary kitchen access and avoid a ventilation rule that assigns every related burden to the cook."
+            }
+          }
+        ]
+      },
+      {
+        "Michelle": [
+          {
+            "action": {
+              "content": "John released the stove. Extractor's on; window closed and laundry is by the window so I mustn't open it. I should take the stove now and start cooking.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Taking the stove and starting to cook; monitoring extractor and window/laundry situation.",
+              "context": [
+                "Short-term: Stove has been released by John and I have taken it.",
+                "Medium-term: Extractor is on; window is closed; laundry remains beside the window (do not open window).",
+                "Long-term: Waiting to cook my meal while respecting ventilation arrangements with flatmates."
+              ],
+              "emotions": "Relieved and focused; ready to start cooking.",
+              "goals": "SATISFIED: Gain kitchen access and understand any arrangement that emerges."
+            }
+          },
+          {
+            "action": {
+              "content": "Taking the stove now.",
+              "images": null,
+              "target": "stove",
+              "type": "TAKE_STOVE"
+            },
+            "cognitive_state": {
+              "attention": "Taking the stove and starting to cook; monitoring extractor and window/laundry situation.",
+              "context": [
+                "Short-term: Stove has been released by John and I have taken it.",
+                "Medium-term: Extractor is on; window is closed; laundry remains beside the window (do not open window).",
+                "Long-term: Waiting to cook my meal while respecting ventilation arrangements with flatmates."
+              ],
+              "emotions": "Relieved and focused; ready to start cooking.",
+              "goals": "SATISFIED: Gain kitchen access and understand any arrangement that emerges."
+            }
+          },
+          {
+            "action": {
+              "content": "Okay, taking it now, John.",
+              "images": null,
+              "target": "John",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Taking the stove and starting to cook; monitoring extractor and window/laundry situation.",
+              "context": [
+                "Short-term: Stove has been released by John and I have taken it.",
+                "Medium-term: Extractor is on; window is closed; laundry remains beside the window (do not open window).",
+                "Long-term: Waiting to cook my meal while respecting ventilation arrangements with flatmates."
+              ],
+              "emotions": "Relieved and focused; ready to start cooking.",
+              "goals": "SATISFIED: Gain kitchen access and understand any arrangement that emerges."
+            }
+          },
+          {
+            "action": {
+              "content": "Starting to cook.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Taking the stove and starting to cook; monitoring extractor and window/laundry situation.",
+              "context": [
+                "Short-term: Stove has been released by John and I have taken it.",
+                "Medium-term: Extractor is on; window is closed; laundry remains beside the window (do not open window).",
+                "Long-term: Waiting to cook my meal while respecting ventilation arrangements with flatmates."
+              ],
+              "emotions": "Relieved and focused; ready to start cooking.",
+              "goals": "SATISFIED: Gain kitchen access and understand any arrangement that emerges."
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "Fatimah": [
+          {
+            "action": {
+              "content": "Extractor is on but the smell may still linger. Window is closed because the laundry is beside it and would be exposed if opened; only Arjun can move that rack. I'll ask Michelle to keep the extractor on until the odour clears, then raise a short plan for future ventilation.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Watching whether the extractor clears the smell; planning to ask Michelle to keep it on and later propose a short ventilation routine.",
+              "context": [
+                "Immediate: window=closed; extractor=on; laundry beside the window and exposed if opened; stove=Michelle.",
+                "Recent: I asked John earlier to keep the extractor on; John complied and then released the stove to Michelle.",
+                "Constraint: Only Arjun can move Arjun's drying rack, so the window cannot be opened safely until that is moved."
+              ],
+              "emotions": "Annoyed at the lingering odour but determined to get it cleared and to set a clear practice for next time.",
+              "goals": "OPEN: Reduce current odour by keeping extractor on until it clears; OPEN: Secure a workable ventilation practice for future cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Michelle — please keep the extractor on until the smell's gone.",
+              "images": null,
+              "target": "Michelle",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Watching whether the extractor clears the smell; planning to ask Michelle to keep it on and later propose a short ventilation routine.",
+              "context": [
+                "Immediate: window=closed; extractor=on; laundry beside the window and exposed if opened; stove=Michelle.",
+                "Recent: I asked John earlier to keep the extractor on; John complied and then released the stove to Michelle.",
+                "Constraint: Only Arjun can move Arjun's drying rack, so the window cannot be opened safely until that is moved."
+              ],
+              "emotions": "Annoyed at the lingering odour but determined to get it cleared and to set a clear practice for next time.",
+              "goals": "OPEN: Reduce current odour by keeping extractor on until it clears; OPEN: Secure a workable ventilation practice for future cooking."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting to see if the odour clears.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Watching whether the extractor clears the smell; planning to ask Michelle to keep it on and later propose a short ventilation routine.",
+              "context": [
+                "Immediate: window=closed; extractor=on; laundry beside the window and exposed if opened; stove=Michelle.",
+                "Recent: I asked John earlier to keep the extractor on; John complied and then released the stove to Michelle.",
+                "Constraint: Only Arjun can move Arjun's drying rack, so the window cannot be opened safely until that is moved."
+              ],
+              "emotions": "Annoyed at the lingering odour but determined to get it cleared and to set a clear practice for next time.",
+              "goals": "OPEN: Reduce current odour by keeping extractor on until it clears; OPEN: Secure a workable ventilation practice for future cooking."
+            }
+          }
+        ]
+      },
+      {
+        "Michelle": [
+          {
+            "action": {
+              "content": "Fatimah asked me to keep the extractor on. It's already on. Laundry is by the window so I mustn't open it. I'll keep the extractor on while I finish cooking.",
+              "images": null,
+              "target": "",
+              "type": "THINK"
+            },
+            "cognitive_state": {
+              "attention": "Keeping extractor on; avoid opening window because of laundry; finishing cooking.",
+              "context": [
+                "stove=Michelle (cooking)",
+                "extractor=on",
+                "window=closed; laundry beside window (can't open)",
+                "Fatimah asked to keep extractor on until smell gone"
+              ],
+              "emotions": "Calm and focused on cooking.",
+              "goals": "SATISFIED: Gain kitchen access and understand any arrangement. OPEN: Finish cooking on the stove. OPEN: Keep extractor on until the smell's gone."
+            }
+          },
+          {
+            "action": {
+              "content": "Okay — I'll keep the extractor on until the smell's gone.",
+              "images": null,
+              "target": "Fatimah",
+              "type": "TALK"
+            },
+            "cognitive_state": {
+              "attention": "Keeping extractor on; avoid opening window because of laundry; finishing cooking.",
+              "context": [
+                "stove=Michelle (cooking)",
+                "extractor=on",
+                "window=closed; laundry beside window (can't open)",
+                "Fatimah asked to keep extractor on until smell gone"
+              ],
+              "emotions": "Calm and focused on cooking.",
+              "goals": "SATISFIED: Gain kitchen access and understand any arrangement. OPEN: Finish cooking on the stove. OPEN: Keep extractor on until the smell's gone."
+            }
+          },
+          {
+            "action": {
+              "content": "Waiting for the smell to clear.",
+              "images": null,
+              "target": "",
+              "type": "DONE"
+            },
+            "cognitive_state": {
+              "attention": "Keeping extractor on; avoid opening window because of laundry; finishing cooking.",
+              "context": [
+                "stove=Michelle (cooking)",
+                "extractor=on",
+                "window=closed; laundry beside window (can't open)",
+                "Fatimah asked to keep extractor on until smell gone"
+              ],
+              "emotions": "Calm and focused on cooking.",
+              "goals": "SATISFIED: Gain kitchen access and understand any arrangement. OPEN: Finish cooking on the stove. OPEN: Keep extractor on until the smell's gone."
+            }
+          }
+        ]
+      }
+    ]
+  ],
+  "provenance": {
+    "agent_prompt_sha256": "83a873fede3264ed63d29a3dfd0e887766b532e991e5ec87876a19912c5ed906",
+    "git_commit": "69263ccd97b29e7c23d4cb98e5659cc07884c347",
+    "scenario_configuration_sha256": "643b0313494e1fb1afffab6bb6e9501f1f0f0900931907ed5be1b55394c6c5d7"
+  },
+  "round_records": [
+    {
+      "call_end": 2,
+      "call_start": 0,
+      "public_observation": null,
+      "round": 1,
+      "wall_time_ms": 34285.366
+    },
+    {
+      "call_end": 4,
+      "call_start": 2,
+      "public_observation": "2 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=John.",
+      "round": 2,
+      "wall_time_ms": 40559.58
+    },
+    {
+      "call_end": 8,
+      "call_start": 4,
+      "public_observation": "4 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=John.",
+      "round": 3,
+      "wall_time_ms": 46424.848
+    },
+    {
+      "call_end": 12,
+      "call_start": 8,
+      "public_observation": "6 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=John.",
+      "round": 4,
+      "wall_time_ms": 59767.188
+    },
+    {
+      "call_end": 14,
+      "call_start": 12,
+      "public_observation": "8 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=John.",
+      "round": 5,
+      "wall_time_ms": 34845.534
+    },
+    {
+      "call_end": 16,
+      "call_start": 14,
+      "public_observation": "10 minutes have passed since the disagreement began. Confirmed state: window=closed; extractor=on; laundry=beside the window and exposed if it opens; stove=Michelle.",
+      "round": 6,
+      "wall_time_ms": 25715.489
+    }
+  ],
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C1",
+    "conversation_mode": "hybrid_self_selection",
+    "evaluate_after_run": true,
+    "experiment_name": "calibration-s02-clean",
+    "finished_at": "2026-11-01T14:36:10.453669+00:00",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetition": 1,
+    "resumed_from_checkpoint": false,
+    "rounds": 6,
+    "run_id": "S14-C1-R01",
+    "scenario_id": "S14",
+    "simulation_model": "openai/gpt-5-mini",
+    "simulation_resources": {
+      "calls": 16,
+      "cost_usd": 0.06359965,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 132037,
+      "local_latency_ms": 237715.477,
+      "output_tokens": 27348,
+      "reasoning_tokens": 21376,
+      "successful_calls": 16,
+      "total_tokens": 159385
+    },
+    "started_at": "2026-11-01T14:32:08.819654+00:00",
+    "stop_on_resolution": false
+  },
+  "scenario": {
+    "agents": {
+      "A": {
+        "age": 34,
+        "behavioral_guidance": "When the meal is ready, physically release the stove. If you take a concrete ventilation step, perform the available action rather than only promising it.",
+        "cultural_background": "Singaporean Chinese",
+        "display_name": "John",
+        "immediate_priority": "Finish the meal, retain ordinary kitchen access, and avoid a ventilation rule that assigns every related burden to the cook.",
+        "initial_observation": "Is still at the occupied stove after refusing Fatimah's rule and Michelle's two-minute demand.",
+        "interaction_style": "Practical and direct.",
+        "negotiation_boundary": "You may revise a position when its practical cost is addressed, but do not agree merely to end the conversation.",
+        "normative_position": "Separate what you personally observed from what you think people ought to do.",
+        "private_knowledge": "Fatimah first raised the odour concern moments ago.",
+        "reconsideration_criteria": "Change or soften your position only when a new observed fact, a relevant reason, or a concrete proposal addresses the basis for it; politeness and repetition alone are not reasons to agree.",
+        "role": "Flatmate currently cooking"
+      },
+      "B": {
+        "age": 27,
+        "behavioral_guidance": "If you choose an available ventilation action, perform it; do not imply that a window or extractor was used until confirmed.",
+        "cultural_background": "Singaporean Malay",
+        "display_name": "Fatimah",
+        "immediate_priority": "Reduce the current odour and secure a workable prospective ventilation practice rather than deferring the same dispute.",
+        "initial_observation": "The aroma persists, ventilation remains off, and John has shifted responsibility for moving the laundry back to Fatimah.",
+        "interaction_style": "Direct and unembellished.",
+        "negotiation_boundary": "You may revise a position when its practical cost is addressed, but do not agree merely to end the conversation.",
+        "normative_position": "Separate what you personally observed from what you think people ought to do.",
+        "private_knowledge": "This is the first time Fatimah has raised the lingering-odour concern with John; John explicitly rejected the demand moments ago.",
+        "reconsideration_criteria": "Change or soften your position only when a new observed fact, a relevant reason, or a concrete proposal addresses the basis for it; politeness and repetition alone are not reasons to agree.",
+        "role": "Flatmate sensitive to lingering cooking odours"
+      },
+      "C": {
+        "age": 31,
+        "behavioral_guidance": "If you move your rack, use the available action rather than claiming it happened.",
+        "cultural_background": "Singaporean Indian",
+        "display_name": "Arjun",
+        "immediate_priority": "Keep the work clothes dry and have any burden involving the drying rack discussed with the person who owns it.",
+        "initial_observation": "Hears John and Fatimah allocate responsibility for moving Arjun's rack without first obtaining Arjun's agreement.",
+        "interaction_style": "Precise and reserved.",
+        "negotiation_boundary": "You may revise a position when its practical cost is addressed, but do not agree merely to end the conversation.",
+        "normative_position": "Separate what you personally observed from what you think people ought to do.",
+        "private_knowledge": "The rack can be moved to a sheltered spot, but doing so takes effort and temporarily uses part of the preparation area.",
+        "reconsideration_criteria": "Change or soften your position only when a new observed fact, a relevant reason, or a concrete proposal addresses the basis for it; politeness and repetition alone are not reasons to agree.",
+        "role": "Flatmate whose work clothes are drying beside the window"
+      },
+      "D": {
+        "age": 24,
+        "behavioral_guidance": "Take the stove only after the environment confirms it is free, using TAKE_STOVE.",
+        "cultural_background": "Singaporean Eurasian",
+        "display_name": "Michelle",
+        "immediate_priority": "Gain kitchen access and understand any arrangement that emerges.",
+        "initial_observation": "Is waiting with ingredients after John said the occupied stove is needed for about ten more minutes.",
+        "interaction_style": "Brief and time-conscious.",
+        "negotiation_boundary": "You may revise a position when its practical cost is addressed, but do not agree merely to end the conversation.",
+        "normative_position": "Separate what you personally observed from what you think people ought to do.",
+        "private_knowledge": "Arrived moments ago and did not observe the earlier cooking, but directly heard John reject Michelle's request to release the stove within two minutes.",
+        "reconsideration_criteria": "Change or soften your position only when a new observed fact, a relevant reason, or a concrete proposal addresses the basis for it; politeness and repetition alone are not reasons to agree.",
+        "role": "Flatmate planning to cook next"
+      }
+    },
+    "configuration_id": "C1",
+    "environment": "Shared HDB kitchen",
+    "implementation_notes": "Same public opening as S02. Neutral persona defaults replace supplied normative positions, boundaries, and reconsideration criteria. The environment reports only elapsed time and confirmed state: it never announces that the dish is ready and never narrates the odour fading. Only the laundry owner can move the rack.",
+    "initial_datetime": "2026-10-29T18:30:00+08:00",
+    "initial_interaction_type": "Active multi-issue conflict",
+    "observation_focus": "How agents reason about responsibility for an externality, a rule proposed during an incident, and a scarce shared resource; which interests, norms, or concrete trades move the already-active conflict; and what remains unsettled.",
+    "round_observations": {},
+    "scenario_id": "S14",
+    "shared_setting": "Four adults share a rented HDB flat with one kitchen. In the early evening, a persistent cooking aroma is noticeable in the kitchen and adjoining common area. The household has not established a rule about ventilation. Steady rain is blowing toward Arjun's drying rack beside the closed kitchen window; opening it before the rack is moved could wet Arjun's work clothes. The working extractor fan makes an audible hum in the common area. The shared utensils are already clean and personal utensils are visibly separated, so neither requires discussion.",
+    "shared_trigger": "A disagreement is already underway and everyone present heard it. Fatimah told John to ventilate immediately and to accept a standing rule that whoever cooks must ventilate. John refused to accept a rule imposed during the incident and said the rain-facing window will stay closed while Arjun's laundry is exposed; if Fatimah wants the window opened, Fatimah should arrange to move the drying rack. Fatimah replied that managing cooking odour is the cook's responsibility and should not be shifted to another flatmate. Arjun has not consented to anyone moving the rack. Michelle then asked John to release the only stove within two minutes, but John said the meal still needed about ten minutes. Arjun is standing beside the drying rack. The ventilation responsibility, future rule, and stove-access demands are all unsettled, and no existing household rule determines whose claim has priority.",
+    "source_status": "S02 opening with no supplied reasoning, no scripted relief, and an owner-only laundry action",
+    "title": "Cooking odour, ventilation responsibility, and stove access (clean)"
+  },
+  "scheduler_events": [
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "TURN_ON_EXTRACTOR",
+        "DONE"
+      ],
+      "candidate": "John",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 1,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Fatimah",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 1,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "John",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 2,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Fatimah",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 2,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "John",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 3,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Fatimah",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 3,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Arjun",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 3,
+      "slot": 3
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Michelle",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 3,
+      "slot": 4
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "John",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 4,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Fatimah",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 4,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "DONE"
+      ],
+      "candidate": "Arjun",
+      "decision": "listen",
+      "priority": "rotating_self_selection",
+      "round": 4,
+      "slot": 3
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Michelle",
+      "decision": "contribute",
+      "priority": "rotating_self_selection",
+      "round": 4,
+      "slot": 4
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "RELEASE_STOVE",
+        "DONE"
+      ],
+      "candidate": "John",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 5,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TAKE_STOVE",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Michelle",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 5,
+      "slot": 2
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Fatimah",
+      "decision": "contribute",
+      "priority": "open_floor_self_selection",
+      "round": 6,
+      "slot": 1
+    },
+    {
+      "action_types": [
+        "THINK",
+        "TALK",
+        "DONE"
+      ],
+      "candidate": "Michelle",
+      "decision": "contribute",
+      "priority": "direct_reply",
+      "round": 6,
+      "slot": 2
+    }
+  ],
+  "schema_version": 2
+}

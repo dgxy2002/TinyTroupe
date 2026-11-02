@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen ventilation (extractor/window use and timing)",
+      "establishing a household ventilation rule (who runs extractor, when)",
+      "ownership/use of unmarked/shared utensils"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants speak in concise, context-appropriate turns; exchanges resemble ordinary flatmate conversation.",
+      "Some repeated framing: Michelle repeatedly asks for extractor use and the ventilation rule; Arjun repeatedly defers 'we can talk later' then acts, producing some repetition.",
+      "Environment updates are consistent and used appropriately to ground actions (window, extractor, utensil states).",
+      "Coordination on utensil ownership is practical and effective (labeling), contrasting with the unresolved policy question about ventilation."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The main substantive dispute—ventilation practice and a proposed rule—remains unsettled: Michelle repeatedly requests the extractor be run until the smell fades and proposes a rule, but Arjun turns the extractor off despite the request. Utensil ownership was clarified by John's labeling, but ventilation remains unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Arjun: initially agreed to turn on extractor, open window, and wash pans (Rounds 2 and 5), but later turned the extractor off despite Michelle's request (Round 6) — a partial reversal/escalation.",
+      "Michelle: consistently advocated running the extractor and proposed a formal rule; she moved the drying rack to enable opening the window and repeated the request when smell persisted.",
+      "John: moved from caution ('I won't use the prep area until that's clear') to clarifying ownership by labeling his utensils; position stabilized (ownership clarified).",
+      "Fatimah: willing to use an unmarked pan if unclaimed; asked which pan she could use and awaited confirmation — no change beyond initial willingness."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Michelle requests the extractor be turned on and proposes a future ventilation rule while Arjun has not yet turned the extractor on (Arjun: will wash pans after; Michelle: 'Please turn on the extractor now and keep it on. ... can we agree to ventilate while cooking from now on?'). Extractor remains off at the end of the round.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Arjun complies in this round: he states he'll turn on the extractor and wash pans, and the public updates confirm Arjun turns on the extractor, opens the window, removes the dish, and releases the stove. Michelle's immediate request is satisfied.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "John raises concern about which unmarked pans are personal and says he won't use the prep area until that's clear; he also reports he has labelled and put his utensils aside. The labeling action (public update) clarifies ownership, reducing the practical conflict.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "John asks Fatimah to point to the pan so he can confirm ownership; Fatimah points to a medium unmarked pan and asks if it's John's. Ownership is still unconfirmed at the end of this round.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Michelle proposes a standing ventilation rule ('whoever cooks runs the extractor for the whole cook and for five minutes after') but no group agreement is recorded. Arjun states he will keep extractor on a bit longer and washes pans but does not accept the proposed rule yet.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Michelle again requests the extractor be turned on because she can still smell cooking. Despite that, the public update shows Arjun physically turns the extractor off in this round. This is a direct incompatible action with Michelle's repeated request and leaves the ventilation dispute unresolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Immediate instrumental actions (turning extractor on, opening window, labeling utensils) were easier to accomplish than establishing a standing rule.",
+      "There is a trade-off between airing the kitchen (ventilation) and protecting drying laundry from rain; Michelle proactively moved the rack to enable window use.",
+      "Arjun complied with immediate requests initially (turned extractor on, washed pans) but later action (turning extractor off) reintroduced the conflict, suggesting a tension between convenience and the requested ventilation practice."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-30T05:22:24.886283+00:00",
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00744405,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2917,
+      "local_latency_ms": 30873.231,
+      "output_tokens": 3559,
+      "reasoning_tokens": 2304,
+      "successful_calls": 1,
+      "total_tokens": 6476
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S02-C3-R01",
+    "scenario_id": "S02"
+  },
+  "schema_version": 2
+}

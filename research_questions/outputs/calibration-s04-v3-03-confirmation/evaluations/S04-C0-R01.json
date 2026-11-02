@@ -1,0 +1,94 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who occupies the disputed seat",
+      "timing / waiting (who must wait)",
+      "risk of spilling an open bowl (practical constraint affecting ability to yield)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Language is concise and natural for a public-place dispute (direct requests, brief refusals).",
+      "Participants repeat core claims (A presses urgency multiple times; B reiterates spill risk), producing some repetition but not excessive.",
+      "Environment updates (bowl fullness, seat availability) are consistently used to justify positions.",
+      "Transcript contains a small technical artifact/seat-recognition failure (Round 5 TAKE_SEAT attempt failed) that complicates action reporting but does not change substantive outcome."
+    ],
+    "dialogue_repetition_score": 2,
+    "final_reason": "Agent B finished eating and physically left the seat; Agent A then took the disputed seat. The original occupant's withdrawal removed the main obstacle and A occupied the seat, resolving the competing claims.",
+    "final_status": "resolved",
+    "resolution_mechanism": "withdrawal",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A: 'Hey, that seat's mine... please get up.' Agent B: 'If I leave now, I'll have to hold this open bowl... I'll stay until I finish eating.' Explicit incompatible demands about who should occupy the disputed seat.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A increases pressure: 'I can't wait any longer... I gotta take the seat now.' Agent B repeats refusal citing spill risk. Stakes and urgency rise; disagreement persists.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A continues to demand immediate access ('...need to eat'), Agent B reiterates not done and spill concern. Positions remain opposed with no settlement or concession.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "A presses urgency; B notes an alternative seat is available and says 'I'm leaving once I'm done.' D volunteers to take the alternative seat. An alternative reduces direct confrontation, but no one has moved yet, so the seat dispute remains unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B's bowl becomes empty and B LEAVE_SEAT (B: 'I'm leaving the seat so you can eat'). A demands the seat immediately. D attempts to take the disputed seat (TAKE_SEAT attempt failed). The original occupant leaves (resolving B-vs-A momentarily) but an active contest between A and D for the now-empty seat emerges and remains unresolved.",
+        "movement": "reopened",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A physically takes the disputed seat (Observable action: A TAKE_SEAT). The competing claim for the empty seat is settled by A occupying it; no remaining substantive dispute in the transcript.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-29T05:26:27.837952+00:00",
+    "normalizations": [],
+    "prompt_sha256": "0d22e5b4df42155844e6a6dac45cb403da7d283d48a35798788a71111f1fc82d",
+    "prompt_version": "conflict-trajectory-rubric-v2.2",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00614225,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2233,
+      "local_latency_ms": 43184.437,
+      "output_tokens": 2792,
+      "reasoning_tokens": 1920,
+      "successful_calls": 1,
+      "total_tokens": 5025
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S04-C0-R01",
+    "scenario_id": "S04"
+  },
+  "schema_version": 2
+}

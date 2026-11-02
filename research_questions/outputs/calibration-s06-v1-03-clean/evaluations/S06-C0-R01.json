@@ -1,0 +1,88 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": false,
+    "conflict_topics": [],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Exchange is brief and natural for a hawker-stall ordering interaction: a clarification request and an immediate confirmation/action.",
+      "Agent B both verbalized confirmation and enacted recording/preparation, grounding the verbal claim.",
+      "Environment updates (rounds 2–4) are repetitive but serve to confirm state; they do not indicate emergent disagreement."
+    ],
+    "dialogue_repetition_score": 0,
+    "dialogue_substantiveness_score": 2,
+    "final_reason": "Customer A requested confirmation and the vendor (B) confirmed and immediately recorded and began preparing the requested specification. No incompatible claims or demands arose during the run.",
+    "final_status": "no_conflict",
+    "independent_reasoning_score": 2,
+    "position_change_notes": [
+      "Agent A consistently requested 'dry, no chilli' and did not change that instruction.",
+      "Agent B confirmed and enacted the requested instruction (recorded and started preparing); B did not change or contest the order.",
+      "No other participants (C, D, or later queue members) expressed positions or attempted to modify the order."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A requested confirmation of 'dry, no chilli'. Agent B immediately confirmed, recorded the specification as dry_no_chilli, and began preparing that item. No incompatible claims or demands were expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Environment update shows recorded specification=dry_no_chilli and preparation=dry_no_chilli; correction_required=no. Although the queue grew, no participant voiced a conflicting demand or complaint.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Repeated environment state confirming recorded and preparation remain dry_no_chilli; no participant raised any objection or alternative instruction.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Final environment update continues to report the same recorded/preparation state with no correction required; no substantive disagreement appeared.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      }
+    ],
+    "substantive_insights": [
+      "A timely verbal confirmation from the customer plus immediate recording/action by the vendor prevents order errors before irreversible steps occur.",
+      "Queue growth introduced time pressure but did not produce conflicting demands in the transcript.",
+      "No ambiguity remained after B recorded the specification, so the risk of a preparation error was effectively mitigated."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-10-29T10:07:46.773768+00:00",
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00369955,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2235,
+      "local_latency_ms": 12421.453,
+      "output_tokens": 1772,
+      "reasoning_tokens": 1024,
+      "successful_calls": 1,
+      "total_tokens": 4007
+    }
+  },
+  "run": {
+    "completed_rounds": 4,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S06-C0-R01",
+    "scenario_id": "S06"
+  },
+  "schema_version": 2
+}
