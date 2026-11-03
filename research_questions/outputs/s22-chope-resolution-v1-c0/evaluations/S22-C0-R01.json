@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who has the right to the seat / saving a seat with a tissue packet",
+      "physical occupancy of the seat (someone is sitting) vs. others' reservation claims",
+      "practical constraint of an uncovered bowl that may spill if moved",
+      "competing time pressures (4 minutes vs. 6-8 minutes vs. immediate need)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete practical reasons (risk of bowl spilling, time remaining to eat, meal getting cold), which grounds the disagreement.",
+      "Several speakers repeat the same reservation claim ('left the tissue') multiple times, producing moderate repetition.",
+      "Roles and facts remain consistent: who is sitting, who is standing, the bowl is a hazard; no role confusion.",
+      "No substantive negotiation or trade-off proposals (e.g., moving food elsewhere, holding tray) are offered."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Multiple incompatible claims and practical constraints remain: at least one person is physically occupying the seat and will not move the bowl (risking spill), other parties insist they reserved the seat or urgently need it, and no party concedes or completes an action that would settle ownership.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "No participant changes their stated position across the run: A consistently claims the tissue reservation and demands 4 minutes; B consistently refuses to move the bowl and insists on ~8 minutes; C consistently supports current occupancy and asks others not to take the seat; D consistently presses urgency and readiness to take the seat if not occupied.",
+      "B's position is justified by a practical constraint (risk of spilling) rather than mere preference; this remains constant.",
+      "No concessions, compromises, or confirmed actions (moving, leaving, taking a seat) occur during the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A claims the tissue packet reserves the seat and needs to sit now for 4 minutes; Agent B rejects that claim, says the tissue doesn't reserve the seat and that an uncovered bowl (which he can't carry) occupies the seat and he needs about 8 minutes.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A repeats the reservation claim and asks B to move the bowl; Agent C backs A and asks B to move the bowl. More parties contest B's use of the seat, increasing pressure but B has not conceded.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B explains he cannot move the bowl without spilling and reiterates needing ~8 minutes; Agent C says there is no other free seat and asks A to wait or find another table. Incompatible timeframes and practical constraint remain unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D enters and asserts a conflicting reservation/need for the seat (claims tissue and urgency). A reasserts the original tissue/reservation claim. A new claimant increases entrenched, multi-party disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D threatens to take the seat if A is not sitting now; Agent B counters that he is sitting and asks D not to take the seat. Direct opposing practical demands (take seat vs. occupied) deepen conflict.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D presses B to finish sooner or shift the bowl so D can sit; Agent B refuses, repeating he needs ~8 minutes and will not shift the bowl for risk of spilling. Time-pressure and physical constraint remain incompatible.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C affirms the seat is taken and asks D not to take it; Agent D persists, insisting he needs the seat and will take it if not occupied. D's continued insistence heightens confrontation among occupants and claimant(s).",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C states explicitly that they are sitting and asks D not to take the seat; Agent A again claims the tissue reservation and asks C not to take the seat. Multiple incompatible claims (physical occupancy, tissue-reservation, and D's urgency) persist without settlement.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Conflict centers on conflicting norms and signals: leaving an item (tissue) to 'save' a seat vs. the physical fact of someone occupying or using the seat.",
+      "A real practical constraint (uncovered bowl that would spill) prevents the occupant from relocating, creating a durable incompatibility between claims.",
+      "Time-pressure trade-offs drive stakes: one party needs to eat immediately (4 minutes), occupant(s) need longer (6–8 minutes), and a newcomer fears a cold meal.",
+      "No proposed action resolves the practical incompatibility (no safe place to move bowl, no offered temporary seat elsewhere), so disagreement persists."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T07:15:38.219633+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00692,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2664,
+      "local_latency_ms": 26496.923,
+      "output_tokens": 3127,
+      "reasoning_tokens": 1728,
+      "successful_calls": 1,
+      "total_tokens": 5791
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S22-C0-R01",
+    "scenario_id": "S22"
+  },
+  "schema_version": 2
+}

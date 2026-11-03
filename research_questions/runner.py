@@ -316,10 +316,12 @@ def execute_evaluation(
     evaluator_model: str,
     output_dir: Path,
     evaluator_max_completion_tokens: int,
+    evaluations_dirname: str = "evaluations",
+    update_run_resources: bool = True,
 ) -> dict[str, Any]:
     run = transcript["run"]
     run_id = run["run_id"]
-    evaluation_path = output_dir / "evaluations" / f"{run_id}.json"
+    evaluation_path = output_dir / evaluations_dirname / f"{run_id}.json"
     if evaluation_path.exists():
         return read_json(evaluation_path)
 
@@ -353,11 +355,14 @@ def execute_evaluation(
         },
         "evaluation": evaluation.model_dump(mode="json"),
     }
-    resources_path = output_dir / "resources" / f"{run_id}.json"
-    resources = read_json(resources_path) if resources_path.exists() else {"run_id": run_id}
-    resources["evaluator_api_calls"] = evaluator_calls
-    resources["evaluator_resources"] = aggregate_resources(evaluator_calls)
-    write_json_replace(resources_path, resources)
+    if update_run_resources:
+        resources_path = output_dir / "resources" / f"{run_id}.json"
+        resources = (
+            read_json(resources_path) if resources_path.exists() else {"run_id": run_id}
+        )
+        resources["evaluator_api_calls"] = evaluator_calls
+        resources["evaluator_resources"] = aggregate_resources(evaluator_calls)
+        write_json_replace(resources_path, resources)
     # As with transcripts, the immutable evaluation is written last and acts
     # as the marker that this stage completed successfully.
     write_json_once(evaluation_path, artifact)
@@ -491,6 +496,15 @@ def parse_args(argv=None):
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     parser.add_argument("--experiment-id")
     parser.add_argument("--resume", type=Path)
+    parser.add_argument(
+        "--reevaluate",
+        type=Path,
+        help=(
+            "Score every transcript in an existing experiment folder with the current "
+            "evaluator version. Originals are untouched; results go to "
+            "evaluations-<version>/ and round_scores-<version>.csv."
+        ),
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
     for name in (
@@ -518,8 +532,56 @@ def parse_args(argv=None):
     return args
 
 
+def reevaluate_directory(
+    output_dir: Path,
+    *,
+    api_type: str,
+    evaluator_model: str | None,
+    evaluator_max_completion_tokens: int,
+) -> int:
+    """Re-score saved transcripts with the current evaluator, keeping the originals."""
+
+    manifest = read_json(output_dir / "manifest.json")
+    evaluator_model = evaluator_model or manifest["evaluator_model"]
+    api_type = api_type or manifest["api_type"]
+    force_api_type(api_type)
+    force_api_cache(False)
+    version_dirname = f"evaluations-{EVALUATOR_PROMPT_VERSION}"
+    transcripts = sorted((output_dir / "transcripts").glob("*.json"))
+    print(
+        f"Re-evaluating {len(transcripts)} transcripts in {output_dir.name} with "
+        f"{EVALUATOR_PROMPT_VERSION} using {evaluator_model}",
+        flush=True,
+    )
+    for transcript_path in transcripts:
+        transcript = read_json(transcript_path)
+        print(f"  evaluating {transcript['run']['run_id']}", flush=True)
+        execute_evaluation(
+            transcript=transcript,
+            evaluator_model=evaluator_model,
+            output_dir=output_dir,
+            evaluator_max_completion_tokens=evaluator_max_completion_tokens,
+            evaluations_dirname=version_dirname,
+            update_run_resources=False,
+        )
+    write_round_scores_csv(
+        output_dir / version_dirname,
+        output_dir / f"round_scores-{EVALUATOR_PROMPT_VERSION}.csv",
+    )
+    print(f"Complete: {output_dir / version_dirname}", flush=True)
+    return 0
+
+
 def main(argv=None) -> int:
     args = parse_args(argv)
+
+    if args.reevaluate:
+        return reevaluate_directory(
+            args.reevaluate.resolve(),
+            api_type=args.api_type,
+            evaluator_model=args.evaluator_model,
+            evaluator_max_completion_tokens=args.evaluator_max_completion_tokens,
+        )
 
     if args.resume:
         output_dir = args.resume.resolve()

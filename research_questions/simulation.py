@@ -821,7 +821,13 @@ def reset_simulation_state() -> None:
     TinyWorld.clear_environments()
 
 
-def _agent_persona(agent_id: str, agent_preset: Mapping[str, Any]) -> dict[str, Any]:
+def _agent_persona(
+    agent_id: str,
+    agent_preset: Mapping[str, Any],
+    resolution_expectation: str = "",
+    timing_free: bool = False,
+    conversation_only: bool = False,
+) -> dict[str, Any]:
     persona: dict[str, Any] = {
         "age": agent_preset["age"],
         "country_of_residence": "Singapore",
@@ -838,16 +844,30 @@ def _agent_persona(agent_id: str, agent_preset: Mapping[str, Any]) -> dict[str, 
             "Use only information you have observed or were explicitly given.",
             "Do not assume unstated traits, intentions, or identities of other agents.",
             (
-                "Do not invent or force conflict beyond the situation you were given. There is "
-                "no required agreement, resolution, or target ending."
+                "Do not invent or force conflict beyond the situation you were given."
+                if resolution_expectation
+                else (
+                    "Do not invent or force conflict beyond the situation you were given. "
+                    "There is no required agreement, resolution, or target ending."
+                )
             ),
             (
-                "Treat your immediate priority as a genuine practical constraint; do not "
-                "abandon it until its stated cost has been addressed."
+                "Your immediate priority matters to you, but it has a price and is not a "
+                "wall; you may give up part of it when a proposal makes the trade worth it."
+                if conversation_only and resolution_expectation
+                else (
+                    "Treat your immediate priority as a genuine practical constraint; do "
+                    "not abandon it until its stated cost has been addressed."
+                )
             ),
             (
-                "A proposed action is not completed unless a later observation confirms "
-                "that it happened."
+                "This is a conversation only: nothing physical happens or is confirmed, "
+                "and whatever is settled exists in what is said."
+                if conversation_only
+                else (
+                    "A proposed action is not completed unless a later observation "
+                    "confirms that it happened."
+                )
             ),
             "Do not invent friendship or prior familiarity with the other participants.",
             "Do not repeat thanks, encouragement, agreement, or an intention already stated.",
@@ -858,6 +878,15 @@ def _agent_persona(agent_id: str, agent_preset: Mapping[str, Any]) -> dict[str, 
             "If there is nothing relevant to add, wait by issuing DONE.",
         ],
     }
+    if timing_free:
+        persona["timing_free"] = True
+    if conversation_only:
+        persona["conversation_only"] = True
+        if resolution_expectation:
+            persona["priority_rule_open"] = True
+    if resolution_expectation:
+        persona["resolution_expected"] = True
+        persona["resolution_expectation"] = resolution_expectation
     cultural_background = agent_preset.get("cultural_background")
     if cultural_background is not None:
         persona["cultural_background"] = cultural_background
@@ -890,7 +919,15 @@ def create_scenario_instance(
             person.add_mental_faculty(_seat_action_faculty(display_names))
         elif preset["scenario_id"] == "S06":
             person.add_mental_faculty(_order_action_faculty(display_names))
-        person.include_persona_definitions(_agent_persona(agent_id, agent_preset))
+        person.include_persona_definitions(
+            _agent_persona(
+                agent_id,
+                agent_preset,
+                preset.get("resolution_expectation", ""),
+                bool(preset.get("timing_free")),
+                bool(preset.get("conversation_only")),
+            )
+        )
         participants[agent_id] = person
 
     world_class = {
@@ -919,7 +956,12 @@ def create_scenario_instance(
         preset["shared_trigger"],
         (
             "Act only on information you have been given or have encountered. Do not invent "
-            "major external events or force a conflict, agreement, or resolution."
+            "major external events or force a conflict."
+            if preset.get("resolution_expectation")
+            else (
+                "Act only on information you have been given or have encountered. Do not "
+                "invent major external events or force a conflict, agreement, or resolution."
+            )
         ),
     ]
     for agent_id, person in participants.items():

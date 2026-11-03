@@ -1,0 +1,54 @@
+{
+  "agent_max_completion_tokens": 4096,
+  "agent_prompt_sha256": "64e068f94eb3165fc53156b1bdf609b58884b9ab21c05947a9c5912bd446686b",
+  "api_type": "openrouter",
+  "created_at": "2026-11-03T05:47:41.292275+00:00",
+  "evaluation_timing": "after_complete_run",
+  "evaluator_max_completion_tokens": 4096,
+  "evaluator_model": "openai/gpt-5-mini",
+  "evaluator_prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+  "evaluator_prompt_version": "conflict-trajectory-rubric-v2.5",
+  "experiment_id": "s21-chope-strategy-v2-c0",
+  "experiment_preset": {
+    "configuration_ids": [
+      "C0"
+    ],
+    "conversation_mode": "hybrid_self_selection",
+    "description": "Conversation-only chope dispute (S04 opening, no actions, no scripted events, no clock) with the shared conversational-strategy prompt. C0 only; calibration only.",
+    "evaluate_after_run": true,
+    "name": "calibration-s21-chope-talk-only",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetitions_per_configuration": 1,
+    "rounds_per_run": 6,
+    "scenario_ids": [
+      "S21"
+    ],
+    "stop_on_resolution": false
+  },
+  "fixed_horizon": true,
+  "git_commit": "9c3f432ab7a9178c1558650cca3835717485cd2c",
+  "models_are_distinct": false,
+  "protocol_sha256": "a7692b6a5fcef1c2c0c4375c29f8bdb44f1ede9191b0f6d9ff1005efd190f783",
+  "run_specs": [
+    {
+      "configuration_id": "C0",
+      "conversation_mode": "hybrid_self_selection",
+      "evaluate_after_run": true,
+      "experiment_name": "calibration-s21-chope-talk-only",
+      "parallelize_agent_actions": false,
+      "randomize_agent_order": false,
+      "repetition": 1,
+      "rounds": 6,
+      "run_id": "S21-C0-R01",
+      "scenario_id": "S21",
+      "stop_on_resolution": false
+    }
+  ],
+  "scenario_module_sha256": {
+    "S21": "b1f68dc9c7985c820445cdb4fb536eb69707fbce9f87548e11201a8fedad82ff"
+  },
+  "schema_version": 1,
+  "simulation_model": "openai/gpt-5-mini",
+  "stop_on_resolution": false
+}

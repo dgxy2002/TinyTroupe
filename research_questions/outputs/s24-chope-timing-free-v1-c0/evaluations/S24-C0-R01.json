@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who may sit at the two-seat table / claimed reservation",
+      "how long the current occupant (Agent B) needs before leaving (3 vs 4 vs 5 minutes)",
+      "aisle obstruction caused by someone sitting while waiting",
+      "competing future claims (Agent A vs Agent D) for the seat"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete practical reasons (hot food, open bowl risk, aisle blockage) which ground their positions.",
+      "Frequent repetition of time amounts (3/4/5 minutes) and of core claims (A repeatedly asserting their eventual claim) creates redundancy.",
+      "Third parties (C and D) introduce relevant public-concern (aisle) and competing claim dynamics, keeping the dispute multi-party.",
+      "A modest compromise attempt (A moving from 3 to 4) occurs, then is rebuffed; later a behavioral alternative (stand) is proposed but not accepted."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No participant agreed to another's timing or to a practical accommodation. A holds to four minutes, B holds to five minutes, C and D support waiting five (and C raises aisle-blocking concerns), and a standing/other accommodation was only proposed, not accepted. The incompatible demands therefore remain unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened initially from demanding immediate seating to offering 3 minutes, then later conceded to 4 minutes (Turn 12) — partial movement but stopped short of 5.",
+      "Agent B consistently maintained that they need about five minutes because of an open bowl and repeatedly refused earlier shorter times (Turns 2, 11, 13).",
+      "Agent C consistently advocated for waiting five minutes on grounds of aisle obstruction and sided with B's timing; they later proposed an alternative (stand) but A did not accept it in the transcript.",
+      "Agent D consistently stated they would wait to claim the seat when it is actually free and did not back down from that future claim."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A insists the seat is theirs (left tissue packet) and demands Agent B move because their food is hot; Agent B refuses, saying they pushed the packet aside, have an open bowl that will spill, and need ~5 minutes. Clear opposing demands over immediate seat use.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A offers to wait 3 minutes then take the seat; Agent C raises a new practical concern (A taking the seat will block the aisle) and asks A to wait. The fundamental incompatibility over timing/possession remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A repeats the 3-minute limit; Agent C counters that 3 minutes still blocks the aisle and cites Agent B's ~5-minute need, asking A to wait 5. A's position is pressured by others' opposition, increasing contention.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D claims they will take the seat when it's free and will wait if B needs five minutes; Agent A reasserts their 3-minute claim. A new competitor (D) for the future seat appears, adding to the dispute.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D repeats they will wait to claim the seat; Agent A repeats they will wait three minutes then take it. Positions are reiterated without settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B clarifies three minutes won't work due to the open bowl and requests about five minutes; Agent A offers a concession to four minutes. Positions soften slightly (A moves from 3 to 4) but remain incompatible with B's five-minute need.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent B rejects four minutes and insists on five; Agent C reiterates the aisle-blocking concern and urges A to wait five. The negotiation hardens again around the 4-vs-5 minute disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A holds to four minutes; Agent C offers an alternative (wait five or stand so A won't block the aisle). A possible accommodation is proposed but no agreement is reached; substantive disagreement persists.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The core dispute is temporal: when the seat will become available. Agents weigh different practical costs (A's hot food vs B's risk of spilling an open bowl).",
+      "C frames the issue as a public-path safety/obstruction problem, shifting the negotiation from pure reservation to a communal-access concern.",
+      "D is an additional claimant who increases contest over the seat but has not proposed a solution beyond waiting to claim it."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T08:16:12.262210+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0067908,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2624,
+      "local_latency_ms": 35460.275,
+      "output_tokens": 3269,
+      "reasoning_tokens": 1856,
+      "successful_calls": 1,
+      "total_tokens": 5893
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S24-C0-R01",
+    "scenario_id": "S24"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,120 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "disputed seat ownership/priority",
+      "timing of vacating a seat (immediate move vs. finish eating)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants speak naturally and refer to concrete, visible facts (tissue packet, uncovered hot bowl).",
+      "Agent A repeats the same promise/offer to Agent D multiple times (Rounds 3, 7, 8), creating some mild repetition.",
+      "No confusing role assertions; statements remain consistent with the physical situation."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent B remained seated and only promised to vacate later while Agent A agreed to wait; no affirmative action or completed seat transfer occurred, so the incompatibility over who occupies the seat was not settled.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent B retained the practical position of occupying the seat but softened stance by promising to finish quickly and yield the seat afterward.",
+      "Agent A shifted from demanding immediate seating to accepting a waiting arrangement; A did not obtain the seat during the transcript.",
+      "Agent D sought a contingent arrangement (next free seat) and received confirmation from A; D did not change the core A–B disagreement."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A asks Agent B to move because A left a tissue packet to save the seat; Agent B refuses, saying the bowl is open and hot and cannot be moved now.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A agrees to wait and urges hurry; Agent B promises to finish quickly and allow A to take the seat afterward (softening the direct refusal).",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D requests that A give D the next free seat if A gets this one; A agrees. No change to the unresolved practical state over the disputed seat (B still occupying it).",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "No public speech or action recorded; the seat remains occupied by B and A is waiting per prior agreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "No public speech or action recorded; the underlying incompatibility (A wants the seat now; B still occupying it) remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or action recorded; prior promise by B to yield later is unfulfilled, so the practical conflict persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A reiterates to D the promise that D can have the next free seat if A takes this one; no resolution of A vs. B seat occupancy.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A repeats the same offer to D again; no evidence that B vacated or that A obtained the disputed seat.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Tension is practical: A claims prior reservation of the seat (tissue packet) vs. B's current occupancy with a hot, unstable bowl—both claims have plausible weight.",
+      "B's safety/feasibility concern (hot open bowl) is the main reason for refusing to move immediately; this yields a de-escalatory promise rather than immediate compliance.",
+      "Promises about future yielding (B will finish quickly) reduce immediate conflict but do not eliminate the incompatibility until an observable action (vacating) occurs."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T08:28:51.779347+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0053268,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2336,
+      "local_latency_ms": 27307.22,
+      "output_tokens": 2573,
+      "reasoning_tokens": 1472,
+      "successful_calls": 1,
+      "total_tokens": 4909
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S25-C0-R01",
+    "scenario_id": "S25"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation / ownership",
+      "who should give up the occupied seat",
+      "risk of spilling an open bowl",
+      "moving personal items (tissue packet)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete, context-appropriate reasons (open bowl spill risk, hot food urgency).",
+      "Negotiation proceeds by conditional offers and acceptances rather than vague promises; e.g. B's explicit condition and A's acceptance in Turn 9–10.",
+      "Some brief repetition of the agreed condition occurs (Rounds 6 and 8) but serves confirmation rather than obstruction."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent B required a concrete safety condition before standing ('I'll stand if you move the tissue packet onto the seat now and take my bowl before I get up so it won't spill'). Agent A accepted and agreed to perform those actions ('Okay. I'll move the tissue packet back onto the seat now. Hand me the bowl and I'll hold it while you stand.'). Both parties explicitly agreed to who would do what, so the substantive dispute over the seat was resolved by this conditional exchange.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from an uncompromising demand ('That's my seat...please move') to offering to hold the bowl and perform the requested actions to secure the seat ('I'll move the tissue packet...Hand me the bowl').",
+      "Agent B moved from refusing to give up the seat to conditional acceptance contingent on a safe handover ('I'll stand if you move the tissue packet...and take my bowl').",
+      "Agent C consistently supported B's position but accepted the negotiated arrangement once it was explicit.",
+      "Agent D expressed interest in any genuinely free seat but did not force or reopen the dispute after the parties reached agreement."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent A claims the seat reserved by a tissue and demands B move ('That's my seat...please move your things so I can take the seat.'). Agent B refuses to give up the seat now citing an open bowl that may spill and suggests alternatives ('I can't carry this open bowl; it'll spill. You can take another chair or wait while I finish'). Clear, incompatible demands are expressed.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A intensifies the demand that B stand immediately and offers to hold the bowl ('I'll hold your bowl while you stand and move — please move your things now.'). Agent C supports B's position and urges A to wait or take another chair ('Agent B moved the packet aside and she's still eating. ... wait until we clear the table'). Opposition solidifies between A's demand and B/C's refusal.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A reiterates insistence and repeats offer to hold the bowl ('I can't take another chair...please stand and move; I'll hold your bowl'), while Agent C conditions acceptance on actions by A ('if you're taking the seat, move the tissue packet now and hold her bowl yourself, then sit'). The disagreement remains strong and procedural conditions are being negotiated but unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "A new potential claimant appears (Agent D: 'If the seat's genuinely free, I'll take it'), while A reasserts ownership ('I'm taking that seat now. Agent B, I'll hold your bowl...'). The contest over who may occupy the seat grows but remains unresolved between the parties.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B offers a concrete conditional arrangement ('I'll stand if you move the tissue packet onto the seat now and take my bowl before I get up so it won't spill'). Agent A directly accepts and specifies the actions ('Okay. I'll move the tissue packet back onto the seat now. Hand me the bowl and I'll hold it while you stand.'). This is a mutual, concrete spoken agreement to exchange actions, which settles the substantive dispute in this speech-only transcript.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Participants confirm and restate the previously agreed concrete arrangement without raising new incompatible demands ('Okay. Move the tissue packet onto the seat and take the bowl now; I'll stand once you have it.'; 'Okay — go ahead, but please be quick.'). No new substantive conflict appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D indicates willingness to take the seat only once it's clear ('I'll take the seat as soon as it's clear'), and Agent A restates intent to take the seat now. These comments align with the earlier agreement and do not reintroduce substantive opposition.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agents repeat and reaffirm the concrete arrangement (B: 'Okay—move the tissue packet onto the seat and take the bowl now; I'll stand once you have it.' A: 'Okay. Hand me the bowl and I'll move the tissue packet onto the seat. Stand once it's clear.'). No further incompatible demands are made.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The primary tension is a norm conflict: A's reservation claim (tissue packet) versus B's de facto occupancy and safety concern about an open bowl.",
+      "Risk of spilling the bowl is a decisive practical constraint that justified B's refusal to stand without a handover; this yielded a concrete conditional agreement rather than positional standoff.",
+      "A's willingness to hold the bowl and to move the tissue packet functioned as the concession required to resolve the incompatibility.",
+      "A potential third claimant (D) did not reopen the dispute after the parties agreed on an explicit handover arrangement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T09:05:51.328293+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0079068,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2896,
+      "local_latency_ms": 37400.126,
+      "output_tokens": 3793,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6689
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 3,
+    "run_id": "S25-C0-R03",
+    "scenario_id": "S25"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,123 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation/ownership (tissue packet vs. present tray)",
+      "immediate seating vs. finishing a meal (safety of moving an open bowl)",
+      "future claim to the soon-to-be-vacated seat"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants give concrete, contextually appropriate reasons (hot food, risk of spilling an open bowl), which grounds their positions.",
+      "A pragmatic trade-off is reached (A takes empty seat) rather than escalating the dispute.",
+      "B repeatedly restates the same assurance across later rounds, producing noticeable but non-substantive repetition.",
+      "D's conditional claim \"once it's genuinely free\" introduces a reasonable precaution before B's formal agreement."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "A accepted an alternative seat rather than insisting on immediate use: \"Fine. I'll take the empty seat.\" B agreed to allow D to take B's seat after finishing and when the bowl is safe to move: \"Sure — take it once it's genuinely free. I'll move as soon as I'm done and the bowl's safe to carry.\" Thus A adjusted by taking an empty seat now; B accommodated both by staying until the bowl is safe and promising the seat to D afterward; D accepted the conditional arrangement.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A changed position: from claiming the seat as reserved to accepting the offered empty seat (Turn 1 → Turn 5: \"Fine. I'll take the empty seat.\").",
+      "Agent B retained use of the seat while softening stance by promising to move later when safe (Turn 2 → Turn 4: \"I'll move as soon as I'm done and the bowl's safe to carry.\").",
+      "Agent D introduced a new claim and then accepted B's conditional agreement (Turn 8 and Turn 30: \"I'll wait here and take it once it's genuinely free.\")."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent A: \"That's my seat — I left that tissue packet. I need to sit and eat; please move.\" vs Agent B: \"That tissue packet doesn't reserve the seat — I moved it. The bowl's open and will spill if I carry it, so I'm staying to finish eating. If you need a seat now, there's an empty one over there, or I can move after I'm done.\"",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A requests a compromise: \"Can you slide over a bit so I can sit while you finish, or should I take the empty seat?\" Agent B refuses immediate accommodation for safety reasons: \"Take the empty seat. I can't slide — the bowl's open and will spill if I move it. I can move after I'm done.\" (Conflict reduced because A is offered a concrete alternative, but incompatibility about immediate seating remains.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A accepts the offered alternative: \"Fine. I'll take the empty seat.\" At the same time Agent D introduces a new, conditional claim: \"Agent B — when you're done, can I have that seat? I'll take it as soon as it's genuinely free.\" (A–B conflict is being settled; a new potential conflict between B and D is initiated but not yet responded to.)",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B explicitly agrees to the future claim: \"Sure — take it once it's genuinely free. I'll move as soon as I'm done and the bowl's safe to carry.\" (This provides a concrete, mutual arrangement: A accepted the empty seat and B committed to allow D the seat once free.)",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] — no new conflict introduced; prior issues already settled by spoken agreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B repeats the prior assurance: \"Sure — take it once it's genuinely free. I'll move as soon as I'm done and the bowl's safe to carry.\" — repetition of settled arrangement, no new disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent B: \"Yes — take it once it's genuinely free. I'll move when I'm done and the bowl's safe.\" Agent D: \"Okay — I'll wait here and take it once it's genuinely free.\" (Both parties restate and accept the earlier agreement.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent B repeats the same commitment multiple times: \"Okay — I'll move as soon as I'm done and the bowl's safe.\" (No new claims or disputes; some duplicated/garbled repeats but no substantive conflict.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The main barrier to immediate accommodation was a practical safety constraint (open bowl may spill) rather than unwillingness to yield.",
+      "A's priority (eat while food is hot) led to accepting an alternative rather than forcing immediate displacement.",
+      "D's request was conditional and deferred; B's explicit promise removed uncertainty about the seat's future allocation.",
+      "Repeated restatements by B functioned to avoid misunderstanding rather than to reopen conflict."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T09:19:20.523225+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00823255,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2751,
+      "local_latency_ms": 40166.946,
+      "output_tokens": 3974,
+      "reasoning_tokens": 2496,
+      "successful_calls": 1,
+      "total_tokens": 6725
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 5,
+    "run_id": "S25-C0-R05",
+    "scenario_id": "S25"
+  },
+  "schema_version": 2
+}

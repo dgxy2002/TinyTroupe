@@ -1,0 +1,120 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat allocation",
+      "safety/stability of an open bowl (spill risk)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents give concrete, context-appropriate reasons (spill risk, hot food) which drive negotiation.",
+      "There is a short garbled/technical noise in B and later A messages that adds clutter but not substantive content.",
+      "D's repeated requests to be informed are polite and do not create a competing demand while seat is taken."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Participants reached a mutual, concrete spoken arrangement: B conditioned moving on A holding the bowl and A had offered to hold it. Key lines: B — \"Alright — I'll slide over a bit if you hold the bowl steady while I move.\" A — \"Okay — I'll hold your bowl steady. Slide over and I'll sit.\" B agreed to alter position and A agreed to provide assistance.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B moved from an initial refusal to move to a conditional acceptance: \"I'll slide over a bit if you hold the bowl steady while I move.\"",
+      "Agent A initially insisted on the seat but then provided the concrete accommodation (holding the bowl) that enabled resolution.",
+      "Agent C remained supportive of B's initial constraint and did not change position; Agent D consistently waited and requested notification but did not press a competing claim."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Agent A demands the seat: \"can you move over so I can sit?\" Agent B refuses because the bowl is open: \"I can't move while this bowl's open — it'll spill. I'll move when I'm finished.\"",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "A repeats the request and offers to hold the bowl; C supports B's refusal: \"Agent B already said she can't move while her bowl's open. Can you wait until she's finished?\" Conflict remains between A's seat claim and B's refusal.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "B makes a conditional agreement and A had offered the relevant help: \"Alright — I'll slide over a bit if you hold the bowl steady while I move.\" (B) and earlier A had offered: \"I can hold or watch your bowl while you move.\" Mutual spoken agreement on a concrete arrangement is reached in this round.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "A confirms willingness to hold the bowl and instructs B to slide: \"Okay — I'll hold your bowl steady. Slide over and I'll sit.\" No opposing substantive claims are expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "D requests to be informed if the seat frees, A replies the seat is taken and that B will slide and A will sit. No active incompatibility is asserted: \"if that seat frees up, can I have it?\" / \"it's taken. Agent B will slide and I'll sit.\"",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "D repeats the request to be told; no substantive disagreement or competing demands are expressed beyond the existing, already-resolved arrangement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "A reports that B is sliding and reiterates the seat is taken. No new incompatible claims arise.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "D asks if the seat is free; A replies it is still taken and that she is holding the bowl and will sit: \"it's still taken. Agent B's sliding now; I'm holding her bowl and will sit.\" No substantive conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The disagreement centered on a practical safety constraint (open bowl) versus competing urgency (hot food/seat).",
+      "The resolution succeeded because A offered a practical accommodation (holding the bowl) that directly addressed B's stated constraint.",
+      "No active dispute arose over D's claim because the seat was already (mutually) allocated by agreement before it freed."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T09:01:13.732524+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0074348,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 4544,
+      "local_latency_ms": 50837.887,
+      "output_tokens": 3351,
+      "reasoning_tokens": 2112,
+      "successful_calls": 1,
+      "total_tokens": 7895
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 2,
+    "run_id": "S25-C0-R02",
+    "scenario_id": "S25"
+  },
+  "schema_version": 2
+}

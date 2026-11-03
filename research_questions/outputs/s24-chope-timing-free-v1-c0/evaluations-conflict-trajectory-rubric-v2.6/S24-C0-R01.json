@@ -1,0 +1,126 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who gets the disputed seat",
+      "how long Agent A must wait (4 vs 5 minutes)",
+      "risk of spilling an open bowl",
+      "aisle obstruction / whether Agent A will block the aisle",
+      "third-party claim (Agent D waiting to take seat)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete, relevant reasons (hot food, open bowl, aisle obstruction).",
+      "Multiple rounds contain near-duplicate restatements from Agent A ('I'll wait three minutes' then 'I'll wait four minutes') and Agent D repeating intent to wait; this produces some repetition.",
+      "No role confusion; speakers reference each other and the physical setting consistently.",
+      "C introduces the aisle-obstruction constraint which broadens the dispute beyond wait-time."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No substantive agreement was reached. Agent A insists on waiting four minutes then taking the seat ('I'll wait four minutes... I'll take the seat after four minutes.'), while Agent B insists they need five minutes before leaving ('I need about five minutes — I'll leave right after.'). Agent C and B request five minutes to avoid blocking the aisle ('Agent A — that will block the aisle... Can you wait five minutes?'). Agent D also intends to claim the seat when it's free. The incompatible demands (A: 4 minutes; B/C: 5 minutes or A stands) remain unsettled.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened their demand over rounds: immediate seat (Round 1) → 3 minutes (Rounds 2–3) → 4 minutes (Round 6 onward). Evidence: Turns 1, 3/5, 12/15.",
+      "Agent B remained consistent in needing ~5 minutes and refusing shorter waits. Evidence: Turns 2, 11, 13.",
+      "Agent C consistently advocates for waiting 5 minutes to avoid blocking the aisle and later offers an alternative (stand). Evidence: Turns 4, 6, 14, 16.",
+      "Agent D consistently states intent to wait and claim the seat when free but did not negotiate timing; repeated at Turns 7 and 9."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent A: 'Hey, that's my seat. I left the tissue packet to reserve it. Please move — my food's hot and I need to eat.'\nTurn 2 — Agent B: 'I can't move. I pushed the tissue packet aside and this bowl's open — it'll spill if I carry it. I need to finish eating here; I can be done in about five minutes.'",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent A: 'I'll wait three minutes. After that I'll take the seat so I can eat my hot food. Can you finish sooner?'\nTurn 4 — Agent C: 'Agent A — if you take that seat it'll block the aisle. Will you wait?'",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent A: 'I'll wait three minutes. After that I'll take the seat so I can eat my hot food.'\nTurn 6 — Agent C: 'Agent A — that'll still block the aisle. Agent B said they'll be done in about five minutes. Can you wait five minutes instead?'",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent D: 'I'll take that seat when it's actually free. If Agent B needs five minutes, I'll wait here and claim it then.'\nTurn 8 — Agent A: 'Agent D — I already said I'll wait three minutes. After that I'll take the seat to eat my hot food. Please don't claim it before it's free.'",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 — Agent D: 'Agent B said they'll be done in about five minutes. I'll take the seat when it's actually free — I'll wait here.'\nTurn 10 — Agent A: 'Agent D — I already said I'll wait three minutes. After that I'll take the seat to eat my hot food. Please don't claim it before it's free.'",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 — Agent B: 'Agent A, three minutes won't work. This bowl's open and I'll spill it if I pick it up. I need about five minutes — I'll leave right after.'\nTurn 12 — Agent A: 'Agent B — I can't wait five minutes. I'll wait four minutes. Can you finish in four?'",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 13 — Agent B: 'Four won't work. This bowl's open and it'll spill if I pick it up. I need about five minutes — I'll leave right after.'\nTurn 14 — Agent C: 'Agent A — that will block the aisle. Agent B says they need five minutes. Can you wait five minutes?'",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 15 — Agent A: 'Agent C — I can't wait five minutes. I already said four minutes. My food's hot; I'll take the seat after four minutes. Please don't claim it before it's free.'\nTurn 16 — Agent C: 'Agent A — four minutes still blocks the aisle. Can you wait five, or stand so you don't block it?'",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Core tension: Agent A's urgency (hot food) versus Agent B's practical inability to move (open bowl risking spill).",
+      "Agent C's concern about aisle obstruction creates a separate safety/obstruction interest that motivates insisting on the longer wait or alternative (A standing).",
+      "Agent A made incremental concessions (immediate -> 3 -> 4 minutes) but did not meet Agent B's needed 5 minutes, so negotiation stalled.",
+      "Agent D's intention to claim the seat after it becomes free adds potential competition but did not change the central timing dispute."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T09:23:40.606780+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00640005,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2901,
+      "local_latency_ms": 24194.351,
+      "output_tokens": 3039,
+      "reasoning_tokens": 1344,
+      "successful_calls": 1,
+      "total_tokens": 5940
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S24-C0-R01",
+    "scenario_id": "S24"
+  },
+  "schema_version": 2
+}

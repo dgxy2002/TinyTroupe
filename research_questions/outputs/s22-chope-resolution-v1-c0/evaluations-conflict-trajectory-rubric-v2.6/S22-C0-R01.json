@@ -1,0 +1,123 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat occupancy/reservation",
+      "use of a tissue packet as a placeholder",
+      "open bowl blocking part of the seat and risk of spilling",
+      "incompatible time windows (A:4 min, B:8 min, D:~6 min) and cold food"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants state clear practical constraints (B: spill risk, explicit time estimates), which grounds their positions.",
+      "Repeated use of the tissue as a reservation claim (A repeats same justification across rounds) creates cyclical repetition but is not excessive.",
+      "No constructive alternative solutions (e.g., temporarily placing bowl on tray elsewhere, asking vendor, or one party offering a concrete short-term compromise) were proposed."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No affirmative settlement occurred. Multiple parties asserted mutually incompatible claims (A and D both demanded the contested seat citing the tissue placeholder and urgency; B and C occupied the table and B refused to move the open bowl citing spill risk). Example quotations: A: \"I left that tissue packet... I need it now for four minutes.\" D: \"If you're not sitting, I'm taking the seat.\" B: \"I won't shift the bowl; it'll spill if I try. I need about eight minutes.\" No party accepted another's proposal and no concrete arrangement (who will move, wait, or give up) was agreed, so the dispute remained unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "No participant conceded or substantially softened their main position during the run: B consistently refused to move the bowl and insisted on needing eight minutes (e.g., \"I won't shift the bowl; it'll spill if I try.\").",
+      "A consistently asserted the tissue placeholder and demanded four minutes (repeated across rounds).",
+      "D newly entered and repeatedly asserted a competing urgent claim, also refusing to wait (threatening to take the seat).",
+      "C consistently affirmed that their seat is occupied and asked others not to take it."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A: \"I left that tissue packet to save this seat. I need to sit and eat now for four minutes.\" vs Agent B: \"That tissue packet doesn't reserve the seat. I uncovered an open bowl I can't carry; I need about eight minutes to finish.\" -- incompatible claims about who may use the seat and whether the tissue reserves it; both assert time-sensitive needs.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A repeats demand and adds a conditional: \"If you can't cover that open bowl, please move it off the seat so I can sit; I can't wait eight minutes.\" Agent C supports A: \"can you move the open bowl off the seat so Agent A can sit?\" -- the original disagreement sharpens as a second participant presses B to yield.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B: \"I can't move the bowl — it'll spill if I carry it. I need about eight minutes to finish.\" vs Agent C to A: \"can you wait the four minutes you said? If you can't, you'll need to find a different table.\" -- B asserts a practical constraint preventing the requested accommodation; A's need remains incompatible with B's.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D enters and makes an independent claim: \"you left that tissue five minutes ago. If you're not sitting, I need the seat; my meal's getting cold.\" Agent A repeats: \"I left that tissue five minutes ago. I need the seat now for four minutes.\" -- a new claimant increases the number of incompatible demands (A and D both claim right to sit while B is occupying and cannot move the bowl).",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D threatens action: \"are you sitting now? If you're not sitting, I'm taking the seat.\" Agent B responds: \"I'm sitting here eating. I need about eight minutes and I can't carry that open bowl without spilling it. Please don't take the seat.\" -- threat of unilateral seizure versus refusal to yield; positions harden.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D: \"Can you finish sooner or shift the bowl a little so I can sit?\" Agent B: \"I can't finish in six — I need about eight minutes. I won't shift the bowl; it'll spill if I try. Can you wait eight minutes, or do you need the seat now?\" -- no movement from either side on core incompatibility (timing and bowl handling).",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C: \"this seat's taken. I'm eating and need to finish; please don't take it.\" Agent D: \"I need that seat. My meal'll be cold in about six minutes. Are you sitting there now? If not, I'm taking it.\" -- continued mutual exclusion and repeated intent to take the seat if not already occupied by claimant.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C: \"I'm sitting here eating. Please don't take the seat.\" Agent A again claims reservation: \"I left that tissue packet five minutes ago to save this seat. I need it now for four minutes to eat. Please don't take it.\" -- multiple claimants continue incompatible demands with no agreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "A narrow physical constraint (an open bowl that 'will spill') prevents a simple compromise of moving the obstruction.",
+      "The disagreement is primarily practical and temporal: overlapping short time windows (A 4 min, D ~6 min, B 8 min) leave no easily acceptable waiting solution.",
+      "A social convention (using a tissue packet to reserve a seat) is disputed and not a shared norm among these strangers, so it does not resolve the conflict."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T09:22:13.645074+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00685605,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2941,
+      "local_latency_ms": 26615.065,
+      "output_tokens": 3262,
+      "reasoning_tokens": 1600,
+      "successful_calls": 1,
+      "total_tokens": 6203
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S22-C0-R01",
+    "scenario_id": "S22"
+  },
+  "schema_version": 2
+}

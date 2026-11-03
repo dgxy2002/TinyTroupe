@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "immediate use of a seat vs current occupant's need to finish/avoid spilling an open bowl",
+      "validity of a passive reservation (tissue packet) vs physical occupation",
+      "timing (30 seconds vs 1 or 3 minutes) and safety/aisle blocking concerns"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give clear, ordinary reasons (short break, hot food, safety of open bowl) that make stakes understandable.",
+      "Agent A repeatedly restates the 30-second demand; Agent B repeatedly insists on safety-based minimum time. This repetition is purposeful rather than needless.",
+      "C consistently supports waiting and points to practical consequences (spillage, aisle blockage).",
+      "D introduces a competing interest but otherwise remains a bystander; no third-party enforcement appears."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No substantive agreement was reached by the end of Round 8. Agent A repeatedly insisted on immediate seating (threatening to sit if not cleared in 30 seconds: \"If Agent B can't clear it in 30 seconds I'll sit now\"), while Agent B consistently refused to move sooner than one minute because the \"bowl will spill\". Agent C urged waiting; Agent D expressed interest but did not change the stalemate. A small concession occurred (A agreed to \"keep the chair tucked\" so as not to block the aisle), but that did not resolve the incompatible demands about who may occupy the seat and when. The central incompatible demands therefore remain unsettled.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent B softened her requested wait time from 3 minutes (Turn 2) to 1 minute (Turn 9) but maintained that less than one minute would risk spilling the bowl (Turn 12).",
+      "Agent A repeatedly refused to accept waits of 1 minute or longer but did concede to keep the chair tucked to avoid blocking the aisle (Turn 19) while still insisting on immediate seating absent bowl clearance.",
+      "Agent C consistently advocated waiting; no substantive change in C's position.",
+      "Agent D stated intent to take the seat when free but did not otherwise change positions or press further."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent A): \"That's my seat — I left a tissue packet on it... Please move so I can sit\" vs Turn 2 (Agent B): \"The bowl's open and will spill if I carry it. Give me three minutes...\" — clear incompatible demands about who should occupy the seat now.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A): \"I can't wait three minutes... Please clear it in 30 seconds\" — Agent A shortens the time demand and presses immediate access against B's earlier 3-minute request; Turn 4 (Agent C) backs B.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent A): \"If Agent B can't clear it in 30 seconds I'll sit now.\" — A threatens to sit despite B's request and C's safety/aisle argument (Turn 6), increasing confrontation over the practical incompatibility.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent D): \"I'll take that seat the moment it's genuinely free\" introduces an additional claimant; Turn 8 (Agent A) reiterates ownership and demand: \"it's my seat — I left a tissue packet on it... clear the bowl in 30 seconds or I'll sit\" — multiple parties insist on competing, positions hardened.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent B): \"Give me one minute and I'll clear it\" — B shortens her requested wait time (a concession from 3 minutes). Turn 10 (Agent C) asks A to wait, indicating some movement toward compromise though A hasn't accepted the one-minute timing.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent A): \"one minute is too long... I'll sit and eat now.\" vs Turn 12 (Agent B): \"I can't clear it in 30 seconds—the bowl will spill. One minute is the shortest safe time.\" — B insists on safety constraint while A refuses to yield, re-intensifying the core incompatibility.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 13 (Agent C) repeats request to wait one minute; Turn 14 (Agent A) repeats refusal: the same incompatible demands persist without new concessions or agreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 15 (Agent C): \"if you sit now, please don't block the aisle — keep your chair tucked\" and Turn 19 (Agent A): \"Okay — I'll keep the chair tucked if I sit. Agent B, please clear the bowl in 30 seconds or I'll sit...\" — A softens on how to sit (not blocking aisle) but maintains the core demand for immediate seating unless B clears the bowl in 30 seconds, so the main conflict remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The conflict is primarily practical: immediate physical access vs safe completion of an in-progress meal with an open bowl.",
+      "A's reservation cue (tissue packet) is treated by A as a strong claim but others treat physical occupation and safety as stronger immediate constraints.",
+      "Small concessions (B shortening wait from 3 to 1 minute; A agreeing to tuck chair) reduce some friction but do not resolve the incompatible temporal demands.",
+      "Introduction of an additional claimant (Agent D) increases competition but did not alter the core incompatibility between A and B."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T09:23:01.821357+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0067563,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2870,
+      "local_latency_ms": 33086.16,
+      "output_tokens": 3221,
+      "reasoning_tokens": 1600,
+      "successful_calls": 1,
+      "total_tokens": 6091
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S23-C0-R01",
+    "scenario_id": "S23"
+  },
+  "schema_version": 2
+}

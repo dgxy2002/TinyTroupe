@@ -1,0 +1,120 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat allocation / saved seat",
+      "timing of yielding seat (immediate vs after finishing food)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Polite, concise, and directly focused on the practical trade-off (hot food urgency vs risk of spilling an open bowl).",
+      "Agent A repeats the same allocation line multiple times (Rounds 3, 7, 8): \"...if I take this seat, you can have the next free one.\"",
+      "Round 2 contains a clear, concrete mutual arrangement that resolves the immediate conflict."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agents reached a concrete mutual agreement in Round 2: Agent A accepted to wait (\"Agent B, okay — I'll wait, but please hurry; my food's hot.\") and Agent B promised to yield the seat after finishing (\"I'll finish quickly, Agent A. You can have the seat as soon as I'm done.\"). This settled the incompatible demands about immediate occupancy.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A moved from an initial demand to immediate occupancy (Round 1) to acceptance of waiting (Round 2): \"I'll wait...\"",
+      "Agent B maintained inability to move initially but agreed to yield the seat after finishing (Round 2): \"You can have the seat as soon as I'm done.\"",
+      "Agent D did not press a competing claim; they asked for the next free seat and received A's assent, so no opposition arose."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 2,
+    "round_scores": [
+      {
+        "evidence": "Agent A demanded the seat: \"I left that tissue packet to save this seat...could you move so I can sit and eat?\" Agent B refused to move due to an open, hot bowl and said they would finish first: \"I can't move right now...I'll finish eating here quickly so you can take the seat afterward.\" This is a clear, active incompatibility over who should occupy the seat.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A accepted waiting: \"Agent B, okay — I'll wait, but please hurry; my food's hot.\" Agent B committed to finish and yield the seat: \"I'll finish quickly, Agent A. You can have the seat as soon as I'm done.\" This is a concrete mutual agreement (A waits; B gives seat after finishing), so the substantive conflict over immediate seating is resolved in this round.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D asked a follow-up allocation question and Agent A agreed: \"Agent A — if that seat ends up yours, can I have the next free one?\" / \"Yeah, fine — if I take this seat, you can have the next free one.\" No incompatible demands were expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "No public speech or observable action; the previously stated agreement (A waits; B yields when done) stands in the transcript, and no new disagreement appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "No public speech or observable action; no new conflict introduced and the concrete arrangement from round 2 remains the only relevant state in the transcript.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action; no new incompatible claims appear.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A repeats the prior allocation: \"Yeah — if I take this seat, you can have the next free one.\" This is restating an already-settled arrangement, not a new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A repeats the same allocation again: \"Yeah—if I take this seat, you can have the next free one.\" No incompatible claims or challenges are present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The core tension was practical: Agent A's hot food needing to be eaten now versus Agent B's inability to safely move an open, hot bowl.",
+      "A simple time-based accommodation (A waits; B yields after finishing) resolves the incompatibility without third-party enforcement.",
+      "The tissue packet as a seat-saving signal was asserted by A but the decisive factor in resolution was the parties' negotiated timing rather than enforcement of an abstract saving norm."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T09:24:14.838111+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00635205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2613,
+      "local_latency_ms": 22341.451,
+      "output_tokens": 3051,
+      "reasoning_tokens": 1728,
+      "successful_calls": 1,
+      "total_tokens": 5664
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S25-C0-R01",
+    "scenario_id": "S25"
+  },
+  "schema_version": 2
+}

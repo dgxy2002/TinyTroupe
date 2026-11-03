@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "right to occupy the disputed seat",
+      "use of a tissue packet as a reservation marker",
+      "safety/ability to move an open bowl (practical constraint)",
+      "competing time constraints of claimants"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete, context-specific reasons (time limits, bowl safety) rather than abstract claims.",
+      "Repeated formulaic claims: Agent A repeatedly uses 'I left the tissue packet to reserve this seat' and 'I have about four minutes to eat.'",
+      "No role confusion; statements remain consistent with the physical hawker-centre setting."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No affirmative, mutual settlement was reached. Agent A repeatedly demanded the seat and ultimately declared 'I'm taking the seat now' (Turn 10) and later 'I already took the seat' (Turn 12), while Agent B consistently refused to move ('I can't move... I need about eight minutes', Turn 9) and Agent C continued to object on safety grounds ('don't take the seat... it'll spill', Turn 11). No party accepted another's proposal or changed position to create a concrete, mutually agreed arrangement.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A escalated rather than softened their position: persisted in demanding the seat and ultimately declared taking it (Turns 1, 3, 5, 8, 10, 12).",
+      "Agent B consistently refused to move due to a safety constraint (open bowl) and maintained intent to stay until finished (Turns 2, 9).",
+      "Agent C consistently supported Agent B and declined to press B to hurry (Turns 4, 6, 11).",
+      "Agent D introduced another claimant with a competing time constraint (Turn 7) but did not press further after A's escalation."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent A insists the seat is reserved and demands 'please move.' Turn 2: Agent B refuses: 'I can't move... I need about eight minutes.' Clear, substantive incompatibility over who may occupy the seat.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent A reiterates the four-minute constraint and proposes covering/moving the bowl as a concrete remedy. Turn 4: Agent C supports B ('Please wait'). The core disagreement (A wants the seat now; B refuses) remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: Agent A threatens direct action: 'if she can't cover or move the bowl now, I'm taking the seat.' Turn 6: Agent C doubles down supporting B. A's stated willingness to take the seat raises stakes and sharpens the incompatibility.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: Agent D introduces another claimant and time pressure ('My food will be cold in about six minutes — if Agent B can't cover or move the bowl, I'm taking the seat'). Turn 8: Agent A reiterates intent to take. Multiple claimants and rigid positions increase the conflict intensity.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9: Agent B reasserts refusal to move ('I can't move... I need about eight minutes'). Turn 10: Agent A declares, 'I'm taking the seat now so I can eat.' A unilateral claim of action directly conflicts with B's continued occupation — entrenched, little common ground.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11: Agent C objects to A's action on safety grounds ('don't take the seat. Agent B's bowl is open and it'll spill.'). Turn 12: Agent A replies, 'I already took the seat... I'll be careful.' The incompatible claims persist with no mutual agreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The dispute is primarily practical: A's short time window versus B's inability to safely relocate an open bowl.",
+      "Reservation norms (tissue packet) are contested: A treats the packet as a binding reservation but others do not concede that entitlement.",
+      "Multiple claimants (A and later D) increase pressure and reduce room for compromise; C's support for B strengthens B's position rhetorically but cannot force a physical change."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T09:21:25.546704+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0064208,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2792,
+      "local_latency_ms": 25527.237,
+      "output_tokens": 3063,
+      "reasoning_tokens": 1792,
+      "successful_calls": 1,
+      "total_tokens": 5855
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S21-C0-R01",
+    "scenario_id": "S21"
+  },
+  "schema_version": 2
+}

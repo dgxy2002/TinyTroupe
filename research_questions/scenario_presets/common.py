@@ -122,6 +122,17 @@ class ScenarioPreset:
     observation_focus: str
     implementation_notes: str = ""
     round_observations: Mapping[int, str] = field(default_factory=dict)
+    # Empty means free resolution: agents are told no agreement is required. Non-empty
+    # text is shown identically to every agent and replaces that sentence. Resolution-
+    # expected scenarios must not be pooled with free-resolution ones.
+    resolution_expectation: str = ""
+    # True removes timing cues from the shared prompt (the clock line, the "five minutes"
+    # example, and the time-estimate guidance). Scenario text must be timing-free too.
+    timing_free: bool = False
+    # True makes the interaction speech-only in the shared prompt: physical-action wording
+    # is dropped and spoken commitments count. Combined with a resolution expectation it
+    # also replaces the 'priority is a hard constraint' rule with a priced-preference rule.
+    conversation_only: bool = False
 
 
 def validate_scenario(scenario: ScenarioPreset) -> None:

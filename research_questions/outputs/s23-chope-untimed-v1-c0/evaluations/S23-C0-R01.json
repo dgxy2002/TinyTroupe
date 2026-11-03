@@ -1,0 +1,125 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation/claim",
+      "timing to clear an open bowl (risk of spill)",
+      "blocking the aisle / physical obstruction",
+      "competing need for limited break time"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concise, context-appropriate reasons (short break, risk of spill).",
+      "A repeatedly restates the 30-second ultimatum—moderate repetition across rounds.",
+      "C acts as a mediator/third-party reminder of safety and aisle concerns.",
+      "B makes a clear safety-based concession (3 min → 1 min) but holds firm on the minimum required time."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No party agreed to the other's timing or took the seat; A repeatedly threatened to sit, B insisted one minute was the minimum safe time to move the bowl, and no action (clearing or sitting) occurred by the transcript end.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "B conceded from an initial request of 3 minutes to 1 minute (Turn 9), showing some movement toward A.",
+      "A repeatedly refused to accept anything longer than 30 seconds throughout and retained the ultimatum (Turns 3, 5, 11, 14, 19).",
+      "A softened on one practical point in Round 8, promising to tuck the chair to avoid blocking the aisle (Turn 19).",
+      "C consistently maintained support for B's requested wait; D remained a passive claimant (no change of position)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "A claims the seat (tissue packet) and demands B move now; B refuses and asks for three minutes due to an open bowl (Turns 1–2).",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "A shortens acceptable wait to 30 seconds and insists; C supports B's original 3-minute request (Turns 3–4), increasing explicit opposition.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "A threatens to sit now if B can't clear in 30 seconds; C warns of spill and aisle blockage if A sits—positions directly clash with risk/space concerns (Turns 5–6).",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "D signals intent to take the seat when free; A reasserts claim and repeats the 30-second ultimatum while B/C maintain the opposite position (Turns 7–8).",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "B reduces requested wait from 3 minutes to one minute (a concession), but A still wants 30 seconds; C asks A to wait (Turns 9–10).",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "A rejects one minute as too long and repeats threat to sit; B asserts one minute is the shortest safe time (Turns 11–12), keeping positions opposed and practically incompatible.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "C repeats B's one-minute request; A repeats refusal to wait and threat to sit—no substantive change in positions (Turns 13–14).",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "C offers a practical mitigation (if you sit, don't block aisle); A agrees to tuck the chair (softening) but reiterates the 30-second demand—main practical incompatibility remains (Turns 15, 19).",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Core conflict is a tradeoff between A's limited break time (urgency) and B's safety constraint (open bowl will spill if moved too quickly).",
+      "A's strategy is repeated ultimatum and invoking a physical marker (tissue) to claim the seat; B's strategy is insisting on a safe, short delay.",
+      "C functions to reinforce safety/etiquette and to plead for patience, while D is a bystander competitor waiting for the seat.",
+      "No operative action (clearing bowl, sitting, or an accepted waiting time) occurs, so incompatibility remains practical and unresolved."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T07:55:47.217390+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "32dc407f15cf4dc3477cc4de2bf7dc84c334172e6e2868a176fb8c6deeca2468",
+    "prompt_version": "conflict-trajectory-rubric-v2.5",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00624905,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2593,
+      "local_latency_ms": 26094.995,
+      "output_tokens": 3002,
+      "reasoning_tokens": 1728,
+      "successful_calls": 1,
+      "total_tokens": 5595
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S23-C0-R01",
+    "scenario_id": "S23"
+  },
+  "schema_version": 2
+}

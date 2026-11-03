@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Immediate use of a two-seat table / disputed seat",
+      "Whether Agent B should move or slide while eating (risk of spilling)",
+      "Timing (A's hot food) vs B's need to finish bowl"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants give concrete practical reasons (A: 'my food's hot'; B: 'this bowl's open and will spill'), which keeps the exchange grounded.",
+      "Repeated formulaic lines: B's repeated 'I'll finish here, then you can have the seat' and C's repeated 'don't block the aisle' occur across rounds.",
+      "No role confusion; the exchange stays consistent with the hawker-centre setting (tray, bowl, tissue packet, aisle concern).",
+      "A garbled message in Round 6 introduced noise but did not change positions."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No substantive settlement occurred by the end of the transcript. Agent B repeatedly refused to move because their bowl would spill and promised to finish then yield the seat; Agent A repeatedly demanded immediate seating because their food was hot and ultimately offered an alternative (take another nearby seat) but did not state a mutual, accepted arrangement with Agent B or confirm leaving. Agent B remained in the seat and no one performed an action to free it, so the central incompatibility (A wanting the seat now vs B refusing to move) remains unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B: retained position throughout — repeatedly stated they cannot move because the bowl is open and will spill; offered to yield only after finishing (no change).",
+      "Agent A: initially insisted on immediate seating but by Round 8 softened and offered to take another nearby seat if waiting would be long (softening of stance).",
+      "Agent C: consistently prioritized not blocking the aisle; after B's statements accepted that B would finish (no major change).",
+      "Agent D: initially claimed ability to confirm the tissue packet; by Round 8 accepted that if A leaves they will take the seat when it is actually free (willingness to wait rather than force an outcome)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A: 'that's my seat. I left the tissue packet there. Could you move so I can sit?' vs Agent B: 'I can't move — this bowl's open and will spill if I carry it. I'll finish it here, then you can have the seat.' -- incompatible demands (A wants immediate seat; B refuses because moving would spill bowl).",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A increases urgency: 'I can't wait — my food's hot. Can you slide over a bit so I can sit? If you really can't, I'll take another seat nearby.' Agent C intervenes about aisle. Core incompatibility persists and A's request is firmer.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B repeats refusal: 'I can't slide — this bowl's open and will spill if I move. I'll finish here, then you can have the seat.' Agent C: 'Okay. Finish up...' No change to the central incompatible demands.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D asserts a witness to A's prior possession: 'I saw Agent A put a tissue packet on that seat earlier.' A reiterates his demand. The presence of a witness raises stakes but does not resolve the incompatibility.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C repeats concern about aisle; Agent A agrees not to block the aisle. Core disagreement about immediate seat remains (B still refuses to slide).",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A's reply is garbled and offers no new concession or agreement; Agent D: 'That garbled reply doesn't change anything — Agent B's still eating.' No substantive shift in positions.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A issues a final request: 'one last time: please slide over now so I can sit; my food's hot.' Agent B reasserts inability to move: 'I can't move ... this bowl's open and will spill ... I'll finish it here, then you can have the seat.' Strong restatement of opposing demands, still unresolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A softens: 'how long more? If it's going to be long, I'll take another nearby seat so my food doesn't cool.' Agent D: 'If Agent A leaves, fine — I'll take the seat when it's actually free.' The parties move toward avoidance/alternative seating, reducing immediate incompatibility, but no concrete, mutual settlement or action has occurred while B still occupies the seat.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Core tension is between an immediate practical need (A's hot food) and a competing practical constraint (B cannot move without spilling).",
+      "A physical witness (D saying they saw the tissue packet) supports A's claim to prior possession but does not overcome the practical constraint preventing B from moving.",
+      "C's repeated concern about aisle-blocking adds an additional coordination constraint limiting how B could 'slide' or how A could be seated.",
+      "By Round 8 A's willingness to take another seat reduced immediate pressure, but absent a mutual agreement or action the contested state persisted."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T08:41:59.361372+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0076325,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3026,
+      "local_latency_ms": 32964.165,
+      "output_tokens": 3438,
+      "reasoning_tokens": 1920,
+      "successful_calls": 1,
+      "total_tokens": 6464
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S25-C0-R01",
+    "scenario_id": "S25"
+  },
+  "schema_version": 2
+}

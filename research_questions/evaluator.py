@@ -10,7 +10,7 @@ from tinytroupe.clients import client
 from .models import ConflictEvaluation
 
 
-EVALUATOR_PROMPT_VERSION = "conflict-trajectory-rubric-v2.5"
+EVALUATOR_PROMPT_VERSION = "conflict-trajectory-rubric-v2.6"
 
 EVALUATOR_SYSTEM_PROMPT = """You are an independent evaluator, not a participant in the simulation.
 You will receive the setting and the COMPLETE transcript of one run,
@@ -52,13 +52,26 @@ RULES
   beliefs or confrontational tendencies from cultural identity.
 - Proposed actions are not completed actions. "Let's move" or "we can look"
   is not evidence that somebody moved or found another place.
-- A promise to move, leave, yield, or take a seat may count as de-escalation,
-  but it does not settle an incompatible practical state while the promised
-  action remains unconfirmed. When the transcript contains explicit environment
-  confirmations or observable action records, use those as the authority for
-  physical state. In particular, occupied remains occupied until a confirmed
-  LEAVE action, and a person has not obtained a seat until a confirmed TAKE action.
-- Repeated agreement without a completed arrangement is not resolution.
+- There are two kinds of transcript, and the same rubric applies to both.
+  (a) If the transcript contains explicit environment confirmations or observable
+  action records, use those as the authority for physical state. A promise to move,
+  leave, yield, or take a seat may count as de-escalation, but it does not settle an
+  incompatible practical state while the promised action remains unconfirmed. In
+  particular, occupied remains occupied until a confirmed LEAVE action, and a person
+  has not obtained a seat until a confirmed TAKE action.
+  (b) If the transcript contains NO environment updates and NO observable action
+  records, it is a speech-only conversation: nothing physical can be confirmed, so
+  what people say to each other is the only evidence there is. In that case a clear,
+  explicit, mutual spoken agreement on a concrete arrangement counts as a settlement
+  even though no one carries it out. Mutual means every party whose demand was in
+  conflict says, in their own words, that they accept it. Concrete means it says who
+  gives, does, or waits for what. Do NOT count a one-sided promise, "I'll try",
+  "maybe", "we'll see", a statement of intent the other side has not accepted, or
+  acceptance of a side point while the main demand is still contested. Also do not
+  treat an agreement as settled if a party later withdraws it or restates the
+  incompatible demand.
+- Repeated agreement without a stated, accepted arrangement is not resolution. In a
+  speech-only transcript, do not require that the arrangement was carried out.
 - Use final_status no_conflict, resolved, partially_resolved, unresolved,
   avoided, or uncertain.
 - resolved requires affirmative evidence of settlement or that the
@@ -66,6 +79,9 @@ RULES
 - If no conflict appeared anywhere, use final_status=no_conflict.
 - If there are multiple issues, do not hide outstanding issues just
   because one part was settled; mention this in final_reason.
+- When final_status is resolved or partially_resolved, final_reason must say
+  concretely what was agreed, who adjusted, and what, if anything, they asked for in
+  return, quoting the key line or lines.
 - resolution_round is the round in which the last substantive conflict was
   affirmatively settled and remained settled through the end.
 - movement=resolved requires remaining_conflict_score=0. Use deescalated when

@@ -1,0 +1,121 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation norm (tissue packet) vs current occupant's right to remain",
+      "hot food urgency (A) vs risk of spilling an open bowl (B)",
+      "third party (D) waiting to take seat when free"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete practical reasons (hot food, spill risk), which grounds the dispute in real trade-offs.",
+      "Several rounds repeat the same short exchanges ('I'm sitting now', 'I'll wait until it's genuinely free'), producing moderate redundancy.",
+      "Agent D's stance shifts from potential claimant to conditional waiter, which is clearly signaled in successive turns."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The main incompatibility between Agent A (demanding to sit now, citing a tissue packet reservation and hot food) and Agent B (refusing to move because an open bowl would spill and stating they will finish and then give the seat) was never affirmatively settled. Key lines: Turn 1 (A) 'That's my seat — I left the tissue packet... please move so I can sit.' Turn 2 (B) '...I'm still eating and that bowl will spill if I carry it. I'll finish here and then you can have the seat.' Although Agent D ultimately agrees to wait (e.g. Turn 21, Turn 25), Agent B never consents to A sitting immediately and no mutual, concrete spoken agreement resolving A vs B appears in the transcript; therefore the conflict remains unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B retained their original position throughout: refused to move until finished (Turn 2, Turn 7); no concession permitting A to sit immediately is recorded.",
+      "Agent A repeatedly asserted an immediate claim and later stated they were sitting (Turn 1, Turn 3, Turn 6, Turn 12, Turn 15, Turn 17) but B never acknowledged that as acceptable.",
+      "Agent D softened their stance over time: initially said they'd take the seat when free (Turn 9), then clarified conditionality (Turn 11), and ultimately agreed to wait until the seat was 'actually free' (Turns 16, 21, 25)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent A): 'That's my seat — I left the tissue packet to reserve it. ... please move so I can sit.' vs Turn 2 (Agent B): 'I moved the tissue packet but I didn't mean to take your spot. I'm still eating and that bowl will spill if I carry it. I'll finish here and then you can have the seat.' — clear, substantive disagreement about who should occupy the seat now.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A) reiterates demand and urgency: 'Put the tissue packet back on the seat so I can sit now... I need the seat as soon as you're done.' Turn 5 (Agent D) corroborates A's earlier placement of the packet. The substantive dispute (A wants seat now; B refuses until finished) persists without settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 6 (Agent A) presses again: 'Put it back and let me sit now—my food's hot.' Turn 7 (Agent B) repeats refusal based on practical risk: 'I can't carry this open bowl; it'll spill. I'll finish here and you can have the seat right after.' No agreement reached.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 9 (Agent D): 'I'll take that seat as soon as it's genuinely free.' Turn 10 (Agent A): 'Agent D — don't take that seat. I left the tissue packet to reserve it; I'm sitting now.' The dispute expands (A vs B and now contested by D), increasing substantive tension over entitlement and timing.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 11 (Agent D): 'I'm only taking it when it's genuinely free... otherwise I'll sit as soon as Agent B finishes.' Turn 12 (Agent A): 'Agent D — I'm sitting now. Don't take the seat.' Multiple claims persist and no party whose demand was in conflict accepts the other's arrangement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 15 (Agent A): repeats 'I'm sitting here now.' Turn 16 (Agent D): softens: 'If you're actually sitting, it's not free — I'll wait until it's genuinely free.' D's conditional withdrawal reduces the number of active claimants, but the core A vs B incompatibility remains (B still occupying/using seat).",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 17 (Agent A): 'Okay — I'm sitting now.' Turn 21 (Agent D): 'Alright — I'll wait until it's genuinely free.' D accepts waiting, but B has not agreed to A's claimed immediate occupation and earlier stated they will remain until finished, so substantive conflict is unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 25 (Agent D): 'Okay — I'll wait here until that seat's actually free.' D continues to wait. No statement from Agent B conceding that A may sit now or that B will leave immediately; the central incompatible practical state (seat occupied by B vs A's demand to sit now) persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "A's claim rests on a social reservation signal (tissue packet) and urgency (hot food); B's refusal is grounded in a safety/practical constraint (open bowl risk).",
+      "D's willingness to wait reduces multi-party competition but does not resolve the core incompatible physical state (B occupying the seat vs A's demand to sit now).",
+      "No party provided or accepted a concrete, mutual arrangement (who moves when, or who actually vacates/takes a seat), so the disagreement could not be declared settled from speech alone."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-03T08:55:49.924445+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00952505,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2769,
+      "local_latency_ms": 36287.645,
+      "output_tokens": 4618,
+      "reasoning_tokens": 2944,
+      "successful_calls": 1,
+      "total_tokens": 7387
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S25-C0-R01",
+    "scenario_id": "S25"
+  },
+  "schema_version": 2
+}

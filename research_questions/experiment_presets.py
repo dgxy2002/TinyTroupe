@@ -262,6 +262,75 @@ CALIBRATION_S02_CONVERSATION_PRESET = ExperimentPreset(
     ),
 )
 
+CALIBRATION_S21_PRESET = ExperimentPreset(
+    name="calibration-s21-chope-talk-only",
+    scenario_ids=("S21",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "Conversation-only chope dispute (S04 opening, no actions, no scripted events, "
+        "no clock) with the shared conversational-strategy prompt. C0 only; calibration only."
+    ),
+)
+
+CALIBRATION_S22_PRESET = ExperimentPreset(
+    name="calibration-s22-chope-resolution",
+    scenario_ids=("S22",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=1,
+    rounds_per_run=8,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "S21 plus a shared notice that the interaction ends in some settled arrangement. "
+        "Resolution-expected: do not pool with free-resolution scenarios. C0 only; "
+        "calibration only."
+    ),
+)
+
+CALIBRATION_S23_PRESET = ExperimentPreset(
+    name="calibration-s23-chope-untimed",
+    scenario_ids=("S23",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=1,
+    rounds_per_run=8,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "S22 with every minute figure removed from the agents' private facts. "
+        "Resolution-expected: do not pool with free-resolution scenarios. C0 only; "
+        "calibration only."
+    ),
+)
+
+CALIBRATION_S24_PRESET = ExperimentPreset(
+    name="calibration-s24-chope-timing-free",
+    scenario_ids=("S24",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=1,
+    rounds_per_run=8,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "S23 with all timing language removed from the scenario and the shared prompt. "
+        "Resolution-expected: do not pool with free-resolution scenarios. C0 only; "
+        "calibration only."
+    ),
+)
+
+CALIBRATION_S25_PRESET = ExperimentPreset(
+    name="calibration-s25-chope-conversation",
+    scenario_ids=("S25",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=1,
+    rounds_per_run=8,
+    conversation_mode="hybrid_self_selection",
+    description=(
+        "S24 plus a speech-only shared prompt and a priced-preference priority rule. "
+        "Resolution-expected: do not pool with free-resolution scenarios. C0 only; "
+        "calibration only."
+    ),
+)
+
 CALIBRATION_S02_RECURRENCE_STAKES_PRESET = ExperimentPreset(
     name="calibration-s02-recurrence-stakes",
     scenario_ids=("S20",),
@@ -371,6 +440,11 @@ EXPERIMENT_PRESETS = {
         CALIBRATION_S02_RECURRENCE_PRESET,
         CALIBRATION_S02_RECURRENCE_STAKES_PRESET,
         CALIBRATION_S02_CONVERSATION_PRESET,
+        CALIBRATION_S21_PRESET,
+        CALIBRATION_S22_PRESET,
+        CALIBRATION_S23_PRESET,
+        CALIBRATION_S24_PRESET,
+        CALIBRATION_S25_PRESET,
         CALIBRATION_S02_CULTURAL_PRESET,
         CALIBRATION_S02_FACTORIAL_PRESET,
         CALIBRATION_S06_PRESET,
@@ -472,6 +546,11 @@ __all__ = [
     "CALIBRATION_S02_REASONS_PRESET",
     "CALIBRATION_S02_RECURRENCE_PRESET",
     "CALIBRATION_S02_RECURRENCE_STAKES_PRESET",
+    "CALIBRATION_S21_PRESET",
+    "CALIBRATION_S22_PRESET",
+    "CALIBRATION_S23_PRESET",
+    "CALIBRATION_S24_PRESET",
+    "CALIBRATION_S25_PRESET",
     "CALIBRATION_S02_CONVERSATION_PRESET",
     "CALIBRATION_S02_CULTURAL_PRESET",
     "CALIBRATION_S02_FACTORIAL_PRESET",
