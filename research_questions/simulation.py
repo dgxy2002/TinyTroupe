@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -26,9 +26,6 @@ AGENT_PROMPT_PATH = (
     / "tiny_person_conflict_pilot.mustache"
 )
 
-
-# S19 is conversation-only: no physical actions, no state reports, no advancing clock.
-UNTIMED_SCENARIO_IDS = {"S19"}
 
 
 class FaceToFaceWorld(TinyWorld):
@@ -109,11 +106,10 @@ class FaceToFaceWorld(TinyWorld):
         return rotating
 
     def run_hybrid_round(
-        self, *, timedelta_per_round: timedelta, max_public_turns: int = 4
+        self, *, max_public_turns: int = 4
     ) -> list[dict[str, list[Mapping]]]:
         """Run direct-reply-priority turns until silence or the public-turn cap."""
 
-        self._advance_datetime(timedelta_per_round)
         self._simulation_steps += 1
         attempts: list[dict[str, list[Mapping]]] = []
         public_turns = 0
@@ -255,13 +251,14 @@ class KitchenConflictWorld(FaceToFaceWorld):
             else "the aroma remains strong in the common area"
         )
         prefix = (
-            f"Two minutes have passed. {self.role_name('A')}'s dish is ready to remove from the heat, "
-            "but the current stove occupant has not necessarily released it."
+            f"{self.role_name('A')}'s dish is ready to remove from the heat, "
+            "but the current stove occupant has not necessarily released it. "
             if round_number == 2
-            else "Two more minutes have passed."
+            else ""
         )
+        ventilation = ventilation[0].upper() + ventilation[1:]
         return (
-            f"{prefix} {ventilation}. Confirmed state: "
+            f"{prefix}{ventilation}. Confirmed state: "
             f"window={'open' if self.window_open else 'closed'}; "
             f"extractor={'on' if self.extractor_on else 'off'}; "
             f"laundry={'protected from rain' if self.laundry_protected else 'beside the window and exposed if it opens'}; "
@@ -346,42 +343,6 @@ class KitchenConflictWorld(FaceToFaceWorld):
                 super()._handle_actions(source, [action])
 
 
-class TimedKitchenConflictWorld(KitchenConflictWorld):
-    """S13: the dish needs a fixed cooking time instead of finishing at round 2."""
-
-    COOK_MINUTES_AT_START = 10
-    MINUTES_PER_ROUND = 2
-
-    def prepare_round(self, round_number: int, observation: str | None) -> str | None:
-        if round_number == 1:
-            self.current_round_number = round_number
-            return observation
-        base = super().prepare_round(round_number, observation)
-        if base is None:
-            return None
-        remaining = self.COOK_MINUTES_AT_START - self.MINUTES_PER_ROUND * (round_number - 1)
-        if self.stove_occupant != self.role_name("A"):
-            return base
-        cook_name = self.role_name("A")
-        timer = (
-            f"{cook_name}'s dish needs about {remaining} more minutes on the stove."
-            if remaining > 0
-            else f"{cook_name}'s dish is ready to remove from the heat."
-        )
-        # Round 2 carries a fixed S02 sentence declaring the dish ready; later
-        # rounds only open with the elapsed-time prefix. Both get the timer.
-        ready_text = (
-            f"{cook_name}'s dish is ready to remove from the heat, "
-            "but the current stove occupant has not necessarily released it."
-        )
-        text = base or ""
-        if ready_text in text:
-            return text.replace(ready_text, timer)
-        return text.replace(
-            "Two more minutes have passed.", f"Two more minutes have passed. {timer}", 1
-        )
-
-
 class CleanKitchenConflictWorld(KitchenConflictWorld):
     """S14/S15: only confirmed state is reported, with no scripted resolution paths.
 
@@ -389,20 +350,17 @@ class CleanKitchenConflictWorld(KitchenConflictWorld):
     fading, and refuses a rack move by anyone except the rack's owner.
     """
 
-    MINUTES_PER_ROUND = 2
-
     def prepare_round(self, round_number: int, observation: str | None) -> str | None:
         self.current_round_number = round_number
         if round_number == 1:
             return observation
-        elapsed = self.MINUTES_PER_ROUND * (round_number - 1)
         laundry = (
             "protected from rain"
             if self.laundry_protected
             else "beside the window and exposed if it opens"
         )
         return (
-            f"{elapsed} minutes have passed since the disagreement began. Confirmed state: "
+            "Confirmed state: "
             f"window={'open' if self.window_open else 'closed'}; "
             f"extractor={'on' if self.extractor_on else 'off'}; "
             f"laundry={laundry}; "
@@ -621,14 +579,11 @@ class SeatConflictWorld(FaceToFaceWorld):
                 )
             )
             return (
-                f"Two more minutes have passed. {self.role_name('B')}'s bowl is now empty. "
+                f"{self.role_name('B')}'s bowl is now empty. "
                 f"{b_position} {alternative_state} Confirmed state: {self._seat_state_text()}"
             )
         if round_number == 6:
-            return (
-                "Two more minutes have passed. Confirmed state: "
-                f"{self._seat_state_text()}"
-            )
+            return f"Confirmed state: {self._seat_state_text()}"
         if observation:
             return f"{observation} Confirmed state: {self._seat_state_text()}"
         return None
@@ -941,7 +896,7 @@ def create_scenario_instance(
     world_class = {
         "S02": KitchenConflictWorld,
         "S12": KitchenConflictWorld,
-        "S13": TimedKitchenConflictWorld,
+        "S13": KitchenConflictWorld,
         "S14": CleanKitchenConflictWorld,
         "S15": CleanKitchenConflictWorld,
         "S16": CleanKitchenConflictWorld,
@@ -1002,27 +957,13 @@ def run_one_round(
 ) -> list[Mapping | Sequence[Mapping]]:
     """Run one fixed cycle or one direct-reply/self-selection interval."""
 
-    scenario_id = instance.preset["scenario_id"]
-    # Untimed scenarios leave the world's simulated clock where it started.
-    elapsed = (
-        None
-        if scenario_id in UNTIMED_SCENARIO_IDS
-        else timedelta(seconds=20)
-        if scenario_id == "S06"
-        else timedelta(minutes=2)
-    )
+    # The simulated clock is never advanced: rounds are turn order only.
     if conversation_mode == "hybrid_self_selection":
-        return [
-            instance.world.run_hybrid_round(
-                timedelta_per_round=elapsed,
-                max_public_turns=2,
-            )
-        ]
+        return [instance.world.run_hybrid_round(max_public_turns=2)]
     if conversation_mode != "fixed_round_robin":
         raise ValueError(f"Unknown conversation mode: {conversation_mode}")
     return instance.world.run(
         1,
-        timedelta_per_step=elapsed,
         return_actions=True,
         parallelize=False,
         randomize_agents_order=False,
@@ -1096,7 +1037,6 @@ __all__ = [
     "OrderConflictWorld",
     "SeatConflictWorld",
     "CleanKitchenConflictWorld",
-    "TimedKitchenConflictWorld",
     "ScenarioInstance",
     "create_scenario_instance",
     "flatten_actions",

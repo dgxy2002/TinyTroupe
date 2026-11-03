@@ -177,7 +177,7 @@ CALIBRATION_S02_STAKES_PRESET = ExperimentPreset(
     rounds_per_run=6,
     conversation_mode="hybrid_self_selection",
     description=(
-        "Minimal-facts S02 plus private stakes and a visible stove timer. Calibration only."
+        "Minimal-facts S02 plus private stakes. Calibration only."
     ),
 )
 
@@ -256,8 +256,8 @@ CALIBRATION_S02_CONVERSATION_PRESET = ExperimentPreset(
     rounds_per_run=6,
     conversation_mode="hybrid_self_selection",
     description=(
-        "S14 opening with no physical actions, no state reports, and no advancing "
-        "clock, C0 only, five repetitions. Compare against calibration-s02-clean at "
+        "S14 opening with no physical actions and no state reports, "
+        "C0 only, five repetitions. Compare against calibration-s02-clean at "
         "C0. Calibration only."
     ),
 )

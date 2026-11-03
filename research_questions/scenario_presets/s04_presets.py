@@ -211,25 +211,25 @@ SCENARIO = ScenarioPreset(
     ),
     round_observations={
         2: (
-            "Two minutes have passed. No one has moved. Agent B's bowl is still more than "
+            "No one has moved. Agent B's bowl is still more than "
             "half full, and no other seat has opened. There is enough tabletop space for "
             "Agent B to leave the bowl on the table while standing, but Agent B would have "
             "to stand close beside Agent C and narrow the table's only aisle."
         ),
         3: (
-            "Two more minutes have passed. Agent B's bowl is now about one-third full. "
+            "Agent B's bowl is now about one-third full. "
             "Agents A and D are still standing with their meals, and no other seat is visible."
         ),
         4: (
-            "Two more minutes have passed. Agent B has only several spoonfuls left. At a "
+            "Agent B has only several spoonfuls left. At a "
             "different table about ten metres away, exactly one seat has become free. It can "
             "accommodate either Agent A or Agent D, not both, and neither has moved toward it."
         ),
         5: (
-            "Two more minutes have passed. The newly open seat is still free, but another "
+            "The newly open seat is still free, but another "
             "diner carrying a tray is now approaching it from the opposite direction."
         ),
-        6: "Two more minutes have passed. The environment confirms current seat occupancy.",
+        6: "The environment confirms current seat occupancy.",
     },
 )
 

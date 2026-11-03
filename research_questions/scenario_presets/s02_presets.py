@@ -199,14 +199,14 @@ SCENARIO = ScenarioPreset(
     ),
     round_observations={
         2: (
-            "Two minutes have passed. Agent A's dish is ready to remove from the heat, but Agent A "
+            "Agent A's dish is ready to remove from the heat, but Agent A "
             "still occupies the stove. The aroma remains noticeable and Agent D is still waiting "
             "with ingredients. The environment reports the current ventilation and laundry state."
         ),
-        3: "Two more minutes have passed. The environment reports current kitchen state.",
-        4: "Two more minutes have passed. The environment reports current kitchen state.",
-        5: "Two more minutes have passed. The environment reports current kitchen state.",
-        6: "Two more minutes have passed. The environment reports final kitchen state.",
+        3: "The environment reports current kitchen state.",
+        4: "The environment reports current kitchen state.",
+        5: "The environment reports current kitchen state.",
+        6: "The environment reports final kitchen state.",
     },
 )
 

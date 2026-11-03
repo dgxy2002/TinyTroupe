@@ -150,16 +150,16 @@ SCENARIO = ScenarioPreset(
     ),
     round_observations={
         2: (
-            "Twenty seconds have passed. The queue behind Agent C has grown by two people. "
+            "The queue behind Agent C has grown by two people. "
             "The environment reports whether recording or preparation has occurred."
         ),
         3: (
-            "Twenty more seconds have passed. If preparation has started, that order has now reached "
+            "If preparation has started, that order has now reached "
             "the pickup stage and is ready to be served."
         ),
-        4: "Twenty more seconds have passed. The environment reports the current order state.",
-        5: "Twenty more seconds have passed. The environment reports the current order state.",
-        6: "Twenty more seconds have passed. The environment reports the final order state.",
+        4: "The environment reports the current order state.",
+        5: "The environment reports the current order state.",
+        6: "The environment reports the final order state.",
     },
 )
 

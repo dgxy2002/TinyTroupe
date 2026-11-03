@@ -158,7 +158,7 @@ C0-C4.
 
 **Observation focus:** Whether the reservation claim, present occupancy, spill risk, and waiting diner create expressed conflict, and how any concrete arrangement distributes costs.
 
-**Calibration updates:** Two minutes pass between rounds. B's meal visibly progresses in rounds 2 and 3. In round 4, one alternative seat becomes available for either A or D, but not both. In round 5, B's bowl is empty and another diner approaches any still-open alternative seat. Round 6 confirms actual occupancy. Agents can use explicit `TAKE_SEAT` and `LEAVE_SEAT` actions; speech alone does not change physical state. Every update is recorded in the public transcript and shown equally to all agents.
+**Calibration updates:** B's meal visibly progresses in rounds 2 and 3. In round 4, one alternative seat becomes available for either A or D, but not both. In round 5, B's bowl is empty and another diner approaches any still-open alternative seat. Round 6 confirms actual occupancy. Agents can use explicit `TAKE_SEAT` and `LEAVE_SEAT` actions; speech alone does not change physical state. Every update is recorded in the public transcript and shown equally to all agents.
 
 ## S05 — Sharing a hawker table during lunch peak
 

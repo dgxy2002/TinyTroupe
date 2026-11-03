@@ -7,8 +7,7 @@ can be attributed to a small number of declared changes:
 - S12 removes supplied moral interpretations, compromise ranges, reconsideration
   logic, and reasoning scripts. Physical-action guidance is retained.
 - S13 starts from S12 and adds genuinely private stakes (disclosure is the
-  agent's choice) so that no ventilation option is free, and lets the stove timer
-  count down instead of the environment declaring the dish finished at round 2.
+  agent's choice) so that no ventilation option is free.
 """
 
 from dataclasses import replace
@@ -124,13 +123,12 @@ STAKES = replace(
     MINIMAL,
     scenario_id="S13",
     title="Cooking odour, ventilation responsibility, and stove access (private stakes)",
-    source_status="S12 plus private stakes and a stove timer the agents control",
+    source_status="S12 plus private stakes",
     agents=_stakes_agents(),
     implementation_notes=(
         "S12 plus private stakes for every role. No ventilation option is free: "
         "the extractor disturbs C's session, the window needs C's rack moved, and "
-        "A's dish needs about ten minutes. The environment reports the remaining "
-        "cooking time rather than declaring the dish finished at round 2."
+        "A's dish needs about ten minutes."
     ),
 )
 
@@ -197,7 +195,7 @@ CLEAN = replace(
     implementation_notes=(
         "Same public opening as S02. Neutral persona defaults replace supplied "
         "normative positions, boundaries, and reconsideration criteria. The "
-        "environment reports only elapsed time and confirmed state: it never "
+        "environment reports only confirmed state: it never "
         "announces that the dish is ready and never narrates the odour fading. "
         "Only the laundry owner can move the rack."
     ),
@@ -338,9 +336,8 @@ RECURRENCE_STAKES = replace(
 
 
 # S19 keeps S14's public opening, roles, priorities, and private facts, but removes
-# every physical mechanic: no kitchen actions, no confirmed-state reports, and no
-# advancing clock. Any settlement therefore has to be reached, and stay, purely in
-# conversation. Guidance that names actions (RELEASE_STOVE, extractor, and so on) is
+# every physical mechanic: no kitchen actions and no confirmed-state reports. Any
+# settlement therefore has to be reached, and stay, purely in conversation. Guidance that names actions (RELEASE_STOVE, extractor, and so on) is
 # replaced by the neutral AgentPreset default.
 _NEUTRAL_GUIDANCE = AgentPreset.__dataclass_fields__["behavioral_guidance"].default
 
@@ -348,17 +345,15 @@ CONVERSATION_ONLY = replace(
     CLEAN,
     scenario_id="S19",
     title="Cooking odour, ventilation responsibility, and stove access (conversation only)",
-    source_status=(
-        "S14 opening with no physical actions, no state reports, and no advancing clock"
-    ),
+    source_status="S14 opening with no physical actions and no state reports",
     agents={
         agent_id: replace(preset, behavioral_guidance=_NEUTRAL_GUIDANCE)
         for agent_id, preset in CLEAN.agents.items()
     },
     implementation_notes=(
         "Same opening, roles, priorities, and private facts as S14. Agents have no "
-        "physical actions, the environment reports no state, and simulated time does "
-        "not advance, so anything agreed exists only in the conversation. The shared "
+        "physical actions and the environment reports no state, so anything agreed "
+        "exists only in the conversation. The shared "
         "prompt's 'a proposed action is not completed unless a later observation "
         "confirms it' still applies and may make agents hedge about their own promises."
     ),

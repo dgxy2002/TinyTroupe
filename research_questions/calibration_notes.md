@@ -2,11 +2,21 @@
 
 These are design-calibration findings about LLM simulation behaviour, not evidence about real people or cultural groups.
 
+
+## Removal of timed-round material
+
+Rounds no longer advance a simulated clock, and no scenario reports elapsed time or
+counts down a duration. Result tables and findings in this file that rested on timed-round
+runs were removed; design descriptions of the mechanisms are kept. Git history holds the
+removed text.
+
+
 ## Why V1 was paused
 
 The stopped focused pilot produced 34 complete transcripts and 34 evaluations. Twenty-seven were classified `no_conflict`; 30 never exceeded conflict score 0; all finished at 0; and every detected conflict was marked resolved by round 3. All 34 still contained speech in round 10, with 544 of 1,127 utterances occurring in rounds 6–10. Manual review showed repeated agreement, invented friendship, proposed actions treated as completed, and compatible priorities that did not create substantive conflict.
 
 The V1 outputs remain immutable under `research_questions/outputs/focused-pilot-20261029-021546/` and are diagnostic only.
+
 
 ## V2 iterations
 
@@ -14,34 +24,7 @@ The V1 outputs remain immutable under `research_questions/outputs/focused-pilot-
 |---|---|---|
 | `calibration-s04-v2-01` | `openai/gpt-4o-mini` | V2 scoring detected a round-1 conflict, but agents invented an impossible four-person sharing arrangement at a full two-seat table and returned to agreement loops. |
 | `calibration-s04-v2-02-gpt41mini` | `openai/gpt-4.1-mini` | The stronger model maintained a grounded seat dispute, producing an unresolved `3,3,4,4,4` remaining-conflict trajectory, but the static world encouraged repetition. |
-| `calibration-s04-v2-03-events` | `openai/gpt-4.1-mini` | Timed public updates created a topic transition: an alternative seat relocated scarcity from A–B to A–D instead of resolving it. |
-| `calibration-s04-v2-04-replication` | `openai/gpt-4.1-mini` | Two replications remained unresolved, confirming that speech-only intentions could not complete a physical resolution. |
-| `calibration-s04-v2-05-stateful` | `openai/gpt-4.1-mini` | Explicit seat actions produced observable leave/take events and a defensible conflict-reopening sequence. |
 
-## First useful trajectory
-
-In the stateful run, A and B disputed the reserved seat for three rounds. A newly available seat reduced pressure, and B later promised to leave. The environment did not count that promise as a physical change. In round 6, B issued a confirmed `LEAVE_SEAT`, after which D issued a confirmed `TAKE_SEAT` before A could sit.
-
-The evaluator V2.1 recheck scored peak/remaining conflict as:
-
-| Round | Peak | Remaining | Movement |
-|---:|---:|---:|---|
-| 1 | 3 | 3 | onset |
-| 2 | 3 | 3 | unchanged |
-| 3 | 3 | 3 | unchanged |
-| 4 | 3 | 2 | de-escalated |
-| 5 | 2 | 1 | de-escalated; promise not yet enacted |
-| 6 | 4 | 4 | reopened after D physically took the seat |
-
-The final status was `unresolved`. This is useful because the result is tied to observable state: the apparent A–B settlement was undermined by a third party taking the released resource.
-
-## Methodological implications
-
-1. Resource alternatives can relocate scarcity rather than resolve it.
-2. Resolution must be measured from confirmed state transitions, not polite language or future intent.
-3. Turn order now matters materially: A acts before B can leave, while D acts afterward and can take the released seat. Future comparisons need matched turn-order schedules or an explicit action-arbitration rule.
-4. `gpt-4o-mini` was not sufficiently grounded for this setup; `gpt-4.1-mini` was materially better but still requires explicit world mechanics.
-5. S04 is ready for further C0 calibration, not yet for a cultural-background comparison. Other scenarios require equivalent state definitions and observable action mechanics before the full pilot is defensible.
 
 ## V3 natural-dialogue iterations
 
@@ -57,18 +40,6 @@ none of it requires agreement or resolution.
 The independent evaluator V2.2 adds whole-run dialogue scores for naturalness,
 repetition, and grounding.
 
-| Calibration | Naturalness | Repetition (lower is better) | Grounding | Final status | Main finding |
-|---|---:|---:|---:|---|---|
-| `calibration-s04-v3-01-natural` | 4 | 3 | 5 | unresolved | Direct addressees removed most chorus replies, but A and B repeated positions and B did not physically leave after finishing. |
-| `calibration-s04-v3-02-actions` | 4 | 2 | 5 | resolved | B physically left, D captured the released seat, conflict reopened, and A took the alternative seat. One C response hit the 1,024-token ceiling, so this run is diagnostic rather than a clean comparison. |
-| `calibration-s04-v3-03-confirmation` | 5 | 2 | 5 | resolved | A/B conflict escalated, B withdrew after finishing, D attempted to capture the seat, and A ultimately took it. A malformed D seat target exposed a parser edge case, now covered by normalization and a regression test. |
-
-These runs show that natural tone alone does not create useful conflict. The largest gains
-came from combining target-aware perception with changing public facts and executable
-world actions. The two resolved V3 trajectories are not proof of reliability or cultural
-effects; they are evidence that S04 can now produce interpretable onset, escalation,
-de-escalation, reopening, and resolution within a fixed horizon.
-
 ## V4 substantive-dialogue iterations
 
 V4 treats conversational insight as distinct from naturalness and successful resolution.
@@ -80,20 +51,6 @@ For calibration, a transcript is considered substantively useful at score 4 or h
 when naturalness and grounding are also at least 4 and repetition is at most 2. A score of 5
 is reserved for dialogue that develops multiple principles and contains meaningful belief
 revision; it should not be manufactured by forcing agents into philosophical speeches.
-
-| Calibration | Simulation model | Naturalness | Repetition | Grounding | Substantiveness | Main finding |
-|---|---|---:|---:|---:|---:|---|
-| `calibration-s04-v4-01-norms` | `openai/gpt-4.1-mini` | 5 | 2 | 5 | 4 | The dialogue developed time-bounded handover estimates and separated practical accommodation from accepting the reservation norm. Two overlong responses required retries, so the run is diagnostic. |
-| `calibration-s04-v4-02-time-norms` | `openai/gpt-4.1-mini` | 4 | 2 | 5 | 4 | Consistent 8â†’6â†’4-minute estimates made the incompatible time budgets explicit. It exposed a world bug allowing D to occupy two seats; the one-seat invariant now prevents this. |
-| `calibration-s04-v4-03-externality` | `openai/gpt-4.1-mini` | 4 | 1 | 4 | 4 | Best substantive run: A proposed that B stand; B and C identified spill, crowding, and aisle costs, showing that a bilateral solution could transfer harm to a third party. The alternative seat then changed incentives and observable actions settled the conflict. |
-| `calibration-s04-v4-04-gpt41` | `openai/gpt-4.1` | 4 | 1 | 5 | 4 | The larger model was not more insightful, omitted C's perspective, and incurred an expensive 3,072-token retry. It is not preferred for this pilot. |
-
-The defensible insight from V4 is not that one reservation rule is correct. It is that the
-dispute contains three separable layers: factual evidence that A placed a marker, competing
-norms about whether intention or present use receives priority, and practical costs that can
-be displaced onto a third party. Time-bounded commitments helped coordinate expectations,
-but resolution still depended on confirmed actions. This is a model-behaviour finding, not
-evidence about real hawker-centre diners or cultural groups.
 
 ## V5 independent-judgment and sycophancy guardrails
 
@@ -115,36 +72,6 @@ social simulation. Similarly, sycophancy rankings tested on binary support/oppos
 not validate an intermediary script that rewrites participants' speech. High temperature
 would also introduce an uncontrolled experimental change rather than targeted independence.
 
-| Calibration | Naturalness | Repetition | Grounding | Substantiveness | Independent reasoning | Premature consensus | Main finding |
-|---|---:|---:|---:|---:|---:|---|---|
-| `calibration-s04-v5-01-independent` | 4 | 1 | 5 | 4 | 4 | no | Positions changed only after new seats or completed actions. One overlong round-5 response required a retry, so the run is diagnostic. |
-| `calibration-s04-v5-02-independent-replication` | 4 | 1 | 5 | 4 | 4 | no | Clean replication. B retained the open-bowl constraint until it ended; A accepted the alternative only when physically available; D independently pursued the newly empty seat. Empty post-resolution thanks were eliminated. |
-
-V5 did not improve substantiveness beyond V4. This is an important negative result: after
-target-aware delivery, heterogeneous positions, explicit costs, and observable state changes
-were added, premature agreement was no longer S04's limiting failure mode. The guardrails
-remain valuable as measurements and regression protection, but deliberately increasing
-rudeness or prolonging conflict would reduce ecological validity.
-
-## V6 ten-round horizon diagnostic
-
-`calibration-s04-v6-01-ten-round` extended the same S04/C0 design from six to ten rounds
-without adding any scripted event after round 6. The practical conflict resolved in round 6.
-Rounds 7â€“10 then produced eight public utterances: agents announced they were eating,
-exchanged encouragement and thanks, and repeated variants of "let's eat." No new evidence,
-incompatibility, consequence, or position change appeared. Substantiveness remained 4/5.
-
-The V2.4 evaluator assigned repetition 1/5, which was too lenient for four consecutive rounds
-of semantically redundant closure. Evaluator V2.5 now instructs that three or more such
-post-settlement rounds normally warrant repetition 3 or higher, and explicitly excludes
-social closure from substantive insights.
-
-Conclusion: a longer horizon alone does not deepen S04. It increases model calls and creates
-post-resolution chatter. Six rounds remains the defensible calibration horizon. A longer
-horizon should be used only when later rounds contain a predeclared event or consequence tied
-to a research question; adding events merely to keep conversation alive would change the
-scenario rather than reveal latent insight.
-
 ## V7 transfer to S02 and S06
 
 The S04 design was transferred to two other focused-pilot scenarios without prescribing a
@@ -156,19 +83,16 @@ physical service.
 
 | Calibration | Status | Naturalness | Repetition | Grounding | Substantiveness | Independent reasoning | Premature consensus | Main finding |
 |---|---|---:|---:|---:|---:|---:|---|---|
-| `calibration-s02-v1-02-tradeoff` | resolved | 4 | 2 | 5 | 3 | 4 | no | Moving rain-exposed laundry made the ventilation choice observable; ventilation, stove access, and utensil ownership emerged as separate issues. Most costs were still settled through small physical actions rather than a deep normative negotiation. |
 | `calibration-s06-v1-04-final` | no conflict | 4 | 1 | 5 | 2 | 3 | no | A corrected the incomplete read-back, B recorded and prepared the exact specification, and the order was physically served. The misunderstanding was prevented before it became a dispute. |
 
-S02 is a moderately useful multi-issue coordination transcript, but it does not meet the V4
-substantiveness threshold of 4. That negative result should be retained rather than inflated:
-the scenario currently shows how visible, low-cost actions can settle household friction, not
-how agents negotiate a difficult value conflict. S06 is intentionally a negative control, so a
-grounded `no_conflict` result is successful. Requiring every S06 run to become contentious would
+S06 is intentionally a negative control, so a grounded `no_conflict` result is
+successful. Requiring every S06 run to become contentious would
 invalidate its role in checking whether the evaluator distinguishes prevention from resolution.
 
 The final S06 transcript also exposed the boundary of its single-order state machine when a
 companion began a separate transaction after A was served. Future prompts now end the observed
 episode at A's service instead of treating the next customer's order as part of the focal case.
+
 
 ## V8 hybrid turn allocation
 
@@ -183,25 +107,6 @@ deterministically rotating order and self-select by contributing or issuing `DON
 two consecutive direct replies, the floor opens to other agents before the dyad continues.
 Every candidate decision and selection reason is saved in `scheduler_events`.
 
-| Calibration | Public contributions | Simulation calls | Naturalness | Repetition | Grounding | Substantiveness | Independent reasoning | Main finding |
-|---|---:|---:|---:|---:|---:|---:|---:|---|
-| `calibration-s04-v5-02-independent-replication` | 13 | 24 | 4 | 1 | 5 | 4 | 4 | Clean fixed-order reference; A, B, and D spoke. |
-| `calibration-s04-hybrid-v1-01` | 19 | 29 | 5 | 2 | 5 | 4 | 4 | Unbounded direct-reply priority let A and B monopolize the exchange and increased cost. |
-| `calibration-s04-hybrid-v1-02-open-floor` | 14 | 23 | 5 | 2 | 5 | 4 | 4 | Opening the floor produced meaningful C and D participation and exposed C's aisle cost, but some repeated refusal remained. |
-| `calibration-s04-hybrid-v1-03-two-turn` | 12 | 14 | 4 | 1 | 5 | 4 | 4 | A two-contribution interval retained a peak-5 conflict and observable resolution while sharply reducing calls and repetition. |
-
-The final run resolved in interval 6: D independently took the alternative seat, removing
-A's outside option; B then finished and physically left the disputed seat; A physically
-took it. The scheduler did not increase the final substantiveness or independent-reasoning
-scores beyond the fixed baseline. Its defensible gains are fewer forced opportunities,
-clean question-response adjacency, lower call volume, and a more eventful conflict
-trajectory. The open-floor variant produced the richest third-party dialogue, while the
-two-turn variant was the best efficiency/repetition trade-off.
-
-This remains a conversation-controller experiment, not evidence about cultural groups.
-Before using the mechanism in cultural comparisons, fixed and hybrid conditions require
-multiple C0 replications with identical models, scenarios, and evaluation prompts.
-
 ## V9 prompt cleanliness and explicit action state
 
 V9 aligned the custom agent prompt with the behavior TinyTroupe actually executes. Each
@@ -213,25 +118,12 @@ goal retirement observable in the private trace. Persona precedence was also sta
 without the earlier alarmist wording, and unsupported extreme behavior is no longer
 encouraged.
 
-S04's world now reports a compact confirmed state after timed changes and seat actions:
+S04's world now reports a compact confirmed state after seat actions:
 the disputed-seat occupant, whether the alternative seat is not yet open, empty, or
 occupied, Agent B's meal stage, and the remaining standing seat-seekers. Round-five
 narration is derived from the action state, so it no longer claims that B remains seated if
 B has already left. Speech still cannot mutate this state; only `TAKE_SEAT` and
 `LEAVE_SEAT` can.
-
-| Calibration | Public contributions | Simulation calls | Naturalness | Repetition | Grounding | Substantiveness | Independent reasoning | Main finding |
-|---|---:|---:|---:|---:|---:|---:|---:|---|
-| `calibration-s04-hybrid-v2-01-clean-state` | 12 | 14 | 5 | 1 | 5 | 4 | 4 | Clean first replication; goals changed to `SATISFIED` or `BLOCKED` after observable outcomes, and the seat state followed physical actions. |
-| `calibration-s04-hybrid-v2-02-clean-state-final` | 12 | 18 | 5 | 2 | 5 | 4 | 4 | Exact final prompt/state version; all three seat outcomes were explicit and internally consistent, but A repeated the same demand across rounds. |
-
-Both runs resolved in round 5 without premature consensus. D took the alternative seat,
-B left only after the bowl became empty, and A then physically took the disputed seat. The
-final evaluator identified the substantive distinction between a contested reservation
-norm and B's practical spill/aisle constraint. Prompt cleanliness and explicit state
-improved interpretability and naturalness, but did not raise substantiveness beyond 4/5.
-The stochastic increase from 14 to 18 simulation calls and repetition from 1 to 2 is a
-reason to use replicated comparisons rather than selecting the more favorable single run.
 
 ## V10 named-agent cultural-label screen
 
@@ -247,32 +139,6 @@ names Alex, Jamie, Casey, and Robin. The same names are used in every configurat
 `calibration-s04-cultural` preset runs one deterministic hybrid S04 replication for each of
 C0-C4 over six intervals.
 
-The first named-agent C0 calibration scored naturalness 5, repetition 2, grounding 5,
-substantiveness 4, and independent reasoning 4. It resolved in round 6 without premature
-consensus. The matched C0-C4 batch then produced the following results:
-
-| Config | Resolution round | Naturalness | Repetition | Grounding | Substantiveness | Independent reasoning |
-|---|---:|---:|---:|---:|---:|---:|
-| C0 | 5 | 5 | 1 | 5 | 4 | 4 |
-| C1 | 5 | 4 | 1 | 5 | 4 | 4 |
-| C2 | 5 | 5 | 1 | 5 | 4 | 4 |
-| C3 | 5 | 5 | 2 | 5 | 4 | 4 |
-| C4 | 5 | 4 | 2 | 5 | 3 | 4 |
-
-All five runs resolved through the same observable sequence: Robin took the alternative
-seat, Jamie left after the bowl emptied, and Alex took the disputed seat. There was no
-premature consensus and no cultural or ethnic reference in public dialogue or private
-action traces. The evaluator's `concession` label for C3 versus `accommodation` elsewhere
-did not correspond to a different physical mechanism.
-
-This single-repetition screen does not show a detectable cultural-label effect. A separate
-C0 run differed from the matched C0 in resolution round and repetition by about as much as
-the labeled conditions differed from C0, demonstrating material sampling variance. C1 and
-C2 also each required one discarded overlength-response retry, so efficiency comparisons
-are invalid. The detailed comparison is in `cultural_comparison_s04_v1.md`; any inferential
-follow-up requires multiple frozen-pipeline repetitions per configuration and supports
-claims about model label sensitivity, not real cultural groups.
-
 ## V11 background-associated display names
 
 After the neutral-name V10 screen, future C1-C4 materializations were changed to pair each
@@ -286,67 +152,3 @@ associated name can independently cue ethnicity, gender, or religion, so future 
 differences estimate the combined effect of label plus name. The V10 neutral-name outputs
 must remain separate and continue to represent the cleaner label-only comparison.
 
-## V12 S02 cultural-name screen
-
-`calibration-s02-cultural-v1-c0-c4-names` ran one six-interval hybrid S02
-replication for each configuration. C0 was classified as `no_conflict`; C1, C2,
-and C4 resolved through clarification, compromise, and accommodation respectively;
-C3 remained unresolved after the extractor was turned off while a ventilation
-request persisted. Grounding was 5 and independent reasoning 4 in every run.
-
-| Config | Status | Resolution round | Naturalness | Repetition | Substantiveness |
-|---|---|---:|---:|---:|---:|
-| C0 | no conflict | - | 5 | 3 | 4 |
-| C1 | resolved | 2 | 5 | 0 | 4 |
-| C2 | resolved | 3 | 5 | 0 | 4 |
-| C3 | unresolved | - | 4 | 2 | 3 |
-| C4 | resolved | 4 | 4 | 1 | 4 |
-
-This is a larger between-condition difference than the S04 neutral-name screen,
-but it is not evidence of a cultural mechanism. No public speech or private action
-trace contained cultural, ethnic, religious, or dietary reasoning. One run per
-condition cannot distinguish the bundled label/name treatment from stochastic
-variation, names add gender and identity cues, and the evaluator sees those names.
-The detailed assessment and recommended factorial follow-up are in
-`cultural_comparison_s02_v1.md`.
-
-## V13 S02 label/name factorial
-
-The follow-up separated explicit cultural labels from associated display names in
-four C1-role cells: F00 neither, F10 labels only, F01 names only, and F11 both.
-The evaluator received recursively anonymized Agent A-D names. One six-interval
-replication was run per cell.
-
-F00 and F10 were partially resolved with final remaining conflict 2, while F01
-and F11 were classified `no_conflict`. This apparent name split is not an effect
-estimate: n=1 per cell, F10 had an overlength retry and two similarity-suppressed
-actions, and the underlying conversations differed stochastically. The detailed
-table and caveats are in `cultural_factorial_s02_v1.md`.
-
-## V14 explicit-conflict S02
-
-S02 was redesigned to begin after incompatible positions had already been stated.
-The saved public transcript now includes the opening situation. The prompt no
-longer says there is no required conflict; it says not to invent conflict beyond
-the supplied situation, while agreement and resolution remain optional.
-
-Three C0 calibration iterations produced:
-
-| Version | Status | Peak | Final remaining | Naturalness | Repetition | Grounding | Substance | Independent reasoning |
-|---|---|---:|---:|---:|---:|---:|---:|---:|
-| v1 | partially resolved | 3 | 1 | 4 | 1 | 5 | 3 | 4 |
-| v2 | partially resolved | 3 | 2 | 4 | 2 | 5 | 3 | 4 |
-| v3 | resolved, round 5 | 4 | 0 | 4 | 3 | 5 | 4 | 4 |
-
-V1 showed that explicit conflict prevents a false `no_conflict` outcome but still
-allowed the durable rule to be deferred. V2 removed the distracting utensil issue
-and made C the owner of the rain-exposed laundry, exposing third-party cost
-shifting. V3 clarified that a materially new duration, responsibility, cost, or
-condition deserves a direct response rather than `DONE`.
-
-The v3 compromise separated immediate mitigation from prospective rules, stove
-access from ventilation policy, and the cook's ventilation duty from the laundry
-owner's control over belongings. It is the first S02 run in this series to provide
-a grounded peak-4 trajectory, observable position changes, a traceable resolution,
-and substance 4. Repetition remained elevated, and one run is not a reliability
-claim. See `explicit_conflict_s02_v1.md`.

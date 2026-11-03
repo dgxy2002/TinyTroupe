@@ -75,7 +75,7 @@ def test_public_transcript_keeps_rounds_and_excludes_private_actions():
             "turn": 0,
             "agent": "Environment",
             "type": "OBSERVE",
-            "content": "Two minutes pass and no one moves.",
+            "content": "No one moves.",
         },
     ]
     rendered = public_transcript_text(events, completed_rounds=2)
@@ -83,7 +83,7 @@ def test_public_transcript_keeps_rounds_and_excludes_private_actions():
     assert "Agent A: Hello" in rendered
     assert "## Round 2" in rendered
     assert "Public environment update" in rendered
-    assert "Two minutes pass" in rendered
+    assert "No one moves." in rendered
 
 
 def test_evaluation_rejects_missing_rounds_and_normalizes_resolution_round():
@@ -468,7 +468,7 @@ def test_s06_order_actions_distinguish_recording_preparation_and_service():
     assert "physically starts preparing dry_no_chilli" in rendered
     assert "physically serves one dry_no_chilli order" in rendered
     assert "focal customer transaction is complete" in instance.world.prepare_round(
-        4, "Twenty more seconds have passed."
+        4, "The environment reports the current order state."
     )
     reset_simulation_state()
 
