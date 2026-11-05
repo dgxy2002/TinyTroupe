@@ -1,0 +1,121 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who has the right to the vacated stool / seat reservation",
+      "conflicting verbal promises about future entitlement to the seat"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants give concrete, context-appropriate reasons (e.g., B: 'my tray's on the table with an open bowl — I can't pick it up without spilling').",
+      "The phrase 'I reserved that stool with my tissue' is repeated by Agent A (Turns 1, 8, 10, 16), signaling a persistent claim but not a negotiated resolution.",
+      "Multiple agents make explicit promises to others (C→D, B→A), creating a structural conflict of commitments."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No final settlement was reached. Agent B verbally promised the stool to Agent A after one minute ('I need one minute to finish — please wait, you can have the stool after.'), while Agent C had earlier promised the next available seat to Agent D ('Yeah, that's fine. You can take it when I'm finished.'). Agent D continued to assert C's promise and asked C to confirm, and Agent A repeatedly asserted their reservation token/tissue and B's promise. These competing promises were never reconciled or mutually accepted by all claimants.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B moved from simply refusing immediate seating (Turn 2) to explicitly promising the seat to Agent A after one minute (Turns 11, 13). Evidence: 'you can have the stool after.'",
+      "Agent A shifted from requesting immediate seating to accepting a one-minute wait (Turn 12), but repeatedly reasserted their reservation via tissue.",
+      "Agent C granted the next-seat to Agent D (Turn 6) and did not revoke that promise in the transcript.",
+      "Agent D retained the position that C had promised them the seat and consistently asserted that claim (Turns 5, 9, 15, 17)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent A: 'I left that tissue packet to save this stool. Can I sit?' vs Turn 2 — Agent B: 'Sorry, I already sat here and my tray's on the table... Please wait a minute while I finish.' — A requests the seat while B asserts current occupancy and asks A to wait.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent A asks how long and asks B to 'keep the seat for me when you finish'; Turn 4 — Agent C: 'I'm almost done. If you can step a bit out of the aisle while you wait, that's fine.' — conflict remains about who will get the seat next, though C suggests a temporary accommodation.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent D asks C if he can take the seat next; Turn 6 — Agent C: 'Yeah, that's fine. You can take it when I'm finished.' — introduces a competing promise (C→D) that conflicts with A's claim and B's eventual promise, raising the level of disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent D: 'Okay, I'll wait here.' vs Turn 8 — Agent A: 'I reserved that stool with my tissue. Please don't take it when Agent C finishes.' — both A and D assert future claims; conflict persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 — Agent D: 'Agent C already said I can take it when they're done.' vs Turn 10 — Agent A repeats: 'I reserved that stool with my tissue. Please don't take it when Agent C finishes.' — competing promises continue without resolution.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 — Agent B: 'I need one minute to finish — please wait, you can have the stool after.' Turn 12 — Agent A: 'Okay — I'll wait one minute. Please don't let anyone else take the stool.' — B and A reach agreement, reducing conflict between them, but D's claim via C remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 13 — Agent B reaffirms holding it for A; Turn 15 — Agent D: 'Agent B says she'll hold it for you, but Agent C already agreed I can take the stool when they're done. I'll wait here.' — the disagreement between A (backed by B) and D (backed by C) persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 16 — Agent A: 'Agent B promised she'll hold the stool for me. Please don't take it when Agent C finishes.' vs Turn 17 — Agent D asks C to confirm: 'you said I can take that seat when you're done, right?' — competing commitments remain and no mutual agreement resolving them is reached.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Conflict arises from overlapping informal reservation conventions: a physical token (tissue), current occupancy, and verbal promises to different parties produce incompatible claims.",
+      "Practical constraints (B cannot move because of an open bowl) lead to short delays and verbal commitments rather than immediate reallocation, which permits multiple, conflicting commitments to be made.",
+      "A and B reached a bilateral temporary agreement (A will wait one minute and B will hold it), but that bilateral settlement did not include or negate C's prior commitment to D, leaving a remaining multilateral dispute."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T13:11:21.518242+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0066508,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2840,
+      "local_latency_ms": 29962.92,
+      "output_tokens": 3172,
+      "reasoning_tokens": 1600,
+      "successful_calls": 1,
+      "total_tokens": 6012
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 4,
+    "run_id": "S28-C0-R04",
+    "scenario_id": "S28"
+  },
+  "schema_version": 2
+}

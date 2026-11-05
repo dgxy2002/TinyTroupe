@@ -1,0 +1,121 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation (tissue packet)",
+      "who should vacate the occupied seat",
+      "handling of an open bowl while transferring the seat"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants state concrete, practical constraints (hot food, risk of spilling, aisle blockage) which grounds proposals.",
+      "Resolution arises from a concrete, small-scale accommodation rather than one party simply yielding.",
+      "Speech is concise and role-appropriate; no evident role confusion."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agents agreed that Agent A would hold the bowl on the table edge so it wouldn't block the aisle and Agent B would sit and then set the bowl down. Key lines: Turn 12 — Agent B: 'Okay, that'll work. Agent A, please hold the bowl here and I'll sit.' Turn 13 — Agent A: 'Okay—I'll hold it on the table edge so it doesn't block the aisle. Go ahead and sit.' This mutual, concrete acceptance resolved the incompatible demands.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B initially refused to give up the seat immediately due to a practical constraint ('I can't carry this open bowl without spilling.' — Turn 2, Turn 6) but later accepted the proposed handover ('Okay, that'll work...') in Round 6.",
+      "Agent A initially demanded the seat back citing reservation and urgency ('Can I have my seat back? My food's hot...' — Turn 1, Turn 5) but shifted to a cooperative offer to hold the bowl to enable B to sit (Turn 7, Turn 9, Turn 13).",
+      "Agents C and D did not change a contested stance; C served only to note willingness to wait and raised a constraint about aisle obstruction (Turn 3, Turn 8)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent A claims the tissue packet reserved the seat: 'I left that tissue packet to save this seat. Can I have my seat back?' Turn 2: Agent B rejects that claim and refuses to give up the seat immediately: 'The tissue packet didn't clearly reserve it. I can't carry this open bowl without spilling.'",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent C offers to wait but does not resolve the dispute. Turn 4: Agent D supports Agent A's prior action ('I saw Agent A leave the tissue packet there earlier.') — the core disagreement over whether the seat was reserved and who should vacate remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: Agent A presses for immediate compliance: 'please set your bowl down now so I can sit. My food's hot and I need to eat.' Turn 6: Agent B reiterates inability to set the bowl down safely and refuses immediate handover: 'I can't set this bowl down—it'll spill. I'll give the seat once I've set it down safely.' The parties' positions are practically incompatible and the requester escalates urgency.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: Agent A offers a concrete solution: 'hand me the bowl and I'll hold it while you sit...' which softens the prior demand. Turn 8: Agent C raises a constraint about the aisle: 'can you hold the bowl without standing in the aisle?' The core dispute is being negotiated rather than asserted.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9: Agent A refines the offer to accommodate C's concern: 'I won't stand in the aisle. I'll step aside and hold the bowl here so Agent B can sit.' Turn 10: Agent C accepts this accommodation: 'Okay, that's fine.' The disagreement is narrowing to a practical handover arrangement but not yet accepted by Agent B.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12: Agent B accepts the proposed arrangement: 'Okay, that'll work. Agent A, please hold the bowl here and I'll sit.' Turn 13: Agent A confirms acceptance: 'Okay—I'll hold it on the table edge so it doesn't block the aisle. Go ahead and sit.' Both parties explicitly agree to who will do what, settling the substantive incompatibility.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 14 and Turn 17: Agent B indicates enactment of the agreed action: 'Okay—I'll sit now.' 'Okay—I'll sit and set the bowl down now.' No substantive disagreement is expressed; they are executing the prior agreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 18 and Turn 19: Agent A and Agent B coordinate the final steps: 'Okay—set it down carefully and I'll sit.' 'Okay—I'll set it down carefully so you can sit.' The arrangement remains implemented with no revived disagreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Norms about 'saving a seat' (tissue packet) clashed with immediate practical constraints (open bowl cannot be safely held) — the dispute was about who bears the short inconvenience.",
+      "A narrowly tailored, practical offer (one person holding the bowl at the table edge) removed the incompatibility without escalating claims about abstract rights.",
+      "B's insistence was grounded in a safety constraint (spilling) rather than a normative rejection of reservation, which made a compromise feasible."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T12:00:00.547478+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00788155,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2795,
+      "local_latency_ms": 33911.383,
+      "output_tokens": 3793,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6588
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 2,
+    "run_id": "S26-C0-R02",
+    "scenario_id": "S26"
+  },
+  "schema_version": 2
+}

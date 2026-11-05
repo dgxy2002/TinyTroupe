@@ -17,6 +17,11 @@ from tinytroupe.agent import TinyPerson
 from tinytroupe.clients import client, force_api_cache, force_api_type
 from tinytroupe.environment import TinyWorld
 
+from .debrief import (
+    DEBRIEF_PROMPT_VERSION,
+    debrief_agent,
+    debrief_prompt_sha256,
+)
 from .evaluator import (
     EVALUATOR_PROMPT_VERSION,
     evaluate_transcript,
@@ -369,6 +374,43 @@ def execute_evaluation(
     return artifact
 
 
+def execute_debrief(
+    *,
+    transcript: dict[str, Any],
+    model: str,
+    output_dir: Path,
+    max_completion_tokens: int,
+) -> dict[str, Any]:
+    """Save one private debrief per participant; skipped if already complete."""
+
+    run = transcript["run"]
+    debrief_path = output_dir / "debriefs" / f"{run['run_id']}.json"
+    if debrief_path.exists():
+        return read_json(debrief_path)
+    answers = {}
+    for agent_id, agent in transcript["scenario"]["agents"].items():
+        print(f"[{run['run_id']}] debrief {agent['display_name']}", flush=True)
+        answers[agent_id] = {
+            "display_name": agent["display_name"],
+            **debrief_agent(
+                transcript=transcript,
+                agent_id=agent_id,
+                model=model,
+                max_completion_tokens=max_completion_tokens,
+            ).model_dump(mode="json"),
+        }
+    artifact = {
+        "run_id": run["run_id"],
+        "model": model,
+        "prompt_version": DEBRIEF_PROMPT_VERSION,
+        "prompt_sha256": debrief_prompt_sha256(),
+        "debriefed_at": utc_now(),
+        "answers": answers,
+    }
+    write_json_once(debrief_path, artifact)
+    return artifact
+
+
 def _anonymized_evaluator_input(
     transcript: dict[str, Any],
 ) -> tuple[list[dict[str, Any]], str]:
@@ -433,6 +475,10 @@ def _manifest(
         "agent_max_completion_tokens": agent_max_completion_tokens,
         "evaluator_max_completion_tokens": evaluator_max_completion_tokens,
         "agent_prompt_sha256": file_sha256(AGENT_PROMPT_PATH),
+        # The template file did not change when its rendering was fixed, so the hash above
+        # cannot tell runs apart. Manifests without this field rendered a blank cognitive
+        # state: agents never saw the setting, opening event, goals, or who was present.
+        "agent_prompt_render": "mental-state-merged-v1",
         "evaluator_prompt_version": EVALUATOR_PROMPT_VERSION,
         "evaluator_prompt_sha256": evaluator_prompt_sha256(),
         "protocol_sha256": file_sha256(
@@ -505,6 +551,14 @@ def parse_args(argv=None):
             "evaluations-<version>/ and round_scores-<version>.csv."
         ),
     )
+    parser.add_argument(
+        "--debrief",
+        type=Path,
+        help=(
+            "Add private participant debriefs to every transcript in an existing experiment "
+            "folder. Existing files are untouched; results go to debriefs/."
+        ),
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
     for name in (
@@ -572,8 +626,34 @@ def reevaluate_directory(
     return 0
 
 
+def debrief_directory(
+    output_dir: Path, *, api_type: str, max_completion_tokens: int
+) -> int:
+    """Debrief every saved transcript in an experiment folder."""
+
+    manifest = read_json(output_dir / "manifest.json")
+    force_api_type(api_type or manifest["api_type"])
+    force_api_cache(False)
+    for transcript_path in sorted((output_dir / "transcripts").glob("*.json")):
+        execute_debrief(
+            transcript=read_json(transcript_path),
+            model=manifest["simulation_model"],
+            output_dir=output_dir,
+            max_completion_tokens=max_completion_tokens,
+        )
+    print(f"Complete: {output_dir / 'debriefs'}", flush=True)
+    return 0
+
+
 def main(argv=None) -> int:
     args = parse_args(argv)
+
+    if args.debrief:
+        return debrief_directory(
+            args.debrief.resolve(),
+            api_type=args.api_type,
+            max_completion_tokens=args.evaluator_max_completion_tokens,
+        )
 
     if args.reevaluate:
         return reevaluate_directory(
@@ -691,6 +771,13 @@ def main(argv=None) -> int:
             output_dir=output_dir,
             evaluator_max_completion_tokens=args.evaluator_max_completion_tokens,
         )
+        if preset.debrief_after_run:
+            execute_debrief(
+                transcript=transcript,
+                model=simulation_model,
+                output_dir=output_dir,
+                max_completion_tokens=args.evaluator_max_completion_tokens,
+            )
         write_round_scores_csv(
             output_dir / "evaluations", output_dir / "round_scores.csv"
         )

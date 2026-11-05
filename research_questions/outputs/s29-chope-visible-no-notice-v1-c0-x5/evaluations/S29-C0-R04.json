@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation / who may sit at the occupied table",
+      "use of a tissue packet as an informal reservation marker",
+      "priority for the next available seat when Agent C finishes",
+      "time-sensitive need to sit because of hot meals"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers use concise, realistic reasons (sat first; bowl is hot; meal will go cold; tissue as reserve).",
+      "Several lines are repeated verbatim across rounds (Agent A repeatedly: 'I left the tissue to reserve this seat'; Agent D repeatedly: 'I'll take the seat when Agent C's finished'), producing moderate repetition.",
+      "No environmental actions (moving, leaving) are reported; interactions remain speech-only and consistent with the setting.",
+      "Some role confusion/ambiguity about which exact seat D intends (B's or C's) slightly reduces clarity."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent A withdrew their claim and conceded the contested arrangement. Evidence: Turn 18 — Agent A: 'Fine. Take the seat.' Turn 22 — Agent D: 'Okay — I'll take it when Agent C's done.' Agent A adjusted by giving up their reservation claim; Agent D's stated sequence (taking the seat after C finishes) stands; B remains in their seat and was not displaced.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A changed position by conceding their claim in Round 8: 'Fine. Take the seat.'",
+      "Agent D consistently maintained their plan to take the seat when Agent C finished (no change).",
+      "Agent B consistently maintained they would keep the seat they occupied (no change).",
+      "Agent C made a single neutral request (not to hover) and otherwise remained passive; no change."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 8,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent A claims they left a tissue to reserve the seat and asks to sit. Turn 2: Agent B responds they 'sat here first' and 'I'll keep this seat until I'm done.' Direct, incompatible claims about who may occupy the seat.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent A repeats the reservation claim and asks to sit briefly. Turn 4: Agent C asks parties not to hover and says they are almost finished (a request to reduce pressure) but does not resolve the competing claims between A and B. The primary disagreement remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: Agent D announces they will take 'the seat when Agent C's done' and says they saw Agent A leave the tissue. Turn 6: Agent A presses the tissue-reservation claim and cites D as a witness. This introduces an additional claimant/priority sequence (D) and a witness claim, increasing the complexity and entrenchment of incompatible demands.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: Agent B reasserts 'I sat here first' and refuses to give up the seat. Turn 8: Agent A asks how long it will take. No concession or agreement is reached; the dispute remains between B (current occupant) and A (claiming reservation), with D also asserting a future claim.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10: Agent D reiterates they'll take the seat when Agent C is done. Turn 11: Agent A asks D not to take it and reasserts their reservation ('Please don't take it; can you let me sit after Agent C?'). Conflicting future claims are explicitly articulated and contested, keeping the disagreement entrenched.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12: Agent D acknowledges the tissue but repeats they will take the seat after C. Turn 13: Agent A repeats their request and urgency. Positions remain firm and incompatible; no settlement is reached.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 16: Agent A again asks Agent D not to take the seat and repeats the reservation claim. Turn 17: Agent D again affirms they'll take the seat when Agent C's finished. No party withdraws or accepts another's terms; the dispute remains entrenched.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 18: Agent A concedes: 'Fine. Take the seat.' Turn 22: Agent D confirms: 'Okay — I'll take it when Agent C's done.' Agent A withdraws their ongoing claim; D's plan is stated and accepted by A, ending the active dispute.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Two informal norms collide: 'first to sit / occupying a seat' (B) versus 'leaving an item to reserve' (A); neither norm is universally authoritative here.",
+      "A third party (D) claiming a future right to the other seat (when C finishes) complicates negotiation by creating competing 'next-in-line' claims.",
+      "Repeated assertion without added concessions failed to secure A's claim; A ultimately conceded rather than forcing an outcome or obtaining a guaranteed promise."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T13:16:24.064535+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00813455,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2855,
+      "local_latency_ms": 36492.44,
+      "output_tokens": 3912,
+      "reasoning_tokens": 2432,
+      "successful_calls": 1,
+      "total_tokens": 6767
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 4,
+    "run_id": "S29-C0-R04",
+    "scenario_id": "S29"
+  },
+  "schema_version": 2
+}

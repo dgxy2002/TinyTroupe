@@ -4,6 +4,66 @@ Working notes for the conflict-simulation research in `research_questions/`. Rea
 `reference folders/handover.md` first; this file records what was added after it. Nothing
 here is evidence about real cultural groups.
 
+## Read first: blank-prompt bug and S26-S29 (2026-11-05)
+
+**Every run up to and including S27 had a blank cognitive state.** `generate_agent_system_prompt`
+passed mental state to the template only as a JSON string, while the template reads `{{location}}`,
+`{{#context}}`, `{{goals}}`, `{{attention}}`, `{{emotions}}` and `{{#accessible_agents}}` at the top
+level. All of them rendered empty, in every commit of this research. So agents never saw
+`shared_setting`, `shared_trigger`, their updated goals, or who was present. They knew only their
+persona and private facts, while the evaluator scored groundedness against the setting they never
+had. Fixed in `tinytroupe/agent/tiny_person.py`.
+
+- **Treat all findings below this section as made under the bug.** That covers the claims about
+  invented seats, role confusion, repetition, anchoring on durations, the notice having no effect,
+  and the S02 and S04 cultural reports. Do not pool or compare pre-fix and post-fix runs.
+- **Telling runs apart:** the template hash did not change. Manifests with
+  `agent_prompt_render: mental-state-merged-v1` are post-fix; anything without it is pre-fix.
+- **`context` still fades after the fix:** the model's own summary replaces it each turn.
+  `ScenarioPreset.pin_shared_setting` keeps the setting in the persona and stores the opening event
+  in memory. Use it only when the setting cannot go stale (conversation-only scenarios).
+- S21-S25 also leaked bare role letters ("moved beside B"): only "Agent B" is replaced by a name.
+
+**S26-S29 (C0, 5 runs each, 8 rounds, `gpt-5-mini`, evaluator v2.6, about $1.92 in total).** S26 adds
+several private concerns per role, closes off exits in the setting, and gives Casey a private
+nearly-finished meal (a second seat nothing schedules). S27 is S26 without the notice; the new
+`priced_priority` flag keeps the priority rule identical. S28 and S29 are S26 and S27 with identical
+text, post-fix, with the setting pinned.
+
+| Batch | Render | Notice | Resolved / partial / unresolved | Impossible-arrangement runs | Casey raises nearly done | Debrief views settled (of 20) | Mean fairness A / B / C / D |
+|---|---|---|---|---|---|---|---|
+| S26 | pre-fix | yes | 5 / 0 / 0 | 5 | 1 | 14 | 3.8 / 4.0 / 4.8 / 2.8 |
+| S27 | pre-fix | no | 2 / 1 / 2 | 1 | 2 | 4 | 2.6 / 3.4 / 4.6 / 3.2 |
+| S28 | post-fix | yes | 2 / 0 / 3 | 0 | 4 | 7 | 2.6 / 4.0 / 4.2 / 3.4 |
+| S29 | post-fix | no | 3 / 0 / 2 | 1 | 4 | 3 | 2.2 / 4.0 / 4.2 / 2.8 |
+
+Impossible-arrangement and Casey columns are regex counts, so treat them as rough; I read every
+S26, S28 and S29 transcript. n=5, so these are design checks, not effects.
+
+- **S26's 5 of 5 "resolved" was mostly false:** four of the five deals were physically impossible
+  or incoherent (squeezing onto a stool, a "spare seat"). Evaluator groundedness was 5 in all 20
+  runs, so it does not detect this.
+- **S28 is the current candidate.** Deals differ between runs and rest on real facts. R03 uses
+  Casey's seat; R04 has competing promises (Casey to Robin, Jamie to Alex) that are never
+  reconciled. Status: not frozen, and few agreements trade two issues or ask for something in return.
+- **Notice:** with it, debriefs say "settled" more often (7 vs 3 of 20) but evaluator status does not
+  differ (2 vs 3 of 5). Unclear; do not conclude it does or does not work.
+- **Thought versus speech:** in S28 Alex's in-run THINK mentions the respect concern in 5 of 5 runs
+  and says it aloud in 0 of 5. This was deliberately not tuned away: it may be a useful measure for
+  C1-C4. The debrief's "brushed aside" answers partly echo text the debrief prompt quotes back, so
+  use THINK, not the debrief, for this.
+- **Debrief** (`debrief.py`, `--debrief <folder>`, `debriefs/`): one private account per agent, saved
+  after evaluation, never seen by agents or the evaluator. It reports what agents say, not what the
+  model "really" thought. Debrief views often differ from the evaluator verdict.
+- **Not fixed:** garbled turns (1-2 per batch; these look like escape sequences that lost their
+  backslash, seen in S28 and S29 too), repetitive padding at the end of runs, groundedness scoring.
+- **Correction:** the S25 x5 strategy mix below does not reproduce. The raw JSON gives 65 labels on
+  66 spoken lines: ASSERT 21, ACCEPT 12, DEFEND 9, ACKNOWLEDGE 9, COUNTER_PROPOSE 6, PROPOSE 3,
+  CLARIFY 3, EXPLAIN_NEED 2. The evaluator schema also has no structured field for who conceded or
+  what was asked in return; a separate coding pass is still needed before C0-C4.
+
+Tests: add `tests/unit/test_s26_chope_priorities.py` to the command below; 44 pass.
+
 ## Handoff: start here on a new device (written 2026-11-03)
 
 **State at handoff:** all work below is uncommitted when this was written; the user commits
@@ -32,8 +92,9 @@ python -m research_questions --preset calibration-s25-chope-conversation --repet
 
 **Where the design stands.** The research question is now "given that a resolution happens,
 how does it differ by cultural background", on a conversation-only, clock-free, action-free
-version of the chope (S04) scenario. S25 is the current candidate, and **it is not ready for a
-C0-C4 comparison**: its agreements are thin or built on invented facts (see the S25 x5 section).
+version of the chope (S04) scenario. (Superseded on 2026-11-05: S28 is now the candidate, see the
+section above.) S25 is not ready for a
+C0-C4 comparison: its agreements are thin or built on invented facts (see the S25 x5 section).
 Read "Evaluator v2.6 and the S25 x5 batch" before doing anything else.
 
 ## Research constraints (from the user)

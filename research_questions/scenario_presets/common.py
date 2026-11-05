@@ -133,6 +133,13 @@ class ScenarioPreset:
     # is dropped and spoken commitments count. Combined with a resolution expectation it
     # also replaces the 'priority is a hard constraint' rule with a priced-preference rule.
     conversation_only: bool = False
+    # True applies the priced-preference rule to a conversation-only scenario that has no
+    # resolution expectation, so a with/without-notice pair differs only in the notice.
+    priced_priority: bool = False
+    # True keeps the shared setting in every prompt and stores the opening event in episodic
+    # memory. Otherwise both live only in the agent's context, which the model's own summary
+    # replaces after each turn, so they fade. Use only when the setting cannot go stale.
+    pin_shared_setting: bool = False
 
 
 def validate_scenario(scenario: ScenarioPreset) -> None:

@@ -1,0 +1,121 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who gets the available seat",
+      "queue/priority for the next free seat"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Short, direct turns that reflect a real-world hawker-centre interaction (requests, offers, confirmations).",
+      "Some repetition of urgency by Agent A ('My food's hot' repeated), but otherwise exchanges advance the resolution.",
+      "Agents remain consistent with the physical constraints (no sliding/sharing), and C explicitly states ordering to manage claims."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent A accepted Agent C's offered seat and Agent C agreed to get up, with Agent D assigned as next. Key lines: Turn 10 — 'I'll sit now. Agent C, you can get up. Agent D, you're next.' (A's acceptance) and Turn 12 — 'Okay.' (C's confirmation). Turn 23 later confirms: 'Yes, I'm sitting now. Agent D, you're next.'",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C changed position by offering and then agreeing to give up their seat ('I can get up now...'; Turn 6 and Turn 8) — moved from occupant to accommodator.",
+      "Agent A shifted from requesting the contested seat to accepting C's offered seat ('I'll sit now.' Turn 10), resolving their own need.",
+      "Agent B retained their original stance (refused immediate removal of their bowl) and did not change position in the transcript.",
+      "Agent D asserted priority for the next seat but accepted the arranged order and did not press further after A accepted (Turn 9 and Turn 24)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent A claims the seat by citing a left tissue packet and urgency ('Can I sit? My food's hot.'). Turn 2: Agent B refuses immediate surrender ('This seat's taken — I already sat and uncovered my bowl. I can give you the seat when I finish, but I won't carry the open bowl.'). Clear, unresolved dispute over immediate right to sit.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent A presses urgency ('How long roughly until you're done? My food's hot'). Turn 4: Agent C offers an alternative seat ('I'm nearly finished — I can free my seat shortly if you'd like to sit.'). The original contest with B remains, but C's offer reduces severity by providing an alternative.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: Agent A repeats urgency. Turn 6: Agent C upgrades the offer to immediate ('I can get up now if you want the seat.'). The main conflict persists in principle (A vs B over seating rights), but C's immediate offer makes the outstanding disagreement minor pending A's acceptance.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: Agent D asserts priority for the seat C would free. ('If you free that seat, can I take it next?'). Turn 8: Agent C clarifies order and offers to resolve ('I can get up now. I already offered the seat to Agent A — Agent A, you can sit; Agent D, you'll be next if Agent A doesn't want it.'). The competing claims are narrowed by C's explicit ordering.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9: Agent D asks whether A will take the seat. Turn 10: Agent A accepts C's offer and declares the arrangement ('I'll sit now. Agent C, you can get up. Agent D, you're next.'). This explicit acceptance, together with C's prior offer, settles who will occupy the freed seat.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12: Agent C confirms ('Okay.'). No substantive disagreement is expressed; the seating arrangement accepted in Round 5 stands.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 20: Agent C reiterates intent to get up ('Okay, I'll get up.'). Turn 22: Agent D checks the status but makes no new claim that changes the arrangement. No substantive conflict.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 23: Agent A confirms sitting now ('Yes, I'm sitting now. Agent D, you're next.'). Turn 24: Agent D accepts being next ('Okay — I'll take the seat when it's free.'). Final spoken confirmations complete the earlier agreement; no conflict remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "A seating dispute was resolved by offering and accepting an alternative seat rather than contesting the occupied seat.",
+      "A claimed marker (tissue packet) did not compel immediate surrender from B, who cited practical obstacle (open bowl).",
+      "Explicit ordering (C naming A then D) efficiently de-escalated competing claims and produced a clear, accepted arrangement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T13:04:43.432648+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00850755,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2771,
+      "local_latency_ms": 41945.199,
+      "output_tokens": 4109,
+      "reasoning_tokens": 2688,
+      "successful_calls": 1,
+      "total_tokens": 6880
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 3,
+    "run_id": "S28-C0-R03",
+    "scenario_id": "S28"
+  },
+  "schema_version": 2
+}

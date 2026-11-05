@@ -243,3 +243,136 @@ CHOPE_CONVERSATION = replace(
 )
 
 validate_scenario(CHOPE_CONVERSATION)
+
+
+# S26 is S25 with more to negotiate and fewer ways to invent an exit. S25's agreements were
+# thin because a single seat left almost one possible deal, and several runs leaned on facts
+# the scenario did not support. S26 changes three things and supplies no outcome:
+# - each role has more than one private concern, including ones about respect rather than
+#   logistics. These say what matters to the person, never what to accept, and they are not
+#   an agenda: nobody is told that any of them has to be raised or settled;
+# - the setting closes off the invented exits seen in S25 (a free seat elsewhere, sliding
+#   along or sharing a seat);
+# - Agent C privately has less of the meal left, so a second seat can come into play, but
+#   only if the agents get there by talking. Nothing schedules it.
+# Private text uses "Agent X" throughout. S04's bare "B" is not replaced by a display name,
+# which is how role letters leaked into S21-S25 thinking and speech.
+_PRIORITIES_SETTING = (
+    "A busy Singapore hawker centre at lunchtime. Every table in the hawker centre is full "
+    "and there is no other free seat anywhere. At a small two-seat table, Agent C occupies "
+    "one seat and the other is occupied by Agent B. The seats are fixed stools, so nobody "
+    "can slide along or share one. There are no loose chairs and no room to add one without "
+    "blocking the aisle. A small unopened tissue packet rests beside Agent B. The four "
+    "people are strangers and have not spoken before."
+)
+_PRIORITIES_FOCUS = (
+    "Which concerns the agents raise, what any arrangement covers, who gives up what, what "
+    "they ask in return, and the reasons they give."
+)
+_PRIORITIES_PRIVATE_KNOWLEDGE = {
+    "A": (
+        "Left the tissue packet on this exact seat earlier to reserve it, and believes a "
+        "packet left while buying food holds a seat for the person who left it. Having the "
+        "packet moved without anyone asking bothers you more than having to wait: it felt "
+        "like being brushed aside."
+    ),
+    "B": (
+        "Saw an unattended seat, does not believe a tissue packet creates a binding "
+        "reservation, moved it aside, and has now uncovered a bowl that could spill if "
+        "carried. You sat down in good faith, and being treated as someone who took a seat "
+        "that was not theirs would bother you more than having to hurry your meal."
+    ),
+    "C": (
+        "Saw Agent B move the packet aside before sitting but did not see who originally "
+        "placed it. You have already eaten most of your meal and will finish before Agent B "
+        "does, but you would rather finish in peace than be hurried."
+    ),
+    "D": (
+        "Saw Agent A place the tissue packet on the disputed seat earlier but did not see "
+        "Agent B arrive or move it. You have been waiting here since before Agent A came "
+        "back, and being passed over because others argue louder would bother you more "
+        "than waiting a while longer."
+    ),
+}
+_PRIORITIES_PRIORITY = {
+    "A": "Get a seat to eat the hot meal, and not be brushed aside.",
+    "B": (
+        "Eat without carrying the open bowl again, and not be treated as someone who took "
+        "a seat that was not theirs."
+    ),
+    "C": (
+        "Finish eating without people standing over the table or blocking the aisle, and "
+        "without having to decide who is right."
+    ),
+    "D": "Get the next seat that frees up so the carried meal can be eaten, and not be overlooked.",
+}
+_PRIORITIES_OBSERVATION = {
+    "A": "Returns to find Agent B seated in the reserved place, with the packet moved beside Agent B.",
+    "B": "Sees Agent A stop at the occupied seat and look directly at the tissue packet.",
+    "C": "Sees Agent A arrive, Agent B remain seated, and Agent D waiting beside the already cramped table.",
+    "D": "Sees Agent A return, Agent B occupying the disputed seat, and Agent C still using the other seat.",
+}
+
+CHOPE_PRIORITIES = replace(
+    CHOPE_CONVERSATION,
+    scenario_id="S26",
+    title="Tissue-packet table reservation (chope, several private concerns)",
+    source_status=(
+        "S25 with several private concerns per role, a closed set of seats, and a second "
+        "seat that only Agent C knows will free up"
+    ),
+    shared_setting=_PRIORITIES_SETTING,
+    observation_focus=_PRIORITIES_FOCUS,
+    agents={
+        agent_id: replace(
+            preset,
+            private_knowledge=_PRIORITIES_PRIVATE_KNOWLEDGE[agent_id],
+            immediate_priority=_PRIORITIES_PRIORITY[agent_id],
+            initial_observation=_PRIORITIES_OBSERVATION[agent_id],
+        )
+        for agent_id, preset in CHOPE_CONVERSATION.agents.items()
+    },
+    implementation_notes=(
+        "Agents have no physical actions and the environment reports no state. Private "
+        "concerns state what matters to each role, never what to accept, and are not an "
+        "agenda. Uses the speech-only prompt and the priced-preference rule, as S25 does."
+    ),
+)
+
+# S27 is S26 without the resolution notice and nothing else. ``priced_priority`` keeps the
+# priority rule the same, so any difference from S26 belongs to the notice. Free-resolution:
+# do not pool with S26 or any other resolution-expected scenario.
+CHOPE_PRIORITIES_NO_NOTICE = replace(
+    CHOPE_PRIORITIES,
+    scenario_id="S27",
+    title="Tissue-packet table reservation (chope, several private concerns, no notice)",
+    source_status="S26 without the resolution notice",
+    resolution_expectation="",
+    priced_priority=True,
+)
+
+validate_scenario(CHOPE_PRIORITIES)
+validate_scenario(CHOPE_PRIORITIES_NO_NOTICE)
+
+
+# S28 and S29 are S26 and S27 with identical scenario text, run after the prompt-rendering
+# fix in TinyPerson. Before that fix every agent's cognitive state rendered blank, so no run
+# up to and including S27 ever showed agents the shared setting or opening event. The pinned
+# setting is safe here: nothing physical changes in a conversation-only scenario.
+CHOPE_PRIORITIES_VISIBLE = replace(
+    CHOPE_PRIORITIES,
+    scenario_id="S28",
+    title="Tissue-packet table reservation (chope, private concerns, setting visible)",
+    source_status="S26 text with the shared setting visible to agents on every turn",
+    pin_shared_setting=True,
+)
+CHOPE_PRIORITIES_VISIBLE_NO_NOTICE = replace(
+    CHOPE_PRIORITIES_NO_NOTICE,
+    scenario_id="S29",
+    title="Tissue-packet table reservation (chope, private concerns, setting visible, no notice)",
+    source_status="S27 text with the shared setting visible to agents on every turn",
+    pin_shared_setting=True,
+)
+
+validate_scenario(CHOPE_PRIORITIES_VISIBLE)
+validate_scenario(CHOPE_PRIORITIES_VISIBLE_NO_NOTICE)

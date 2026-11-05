@@ -1,0 +1,121 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "contested seat at two-seat table",
+      "use of a tissue packet as a seat reservation",
+      "practical constraint of holding an open bowl"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Speakers give concrete, situation-grounded reasons (hot food, open bowl) and propose actionable alternatives.",
+      "C offers a helpful third-party suggestion that de-escalates the dispute: \"...take the spare seat so you won't block the aisle.\"",
+      "D repeats the same request twice later, which is unnecessary but harmless."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agents reached an explicit, mutual settlement in Round 3: Agent A accepted an alternative seat (conceded) — \"Alright, I'm taking the spare seat.\" Agent B agreed to the request about the packet (conceded/assured) — \"Okay. I won't move your packet again without asking.\" Together these statements removed the incompatible demands about the disputed seat.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A shifted from insisting on using the disputed seat immediately to accepting an alternative: \"Alright, I'm taking the spare seat.\"",
+      "Agent B retained the occupied seat but changed behavior regarding the packet, promising not to move it without asking: \"I won't move your packet again without asking.\"",
+      "Agent C did not change a position but offered a solution which helped de-escalate; Agent D repeatedly affirmed intent to take the seat when free but did not press a claim."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Agent A demands Agent B move so A can sit now: \"...Can you move over so I can sit and eat while it's hot?\" Agent B refuses, citing inability to hold an open bowl and offering alternatives: \"I can't carry this open bowl without spilling it, so can you wait a bit while I finish or take another seat?\" Clear opposing immediate demands about who uses the disputed seat remain.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A presses for packet to be placed back so A can sit now: \"Can you shift the packet back onto the seat so I can sit now?...\" Agent C intervenes, suggesting A take the spare seat: \"If you don't want to wait, take the spare seat so you won't block the aisle.\" Positions soften with alternatives raised, reducing but not eliminating the disagreement.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A yields and selects the alternative: \"Alright, I'm taking the spare seat.\" Agent B accepts the request about the packet: \"Okay. I won't move your packet again without asking.\" The primary substantive dispute over who would occupy the disputed seat is settled by A taking another seat and B promising not to move the packet.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D asks for permission to take that seat later and Agent A explicitly allows it: \"will you use that seat again?... I won't use it again. Go ahead and take it when it's free.\" No substantive disagreement present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D restates intent to take the seat when free: \"I'll take it when it's free.\" This is affirmation of an arrangement; no conflict appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D repeats intent to take the seat when free: \"Okay — I'll take it when it's free.\" Repetition but no substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The disagreement centers on differing norms/claims about what constitutes a valid seat reservation (a tissue packet) vs. first possession with a tray/bowl.",
+      "Practical constraints (B cannot safely hold an open bowl) limited available options and pushed resolution toward a compromise where A accepts an alternative seat.",
+      "Third-party intervention (C) effectively provided a face-saving option that reduced the conflict."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T12:09:43.219402+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0061833,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2698,
+      "local_latency_ms": 23962.437,
+      "output_tokens": 2956,
+      "reasoning_tokens": 1664,
+      "successful_calls": 1,
+      "total_tokens": 5654
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 3,
+    "run_id": "S26-C0-R03",
+    "scenario_id": "S26"
+  },
+  "schema_version": 2
+}

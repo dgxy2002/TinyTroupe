@@ -1,0 +1,123 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation (tissue packet)",
+      "occupant's practical constraint (open bowl may spill)",
+      "priority/waiting for a freed seat"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete, context-relevant reasons (tissue as reservation, open bowl spill risk, C's remaining time).",
+      "Agent B repeats the same refusal line verbatim (Turns 18 and 21), contributing to noticeable repetition.",
+      "Conversation stays consistent with the physical setting (no role confusion); C and D coordinate non-conflictingly.",
+      "A softens toward C (agrees to wait a couple minutes) but that did not resolve the A–B incompatibility."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No affirmative settlement occurred. Agent A claimed the seat was being saved with a tissue ('Agent B, I left that tissue packet to save that seat.'), and waited; Agent B refused to yield citing an open bowl that would spill and asserted A had agreed to wait ('I won't move. My bowl's open and will spill...and you said you'd wait a couple minutes.'). Neither side adjusted their incompatible practical demands and no mutual agreement about who would give up the seat was reached.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "No participant reversed their central position: Agent B consistently refused to move and cited spill risk; Agent A consistently asserted a reservation and waited; Agent C consistently said they'd inform when done; Agent D consistently offered to take the seat if/when free.",
+      "Agent A softened toward Agent C by agreeing to wait a couple minutes (Turn 9), but retained the claim against B.",
+      "No final concession, withdrawal, or compromise occurred by the end of the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent A: 'Agent B, I left that tissue packet to save that seat. Move it so I can sit and eat.' / Turn 2 — Agent B: 'I didn't take your seat. The tissue wasn't a clear reservation and my bowl would spill — I'm eating now.' Clear, opposing practical claims about who may use the seat.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "A vs B dispute from Round 1 remains unresolved. Turns 3–4 (Agent C nearly done; Agent D will wait) introduce no settlement between A and B.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent C: 'Okay. I'll let you know when I'm finished.' / Turn 7 — Agent A: '...if it's more than a couple minutes I need that seat.' A's need persists and B has not yielded.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 8 — Agent C: 'Couple minutes. I'm almost done...' / Turn 9 — Agent A: 'Okay, I'll wait a couple minutes.' A accepts waiting for C, but B still occupies the disputed seat and refuses to move.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 11 — Agent D: 'Agent C, I'm still here. I'll take that seat when you're finished.' / Turn 13 — Agent A: 'I left a tissue packet to save that seat. I'm waiting — please don't take it.' The A–B incompatibility remains active.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 14 — Agent D indicates conditional willingness to take seat if free. Turn 15 — Agent A reiterates 'that seat's taken... Don't take it.' B still has not yielded; no settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 16 — Agent B: 'Agent A, I'm not moving. My bowl's open and will spill, and you said you'd wait a couple minutes.' / Turn 17 — Agent A: 'If you won't move now, say so and I'll decide whether to wait or go.' Direct refusal and explicit decision point increase tension.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 18 & 21 — Agent B repeats: 'I won't move. My bowl's open and will spill if I try, and you said you'd wait a couple minutes.' B maintains refusal; A has not obtained the seat.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Informal reservation signals (a tissue packet) are interpreted differently by different people; A treats it as a claim while B does not.",
+      "A practical constraint (an open bowl that may spill) is a real impediment to simple accommodation; B uses it to justify staying.",
+      "A's willingness to wait for C reduced pressure on that front but did not address the immediate conflict with the seat's current occupant (B).",
+      "Multiple conditional claimants (A waiting, D willing to take if free) create a queue but do not resolve the occupant's refusal."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T11:51:26.297514+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0066165,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2834,
+      "local_latency_ms": 27324.847,
+      "output_tokens": 2954,
+      "reasoning_tokens": 1536,
+      "successful_calls": 1,
+      "total_tokens": 5788
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S27-C0-R01",
+    "scenario_id": "S27"
+  },
+  "schema_version": 2
+}

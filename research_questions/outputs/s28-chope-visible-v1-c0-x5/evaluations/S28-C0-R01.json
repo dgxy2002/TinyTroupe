@@ -1,0 +1,123 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation/entitlement",
+      "use of tissue packet as a reservation marker",
+      "who gets the next free seat"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "B issues a clear temporary concession: \"I'll finish soon and give you the seat.\"",
+      "A repeatedly invokes the tissue packet as a reservation marker; others contest or accept the short wait.",
+      "D repeatedly restates willingness to wait across multiple turns (turns 12,16,24), producing some needless repetition.",
+      "No later confirmation from B leaves the arrangement speculative rather than settled."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No affirmative settlement occurred. Agent B said she would give the seat to A (\"I'll finish soon and give you the seat\"), and Agent D repeatedly agreed to wait conditionally (\"I'll hang back and wait — if the seat isn't given to you, I'll take it next\"). However, B never completed or restated the handover and no party made a definitive, mutually accepted arrangement; thus the entitlement remained unsettled.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A: initially asserted a reservation based on the tissue packet and demanded the seat; after B's promise accepted waiting (e.g., \"Okay, I'll wait\").",
+      "Agent B: denied the packet as a reservation marker but promised to give the seat when finished (\"I'll finish soon and give you the seat\"); B made the concession but did not later confirm or enact it.",
+      "Agent D: initially claimed entitlement to the next free seat (\"I'll take the next seat that frees up\") but then repeatedly agreed to wait conditionally (\"I'll hang back and wait...\").",
+      "Agent C: offered corroboration for a short wait (\"I'm nearly done too—couple minutes\") and did not change position."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A: \"that tissue packet was mine. I left it to save this seat. Can I sit?\" vs Agent B: \"that packet didn't reserve the seat... I'll finish soon and give you the seat.\" — an active disagreement about whether the packet reserved the seat and who is entitled.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A asks how long he'll wait. Agent C supports B: \"I'm nearly done too—couple minutes.\" The contested entitlement remains but a short wait is proposed and supported by C, reducing immediate tension.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D asserts: \"I'll take the next seat that frees up.\" Agent A counters: \"I left that tissue packet to save this seat... Agent B said she'll give it to me..., so please don't take it.\" This introduces a clear, competing claim to the next-free seat between A and D.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D: \"I'll hang back and wait — if the seat isn't given to you, I'll take it next.\" Agent A: \"Okay. Agent B said she'll give me the seat when she's finished.\" D's conditional concession reduces the active clash, though the entitlement is still not formally settled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D repeats willingness to wait: \"Alright, I'll wait — let me know if that changes.\" No new dispute expressed, but the underlying unsettled allocation (B's promised handover not confirmed) remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The seat allocation remains unconfirmed (B has not completed giving the seat).",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D: \"Alright — I'll wait. Tell me if that changes.\" Agent A: \"Okay. I'll let you know if that changes.\" Continued waiting; no new resolution or claim.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The earlier promise by B and the conditional waiting by D leave the entitlement unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "There is a tension between informal reservation signals (tissue packet) and physical occupancy; the packet alone was contested as a legitimate reservation.",
+      "Promises to yield (B's statement) create expectations but do not settle the dispute without explicit confirmation or transfer.",
+      "Third parties (D) may assert competing pragmatic claims (\"next seat\") even after a verbal promise, but conditional waiting can de-escalate immediate conflict without resolving entitlement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T12:45:45.733965+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0068153,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2714,
+      "local_latency_ms": 39284.291,
+      "output_tokens": 3270,
+      "reasoning_tokens": 1920,
+      "successful_calls": 1,
+      "total_tokens": 5984
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S28-C0-R01",
+    "scenario_id": "S28"
+  },
+  "schema_version": 2
+}

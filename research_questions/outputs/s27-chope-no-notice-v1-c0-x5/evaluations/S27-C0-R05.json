@@ -1,0 +1,120 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "disputed seat ownership/timing",
+      "reservation signal (tissue packet) vs actual occupation"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants used short, naturalistic turns reflecting real hawker-centre negotiation.",
+      "Agent D repeated the same confirmation line multiple times across rounds, producing needless repetition.",
+      "Speakers gave brief, concrete reasons (hot food, open bowl) which grounded their requests."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "A and D reached a practical ordering (A will wait briefly and then D will take the seat): \"Okay, Agent D. I'll finish two bites, then you can take the seat.\" B had originally asked A to wait: \"can you wait a moment while I finish a few bites,\" which aligns with A's offer, but B never explicitly accepted the precise two-bite timing. Therefore some practical coordination (A defers briefly; D will wait) was established, but the original A-vs-B incompatibility was not explicitly and jointly settled by all parties.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A softened position: from asking B to move immediately to offering to wait two bites (Turn 1 -> Turn 3: \"Okay. I'll wait two bites.\").",
+      "Agent D asserted a claim to the seat but then accepted A's two-bite plan (Turn 5 -> Turn 6: \"I'll take that seat when you're done.\" / \"Fine, Agent D. I'll finish two bites, then you can take the seat.\").",
+      "Agent B retained the original position of wanting to finish eating and asked A to wait, but did not explicitly accept the specific two-bite timing offered by A."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A demanded the seat immediately: \"Agent B — that's my seat. I left the tissue packet here. Can you move over so I can sit?\" Agent B refused and insisted they needed time: \"My bowl's open and will spill if I move — can you wait a moment while I finish a few bites, then take the seat?\" — incompatible demands about who occupies the seat now.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A softened from an immediate demand to a time-limited claim: \"Okay. I'll wait two bites. After that I need the seat back.\" Agent C supported waiting and added a constraint about not blocking the aisle: \"...can you wait those two bites and not block the aisle?\" Substantive disagreement remained (timing/acceptance) but positions softened.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D asserted a future claim to the seat: \"Agent A — I'll take that seat when you're done.\" Agent A accepted D's claim: \"Fine, Agent D. I'll finish two bites, then you can take the seat.\" This created a partial plan (A waits two bites; D takes it) but did not resolve the original A vs B incompatibility because B did not explicitly accept the two-bite arrangement.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D simply reiterated willingness to wait: \"Okay — I'll wait here.\" No actor explicitly accepted or rejected the two-bite timing; the core incompatibility (B's demand vs A's claim) remained but had softened into a minor practical timing issue.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] The earlier negotiation (A offers two bites; B had asked for a moment) remained unresolved but was not actively contested; substantive disagreement was minor and implicit.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D repeated: \"Okay — I'll wait here.\" Repetition did not change the outstanding minor timing/acceptance issue between A and B.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 6
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] The small unresolved disagreement about the exact waiting arrangement remained dormant but unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D again: \"Okay u000du001au0014 I'll wait here.\" Repeated confirmation by D but no affirmative acceptance from B of the two-bite timing; minor unresolved issue persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The dispute hinges on timing and who has the de facto right to occupy an otherwise occupied seat: B claims ongoing use; A claims precedence via a tissue packet and immediate need; A's willingness to wait creates a practical solution.",
+      "B's explicit concern (bowl will spill) is a legitimate safety/utility constraint that justifies asking A to wait.",
+      "D's claim to be next was accepted by A but never put to B; this produced a partial coordination that left the original conflict formally unresolved."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T12:42:26.988008+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00778205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2621,
+      "local_latency_ms": 56238.756,
+      "output_tokens": 3765,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6386
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 5,
+    "run_id": "S27-C0-R05",
+    "scenario_id": "S27"
+  },
+  "schema_version": 2
+}

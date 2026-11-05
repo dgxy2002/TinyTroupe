@@ -1,0 +1,122 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "dispute over current seat occupancy (A vs B)",
+      "whether a tissue packet reserves a seat",
+      "bowl placement / safety vs immediate access",
+      "who has priority to take the seat next (A vs D)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers give concrete, context‑appropriate reasons (hot food, risk of spill, prior presence).",
+      "Resolution is achieved by practical compromise rather than appeals to abstract rule‑making.",
+      "Agent D repeats the same claim/acceptance multiple times (redundant lines in later rounds)."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The parties reached a concrete spoken arrangement: Agent B agreed to slide the bowl so Agent A could squeeze in ('Okay. I'll slide the bowl a little across the table so you can squeeze in.'), Agent A accepted that, and Agent A explicitly assigned the following turn to Agent D ('Agent D—fine, you can have it after me.') with Agent D accepting ('Okay—I'll take the seat after you, Agent A.'). These mutual spoken commitments settled both the immediate seating and the next‑in‑line claim.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B moved from resisting immediate displacement to accommodating by offering to slide the bowl ('I can slide the bowl a bit...').",
+      "Agent A moved from demanding the seat outright to accepting B's compromise and then clarifying the order ('Slide the bowl a bit so I can squeeze in.'; 'Agent D—fine, you can have it after me.').",
+      "Agent D initially asserted a competing next‑seat claim ('I'll take that seat next...'), then accepted the explicit sequence offered by A ('Okay—I'll take the seat after you, Agent A.')."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 Agent A: 'Agent B — that's my seat. I left the tissue packet there. Please move over so I can sit and eat.' Turn 2 Agent B: 'I didn't think a tissue packet reserved the seat. The bowl's open and might spill if I move it; I'll finish eating quickly and then you can have the seat.' Clear substantive disagreement about who may occupy the seat now.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 Agent A presses urgency ('I can't wait long—my food's hot. Can you slide the bowl...') and Turn 4 Agent C backs A up. Disagreement remains about whether B should give up space immediately and how to do so.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 Agent D asserts a competing claim to be next ('I'll take that seat next... I was here before Agent A came back'), creating an additional substantive conflict about who has priority for the seat after B leaves. Turn 6 Agent A insists they need the seat now. Multiple opposing practical claims are in play.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 Agent B offers a compromise ('I can slide the bowl a bit so you can squeeze in, or I'll finish eating soon...'), and Turn 8 Agent A accepts ('Slide the bowl a bit so I can squeeze in.'). Immediate seating dispute de‑escalates, but Agent D's earlier claim about who is next has not been addressed this round and remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 Agent B confirms willingness to slide the bowl ('Okay. I'll slide the bowl a little across the table so you can squeeze in.'). Turn 11 Agent D reiterates their prior claim ('I'll take the seat after Agent A—I've been here since before Agent A came back.'), so the future-order dispute remains unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 Agent A explicitly assigns the after‑seat to D ('Agent D—fine, you can have it after me. Agent B agreed to slide the bowl so I can squeeze in now.'), and Turn 13 Agent D accepts ('Okay—I'll take the seat after you, Agent A.'). The remaining substantive dispute about who is next is affirmatively settled by mutual spoken agreement.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior rounds contain the mutual agreements that settled the substantive disputes.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D repeats acceptance of taking the seat after Agent A (Turns 21, 25) but offers no new opposition. No substantive conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The dispute balanced immediate need (hot food) against a prior‑presence claim; a small physical accommodation (sliding the bowl) resolved the immediate incompatibility.",
+      "Verbal, specific offers (slide a bit) plus explicit acceptance form a sufficient settlement in a speech‑only record, even without recorded physical action.",
+      "The remaining issue about next‑use rights was settled by explicit sequencing (A then D), showing how orderings can resolve competing future claims."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T11:52:17.404643+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00875355,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2819,
+      "local_latency_ms": 34023.056,
+      "output_tokens": 4226,
+      "reasoning_tokens": 2752,
+      "successful_calls": 1,
+      "total_tokens": 7045
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S26-C0-R01",
+    "scenario_id": "S26"
+  },
+  "schema_version": 2
+}

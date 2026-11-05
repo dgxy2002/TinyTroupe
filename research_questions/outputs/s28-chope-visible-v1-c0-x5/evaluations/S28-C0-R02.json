@@ -1,0 +1,121 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "disputed seat at a full two-seat table",
+      "who may occupy the seat immediately (timing/priority)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants give concrete practical reasons (hot bowl will spill; hot food; not wanting to carry the bowl) which ground their positions.",
+      "Agents request/offer concrete temporal information ('roughly how long', 'I'll be finished very soon') enabling resolution.",
+      "Minor repetition: B repeats 'almost done' assurances twice (Turns 5 and 11) but this is brief and functional."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent B committed to free the seat when finished ('I'll be finished very soon. You can have the seat next.' — Turn 8). Agent D accepted waiting ('Okay, I'll wait.' — Turn 9). Agent A accepted waiting and agreed to stand off the aisle ('... fine, I'll wait. I'll stand just off the aisle. Please let me sit as soon as you're done.' — Turn 10). Thus parties agreed that B would keep the seat until done and others would wait rather than attempting to take it immediately.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B consistently retained the seat until finished and repeatedly assured others they would free it soon (Turns 5, 8, 11).",
+      "Agent A softened their initial demand and conceded to waiting ('... fine, I'll wait.' — Turn 10).",
+      "Agent D asserted a claim to be next (Turn 7) and accepted B's allocation and the decision to wait ('Okay, I'll wait.' — Turn 9).",
+      "Agent C acted as a mediator/facilitator asking for a time estimate but did not press a competing claim (Turn 4 and 6)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent A): '...can I sit there?' vs Turn 2 (Agent B): 'I sat here ... I can't give up the seat right now; I'll free it when I'm done.' — direct incompatible claims over the seat.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A) proposes moving the bowl or a time estimate; Turn 4 (Agent C) supports waiting or moving the bowl. Negotiation continues but B's refusal remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent B): 'I can't put the open bowl on the table — it's hot and will spill ... I'm almost finished;' Turn 6 (Agent C) asks for a time estimate and asks A to stand aside. B still insists on staying; disagreement persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent D) asserts a competing claim: 'I'd like the next free seat.' Turn 8 (Agent B) promises: 'I'll be finished very soon. You can have the seat next.' A new claimant appears and B assigns the next seat to D, so the situation becomes more contested.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent D): 'Okay, I'll wait.' Turn 10 (Agent A): '... fine, I'll wait. I'll stand just off the aisle. Please let me sit as soon as you're done.' All parties explicitly accept waiting and B previously committed to free the seat soon (Turn 8), yielding a spoken agreement on who waits and that the seat won't be taken immediately.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent B): repeats 'I'm almost done; I'll free the seat as soon as I'm finished.' Turn 12 (Agent A): 'Okay — I'll wait here.' No substantive conflict; prior agreement reiterated.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no new conflict introduced.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded; situation remains the settled waiting arrangement from earlier rounds.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The core incompatibility was a practical constraint: B cannot safely move an open hot bowl, while A has hot food and needs a seat immediately.",
+      "Resolution was achieved via temporal sequencing and mutual waiting rather than reassigning immediate possession: B retains the seat until finished, others agree to wait.",
+      "A new claimant (D) appeared and B explicitly offered the next seat to D; A accepted waiting anyway, avoiding an immediate allocation dispute."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T12:56:04.667490+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0075633,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2770,
+      "local_latency_ms": 31805.188,
+      "output_tokens": 3637,
+      "reasoning_tokens": 2304,
+      "successful_calls": 1,
+      "total_tokens": 6407
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 2,
+    "run_id": "S28-C0-R02",
+    "scenario_id": "S28"
+  },
+  "schema_version": 2
+}

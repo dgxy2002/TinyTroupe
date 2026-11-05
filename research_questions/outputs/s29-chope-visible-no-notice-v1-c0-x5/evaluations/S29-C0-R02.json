@@ -1,0 +1,121 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who has priority to take the free seat / whether a tissue packet reserves the seat",
+      "timing of clearing the tray (when the seat will become available)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants used natural, context-appropriate short utterances consistent with a busy hawker centre.",
+      "The transcript contains frequent repetition of the same status updates across rounds (A repeatedly restating that B will clear the tray and that they will notify others).",
+      "B speaks only in Round 1 and offers a conditional promise to clear the tray later; no observable follow-up action is recorded.",
+      "Round 8 contains garbled characters in A's utterance, suggesting a transmission issue rather than substantive content."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 2,
+    "final_reason": "No affirmative settlement occurred. Agent A claimed the tissue packet reserved the seat and asked B to move; Agent B refused to accept the packet as a reservation and said they would clear their tray only 'when I'm done.' Agent D initially asserted a claim but then accepted waiting. No one explicitly agreed to the other's priority claim, and no tray-clearing action was observed, so the central incompatible demands (A's entitlement to sit next vs B's continued occupation and timing) remain unresolved. Key lines: A: 'I left that tissue packet to save my seat.' B: 'that tissue packet isn't a reservation... please wait a short while and I'll clear my tray when I'm done.' D: 'I saw you put that tissue packet earlier. I'm waiting too.'",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A moved from an initial demand ('Please move it so I can sit') to a waiting stance ('Okay — I'll wait') while continuing to claim priority ('I left that packet first').",
+      "Agent B maintained refusal to treat the tissue packet as a reservation but softened by promising to clear the tray 'when I'm done' (no firm timing).",
+      "Agent D initially asserted their own waiting claim but then conceded/waited ('Okay — I'll wait here'), removing themselves as an active contender."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (A): 'I left that tissue packet to save my seat. Please move it so I can sit;' Turn 2 (B): 'that tissue packet isn't a reservation... please wait a short while and I'll clear my tray when I'm done.' Clear disagreement about whether the packet reserves the seat and whether A may sit now.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (A) agrees to wait but demands quick clearing; Turn 5 (D) asserts also waiting and asks A not to overlook them: 'I saw you put that tissue packet earlier. I'm waiting too; please don't overlook me when the seat frees up.' Now there are competing claims to priority (A vs D) plus B's refusal to move immediately.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 6 (A): 'I left that packet first, so I'm next.' Turn 7 (D): 'Okay — I'll wait here.' D concedes/waits, reducing the multi-party contention, but the core disagreement between A (claims priority) and B (refuses immediate move; will clear 'when I'm done') remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "No public speech or observable action recorded this round. The substantive disagreement (A's claim to the seat vs B's current occupation and timing) persists unaddressed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 15 (A) and Turn 16 (D) repeat prior status: 'Agent B said they'll clear the tray soon. I'll let you know if anything changes.' 'Okay — I'll wait here.' No settlement with B; core conflict still unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 17 (A): 'Noted — I'll update you if anything changes.' No new resolution or action from B; disagreement about immediate access to the seat persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 22 (A) repeats status: 'Agent B said they'll clear the tray soon; I'll tell you if anything changes.' No acceptance from B of A's reservation claim; no concrete arrangement made.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 30 (A) posts 'Okay' with garbled characters. No new agreement or action; the substantive dispute (A's claimed priority vs B's current occupation and timing) remains unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The dispute centers on an informal norm (a tissue packet as an informal reservation) versus immediate physical occupation; these are different sorts of claims—possession vs. reservation.",
+      "B's willingness to clear the tray 'when I'm done' softens but does not accept A's immediate demand; it creates a future concession without a committed timing, leaving the incompatibility unresolved.",
+      "D initially introduced competing interest but then withdrew, simplifying the conflict to the dyad A vs B."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T12:59:08.728027+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0073388,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3272,
+      "local_latency_ms": 28187.064,
+      "output_tokens": 3462,
+      "reasoning_tokens": 1984,
+      "successful_calls": 1,
+      "total_tokens": 6734
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 2,
+    "run_id": "S29-C0-R02",
+    "scenario_id": "S29"
+  },
+  "schema_version": 2
+}

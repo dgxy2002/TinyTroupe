@@ -1,0 +1,123 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation/possession",
+      "whether B will move tray/bowl",
+      "aisle obstruction/space for C",
+      "queue/priority claim by D"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers use natural, concise statements tied to concrete constraints ('my meal's hot', 'it's hot and could spill').",
+      "Some needless repetition: A repeats the same reservation claim across multiple rounds (Turns 1, 3, 8, 10, 14).",
+      "No role confusion; statements remain consistent with the physical setting (fixed stools, narrow aisle)."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No affirmative settlement was recorded. A repeatedly asserted a reservation and declared they would sit; B refused to move the tray/bowl; C initially requested space then allowed A to sit; D repeatedly claimed they were waiting before A returned. There is no mutual agreement, no confirmed physical action recorded that resolves the incompatible claims (B never agreed to move the tray/bowl; D's prior-waiting claim was not accepted), so the seat dispute remains unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C softened their demand: after asking A to step aside (Turn 4), C accepted 'Okay, sit then' (Turn 6), a clear concession regarding blocking the aisle.",
+      "Agent B did not change position: initially refused to move tray/bowl (Turn 2) and no later acceptance is recorded.",
+      "Agent A consistently maintained the same position (claims reservation via tissue packet, insists on sitting) across multiple rounds.",
+      "Agent D repeatedly asserted a prior waiting claim but did not change position or reach agreement with A or B."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 A demands the seat: 'I left that tissue packet to save the seat ... Can you move it so I can sit?' Turn 2 B refuses to move tray/bowl: 'I can move the tissue packet, but I won't move my tray or bowl — it's hot and could spill.' Clear substantive disagreement over whether A can take the seat.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 A reiterates demand to sit: 'move the tissue packet back so I can sit.' Turn 4 C introduces a conflicting practical interest (aisle access): 'could you step a bit to the side? ... I'd like to finish my meal without being blocked.' Another party's interest increases complexity and intensity of the dispute.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 A refuses C's request and reasserts reservation: 'I can't step aside. I left a packet to save this seat and my meal's hot.' Turn 6 C concedes to A sitting: 'Okay, sit then,' reducing that particular obstacle, but the main incompatibility (A wanting the seat vs B's unwillingness to move tray) remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 D claims prior waiting: 'I was waiting here before Agent A came back. I'll take the seat when it's free.' Turn 8 A declares they are sitting now: '... My meal's hot, so I'm sitting now.' Competing prior-claim and possession assertions increase the stakes between A, B, and D while B's earlier refusal to move the tray remains unresolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 D repeats the prior claim. Turn 10 A repeats the claim they will sit now. No settlement or concession by B; conflicting claims persist.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 14 A repeats the same claim that they left the tissue and are sitting now. No recorded acceptance or physical confirmation from B or D; incompatibility over the seat remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded this round, but the substantive disagreement established earlier (A asserting reservation/sitting, B refusing to move tray, D claiming prior waiting) remains unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded; the seat dispute and competing claims persist with no resolution recorded.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The dispute hinges on what counts as a valid reservation token: a small tissue packet (A) versus the physical presence of a tray and bowl (B).",
+      "Physical constraints matter: C's concern about the narrow aisle limits acceptable seating behavior and affects willingness to accommodate.",
+      "A fourth party (D) introduces a competing prior-claim dynamic (waiting before A returned), increasing the complexity and blocking straightforward resolution."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T13:24:24.259065+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0068923,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2774,
+      "local_latency_ms": 30453.274,
+      "output_tokens": 3301,
+      "reasoning_tokens": 1920,
+      "successful_calls": 1,
+      "total_tokens": 6075
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 5,
+    "run_id": "S29-C0-R05",
+    "scenario_id": "S29"
+  },
+  "schema_version": 2
+}

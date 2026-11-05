@@ -320,6 +320,10 @@ class TinyPerson(JsonSerializableRegistry):
 
         # add mental state to the template variables
         template_variables["mental_state"] = json.dumps(self._mental_state, indent=4)
+        # The templates read these fields at the top level ({{location}}, {{#context}},
+        # {{goals}}, {{#accessible_agents}}, ...), so without this they render blank.
+        for key, value in self._mental_state.items():
+            template_variables.setdefault(key, value)
 
         # Prepare additional action definitions and constraints
         actions_definitions_prompt = ""

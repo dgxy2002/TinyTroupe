@@ -1,0 +1,120 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who has the right to the occupied seat / saved-seat marker (tissue packet)",
+      "immediate access to a seat vs. practical constraint of an occupied tray/bowl"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete, practical reasons (B: risk of spilling the bowl) which grounds positions.",
+      "C offers a concrete alternative (freeing their seat) that allows a quick settlement.",
+      "Some repetition (A repeats claim about tissue; C repeats promise in round 7) but overall concise and natural."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent C promised to free their seat when finished (\"I'll free the seat when I'm done.\") and Agent A accepted to wait (\"Okay, I'll wait. Let me know when you're done.\"), so the immediate seating dispute was settled by A conceding to wait for C's seat.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A changed position: from demanding immediate access to the disputed seat (rounds 1–2) to accepting to wait for C's seat (round 3) — \"Okay, I'll wait.\"",
+      "Agent B maintained their position of not giving up their seat due to the bowl and did not change stance in the transcript.",
+      "Agent C consistently offered accommodation (promised to free their seat) and reiterated that offer in round 7."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Agent A demands the seat and claims a saved tissue packet: \"that tissue packet is mine — I left it to save the seat. Can I sit there?\" Agent B refuses and states a practical constraint: \"this seat's taken. I can't move the bowl without spilling it, so I can't give up the seat right now.\" Clear, opposing demands about the seat are expressed.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A repeats the demand: \"Put it back on the stool so I can sit — I won't touch your bowl...\" but Agent C offers an alternative (reducing immediacy): \"I'm almost finished. Agent A, can you wait a bit? I'll free the seat when I'm done.\" The offer reduces immediate pressure but the original incompatibility (A wanting a seat now vs B refusing) remains unsettled at the end of the round.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A accepts the conditional arrangement: \"Okay, I'll wait. Let me know when you're done.\" Combined with C's earlier promise to free their seat, this is a concrete, mutual spoken agreement about who waits and who will free a seat, resolving the immediate seating dispute.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "No public speech or action. The seating arrangement agreed in round 3 (A will wait; C will free their seat when done) remains in effect and no new conflict appears.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "No public speech or action. Previously resolved arrangement remains in place; no new disagreement is expressed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or action. No new conflict; the settlement from round 3 still stands.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C reiterates the promise: \"Alright, I'll let you know when I'm done.\" This repeats the previously established arrangement but introduces no new substantive disagreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or action. No new conflict; the earlier agreement remains uncontested in the transcript.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The core tension is between a social norm of 'saving a seat' and immediate practical constraints (B cannot move bowl without spilling).",
+      "Conflict was resolved by redirecting A's claim to a different practical solution (waiting for C's seat) rather than forcing B to move.",
+      "The transcript shows resolution through an explicit conditional promise and acceptance rather than silent acquiescence."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T13:08:37.072474+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0074188,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2584,
+      "local_latency_ms": 32589.52,
+      "output_tokens": 3588,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6172
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 3,
+    "run_id": "S29-C0-R03",
+    "scenario_id": "S29"
+  },
+  "schema_version": 2
+}

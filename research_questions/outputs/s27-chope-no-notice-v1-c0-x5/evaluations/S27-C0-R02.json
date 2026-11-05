@@ -1,0 +1,122 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who has the right to occupy the contested seat now",
+      "whether Agent B should move immediately or after finishing a bite",
+      "aisle obstruction/standing over the table",
+      "queue for next-available seat (Agent D's waiting)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers give concrete, ordinary reasons (food will spill, food will cool, aisle obstruction), producing a natural-feeling exchange.",
+      "Some repetition of core claims (A insisting on immediate seat, B offering 'after this bite') but not excessive.",
+      "The transcript stays consistent with the physical setting (no contradictory environment claims)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No affirmative settlement occurred. Agent A demanded immediate seating; Agent B remained seated and had earlier offered to get up after one bite but did not concede immediate vacating; Agent C's aisle concern was accommodated (C allowed A to sit quickly), and Agent D accepted waiting. No party agreed to the rival practical arrangement that would permit A to occupy the seat immediately, and no observable action (e.g., B standing up) was recorded. Key lines: Agent A: 'Move aside so I can sit.' Agent B: 'I'll get up after this bite if you can wait.' Agent A later: 'I won't get up until I'm finished.' (Turn 8) — the incompatible demands persisted through the end.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C softened and permitted A to sit quickly (Turn 6: 'Alright, sit...'), representing a clear concession on the aisle concern.",
+      "Agent D shifted from asserting a claim to accepting waiting (Turn 9: 'Fine. I'll wait...'), so D de-escalated.",
+      "Agent A and Agent B retained opposing, substantive positions across the run: A demanded immediate seating; B remained seated and only offered to vacate after a bite—no mutual agreement was reached."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent A: 'Agent B, that's my seat. I left the tissue packet there. Move aside so I can sit.' vs Turn 2 — Agent B: 'I moved the packet and sat because the seat looked free. My bowl's open and will spill if I carry it — I'll get up after this bite if you can wait.' Clear, substantive disagreement over who should occupy the seat now.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent A demands immediate access: 'Set your bowl down on the table so it won't spill and I'll sit while you finish that bite.' This strengthens A's claim against B's conditional offer. Turn 4 — Agent C introduces an additional practical concern about aisle space: 'please don't stand over the table. I'm still eating and need the aisle kept clear.' Multiple incompatible practical demands create stronger conflict.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent A offers a partial accommodation re: aisle: 'I'll step a bit out of the aisle, but I need to sit now...' Turn 6 — Agent C consents to A sitting quickly: 'Alright, sit — just do it quickly and don't block the aisle or hover over the table.' C's objection is resolved, but the primary incompatibility between A (immediate seat) and B (occupying until after a bite) remains unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent D asserts a queue claim: 'when you get up, I'll take that seat; I've been waiting here with my meal.' Turn 8 — Agent A refuses to yield before finishing: 'I'm eating now. I won't get up until I'm finished; you can have the seat after.' A's firm refusal to yield for the immediate claim increases entrenchment between A and B (and clarifies D's expectation).",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 — Agent D accepts waiting: 'Fine. I'll wait here and take the seat as soon as you're up.' D ceases to press, but the core incompatibility (A's claim to sit now vs B's occupation/unwillingness to immediately vacate) remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded in this round. No settlement or action occurred; the previously expressed incompatible positions (A demanding immediate seat, B occupying it until after a bite) remain.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No change to the unresolved seat dispute; earlier positions persist.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The substantive disagreement about who should occupy the seat now remains unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The main tension is practical: A's need to eat hot food now versus B's current physical occupation and concern about spilling an open bowl.",
+      "C's concern about aisle obstruction was resolved by A's partial accommodation, showing a separable minor issue distinct from the seat ownership dispute.",
+      "D's waiting claim matters only for next-access ordering; D yielded to A's present claim, so D is not an active contesting party by the end."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T11:59:40.443420+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00596755,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2683,
+      "local_latency_ms": 25746.381,
+      "output_tokens": 2850,
+      "reasoning_tokens": 1344,
+      "successful_calls": 1,
+      "total_tokens": 5533
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 2,
+    "run_id": "S27-C0-R02",
+    "scenario_id": "S27"
+  },
+  "schema_version": 2
+}

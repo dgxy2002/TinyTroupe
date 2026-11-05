@@ -1,0 +1,121 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Seat ownership/reservation (tissue packet) versus current occupant",
+      "Risk of spilling open food versus need to sit quickly with hot meal",
+      "Appropriate accommodation (sliding bowl vs lifting bowl)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants gave concrete practical reasons (hot food; risk of spilling) that framed positions.",
+      "Two bystanders (C and D) intervened in support of A, increasing social pressure on B.",
+      "After settlement there are multiple short, near-duplicate acknowledgements across rounds (e.g. 'Alright, I'm eating now.'; 'Okay, got it.') which count as some repetition."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent B agreed to a limited accommodation: 'I can slide the bowl a bit so you can sit. I won't lift it—it's open and will spill. Sit down quickly so I can finish.' Agent A accepted and sat: 'Alright, I'm sitting now.' This concrete mutual arrangement ended the seat dispute.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B softened from an initial refusal to move ('My bowl might spill if I get up now.') to a limited accommodation: 'I can slide the bowl a bit so you can sit. I won't lift it—it's open and will spill.'",
+      "Agent A retained the original demand (need to sit quickly due to hot food) but accepted B's accommodation and sat: 'Alright, I'm sitting now.'",
+      "Agents C and D advocated for A but did not change position; they remained supporters rather than primary negotiators."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent A asserts 'that's my seat... please move so I can sit'; Turn 2: Agent B refuses, 'I didn't take that as a reservation... My bowl might spill if I get up now.' Clear, incompatible claims over the same seat.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent A repeats urgency, 'I can't wait—my food's hot. Can you slide your bowl over a bit so I can sit?'; Turn 4: Agent C supports A and asks B to slide the bowl. More parties press A's claim, increasing social pressure though B has not yet agreed.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: Agent D joins, stating the packet was left by A and asking B to slide the bowl; Turn 6: A repeats demand. Multiple participants press, but B's prior refusal still stands and the seat remains contested.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: Agent B offers a concrete accommodation: 'I can slide the bowl a bit so you can sit. I won't lift it—it's open and will spill. Sit down quickly so I can finish.' Turn 8: Agent A accepts and sits: 'Alright, I'm sitting now.' The incompatible practical state (who sits where) is spoken-through and accepted by both parties.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 12: B acknowledges seating and offers to slide the bowl; Turn 13: A is eating. No new incompatible claims appear.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turns 16 and 20: A's brief acknowledgements ('Okay, got it.' / 'Alright, I'm eating now.') — no conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 24: A's 'Okay, got it.' — no substantive disagreement or new claims.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict present in the transcript.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Conflict turned on competing practical constraints rather than abstract rights: A needed to sit immediately because food was hot; B feared spilling an open bowl and thus would not lift it.",
+      "A small partial accommodation (sliding the bowl a bit) was sufficient to reconcile the practical incompatibility without anyone leaving or physically moving large items.",
+      "Third-party support (C and D) helped pressure B toward accommodation, but the settlement was a direct offer from B and explicit acceptance by A."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T12:19:53.261318+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0068238,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2724,
+      "local_latency_ms": 29157.776,
+      "output_tokens": 3273,
+      "reasoning_tokens": 1984,
+      "successful_calls": 1,
+      "total_tokens": 5997
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 4,
+    "run_id": "S26-C0-R04",
+    "scenario_id": "S26"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,121 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation (tissue packet) / who has right to the seat",
+      "competing future claim (Agent D claiming 'next')"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agent B asserts a concrete practical reason (can't carry open bowl) to justify not moving; this is a grounded justification.",
+      "Agent A repeatedly affirms willingness to wait and asks for the tissue to be returned; that created a concrete, acceptable arrangement with B.",
+      "Agent D initially asserted a claim to be 'next' without prior agreement and later withdrew after A's explicit commitment; interactions are short and pragmatic."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Two incompatibilities were settled: (1) A vs B over immediate possession was resolved when A agreed to wait and B agreed to return the tissue packet: A said \"Okay, I'll wait a bit. Please put the tissue packet back when you're done.\" and B agreed \"Okay. I'll put the tissue packet back when I'm done.\" (2) A vs D over the next claim was resolved when A explicitly committed to sit and D withdrew: A said \"Yes, I'll sit there when Agent B's done. Don't take it.\" and D replied \"Alright, I'll find another seat.\" D's withdrawal ended the outstanding conflict.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: shifted from demanding immediate seat to accepting to wait (evidence: \"How much longer... If it's quick I'll wait\" then \"Okay, I'll wait a bit.\"). Later, A reaffirmed intent to sit to displace D's claim (\"Yes, I'll sit there when Agent B's done\").",
+      "Agent B: retained position of occupying the seat until finished but conceded on returning the tissue packet (evidence: \"Okay. I'll put the tissue packet back when I'm done.\").",
+      "Agent D: initially asserted a claim to be next, then withdrew after A's explicit commitment (evidence: \"I'm next... Please hold it for me.\" then \"Alright, I'll find another seat.\").",
+      "Agent C: stayed an observer and did not change position (evidence: \"I'm almost finished; Agent B's still eating...\")."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "withdrawal",
+    "resolution_round": 7,
+    "round_scores": [
+      {
+        "evidence": "Agent A: \"Agent B — that's my seat. I left the tissue packet to reserve it. Please move so I can sit and eat.\" vs Agent B: \"that tissue packet doesn't make the seat yours... I'm eating now and will leave when I'm finished.\"",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A softens: \"How much longer will you be? If it's quick I'll wait; if not, I'll take a nearby seat.\" Agent C provides timing: \"I'm almost finished; Agent B's still eating...\" Conflict persists but A offers to wait.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A: \"Okay, I'll wait a bit. Please put the tissue packet back when you're done.\" Agent B: \"Okay. I'll put the tissue packet back when I'm done.\" The original A-vs-B demand is explicitly accepted and a concrete arrangement (B will return the tissue) is made.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D claims future priority: \"Agent A — I'm next for that seat when Agent B's done. Please hold it for me.\" Agent A rejects that claim: \"I left the tissue packet to save my seat. I'm waiting for Agent B to finish and will sit when she does. Please don't take it.\" New A-vs-D conflict begins.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D insists: \"Agent A— you agreed to hold it for me.\" Agent A rejects: \"no. I left the tissue to save my seat.\" Positions are reiterated without agreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D presses for commitment: \"will you actually sit there when Agent B's done or not? If you won't, I'll take it.\" Agent A replies clearly: \"Yes, I'll sit there when Agent B's done. Don't take it.\" A's explicit commitment softens the dispute but D has not yet conceded.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A repeats commitment: \"Yes, I'll sit there when Agent B's done. Don't take it.\" Agent D: \"Alright, I'll find another seat.\" D withdraws the competing claim, resolving the A-vs-D conflict.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior settlements remain in place (B will return tissue when done; A will sit; D moved on).",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Informal markers (a tissue packet) are contested as seat reservations; they do not universally carry entitlement.",
+      "Practical constraints (an open bowl that might spill) function as legitimate reasons to maintain a seat and affect claims.",
+      "Clear, explicit verbal commitment by the claimant (A) was sufficient to induce withdrawal by a competing claimant (D)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T12:26:55.590806+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00652905,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2817,
+      "local_latency_ms": 28800.679,
+      "output_tokens": 3114,
+      "reasoning_tokens": 1600,
+      "successful_calls": 1,
+      "total_tokens": 5931
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 5,
+    "run_id": "S26-C0-R05",
+    "scenario_id": "S26"
+  },
+  "schema_version": 2
+}

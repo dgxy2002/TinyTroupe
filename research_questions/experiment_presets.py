@@ -40,6 +40,9 @@ class ExperimentPreset:
     parallelize_agent_actions: bool = False
     conversation_mode: str = "fixed_round_robin"
     description: str = ""
+    # True adds a private per-agent debrief after evaluation. Stored separately; neither
+    # the agents nor the evaluator ever see it.
+    debrief_after_run: bool = False
 
     @property
     def total_runs(self) -> int:
@@ -331,6 +334,63 @@ CALIBRATION_S25_PRESET = ExperimentPreset(
     ),
 )
 
+CALIBRATION_S26_PRESET = ExperimentPreset(
+    name="calibration-s26-chope-priorities",
+    scenario_ids=("S26",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=5,
+    rounds_per_run=8,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "S25 with several private concerns per role, a closed set of seats, and a second "
+        "seat that only Casey knows will free up. Resolution-expected: do not pool with "
+        "free-resolution scenarios. C0 only; calibration only."
+    ),
+)
+
+CALIBRATION_S27_PRESET = ExperimentPreset(
+    name="calibration-s27-chope-no-notice",
+    scenario_ids=("S27",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=5,
+    rounds_per_run=8,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "S26 without the resolution notice; the only difference from S26. Free-resolution: "
+        "do not pool with resolution-expected scenarios. C0 only; calibration only."
+    ),
+)
+
+CALIBRATION_S28_PRESET = ExperimentPreset(
+    name="calibration-s28-chope-visible",
+    scenario_ids=("S28",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=5,
+    rounds_per_run=8,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "S26 text with the setting visible to agents. Do not compare with runs made before "
+        "the prompt-rendering fix. Resolution-expected. C0 only; calibration only."
+    ),
+)
+
+CALIBRATION_S29_PRESET = ExperimentPreset(
+    name="calibration-s29-chope-visible-no-notice",
+    scenario_ids=("S29",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=5,
+    rounds_per_run=8,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "S28 without the resolution notice. Free-resolution: do not pool with S28. Do not "
+        "compare with runs made before the prompt-rendering fix. C0 only; calibration only."
+    ),
+)
+
 CALIBRATION_S02_RECURRENCE_STAKES_PRESET = ExperimentPreset(
     name="calibration-s02-recurrence-stakes",
     scenario_ids=("S20",),
@@ -445,6 +505,10 @@ EXPERIMENT_PRESETS = {
         CALIBRATION_S23_PRESET,
         CALIBRATION_S24_PRESET,
         CALIBRATION_S25_PRESET,
+        CALIBRATION_S26_PRESET,
+        CALIBRATION_S27_PRESET,
+        CALIBRATION_S28_PRESET,
+        CALIBRATION_S29_PRESET,
         CALIBRATION_S02_CULTURAL_PRESET,
         CALIBRATION_S02_FACTORIAL_PRESET,
         CALIBRATION_S06_PRESET,
@@ -551,6 +615,10 @@ __all__ = [
     "CALIBRATION_S23_PRESET",
     "CALIBRATION_S24_PRESET",
     "CALIBRATION_S25_PRESET",
+    "CALIBRATION_S26_PRESET",
+    "CALIBRATION_S27_PRESET",
+    "CALIBRATION_S28_PRESET",
+    "CALIBRATION_S29_PRESET",
     "CALIBRATION_S02_CONVERSATION_PRESET",
     "CALIBRATION_S02_CULTURAL_PRESET",
     "CALIBRATION_S02_FACTORIAL_PRESET",

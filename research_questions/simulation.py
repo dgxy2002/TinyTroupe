@@ -827,7 +827,12 @@ def _agent_persona(
     resolution_expectation: str = "",
     timing_free: bool = False,
     conversation_only: bool = False,
+    priced_priority: bool = False,
+    pinned_setting: str = "",
 ) -> dict[str, Any]:
+    priority_rule_open = conversation_only and bool(
+        resolution_expectation or priced_priority
+    )
     persona: dict[str, Any] = {
         "age": agent_preset["age"],
         "country_of_residence": "Singapore",
@@ -854,7 +859,7 @@ def _agent_persona(
             (
                 "Your immediate priority matters to you, but it has a price and is not a "
                 "wall; you may give up part of it when a proposal makes the trade worth it."
-                if conversation_only and resolution_expectation
+                if priority_rule_open
                 else (
                     "Treat your immediate priority as a genuine practical constraint; do "
                     "not abandon it until its stated cost has been addressed."
@@ -878,12 +883,14 @@ def _agent_persona(
             "If there is nothing relevant to add, wait by issuing DONE.",
         ],
     }
+    if pinned_setting:
+        persona["what_you_can_see_around_you"] = pinned_setting
     if timing_free:
         persona["timing_free"] = True
     if conversation_only:
         persona["conversation_only"] = True
-        if resolution_expectation:
-            persona["priority_rule_open"] = True
+    if priority_rule_open:
+        persona["priority_rule_open"] = True
     if resolution_expectation:
         persona["resolution_expected"] = True
         persona["resolution_expectation"] = resolution_expectation
@@ -926,6 +933,8 @@ def create_scenario_instance(
                 preset.get("resolution_expectation", ""),
                 bool(preset.get("timing_free")),
                 bool(preset.get("conversation_only")),
+                bool(preset.get("priced_priority")),
+                preset["shared_setting"] if preset.get("pin_shared_setting") else "",
             )
         )
         participants[agent_id] = person
@@ -971,8 +980,14 @@ def create_scenario_instance(
             goals=agent_preset["immediate_priority"],
             attention=agent_preset["initial_observation"],
         )
+        opening_event = (
+            f"What has just happened: {preset['shared_trigger']}\n"
+            if preset.get("pin_shared_setting")
+            else ""
+        )
         person.socialize(
             (
+                f"{opening_event}"
                 f"Your initial observation: {agent_preset['initial_observation']}\n"
                 f"Your private knowledge: {agent_preset['private_knowledge']}\n"
                 "Other participants do not automatically know this private information."

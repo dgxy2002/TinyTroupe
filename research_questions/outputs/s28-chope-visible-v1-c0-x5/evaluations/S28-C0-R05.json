@@ -1,0 +1,121 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "disputed saved seat (tissue packet claim) between Agent A and Agent B",
+      "who takes the next freed seat (Agent A vs. Agent D)",
+      "aisle obstruction / holding of tray-bowl while someone steps away"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers give concise practical reasons (tissue packet, can't carry open bowl); exchanges feel natural for a hawker-centre setting.",
+      "Agent D repeats similar waiting statements (Turns 7/9/12 and 21/25), producing some redundancy.",
+      "No confusion about physical constraints (fixed stools, no extra chairs); participants reference these constraints implicitly in offers."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No affirmative settlement occurred. Agent B explicitly refused to give the seat ('No, I can't give you the seat. My tray and bowl are set out...') and Agent A repeatedly requested the seat and offered to hold the tray/bowl, but B never accepted. Agent D agreed to wait after A clarified he would not cut ahead ('No — I won't cut ahead...'; 'Okay — I'll wait'), yet the central A vs. B incompatibility about the occupied seat remained unaddressed by B through the end of the transcript.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened behaviorally (stepped out of the aisle) and made a concrete accommodation offer to enable B to step away, but kept the core claim to the saved seat.",
+      "Agent B retained the original position (refusal to give up the seat) and did not change stance in the transcript.",
+      "Agent D initially asserted intent to take the next available seat but accepted A's clarification and withdrew active competition (agreed to wait)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent A: 'I left that tissue packet here to save this seat. I need to sit and eat; can you give me the seat back?' Turn 2: Agent B: 'No, I can't give you the seat. My tray and bowl are set out and I can't carry the open bowl; come back when I'm finished and I'll move.' Direct, opposing claims to the same seat; unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent A offers a concrete accommodation: 'I'll hold your bowl and tray while you step away briefly...' This is an attempt to resolve the seat dispute. Turn 4: Agent C asks A to step out of the aisle. B's refusal from Round 1 remains unaccepted, so disagreement persists but has softened.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: Agent A complies with aisle concern and repeats the offer to hold B's tray/bowl. Turn 6: Agent C asks A to hold the bowl just out of the aisle. No acceptance from B is recorded; substantive dispute between A and B remains but activity shows reduced tension and practical accommodation.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: Agent D claims intent to 'take the next seat that frees up.' Turn 8: Agent A: 'I'm sorting this with Agent B now; I'll take the seat when it frees.' The original A-vs-B dispute remains unresolved; a potential A-vs-D timing question appears but A asserts the saved-seat claim.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 and Turn 12: Agent D presses whether A will take the seat before D. The core disagreement (A's saved-seat claim vs. B's refusal to give up the seat) continues; D's repeated queries raise mild competition about order but do not resolve the A–B dispute.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 13: Agent A clarifies: 'No — I won't cut ahead. I'm asking Agent B for my saved seat; if it frees now I'll take it, otherwise it's yours.' Turn 14: Agent D: 'Okay — I'll wait.' A–D tension is resolved, but A–B substantive conflict remains (B has not agreed to yield).",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded this round. The unresolved dispute between Agent A (claiming a saved seat) and Agent B (refusing to give it up) persists with no new developments.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Turns 21 & 25: Agent D repeats 'I'll wait' / 'Alright — I'll wait here.' No acceptance from Agent B or a transfer of the seat occurs; the A–B substantive dispute remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "A social cue (a left tissue packet) is used by A to claim a seat, but B does not accept that norm as sufficient to vacate the seat.",
+      "A's practical accommodation (offering to hold tray/bowl) would resolve the practical obstacle, but it requires B's acceptance which never occurs.",
+      "D's role is secondary; the A–D potential conflict is resolved by A's promise not to cut and D's agreement to wait, leaving the primary unresolved issue between A and B."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T13:19:30.387650+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00720205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2773,
+      "local_latency_ms": 28768.475,
+      "output_tokens": 3456,
+      "reasoning_tokens": 1920,
+      "successful_calls": 1,
+      "total_tokens": 6229
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 5,
+    "run_id": "S28-C0-R05",
+    "scenario_id": "S28"
+  },
+  "schema_version": 2
+}

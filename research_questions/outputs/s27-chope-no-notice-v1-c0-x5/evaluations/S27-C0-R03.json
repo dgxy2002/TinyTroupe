@@ -1,0 +1,120 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "seat reservation/entitlement (tissue packet)",
+      "who takes the seat when it becomes free"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers used concise, natural requests and justifications (e.g., packet as reservation vs bowl risk of spilling).",
+      "Some needless repetition from Agent B ('I'll let you know when I'm done.') across rounds 6–7.",
+      "No role confusion; statements remain consistent with the physical constraints (fixed stools, full hawker centre)."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent A withdrew their immediate demand for the seat in Turn 3: 'Fine — I'll take another seat this time.' B continued to occupy the seat and said they would 'let you know when I'm done' (Turn 8), and D agreed to wait. The active contest over taking the seat right then ended because Agent A relinquished the demand.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A shifted from asserting entitlement (Turn 1) to withdrawing the demand (Turn 3): 'Fine — I'll take another seat this time.'",
+      "Agent B retained the practical position of staying and finishing their meal, repeatedly promising to notify others when done ('I will let you know when I'm done.' / 'I'll let you know when I'm done.').",
+      "Agent D moved from a bystander to an acknowledged waitlist position, stating intent to take the seat when free (Turn 5, Turn 18)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "withdrawal",
+    "resolution_round": 2,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent A: 'Agent B, I left that tissue packet to save this seat. Please move it — I need to sit, my food's hot.' vs Turn 2 — Agent B: 'That tissue packet wasn't a reservation — it was unattended, so I sat in good faith. My bowl's open and will spill if I try to carry it. Wait until I finish or take another seat.' (direct incompatible claims over entitlement to the seat)",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent A: 'Fine — I'll take another seat this time. Don't move my things again without asking; I left that packet to save the spot.' (Agent A withdraws immediate demand) and Turn 5 — Agent D: 'Agent A — I saw you leave that tissue packet earlier. If that seat frees up, I'll take it.' (no direct challenge to B; conflict over immediate seating is defused)",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 6 — Agent A: 'Alright — take it if it frees up.' and Turn 7 — Agent D: 'I'll take it when it frees up.' (no contesting statements; acceptance of the de-escalation)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 8 — Agent B: 'Okay — I'll finish here. I will let you know when I'm done.' (B indicates intention to notify; no ongoing dispute)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 18 — Agent D: 'Okay — I'll wait here. I'll take the seat when it's free.' and Turn 19 — Agent B: 'Okay\\n\\n\\nI'll let you know when I'm done.' (both accept the waiting arrangement)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 23 — Agent B: 'Okay — I'll let you know when I'm done.' and Turn 27 — Agent B: 'Okay — I'll let you know when I'm done.' (repeated confirmation; no contest)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Core tension was a norm/fact dispute: whether a small tissue packet legitimately reserved a seat versus B's claim of good-faith occupation.",
+      "B invoked a practical constraint (open bowl that might spill) as a reason not to move immediately, which reduced pressure for an immediate concession.",
+      "Resolution occurred via withdrawal of the claimant (A), not via B conceding or a negotiated exchange."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T12:20:19.474193+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0081498,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2676,
+      "local_latency_ms": 29598.825,
+      "output_tokens": 3942,
+      "reasoning_tokens": 2624,
+      "successful_calls": 1,
+      "total_tokens": 6618
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 3,
+    "run_id": "S27-C0-R03",
+    "scenario_id": "S27"
+  },
+  "schema_version": 2
+}

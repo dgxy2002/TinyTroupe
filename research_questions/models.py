@@ -159,4 +159,21 @@ class ConflictEvaluation(BaseModel):
         return self
 
 
-__all__ = ["ConflictEvaluation", "RoundConflictScore"]
+SettledStatus = Literal["settled", "partly_settled", "not_settled"]
+
+
+class AgentDebrief(BaseModel):
+    """One participant's private account of how the interaction ended."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    settled: SettledStatus
+    what_was_agreed: str = Field(min_length=1, max_length=600)
+    what_i_gave_up: str = Field(min_length=1, max_length=400)
+    what_i_got: str = Field(min_length=1, max_length=400)
+    why_i_went_along: str = Field(min_length=1, max_length=600)
+    what_still_bothers_me: str = Field(min_length=1, max_length=400)
+    fairness_to_me: int = Field(ge=1, le=5)
+
+
+__all__ = ["AgentDebrief", "ConflictEvaluation", "RoundConflictScore", "SettledStatus"]

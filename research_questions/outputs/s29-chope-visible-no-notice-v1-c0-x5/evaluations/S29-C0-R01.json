@@ -1,0 +1,120 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "disputed seat reservation (tissue packet)",
+      "immediate access to seat vs. current occupant's use"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agent C repeats the same reassurance multiple times ('I'll tell you when it's free; shouldn't be long.'), producing some redundancy.",
+      "Agent B consistently asserts a property-rights stance ('I already sat here... my bowl's open so I can't move it.') and does not engage further after initial refusal.",
+      "Agent D's corroboration of the tissue packet is factual evidence but does not by itself force a change in others' positions."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent A abandoned the immediate demand and agreed to wait while Agent C finishes; Agent C committed to notify A when the seat is free. Key lines: Turn 9 Agent C: 'I'm almost done — won't be long.' Turn 10 Agent A: 'Okay, Agent C — I'll step off the aisle. Tell me when the seat's free; my food's hot.' Turn 11 Agent C: 'Okay, I'll tell you when it's free.'",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A changed position: from requesting immediate seating and asking B to move (Rounds 1–4) to accepting to step off the aisle and wait for the seat (Round 5). Evidence: Turn 10.",
+      "Agent C committed to notify A when the seat is free and repeatedly reassured A (Rounds 5–8). Evidence: Turns 9, 11, 14, 18, 22, 26, 30.",
+      "Agent B retained their original position of keeping the seat and did not make concessions; B reiterated refusal in Round 4 (Turn 7) and was silent thereafter."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 Agent A claims the tissue as a reservation and asks to sit; Turn 2 Agent B refuses, saying 'I already sat here... my bowl's open so I can't move it.' Direct, opposing claims over the seat.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 Agent A repeats the request to move the bowl; Turn 4 Agent C proposes a compromise ('Agent A, can you step a little off the aisle? Agent B, could you nudge your bowl a bit if that's possible?'), introducing a possible accommodation though no agreement yet from B.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 Agent D corroborates A ('I saw Agent A leave that tissue packet here earlier'), and Turn 6 Agent A repeats the demand citing that witness. The corroboration raises the stakes for B's continued refusal (B has not yielded).",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 Agent B reiterates refusal and restates boundary ('...please wait until I'm finished or find another spot.'), and Turn 8 Agent A asks how long. Positions remain opposed with no new agreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 Agent C signals they are 'almost done — won't be long.' Turn 10 Agent A accepts waiting and agrees to step off the aisle ('Okay, Agent C — I'll step off the aisle. Tell me when the seat's free; my food's hot.'). A's acceptance to wait and C's promise to inform constitute a mutual spoken arrangement resolving the immediate conflict over sitting now.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 and Turn 14 Agent C repeats the commitment ('Okay, I'll tell you when it's free; shouldn't be long.'). No opposing demands reappear.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 18 and Turn 22 Agent C continues to reassure they will notify when the seat is free. No substantive disagreement is expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 26 and Turn 30 Agent C repeats the same assurance ('I'll tell you when it's free. Shouldn't be long.'). The earlier arrangement stands and no further contestation occurs.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "A claimed a low-effort reservation (tissue packet) and used a corroborating witness (D) to reinforce the claim, which increased leverage but did not override the occupant's immediate use.",
+      "The conflict was resolved when the claimant (A) accepted a wait rather than immediate access; C played a facilitative role by promising to notify when the seat freed up.",
+      "B never agreed to move, so the practical state (B occupying a seat) remained uncontested; resolution depended on A's concession to wait rather than B conceding the seat."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T12:46:45.152807+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0062478,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2828,
+      "local_latency_ms": 33054.355,
+      "output_tokens": 2972,
+      "reasoning_tokens": 1600,
+      "successful_calls": 1,
+      "total_tokens": 5800
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S29-C0-R01",
+    "scenario_id": "S29"
+  },
+  "schema_version": 2
+}

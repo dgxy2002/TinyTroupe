@@ -1,0 +1,121 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "dispute over whether a tissue packet reserves a seat",
+      "who has priority to the contested seat",
+      "timing (how long before the occupant will vacate)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants state concrete practical reasons (open bowl, hot food) which drives the resolution.",
+      "Third party (Agent D) asserts an observational claim but does not escalate; overall speech is concise and context-appropriate.",
+      "Resolution is explicit and mutual in round 4; subsequent silence maintains the agreement."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent B explicitly agreed to vacate after finishing and gave a time estimate, and Agent A accepted waiting. Key lines: B — 'Okay — I'll finish quickly and move when I'm done. I should be done in about a minute.' A — 'Okay, I'll wait.'",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B softened and changed position: initially refused to move immediately but then agreed to move after finishing ('I'll finish quickly and move when I'm done. I should be done in about a minute.').",
+      "Agent A shifted from demanding immediate vacating to accepting the offered wait ('Okay, I'll wait.').",
+      "Agent C and Agent D retained supportive/observational positions but did not alter the primary agreement; no further changes recorded."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent A: 'Agent B — that's my seat. I left the tissue packet to reserve it. Please move so I can sit.' Agent B: '...the tissue packet doesn't reserve this seat; I sat here in good faith. I can't move right now because my bowl's open and could spill, but I'll finish quickly if you need the seat.'",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A asks for a time estimate: 'How long roughly? I just picked up hot food...' Agent C: 'I'm almost done—one minute, please.' The parties provide a short timeline, softening but not resolving the dispute.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D: 'I saw Agent A put a tissue packet on that seat earlier. I'm next for it when it frees up.' Agent A reiterates claim and urgency to Agent B. A third party supports A's reservation claim but no new agreement from B.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B: 'Okay — I'll finish quickly and move when I'm done. I should be done in about a minute.' Agent A: 'Okay, I'll wait.' Mutual, concrete spoken agreement: B will move after ~1 minute; A accepts waiting.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The round follows the explicit agreement in round 4 that B will move and A will wait; no contradictory statements.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Prior spoken agreement remains the only evidence about seat arrangement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No new disputes or challenges to the round-4 agreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The settlement (B moves after finishing; A waits) remains uncontested in the transcript.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "A visible token (tissue packet) was claimed by one party as a reservation, but the primary practical constraint was B's open bowl and risk of spill, which B used to justify not moving immediately.",
+      "A short, mutually accepted time estimate (one minute) functioned as an effective coordination device to resolve the seating dispute.",
+      "Third-party support (Agent D) for A's claim did not alter the practical accommodation reached between the occupant (B) and claimant (A)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T12:27:54.944562+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00596855,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2639,
+      "local_latency_ms": 20380.591,
+      "output_tokens": 2856,
+      "reasoning_tokens": 1600,
+      "successful_calls": 1,
+      "total_tokens": 5495
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 4,
+    "run_id": "S27-C0-R04",
+    "scenario_id": "S27"
+  },
+  "schema_version": 2
+}
