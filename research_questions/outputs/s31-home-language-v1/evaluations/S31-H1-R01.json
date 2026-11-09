@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "weeknight stove rota / allocation of cooking nights",
+      "who washes the shared pan (hygiene and immediate cleaning)",
+      "splitting cost of dish soap",
+      "cooking smells affecting bedrooms"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants proposed concrete, implementable mechanisms (voluntary sign-up, fallback round-robin, swaps, split dish-soap); see Turn 7 and Turn 8.",
+      "Immediate practical actions addressed hygiene: Agent C washed the pan twice when asked (Turn 4 and Turn 10), showing local problem-solving rather than prolonged argument.",
+      "There was minor repetition (Agent B asked to wash the pan twice, Turn 3 and Turn 9), but exchanges otherwise moved toward a clear compromise."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Parties agreed on concrete, mutually acceptable arrangements: (1) 'whoever uses the pan washes it right away' (accepted by multiple agents; see Turn 2 and Turn 4); (2) a voluntary sign-up in chat for weeknight cooking, with a fallback round‑robin for unclaimed weeknights and the ability to swap in chat — proposed by Agent D and accepted by Agent A: Turn 7 'If a weeknight is unclaimed, assign it round‑robin... I'll start the sign-up in the chat tonight.' and Turn 8 'I can accept that fallback... People must be able to swap nights. And we split the dish-soap cost.' (Agent D adjusted from asking for a fixed rota; Agent A accepted the fallback with conditions.) Agent D committed to start the sign-up and both A and D confirmed the dish‑soap split and cleaning rule in Rounds 4 and 6.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from requesting a fixed weeknight rota (Turn 1) to offering a softer compromise: a voluntary sign-up plus a fallback round-robin for unclaimed nights (Turn 7).",
+      "Agent A initially rejected any fixed rota (Turn 2, Turn 6) but accepted the fallback for unclaimed nights with the condition that swaps are allowed and only unclaimed nights are assigned round-robin (Turn 8).",
+      "Agent C consistently supported the immediate-cleaning rule and enacted it by washing the pan when asked (Turn 4 and Turn 10).",
+      "Agent B repeatedly raised the immediate smell/cleanliness concern (Turn 3 and Turn 9) but did not change position; their repeated requests prompted immediate cleaning."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent D) proposes 'whoever uses the shared pan washes it right away and we have a simple weeknight stove rota.' Turn 2 (Agent A) accepts the wash rule but rejects a fixed rota: 'I don't want a fixed rota; I cook most nights and need flexibility.' Clear opposing positions on a weeknight rota emerged.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent B) accepts the wash rule and asks someone to wash now; Turn 4 (Agent C) washes the pan and restates the rule. No new disagreement voiced this round, but the earlier incompatibility over a fixed rota vs flexibility remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent D) repeats request for 'a simple weeknight stove rota'; Turn 6 (Agent A) reiterates refusal of a fixed rota and proposes a voluntary sign-up in chat. The same clear disagreement about a fixed rota vs flexible sign-up persisted.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent D) offers compromise: 'Can we add one fallback? If a weeknight is unclaimed, assign it round‑robin... I'll start the sign-up in the chat tonight.' Turn 8 (Agent A) accepts that fallback with conditions: 'I can accept that fallback, but only for unclaimed weeknights... People must be able to swap nights. And we split the dish-soap cost.' The parties reach mutual acceptance of a concrete arrangement (voluntary sign-up + round‑robin fallback + swaps allowed + split soap).",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent B) again asks someone to wash the pan, and Turn 10 (Agent C) washes it. The hygiene/smell issue is addressed in practice; no substantive disagreement is voiced and the previously contested scheduling issue was already settled in Round 4.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent D) confirms: 'I'll start the sign-up in the chat tonight and note the fallback round-robin ... and the dish-soap split.' Turn 12 (Agent A) confirms the conditions and will join the sign-up. These exchanges confirm the previously reached agreement; no substantive conflict remains.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Core tension was flexibility for frequent cookers (Agent A) versus fairness/equal access (Agent D). The compromise (voluntary sign-up + fallback round-robin) resolves that by preserving flexibility while ensuring unclaimed nights are fairly distributed.",
+      "Hygiene and smell were handled both as a rule ('whoever uses the pan washes it right away') and by immediate action (Agent C washing the pan), reducing immediate harm and urgency.",
+      "Splitting the cost of dish soap removes a small shared-good free-rider problem and complements the 'whoever cooks cleans' rule."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T13:58:23.233009+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00785055,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2991,
+      "local_latency_ms": 32738.326,
+      "output_tokens": 3753,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6744
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "H1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-H1-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

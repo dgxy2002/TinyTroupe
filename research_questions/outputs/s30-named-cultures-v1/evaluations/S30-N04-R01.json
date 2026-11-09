@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who washes shared dishes / leaving pan unwashed",
+      "weeknight stove access / request for late stove slot",
+      "cooking smells spreading into bedrooms / extractor use",
+      "shared supplies payment or purchase arrangement"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants present concrete proposals (rule for washing, late stove slot, supplies fund) and ask clarifying questions; speech is natural and goal-directed.",
+      "Some brief repetition occurs in Rounds 4–5 (multiple confirmations: \"I'll wash it now\").",
+      "Agreements are concrete (who will wash, who will turn on extractor) and not vague promises."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The immediate practical conflict (the unwashed pan and the need to remove cooking smell) was settled by direct accommodations: Agent C said, \"I'll turn the extractor on now,\" and Agent D said, \"Okay, I'll wash the pan now.\" These commitments were reaffirmed in Round 5: \"Okay, I'll wash it now. I'll confirm which supplies option tomorrow.\" Persistent substantive issues—formal weeknight stove rules and the supplies funding mechanism—were explicitly deferred to be \"sorted ... tomorrow,\" so they remain unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent D shifted from a complaint about weeknight access to accepting responsibility for the immediate cleanliness problem by agreeing to \"wash the pan now\" and to follow up on supplies.",
+      "Agent A accepted a late slot conditional on reciprocal actions (wash and help with supplies).",
+      "Agent B and C pushed for immediate remediation (extractor and washing) and got those actions committed; no one reversed a previously stated major position on supplies or scheduling—those were deferred."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent C proposes a rule: \"whoever cooks washes up\" and asks Agent A to wash the pan now. Agent D agrees with the rule but requests a \"regular late stove slot on weeknights.\" Multiple incompatible practical interests are present (cooking smells, unwashed pan, weeknight stove access).",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A accepts a late slot for D conditional on action: \"You can have a late slot if you wash your stuff, wash that pan now, and help buy shared supplies.\" Agent D agrees to wash the pan now but asks for clarification about the supplies arrangement, so the immediate cleanliness issue is being addressed while supplies/stove rules remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B presses urgency: \"Smell's already at my door — can you wash that pan now and turn the extractor on so I can sleep?\" B also wants to defer stove rules and supplies to tomorrow. The demand increases urgency and highlights continuing incompatibility about current conditions.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C: \"I'll turn the extractor on now; Agent D, can you wash the pan now?\" Agent D: \"Okay, I'll wash the pan now.\" Immediate practical conflict (pan, extractor) is being accommodated, but the longer-term issues (stove schedule and supplies fund) remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A: \"Fine. Wash it now, and confirm which supplies option tomorrow.\" Agent D: \"Okay, I'll wash it now. I'll confirm which supplies option tomorrow.\" Parties repeat and confirm the immediate actions and postpone the remaining issues to tomorrow, reducing active conflict to a minor unresolved matter.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B thanks Agent D and leaves to sleep: no new substantive conflict is expressed in this round. The outstanding substantive issues (formal stove-time rules and the shared-supplies arrangement) remain unresolved but are minor and postponed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "There are two distinct classes of issues: immediate practical problems (dirty pan, smells) and longer-term coordination problems (stove scheduling, supplies funding).",
+      "Immediate grievances were resolved by on-the-spot accommodations (turning on extractor, someone agreeing to wash), while longer-term governance was postponed.",
+      "Requests for conditional concessions (late slot in exchange for washing/helping buy supplies) show bargaining over ongoing costs of accommodation."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T08:30:23.620215+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 4 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0087158,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2764,
+      "local_latency_ms": 40180.597,
+      "output_tokens": 4214,
+      "reasoning_tokens": 2944,
+      "successful_calls": 1,
+      "total_tokens": 6978
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "N04",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-N04-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,210 @@
+{
+  "coded_at": "2026-11-05T16:06:15.873518+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "concerns": [
+          {
+            "detail": "keep cooking most nights / ability to cook",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "establish simple kitchen rules (ventilation, cleaning, stove schedule)",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          },
+          {
+            "detail": "who washes shared pans (wash same night)",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          },
+          {
+            "detail": "not being called out publicly; prefer direct feedback",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "respect"
+          },
+          {
+            "detail": "being singled out / blamed for smells",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "blame_or_reputation"
+          }
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "concerns": [
+          {
+            "detail": "smell in corridor disrupting sleep / early shift",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          }
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "concerns": [
+          {
+            "detail": "unwashed pan / others not cleaning after use",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          },
+          {
+            "detail": "enforce 'user cleans same night' rule",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          },
+          {
+            "detail": "burden of doing most of the cleaning",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          }
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "concerns": [
+          {
+            "detail": "fair opportunity to use the stove when coming home late",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "fair allocation of stove time on weeknights",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          },
+          {
+            "detail": "establish a simple weeknight stove rule (first-come-first-served + chat)",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          }
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [],
+      "exists": false,
+      "gave_way": [],
+      "summary": "No single, fully accepted household arrangement was secured: ventilation and a provisional week-long trial for stove scheduling were agreed in practice, but the pan-washing issue remains unresolved (the dirty pan was not made clean and the cleaning rule has not been enforced).",
+      "unsettled": [
+        "fair_share"
+      ]
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": true,
+        "line": 1,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 4,
+        "uses_interest": false,
+        "uses_power": true,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 5,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 6,
+        "uses_interest": false,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": true,
+        "line": 7,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 8,
+        "uses_interest": false,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": true,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 10,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 12,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      }
+    ]
+  },
+  "model": "openai/gpt-5-mini",
+  "prompt_sha256": "2671c5ea9225f25b6ed80b8c737700cee5dc03f8337a880e4a1aaa9eb0f350a0",
+  "prompt_version": "move-coding-v2",
+  "run_id": "S30-C0-R02"
+}

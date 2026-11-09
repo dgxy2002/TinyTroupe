@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "unclean shared dishes / responsibility for washing",
+      "kitchen cooking odors spreading to bedrooms",
+      "stove scheduling / competing cooking times on weeknights"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Natural, concise roommate-style exchanges; participants move from complaint to practical proposals rather quickly.",
+      "There are multiple short confirmation checks (Rounds 6–8) restating the same commitments, producing minor repetition.",
+      "Speakers stay consistent with roles and facts (who cooked, who complained, who proposed rules).",
+      "Resolutions are pragmatic (ventilation, wash-up, heads-up) rather than formal rule-making."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Participants proposed and accepted simple behavioral rules but did not produce explicit, unanimous spoken agreement from every household member on every point. Key lines: B proposed ventilation: \"Can we at least use the fan and open the window when cooking?\" (Turn 7). C agreed and added cleaning: \"That's fair. Can we also agree to wash up right after we cook?\" (Turn 8). D endorsed the points and proposed scheduling: \"For the stove, could we just give a heads-up in the group chat when we plan to cook?\" (Turn 9). A accepted the group-chat idea: \"Yeah, that's fine.\" (Turn 10) and later reconfirmed \"Yes.\" (Turn 15). Because some participants (notably A for fan/window and the others for the group chat) never explicitly voiced full acceptance on every measure in the transcript, the outcome is partial: several measures are agreed in principle (fan/window, wash-up, group-chat heads-up) but not fully and unanimously confirmed in the conversation.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: Initially defensive about the pan (Turn 1: \"...It's not mine.\"), later accepts the group-chat heads-up (Turn 10: \"Yeah, that's fine.\" and Turn 15: \"Yes.\").",
+      "Agent D: Moves from complaint about scheduling (Turn 3/5) to proposing a concrete solution (Turn 9: group-chat heads-up) and endorses ventilation/wash-up (Turn 9: \"Yeah, those are good points.\").",
+      "Agent C: Begins by noting the unwashed pan (Turn 2) and then endorses ventilation and proposes washing up after cooking (Turn 8).",
+      "Agent B: Raises the odor problem and repeatedly seeks clear agreement on ventilation (Turns 7, 12, 17) but does not have to change position; instead prompts others to accept concrete measures."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent A: \"That pan's from last night. It's not mine.\" vs Turn 2 — Agent C: \"I don't know whose it is either. Things just get left here.\" Substantive disagreement about responsibility for the unwashed pan and a general complaint about things being left.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent D: \"It's not just the cleaning. By the time I get home, the stove is busy until late.\" vs Turn 4 — Agent A: \"I have to eat, too. This is when I finish work.\" Clear incompatible practical interests over when the stove should be used.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent D: \"Right, but that's the problem. If we all just cook when we get home, the last person has to wait hours.\" followed by Turn 6 — Agent A: \"So what do you suggest?\" The disagreement remains but participants are asking for a solution rather than escalating demands.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent B: \"Can we at least use the fan and open the window when cooking? The smell is going all the way to my room.\" and Turn 8 — Agent C: \"That's fair. Can we also agree to wash up right after we cook?\" Proposal and partial acceptance reduce the conflict but not everyone has explicitly agreed yet.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 — Agent D: \"Yeah, those are good points. For the stove, could we just give a heads-up in the group chat when we plan to cook?\" and Turn 10 — Agent A: \"Yeah, that's fine.\" The group-chat heads-up is proposed and A accepts; other participants have not all explicitly confirmed every element yet.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 — Agent B: \"Okay, but what about the fan and the window? Are we all doing that?\" and Turn 13 — Agent C: \"Yes. Fan and window when you cook, wash up when you're done.\" Further explicit endorsement by C reduces friction but not everyone has said so aloud.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 14 — Agent D: \"Okay, so the group chat heads-up is okay with everyone too?\" and Turn 15 — Agent A: \"Yes.\" The group-chat idea has A and D on record accepting it; a couple of participants haven't explicitly confirmed in the transcript.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 17 — Agent B: \"Okay, but are we all agreeing to the fan and window too?\" and Turn 19 — Agent D: \"Yes, I'm fine with the fan and window. Are you fine with the group chat?\" More confirmation, but not every participant has explicitly voiced full agreement on every point, so a small unresolved element remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Two distinct practical tensions underlie the conflict: odors/cleaning versus timing/access to the stove.",
+      "Simple behavioral rules (use fan/window, wash up immediately, give a chat heads-up) are sufficient to address the main issues in principle.",
+      "Participants quickly moved from stating grievances to proposing and accepting low-cost behavioral fixes, which reduced friction even without formal enforcement.",
+      "Lack of explicit, unanimous verbal agreement left a small outstanding uncertainty about whether everyone will follow the new practices."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T17:32:00.037523+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01005405,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2805,
+      "local_latency_ms": 45591.987,
+      "output_tokens": 4878,
+      "reasoning_tokens": 3136,
+      "successful_calls": 1,
+      "total_tokens": 7683
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "M8",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S32-M8-R01",
+    "scenario_id": "S32"
+  },
+  "schema_version": 2
+}

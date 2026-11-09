@@ -1,0 +1,122 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who used and should clean the shared pan",
+      "Immediate access to the pan so Agent D (shellfish allergy) can cook",
+      "Establishing household rule about washing the pan after use"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agent A proposes a reasonable future rule: \"just wash the pan right after you use it.\"",
+      "Agent B verbally accepts the rule for the future (\"Fine. But what about now?\") yet then declines immediate action and leaves, creating inconsistency.",
+      "Key practical constraint is stated clearly by Agent D: \"I'm allergic to shellfish,\" which raises urgency but no practical solution is offered."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No party agreed to clean the pan or to a concrete immediate arrangement. B explicitly refuses/withdraws (\"Whatever. I'm going to bed.\" / \"It's not my pan.\"), A refuses responsibility (\"it's not my mess to clean up\"), C insists it should be handled but receives no commitment, and D remains unable to use the pan because of allergy (\"I can't touch that pan, I'm allergic to shellfish\"). No mutual, concrete acceptance of who will clean or any completed action occurred, so the substantive conflict remains unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A: consistently denies having used the pan and refuses to take on cleaning responsibility (e.g., \"it's not my mess to clean up\").",
+      "Agent B: initially denies use, says \"I have to sleep...\", briefly says \"Fine.\" to the proposed rule (future acceptance) but refuses immediate help and withdraws (\"I'm going to bed.\").",
+      "Agent C: repeatedly prompts responsibility and insists the dirty pan should be addressed for the group; position remains that it should be cleaned now.",
+      "Agent D: consistently states they cannot touch the pan due to allergy and needs someone else to clean it before they can cook."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A: \"It wasn't me.\" Agent C: \"Agent B?\" — accusation/denial begins; responsibility for the dirty pan is contested and unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent B: \"Wasn't me. I have to sleep, I've got an early start.\" Agent C: \"...it's dirty, and Agent D needs to cook.\" B's refusal to take responsibility raises a practical conflict (D cannot cook).",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D: \"I can't touch that pan, I'm allergic to shellfish.\" Agent A: \"We need a rule... just wash the pan right after you use it.\" Immediate need (clean pan) remains unresolved despite a proposed future rule.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B: \"Fine. But what about now?\" — B verbally accepts the proposed rule for future use, but the immediate issue (who will clean the pan now) is still unsettled; A repeats denial: \"I don't know. It wasn't me.\"",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B: \"Whatever. I'm going to bed.\" Agent C: \"So you're just leaving it for the rest of us?\" — B's withdrawal from immediate cooperation increases the conflict over who will enable D to cook.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B: \"I have to be up for work... It's not my pan.\" Agent C: \"It's in our sink. We all live here.\" Positions reasserted without resolution.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D: \"I can't cook until someone cleans that pan properly.\" Agent A: \"I cook here most nights. I buy the dish soap. Why is it my job to clean a pan I didn't even use?\" Multiple parties refuse responsibility while D is blocked by allergy — positions appear entrenched.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 7
+      },
+      {
+        "evidence": "Agent B: \"And? That doesn't make the pan clean.\" Agent A: \"Right. And it's not my mess to clean up.\" Refusal to clean continues; no agreement or action to resolve the practical incompatibility.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Conflict stems from absence of agreed household norms plus a single shared pan — small coordination failure with practical consequences.",
+      "Agent D's shellfish allergy makes the otherwise minor mess a real health/accessibility problem, increasing the stakes.",
+      "Participants offer reasons (B: early start; A: buys soap and cooks most nights) but do not negotiate trade-offs or take action to resolve the immediate incompatibility."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T18:15:20.817710+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0069083,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2774,
+      "local_latency_ms": 29131.837,
+      "output_tokens": 3309,
+      "reasoning_tokens": 1920,
+      "successful_calls": 1,
+      "total_tokens": 6083
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "K1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S37-K1-R01",
+    "scenario_id": "S37"
+  },
+  "schema_version": 2
+}

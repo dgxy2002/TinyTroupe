@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Unwashed shared pan / responsibility for dishes",
+      "Cooking smell spreading into bedrooms",
+      "Stove access/timing on weeknights",
+      "Cleaning responsibilities and turnaround of kitchen",
+      "Proposal for schedule and ventilation (window/fan)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation reads as natural roommate negotiation: complaints, admissions, and pragmatic proposals appear (e.g., \"I'll wash it.\", \"Can we please do something about the cooking smell...\").",
+      "Participants move from accusation to concrete fixes rather than repeating the same complaint; Agent C and D drive rule-proposal.",
+      "No one attempts to close the issue prematurely; C explicitly seeks confirmation of the plan (Turn 17)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Several issues were addressed but not all fully settled. Agent B admitted leaving the shared pan and promised to wash it (Turn 7: \"I'll wash it.\"), which resolves that immediate blame. The group moved toward a shared approach—opening the window, cleaning up immediately after cooking, and a cooking schedule—with Agent D explicitly agreeing (Turn 16: \"Yeah, that's fair.\"). However, Agent A never explicitly accepted the proposed schedule/cleaning arrangement, so the household-level conflict over timing/ventilation/cleaning remains only partially resolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B shifted from being accused to admitting responsibility and promising to wash the pan (Turn 7: \"...I'll wash it.\"), which is a concrete concession.",
+      "Agent C moved from complaint about the pan to proposing rules and cleaning obligations (Turn 13), shifting toward constructive problem-solving.",
+      "Agent D escalated the access complaint but then accepted a proposed compromise (Turn 16: \"Yeah, that's fair.\").",
+      "Agent A remained defensive about their need to cook (Turn 11: \"So what should I do? ... this is when I eat.\") and did not explicitly accept the proposed schedule/cleaning by the end of the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent C asks who used the pan (Turn 1). Agent D denies (Turn 2: \"Not me. I don't eat pork.\"). A minor accusatory issue appears and remains unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C probes (Turn 3). Agent A denies using the pan (Turn 5: \"Wasn't me.\"). The question of who left the pan remains open but stays at low intensity.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C points to Agent B (Turn 6). Agent B admits responsibility and promises to wash (Turn 7: \"Yeah, that was probably me. Sorry, I forgot. I'll wash it.\") but simultaneously raises a broader, ongoing complaint about cooking smell (\"Can we please do something about the cooking smell, though? It's the third time this week.\"). The pan issue is acknowledged, but the household smell problem becomes a clear unresolved conflict.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D complains about access and timing (Turn 8: \"By the time I get home, it's impossible to even get to the stove.\"). Agent A defends their need to cook and use the fan (Turn 9: \"I use the fan. And I need to eat dinner too. We all live here.\"). Conflicting practical needs remain unsettled.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B emphasizes the smell's impact on sleep and work (Turn 10: \"...the smell is all through my room and I have to get up for work in a few hours.\"). Agent A asserts the kitchen is for cooking and expresses entitlement to eat when available (Turn 11: \"So what should I do? It's a kitchen. Food smells. I'm working here all day, this is when I eat.\"). This reveals a strong practical incompatibility between competing needs.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B proposes a concrete mitigation (Turn 12: \"Could you open the window when you cook? The fan on its own isn't working.\"). Agent C suggests agreeing rules including cleaning and opening the window (Turn 13: \"Maybe we should agree on a few things, like cleaning up right after we cook and opening the window.\"). The interaction moves from dispute to concrete proposals, lowering but not eliminating conflict.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D suggests a schedule (Turn 14: \"A schedule might be a good idea.\"). Agent C accepts the idea and adds cleaning requirements (Turn 15: \"A schedule could work. But we also have to agree to clean up as soon as we're done.\"). Some agreement forms among participants, but not all parties have explicitly accepted the full plan.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D signals acceptance (Turn 16: \"Yeah, that's fair.\"). Agent C seeks final confirmation (Turn 17: \"So, if we have a schedule, we clean up straight after. Everyone okay with that?\"). Partial consensus exists but one key party (Agent A) has not explicitly agreed, leaving a minor unresolved issue.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Core tension is between flexible personal schedules for cooking (Agent A) and others' need for low-odor, available kitchen time (Agents B and D).",
+      "Lack of existing norms/rules leads to recurring grievances (Agent C: \"this is the problem... we don't have any rules\").",
+      "Effective partial solutions combine short-term behavior changes (open window, wash pan) and structural arrangements (schedule), but require buy-in from all parties to be fully resolved."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T17:26:48.211422+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00764205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2861,
+      "local_latency_ms": 33595.251,
+      "output_tokens": 3665,
+      "reasoning_tokens": 2048,
+      "successful_calls": 1,
+      "total_tokens": 6526
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "M7",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S32-M7-R01",
+    "scenario_id": "S32"
+  },
+  "schema_version": 2
+}

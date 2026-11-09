@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smells spreading into bedrooms",
+      "shared pan left unwashed / washing responsibility",
+      "kitchen use on weeknights and who may cook when",
+      "splitting cost of shared supplies",
+      "assignment of guaranteed weeknights (rota) and swap policy"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants provide practical, everyday reasons (A: 'I work from home; it's my break.' Turn 1; B: 'I need to sleep early.' Turn 2; D: 'I get home late' Turn 4) which structure bargaining.",
+      "Resolution is concrete and confirmed in-chat (proposal of nights, explicit confirmation of swap rules), not just polite agreement.",
+      "Minor repetition: multiple restatements of 'avoid really strong-smelling food late on weeknights' (Turns 2, 3, 6) but these served to keep the specific concern in view."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group agreed a rota granting each person a guaranteed weeknight (specific assignment proposed by Agent C: 'Agent A — Monday, Agent D — Tuesday, Agent B — Wednesday, me — Thursday.' (Turn 7)), with the concrete rules that whoever cooks their night washes shared pans that night, everyone always uses the extractor and closes the kitchen door while cooking, and shared supplies/costs are split. Swaps are permitted only with prior notice and the other person's agreement and this was explicitly confirmed: 'Confirmed: swaps are fine only with a heads-up and the other person's agreement.' (Turn 10). Agent A also washed the pan immediately when asked earlier ('I’ll wash the pan now.' Turn 5 and Turn 9), and Agent D accepted washing on his assigned night while reserving the right to cook other nights if needed. These concrete mutual commitments settled the earlier incompatible demands (B's need for less smell/guaranteed nights vs D's need to cook after late work; responsibility for washing and supplies).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: moved from defending nightly cooking to accepting a rota and immediately washed the pan ('I’ll wash the pan now.' Turn 5; Turn 9).",
+      "Agent B: initially demanded that smells stop; accepted a compromise allowing A to cook most nights conditional on extractor use, smell avoidance late, and rota (Turn 2, Turn 6, Turn 12).",
+      "Agent C: shifted from complaint about the unwashed pan to proposing concrete night assignments and endorsing the pan-wash rule (Turns 3 and 7).",
+      "Agent D: refused an absolute prohibition on weeknight cooking but compromised by agreeing to avoid strong smells late if a rota is implemented and accepting washing responsibility on his assigned night (Turn 4 and Turn 8)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent A defends continued nightly cooking but proposes rules; Agent B accepts some proposals but adds a new constraint: 'please avoid really strong-smelling food late on weeknights' (Turn 2). Several core issues (who cooks which nights, D's willingness to avoid late strong smells, washing expectations) remain unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C endorses A's proposed rule and asks A to wash the pan now; Agent D resists an absolute ban on weeknight cooking but offers a conditional compromise: 'I'll avoid strong-smelling food late if we agree a simple rota' and accepts the pan-washing/supplies split (Turns 3–4). The parties move toward negotiation but the rota and specific assignments are still unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A accepts a rota in principle and washes the pan now: 'Okay, rota sounds fair. ... I’ll wash the pan now.' (Turn 5). B requests explicit night assignments and reiterates the avoidance of strong smells (Turn 6). Substantive details remain to be nailed down (which nights, swap rules).",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C proposes concrete assignments: 'Agent A — Monday, Agent D — Tuesday, Agent B — Wednesday, me — Thursday.' (Turn 7). Agent D accepts Tuesday and asks for allowance of swaps with notice (Turn 8). Only minor clarifications (swap procedure) remain.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agents confirm the swap rule and assignments: 'swaps are fine if you give a heads-up and the other person agrees. Confirm it in the chat' / 'Confirmed: swaps are fine only with a heads-up and the other person's agreement.' (Turns 9–10). Agent A also washed the pan. All previously contested demands (rota, washing, extractor, supplies split, and swaps rule) are concretely agreed.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B states 'Okay, that's settled. Sounds fair. Goodnight.' (Turn 12). No substantive disagreements are raised after the explicit confirmations in Round 5.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "A simple rota with assigned nights reconciles competing needs: D's late cooking and B's need for early sleep.",
+      "Linking washing responsibility to the act of cooking (whoever cooks washes) and immediate action (A washed the pan) resolves a recurring shared-resource friction.",
+      "Splitting supplies and confirming swap rules addresses both resource allocation and flexibility, reducing incentives to defect.",
+      "The negotiation combined concrete proposals and conditional concessions (D refused an absolute ban but accepted a rota), which enabled a practical compromise."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T16:03:47.064498+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00763405,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3037,
+      "local_latency_ms": 37310.686,
+      "output_tokens": 3639,
+      "reasoning_tokens": 2112,
+      "successful_calls": 1,
+      "total_tokens": 6676
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 2,
+    "run_id": "S30-C0-R02",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

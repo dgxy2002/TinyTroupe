@@ -1,0 +1,106 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "unclean shared pan / responsibility for cleaning",
+      "cooking smells and ventilation",
+      "immediate use of stove / scheduling"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants speak in short, natural turns and raise concrete, household-level complaints (pan, smell, fan).",
+      "Some repetition of the same complaints (pan since last night; smell persists) across rounds without new proposals.",
+      "No explicit proposals for concrete solutions (e.g., who will clean, schedule, or ventilate longer) are offered."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No substantive agreement was reached by the end of the transcript. The shared pan with pork fat remained in the sink and no one accepted responsibility to clean it; A denied using the pan, B insisted the cooking smell is a problem and asked for ventilation, C demanded cleaning, and D requested to use the stove but was blocked by the pan. No party agreed to clean, move, or otherwise change behavior, so the incompatible practical states persisted.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "No participant changed their position during the run: A denied using the pan and maintained that ventilation was being used; B continued to complain about smell and requested ventilation; C consistently demanded cleaning; D consistently denied using the pan and sought to use the stove.",
+      "No one volunteered to clean the pan or accepted another's proposed action (there were effectively no proposals)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "C: \"someone left pork in the shared pan. I can't use it now.\" D: \"This is what I mean. Every night it's something.\" — Complaint about an unwashed shared pan and recurring problems appears for the first time.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "A: \"I cooked. The pan wasn't me.\" B: \"The pan is one thing, but the smell from your cooking is the problem right now. ... Can you please use the fan and open the window?\" — Denial of responsibility for the pan and an active demand (use fan/window) create a clearer interpersonal disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "A: \"They were. The fan is on and the window's open.\" B: \"Well, it's not working. The whole place still smells.\" — Parties restate opposing claims about whether ventilation is being used/works; no settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "C: \"The pan. It's been sitting there since last night. ... Who's going to clean it?\" A: \"Right? It's been there since last night.\" — The unwashed pan remains an explicit practical obstacle; responsibility is still contested/unaddressed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "C: \"Who used it last?\" D: \"So is anyone going to use the stove? Or are we just going to talk about the pan?\" — A practical incompatibility emerges: someone wants to use the stove but the shared pan blocks use; impatience increases and no one accepts responsibility.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "A: \"The shared pan is still there.\" D: \"Right. And I didn't use it. So can I use the stove?\" — The blocking problem persists; D requests use and denies responsibility but no one offers to move/clean the pan or sets a plan.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The core tensions are practical (a shared, unwashed pan blocking stove use) and behavioral (cooking causing smells), not just differences in taste.",
+      "Lack of pre-agreed rules about shared kitchen responsibilities is driving recurring disputes and finger-pointing.",
+      "The immediate practical incompatibility (someone wants to cook now but the shared pan blocks the stove) escalates urgency beyond abstract complaints about smell."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T15:15:03.022544+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0055698,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2692,
+      "local_latency_ms": 25776.787,
+      "output_tokens": 2650,
+      "reasoning_tokens": 1472,
+      "successful_calls": 1,
+      "total_tokens": 5342
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M4-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

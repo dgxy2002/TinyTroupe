@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "unwashed shared pan (pork fat)",
+      "weeknight stove scheduling / rotation",
+      "strong-smell cooking (pork) and ventilation"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants used natural, pragmatic language and offered concrete proposals (rotation, Mon–Thu tentative slots).",
+      "There is notable repetition of the wash-now demand across rounds (\"whoever used the shared pan, please wash it now\" appears multiple times), producing some redundancy.",
+      "Speakers gave motivations and constraints (Agent A: cooks most nights; Agent B: early shifts; Agent D: gets home late), which grounded their positions."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The group agreed in principle to shared rules and a temporary scheduling compromise but did not complete all required confirmations. Concretely: participants accepted the wash-the-pan rule and the extractor/window mitigation (Agent B: \"I'll follow the wash-the-pan rule\"; Agent A: \"whoever uses the shared pan must wash it straight away\"; Agent B: \"please use the extractor and open the window\"). They also accepted a tentative Mon–Thu per-person weeknight slot to try for two weeks (Agent C: \"we'll tentatively assign one weeknight slot per person (Mon–Thu)\"; Agent D: \"I'm happy to take Thursday\"). However, Agent B never confirmed which nights to avoid (promised to check roster by tomorrow), and no one who admitted using the pan agreed explicitly in the transcript to wash it immediately. Because key practical confirmations were not obtained, the outcome is partially resolved: norms and a tentative schedule were accepted in principle but the immediate cleaning and final slot assignments remain unsettled.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C: maintained the original demand for immediate cleaning and a wash rule; later proposed a practical compromise (tentative Mon–Thu).",
+      "Agent D: moved from complaint to constructive proposal (supports wash rule and volunteered Thursday); no substantive backtracking.",
+      "Agent A: pushed for preserving most of their usual nights while accepting rotation in principle—conditioned acceptance rather than full withdrawal of prior preference.",
+      "Agent B: consistently deferred final scheduling (will check roster) but accepted the wash rule and ventilation request; did not change to a conflicting stance.",
+      "No speaker admitted to washing the pan or taking immediate corrective action; that factual issue remained unchanged."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent C) raises a substantive complaint about pork fat left in a shared pan and demands immediate cleaning and a new rule: \"whoever uses the shared pan washes it straight away. If you cook pork, use your own pan or clean this properly now.\" Turn 2 (Agent D) agrees with the wash rule but introduces a new scheduling demand (rotation). Conflict is clear (shared resource rules, smell, and unwashed pan) but negotiation has just begun and the immediate cleaning and schedule are unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A) accepts rotation in principle but with conditions (wash the pan, own-pan for pork, keep most usual nights), restating the contested rules. Turn 4 (Agent B) accepts rotation conditionally (avoid early-shift nights) and adds a mitigation (extractor/window). Parties show agreement on principles but retain incompatible practical expectations about scheduling and immediate cleaning; the core disagreements remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent A) reiterates conditions but asks for concrete slots; Turn 6 (Agent B) explains they cannot name early-shift nights now and says they'll check the roster. Both accept the wash and extractor/window norms. The dispute softens into scheduling logistics rather than outright opposition, but slot allocation and the unwashed pan remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent C) proposes a concrete temporary allocation (tentative Mon–Thu) to break the impasse and repeats the wash/pork rules. Turn 8 (Agent B) agrees tentatively and promises to confirm. The parties move toward compromise (tentative slots) and shared rules, but the schedule is not finalized and the immediate request to wash the pan still lacks confirmation from whoever used it.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent C) repeats the request to have the pan washed now and asks for roster updates; Turn 10 (Agent D) confirms taking Thursday and asks Agent B again to report. The group maintains the tentative Mon–Thu compromise and wash rule, but the same unresolved items persist (B's final confirmation and the pan being actually cleaned).",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent A) and Turn 12 (Agent B) reconfirm the tentative Mon–Thu plan and that B will check the roster by tomorrow. The parties have agreed on rules in principle (wash-the-pan, extractor/window, tentative slots), but they have not finalized slots nor obtained confirmation that the pan was washed now. Substantive disagreements remain about final scheduling and the immediate dirty pan.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Two distinct practical problems drove the exchange: a recurring strong smell from pork cooking (ventilation and timing) and a shared-cleanliness problem (pork fat left in a communal pan).",
+      "Agents converged on a mixed solution: behavioral norms (wash the shared pan, use extractor/open windows for strong smells) plus a scheduling mechanism (temporary Mon–Thu rotation) to allocate scarce stove time.",
+      "Key remaining barriers to full resolution were missing confirmations: the person who left the pan unwashed did not accept immediate responsibility, and Agent B had yet to provide specific unavailable nights."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T11:57:29.136514+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0071458,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3156,
+      "local_latency_ms": 28859.826,
+      "output_tokens": 3380,
+      "reasoning_tokens": 1792,
+      "successful_calls": 1,
+      "total_tokens": 6536
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M4-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

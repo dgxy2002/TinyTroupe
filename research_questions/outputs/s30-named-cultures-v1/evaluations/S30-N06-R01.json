@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen smell/ventilation",
+      "unwashed shared pan/cleaning responsibility",
+      "stove scheduling/weeknight access",
+      "shared soap/gas costs"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants used concise, direct proposals and confirmations (e.g., propose rota, accept, assign nights).",
+      "Some repeated lines about posting the rota ('I'll post a rota' / 'I'll post the rota in the chat') create minor redundancy.",
+      "Agreed rules were concrete and concrete trade-offs or accommodations were discussed (e.g., allowance to wash later if group is notified)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group agreed a concrete system and supporting rules: a weeknight rota for stove use, immediate washing of shared pans (with an allowed accommodation to notify the group and wash later that day), shared payment for soap/gas, and use of the extractor/closed bedroom doors to control smell. Evidence of mutual agreement: \"Look, can we agree a simple weeknight rota... And please wash shared pans right after using them.\" (Agent D, Turn 1) — accepted and specified by others: \"a rota works... whoever cooks must wash the shared pans right after use, and we all chip in for soap/gas\" (Agent A, Turn 2); \"whoever cooks washes shared pans straight after, we split soap/gas, and everyone uses the extractor and keeps doors closed\" (Agent C, Turn 4). Final confirmation of picks and posting of the rota occurred in chat: \"I'll pick Thursday in the chat...\" (Agent B, Turn 11) and \"Okay, Thursday's noted. I'll post the rota in the chat.\" (Agent A, Turn 14). These statements show each relevant party accepted the concrete arrangement and who would take which nights or post the rota.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from complaint to constructive proposal (Turn 1 -> Turn 5 picking Tuesday).",
+      "Agent A shifted from being a target of complaint to accepting the rota and offering to post it (Turn 2, Turn 6, Turn 10, Turn 14).",
+      "Agents B and C consistently advocated for extractor/doors and washing; C softened the rule by allowing delayed washing with notice (Turn 4).",
+      "Overall, each participant either retained or softened their positions toward a shared compromise; no one refused the agreed rules."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent D) makes a concrete demand: \"can we agree a simple weeknight rota... And please wash shared pans right after using them.\" Turn 2 (Agent A) accepts a rota but qualifies it and adds conditions and a social request: \"If we do it, whoever cooks must wash the shared pans right after use, and we all chip in for soap/gas ... Also, don't single me out in front of everyone.\" These statements make the substantive problems (smell, unwashed pan, scheduling, shared costs) explicit and begin negotiation but do not yet settle them.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent B) and Turn 4 (Agent C) both accept a rota and add shared rules: \"whoever cooks washes the shared pans straight after, and we all chip in for soap/gas — also please use the extractor and keep doors closed\" and \"If you can't wash straight away, tell the group and wash later that day.\" The additions narrow the disagreement (procedures for washing, extractor, doors, cost-sharing) and introduce an accommodation for delayed washing, reducing but not eliminating unresolved scheduling/assignment.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent D) volunteers a concrete night: \"I'm happy to take Tuesdays.\" Turn 6 (Agent A) agrees to post the rota: \"I'll post a rota in the chat — everyone pick a weeknight you'd like.\" This advances toward implementation and reduces substantive disagreement, but not all nights/assignments are finalised yet.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent B) picks Thursday and reiterates rules: \"I'll take Thursday nights... Please use the extractor and keep bedroom doors closed\"; Turn 8 (Agent C) confirms and urges others to pick nights in the chat. The group continues converging on the same set of rules and starts filling the rota, leaving only the final assignment step outstanding.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent D) confirms Tuesday in the chat and Turn 10 (Agent A) reiterates posting the rota and the agreed rules: \"I'll post the rota in the chat now — everyone pick a weeknight. Whoever cooks washes shared pans after; we'll split soap/gas and use the extractor.\" Substantive rules are restated consistently; a small remaining task (finalising picks/posting) remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent B) reports picking Thursday in the chat: \"I'll pick Thursday in the chat and chip in for soap/gas.\" Turn 14 (Agent A) confirms: \"Okay, Thursday's noted. I'll post the rota in the chat.\" By the end all participants have accepted the rota approach, washing rule, extractor/doors practice, and cost-sharing; the remaining practical details (who posts and which nights) have been addressed in chat and confirmed.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The household converged on procedural solutions (rota, extractor use, immediate washing) rather than punishment or policing.",
+      "Cost-sharing (soap/gas) was raised by multiple people and accepted, removing a possible recurring source of resentment.",
+      "There was a practical tension between strict immediate washing and real-life delays; C's conditional allowance ('tell the group and wash later that day') smoothed that tension."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T10:56:32.396891+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0081465,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2866,
+      "local_latency_ms": 35423.599,
+      "output_tokens": 3715,
+      "reasoning_tokens": 2112,
+      "successful_calls": 1,
+      "total_tokens": 6581
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "N06",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-N06-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

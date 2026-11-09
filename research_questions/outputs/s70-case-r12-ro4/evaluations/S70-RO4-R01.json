@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Overlapping leave requests for the two working days around National Day",
+      "Trade-off of working those days in exchange for Christmas off",
+      "Competing non-negotiable needs (wedding ceremony, childcare, family trip)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants state concrete constraints and trade-offs (childcare, wedding, family trip).",
+      "Offers and counteroffers are concise and directly tied to concrete days ('first day', 'second day', 'Christmas').",
+      "Minimal needless repetition; confirmations are explicit ('that's settled')."
+    ],
+    "dialogue_repetition_score": 0,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Concrete arrangement confirmed in round 6: Agent A agreed to work the first day ('Okay. So that means I work the first day and get the second day off.'), Agent C agreed to cover the working days and take Christmas in return ('Okay, so that's settled. I'll work the two days, and I'm taking Christmas.'), and Agent B accepted the arrangement ('Okay, that works for me.'). This mutual confirmation settles the incompatible requests.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from requesting the two days off to agreeing to work the first day ('I work the first day and get the second day off').",
+      "Agent C shifted from proposing a trade to explicitly confirming they will work both days in exchange for Christmas off ('I'll work the two days, and I'm taking Christmas').",
+      "Agent D retained the original position (needs both days off for the wedding) and obtained the requested leave once coverage was arranged.",
+      "Agent B's need for the first day off was preserved; B accepted the final staffing arrangement."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: 'Agent B, Agent D, and I have all asked for the same two days off.' Turn 2: 'I really need those days. My kid's childcare is closed.' — three overlapping leave requests, two staff needed.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: 'I can work those two days. But if I do, I want Christmas off.' Turn 4: 'My sister's wedding is on those days. I'm in the wedding party. I can work at Christmas if that helps.' — offers and trade proposals reduce immediate pressure but do not settle who takes which days.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: 'A wedding is a big deal, Agent D.' Turn 6: 'I must have the first day off.' — clarified, incompatible, non-negotiable constraints (D must be off for ceremony; B must have the first day off) increase the substantive incompatibility.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: 'I'll work the first day, but one of you will have to as well.' Turn 8: 'The first day is the actual ceremony. I have to be there.' — C's conditional offer requires another person to cover first day while D reiterates they cannot work it; no settlement reached.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9: 'Okay. So that means I work the first day and get the second day off.' Turn 10: 'Okay, that works for me.' — A proposes to take on the first-day work, B accepts; this substantially reduces the conflict though not all parties have explicitly confirmed yet.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12: 'Okay, so that's settled. I'll work the two days, and I'm taking Christmas.' Turn 13: 'Thanks, Agent A.' — C explicitly confirms the coverage arrangement and D thanks A; the outstanding incompatible demands are concretely accommodated.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 14: 'No problem.' — post-settlement acknowledgment; no substantive disagreement present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] — follows confirmed settlement in round 6.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] — no new disagreement introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] — settlement from round 6 stands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] — no revival of the issue.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] — conversation remained settled after round 6.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Resolution was enabled by a conditional offer (C willing to work those days in exchange for Christmas) combined with A's willingness to cover a specific shift.",
+      "Different types of non-negotiable constraints (ceremony attendance vs childcare) were made explicit and used to guide assignment rather than argued over.",
+      "The negotiation relied on one-person concession (A taking the first-day work) and an explicit compensation (C taking Christmas) to satisfy all requests."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T20:44:51.040697+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0100488,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2792,
+      "local_latency_ms": 50132.784,
+      "output_tokens": 4877,
+      "reasoning_tokens": 3264,
+      "successful_calls": 1,
+      "total_tokens": 7669
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "RO4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S70-RO4-R01",
+    "scenario_id": "S70"
+  },
+  "schema_version": 2
+}

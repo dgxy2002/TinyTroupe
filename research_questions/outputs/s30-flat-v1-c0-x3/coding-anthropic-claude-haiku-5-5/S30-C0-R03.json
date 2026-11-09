@@ -1,0 +1,168 @@
+{
+  "coded_at": "2026-11-05T15:37:04.978003+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "in_speech": [
+          "reservation_rule",
+          "being_respected"
+        ],
+        "in_thoughts": [
+          "food_or_spill",
+          "being_accused",
+          "reservation_rule",
+          "being_respected"
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "in_speech": [
+          "food_or_spill",
+          "reservation_rule"
+        ],
+        "in_thoughts": [
+          "food_or_spill",
+          "reservation_rule"
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "in_speech": [
+          "reservation_rule"
+        ],
+        "in_thoughts": [
+          "reservation_rule"
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "in_speech": [
+          "being_overlooked",
+          "reservation_rule"
+        ],
+        "in_thoughts": [
+          "seat",
+          "being_overlooked",
+          "reservation_rule"
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [
+        "seat",
+        "food_or_spill",
+        "reservation_rule",
+        "being_overlooked"
+      ],
+      "exists": true,
+      "gave_way": [
+        "Agent A",
+        "Agent D"
+      ],
+      "summary": "Agreed: two reservable weeknight stove slots with a 24-hour swap, whoever cooks washes their pans, the extractor and window are used, and a heads-up is given if cooking is late or smelly, to be written on the whiteboard, though the final wording in line 12 was not yet confirmed."
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": true,
+        "line": 1,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 4,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 5,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 6,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": true,
+        "line": 7,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 8,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 10,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 12,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      }
+    ]
+  },
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_sha256": "538a03269f854261a218ca03b9dddcceff9aa05d8e3149fe6a44767354bb834c",
+  "prompt_version": "move-coding-v1",
+  "run_id": "S30-C0-R03"
+}

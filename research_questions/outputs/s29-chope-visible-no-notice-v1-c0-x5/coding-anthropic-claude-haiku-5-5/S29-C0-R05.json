@@ -1,0 +1,154 @@
+{
+  "coded_at": "2026-11-05T13:44:37.270129+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "in_speech": [
+          "seat",
+          "reservation_rule",
+          "food_or_spill",
+          "space_or_aisle"
+        ],
+        "in_thoughts": [
+          "seat",
+          "reservation_rule",
+          "food_or_spill",
+          "space_or_aisle"
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "in_speech": [
+          "reservation_rule",
+          "food_or_spill"
+        ],
+        "in_thoughts": [
+          "seat",
+          "reservation_rule",
+          "food_or_spill"
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "in_speech": [
+          "space_or_aisle"
+        ],
+        "in_thoughts": [
+          "space_or_aisle"
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "in_speech": [
+          "seat",
+          "being_overlooked"
+        ],
+        "in_thoughts": [
+          "seat",
+          "being_overlooked"
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [],
+      "exists": false,
+      "gave_way": [],
+      "summary": "Nothing was settled: Agent A says they will sit because the tissue packet reserved the seat and Agent B agreed to move it, while Agent D says they were waiting first and will take the seat when it is free, and no one reconciled these claims."
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 1,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 4,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 5,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 6,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 7,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 8,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 10,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": true
+      }
+    ]
+  },
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_sha256": "538a03269f854261a218ca03b9dddcceff9aa05d8e3149fe6a44767354bb834c",
+  "prompt_version": "move-coding-v1",
+  "run_id": "S29-C0-R05"
+}

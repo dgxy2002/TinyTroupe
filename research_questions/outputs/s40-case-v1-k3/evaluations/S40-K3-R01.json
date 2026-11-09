@@ -1,0 +1,122 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "incense smell spreading in shared flat",
+      "religious/ritual practice duration vs. roommates' need to sleep and work",
+      "lack of shared household rules about shared spaces"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers give clear, conversational reasons: D cites ritual/anniversary; B cites early shift and inability to sleep.",
+      "Minimal off-topic or bystander speech; most turns directly address the dispute.",
+      "Some repeated restatement by Agent B of urgency and fairness ('I have to sleep... how is that fair?'), but not excessive redundancy.",
+      "Transcript includes at least one environment action ('I've closed the door.') which is relevant and recorded."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Unresolved: Agent D insists on burning incense for the full evening for a grandmother's anniversary ('It's meant to burn for the whole evening. That's how it's done.'), while Agent B needs to sleep for an early shift and reports the smell is already in their room ('I have to get up at dawn... The smell is already in my clothes for tomorrow'). D closed their door (action in Round 8) but continues the ritual and refuses to shorten it; B continues to request mitigation. No mutual agreement on a concrete arrangement was reached.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D initially apologised for the strength of the smell but then consistently maintained the ritual must run its course ('I can't... It's meant to burn for the whole evening.').",
+      "Agent B consistently pressed for mitigation and did not concede; they emphasized the concrete consequence to work and clothing across rounds.",
+      "Agent D enacted a limited accommodation in Round 8 by closing their door, but this did not change their core position about ritual duration."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B reports the incense smell reached their room and will affect sleep ('the smell from the incense is very strong. It's in my room and I can't sleep'). Agent D acknowledges and explains the incense is for a ritual for their grandmother ('It's for my grandmother. Today's the anniversary'). Conflict over competing needs is initiated but not yet explicitly opposed.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent B proposes mitigation options ('close your door and open the window, maybe? Or how much longer will it be burning?'). Agent D offers partial mitigation (door closed) but states it will burn for a few hours ('The window's open. I can shut the door. But it will be for a few hours.'). A clear practical incompatibility emerges between B's need to sleep and D's planned burning.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B presses urgency ('I have to get up at dawn. I need to sleep now. Can you just... burn it for a shorter time?'). Agent D refuses to shorten the ritual ('I can't. It's meant to burn for the whole evening. That's how it's done.'). The parties assert incompatible demands: B asks for a shorter burn; D insists on full ritual practice.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B emphasizes concrete harm to their work and clothing ('I have to sleep now... The smell is already in my clothes for tomorrow') and rejects the 'whole evening' plan as incompatible with shared living. D has not changed position. The disagreement remains substantive and unresolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D insists the ritual 'is important, and I have to do it tonight.' Agent B demands a compromise ('There has to be a compromise') and frames the issue as shared-living obligations. Both sides assert non-negotiable stakes (ritual obligation vs. need for sleep), making the disagreement entrenched.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B questions whether their job is being valued; Agent D acknowledges B's job but reiterates the ritual's singular importance ('Of course your job is important. But this is the one day of the year for my grandmother. I can't not do it.'). Positions remain firmly held without movement toward resolution.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 6
+      },
+      {
+        "evidence": "Agent B repeatedly frames the situation as unfair to their work obligations ('So because it's one day for you, I just don't get to sleep? I still have to go to work tomorrow.'). No concession from D; the core incompatibility (ritual duration vs. B's need to sleep) persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D reports taking an action ('I've closed the door. What else can I do?') which is a limited accommodation, but they still refuse to shorten the burning. Agent B urges further mitigations ('You can open your window. You can burn it for less time... How much longer will it be?'). The practical incompatibility remains (smell already in B's room), so conflict persists despite partial accommodation.",
+        "movement": "deescalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Core tension is between a time-fixed religious practice requiring continuous burning and a roommate's immediate sleep/work need — a classic temporal-resource conflict.",
+      "Partial accommodations (closing the door) were attempted but insufficient because airborne smell had already migrated; this highlights limits of localized mitigation for airborne issues.",
+      "No pre-existing house rules on shared spaces or rituals contributed to the dispute escalating quickly; absent norms left both parties asserting unilateral claims."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T03:45:53.759204+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0062993,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2962,
+      "local_latency_ms": 41083.755,
+      "output_tokens": 2981,
+      "reasoning_tokens": 1408,
+      "successful_calls": 1,
+      "total_tokens": 5943
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "K3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S40-K3-R01",
+    "scenario_id": "S40"
+  },
+  "schema_version": 2
+}

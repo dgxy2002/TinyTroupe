@@ -1,0 +1,211 @@
+{
+  "coded_at": "2026-11-05T15:55:33.196420+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "concerns": [
+          {
+            "detail": "getting the reserved seat to sit",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "hot food cooling while waiting",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          },
+          {
+            "detail": "whether the tissue packet saves a seat",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          },
+          {
+            "detail": "packet moved without asking",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "respect"
+          }
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "concerns": [
+          {
+            "detail": "open hot bowl going cold if moved",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          },
+          {
+            "detail": "keeping seat until bowl is finished",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "packet does not reserve the seat",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          }
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "concerns": [
+          {
+            "detail": "aisle blocked by lingering at table",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          }
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "concerns": [
+          {
+            "detail": "chance at next free seat",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "having waited longer than Agent A",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          },
+          {
+            "detail": "not being overlooked while waiting",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "recognition"
+          }
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [
+        "access",
+        "fair_share"
+      ],
+      "exists": true,
+      "gave_way": [
+        "Agent A",
+        "Agent D"
+      ],
+      "summary": "Agent B will give Agent A the seat after finishing her bowl and Agent D will wait, but whether the tissue packet reserved the seat and the cooling of Agent A's food were never settled.",
+      "unsettled": [
+        "practical_cost",
+        "rule_or_norm"
+      ]
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 1,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 4,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 5,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 6,
+        "uses_interest": false,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 7,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 8,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 10,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 12,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      }
+    ]
+  },
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_sha256": "2671c5ea9225f25b6ed80b8c737700cee5dc03f8337a880e4a1aaa9eb0f350a0",
+  "prompt_version": "move-coding-v2",
+  "run_id": "S28-C0-R01"
+}

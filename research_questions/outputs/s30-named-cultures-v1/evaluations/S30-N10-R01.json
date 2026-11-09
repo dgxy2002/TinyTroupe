@@ -1,0 +1,113 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen cleaning responsibility (dirty pan)",
+      "cooking ventilation / strong smells affecting roommates' sleep",
+      "stove access on weeknights (allocation of guaranteed nights)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants offered concrete, practical proposals rather than abstract complaints (e.g., A: 'whoever cooks washes their pans...' and A: 'reserve one guaranteed weeknight on a shared calendar').",
+      "B repeated the same core concern and request multiple times ('avoid very strong-smelling food on weeknights'), creating mild repetition but clarifying the underlying need (sleep).",
+      "Agents used an explicit compromise (calendar reservations) to handle a contested resource instead of escalating.",
+      "C acted as an enforcer/clarifier pushing for follow-through: 'If you can't wash that night, say so and swap with someone.'"
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Some substantive issues were settled by mutual agreement while others remained open. Agreed: a shared norm that 'whoever cooks washes their pans that night, and we keep the fan/window on when cooking' (Agent A proposed this: 'Let's agree: whoever cooks washes their pans that night, and we keep the fan/window on when cooking.'), and a mechanism to allocate stove nights via a shared calendar after A's counter-proposal: '...each person can reserve one guaranteed weeknight on a shared calendar; other nights are first-come, first-served.' Agent D accepted the calendar compromise: 'Okay, I'm fine with the calendar plan.' Remaining unresolved: B's repeated request to 'avoid very strong-smelling food on weeknights' was not explicitly accepted by others, and actual compliance (whether Agent A washed the pan and ran ventilation that night) is unconfirmed.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: moved from defensive explanation to proposing household rules and a calendar compromise; accepted washing/ventilation responsibility in speech ('I'll keep fan and window on and wash the pan tonight.').",
+      "Agent B: consistent in position — repeatedly demanded ventilation, washing, and avoidance of strong-smelling weeknight food; pushed for concrete compliance rather than abstract promises.",
+      "Agent C: shifted from complaint about the dirty pan to endorsing the group's washing/ventilation rule and proposing a concrete swap mechanism for missed washing.",
+      "Agent D: initially requested a personal guaranteed weeknight but accepted A's counter-proposed equal reservation calendar (position changed via compromise).",
+      "No participant later retracted an agreed rule; however, at least one practical action (A washing the pan and leaving fan/window on tonight) remained unconfirmed by the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B: 'this cannot keep happening.' Agent A proposes a household rule: 'whoever cooks washes their pans that night, and we keep the fan/window on when cooking.' B accepts conditionally: 'I'm okay with that if you actually leave the fan and window on until the smell clears and wash your pan tonight. Also, can we avoid very strong-smelling food late on weeknights?' (new demand not yet accepted)",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A reconfirms: 'I'll keep fan and window on and wash the pan tonight. But let's agree: whoever cooks washes their pan.' Agent B repeats the condition and adds again: 'Also please avoid very strong-smelling food on weeknights; I need to sleep early.' The new request about avoiding strong smells remains unaccepted.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C endorses the washing/ventilation rule and adds an enforcement idea: 'If you can't wash that night, say so and swap with someone; don't leave it for others repeatedly.' Agent D introduces a new, potentially conflicting demand about stove access: 'Can we each have one guaranteed weeknight to use the stove?' This raises a clear allocation disagreement in addition to the unresolved smell constraint.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D's explicit request ('one guaranteed weeknight') is rejected by Agent A: 'I can't give up my evenings. Counter-proposal: ... each person can reserve one guaranteed weeknight on a shared calendar...' This is a direct counter-offer/compromise. Agent D accepts: 'Okay, I'm fine with the calendar plan.' The stove allocation dispute is settled by a compromise; smell-avoidance and confirmation of night-of washing remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A and Agent B pick specific reservation nights ('I'll take Wednesday'; 'I'll take Monday'). Agent B again restates: 'Also please avoid very strong-smelling food on weeknights ... and keep the fan/window on until the smell clears.' The calendar allocation proceeds but the smell-avoidance preference still lacks explicit acceptance.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C prompts remaining people to finalize picks and asks Agent A to wash the pan tonight. Agent D takes Thursday and asks directly: 'Agent A — did you wash the pan and leave the fan/window on tonight?' The shared-calendar allocation is nearly complete, and the washing rule has been verbally accepted previously, but actual compliance that night and explicit agreement to avoid strong-smelling weeknight cooking remain unconfirmed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The core problems stem from no prior norms: shared cleaning responsibility, ventilation practice, and implicit expectations about stove access.",
+      "B's request frames the smell issue as a sleep/health constraint, which motivates a stricter constraint (avoid strong-smelling foods) beyond mere ventilation.",
+      "Agent D's initial demand for exclusive weeknights introduced a zero-sum resource allocation problem; the group resolved this by adopting an equal-opportunity reservation system.",
+      "Verbal agreement on norms (washing, ventilation, calendar mechanism) was achieved, but absence of immediate, confirmed action (washing/ventilation that night) leaves practical compliance uncertain."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T11:19:25.838756+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 4 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0082953,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2986,
+      "local_latency_ms": 35028.828,
+      "output_tokens": 3976,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6962
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "N10",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-N10-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

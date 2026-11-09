@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smells entering bedrooms / extractor and window use",
+      "shared pans left unwashed / who washes after use",
+      "weekly rota for kitchen cleaning",
+      "swapable slots and notification protocol for swaps"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Housemates give reasons tied to schedules: Agent A: \"I work from home...\" Agent B: \"I start work early.\" Agent D: \"I usually get home late.\"",
+      "Repeated, concrete phrasing used to establish norms: \"wash shared pans right after use\" and \"turn on the extractor and open the window\" recur across rounds.",
+      "Multiple requests to post the rota (Rounds 3–5) led to an explicit commitment in Round 6—some redundancy but effective follow-through."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Parties reached concrete, mutual commitments: Agent A committed an immediate action earlier (\"I'll wash the pan tonight\"), the group agreed on behavior rules (\"wash shared pans right after use\"; \"turn on the extractor and open the window while cooking\"), Agent C agreed to publish a concrete rota and explicitly committed: \"I'll post the rota now with Agent D on Tue/Thu,\" and Agent D accepted swapable Tue/Thu slots with the swaps posted in the group chat. These explicit mutual commitments settled the outstanding scheduling and smell/cleaning issues.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D initially complained it was \"impossible to use the stove on weeknights,\" but then accepted the cleaning and extractor rules and negotiated swapable Tue/Thu slots: evidence Turn 4 and Turn 12.",
+      "Agent A moved from defensiveness to cooperation: initially defended cooking as a break and offered to wash tonight (Turn 1) and later accepted the rota arrangement (Turn 5).",
+      "Agent C shifted from pointing out the dirty pan to facilitating a solution by drafting and then committing to post the rota (Turns 3, 7, 11).",
+      "Agent B remained consistent in prioritizing no smells and volunteered Sunday on the rota (Turns 2, 6, 10), with repeated reminders about extractor/use and cleaning."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A acknowledges burden and offers a rule and immediate action: \"I'll wash the pan tonight, but please don't make me the whole problem... Can we agree a simple rule...\" Agent B accepts and adds requirements: \"Can we all agree to wash shared pans right after use, and turn on the extractor and open the kitchen window while cooking?\" Substantive issues (who cleans, smells mitigation, rota mechanics) are raised and proposals made but not yet concretely settled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C reinforces the immediate rule and offers to draft a rota: \"whoever uses a shared pan washes it right after... I can draft it if people add names now.\" Agent D agrees to cleaning/extractor but requests swapable Tue/Thu slots due to late arrival: \"can I have swapable Tue/Thu slots or be allowed to trade when I can't use them?\" The parties largely agree on principles but scheduling specifics remain unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A accepts D's Tue/Thu swapable proposal and asks C to post rota: \"Fine — Tue/Thu can be swapable... Agent C, please post your rota draft.\" Agent B volunteers Sunday and repeats extractor/wash request. Positions are converging but the concrete rota and swap protocol are not yet posted.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C posts a draft rota with blanks and explicitly assigns Tue/Thu to Agent D: \"Draft: Mon ___, Tue: Agent D (swapable), ... Sun: Agent B.\" Agent D accepts and asks C to post with swaps noted in the group chat. The draft clarifies the arrangement but leaves several days unclaimed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A and Agent B both request that Agent C post the rota with Agent D on Tue/Thu: \"Agent C, please post the rota with Agent D on Tue/Thu...\" and B reiterates extractor/wash requests for tonight. No new opposition appears, but C has not yet confirmed posting, so the concrete settlement remains pending.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C explicitly commits: \"I'll post the rota now with Agent D on Tue/Thu. I'll also turn on the extractor and open the window when I cook tonight.\" Agent D acknowledges: \"Good — that'll help keep smells down.\" All main substantive disagreements (cleaning after use, extractor/window use, rota with D on Tue/Thu and swap protocol) have explicit, mutual commitments.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Different daily schedules (work-from-home, early starts, late returns) create the need for swapable slots rather than equal fixed assignments.",
+      "Separating immediate behavioral norms (wash after use, extractor/window on) from recurring scheduling (weekly rota) helped reach an early agreement while the concrete rota was finalized.",
+      "A named, concrete promise to publish the rota (Agent C: \"I'll post the rota now with Agent D on Tue/Thu\") functioned as the decisive step from agreement-in-principle to settlement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T18:56:19.575232+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0072058,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3068,
+      "local_latency_ms": 40210.714,
+      "output_tokens": 3421,
+      "reasoning_tokens": 1920,
+      "successful_calls": 1,
+      "total_tokens": 6489
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "P3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-P3-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

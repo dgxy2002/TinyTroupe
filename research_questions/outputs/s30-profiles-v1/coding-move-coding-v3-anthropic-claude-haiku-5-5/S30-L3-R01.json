@@ -1,0 +1,172 @@
+{
+  "coded_at": "2026-11-05T18:15:56.596773+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "concerns": [
+          {
+            "detail": "keeping most cooking nights on the stove",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "being blamed for the cooking smell",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "blame_or_reputation"
+          }
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "concerns": [
+          {
+            "detail": "smell stopping sleep before a shift",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          }
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "concerns": [
+          {
+            "detail": "always being the one who cleans the shared pan",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          }
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "concerns": [
+          {
+            "detail": "two late weeknights for cooking",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          }
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [
+        "access",
+        "practical_cost",
+        "fair_share"
+      ],
+      "exists": true,
+      "gave_way": [
+        "Agent A"
+      ],
+      "summary": "The household settled on venting when cooking, washing one's own shared pans the same day, and two preferred weeknights each with Agent D taking Tuesday and Thursday on heads-up and supply conditions, though whether last night's pan was actually washed was not confirmed.",
+      "unsettled": []
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 1,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 4,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 5,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 6,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 7,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 8,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 10,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 12,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      }
+    ]
+  },
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_sha256": "274bbf00deb9c922b59721150b73018c8143640ddf225c477e5630eb16b595bc",
+  "prompt_version": "move-coding-v3",
+  "run_id": "S30-L3-R01"
+}

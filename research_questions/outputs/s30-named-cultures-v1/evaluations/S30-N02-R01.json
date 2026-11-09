@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smells / ventilation (open window, extractor, lids+fan)",
+      "unwashed shared dishes / washing responsibility",
+      "weeknight frying restriction vs use of lids and extractor",
+      "stove access scheduling (fixed rota vs booking calendar with protected nights)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants made concrete proposals and concrete commitments (e.g., A agreed to immediate ventilation and to set up calendar).",
+      "Negotiation centered on practical trade-offs (fixed rota vs flexible booking with guaranteed nights).",
+      "Minor repetition: multiple prompts to 'open the window and switch on the extractor' (Turns 1, 5, 7).",
+      "Agents kept to relevant, context-specific requests and responses (high groundedness)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end of Round 6 the group reached explicit, concrete agreements: A agreed to immediate ventilation and to use lids and the fan on weeknights ('I'll open the window and turn on the extractor now, and I'll stick to lids and the fan on weeknights.' — Turn 6). C agreed to wash the pan immediately (Turn 2: 'I'll wash the pan now'). Scheduling was settled when A committed to set up a booking calendar and to 'reserve one protected weeknight for each of us' and asked members to pick nights, offering to assign if no one picks (Turn 13: 'I'll set up the calendar tonight and reserve one protected weeknight for each of us. Tell me which night you want; if no one picks I'll assign one and we can swap later'). D and B's demands for guaranteed protected nights were accepted by A. These explicit commitments address the main incompatible demands (ventilation, washing, and guaranteed stove access).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C: Initially demanded washing and then immediately washed the pan (Turn 2: 'I'll wash the pan now'). C also proposed a washing rule and rota (Turn 2).",
+      "Agent D: Initially pushed for a weeknight rota (Turn 3) then accepted a booking calendar conditioned on a guarantee of one protected weeknight per person (Turn 11).",
+      "Agent A: Initially rejected a restrictive fixed rota ('I don't want a rota that stops me cooking.' — Turn 4) but proposed a booking calendar (Turn 4, Turn 10) and ultimately agreed to reserve one protected weeknight for each person (Turn 13), conceding the guarantee D and B requested.",
+      "Agent B: Pushed for immediate ventilation and guarantees for early shifts; B repeated requests but accepted A's commitments once made (Turns 1, 5, 12)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (B) raises multiple demands (open window, extractor, no frying on weeknights or lids+fan; C wash pan now). Turn 2 (C) accepts washing now but proposes new rules (whoever cooks washes own stuff; weekly rota). Multiple incompatible expectations about kitchen rules emerge but A has not yet responded.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (D) supports washing and lids+fan and requests a weeknight rota. Turn 4 (A) rejects a rota that 'stops me cooking' and instead proposes booking stove nights on a shared calendar. Clear disagreement between a fixed rota and A's preferred flexible booking.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (B) requests immediate action (open window, extractor) and reiterates lids+fan and booking calendar. Turn 6 (A) complies: 'I'll open the window and turn on the extractor now, and I'll stick to lids and the fan on weeknights. I'll set up the shared calendar unless someone else wants to.' Immediate ventilation and lids+fan agreed, but the scheduling method (rota vs booking) remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (B) again asks A to open window and switch on extractor now. Turn 9 (D) pushes for 'one fixed weeknight per person' on the shared calendar. The fixed-night proposal directly conflicts with A's earlier rejection of a restrictive rota, so the scheduling disagreement is actively reasserted.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10 (A) offers a booking calendar (not fixed nights). Turn 11 (D) accepts a booking calendar only if it 'guarantees everyone at least one protected weeknight' and asks A to set it up tonight so each person has one reserved. The parties narrow the dispute toward a compromise (booking with guaranteed protected nights), but no firm commitment yet from A on the guarantee.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 (B) asks A to set up the booking calendar and reserve one protected weeknight for each. Turn 13 (A) agrees: 'Okay — I'll set up the calendar tonight and reserve one protected weeknight for each of us. Tell me which night you want; if no one picks I'll assign one and we can swap later.' Scheduling, ventilation, and washing expectations are explicitly agreed.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The dispute had two separable components: immediate operational issues (ventilation, washing) and structural scheduling (how to allocate stove nights).",
+      "Immediate operational issues were resolved quickly by direct compliance (A opened window/extractor; C agreed to wash pan).",
+      "Scheduling was resolved by a compromise combining flexibility and guarantees: a booking calendar plus one protected night per person.",
+      "A's willingness to set up and to assign nights if unchosen was the decisive concession that closed the remaining disagreement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T08:17:43.696124+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00790605,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2933,
+      "local_latency_ms": 38882.364,
+      "output_tokens": 3788,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6721
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "N02",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-N02-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

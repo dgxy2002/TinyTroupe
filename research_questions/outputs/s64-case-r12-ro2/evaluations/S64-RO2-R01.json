@@ -1,0 +1,147 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who will work the two working days around the Deepavali public holiday",
+      "Competing leave needs: family holiday (A), childcare (B), religious observance (D), and past coverage burden (C)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete, personal reasons (booked trip, childcare, religious festival, history of covering).",
+      "Agent C's refusal to cover and Agent D's repeated insistence anchor the stalemate.",
+      "Long silent periods (rounds 5–9) with no new proposals; later a split proposal is quickly rejected."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No agreement was reached. Agents A, B, and D each insisted they needed both days off ('...the whole trip is booked and paid for. I can't change it.'; '...my son's childcare is closed...'; 'It's Deepavali for me. I need both those days with my family.'). Agent C refused to cover ('...I'm not doing it again.'). Agent B later suggested splitting the days ('What if two people split it?'), but Agent D explicitly rejected that ('That doesn't work for me. I need both days for Deepavali.'), so the incompatible demands remained unresolved through the end of the transcript.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "No participant materially changed position during the run: A consistently said she 'can't change' because trip is booked; B consistently said childcare prevents her from covering both days; C consistently refused to cover and invoked past coverage; D consistently insisted on both days for Deepavali.",
+      "B proposed a compromise (splitting days) but did not volunteer to take either day and D explicitly rejected the compromise."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A: '...I've got a family holiday booked.' Agent B: '...my son's childcare is closed on those two days.' Both claim incompatible needs for the same two working days.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C: 'I've worked the holidays for the last two years.' Agent D: 'It's Deepavali for me. I need both those days with my family.' Now three people request leave and one resents covering.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A: '...the whole trip is booked and paid for. I can't change it.' Agent B: 'I literally have no one to look after my son.' Positions reiterated and remain incompatible.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A reiterates she cannot cancel; Agent C: 'So who is going to work? Because I'm not doing it again.' Direct refusal to cover increases tension between requesters and available coverage.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "No public speech. Prior incompatible demands remain: A, B, and D requested the two days off; C refuses to cover.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech. No settlement; the same incompatibility persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech. No progress toward resolving who will work the two days.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech. The incompatible leave requests and C's refusal remain unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech. No new proposals accepted; conflict persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 4,
+        "round": 9
+      },
+      {
+        "evidence": "Agent A: 'Does anyone have an actual idea?' Agent B proposes splitting days: 'What if two people split it? ... I can't, I need both days for my son, but maybe that works for someone else?' A proposal is made but is incompatible with some parties' needs.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D rejects the split: 'That doesn't work for me. I need both days for Deepavali.' A proposed compromise is explicitly refused.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 11
+      },
+      {
+        "evidence": "Agent D repeats: 'I can't split it. I need both days. Splitting doesn't work for Deepavali.' Position reaffirmed; no settlement reached.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The core tension is between competing non-interchangeable obligations (religious festival and childcare) and prior expectations of coverage.",
+      "Lack of a formal priority rule for leave and no relief staff makes triage necessary but none volunteered.",
+      "A modest compromise (splitting days) was proposed but conflicted with both D's religious requirement and B's childcare constraint, so it could not bridge interests."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T12:29:13.587948+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0072603,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2814,
+      "local_latency_ms": 35824.58,
+      "output_tokens": 3480,
+      "reasoning_tokens": 1984,
+      "successful_calls": 1,
+      "total_tokens": 6294
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "RO2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S64-RO2-R01",
+    "scenario_id": "S64"
+  },
+  "schema_version": 2
+}

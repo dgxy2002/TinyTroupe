@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "stove access / scheduling (weeknight availability)",
+      "cooking smells / ventilation",
+      "shared cleaning / dirty pan hygiene",
+      "responsibility and entitlement (who buys supplies vs. who cleans)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents give concrete, role-based reasons (A: buys soap/gas; D: arrives home weeknights), which makes the exchange realistic.",
+      "Conversation stays on-topic and factual; no role confusion or contradictory environment claims.",
+      "No concrete proposals (e.g., a schedule or cleaning rota) are offered — discussion remains at complaint/clarification level."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No substantive settlement was reached. Multiple incompatible demands remain: D wants a \"fair shot\" at the stove on weeknights (Agent D: \"Just a fair shot at it\"), A resists the implication of always giving that time (Agent A: \"So you expect the stove to be free always at 7 or 8 PM?\"), B insists the smell must be \"sorted out\" (Agent B: \"But the smell still needs sorting out.\"), and C demands shared cleaning because of a dirty pan (Agent C: \"We still have a dirty pan from last night in the sink.\"). No participant accepts another's proposal or offers a concrete, mutually agreed arrangement; therefore the conflict remains unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D softened language over rounds: from general complaint to a narrower request — initial: \"it is impossible to use the stove on weeknights.\" Later: \"No, not always. Just a fair shot at it, you know?\"",
+      "Agent A moved from defensive justification (buying supplies) to seeking clarification about timing: \"What time is that usually?\" but did not concede any obligation to change behavior.",
+      "Agents B and C maintained their positions about smell and cleaning without offering a compromise; no participant accepted another's demand."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B: \"But the smell still needs sorting out.\" vs Agent A: \"I cook most nights ... I buy most of the dish soap and gas. No one ever mentions that.\" — a clear substantive disagreement about responsibility for the smell and fairness of kitchen use.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D: \"When can I cook if it's always busy like this?\" vs Agent A: \"Always busy? There are other times.\" — introduces a new, substantive dispute about stove availability/scheduling.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D clarifies: \"weeknights, when I get home, it's pretty much always busy.\" Agent A asks for specifics: \"What time is that usually?\" — conflict remains but the exchange shifts toward clarification rather than escalation.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C raises a separate hygiene complaint: \"We still have a dirty pan from last night in the sink.\" Combined with the ongoing scheduling complaint (Agent D: \"Usually around 7 or 8 PM.\"), multiple unresolved issues now coexist.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A challenges D's expectation: \"So you expect the stove to be free always at 7 or 8 PM?\" Agent D softens: \"No, not always. Just a fair shot at it, you know?\" — positions clarified but incompatibilities (what is 'fair') remain.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B pushes back and links issues: \"A fair shot for who? And how does that stop the smell?\" Agent C reiterates the cleanliness demand: \"the dirty pan still here. It's about everyone doing their part.\" — multiple unresolved, opposing expectations (fair scheduling, smell mitigation, shared cleaning).",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Tension between perceived entitlement and contribution: A cites buying soap/gas as justification for cooking frequency, which other housemates do not accept as resolving smell or cleaning obligations.",
+      "Scheduling vs. hygiene are distinct but linked problems: D's request for fair stove access (7–8 PM) conflicts with A's existing cooking times and with C/B's demand about cleaning and smells.",
+      "Household lacks agreed norms or processes: complaints are raised but no mechanism (rota, ventilation practice, or explicit cleaning duty) is proposed."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T16:05:47.445408+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0057578,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2684,
+      "local_latency_ms": 32784.312,
+      "output_tokens": 2745,
+      "reasoning_tokens": 1472,
+      "successful_calls": 1,
+      "total_tokens": 5429
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M1-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

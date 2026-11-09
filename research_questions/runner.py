@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import time
 from dataclasses import asdict, replace
 from datetime import datetime
@@ -17,6 +18,7 @@ from tinytroupe.agent import TinyPerson
 from tinytroupe.clients import client, force_api_cache, force_api_type
 from tinytroupe.environment import TinyWorld
 
+from .coding import CODING_PROMPT_VERSION, code_run, coding_prompt_sha256
 from .debrief import (
     DEBRIEF_PROMPT_VERSION,
     debrief_agent,
@@ -411,6 +413,65 @@ def execute_debrief(
     return artifact
 
 
+def coding_dirname(model: str) -> str:
+    """One folder per coder version and model, so a new version never overwrites an old one."""
+
+    slug = re.sub(r"[^a-z0-9]+", "-", f"{CODING_PROMPT_VERSION} {model}".lower())
+    return "coding-" + slug.strip("-")
+
+
+def execute_coding(
+    *,
+    transcript: dict[str, Any],
+    model: str,
+    output_dir: Path,
+    max_completion_tokens: int,
+) -> dict[str, Any]:
+    """Save blind move codes for one run; skipped if already complete."""
+
+    run = transcript["run"]
+    path = output_dir / coding_dirname(model) / f"{run['run_id']}.json"
+    if path.exists():
+        return read_json(path)
+    events, setting = _anonymized_evaluator_input(transcript)
+    print(f"[{run['run_id']}] coding with {model}", flush=True)
+    coding = code_run(
+        events=events,
+        setting=setting,
+        model=model,
+        max_completion_tokens=max_completion_tokens,
+    )
+    artifact = {
+        "run_id": run["run_id"],
+        "model": model,
+        "prompt_version": CODING_PROMPT_VERSION,
+        "prompt_sha256": coding_prompt_sha256(),
+        "coded_at": utc_now(),
+        "coding": coding.model_dump(mode="json"),
+    }
+    write_json_once(path, artifact)
+    return artifact
+
+
+def code_directory(
+    output_dir: Path, *, api_type: str, model: str, max_completion_tokens: int
+) -> int:
+    """Code every saved transcript in an experiment folder with one model."""
+
+    manifest = read_json(output_dir / "manifest.json")
+    force_api_type(api_type or manifest["api_type"])
+    force_api_cache(False)
+    for transcript_path in sorted((output_dir / "transcripts").glob("*.json")):
+        execute_coding(
+            transcript=read_json(transcript_path),
+            model=model,
+            output_dir=output_dir,
+            max_completion_tokens=max_completion_tokens,
+        )
+    print(f"Complete: {output_dir / coding_dirname(model)}", flush=True)
+    return 0
+
+
 def _anonymized_evaluator_input(
     transcript: dict[str, Any],
 ) -> tuple[list[dict[str, Any]], str]:
@@ -420,6 +481,14 @@ def _anonymized_evaluator_input(
         agent["display_name"]: f"Agent {agent_id}"
         for agent_id, agent in transcript["scenario"]["agents"].items()
     }
+    # A two-part name is often shortened in speech ("Wei Ming" to "Ming", "Daniel Pereira" to
+    # "Daniel"), and a part left visible would cue the treatment.
+    name_parts = {
+        part: alias
+        for display_name, alias in aliases.items()
+        for part in display_name.split()
+        if " " in display_name and len(part) > 2
+    }
 
     def replace_names(value: Any) -> Any:
         if isinstance(value, str):
@@ -428,6 +497,8 @@ def _anonymized_evaluator_input(
                 aliases.items(), key=lambda item: len(item[0]), reverse=True
             ):
                 rendered = rendered.replace(display_name, alias)
+            for part, alias in name_parts.items():
+                rendered = re.sub(rf"\b{re.escape(part)}\b", alias, rendered)
             return rendered
         if isinstance(value, dict):
             return {key: replace_names(item) for key, item in value.items()}
@@ -559,6 +630,15 @@ def parse_args(argv=None):
             "folder. Existing files are untouched; results go to debriefs/."
         ),
     )
+    parser.add_argument(
+        "--code",
+        type=Path,
+        help=(
+            "Add blind move coding to every transcript in an existing experiment folder. "
+            "Existing files are untouched; results go to coding-<model>/."
+        ),
+    )
+    parser.add_argument("--coding-model", default="openai/gpt-5-mini")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
     for name in (
@@ -626,6 +706,29 @@ def reevaluate_directory(
     return 0
 
 
+def configure_simulation_runtime(
+    *, api_type: str, simulation_model: str, agent_max_completion_tokens: int
+) -> None:
+    """Apply the one agent configuration shared by every research entry point."""
+
+    force_api_type(api_type)
+    force_api_cache(False)
+    TinyPerson.communication_display = False
+    TinyWorld.communication_display = False
+    config_manager.update_multiple(
+        {
+            "model": simulation_model,
+            "enable_memory_consolidation": False,
+            "enable_continuous_contextual_semantic_memory_retrieval": False,
+            "parallel_agent_generation": False,
+            "parallel_agent_actions": False,
+            "action_generator_enable_quality_checks": False,
+            "action_generator_enable_regeneration": False,
+            "max_completion_tokens": agent_max_completion_tokens,
+        }
+    )
+
+
 def debrief_directory(
     output_dir: Path, *, api_type: str, max_completion_tokens: int
 ) -> int:
@@ -647,6 +750,14 @@ def debrief_directory(
 
 def main(argv=None) -> int:
     args = parse_args(argv)
+
+    if args.code:
+        return code_directory(
+            args.code.resolve(),
+            api_type=args.api_type,
+            model=args.coding_model,
+            max_completion_tokens=args.evaluator_max_completion_tokens,
+        )
 
     if args.debrief:
         return debrief_directory(
@@ -720,21 +831,10 @@ def main(argv=None) -> int:
         )
         return 0
 
-    force_api_type(api_type)
-    force_api_cache(False)
-    TinyPerson.communication_display = False
-    TinyWorld.communication_display = False
-    config_manager.update_multiple(
-        {
-            "model": simulation_model,
-            "enable_memory_consolidation": False,
-            "enable_continuous_contextual_semantic_memory_retrieval": False,
-            "parallel_agent_generation": False,
-            "parallel_agent_actions": False,
-            "action_generator_enable_quality_checks": False,
-            "action_generator_enable_regeneration": False,
-            "max_completion_tokens": args.agent_max_completion_tokens,
-        }
+    configure_simulation_runtime(
+        api_type=api_type,
+        simulation_model=simulation_model,
+        agent_max_completion_tokens=args.agent_max_completion_tokens,
     )
 
     if args.resume:

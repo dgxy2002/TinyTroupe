@@ -1,0 +1,112 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "stove allocation on weeknights / late-arrival slot",
+      "unwashed shared pan (cleaning responsibility)",
+      "cooking smells reaching bedrooms (use of extractor/window)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agent C repeatedly requests immediate washing of the shared pan ('whoever used that pan please wash it now.' — Turns 4, 10, 12), which is practical but repetitive.",
+      "Agent A consistently asserts practical constraint: 'I cook most weeknights, so I can't give up every evening slot.' (Turn 2, reiterated Turn 6).",
+      "Agents move from abstract proposals to concrete definitions (B's 'after 9pm') which helps reduce ambiguity.",
+      "No third-party enforcement or clear follow-through for the dirty pan — requests remain unfulfilled in the transcript."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group reached firm agreement on the shared-pan cleaning rule (all four participants stated support across the transcript: Agent A agreed in Turn 2 'I agree to wash shared pans right after use.'; Agent B in Turn 3; Agent C in Turn 4; and Agent D reiterated in Turn 11 'Shared pans should be washed right after use'). Agent D also accepted the concrete definition 'late' = after 9pm and agreed to use the extractor/open the window if cooking then (Turn 11: '\"Late\" after 9pm works for me — if I cook then I'll turn on the extractor and open the window'). However, stove allocation for regular weeknights remains unresolved: Agent C requests a simple rotation for weeknight cooking (Turn 12), Agent D prefers a no-notice late-arrival entitlement (earlier, Turn 7), and Agent A has repeatedly resisted giving up regular evenings and has not explicitly accepted the rotation or the 9pm arrangement (A asked for clarification in Turn 8 but did not confirm). The dirty pan in the sink is still unwashed and its last user was not identified (C repeats 'whoever used that pan please wash it now' in Turns 4, 10, 12), so a practical, immediate conflict remains.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A held a stable position across rounds: accepted washing pans but consistently resisted giving up regular weeknight evenings (Turns 2, 6, 8).",
+      "Agent D modified the initial proposal somewhat: originally asked for a reserved late slot (Turn 1/5) and later accepted a concrete time definition (after 9pm) and extractor use (Turn 11), but still prefers a late-arrival entitlement without prior notice (Turn 7).",
+      "Agents B and C remained consistent proponents of extractor use, 9pm definition, and rotation (Turns 3, 9, 10, 12).",
+      "No participant admitted to using the dirty pan; the pan's immediate cleaning was repeatedly requested but not performed or confirmed."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent D) proposes two rules: 'Shared pans get washed right after use, and we keep one weekday-evening stove slot for whoever gets home late.' Turn 2 (Agent A) accepts the washing rule but resists giving up evenings: 'I cook most weeknights, so I can't give up every evening slot... I'm okay with one \"late-arrival\" slot if people tell everyone ahead or we rotate.' This creates a clear, substantive disagreement about how stove time should be allocated.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent B) and Turn 4 (Agent C) both support washing pans after use and like rotation for late-evening slots: 'I agree we wash shared pans after use, and rotating late-evening slots sounds fine.' This adds common ground on washing and suggests rotation, reducing but not eliminating the core dispute about the late-arrival stove entitlement and the immediate unwashed pan.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent D) restates preference for a reserved 'late-arrival' slot without requiring prior notice: 'Can we reserve one 'late-arrival' weeknight slot for whoever gets home late?...' Turn 6 (Agent A) repeats reluctance to give up regular evenings and asks for either notice or rotation. The disagreement about whether notice is required remains a clear substantive issue.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent D) sharpens their position: 'I prefer a 'late-arrival' slot without needing prior notice... I won't expect you to give up your regular evenings.' Turn 8 (Agent A) presses for a concrete definition: 'What exactly do you mean by 'late'?' D's stronger insistence on no-notice use increases the tension over allocation rules.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent B) proposes a concrete definition: 'Let's call 'late' anything after 9pm. If someone cooks after that, please turn on the extractor and open the kitchen window...' Turn 10 (Agent C) repeats the 9pm definition and extractor request. Proposing a concrete time and mitigation reduces vagueness, though not everyone has yet accepted it and the unwashed pan remains an outstanding practical issue.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent D) accepts the 9pm definition and agrees to use the extractor/window and to wash shared pans: '\"Late\" after 9pm works for me — if I cook then I'll turn on the extractor and open the window. Shared pans should be washed right after use.' Turn 12 (Agent C) pushes for an explicit rotation for weeknight cooking nights and again asks whoever used the pan to wash it. Although the washing rule and the 9pm mitigation have strong support, who used the dirty pan is still unresolved and A has not explicitly agreed to the proposed rotation/allocation scheme.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Core tension is between regular cooks' need for predictable weeknight stove access (Agent A) and flexibility for late arrivals (Agent D).",
+      "Cleaning and allocation are separable issues: the washing rule gained broad agreement faster than the allocation scheme.",
+      "Concrete, time-based rules (e.g., 'after 9pm') and explicit mitigation (extractor/window) reduce ambiguity and help converge participants.",
+      "Practical compliance (washing the current dirty pan) lags behind rule agreement: rule acceptance does not automatically produce immediate action."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T13:58:31.013005+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 6 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00922905,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3049,
+      "local_latency_ms": 39669.229,
+      "output_tokens": 4435,
+      "reasoning_tokens": 2688,
+      "successful_calls": 1,
+      "total_tokens": 7484
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "E1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-E1-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,195 @@
+{
+  "coded_at": "2026-11-07T15:05:17.672019+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "concerns": [
+          {
+            "detail": "being blamed for the smell and the pan",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "blame_or_reputation"
+          },
+          {
+            "detail": "kitchen gets too hot with the door shut",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          },
+          {
+            "detail": "being attacked about the door and not heard",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "respect"
+          }
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "concerns": [
+          {
+            "detail": "cooking smell reaching her room before early shift",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          },
+          {
+            "detail": "A ignored her request about the door",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "respect"
+          }
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "concerns": [
+          {
+            "detail": "unwashed shared pan with pork fat left in sink",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          },
+          {
+            "detail": "pan point ignored when A said not mine",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "respect"
+          },
+          {
+            "detail": "being labelled the guy who always complains",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "blame_or_reputation"
+          }
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "concerns": [
+          {
+            "detail": "cannot get near the stove, needs a late slot",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          }
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [],
+      "exists": false,
+      "gave_way": [],
+      "summary": "Nothing was settled for all four: A and D agreed to hour-long evening slots, but B and C did not accept them, and the door, heat, and pan disputes remain open.",
+      "unsettled": [
+        "access",
+        "practical_cost",
+        "fair_share",
+        "blame_or_reputation"
+      ]
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 1,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 4,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 5,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 6,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 7,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 8,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 10,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 12,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      }
+    ]
+  },
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_sha256": "274bbf00deb9c922b59721150b73018c8143640ddf225c477e5630eb16b595bc",
+  "prompt_version": "move-coding-v3",
+  "run_id": "S31-M2-R01"
+}

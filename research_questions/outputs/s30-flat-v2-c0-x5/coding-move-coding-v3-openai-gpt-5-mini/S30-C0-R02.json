@@ -1,0 +1,180 @@
+{
+  "coded_at": "2026-11-05T16:24:55.437960+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "concerns": [
+          {
+            "detail": "keep cooking most nights / guaranteed night",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "split soap/gas costs; washing rota",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          },
+          {
+            "detail": "stop being default target / blamed for smells",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "blame_or_reputation"
+          }
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "concerns": [
+          {
+            "detail": "sleep disrupted by cooking smells",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          },
+          {
+            "detail": "shared pan washed same night",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          }
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "concerns": [
+          {
+            "detail": "stop being default cleaner; enforce washing rota",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          }
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "concerns": [
+          {
+            "detail": "guaranteed weeknight to cook; fair chance to use stove",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          }
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [
+        "access",
+        "fair_share",
+        "rule_or_norm",
+        "practical_cost"
+      ],
+      "exists": true,
+      "gave_way": [
+        "Agent A",
+        "Agent B",
+        "Agent C",
+        "Agent D"
+      ],
+      "summary": "They agreed a concrete rota (A Monday, D Tuesday, B Wednesday, C Thursday), whoever cooks washes shared pans that night, always use the extractor and close the kitchen door while cooking, split shared supplies, avoid strong-smelling food late on weeknights, and allow swaps only with a heads-up and the other person's agreement (to be confirmed in the chat).",
+      "unsettled": []
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": true,
+        "line": 1,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 2,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 4,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 5,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 6,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 7,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 8,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": true,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 10,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      }
+    ]
+  },
+  "model": "openai/gpt-5-mini",
+  "prompt_sha256": "274bbf00deb9c922b59721150b73018c8143640ddf225c477e5630eb16b595bc",
+  "prompt_version": "move-coding-v3",
+  "run_id": "S30-C0-R02"
+}

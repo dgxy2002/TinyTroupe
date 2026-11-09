@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen smells/ventilation after cooking",
+      "unwashed shared dishes (pan) and cleaning responsibility",
+      "use of stove on weeknights / scheduling",
+      "weekly cleaning/washing rota assignment"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Conversation moves quickly from complaint to concrete, implementable proposals (ventilation, same-night washing, rota).",
+      "Participants use concise, ordinary speech with clear turn-taking and specific offers: e.g., A's explicit rule list and B's immediate acceptance.",
+      "Some deferred finalisation: several lines repeat \"we'll finalise the rota tomorrow,\" indicating planned follow-up rather than closure."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Immediate practical complaints were settled by explicit, mutual assignments in Round 2: Agent A agreed to ventilate: \"Okay — I'll open the window and turn the fan on now.\" Agent B agreed to wash tonight's pan: \"Okay — I'll wash the pan tonight.\" A longer-term rota was proposed and partially assigned but not finalised (participants repeatedly deferred: \"we'll sort a rota from tomorrow\" / \"We'll finalise the rota tomorrow\"), so some scheduling conflict remains unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from defensively noting they cook most nights to offering concrete mitigation and a shared-rule proposal: \"I'm fine to keep cooking if we agree on simple rules...\" then \"I'll open the window and turn the fan on now.\"",
+      "Agent B shifted from complaint to agreement and immediate action: initially insisted on change, then accepted A's rules and agreed to wash the pan tonight.",
+      "Agent D moved from a complaint about weeknight usability to requesting inclusion in a rota and then accepting the developing plan: \"Can we agree a simple weeknight rota...\" then \"Okay, Monday works for me.\"",
+      "Agent C raised the unwashed pan but otherwise stayed in a confirming role and agreed to finalise the rota later."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A acknowledges cooking most nights and proposes rules: \"I'm fine to keep cooking if we agree on simple rules: open the window/turn the fan after cooking; wash any shared pan the same night or we do a weekly rota... Who's washing the pan tonight?\" Agent B accepts the rules and requests immediate ventilation and pan-washing: \"Can you open the window and turn the fan on now? ... I'll wash the pan tonight if you do, and we can sort a rota from tomorrow.\" Conflict over smells and unwashed pan is being negotiated but immediate actions not yet confirmed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: \"Okay — I'll open the window and turn the fan on now. Please wash the pan tonight; we'll sort the rota tomorrow.\" Agent B: \"Okay — I'll wash the pan tonight.\" The immediate complaints (ventilation/smell and tonight's dirty pan) are explicitly assigned and accepted.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D introduces scheduling inclusion: \"Can we agree a simple weeknight rota so everyone gets a turn and I'm included? I usually get home late most nights.\" Agent A proposes a concrete scheme: \"Each of us takes one weeknight (Mon–Thu). If you're late, swap nights or swap washing duties. Who wants which night?\" This opens a new minor negotiation (rota assignment) though no opposition is expressed.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B volunteers a specific slot: \"I'll take Monday night.\" Agent C confirms: \"Monday's yours. We'll finalise the rota tomorrow.\" A tentative assignment is made but the rota is not fully finalised.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D: \"Okay, Monday works for me. Let's finalise the rota tomorrow.\" This indicates D accepts the developing plan (and/or that Monday fits schedules), but the full rota is still outstanding and scheduled to be finalised later.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Outstanding issue: the weeknight rota remains not fully finalised despite tentative assignments.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The main problems are coordination/externalities (cooking smells spreading) and maintenance free-riding (shared pan left unwashed).",
+      "Effective rapid resolution was possible because A acknowledged responsibility (willing to ventilate) and B offered a concrete immediate concession (washing tonight).",
+      "Scheduling constraints (D gets home late) create a remaining allocation problem for the weekly rota that requires further coordination."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T17:41:32.678039+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 2 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00807975,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2711,
+      "local_latency_ms": 38125.708,
+      "output_tokens": 3701,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6412
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "B1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-B1-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

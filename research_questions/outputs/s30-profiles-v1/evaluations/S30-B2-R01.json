@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who washes shared pans / timing of washing",
+      "cooking smells / use of extractor and opening window",
+      "stove access fairness for late-night cooks / exceptions"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Negotiation used concise, practical proposals (rules + exception) which aided resolution.",
+      "There were a few repeated immediate requests to turn on the extractor (B and C), but overall exchanges were direct and task-focused.",
+      "Participants made explicit, concrete commitments (post in chat, stick note on fridge, who washes when), which supported settlement."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The household agreed a simple, concrete rule and an exception: whoever cooks washes their pans the same night, and 'If you're cooking late and you post, you can wash your pan the next morning; otherwise wash it the same night.' (Agent A) The extractor/window use was requested and agreed to immediately ('Okay, I'll turn the extractor on and open the window now.' Agent A). C agreed to post the rule and stick a note on the fridge ('I'll post the rule in the chat and stick a note on the fridge now.'), and D accepted the late-cook exception and committed to post and wash the next morning when they post ('...if I post and cook late I'll wash my pan the next morning.'). The unclaimed pan was accepted as A's to wash if unclaimed ('if no one claims it, Agent A, thanks for offering to wash it.'), which C explicitly acknowledged.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened from defensive ('I don't think it's fair to be blamed alone') to proposer of a compromise and granted an exception for late cooks: 'If you're cooking late and you post, you can wash your pan the next morning.'",
+      "Agent D moved from complaint ('impossible to use the stove on weeknights') to accepting the proposed exception and committing to post and wash next morning: '...if I post and cook late I'll wash my pan the next morning.'",
+      "Agent B consistently pushed for immediate mitigation of smell (repeatedly asked Agent A to turn on extractor) and accepted the rule once offered.",
+      "Agent C consistently pushed for formalizing the rule (post in chat and stick on fridge) and followed through by offering to post and label it."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent A responds to being blamed and defends their contributions, then proposes a rule. Agent B accepts the rule but immediately demands the extractor and window be used now: 'Agent A, can you please turn the extractor on and open the window now? I need to sleep early for my shift.' This shows clear disagreement about responsibility and an unresolved immediate action.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D introduces a new incompatible practical interest (late returns) and asks for an exception or turn-taking: 'I get back late most weeknights; can we add a simple rule so late cooks get a fair turn? Maybe post in the chat when you need the stove or take turns.' This conflicts with A's proposed 'whoever cooks washes same night' rule and raises a new unsettled issue.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A offers a compromise to accommodate late cooks: 'If you're cooking late and you post, you can wash your pan the next morning; otherwise wash it the same night.' B accepts. The proposal reduces the incompatibility but D has not yet explicitly accepted, so a small disagreement remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "C and B press for immediate mitigation of the smell; A agrees to turn the extractor and asks about the pan: 'Okay, I'll turn the extractor on and open the window now. Whoever left the pan, please wash it now — if no one claims it I'll wash it.' Immediate concerns are addressed verbally, but the pan remains unwashed until acted on.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "All substantive points are accepted and a concrete arrangement is made. C says: 'I'll post the rule in the chat and stick a note on the fridge now.' D explicitly accepts the late-cook exception and commits to the chat: 'I get back late most nights, so if I post and cook late I'll wash my pan the next morning.' C also accepts A's contingent offer to wash the unclaimed pan: 'if no one claims it, Agent A, thanks for offering to wash it.' These are mutual, concrete agreements settling the issues.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Participants repeat and confirm the agreed arrangements with no new disagreement: 'Okay, I'll post the rule and stick a note on the fridge now.' 'Thanks, Agent C — that helps. I'll post in the chat when I need the stove.'",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "A simple, specific house rule plus a narrowly framed exception (late cooks who post) resolved the tension between fairness and practicality.",
+      "Immediate mitigation (turn extractor on / open window) addressed acute concerns while the longer-term rule was agreed.",
+      "Assigning the meta-task of posting the rule (C) and physically labeling it (note on the fridge) helped convert verbal agreement into a durable, shared norm."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T17:46:25.381087+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00843555,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2955,
+      "local_latency_ms": 42172.686,
+      "output_tokens": 4050,
+      "reasoning_tokens": 2560,
+      "successful_calls": 1,
+      "total_tokens": 7005
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "B2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-B2-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

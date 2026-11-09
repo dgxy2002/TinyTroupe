@@ -1,0 +1,122 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "dirty shared cookware",
+      "allergy risk (shellfish residue)",
+      "kitchen rules / scheduling a system"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is concise and pragmatic: immediate practical fix offered (Agent A) and an explicit plan to discuss rules later.",
+      "Participants give brief role-based explanations (B citing early shift) rather than arguing.",
+      "No confusing role attributions or factual inconsistencies; exchanges stay on-topic."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent A offered an immediate accommodation to resolve the health/practical problem (\"Okay, I'll wash it now so you can use it.\") and Agent D accepted that remedy and proposed a concrete plan to address the systemic issue (\"Thanks, Agent A. Can we talk about it tomorrow evening then?\"). The group then confirmed the meeting time (Agent A, B, C, D), so the immediate conflict (pan unusable for Agent D due to shellfish residue) was settled and a plan was made to negotiate shared kitchen rules tomorrow evening.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: moved from denying use (Round 1) to providing an action (Round 3) — evidence: \"Okay, I'll wash it now so you can use it.\"",
+      "Agent D: moved from stating the constraint (allergy) to accepting the offered remedy and arranging a follow-up meeting — evidence: \"I can't use it until it's scrubbed properly...\" and later \"Thanks, Agent A. Can we talk about it tomorrow evening then?\"",
+      "Agent B: denied use initially and consistently deferred discussion to tomorrow due to a work constraint (no substantive position change beyond postponement).",
+      "Agent C: consistently pressed for immediate resolution but accepted the scheduled follow-up once the immediate remedy was offered."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent A: \"I didn't cook any shellfish.\" Agent B: \"I didn't use it.\" -- participants deny responsibility for the dirty pan; minor disagreement about who used it and the underlying shared-resource problem remains.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C: \"I didn't use it last night either.\" Agent D: \"Well, the pan has shellfish oil in it. I can't use it until it's scrubbed properly, I have a severe allergy.\" -- a health-related practical incompatibility is introduced (allergy prevents D from using the pan), making the conflict substantive and urgent.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A: \"Okay, I'll wash it now so you can use it. But we all need to figure out a better system for the kitchen.\" Agent B: \"Can we talk about the system tomorrow? I have to be up in a few hours.\" -- A offers an immediate fix, softening the conflict, but no acceptance yet so the practical problem remains unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C: \"If we don't sort it out now, it'll just be the same tomorrow.\" Agent B: \"I know, but I really can't do this tonight. My shift starts at dawn.\" -- pressure to resolve persists; B declines to handle the systemic discussion tonight, so the immediate issue remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D: \"Thanks, Agent A. Can we talk about it tomorrow evening then? When everyone's back.\" -- D accepts A's offer to wash (gratitude indicates acceptance of the immediate remedy) and proposes a concrete plan to discuss kitchen rules, resolving the immediate access/allergy conflict.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A: \"Tomorrow evening works for me.\" Agent B: \"Tomorrow evening is fine with me. Goodnight.\" -- confirmations of the scheduled discussion; no substantive conflict remains about the pan or meeting time.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C: \"Okay, tomorrow evening.\" Agent D: \"Okay, good.\" -- all four have agreed on the meeting time; no new substantive disagreements arise.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "An allergy (Agent D) converted a general nuisance (dirty pan) into an urgent, substantive problem that required immediate accommodation.",
+      "A unilateral offer to fix the immediate problem (Agent A washing) was sufficient to resolve the urgent incompatibility once accepted by the affected party.",
+      "The deeper issue (absence of agreed kitchen rules) was not solved but a concrete follow-up (meeting tomorrow evening) was arranged."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T03:19:14.893539+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00903175,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2711,
+      "local_latency_ms": 42458.451,
+      "output_tokens": 4177,
+      "reasoning_tokens": 2816,
+      "successful_calls": 1,
+      "total_tokens": 6888
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "K1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S37-K1-R01",
+    "scenario_id": "S37"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,112 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "unwashed shared pan / pork fat left in pan",
+      "cooking pork smells on weeknights / extractor and window use",
+      "stove time allocation / potential weeknight rota"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concise, context-grounded reasons (cost, sleep schedule, hygiene).",
+      "Key rule phrase 'who uses the pan washes it' is repeated across rounds (repetition score).",
+      "Agents make conditional, concrete proposals rather than vague promises ('try this week, set rota if fails').",
+      "No observable physical actions (e.g., washing the pan) are recorded; much is contingent agreement."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By round 6 the household agreed on a contingent, shared course of action: try the behavioural rule first and escalate to a formal rota only if it fails. Evidence: Agent A offered a conditional compromise ('I'm okay with a simple rota if we need one, but not right now. Let's try the 'who uses the pan washes it' rule first.' — Turn 11) and Agent D accepted that plan ('Okay, let's try the 'who uses the pan washes it' rule this week. If the pan is left unwashed again, we'll set the rota then.' — Turn 12). Agent A also committed to the extractor/window practice for pork frying ('I'll keep running the extractor when I fry pork.' — Turn 11). The immediate, concrete problem of last night's unwashed pan was not confirmed as washed, so that single instance remains unsettled while the parties settled on a process for ongoing behaviour.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: initially defended cooking frequency but accepted extractor/window use for pork and the 'who uses the pan washes it' rule; later accepted conditional rota only if rule fails (Turn 3, Turn 11).",
+      "Agent B: moved from complaint to explicit agreement with the proposed wash rule and repeated extractor/window request (Turn 2, Turn 4).",
+      "Agent C: consistently pushed for immediate cleaning and hygiene; offered to wash 'this once' but refused ongoing responsibility (Turn 7, Turn 9).",
+      "Agent D: introduced new proposal (weeknight rota) in Round 5 but accepted the group's compromise to trial the wash rule first (Turn 10, Turn 12)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent A) highlights recurring smell and the unwashed pan and proposes a rule: 'whoever uses the shared pan washes it that night.' Turn 2 (Agent B) accepts that rule but adds a new demand about behaviour on weeknights: 'please avoid heavy pork frying on weeknights, or at least run the extractor and open the window.' A has not yet agreed to B's extractor/window request in this round, so incompatible expectations remain.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A) accepts B's extractor/window request for pork frying ('I'll run the extractor and open the window when I fry pork on weeknights') and reiterates the 'who uses the pan washes it' rule. Turn 4 (Agent B) repeats agreement. The main dispute is reduced to a minor outstanding issue (the existing unwashed pan and enforcement), since both parties have verbally accepted the proposed rule and extractor practice.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent A) again affirms extractor use and the wash rule. Turn 6 (Agent B) asks for the extractor and window to be switched on now. No one has yet turned the extractor on, so a small practical disagreement remains about immediate action, but positions are aligned on policy.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent C) directly demands immediate action: 'please switch on the extractor and open the window now. Also, whoever used the shared pan last night — wash it now, please.' Turn 8 (Agent A) agrees to switch the extractor but defers responsibility for last night's pan to whoever used it. The unresolved question of who left pork fat in a pan used by all remains explicitly contested and unsettled.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent C) offers to wash the pan 'this once' but insists they 'can't keep doing that.' Turn 10 (Agent D) accepts the wash rule but introduces a new scheduling issue: 'Can we also set a simple weeknight rota so everyone gets fair stove time?' The dirty-pan responsibility is still unresolved and a new potential conflict (stove-time rota) appears.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent A) accepts trying the 'who uses the pan washes it' rule first and agrees to keep running the extractor when frying pork; A says a rota is acceptable only if the rule fails. Turn 12 (Agent D) concurs: 'Okay, let's try the 'who uses the pan washes it' rule this week. If the pan is left unwashed again, we'll set the rota then.' These statements create a shared, conditional plan for future behaviour, reducing outstanding conflict. The immediate issue of last night's unwashed pan remains unresolved (no one confirmed washing it).",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Conflict involved at least three distinct issues: hygiene (dirty pan), nuisance (cooking smells affecting sleep), and resource allocation (stove time).",
+      "Agents prioritized a low-burden, behavioral rule first (who washes) before adopting a more intrusive scheduling solution (rota).",
+      "Conditional commitments (try rule, set rota if problem recurs) helped de-escalate by creating a clear trigger for further action.",
+      "Immediate accountability for the specific unwashed pan was not established; the dialogue focused on future prevention rather than retroactive resolution."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:11:18.657071+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 6 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00894205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2949,
+      "local_latency_ms": 39624.42,
+      "output_tokens": 4304,
+      "reasoning_tokens": 2688,
+      "successful_calls": 1,
+      "total_tokens": 7253
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "E3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-E3-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

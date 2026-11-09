@@ -1,0 +1,174 @@
+{
+  "coded_at": "2026-11-05T13:35:37.577879+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "in_speech": [
+          "seat",
+          "reservation_rule",
+          "food_or_spill"
+        ],
+        "in_thoughts": [
+          "seat",
+          "food_or_spill",
+          "reservation_rule",
+          "being_respected"
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "in_speech": [
+          "reservation_rule",
+          "seat",
+          "food_or_spill"
+        ],
+        "in_thoughts": [
+          "seat",
+          "food_or_spill",
+          "reservation_rule"
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "in_speech": [
+          "food_or_spill",
+          "seat"
+        ],
+        "in_thoughts": [
+          "seat",
+          "food_or_spill",
+          "space_or_aisle"
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "in_speech": [
+          "seat",
+          "being_overlooked",
+          "reservation_rule"
+        ],
+        "in_thoughts": [
+          "being_overlooked",
+          "seat",
+          "reservation_rule"
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [
+        "seat",
+        "food_or_spill"
+      ],
+      "exists": true,
+      "gave_way": [
+        "Agent A",
+        "Agent B",
+        "Agent D"
+      ],
+      "summary": "They agreed that Agent B will finish her bowl and then give the seat to Agent A; Agent D will wait and only take it if that plan falls through."
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 1,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 4,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 5,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 6,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 7,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 8,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 10,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": true,
+        "line": 12,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      }
+    ]
+  },
+  "model": "openai/gpt-5-mini",
+  "prompt_sha256": "538a03269f854261a218ca03b9dddcceff9aa05d8e3149fe6a44767354bb834c",
+  "prompt_version": "move-coding-v1",
+  "run_id": "S28-C0-R01"
+}

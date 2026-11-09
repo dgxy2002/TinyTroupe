@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen odors / extractor use",
+      "shared pan hygiene (rinsing vs proper washing, pork fat)",
+      "stove access scheduling on weeknights (early vs late slots, tie-breaker)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants spoke like typical housemates: requests, immediate compliance, and quick proposals (e.g., Turn 2 and Turn 6).",
+      "Some repetition of confirmations (B repeats acceptance in Turns 3 and 9) but not excessive.",
+      "Participants proposed concrete rules (rinsing, wash-if-greasy, early/late slots with tie-breaker) which raised clear trade-offs between convenience and cleanliness."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Three housemates (A, B, C) agreed to a hygiene rule and a stove-scheduling compromise, while D did not give a confirming acceptance by the end of the transcript. Concretely: A proposed 'everyone rinse shared pans after use' and immediately cleaned the pan ('I'll run the extractor, open the window, and wipe the pan now' — Turn 2); C then required that 'if it's greasy or has pork fat, please wash it' (Turn 4) and later confirmed that stricter wash requirement along with the slot arrangement (Turn 12). A proposed stove slots: 'split weeknight stove use into early and late slots... if both want the same slot, whoever starts cooking first keeps it' (Turn 6), and B and C accepted this (Turns 7, 9, 12). D raised the stove-use problem but did not confirm acceptance of the proposed arrangement, so the run ended with the main issues accepted by three roommates but lacking unanimous confirmation. The parts agreed resulted from compromise/clarification among A, B, and C (quoting key lines above).",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: immediate compliance with B's demand (ran extractor/wiped pan) and proactive proposer of rules (accepted rinse rule and later the stricter wash condition) — A retained cooperative stance throughout.",
+      "Agent B: initiated the complaint, accepted A's immediate fix, and repeatedly endorsed proposed rules (no change of position).",
+      "Agent C: complained about unwashed pan, then accepted the rinse rule but strengthened it to require full washing for greasy/pork-fat pans (softened from complaint to conditional agreement).",
+      "Agent D: raised a separate substantive issue (stove access) but did not confirm the proposed compromise by the end of the transcript (no position change observed)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: B demands immediate action — 'please run the extractor, open the kitchen window, and wipe that pan now.' Turn 2: A complies ('I'll run the extractor, open the window, and wipe the pan now') and proposes a new house rule ('everyone rinse shared pans after use'). Immediate action accepted, but the underlying problem (no agreed household rules) and responsibility for shared pans remain unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: B accepts the rinse rule. Turn 4: C agrees to rinsing but raises a stricter requirement for greasy/pork-fat pans ('if it's greasy or has pork fat, please wash it — don't leave it for someone else'). The disagreement is minor (how strictly to treat greasy/pork-fat pans) and not yet accepted by A or D.",
+        "movement": "escalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: D introduces a new substantive conflict about stove access on weeknights ('can we agree a simple rule for stove use on weeknights? I get home late and hardly get a turn'). Turn 6: A proposes a stove scheduling compromise (early/late slots, first-to-start tie-breaker) and reiterates the rinse rule. The stove-access incompatibility is a clear disagreement in need of acceptance by others.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: B accepts A's early/late slot proposal and the rinse rule. Turn 8: A restates the proposed arrangement and asks C and D to confirm. B's agreement reduces immediate contention, but C and D have not yet confirmed, so substantive conflict persists.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9: B repeats acceptance. Turn 10: A seeks confirmation from C and D again. No new agreements from C or D; the stove-access scheduling and final acceptance of the pan-washing standard remain outstanding.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12: C confirms agreement with early/late slots and the rinse rule, and further tightens the hygiene rule ('if a pan is greasy or has pork fat, wash it properly instead of just rinsing'). Turn 13: A accepts C's stricter wash condition and asks D to confirm. Only D's confirmation remains outstanding; most substantive issues have been accepted by A, B, and C.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Two distinct resource conflicts: hygiene (shared pan cleaning) and temporal access to a single stove; both require different types of rules (behavioral standard vs scheduling).",
+      "Simple, concrete rules (rinse after use; wash greasy/pork pans; early/late slots with first-to-start tie-breaker) can resolve most friction if adopted by all housemates.",
+      "One holdout (D) left unanimous adoption incomplete, showing that apparent consensus among majority doesn't equal full settlement in shared-resource settings."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:24:10.867644+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00728755,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2939,
+      "local_latency_ms": 35084.256,
+      "output_tokens": 3478,
+      "reasoning_tokens": 1984,
+      "successful_calls": 1,
+      "total_tokens": 6417
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M9",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M9-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

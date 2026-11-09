@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who should pay for non-alcohol drinks (juices) after shared fund spent on alcohol",
+      "Use of shared house fund to buy alcohol vs. preferences of non-drinkers",
+      "Whether Agent A's personal contribution offsets further payment obligations"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete practical reasons (manager attending, sunk cost, personal contribution).",
+      "Positions are restated multiple times (e.g., C repeatedly emphasizes drinkers should pay: Turn 5, Turn 11, Turn 17).",
+      "No confusion about roles or facts; everyone references the shared fund and A's personal money consistently.",
+      "Some pragmatic proposals are made (B offers to buy juices; later proposes splitting among B,C,D) but are not mutually accepted."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No agreement was reached. Competing fairness principles remained: some (Agent C, Agent D earlier) insist that only those who drink (i.e., consumers of alcohol) should pay for replacement juices (Turn 11: \"The fair way is for the people who are drinking the beer and wine to pay for the juices.\"; Turn 17: \"The people who drink the alcohol should cover the cost of the juices...\"). Others proposed splitting the cost among different subsets (Turn 8: B proposed B and D buy juices; Turn 14: B proposed B, C and D split). Agent A contends he already contributed personal funds and resists paying again (Turn 13: \"So I have to pay again? I already put my own money in...\"). Agent C's explicit allocation (drinkers except A split the juices) was not accepted by other parties in the transcript, so the incompatible demands persisted.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: Admitted forgetting other options (Turn 3) but held firm that his personal payment should count and resisted paying again (Turn 13).",
+      "Agent B: Initially offered to chip in (Turn 4), then later proposed to have B and D buy juices (Turn 8), and then proposed splitting among B,C,D (Turn 14) — showing pragmatic shifts but no firm commitment accepted.",
+      "Agent C: Consistently argued that those who drink alcohol should pay for supplementary non-alcohol drinks (Turn 5, Turn 11, Turn 17); did not change position.",
+      "Agent D: Expressed discomfort with alcohol purchase (Turn 6) and at Turn 12 explicitly endorsed the 'drinkers pay' idea, aligning with Agent C, but did not later accept proposals that would make her pay."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 2-3: Agent B asks about juices; Agent A acknowledges he used the drinks money on alcohol and says he's used his own money. No substantive disagreement yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 4-5: Agent B proposes chipping in for juices; Agent C objects that the house fund (a shared resource) was spent on alcohol and questions why others must pay extra. This introduces a clear substantive disagreement about who should cover additional drink costs.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 6-7: Agent D adds a value-based objection (uncomfortable that shared money went to alcohol and says she doesn't drink). Agent A defends his action by saying he added personal money and it can't be returned. More participants assert opposing positions (fair share vs. sunk cost/personal payment).",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 8-9: Agent B offers a pragmatic split (B and D buy juices and split cost); Agent C rejects that as unfair because the house fund paid for alcohol. The core disagreement about who should pay remains active.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10-11: Agent B gives a pragmatic reason (manager attending) for needing non-alcohol options; Agent C reiterates the fairness principle that drinkers should pay. Positions remain opposed without settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12-13: Agent D endorses the 'drinkers pay' principle (\"That sounds fair.\"). Agent A objects, noting he already contributed personal money and resists paying again. The disagreement intensifies into stronger opposing claims about who has already paid and who must now cover juices.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 14-15: Agent B proposes splitting the juice bill between B, C, and D to cover it; Agent C objects to making D pay because D doesn't drink. The dispute continues with conflicting proposals and refusals.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 16-17: Agent B asks for a concrete solution; Agent C restates the principle that 'the people who drink the alcohol should cover the cost of the juices,' specifying that A's extra payment covers him and the remaining drinkers should split the juice cost. This is a concrete proposal but is not accepted in the transcript, so the substantive disagreement remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Tension between sunk-cost/personal-contribution arguments (A's extra payment) and fairness principles (only beneficiaries/drinkers should pay).",
+      "Practical concerns (Agent B's manager attending) push for immediate solution but do not resolve the fairness dispute.",
+      "Non-drinkers (D) and those who abstain for religious reasons introduce a distributive fairness issue tied to shared funds.",
+      "Multiple possible compromises were proposed but rejected because they did not match participants' views of who ought to bear cost."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T09:02:04.016749+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0065668,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2944,
+      "local_latency_ms": 32421.806,
+      "output_tokens": 3117,
+      "reasoning_tokens": 1536,
+      "successful_calls": 1,
+      "total_tokens": 6061
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "K3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S43-K3-R01",
+    "scenario_id": "S43"
+  },
+  "schema_version": 2
+}

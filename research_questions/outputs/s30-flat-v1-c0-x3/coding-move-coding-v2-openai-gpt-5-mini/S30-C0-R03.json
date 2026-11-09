@@ -1,0 +1,229 @@
+{
+  "coded_at": "2026-11-05T16:07:23.047918+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "concerns": [
+          {
+            "detail": "ability to cook most nights",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "smell, cleaning and pan-washing burden",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          },
+          {
+            "detail": "distribution of weeknight stove time",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          },
+          {
+            "detail": "need a clear kitchen rule (washing, ventilation, heads-up)",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          },
+          {
+            "detail": "being called out publicly",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "respect"
+          },
+          {
+            "detail": "being blamed in front of everyone",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "blame_or_reputation"
+          }
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "concerns": [
+          {
+            "detail": "smell getting into my room",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          },
+          {
+            "detail": "need extractor/window plus heads-up or avoid smelly food late",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          }
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "concerns": [
+          {
+            "detail": "not being the default cleaner (last night's pan in sink)",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          },
+          {
+            "detail": "need a simple rule to ensure washing, ventilation, and heads-ups",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          }
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "concerns": [
+          {
+            "detail": "getting weeknight stove time (two slots)",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "not being overlooked/left out for stove time",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "recognition"
+          },
+          {
+            "detail": "booking rule (whiteboard/shared calendar, 24-hour swap)",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          },
+          {
+            "detail": "difficulty using the stove on weeknights",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          }
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [
+        "access",
+        "practical_cost",
+        "fair_share",
+        "rule_or_norm",
+        "respect",
+        "recognition"
+      ],
+      "exists": true,
+      "gave_way": [
+        "Agent A"
+      ],
+      "summary": "All four agreed to record on the whiteboard: two reservable weeknight slots per person (first-come) with a 24-hour swap, and the rules that whoever cooks washes pans, use the extractor and open the window, and give a quick heads-up if late or smelly (Agent D will write it and Agent A washed the pan).",
+      "unsettled": []
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 1,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 4,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 5,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 6,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 7,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 8,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 10,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 12,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      }
+    ]
+  },
+  "model": "openai/gpt-5-mini",
+  "prompt_sha256": "2671c5ea9225f25b6ed80b8c737700cee5dc03f8337a880e4a1aaa9eb0f350a0",
+  "prompt_version": "move-coding-v2",
+  "run_id": "S30-C0-R03"
+}

@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "unwashed shared pan / shared-dish hygiene",
+      "pork frying smell on weeknights / use of extractor & open window",
+      "stove access on weeknights / priority and scheduling"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants speak in short, ordinary-housemate language and negotiate concrete rules (high naturalness). Example lines: 'whoever uses shared pans washes them straight away' (Turn 3); 'heads-up in chat' (Turn 5).",
+      "There is minor repetition around 'wash the pan now' and the 'need stove' formulation, but not excessive (e.g. Turn 10 and Turn 12 repeat the immediate request).",
+      "The conversation stays consistent about roles and facts (who cooks when, the pan with pork residue, timing constraints)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end of the run the group reached concrete agreement on multiple points: everyone accepted that whoever uses shared pans should wash them straight away and that all will chip in for soap/gas (Turn 3: 'whoever uses shared pans washes them straight away... We'll all chip in for soap/gas'); the group adopted a heads-up chat protocol for stove access with the rule that a 'need stove' message given before someone starts gives priority to the messenger while an already-started cook continues (Turn 5: 'quick heads-up in the flat chat... if someone's already cooking, they keep it'; Turn 9: 'If you say \"need stove\" before someone starts... If someone's already cooking, they keep it'). Agent A also committed to wash the offending pan immediately (Turn 11: 'Okay — I'll wash the pan now.'). However, the ventilation request (turning on the extractor/opening the window when frying pork) was requested by B (Turn 12) but not affirmatively accepted by all parties, so that issue remained open. The combined mechanisms were clarification/compromise on scheduling and a one-person concession to clean the pan; hence 'mixed.'",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: Initially defended cooking most nights but proposed rules and ultimately conceded to wash the pan (Turn 1 then Turn 11).",
+      "Agent B: Consistently pushed for stopping smells at night and asked repeatedly for immediate action (Turn 2, Turn 10, Turn 12); B's ventilation request was not explicitly accepted.",
+      "Agent C: Advocated the simple rule that users wash shared pans and supported chipping in (Turn 3 and Turn 5); position held steady.",
+      "Agent D: Raised the stove-access problem and requested a heads-up or rotation; D's request for yielding when messaging 'need stove' was incorporated into the agreed chat rule (Turns 4, 6, 8)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Multiple substantive incompatibilities appear: B complains the smell keeps spreading and demands it stop (Turn 2). C reports an unwashed shared pan with pork residue (Turn 3 later, but the complaint is present in opening situation and C speaks up in Round 1 Turn 3 in transcript ordering), and D says it's impossible to use the stove on weeknights (opening comment). A resists limiting cooking (wants to keep cooking most nights) but proposes rules (Turn 1: 'I cook most nights — it's my break... Please don't leave pork residue... Can we agree everyone washes shared cookware after use and chips in...'). These are opposing practical interests (use of stove time, shared cleanliness, smell) and are,",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C endorses a clear rule: whoever uses shared pans washes them immediately and all chip in for soap/gas (Turn 3). Agent D agrees on washing and soap/gas but requests an additional weeknight stove rule (Turn 4). The hygiene/funding conflict is converging toward agreement, while the stove-access scheduling issue remains an unresolved negotiation (rotation or heads-up).",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "C proposes a concrete heads-up in the flat chat with a default that whoever's already cooking keeps the stove, otherwise sort it between you (Turn 5). D accepts heads-up and requests that 'need stove' while on the way should produce yielding by those who haven't started (Turn 6). Conflict is reduced to a mild scheduling detail (timing and priority of the 'need stove' message).",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "A affirms the heads-up rule but also asserts 'If I'm already cooking, I won't stop — it's my break' (Turn 7). D asks whether a 'need stove' message while on the way should cause those who haven't started to hold off (Turn 8). There's a clear, remaining incompatibility about when a 'need stove' message has priority versus someone already deciding to start cooking.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "A restates the rule: 'If you say \"need stove\" before someone starts, those who haven't started should hold off. If someone's already cooking, they keep it — I won't stop mid-meal.' (Turn 9). That settles much of the stove-access dispute. The immediate hygiene complaint remains active: B again asks A to wash the pan now because B has an early shift and needs to sleep (Turn 10).",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "A accepts and promises to wash the pan now (Turn 11: 'Okay — I'll wash the pan now.'), resolving the immediate unwashed-pan problem. B requests also turning on the extractor and opening the window to clear the smell (Turn 12). Extractor/window use when frying pork was requested earlier but never explicitly accepted by all parties, so a minor outstanding disagreement about ventilation remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The dispute combines a hygiene/resource problem (shared pan with pork residue) and a scheduling/resource-access problem (competing evening stove use).",
+      "Simple behavioral rules (wash after use; chip in for soap/gas) and an asynchronous coordination mechanism (chat 'need stove') address the two core incompatibilities without needing a formal rota.",
+      "A single immediate concession (A agreeing to wash the pan) resolved the acute hygiene complaint; persistent differences concern ventilation expectations for pork frying which were never codified."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:29:53.980309+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 6 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00871855,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2983,
+      "local_latency_ms": 34737.209,
+      "output_tokens": 4188,
+      "reasoning_tokens": 2496,
+      "successful_calls": 1,
+      "total_tokens": 7171
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M10",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M10-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

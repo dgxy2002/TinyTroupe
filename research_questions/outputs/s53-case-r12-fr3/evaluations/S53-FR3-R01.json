@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "whether the dinner rota should preserve a single shared meal or allow Agent D to eat separate vegetarian food",
+      "whether others must change menus or learn vegetarian cooking for a month",
+      "preserving shared social ritual (same food) versus religious dietary accommodation"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants gave concrete proposals (D's separate meal; A's all-vegetarian compromise) rather than only complaining.",
+      "Agent A repeated the central objection several times, restating the symbolic importance of a single shared meal.",
+      "Agent B largely stayed neutral/indifferent, serving as a practical tie-breaker rather than an active negotiator."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No affirmative agreement was reached. Agent D proposed eating vegetarian or making separate food while keeping dinner time ('I can still cook for everyone on my night, it'll just be vegetarian... I'll just make something separate for myself'). Agent A consistently objected to not sharing the same food ('But then we're not all eating the same thing. The point was to share a meal.'), and later proposed all-vegetarian dinners, which Agent C refused ('I'm not learning to cook vegetarian. The first plan was fine.'). By the end Agent B and C favored D's original accommodation ('The first plan worked for most of us'), leaving Agent A's objection unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D proposed an accommodation early (will eat vegetarian and either cook vegetarian for all or make separate food) and later affirmed the separate-food option as 'easiest'.",
+      "Agent A resisted the accommodation and instead proposed a stronger compromise (everyone eat vegetarian for the month), which was not accepted by others.",
+      "Agent C refused to learn vegetarian cooking and consistently preferred the original rota arrangements.",
+      "Agent B remained indifferent to meal content and accepted the initial accommodation, aligning with D and C against A's demand."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent D announced a one-month vegetarian vow; Agent A asked 'Why?' but no objection or incompatible demand was expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: 'I don't know how to cook vegetarian.' Agent B asked about time—concerns but no expressed disagreement over others' demands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D proposed a solution (will cook vegetarian or make separate food while others cook as usual); no one objected yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A: 'But then we're not all eating the same thing. The point was to share a meal.' First explicit substantive disagreement with D's plan.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A emphasized cost of duration: 'A month is a long time... it's not really a shared meal anymore.' The disagreement over whether the rota still 'counts' intensified.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B and Agent D prioritized eating together at the same time ('main thing is that we're eating at the same time'), leaving A's core objection unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A reiterated that shared food matters; Agent C emphasized avoiding cooking every night—competing priorities remain and no settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D solicited suggestions and acknowledged A's feelings ('What do you suggest we do, then?'), softening stance but not resolving the incompatibility.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "Agent A proposed a compromise (all eat vegetarian for the month; D offered to teach), indicating movement toward resolution but no acceptance yet from all parties.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "Agent C rejected the compromise ('I'm not learning to cook vegetarian. The first plan was fine.'), reintroducing a strong, unresolved disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D restated the initial accommodation (make own vegetarian food, eat together) and Agent A objected again—positions remain incompatible.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 11
+      },
+      {
+        "evidence": "Agent C refuses to switch and Agent B endorses the initial plan ('The first plan worked for most of us'), while Agent A remains opposed—no settlement reached.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Core tension is symbolic (sharing the same food) vs practical/religious accommodation (D's vow).",
+      "Duration ('a month') increased perceived cost for those valuing shared-menu rituals.",
+      "Most housemates prioritized eating together at the same time over sharing identical dishes, isolating A's concern."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T10:56:58.313826+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0086438,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3188,
+      "local_latency_ms": 38765.785,
+      "output_tokens": 4125,
+      "reasoning_tokens": 2624,
+      "successful_calls": 1,
+      "total_tokens": 7313
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "FR3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S53-FR3-R01",
+    "scenario_id": "S53"
+  },
+  "schema_version": 2
+}

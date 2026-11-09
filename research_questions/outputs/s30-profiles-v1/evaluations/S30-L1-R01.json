@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smells and ventilation",
+      "shared-dishwashing and supplies payment",
+      "stove access / weeknight cooking rotation"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants give concise reasons for positions (e.g., A: 'it's my break and I work from home'; D: 'I get home late').",
+      "Negotiation is concrete and transactional (amount S$10, PayNow number, payment reference).",
+      "No needless repetition; turns mostly advance coordination.",
+      "A offers alternatives rather than conceding the new scheduling demand, keeping options explicit."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The household settled the issues about dishwashing and shared supplies and A's mitigation of smells: Agent A committed to \"keep the fan on, cover pans and close doors while I cook\" and proposed S$10/month for supplies; Agent B accepted and agreed to \"rinse and put away shared dishes the same night and chip in for supplies,\" then arranged the PayNow transfer to A (\"My PayNow number is 91234567. Monthly transfers are fine.\"). Quote: Turn 3-4 and Turn 7-8. The stove-access request remains unresolved: Agent D asked for a weeknight rotation (Turn 11) and Agent A explicitly rejected a strict rotation while proposing alternatives (Turn 12). No one accepted A's alternatives, so the scheduling conflict remains open.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B moved from complaint to acceptance/coordination: initially complained about smells, then agreed to A's proposal and arranged payment (Turn 2 → Turns 3–4, 7–9).",
+      "Agent A offered concessions on smell mitigation and proposed to manage supplies for S$10/month (Turn 1 → Turn 3), and provided PayNow details (Turn 6–8).",
+      "Agent C participated as coordinator on payment reference but did not change a primary demand (Turn 5 and 10).",
+      "Agent D introduced a new, unresolved demand for a weeknight rotation and did not receive agreement (Turn 11 → Turn 12)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent A: \"I'll try to cut the smells (use the fan, close doors, cover pans) if everyone agrees to rinse and put away shared dishes the same night and chip in for supplies.\" / Turn 2 — Agent B: \"Fair. I'll rinse and put away shared dishes the same night and chip in for supplies, if you keep the extractor fan on, cover pans and close doors while you cook.\"",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent A: \"Okay — let's do S$10 each per month. Transfer to me and I'll buy supplies. I'll keep the fan on, cover pans and close doors while I cook.\" / Turn 4 — Agent B: \"Okay, S$10/month works. I'll transfer now — do you want me to send S$10 each month or just pay for this month now? Which account/name should I send it to?\"",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent C: \"Agent A—what account/name should Agent B send the S$10 to? PayNow okay?\" / Turn 6 — Agent A: \"PayNow's fine. I haven't given my PayNow ID yet — I'll share it now. Do you want me to say my mobile number here?\"",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent B: \"Okay, post your PayNow mobile number here. I'll transfer now and set up monthly transfers.\" / Turn 8 — Agent A: \"My PayNow number is 91234567. Monthly transfers are fine.\" (Mutual, concrete agreement on payments and A's commitments to mitigate smells and cover pans.)",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 — Agent B: \"I'll transfer S$10 now to 91234567 and set up monthly transfers. What name/reference should I use for the transfer?\" / Turn 10 — Agent C: \"Agent B—use 'Kitchen supplies - Agent B' as the reference.\" (Operational coordination; no substantive dispute.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 — Agent D: \"I get home late and never get to use the stove on weeknights. Can we set a simple weeknight rotation so everyone gets a fair chance?\" / Turn 12 — Agent A: \"Agent D, I cook most nights — it's my break and I work from home, so I can't do a strict rotation. We can do a simple booking system (say tell everyone by 6pm if you need the stove) or each pick one guaranteed weeknight; which do you prefer?\" (New, unresolved scheduling conflict: D's rotation demand is rejected and alternatives proposed but not accepted.)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "A frames trade-offs: A accepts smell-mitigation duties in exchange for others doing same-night dishwashing and chipping in for supplies.",
+      "Resolved items are procedural/monetary (S$10/month, PayNow transfer) and a behavioural commitment (fan/cover/close doors), which are amenable to speech-only settlement.",
+      "The stove-access issue is a different kind of incompatibility: a recurring allocation of shared time requires either rota or booking rules; A's practical constraint (works from home) blocks strict rotation.",
+      "The group successfully converted a diffuse complaint (smell, unwashed pan) into a specific, enforceable arrangement, but scheduling requires additional negotiation."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T17:27:43.451248+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00761125,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2885,
+      "local_latency_ms": 31648.754,
+      "output_tokens": 3445,
+      "reasoning_tokens": 1920,
+      "successful_calls": 1,
+      "total_tokens": 6330
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "L1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-L1-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,194 @@
+{
+  "coded_at": "2026-11-05T15:57:51.406883+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "concerns": [
+          {
+            "detail": "reserved seat via tissue packet",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "hot food cooling",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          },
+          {
+            "detail": "packet moved without asking",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "respect"
+          }
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "concerns": [
+          {
+            "detail": "open hot bowl (can't interrupt eating)",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          },
+          {
+            "detail": "tissue packet does not reserve a seat",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          }
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "concerns": [
+          {
+            "detail": "nearly finished—couple minutes",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          }
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "concerns": [
+          {
+            "detail": "take the next free seat",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "not overlooked—make presence known",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "recognition"
+          }
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [
+        "access"
+      ],
+      "exists": true,
+      "gave_way": [
+        "Agent A",
+        "Agent B",
+        "Agent D"
+      ],
+      "summary": "Agent B will finish their bowl and then give the seat to Agent A; Agents A and D agreed to wait, but disagreement over whether the tissue packet reserved the seat, A's cooling food, and the respect issue remain unresolved.",
+      "unsettled": [
+        "rule_or_norm",
+        "practical_cost",
+        "respect"
+      ]
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 1,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 4,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 5,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 6,
+        "uses_interest": true,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 7,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 8,
+        "uses_interest": false,
+        "uses_power": true,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 9,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 10,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 12,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      }
+    ]
+  },
+  "model": "openai/gpt-5-mini",
+  "prompt_sha256": "2671c5ea9225f25b6ed80b8c737700cee5dc03f8337a880e4a1aaa9eb0f350a0",
+  "prompt_version": "move-coding-v2",
+  "run_id": "S28-C0-R01"
+}

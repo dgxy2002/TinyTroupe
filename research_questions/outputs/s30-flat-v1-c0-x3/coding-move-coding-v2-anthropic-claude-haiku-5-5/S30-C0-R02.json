@@ -1,0 +1,182 @@
+{
+  "coded_at": "2026-11-05T16:03:04.593454+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "concerns": [
+          {
+            "detail": "keep cooking most nights in the shared kitchen",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "being singled out and called out in front of everyone",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "blame_or_reputation"
+          }
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "concerns": [
+          {
+            "detail": "smell in the corridor stopping early sleep before early shift",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          }
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "concerns": [
+          {
+            "detail": "pans must be washed the same night as used",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          },
+          {
+            "detail": "doing most of the cleaning of shared pans",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          }
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "concerns": [
+          {
+            "detail": "fair chance at the stove on weeknights after getting home late",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "need a simple weeknight stove rule",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          }
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [],
+      "exists": false,
+      "gave_way": [],
+      "summary": "The weeknight stove queue was agreed by A and D, but the unwashed pan and the smell in the corridor were not settled with C and B, so no full arrangement exists.",
+      "unsettled": [
+        "practical_cost",
+        "fair_share",
+        "rule_or_norm"
+      ]
+    },
+    "turns": [
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 1,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 4,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 5,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": true,
+        "line": 6,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 7,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": true,
+        "line": 8,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": true,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 10,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 12,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      }
+    ]
+  },
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_sha256": "2671c5ea9225f25b6ed80b8c737700cee5dc03f8337a880e4a1aaa9eb0f350a0",
+  "prompt_version": "move-coding-v2",
+  "run_id": "S30-C0-R02"
+}

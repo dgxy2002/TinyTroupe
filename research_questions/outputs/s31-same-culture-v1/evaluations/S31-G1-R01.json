@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen smell affecting bedrooms",
+      "dirty shared pan / cleaning responsibility",
+      "stove access on weeknights (fairness for latecomers)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Agent A offers a concrete rule and immediate remedy, which helps drive resolution: 'I'll wash tonight's pan now... whoever cooks cleans their own pan.'",
+      "Agent C explicitly accepts responsibility for the existing dirty pan, which is the key de-escalating move.",
+      "Agent D contributes a constructive procedural suggestion ('stove?') rather than reigniting conflict.",
+      "Minor repetition: Agent B repeats the request to sleep/try to sleep multiple times."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Housemates agreed on a concrete shared rule and remedial action: Agent C explicitly conceded and committed to wash the dirty pan ('Okay — I'll wash last night's pan and run the extractor. From now on, whoever cooks cleans their own pan.'), Agent D agreed ('I agree to whoever cooks cleans.'), and Agent A and B accepted the rule and implementation steps (A volunteered to wash and run the extractor; B accepted). This mutual spoken agreement clarified responsibilities and settled the dispute.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C changed position from calling out the unwashed pan to agreeing to wash it and accept the new rule: 'Okay — I'll wash last night's pan... From now on, whoever cooks cleans their own pan.'",
+      "Agent D moved from complaint ('impossible to use the stove') to accepting the proposed rule and suggesting a coordination protocol: 'Can we also check quickly if anyone needs the stove...?'",
+      "Agent A maintained a proactive stance, proposing rules and volunteering remedial actions throughout.",
+      "Agent B consistently sought immediate mitigation (extractor, door closed) and accepted the agreed rule once proposed."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "clarification",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Agent B: 'this cannot keep happening.' Agent C: 'last night's shared pan still unwashed' vs Agent A: 'I'll wash tonight's pan now, but we need a simple rule... whoever cooks cleans their own pan, or we agree fixed cooking nights.' Conflict over cleaning responsibility and cooking smell; A proposes solutions but others have not yet accepted.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: 'If we're doing 'whoever cooks cleans', that applies to everyone...' Agent B: 'Agent C, please wash last night's pan now and run the extractor too.' The dispute remains active: requests for remedial action and acceptance not yet confirmed by the party responsible for the dirty pan.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C: 'Okay — I'll wash last night's pan and run the extractor. From now on, whoever cooks cleans their own pan. Can we all agree to that?' Agent D: 'I agree to whoever cooks cleans.' Mutual spoken agreement on the cleaning rule and C's commitment to wash the pan settles the substantive disagreement.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A and B restate the agreed rule and propose a simple coordination method: 'Let's do a quick call-out like 'stove?' ...' No new substantive disagreement introduced; B reiterates extractor request but A had already agreed to run it.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A: 'Okay — I'll run the extractor and close the kitchen door now, and I'll wash the pan.' Agent B: 'Okay, good.' Implementation promises and compliance reaffirmed; no outstanding substantive conflict remains.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B repeats 'I'll try to sleep now.' No new issues raised; prior conflicts remain settled by the agreements already made.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "A practical rule ('whoever cooks cleans') plus an immediate remedial action (C washing last night's pan) resolved both the norm dispute and the concrete nuisance.",
+      "Addressing both responsibility (cleaning) and coordination (stove check) covered the main sources of recurring conflict.",
+      "Resolution relied on clear verbal commitments rather than formal enforcement; practical follow-through remains an implementation risk."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T13:59:31.451888+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00606105,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2913,
+      "local_latency_ms": 28483.881,
+      "output_tokens": 2868,
+      "reasoning_tokens": 1664,
+      "successful_calls": 1,
+      "total_tokens": 5781
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "G1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-G1-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Responsibility for washing shared pan",
+      "Religious cleansing requirement (ritual clay wash) vs. practical cleaning",
+      "Immediate access to the only pan for cooking",
+      "Affordability of alternatives (ordering food / who pays)",
+      "Establishing a future household rule for washing"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete, context-dependent reasons (religious cleansing ritual, financial constraint, need to sleep/early start).",
+      "One party offers an immediate pragmatic fix (soap) and another rejects it on religious grounds — clear, substantive exchange rather than mere politeness.",
+      "B's quick offer to pay accelerates de-escalation but D does not accept immediately; the exchange remains realistic and not artificially closed."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Some partial steps toward accommodation were proposed but no complete settlement was reached. Evidence of partial agreement: Agent C proposed a standing rule ('whoever uses the pan washes it straight after?') and Agent D explicitly endorsed that rule for the future ('And yes, that's a good rule, Agent C.'). Agent B offered a short-term material solution ('I'll just pay for your food so you can eat.'), and Agent C accepted that for tonight ('Okay, that's good for tonight.'). However, Agent D refused the soap-only cleaning and has not accepted B's monetary offer ('I'd feel bad taking your money...'), and not all housemates explicitly confirmed the future rule. Therefore some elements (proposal of a rule; a one-off offer of payment accepted by C) moved toward settlement, but key conflicts — immediate access to the pan under D's religious requirement and full mutual agreement on the household rule — remain unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B shifted from neutral/denying responsibility to offering a practical concession: 'I'll just pay for your food so you can eat.' (Round 7).",
+      "Agent D consistently maintained the religious requirement but explicitly agreed the proposed future rule is 'a good rule' for going forward (Round 8); D has not, however, accepted the immediate monetary offer.",
+      "Agent C moved from pointing out the dirty pan to proposing a standing rule and accepted B's short-term solution for tonight ('Okay, that's good for tonight.'), showing partial movement toward institutionalizing behavior change.",
+      "Agent A remained practical and unsympathetic to immediate accommodation (suggesting ordering food, then insisting D can't use the pan), and did not explicitly endorse the future rule in the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A and Agent B both deny responsibility for the dirty pan ('That's not mine. I don't cook pork.'; 'Wasn't me. I ate out last night.') — minor substantive dispute about who left the pan.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C proposes a household rule and presses urgency ('whoever uses the pan washes it straight after? Agent D needs to cook.'). Agent D says he cannot use the pan tonight because of the pork and needs a special wash ('...I can't use the pan. It needs a special kind of wash before I can use it.'). This creates a clear practical/religious incompatibility.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D explains the required ritual cleansing ('...wash it once with water mixed with a bit of earth or clay, then seven times with clean water. Because of the pork.'), clarifying why he cannot use the pan but not resolving the access problem.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A and B push back on feasibility now ('And where do we get clay?'; 'Where are you going to find clay now? I need to get to bed...'), making the ritual solution harder and increasing the practical conflict.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C offers a pragmatic cleaning ('Let's just wash it with soap first...'), while Agent D rejects that as insufficient for religious reasons ('Sorry, but just washing with soap doesn't work for me. It's a religious rule. It has to be the clay wash.'). Opposing practical positions remain.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A suggests ordering in as an alternative ('Why don't you just order in?'), but Agent D reports he cannot afford that ('I can't afford to order food. I need to cook tonight.'), adding a financial constraint that prevents that practical compromise.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A restates that D can't use the pan tonight ('But you can't use the pan tonight.'), while Agent B offers to pay for D's food ('I'll just pay for your food so you can eat.'). The offer lowers immediate tension but D has not accepted it, so substantive conflict remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C presses for a future rule ('can we all agree then? From now on, you wash the pan right after you use it.'), Agent D agrees the rule is good for the future but declines the immediate money offer on principle ('I'd feel bad taking your money. And yes, that's a good rule... What do we do about the pan now?'). Immediate access and a fully mutual agreement on the housekeeping rule remain unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 3,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Tension is primarily between a religiously required cleaning method (ritual clay wash) and the shared-resource norm that cookware be usable by all without special treatment.",
+      "Practical constraints (no clay available now; D cannot afford to order food) limit acceptable immediate solutions, making a short-term compromise harder even though a future rule is proposed.",
+      "Household coordination failure is partly due to absence of prior agreed rules; C's proposal to require immediate washing targets the root cause but lacks explicit, unanimous buy-in by the end of the transcript."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T18:15:28.421631+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00928755,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2907,
+      "local_latency_ms": 41084.955,
+      "output_tokens": 4482,
+      "reasoning_tokens": 2816,
+      "successful_calls": 1,
+      "total_tokens": 7389
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "K1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S36-K1-R01",
+    "scenario_id": "S36"
+  },
+  "schema_version": 2
+}

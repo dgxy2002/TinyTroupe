@@ -1,0 +1,112 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen smells / ventilation",
+      "dishwashing responsibilities",
+      "use/prioritization of stove on weeknights",
+      "late-night cooking slot",
+      "weekend cleaning rota"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants negotiated concrete conditions and repeated key points (extractor/window/wash up) until consensus — e.g., Agent B's conditions in Turn 4 were accepted in Turn 5 and reiterated in Turn 7.",
+      "Agent A twice requested not to be singled out ('please don't single me out' and later 'Don’t single me out in front of everyone'), which is a social concern rather than a substantive barrier to agreement.",
+      "C takes the coordinator role (proposing rules, offering to set the rota) which helped move toward resolution."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The household agreed concrete rules resolving the primary incompatibilities: immediate dishwashing by the cook, a late-cook priority slot for whoever arrives last, and required mitigations (use extractor, open window, wash up immediately, avoid strong-smelling food or notify others). Evidence: Turn 5 — Agent C: 'Everyone washes their own dishes after cooking; late-cook follows Agent B's conditions.' Turn 7 — Agent A: 'Late-cook is whoever gets home last; they must use the extractor, open the window, and wash up straight away.' Turn 8 — Agent D: 'Okay, agreed.' These lines show the core demands were specified and accepted by the parties.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C: initiator and mediator — proposed washing rule and took on setting the weekend rota; maintained consistent position.",
+      "Agent D: initially complained about stove use but quickly accepted the late-cook slot and conditions ('I'm fine with any weekend' and Turn 6 confirmation), shifting from complaint to agreement.",
+      "Agent A: was the subject of the complaint but accepted the washing rule and late-cook conditions while requesting not to be singled out (Turn 3 and Turn 7); softened defensive stance and agreed to terms.",
+      "Agent B: started with a complaint and then moved to offer detailed constraints for late-cook (Turn 4) and accepted the final arrangement; shifted from protest to conditional cooperation.",
+      "No participant refused or retracted agreement after Round 4; positions converged through adding and accepting specific conditions."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent C directly asks Agent A to wash the pan and proposes a household rule: 'everyone washes their own dishes right after cooking, and we have a weekend rota for deeper clean.' Turn 2 — Agent D accepts washing but adds a new demand for a nightly 'late-cook' slot. Multiple incompatible expectations about kitchen use and responsibilities are asserted but not yet reconciled.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent A accepts the washing rule and late-cook slot but asks not to be singled out and adds conditions: 'must wash their pans straight away, use the extractor, and not leave smells.' Turn 4 — Agent B accepts the late-cook slot with detailed conditions (extractor, open window, avoid strong-smelling food, notify others). Parties are negotiating specific conditions rather than opposing each other, reducing but not eliminating substantive disagreement.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent C accepts Agent B's conditions and offers to set a weekend rota: 'Everyone washes their own dishes after cooking; late-cook follows Agent B's conditions.' Turn 6 — Agent D confirms acceptance and repeats the nightly-slot conditions. The group converges on the same set of rules; only administrative details remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent A: 'Late-cook is whoever gets home last; they must use the extractor, open the window, and wash up straight away.' Turn 8 — Agent D: 'Okay, agreed. I'll follow those conditions when I'm the late-cook.' All named parties accept the core substantive rules (washing, extractor/window use, late-cook definition), resolving the primary incompatibility about smells, stove access, and dishwashing responsibilities.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10 — Agent B signals exit ('I'll try to sleep now'). Turn 11 — Agent C begins assigning the weekend rota and asks Agent A to pick a weekend; no objections are raised. The substantive conflict (kitchen use and smells) has been settled; only routine scheduling remains.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 — Agent D accepts the assigned weekend. Turn 13 — Agent C confirms and presses Agent A and Agent B to confirm their weekend choices later. No substantive objections are raised; the agreed rules stand.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The main tension was between individual cooking needs/schedules and collective nuisance (smells and shared cleaning duties).",
+      "A procedural solution combining a behavioral rule (wash up immediately), an access rule (late-cook priority for whoever arrives last), and mitigation measures (extractor + open window + avoid strong smells or notify) addressed both access and nuisance concerns.",
+      "Cleaning responsibility and deep-clean scheduling were separated (immediate washing vs weekend rota), lowering friction by dividing tasks into daily behavior and periodic shared chores.",
+      "Remaining administrative items (final assignment of weekends for A and B) are not substantive conflicts but required follow-up."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T11:02:34.571655+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0083848,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2912,
+      "local_latency_ms": 35069.097,
+      "output_tokens": 4030,
+      "reasoning_tokens": 2496,
+      "successful_calls": 1,
+      "total_tokens": 6942
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "N07",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-N07-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

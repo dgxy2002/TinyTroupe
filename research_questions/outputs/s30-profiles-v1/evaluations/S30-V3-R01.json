@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": false,
+    "conflict_topics": [
+      "kitchen smells/ventilation",
+      "washing shared pans",
+      "use of extractor/window",
+      "closing bedroom doors to block smell",
+      "weekday cooking rota and night assignments (swaps for late arrivals)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Conversation is concise and cooperative; proposals are concrete (who washes, extractor/window, rota, swaps).",
+      "Agents give brief reasons tied to needs (Agent A: cooking is break/buys shared items; Agent B: needs to sleep early; Agent D: gets home late).",
+      "Little needless repetition; extractor/window and bedroom doors are mentioned multiple times but as legitimate conditions rather than filler.",
+      "All parties propose or accept concrete actions (wash pan now, pick nights), which supports quick agreement."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No substantive conflict arose in the transcript. The group agreed on a practical set of rules: 'whoever cooks washes their pans'; keep extractor and window on while cooking; close bedroom doors if the smell gets strong; implement a weekday rota with swaps for late arrivals. Assigned nights: Monday (Agent A), Tuesday (Agent B), Wednesday (Agent C), Friday (Agent D).",
+    "final_status": "no_conflict",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A initially proposed either 'whoever cooks washes' or a rota, then accepted a weekday rota and took Monday—soft shift from alternative to rota.",
+      "Agent D proposed the rota (raising fairness for late arrivals) and then accepted taking Friday with the option to swap.",
+      "Agent B added ventilation/door conditions early and ultimately accepted the rota and took Tuesday.",
+      "Agent C accepted the washing rule and took Wednesday without changing position."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A proposes a rule and offers to wash the pan and use extractor/window. Agent B accepts the rule and adds a request to keep extractor/window on and shut bedroom/corridor doors if smell gets strong ('Please keep the extractor and window on while you cook, and shut bedroom/corridor doors if the smell gets strong'). No incompatible demands were expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A repeats commitment to wash the pan and use extractor/window and says they will ask C and D to agree. Agent B repeats the request and asks C and D to agree. This is coordination, not disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C agrees to 'whoever cooks washes their pans.' Agent D agrees to wash and use extractor/window but proposes a weekday rota for fairness ('can we do a simple weekday rota...'). The rota proposal is a new proposal, not an expressed conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A accepts the rota suggestion and proposes assigning weekday cooking nights. Agent B agrees to the rota with the previously stated conditions and asks to pick nights now. No incompatible positions remain.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C picks Wednesday. Agent D picks Friday and offers to swap if they get home late. Participants continue assigning nights without disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A takes Monday; Agent B takes Tuesday and accepts swapping if late. All four weekday slots are assigned and the group has agreed on rules (whoever cooks washes pans; use extractor/window; close bedroom doors if smell strong; swaps allowed). No substantive conflict remains.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Main practical tensions were smell spread and unwashed shared cookware; solutions combined ventilation, personal washing responsibility, and scheduling.",
+      "Fairness concerns (late arrivals) were addressed by allowing swaps and making a rota, which resolved potential distributional disputes preemptively.",
+      "Agreement centered on concrete, enforceable behaviors (who washes, when to run extractor, closing doors, assigned nights), which reduced room for ambiguity."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T18:06:40.196523+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0061023,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2934,
+      "local_latency_ms": 41055.42,
+      "output_tokens": 2886,
+      "reasoning_tokens": 1728,
+      "successful_calls": 1,
+      "total_tokens": 5820
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "V3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-V3-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

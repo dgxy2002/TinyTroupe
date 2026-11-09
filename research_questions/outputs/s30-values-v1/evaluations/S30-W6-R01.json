@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "unwashed shared cookware causing odors",
+      "use of stove on weeknights (late slot scheduling)",
+      "who washes pans (responsibility)",
+      "shared supplies cost-sharing (soap/gas)",
+      "fair distribution of burden"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "The conversation is concise and task-focused; proposals and confirmations are explicit (e.g., several requests to 'post the rota tonight').",
+      "Some repeated prompts for the same concrete actions (wash the pan, post the rota) occur across rounds, but these serve to elicit final confirmations rather than signal confusion.",
+      "Roles and physical constraints are consistent with the setting (requests to turn extractor, immediate wash)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end of Round 6 all parties made concrete, mutually compatible commitments: A agreed to wash the pan immediately, turn the extractor, and 'post the rota tonight' (Turn 11: 'Okay — I'll wash the pan and turn the extractor now. I'll post the rota tonight.'). B agreed to chip in and to wash pans after cooking (Turn 12: 'I'll chip in for supplies and I'll wash my pans right after I cook.'). C had already volunteered to take the next week's late slot and to help set up the rota (Turn 6). D confirmed both taking late slots some weeks and chipping in (Turn 7 and Turn 9). The agreed concrete arrangements are: rotating late weeknight stove slots, whoever cooks washes pans immediately, and supplies costs split (evenly). These mutual spoken commitments satisfy the speech-only settlement conditions.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: Initially agreed to wash the pan and accepted the rules but conditioned them on fairness ('I don't want this to always land on me'); by Round 6 A explicitly committed to immediate action and posting the rota ('I'll wash the pan and turn the extractor now. I'll post the rota tonight.').",
+      "Agent B: Moved from complaint about smell to offering to chip in and confirming adherence to the washing rule (Turn 5 and Turn 12).",
+      "Agent C: Shifted from pointing out an unwashed pan to volunteering a late slot and assisting with the rota (Turn 6).",
+      "Agent D: Initiated the proposal and later confirmed willingness to take late slots and chip in (Turn 1, Turn 7, Turn 9)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent D) demands: 'Agent A, can you wash that pan now ... can we agree that whoever cooks washes their pans straight away, and that we rotate a 'late' stove slot on weeknights?' Turn 2 (Agent A) agrees to wash now and to the rules but conditions it: 'I'm fine with whoever cooks washing their pans and rotating a late weeknight slot, but everyone has to stick to it — I don't want this to always land on me.' Acknowledges the problem but asserts a concern about burden — the core incompatible expectations (who pays/does the work and how to share burden) are present and unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent B) repeats practical requests and pushes for immediate mitigation and a rota: 'Agent A — can you wash that pan now and turn the extractor on?... let's write the rota tonight and agree cooks wash pans straight away.' Turn 4 (Agent A) complies with immediate actions: 'Okay — I'll wash it and turn the extractor now. I'll write the rota tonight,' but asks for contributions: 'everyone has to stick to it and chip in for supplies; I buy most of them. Who can cover next week's soap and gas?' Immediate behaviour de-escalates (A will act), but the cost-sharing and commitment question remains unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent B) offers to chip in and requests an even split: 'I can chip in for next week's soap and gas. Let's split supplies costs evenly and put the rota in the chat tonight.' Turn 6 (Agent C) volunteers a late slot and to help set up the rota: 'Okay — I'll take next week's late slot and help set up the rota tonight.' Multiple parties volunteering reduces the dispute over burden, leaving only minor confirmation steps outstanding (A's posting and universal buy-in).",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent D) confirms participation: 'I'll take a late slot some weeks.' Turn 8 (Agent A) affirms: 'Okay — I'll post the rota tonight with rotating late slots and the 'whoever cooks washes' rule. Can you and the others confirm you'll chip in for supplies and wash pans straight after cooking?' Most practical proposals are accepted in principle, but A's request for explicit confirmations means a small outstanding need for explicit commitments remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent D) explicitly confirms: 'Yep, I'll chip in for supplies and wash pans right after I cook.' Turn 10 (Agent B) reiterates urgency: 'Agent A, please post the rota tonight, and can you wash the pan and turn the extractor now? The smell's in my corridor and I need to sleep early.' The substantive dispute has mostly narrowed to immediate action and final confirmations (A posting rota, immediate pan wash/extractor), so conflict is mild.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent A) commits: 'Okay — I'll wash the pan and turn the extractor now. I'll post the rota tonight.' Turn 12 (Agent B) confirms participation: 'Agent A — I'll chip in for supplies and I'll wash my pans right after I cook. Can you confirm the extractor's on now and that you'll post the rota tonight?' By the end of the round all four have either committed or already volunteered concrete actions (wash pans immediately, rotating late slot, split supplies), so the substantive conflicts about recurring smells, pan washing, rota, and supplies are mutually agreed.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The dispute combined both a behavioral problem (unwashed pans causing odors) and a coordination/cost problem (who buys supplies and who bears late cooking burden).",
+      "Resolution required both procedural fixes (a rota with rotating late slots) and normative expectations (rule: whoever cooks washes pans immediately) plus explicit cost-sharing.",
+      "A's repeated insistence on 'everyone has to stick to it' signals prior asymmetric burden; getting explicit commitments from others (B, C, D) was the key step toward settlement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T07:32:07.312688+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00784255,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2935,
+      "local_latency_ms": 40810.659,
+      "output_tokens": 3756,
+      "reasoning_tokens": 1984,
+      "successful_calls": 1,
+      "total_tokens": 6691
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "W6",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-W6-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

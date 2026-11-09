@@ -176,4 +176,85 @@ class AgentDebrief(BaseModel):
     fairness_to_me: int = Field(ge=1, le=5)
 
 
-__all__ = ["AgentDebrief", "ConflictEvaluation", "RoundConflictScore", "SettledStatus"]
+# Kinds of concern, not scenario objects, so codes compare across scenarios. The specific
+# thing at stake goes in ConcernNote.detail.
+ConcernTag = Literal[
+    "access",
+    "practical_cost",
+    "fair_share",
+    "rule_or_norm",
+    "respect",
+    "blame_or_reputation",
+    "recognition",
+]
+AgentAlias = Literal["Agent A", "Agent B", "Agent C", "Agent D"]
+
+
+class TurnCode(BaseModel):
+    """Independent yes/no codes for one spoken line."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    line: int = Field(ge=1)
+    uses_interest: bool
+    uses_right: bool
+    uses_power: bool
+    concedes: bool
+    conditional_ask: bool
+
+
+class ConcernNote(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    tag: ConcernTag
+    detail: str = Field(min_length=1, max_length=120)
+    in_thoughts: bool
+    in_speech: bool
+
+
+class AgentConcernCode(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    agent: AgentAlias
+    concerns: list[ConcernNote]
+
+
+class ArrangementCode(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    exists: bool
+    covers: list[ConcernTag]
+    unsettled: list[ConcernTag]
+    gave_way: list[AgentAlias]
+    summary: str = Field(min_length=1, max_length=500)
+
+
+class RunCoding(BaseModel):
+    """Blind move-level coding of one run. Separate from the frozen evaluator."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    turns: list[TurnCode]
+    agents: list[AgentConcernCode]
+    arrangement: ArrangementCode
+
+    def validate_lines(self, expected_lines: int) -> "RunCoding":
+        actual = [item.line for item in self.turns]
+        if actual != list(range(1, expected_lines + 1)):
+            raise ValueError(f"Expected lines 1-{expected_lines}, but coder returned {actual}.")
+        return self
+
+
+__all__ = [
+    "AgentAlias",
+    "AgentConcernCode",
+    "AgentDebrief",
+    "ArrangementCode",
+    "ConcernNote",
+    "ConcernTag",
+    "ConflictEvaluation",
+    "RoundConflictScore",
+    "RunCoding",
+    "SettledStatus",
+    "TurnCode",
+]

@@ -391,6 +391,158 @@ CALIBRATION_S29_PRESET = ExperimentPreset(
     ),
 )
 
+CALIBRATION_S30_PRESET = ExperimentPreset(
+    name="calibration-s30-flat",
+    scenario_ids=("S30",),
+    configuration_ids=("C0",),
+    repetitions_per_configuration=3,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "Recurring shared-flat dispute, conversation only, no resolution notice. "
+        "Free-resolution: do not pool with resolution-expected scenarios. C0 only; a small "
+        "check of whether this scenario produces real resolution."
+    ),
+)
+
+CALIBRATION_S30_PROFILES_PRESET = ExperimentPreset(
+    name="calibration-s30-profiles",
+    scenario_ids=("S30",),
+    configuration_ids=("L1", "L2", "L3", "B1", "B2", "B3", "V1", "V2", "V3", "V4"),
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "Does anything richer than a bare label change S30? Label only, label plus biography, "
+        "and values with no label, all with neutral names. One run per cell: a screen, not a test."
+    ),
+)
+
+CALIBRATION_S30_PLAIN_PRESET = ExperimentPreset(
+    name="calibration-s30-plain-labels",
+    scenario_ids=("S30",),
+    configuration_ids=("P1", "P2", "P3"),
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "S30 with 'Malay' in place of 'Singaporean Malay', same rotations as L1-L3, neutral "
+        "names. One run per cell: a screen, not a test."
+    ),
+)
+
+CALIBRATION_S30_MODEL_CHECK_PRESET = ExperimentPreset(
+    name="calibration-s30-model-check",
+    scenario_ids=("S30",),
+    configuration_ids=("P1", "V1", "V2"),
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "A few S30 cells for a second simulation model, to see whether the same-deal pattern "
+        "is specific to gpt-5-mini. One run per cell: a screen, not a test."
+    ),
+)
+
+CALIBRATION_S30_VALUES_PRESET = ExperimentPreset(
+    name="calibration-s30-values",
+    scenario_ids=("S30",),
+    configuration_ids=("W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8"),
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "Can this setup detect a difference at all? Harmony versus direct values, no labels, "
+        "first speaker balanced by role and value. Fixed before data: compare harmony and "
+        "direct speakers on words per line, uses_right, uses_interest, and concedes."
+    ),
+)
+
+CALIBRATION_S30_NAMED_PRESET = ExperimentPreset(
+    name="calibration-s30-named-cultures",
+    scenario_ids=("S30",),
+    configuration_ids=tuple(f"N{number:02d}" for number in range(1, 11)),
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "First look at culture with names: plain labels, names rotated within gender, gender "
+        "and first speaker balanced. Too small for a firm answer. Fixed before data: per-agent "
+        "means of uses_right, blame language, concedes, and words, across the four cultures, "
+        "and separately across name gender, permuted within runs."
+    ),
+)
+
+CALIBRATION_S31_PORK_PRESET = ExperimentPreset(
+    name="calibration-s31-pork-check",
+    scenario_ids=("S31",),
+    configuration_ids=("M1", "M2", "M3", "M4"),
+    repetitions_per_configuration=1,
+    rounds_per_run=6,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "Does culture come up when the dispute could touch it? Pork fat in the shared pan, "
+        "names, plain labels, and biographies. A small look, not a test."
+    ),
+)
+
+def _s31_preset(name: str, cells: tuple[str, ...], description: str) -> ExperimentPreset:
+    return ExperimentPreset(
+        name=name,
+        scenario_ids=("S31",),
+        configuration_ids=cells,
+        repetitions_per_configuration=1,
+        rounds_per_run=6,
+        conversation_mode="hybrid_self_selection",
+        debrief_after_run=True,
+        description=description,
+    )
+
+
+CALIBRATION_S31_PORK_REST_PRESET = _s31_preset(
+    "calibration-s31-pork-rest",
+    ("M5", "M6", "M7", "M8", "M9", "M10"),
+    "The rest of the pork schedule, after M1-M4. A small look, not a test.",
+)
+CALIBRATION_S31_LANGUAGE_PRESET = _s31_preset(
+    "calibration-s31-home-language",
+    ("H1", "H2", "H3", "H4"),
+    "M1-M4 with private thoughts in a home language and speech in English. A small look.",
+)
+CALIBRATION_S31_EXPLICIT_PRESET = _s31_preset(
+    "calibration-s31-explicit-culture",
+    ("E1", "E2", "E3", "E4"),
+    "M1-M4 told to act on typical cultural values, an upper bound. This is a behavioural "
+    "instruction: never pool with other cells. A small look.",
+)
+CALIBRATION_S31_SAME_CULTURE_PRESET = _s31_preset(
+    "calibration-s31-same-culture",
+    ("G1", "G2", "G3", "G4"),
+    "Four agents from one background in each run, a baseline for within-culture differences.",
+)
+
+CASE_STUDY_SMELL_PRESET = ExperimentPreset(
+    name="case-study-smell",
+    scenario_ids=("S32",),
+    configuration_ids=("M5",),
+    repetitions_per_configuration=1,
+    rounds_per_run=8,
+    conversation_mode="hybrid_self_selection",
+    debrief_after_run=True,
+    description=(
+        "One attempt at a smell case study, run with --scenario and --configuration. Stop a "
+        "cultural case at the first run meeting definition B, at most 5 attempts, and report "
+        "every attempt. The S35 control runs a fixed 3 times."
+    ),
+)
+
 CALIBRATION_S02_RECURRENCE_STAKES_PRESET = ExperimentPreset(
     name="calibration-s02-recurrence-stakes",
     scenario_ids=("S20",),
@@ -509,6 +661,18 @@ EXPERIMENT_PRESETS = {
         CALIBRATION_S27_PRESET,
         CALIBRATION_S28_PRESET,
         CALIBRATION_S29_PRESET,
+        CALIBRATION_S30_PRESET,
+        CALIBRATION_S30_PROFILES_PRESET,
+        CALIBRATION_S30_PLAIN_PRESET,
+        CALIBRATION_S30_MODEL_CHECK_PRESET,
+        CALIBRATION_S30_VALUES_PRESET,
+        CALIBRATION_S30_NAMED_PRESET,
+        CALIBRATION_S31_PORK_PRESET,
+        CALIBRATION_S31_PORK_REST_PRESET,
+        CALIBRATION_S31_LANGUAGE_PRESET,
+        CALIBRATION_S31_EXPLICIT_PRESET,
+        CALIBRATION_S31_SAME_CULTURE_PRESET,
+        CASE_STUDY_SMELL_PRESET,
         CALIBRATION_S02_CULTURAL_PRESET,
         CALIBRATION_S02_FACTORIAL_PRESET,
         CALIBRATION_S06_PRESET,
@@ -619,6 +783,17 @@ __all__ = [
     "CALIBRATION_S27_PRESET",
     "CALIBRATION_S28_PRESET",
     "CALIBRATION_S29_PRESET",
+    "CALIBRATION_S30_PRESET",
+    "CALIBRATION_S30_PROFILES_PRESET",
+    "CALIBRATION_S30_PLAIN_PRESET",
+    "CALIBRATION_S30_MODEL_CHECK_PRESET",
+    "CALIBRATION_S30_VALUES_PRESET",
+    "CALIBRATION_S30_NAMED_PRESET",
+    "CALIBRATION_S31_PORK_PRESET",
+    "CALIBRATION_S31_PORK_REST_PRESET",
+    "CALIBRATION_S31_LANGUAGE_PRESET",
+    "CALIBRATION_S31_EXPLICIT_PRESET",
+    "CALIBRATION_S31_SAME_CULTURE_PRESET",
     "CALIBRATION_S02_CONVERSATION_PRESET",
     "CALIBRATION_S02_CULTURAL_PRESET",
     "CALIBRATION_S02_FACTORIAL_PRESET",

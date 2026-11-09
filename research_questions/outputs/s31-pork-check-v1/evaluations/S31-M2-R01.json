@@ -1,0 +1,112 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "unwashed shared pan / kitchen smell",
+      "house rule for washing shared pans (same-day vs rinse before bed)",
+      "weeknight stove access / swap rule"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants speak directly and use practical conditional language (e.g. A's conditions for swaps: \"Ask before taking over, let the person cooking finish the current active step\").",
+      "There is some repeated prompting from B about the extractor and pan across rounds (minor repetition).",
+      "Speakers distinguish immediate, actionable fixes (wash/run extractor) from policy proposals (wash rule; swap rule).",
+      "No role confusion; actions and responsibilities are stated clearly."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Housemates reached concrete agreement and action on the immediate cleanliness/smell problem: Agent A accepted and enacted the cleaning and extractor request (\"I'll wash the pan now and run the extractor.\" / \"Okay — running the extractor and washing the pan now.\"). Agent C agreed to put the pan away after rinsing. A tentative rule about washing/rinsing was proposed and accepted in principle by multiple people but specified differently by participants (B: \"everyone washes any shared pan the same day\"; A/C: \"wash before you sleep or at least rinse and leave it on the draining rack\"). The separate substantive proposal about a weeknight stove-swap rule was introduced by D and remains open (no mutual, specific agreement).",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: moved from being the target of complaint to accepting and enacting the immediate remedy (\"I'll wash the pan now and run the extractor\") and offered conditional acceptance of the swap rule.",
+      "Agent C: moved from pointing out the dirty pan to agreeing to put it away after it is rinsed (accepted the immediate action).",
+      "Agent B: consistently pressed for immediate remedy and a general wash rule; repeated requests but did not withdraw demands.",
+      "Agent D: introduced a new issue (weeknight swap rule) and re-raised it at the end; no one explicitly rejected it, but it remains unfinalized."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (B) expresses a concrete complaint and demand: \"Agent A, can you clean that pan now and run the extractor?... can we agree everyone washes any shared pan the same day...\". Turn 2 (A) accepts the immediate request and proposes a specific variant of the rule: \"Okay — I'll wash the pan now and run the extractor... wash it before you sleep or at least rinse it and leave it on the draining rack.\" The immediate incompatibility (dirty pan / smell) is accepted and a concrete action is promised, but the broader rule is not yet fully settled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (B) repeats the request and Turn 4 (C) agrees to put it away and restates the same wash/rinse rule: \"Okay — I'll put it away after Agent A washes it. Can we agree that whoever uses a shared pan washes it the same day or at least rinses...\". The immediate problem is acknowledged by others; only minor outstanding specification of the exact rule remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (D) introduces a new, potentially conflicting issue: a weeknight stove-swap rule: \"...on weeknights, if someone asks to use the stove the person cooking swaps when it's reasonable?\". Turn 6 (A) does not reject it but conditions acceptance on specifics: \"Okay — I can accept a weeknight swap rule if we make it specific... Ask before taking over, let the person cooking finish the current active step...\". A new substantive issue is introduced (stove access) and remains unresolved in detail.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (B) asks for immediate actions again and Turn 8 (C) confirms: \"Okay — I'll put it away after it's rinsed.\" The immediate cleanliness/smell issue is further agreed to be handled; the stove-swap rule introduced earlier remains outstanding.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 11 (B) reiterates the immediate request and Turn 12 (A) reports carrying it out: \"Okay — running the extractor and washing the pan now.\" The immediate practical conflict (dirty pan/smell) is being acted on; the weeknight swap rule is still not settled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 13 (B) indicates closure for night contingent on actions. Turn 16 (D) explicitly asks again for agreement on the weeknight swap rule: \"Can we agree on the weeknight swap rule I suggested?... Is that okay with everyone?\" The stove-access rule remains unagreed and is explicitly re-raised with no recorded acceptance in this round.",
+        "movement": "reopened",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Immediate practical problem (dirty pan and smell) was quickly accepted and acted on by the person accused, showing willingness to accommodate short-term requests.",
+      "Housemates prefer procedural specificity rather than vague rules — multiple participants request exact conditions (e.g. 'before you sleep', 'current active step').",
+      "There are two distinct problems: cleanliness/smell (largely settled) and stove access scheduling (still unresolved).",
+      "D's stove-swap proposal is compatible in principle with A's position but requires specific wording to become an agreed rule."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T11:45:55.559366+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 5 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0081803,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3030,
+      "local_latency_ms": 35973.321,
+      "output_tokens": 3913,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6943
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M2-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

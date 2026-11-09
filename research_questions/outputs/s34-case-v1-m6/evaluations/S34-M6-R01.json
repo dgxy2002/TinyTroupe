@@ -1,0 +1,126 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "stove scheduling / access",
+      "cooking smells / incense",
+      "cleaning / unwashed shared dishes"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Exchange feels like natural housemate conversation with concrete constraints (e.g., early work, late cooking).",
+      "One clear concrete agreement (door + fan) is reached quickly (Turn 9–10).",
+      "B disengages after their concern is addressed, which reduces collective problem-solving capacity (Turn 11, Turn 13).",
+      "C consistently pushes for comprehensive rules and concrete obligations (Turn 4, Turn 6, Turn 16)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The smell issue (B's main demand) was settled in Round 5 when Agent B proposed closing the kitchen door and using the fan and Agent A accepted: \"For the smell, can we just agree to close the kitchen door and use the fan?\" — \"Okay, fine. Door and fan.\" Other substantive issues (stove schedule, cleaning, incense) remain unresolved though discussed afterward.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A conceded the smell complaint by accepting the door+fan proposal (Turn 9–10: \"Okay, fine. Door and fan.\").",
+      "Agent D softened from insisting the stove be settled first to agreeing to sort all issues together (Turn 7 vs. Turn 15).",
+      "Agent C consistently pressed for comprehensive household rules and proposed an immediate-cleanup norm (Turn 6, Turn 16).",
+      "Agent B's position shifted from active complaint about smells to stepping back and refusing further engagement once their issue was addressed (Turn 3 -> Turn 11/13)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent D: \"...I get home and the stove is busy. By the time it's free, it's after nine. When am I supposed to cook?\" (A direct, substantive complaint about access to the stove.)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent B: \"The smell gets in my room. I have to be up for work at five.\" Turn 4 — Agent C: \"...Maybe we should actually agree on how we're going to use it.\" (Multiple substantive problems now present: smells, scheduling, shared rules.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent D: \"I agree. A schedule or something would be good. Then I'd know when I can get to the stove.\" Turn 6 — Agent C: \"A schedule for the stove is a start. We also need to agree on cleaning.\" (Proposals introduced but no settlement; clear disagreements persist about multiple issues.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent D: \"...can we settle the stove schedule first? That's the most urgent thing for me right now.\" Turn 8 — Agent A: \"Why just the stove? What about the pan? Or the incense? If we're making rules, we make rules for everything.\" (Explicit incompatibility over agenda/priorities.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 — Agent B: \"For the smell, can we just agree to close the kitchen door and use the fan?\" Turn 10 — Agent A: \"Okay, fine. Door and fan.\" (Mutual, concrete agreement on the smell issue reduces one substantive conflict, while stove/cleaning/incense remain unresolved.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 — Agent B: \"Okay, thanks. That's all I needed.\" Turn 12 — Agent A: \"...So what about the rest of it? The pan is still there. The stove is still an issue.\" (Smell remains settled; other substantive issues persist with no progress.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 13 — Agent B: \"Like I said, that's all I needed. The rest is up to you all.\" Turn 14 — Agent C: \"See? This is why we need to agree on everything together. ... We can't just solve one person's problem and then leave.\" (Conflict over participation and responsibility intensifies.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 15 — Agent D: \"Okay, you're right. Let's sort it all out together. As long as a stove schedule is part of it.\" Turn 16 — Agent C: \"Good. So, stove schedule, and cleaning. How about we start with a simple rule: if you use the kitchen, you clean up after yourself right away.\" (Group moves toward joint problem-solving and a concrete cleaning rule is proposed, but not yet accepted by every party.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "There are multiple overlapping practical problems (access to stove, odors affecting sleep/work, and shared cleaning) that require different remedies.",
+      "Agents have different priorities: D prioritizes predictable stove access; B prioritizes eliminating smells for sleep; C prioritizes shared cleaning norms.",
+      "Partial, single-issue agreements (the door+fan) can settle one party's urgent need but leave collective-action problems unresolved.",
+      "One participant's withdrawal (B) after their issue is solved reduces momentum for solving the remaining shared problems."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T17:04:25.666849+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 5 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00814455,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2911,
+      "local_latency_ms": 37343.519,
+      "output_tokens": 3910,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6821
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "M6",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S34-M6-R01",
+    "scenario_id": "S34"
+  },
+  "schema_version": 2
+}

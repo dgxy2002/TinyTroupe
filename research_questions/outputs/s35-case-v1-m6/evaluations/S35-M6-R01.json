@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "stove scheduling / cooking times",
+      "food smell / ventilation",
+      "shared clean-up / dirty pan",
+      "turn-taking and fairness"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants clearly identify linked but distinct problems: schedule, smell, and cleanliness (e.g., C: \"The pan, the smell, the schedule.\").",
+      "Several speakers give concrete constraints (D: work arrival time; A: can't eat that late), which grounds the negotiation.",
+      "C advances a specific behavioral proposal (clean your own things immediately), but others do not accept it within the transcript."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "By the end of round 8 multiple substantive incompatibilities remain. The core scheduling dispute between D (needs ~8:15–8:30) and A (cannot wait that late) was stated repeatedly and not resolved. The smell/ventilation complaint (B) and the dirty pan/blame issue (C) were discussed and C proposed a cleaning norm, but no one explicitly accepted that rule or agreed to change behavior. Key lines: D: \"I usually get back around 8... around 8:15 or 8:30?\" A: \"That's quite late for me to eat.\" and C: \"What if we just agree to clean our own things as soon as we're done?\" — proposal not adopted by others, so no settlement.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "A consistently maintained that they cook immediately after work and cannot wait until 8:30 (no softening).",
+      "D consistently maintained an earlier-late-home constraint and requested a schedule (no softening).",
+      "C moved from calling out the unwashed pan to proposing a concrete behavioral rule (clean your own things immediately).",
+      "B stayed focused on the smell and its practical impact (sleep), not on proposing scheduling solutions."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "D: \"Every night it's the same... When it's finally free, it's too late for me to start cooking a proper meal.\" A: \"So what time do you want to use it?\" — scheduling disagreement introduced.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "D: \"I usually get back around 8. So, maybe around 8:15 or 8:30?\" A: \"That's quite late for me to eat.\" — clear disagreement about acceptable cooking time.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "B: \"The smell goes everywhere. Can you just use the fan and open the window?\" A: \"I do use the fan. And I open the window.\" — a separate smell/ventilation complaint arises while schedule dispute remains unresolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "B: \"Well it's not working. The whole flat smells.\" C: \"Never mind the smell for a minute. Who left the pan in the sink from last night?\" — responsibility for unwashed pan added to ongoing smell and scheduling issues.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "D: \"Can we please sort out a schedule for the stove first? That's a problem every single night.\" A: \"I cook when I finish work. I can't just wait until 8:30.\" — direct, opposing constraints; stronger scheduling conflict.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "D: \"I can't get home any earlier. So what am I supposed to do? I have to eat too.\" A: \"I don't know. We all have to eat.\" — positions restated without movement toward resolution.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "B: \"Forget the schedule. What are we going to do about the smell? I need to sleep.\" C: \"The pan, the smell, the schedule. It's all the same problem. None of us are cleaning up properly.\" — conflict broadens to cleanliness norms and links multiple issues.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "D: \"Cleaning is one thing. The schedule is another. We can wash the pan, but I still won't have time to cook.\" C: \"If the kitchen is clean when it's your turn, that saves you time, doesn't it? What if we just agree to clean our own things as soon as we're done?\" — cleaning moves toward a concrete proposal while scheduling remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 3,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The scheduling conflict arises from incompatible work/end-of-day times rather than mere preference, making simple rescheduling difficult.",
+      "Smell complaints are tied partly to cleanliness (unwashed pan) and partly to ventilation effectiveness; fixing cleanliness may reduce but not eliminate the smell problem.",
+      "Absent shared norms, small failures (leaving a pan) cascade into broader grievances about fairness and convenience.",
+      "Participants prioritize different issues: D emphasizes schedule, B emphasizes sleep/odor, C links cleanliness to both, A emphasizes personal routine."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T17:06:01.854931+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0062218,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2892,
+      "local_latency_ms": 29596.923,
+      "output_tokens": 2951,
+      "reasoning_tokens": 1472,
+      "successful_calls": 1,
+      "total_tokens": 5843
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "M6",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S35-M6-R01",
+    "scenario_id": "S35"
+  },
+  "schema_version": 2
+}

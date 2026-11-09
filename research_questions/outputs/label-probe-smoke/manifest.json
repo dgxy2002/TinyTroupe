@@ -1,0 +1,28 @@
+{
+  "agent_prompt_render": "mental-state-merged-v1",
+  "agent_prompt_sha256": "2a02716cf367595c4357a421ffc128df9da2f5bfce0933949b9108f5f8903cfa",
+  "analysis_plan": "Fixed before data collection. Primary question: do the four labels differ on spoke, words, uses_interest, uses_right, concedes, within moment, rule state, and name type? Permute labels within those strata (5000 permutations), summing between-label spread across strata, with Holm correction across the primary outcomes. Secondary: the same test within rule-on and rule-off separately, labelled versus no label, and neutral versus associated name. Exploratory and not corrected: uses_power, conditional_ask, mentions_identity, and male-coded versus female-coded names. uses_power and conditional_ask are exploratory because coder agreement was below 0.6. Replies are coded blind by anthropic/claude-haiku-5.5.",
+  "coding_model": "anthropic/claude-haiku-5.5",
+  "created_at": "2026-11-05T13:45:20.849389+00:00",
+  "experiment_id": "label-probe-smoke",
+  "git_commit": "373dbb15353ab9889444b327f8578ae8c978c34a",
+  "moments": {
+    "A_hears_refusal": {
+      "heard": "This seat's taken — I already sat and uncovered my bowl. I can give you the seat when I finish, but I won't carry the open bowl.",
+      "other": "B",
+      "own_line": "{other} — I left that tissue packet to save this seat. Can I sit? My food's hot.",
+      "role": "A"
+    },
+    "B_hears_demand": {
+      "heard": "{listener} — I left that tissue packet to save this seat. Can I sit? My food's hot.",
+      "other": "A",
+      "own_line": null,
+      "role": "B"
+    }
+  },
+  "plan_seed": 20261105,
+  "samples_per_cell": 1,
+  "scenario_id": "S28",
+  "simulation_model": "openai/gpt-5-mini",
+  "total_samples": 36
+}

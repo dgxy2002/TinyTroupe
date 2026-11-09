@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smell/ventilation",
+      "unwashed shared pan/cleaning",
+      "stove use on weeknights / scheduling or prohibition"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers use concise, ordinary-language proposals and acceptance (natural: A's conciliatory language, B's concrete procedural request).",
+      "There is little needless repetition; Round 2 restates the arrangement but is a direct acceptance rather than redundant repetition.",
+      "Grounding is consistent: ventilation, door, and pan-cleaning are concrete, actionable items."
+    ],
+    "dialogue_repetition_score": 0,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "A and B verbally agreed on concrete mitigation for smell and the shared pan: B proposed \"Can we run the extractor fan the whole time you're cooking and keep the corridor door shut? I'll wash the pan now.\" A accepted: \"Fine by me, fan on while I cook and door shut. Just wash the pan tonight.\" That settles the pan-cleaning and ventilation measures between those speakers, but D's earlier objection that it is \"impossible to use the stove on weeknights\" was not addressed or accepted by others and remains unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from a defensive/opening stance to acceptance of mitigation: A's Turn 1 offered to \"sort out the pan\" and in Turn 3 (Round 2) A affirmed \"Fine by me, fan on while I cook and door shut.\"",
+      "Agent B proposed concrete measures and volunteered to wash the pan (Turn 2). That proposal was accepted by A.",
+      "Agents C and D expressed complaints initially (opening) but did not participate in the recorded agreement; their positions remained unchanged in the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Opening complaints (B, C, D) express strong incompatible demands about stove use, smells, and unwashed shared pan; during this round A responds conciliatorily and B proposes concrete mitigations: A: \"Let's sort out the pan tonight and figure out the smell together.\" B: \"Can we run the extractor fan the whole time you're cooking and keep the corridor door shut? I'll wash the pan now.\" The high substantive disagreement (e.g., D earlier saying it's \"impossible to use the stove on weeknights\") remains, but A's tone and B's concrete proposal reduce immediate tension.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "A explicitly accepts B's proposed mitigations: \"Fine by me, fan on while I cook and door shut. Just wash the pan tonight.\" This settles the pan/ventilation issue between A and B, so conflict seen in this round is only mild (a minor admonition). However the broader incompatibility (D's earlier complaint that it's \"impossible to use the stove on weeknights\" vs A cooking most nights) remains unaddressed and unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "No public speech or actions recorded. No new conflict introduced in this round. The unresolved substantive disagreement about whether stove use on weeknights is acceptable (D's earlier claim) persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Silence/no actions. The previously-noted practical incompatibility (use of stove on weeknights vs objection that it is \"impossible\") remains unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "No new speech or observable action; the unresolved disagreement about restricting stove use on weeknights persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "No activity recorded. The mitigation measures agreed between A and B remain spoken but the broader conflict (D's objection to weeknight stove use) is still not addressed by D or the group.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Two distinct issues were present: (1) immediate cleanliness/ventilation (pan, extractor, corridor door) and (2) a broader, unresolved scheduling/prohibition claim about stove use on weeknights.",
+      "The group reached a focused mitigation (fan on, door shut, pan washed) that addresses smell and cleanliness but does not resolve whether cooking on weeknights should be limited.",
+      "Explicit acceptance from the primary parties involved (A and B) completed settlement of the first issue; absence of D's engagement left the second issue intact."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T18:42:49.465148+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 2 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01005855,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2511,
+      "local_latency_ms": 56352.176,
+      "output_tokens": 4917,
+      "reasoning_tokens": 3648,
+      "successful_calls": 1,
+      "total_tokens": 7428
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "P1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-P1-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

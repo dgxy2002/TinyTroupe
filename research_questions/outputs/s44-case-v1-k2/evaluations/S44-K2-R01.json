@@ -1,0 +1,120 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "use of shared house fund for alcohol",
+      "food accommodations (halal requirement, no beef)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is concise and cooperative; positions are stated with brief reasons (fairness, dietary restriction).",
+      "Agent A offers a concrete, practical concession rather than continuing to argue; others accept promptly.",
+      "Little needless repetition; subsequent rounds focus on planning rather than rehashing the dispute."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The alcohol-funding dispute was settled when Agent A offered to pay for the alcohol personally: \"How about I cover the alcohol myself, and we just use the house fund for food and other drinks?\" Agent B and Agent C explicitly accepted: \"Yeah, that sounds fair.\" / \"Okay, that works. Thanks, Agent A.\" Thus Agent A adjusted (self-funded the alcohol) and others accepted without asking for anything in return.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A changed position by offering to personally cover the alcohol: \"How about I cover the alcohol myself...\" (concession).",
+      "Agents C and D consistently held that pooled funds should not buy items they cannot use; they did not change that stance but accepted the offered solution.",
+      "Agent B supported the fairness framing and then shifted to cooperative planning for food accommodations."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent C: \"Since not all of us drink alcohol, should it come from the house fund?\" — a direct challenge to using the shared fund for alcohol, creating a substantive incompatibility with Agent A's prior purchase.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: \"I was thinking the fund would cover all the party costs...\" vs Agent C: \"...it doesn't feel fair that my money in the fund is used for something I can't have.\" — a clear clash of claims about entitlement to use the shared fund.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D adds support: \"Yeah, I don't drink either.\" Agent A then offers a concession: \"How about I cover the alcohol myself, and we just use the house fund for food and other drinks?\" — the dispute is being addressed but not yet mutually accepted.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B: \"Yeah, that sounds fair.\" Agent C: \"Okay, that works. Thanks, Agent A.\" — explicit acceptance of Agent A's offer, settling the funding dispute.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B: \"Not yet. We'll need to make sure there's halal food for Agent C's side, and no beef for Agent D's.\" — statement of dietary needs/requirements, not an expressed incompatibility or contested claim.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A: \"Right. So what's the plan? Should we order from a couple of different places?\" Agent B: \"Ordering in sounds easiest... we can get something from a halal place, and then maybe some Chinese food too.\" — cooperative planning, no disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C: \"Yeah, that's a good idea.\" Agent D: \"We could get some Indian food too. Plenty of vegetable dishes, so no beef problem.\" — further cooperative additions to the plan.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A: \"Okay, that sounds like a plan. Halal, Chinese, and Indian it is.\" Agent B: \"Okay, good.\" — group confirmation of the food plan; no outstanding conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Conflict arose from a fairness claim about pooled resources used for items some residents cannot consume.",
+      "A concrete unilateral concession (Agent A self-funding alcohol) resolved the dispute quickly.",
+      "Food planning thereafter focused on inclusive, multi-cuisine ordering to accommodate dietary restrictions, avoiding further conflict."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T09:01:39.743337+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.007712,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2760,
+      "local_latency_ms": 38226.036,
+      "output_tokens": 3511,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6271
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "K2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S44-K2-R01",
+    "scenario_id": "S44"
+  },
+  "schema_version": 2
+}

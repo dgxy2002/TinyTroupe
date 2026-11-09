@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smells / extractor use",
+      "unwashed shared cookware / cleaning duties",
+      "fair access to stove on weeknights / scheduling"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agent A offered concrete, actionable rules and immediate behavior (extractor on), which improved groundedness.",
+      "Some repetition: A restated the chat/stove rule twice across rounds (Turns 10 and 13).",
+      "C's chore complaint reappeared late in the transcript and was not addressed, creating an unresolved item."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Partial settlements achieved: Agent A agreed to and enacted extractor/window use to reduce smells (Agent A: \"I'll turn the extractor on and open the window now.\") and proposed/clarified a stove-access rule that D accepted: first-come-first-served with a chat post to reserve or swap (Agent A: \"weeknights, first come first served... post in the chat\"; Agent A: \"Yes. Post in the chat and if no one says they need the stove...go ahead and cook that night.\"). The shared-chore conflict was not resolved: Agent C demanded the pan be washed now and nobody admitted or washed it (Agent C: \"Who used that pan last night? Can you wash it now — we agreed the user should clean pans the same night.\").",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A proposed rules and conceded to immediate actions (turned extractor on) — moved from being called out to offering fixes.",
+      "Agent D shifted from complaint about fairness to acceptance of A's proposed first-come-first-served plus chat procedure.",
+      "Agent C remained consistent in demanding cleaning of the shared pan; this position was not accommodated in the transcript.",
+      "Agent B accepted A's initial proposal quickly and did not change position thereafter."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A proposed concrete household rules (wash pans same night; use extractor; close bedroom doors) and asked to be told directly: \"Whoever uses a pan washes it the same night. I’ll always use the extractor and open the window...\" Agent B accepted: \"Okay, sounds fair.\" This reduced immediate tension but multiple issues (unwashed pan, fair stove access) remained unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C prompted A to follow the agreed extractor/window action: \"Agent A — you said you'd use the extractor and open the window on weeknights. Can you do that now?\" Agent A complied: \"Okay, I'll turn the extractor on and open the window now.\" The smell issue was acted on, but the unwashed pan and stove-access arrangements remained unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D introduced a new, substantive practical conflict about fair stove access: \"Can we agree on a simple weeknight rule so everyone gets a chance to use the stove? I get home late and should have a fair shot.\" Agent A proposed a rule (first come, first served; post in chat to swap): \"weeknights, first come first served... post in the chat and we'll swap or let you cook that night.\" This is a clear expressed incompatibility in practical interests; a proposed solution was offered but not yet accepted by all.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "D sought clarification about the chat rule and A confirmed the practical procedure: \"Yes. Post in the chat and if no one says they need the stove and it's not already in use, go ahead and cook that night.\" The stove-access conflict was clarified and functionally settled for late arrivals, but other issues (unwashed pan) remained.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "A repeated the chat rule and D agreed to try it: \"Yes. Post in the chat; if no one says they need the stove and it's not already in use, go ahead and cook that night.\" / \"Okay, fair. I'll post in the chat when I'm late and try this for a week.\" This reiterated an already-clarified arrangement; the unresolved chore issue (pan) persisted.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C directly re-raised the unwashed-pan chore conflict and demanded immediate compliance: \"Who used that pan last night? Can you wash it now — we agreed the user should clean pans the same night.\" There is no recorded compliance or admission, so this substantive dispute about chores remains active and reopened attention.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Participants converged on practical, low-friction solutions for smells (use extractor/open window) and stove scheduling (first-come-first-served + chat), showing preference for simple, trial-period rules.",
+      "The cleaning/chore norm (user washes pan same night) was stated as an expectation but enforcement and immediate compliance were never secured, leaving recurring friction.",
+      "Clarifying who is expected to act (e.g., post in chat, if no reply you may cook) helped resolve procedural ambiguity for one primary conflict (stove access)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T15:27:55.444968+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0085478,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2852,
+      "local_latency_ms": 69501.512,
+      "output_tokens": 4119,
+      "reasoning_tokens": 2688,
+      "successful_calls": 1,
+      "total_tokens": 6971
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 2,
+    "run_id": "S30-C0-R02",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

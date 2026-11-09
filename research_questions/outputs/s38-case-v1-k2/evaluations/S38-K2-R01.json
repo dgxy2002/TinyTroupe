@@ -1,0 +1,122 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "contamination of shared pan by beef",
+      "who used the pan / responsibility",
+      "how to remedy (wash, replace, or share cost)",
+      "accommodation for dietary/religious restrictions"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants speak in short, natural turns; proposals and refusals are explicit ('I'll just wash the pan now'; 'I can't use a pan that's cooked beef').",
+      "There is some formulaic deflection from Agent B ('Can you all just figure this out?') and repeated denials from A/B early on.",
+      "No confusion about physical facts: everyone acknowledges the pan is dirty and had beef fat; roles and constraints are consistent."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No affirmative settlement occurred. The parties disagreed about whether washing the pan would make it usable for Agent D (C's cleaning proposal vs D's refusal), who should pay for or replace the pan (D demanded replacement by culprit; later proposed all chip in), and A/B explicitly refused to accept collective payment. No one admitted using the pan and no mutually accepted concrete arrangement was reached.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C initially offered a cleanliness rule and volunteered to wash the pan ('I'll just wash the pan now'), then realized that washing does not address D's dietary restriction ('Oh, right. I didn't think of that').",
+      "Agent D moved from refusing to use the pan to demanding replacement by the culprit, then to proposing that everyone chip in if no one owns up ('we all need to chip in for a new pan').",
+      "Agents A and B consistently denied using the pan and resisted being made to pay; neither softened their stance during the run."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A and Agent B both deny cooking beef ('I didn't cook beef yesterday.'; 'I didn't cook beef either.'), which begins a disagreement about who used the pan but no concrete demand or solution yet.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C points out the pan is still dirty and unusable; Agent D states the pan 'had beef in it. I can't use it.' This creates a clear practical incompatibility (D cannot use the shared pan) that needs resolving.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A highlights the denials ('two of us have already said we didn't cook beef'), while Agent B deflects ('Can you all just figure this out?'), leaving the dispute over responsibility and access unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C proposes a cleanliness rule and offers to wash the pan now; Agent D rejects that remedy ('it doesn't matter if you wash it. I can't use a pan that's cooked beef'), creating a strong disagreement about whether washing suffices versus the pan being unusable to D.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D demands that 'Whoever used it for beef should replace it,' creating a contested remedy (replacement by culprit) while others have not admitted use and the core incompatibility remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A objects to replacing the pan without knowing who used it; Agent D reiterates the practical problem ('I can't cook. So what happens now?'), so the dispute over responsibility and remedy persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D proposes a fallback ('we all need to chip in for a new pan') if no one owns up, shifting the proposed burden onto everyone; no one accepts this yet, so conflict over cost/allocation continues.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A objects to collective payment ('Why should all of us have to pay...? That's not fair.') and Agent B refuses to pay ('I'm not paying... I didn't use it.'), rejecting D's proposed solution and leaving the disagreement entrenched.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The core issue is a clash between a shared physical resource and individual dietary/religious restrictions: washing is not an acceptable remedy for Agent D.",
+      "Lack of prior household rules about shared kitchenware leaves no agreed process for contamination or replacement, producing a coordination problem.",
+      "Proposed remedies fall into two categories: cleaning (insufficient for D) and replacement/collective payment (contested on fairness grounds)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T03:35:57.468231+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00618425,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2841,
+      "local_latency_ms": 34241.952,
+      "output_tokens": 2737,
+      "reasoning_tokens": 1408,
+      "successful_calls": 1,
+      "total_tokens": 5578
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "K2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S38-K2-R01",
+    "scenario_id": "S38"
+  },
+  "schema_version": 2
+}

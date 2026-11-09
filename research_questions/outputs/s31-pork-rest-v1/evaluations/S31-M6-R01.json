@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "weeknight stove rotation / late cooking slots",
+      "payment or compensation for preferred stove times (shared supplies)",
+      "washing shared pans immediately after use (cleanup and ventilation)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents use concise, task-focused language; concrete proposals and counteroffers appear (e.g., specific nights and dollar amounts).",
+      "A clear, actionable agreement was reached about pan-washing: multiple agents explicitly endorse it (Turn 4, Turn 6).",
+      "Negotiation over stove slots features explicit tradeoffs (money vs. extra nights) rather than vague promises; no premature closure on that issue."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The household agreed to wash shared pans and to immediate ventilation/cleanup: Agent A agreed to wash the pan and mitigate smells (\"Okay — I'll turn on the extractor, open the window, and wash the pan now.\"), and Agent C explicitly solicited a standing rule (\"Let's all agree to wash shared pans right after use from now on.\"). However, the central disagreement over weeknight stove scheduling and compensation remains unresolved. Agent D requested Tue/Thu late slots (Turn 7). Agent A conditioned those slots on additional nights or payment (Turn 8: \"I can give Tue and Thu late slots if you take one other weeknight regularly or chip in for shared supplies.\"). Offers were exchanged (D: \"$10/month\" Turn 9; A: rejects $10 and demands $15 or an extra night Turn 10). C proposed a choice or fallback rotation (Turn 12), and D countered with $12/month (Turn 13). No party accepted another's final offer, so the stove-rotation/payment conflict remains unsettled.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: Kept firm on retaining most evenings but agreed to wash pans and offered conditional concessions on specific nights in exchange for payment or another night (Turn 2, Turn 8, Turn 10).",
+      "Agent D: Initially requested Tue/Thu late slots (Turn 1/7), then offered $10/month (Turn 9), and later increased to $12/month (Turn 13) — a movement toward compromise but still below A's $15 demand.",
+      "Agent C: Shifted from pointing out the dirty pan to proposing a household rule for pan-washing and later pushed for resolution on the rotation by presenting options (Turn 6, Turn 12).",
+      "Agent B: Agreed to washing policy and asked for immediate mitigation but did not engage in the scheduling/payment negotiation (Turn 3, Turn 5)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent D proposes two rules including a late weeknight slot for themselves. Turn 2 — Agent A accepts washing pans but resists giving up evenings: \"I cook most nights and can't give up evenings. I'm willing to swap specific weeknights so Agent D can have a late slot; who needs which nights?\" This introduces a clear disagreement over weeknight stove time.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent B accepts washing policy and requests immediate mitigation (extractor/window and wash pan). Turn 4 — Agent A complies: \"Okay — I'll turn on the extractor, open the window, and wash the pan now.\" The pan/ventilation issue is handled, but the weeknight rotation remains unresolved from Round 1.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent B goes back to bed. Turn 6 — Agent C pushes for a standing rule: \"Let's all agree to wash shared pans right after use from now on.\" Pan-washing is reinforced and broadly accepted, but the stove rotation dispute has not been addressed further.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent D repeats the rotation request and asks for Tue/Thu late slots. Turn 8 — Agent A conditions giving those slots: \"I can give Tue and Thu late slots if you take one other weeknight regularly or chip in for shared supplies. Which night can you commit to?\" Positions now directly oppose (D requests slots; A demands payment/another night), moving from a nascent disagreement into a concrete, oppositional negotiation.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 — Agent D offers $10/month instead of taking another night. Turn 10 — Agent A rejects that offer: \"I won't give Tue/Thu for $10. $15/month is fair, or you can take one other weeknight every other week instead.\" The parties exchange hard offers/counteroffers; the stove-time/payment dispute remains unresolved and contested.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 — Agent C presses D to choose between payment or extra nights and offers a fallback rotation if D can't pick. Turn 13 — Agent D moves toward a compromise but offers $12/month (below A's $15): \"I can't reliably take another weeknight... I can do $12/month.\" The intensity is still high (no agreement), but D's moderated offer and C's fallback suggest softening of positions rather than further escalation.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Pan-cleaning and immediate ventilation was fast to resolve because it required no ongoing scheduling tradeoffs and one agent immediately complied (Turn 4 and Turn 6).",
+      "The stove-time issue is a distributive resource problem: D's late arrival creates a need for 'late' slots, while A's frequent cooking makes giving up evenings costly; this generates a payment-or-swap bargaining structure.",
+      "Offers converged toward a midpoint ($10 → $12 → demand $15), indicating some willingness to trade but no mutual acceptance by the transcript end.",
+      "C plays a facilitative role by presenting a binary choice plus a fairness fallback (even rotation) to break the impasse (Turn 12)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:04:51.431748+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0069263,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2870,
+      "local_latency_ms": 28980.539,
+      "output_tokens": 3306,
+      "reasoning_tokens": 1728,
+      "successful_calls": 1,
+      "total_tokens": 6176
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M6",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M6-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

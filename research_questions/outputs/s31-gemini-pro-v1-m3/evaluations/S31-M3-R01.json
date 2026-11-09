@@ -1,0 +1,106 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen cooking smells/ventilation",
+      "unwashed shared pan (pork fat) and cleaning responsibility",
+      "access to shared cookware (Agent D prevented from cooking)",
+      "who is responsible for current smells and past mess"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants repeatedly conflate two linked but distinct issues (current cooking smell vs. leftover unwashed pan); this causes circular back-and-forth rather than concrete problem-solving.",
+      "No one offers a concrete, accepted action (e.g., 'I'll wash it now' or 'I'll stop cooking for 10 minutes'), so requests remain unfulfilled.",
+      "B's direct accusation of A ('The smell is from you, right now.') increases tension and shifts discussion to blame rather than solutions."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No substantive settlement was reached. Across rounds participants reiterated competing claims (A denies leaving pan/is cooking now; B focuses on smell and asks window opened; C demands someone wash the pan; D says they cannot cook while pan contains pork fat). No one agreed to wash the pan, to cease cooking, or to a mutually accepted mitigation; the incompatible demands thus remain unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "No participant substantially changed position during the conversation: A continued to deny responsibility for the leftover pan and defended current cooking; B consistently focused on the smell and requested opening the window; C consistently demanded someone wash the pan; D consistently stated they cannot use the pan until it's clean."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent A: \"Okay, but who left the pan out from last night? That wasn't me.\" / Turn 2 — Agent B: \"I'm not talking about the pan. The smell is the problem. It's all the way in my room.\" (B complains about smell; A responds defensively and asks about the pan — a clear emerging disagreement about cause and responsibility.)",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent A: \"I use the fan, what else do you want me to do?\" / Turn 4 — Agent B: \"The fan isn't helping. Open the window.\" (Disagreement about how to mitigate the smell; positions stated but not resolved.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent C: \"But who is going to wash this pan?\" / Turn 6 — Agent D: \"If there's pork fat in the shared pan, I can't use it.\" (New practical incompatibility introduced: an unwashed pan with pork fat prevents D from using shared cookware; responsibility and access are contested.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent A: \"See? This is a bigger problem. It affects what other people can eat. So, who left the pan like that?\" / Turn 8 — Agent B: \"The pan is from last night. The smell is from you, right now.\" (Accusation and blame deepen the disagreement; multiple linked issues remain unsettled.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 — Agent A: \"And the pan is a problem for Agent D right now. It's all part of the same thing. We all have to use the kitchen.\" / Turn 10 — Agent B: \"How is it the same thing? You're cooking now. The pan is from last night. Just open the window.\" (Parties restate conflicting framings — linked but distinct problems remain unresolved.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 — Agent C: \"The pan stops Agent D from cooking now. The smell is in your room now. It's the same problem.\" / Turn 12 — Agent D: \"Yes. I can't cook my dinner until that pan is clean.\" (Concrete practical incompatibility: D cannot use the pan and cannot cook; no one commits to cleaning or otherwise resolving access — stronger, entrenched disagreement.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "There are two related problems: immediate smell from current cooking and a leftover pan whose contents (pork fat) create access and dietary restrictions for D.",
+      "The lack of household norms about cleaning/shared cookware produces a practical stalemate: everyone uses the pan, but no responsibility mechanism exists.",
+      "Mitigation proposals (fan, open window) address smell but not the immediate barrier to D cooking; different remedies are being proposed for different problems without coordination."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T15:09:23.987083+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0054973,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2722,
+      "local_latency_ms": 25428.059,
+      "output_tokens": 2610,
+      "reasoning_tokens": 1280,
+      "successful_calls": 1,
+      "total_tokens": 5332
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M3-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

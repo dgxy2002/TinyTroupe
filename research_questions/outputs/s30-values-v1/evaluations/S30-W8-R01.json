@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen cleanliness (unwashed pan)",
+      "cooking smells affecting others' sleep",
+      "weeknight stove-use scheduling / rota"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Repeated framing phrase 'whoever cooks washes their pan' appears across rounds and serves as the central rule proposal.",
+      "Participants give concise, concrete reasons (need to sleep, getting home late, buying supplies) that guided allocation.",
+      "Resolution proceeded by straightforward proposal-and-assignment rather than prolonged debate; language is natural and cooperative."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The group agreed both a behavioral rule and an allocation of weeknights: A verbally accepted responsibility to wash the pan ('Okay, I'll wash it now') and all participants agreed 'whoever cooks washes their pan.' They also set a rota for weeknight stove use with named nights: 'Okay — rota's set: Agent C Tuesday, Agent D Wednesday, Agent B Thursday. Whoever cooks washes their pan.' This mutual assignment resolved the scheduling incompatibility and the cleaning responsibility.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: initially defensive but agreed to wash the pan immediately and accepted a rota ('Okay, I'll wash it now.'; 'Okay, rota sounds fair.').",
+      "Agent B: pressed for immediate action and then accepted the proposed rule and took Thursday ('Whoever cooks washes their pan works for me...'; 'I can take Thursday nights.').",
+      "Agent C: reported the unwashed pan, accepted the rule and volunteered Tuesday ('Okay — whoever cooks washes their pan. Agent A, thanks for agreeing to wash yours now.'; 'I can take Tuesday nights.').",
+      "Agent D: introduced the scheduling conflict due to late arrival and proposed a rota, then took Wednesday ('I usually get home late and can't use the stove on weeknights. Can we do a simple rota...'; 'I'll take Wednesday nights.')."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A defensive: 'Don't call me out like this — can we agree whoever cooks washes their pan, or else set a rota?' Agent B demands immediate action: 'Agent A, can you wash yours now? The smell's already in the corridor and I need to sleep early.' The kitchen-usage/cleanliness dispute is explicit and not settled by the end of the round.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A agrees to wash now: 'Okay, I'll wash it now.' Both A and B accept the rule 'whoever cooks washes their pan.' The immediate complaint about the unwashed pan is addressed verbally, but scheduling/rota and stove-use timing issues remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D introduces a new substantive incompatibility about stove availability: 'I usually get home late and can't use the stove on weeknights. Can we do a simple rota so each person has at least one weeknight?' This creates an unresolved allocation conflict over weeknight stove use.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A accepts the rota idea and asks for specific nights: 'Agent D — which weeknight can you take? Agent C and Agent B, pick nights too so we can set it now.' Agent B volunteers Thursday. Progress toward resolution, but not all nights assigned yet.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C takes Tuesday: 'I can take Tuesday nights.' The rota is partially filled (B: Thursday, C: Tuesday) but one person's night remains to be assigned; the scheduling conflict is not fully settled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D takes Wednesday: 'I'll take Wednesday nights.' Agent A summarizes the agreement: 'Okay — rota's set: Agent C Tuesday, Agent D Wednesday, Agent B Thursday. Whoever cooks washes their pan.' All introduced substantive issues (washing responsibility and weeknight stove allocation) are explicitly assigned.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Two distinct but related problems drove the discussion: immediate cleanliness (unwashed pan and smells) and recurring practical access to the stove (weeknight timings).",
+      "The eventual solution combined a behavioral rule (responsibility for washing) with a time-allocation scheme (simple rota), addressing both cleanliness and access.",
+      "Agents provided pragmatic trade-offs (taking specific nights) rather than demanding others change long-standing habits, which enabled a quick settlement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T07:47:09.374474+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00782255,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2783,
+      "local_latency_ms": 33368.427,
+      "output_tokens": 3765,
+      "reasoning_tokens": 2496,
+      "successful_calls": 1,
+      "total_tokens": 6548
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "W8",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-W8-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

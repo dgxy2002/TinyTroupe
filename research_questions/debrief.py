@@ -63,6 +63,10 @@ def build_debrief_messages(
     ]
     if agent.get("cultural_background"):
         identity.append(f"Cultural background: {agent['cultural_background']}")
+    if agent.get("biography"):
+        identity.append(f"Your background: {agent['biography']}")
+    if agent.get("personal_values"):
+        identity.append(f"What you value: {agent['personal_values']}")
     identity.extend(
         [
             f"What you wanted: {agent['immediate_priority']}",

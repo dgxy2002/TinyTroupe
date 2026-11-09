@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smells / closing the kitchen door / ventilation",
+      "unwashed shared pan / cleanliness",
+      "stove access / competing cooking times / scheduling"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers give concrete practical reasons (B: early for work; A: gets too hot; D: gets home late) which supports grounded negotiation.",
+      "A quick, focused proposal resolved one issue (schedule) without much side chatter: 'A schedule sounds fair.' / 'How about we try time slots...'.",
+      "B repeats the door request twice, but repetition is brief and targeted rather than gratuitous."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The stove-access conflict was addressed by mutual agreement to a time-slot system. D proposed a schedule ('Can we talk about a schedule or something?'), A agreed ('A schedule sounds fair'), and D proposed concrete slots ('How about we try time slots? Like an hour each, maybe from 6 to 10pm?') which A accepted ('Yeah, an hour each sounds okay'). This settles the overcrowding-at-the-stove issue in principle. The smell/door dispute and the dirty pan remain unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "A moved from a defensive stance about the pan ('Not mine') to accepting scheduling ('A schedule sounds fair') and then committed to the 6–7 slot ('I can take the first one. 6 to 7 is fine').",
+      "D shifted from complaining about access to proposing a specific solution (time slots) and requested a late slot due to arriving late.",
+      "B maintained their original demand (kitchen door closed when cooking) throughout and did not accept A's constraint about heat; that dispute remained.",
+      "The unwashed pan issue was asserted by C initially but received no follow-up or change from others."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "B requests A to use fan and shut the kitchen door because smell reached B's room ('Can you please use the fan and shut the kitchen door...'). A replies that the fan is on and denies the pan ('The fan is on. And that pan in the sink? Not mine.' ). B's request is not accepted — a substantive incompatibility over cooking practices / smell control is active.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "B reiterates and narrows the demand to closing the kitchen door ('I don't care about the pan. I'm asking you to close the kitchen door. Can you please just do that?'). A gives no concession; the substantive disagreement about whether the door should be closed remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "A states a practical constraint against closing the door ('It gets too hot in here with the door closed.'). B demands an alternative (open the window) while insisting the door be closed ('Then open the window. I need the door closed.'). This reveals a clear, opposing practical interest (ventilation vs heat) and no settlement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "D introduces a separate substantive problem (everyone trying to cook at once) and proposes a schedule ('Can we talk about a schedule or something?'). A accepts that idea ('A schedule sounds fair.'). The stove-access issue is newly raised and beginning to be resolved, but the smell/door disagreement and the unwashed pan remain unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "D and A agree to a concrete scheduling mechanism ('How about we try time slots? Like an hour each, maybe from 6 to 10pm?' — 'Yeah, an hour each sounds okay.'). This de-escalates the stove-access complaint, but the door/ventilation and dirty-pan issues are still unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Participants move from the abstract plan to initial allocations ('So who wants which time?... I can take the first one. 6 to 7 is fine.'). Scheduling is progressing (partial settlement), but the earlier smell/door dispute and the unwashed pan remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Multiple distinct conflicts are present: ventilation/door closure, shared-dish hygiene, and stove access—progress on one does not resolve the others.",
+      "A practical compromise (time-slot schedule) effectively addresses the stove-access problem even before all slots are assigned.",
+      "The ventilation conflict centers on a trade-off between preventing smells (B) and thermal comfort while cooking (A); B proposes a specific alternative (open the window) but no agreement was reached.",
+      "No one claimed the dirty pan; the shared-cleanliness issue was mentioned but never addressed or assigned responsibility."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T15:03:43.642055+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 5 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0070178,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2708,
+      "local_latency_ms": 34722.595,
+      "output_tokens": 3372,
+      "reasoning_tokens": 2048,
+      "successful_calls": 1,
+      "total_tokens": 6080
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M2-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

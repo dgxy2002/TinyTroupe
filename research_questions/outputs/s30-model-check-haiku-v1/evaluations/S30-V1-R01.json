@@ -1,0 +1,112 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen cleanliness (unwashed pan)",
+      "cooking schedule / rota",
+      "smell spreading into bedrooms / extractor use",
+      "shared costs for dish soap and gas",
+      "use of stove on weeknights / feasibility"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants moved quickly from complaint to concrete proposals; language is concise and goal-oriented (e.g., \"Can we set a simple cooking and washing-up rota?\").",
+      "Few rounds, little chit-chat; exchange focuses on problem and solutions without role confusion.",
+      "No needless repetition; commitments are short and specific (washing the pan, running extractor)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group moved from complaints to partial agreements: they agreed in principle to set \"a simple cooking and washing-up rota\" and to \"chip in for dish soap and gas\" (Agent A: \"Can we set a simple cooking and washing-up rota?\"; Agent A: \"...we can chip in for dish soap and gas.\"). Agent A also committed to immediate de-escalations: \"I'll wash the pan now\" and later, \"Sure, I'll run the extractor whenever I'm cooking.\" However, concrete assignment of who cooks which nights and the exact method of sharing costs was not specified, so only a partial settlement was reached (extractor and immediate cleaning addressed; scheduling still open).",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from defending their actions to conceding practical steps: promised to wash the pan and later agreed to run the extractor (evidence: \"I'll wash the pan now.\"; \"Sure, I'll run the extractor whenever I'm cooking.\").",
+      "Agent B shifted from complaint to constructive suggestion and accepted A's proposals (evidence: \"Yeah, a rota makes sense.\"; \"Works for me.\").",
+      "Agent C raised the unwashed pan but did not record further follow-up after A's immediate commitment.",
+      "Agent D's initial complaint about weeknight stove use was not revisited in the transcript; no position change recorded for D."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A offers to wash the pan now and proposes a rota: \"I'll wash the pan now... Can we set a simple cooking and washing-up rota?\" Agent B accepts the idea: \"Yeah, a rota makes sense.\" The parties move from complaints toward a proposed solution, reducing immediate tension but leaving specifics unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A proposes splitting nights and chipping in: \"Let's split cooking nights and washing-up, and we can chip in for dish soap and gas.\" Agent B adds a new demand about extractor use: \"Can whoever's cooking run the extractor?\" The exchange advances negotiation but keeps substantive scheduling/cost details unsettled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A accepts the extractor request: \"Sure, I'll run the extractor whenever I'm cooking.\" This resolves the extractor concern but leaves the rota and exact duty schedule and contributions still unspecified.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "No public speech or observable action. Outstanding minor issues (concrete assignment of nights, exact contribution method) remain from earlier rounds.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "No public speech or observable action. The earlier partial agreements (rota in principle, extractor promise) persist but the concrete schedule is not settled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action. The only new concrete commitment was A running the extractor; other substantive details remain unfinalized.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Agent A is willing to take on more practical burden (washing, running extractor) and contributes supplies, which helps de-escalate the immediate smell/cleanliness issues.",
+      "Group-level agreement emerged at the level of principle (rota + shared costs) but not at the level of implementation (no schedule or method for contributions), leaving a small remaining coordination problem.",
+      "The extractor was the specific behavior that directly addressed the smell complaint and was explicitly agreed to, showing that small behavioral commitments can resolve the most salient immediate harm even if formal rules are deferred."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T18:45:40.788900+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 3 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00698705,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2561,
+      "local_latency_ms": 46581.872,
+      "output_tokens": 3375,
+      "reasoning_tokens": 2112,
+      "successful_calls": 1,
+      "total_tokens": 5936
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "V1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-V1-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

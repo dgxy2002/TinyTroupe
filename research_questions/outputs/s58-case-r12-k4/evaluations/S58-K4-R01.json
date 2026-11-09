@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who will complete Agent D's half-done analysis",
+      "Whether Agent D should work during bereavement or be with family",
+      "Team workload redistribution and skill/knowledge constraints for the analysis"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents offer concrete reasons and constraints (e.g., covering for someone else, being behind, lack of skill), which grounds the negotiation.",
+      "Agent A leads coordination, proposing concrete tradeoffs (help finish a section in exchange for taking analysis).",
+      "Agent D initially insists on finishing the work, then accepts a concrete handover—resolution is explicit and actionable.",
+      "Conversation stays on task with few digressions; emotional support is appropriate and brief at the start."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Concrete agreement in Round 9: Agent A volunteered to take over Agent D's analysis and asked for a handover ('I'll take over the analysis. Agent D, before you go, can you walk me through what you've done and where you were going with it?'). Agent D accepted the arrangement: 'Okay. Yes. I can do that.' Thus A adjusted by taking on the work and D adjusted by agreeing to provide a walkthrough and not finish the work from home.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: Initially announced need to be with family and then offered to finish from home ('I can work on it from home in the evenings.'), later reasserted that he should finish ('I'll get it done.'), and finally accepted handing off by agreeing to walk A through it ('Okay. Yes. I can do that.').",
+      "Agent A: Initially insisted D should be with family and rejected D doing work from home ('it's not a good idea... We can't put this pressure on you'), then proposed alternatives and ultimately volunteered to take the analysis ('I'll take over the analysis...').",
+      "Agent C: Refused to take the analysis due to lack of time/skill ('I can't... I don't know how to do that analysis.') and remained hesitant about doing it even with help; did not change to accept the task."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 9,
+    "round_scores": [
+      {
+        "evidence": "Agent A offers condolences and Agent D says he'll be with family for next two days (Turns 1-2). No incompatible demands or disagreement expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A notes the deadline and that Agent D's section is half done; Agent D agrees it's a problem (Turns 3-4). This identifies a problem but no expressed incompatible demands yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A asks who can take over; Agent B refuses: 'I can't take on more. I'm already covering for Sarah this week.' (Turns 5-6). The team's need for someone to do the section conflicts with B's refusal.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C also refuses: 'I can't. My own section is still behind, and I don't know how to do that analysis.' (Turns 7-8). Two teammates declining increases the practical incompatibility about who will complete the work.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D offers to finish from home: 'I can work on it from home in the evenings.' Agent A rejects that: '...it's not a good idea. You need to be with your family. We can't put this pressure on you right now...' (Turns 9-10). This creates a direct clash over whether D should do the work during bereavement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D insists 'If I don't do it, it won't get done. I have to. I can manage.' Agent A proposes an alternative handoff: '...can you spend an hour walking Agent C through your analysis? Then Agent C, you finish it.' (Turns 11-12). The dispute remains unresolved; A proposes a solution but D has not accepted it.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C says one hour isn't enough and expresses constraints; Agent A offers to help C finish his section in exchange for C taking the analysis later: 'If I help you finish your section, will you take over Agent D's analysis...' (Turns 14-15). The team moves toward negotiation and tradeoffs, softening the direct confrontation.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C remains unsure about doing the analysis. Agent D reasserts that the analysis is tricky and says: 'It's better if I just finish it from home. I'll get it done.' (Turns 16-17). D's renewed insistence reopens a strong disagreement with A's preference that he be with family.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "Agent A rejects D doing the work from home and volunteers: 'Okay, new plan: I'll take over the analysis. Agent D, before you go, can you walk me through what you've done...' Agent D accepts: 'Okay. Yes. I can do that.' (Turns 18, 21). This is a concrete mutual arrangement resolving who will complete the section and how the handover will occur.",
+        "movement": "resolved",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Scheduling the handover: Agent A asks 'When is good for you...' and Agent D says 'Right now is good. Then I can go.' (Turns 22-23). No disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Both confirm readiness to begin the walkthrough: Agent D: 'I'm ready now...' Agent A: 'Yes, now is good.' (Turns 26-27). No disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Agent D begins the handover and describes the analysis and data sources: 'The main point of the analysis is to show the market gap... I was just starting to compare them.' (Turns 28, 31). The agreed plan is being executed; no conflict expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Tension is primarily between duty to family and project obligations; that tradeoff drives proposals.",
+      "Practical constraints (B already covering someone, C lacks skill/time) limited reassignment options and shaped the final compromise.",
+      "Resolution succeeded when a team member volunteered to assume the work and the departing member agreed to a concrete transfer of knowledge."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T11:49:18.824724+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00864155,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3107,
+      "local_latency_ms": 39952.668,
+      "output_tokens": 4134,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 7241
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "K4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S58-K4-R01",
+    "scenario_id": "S58"
+  },
+  "schema_version": 2
+}

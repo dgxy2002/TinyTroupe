@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smell affecting bedrooms/sleep",
+      "dirty shared pan with pork fat / cleaning responsibilities",
+      "access to stove / cooking schedule / time conflicts",
+      "cost-sharing / A's claim of buying dish soap and gas"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers give concise, plausible roommate reasons (B: early shift; D: gets home and needs to cook; A: cooks most nights and buys supplies).",
+      "Some repetition of claims (A repeats buying soap/gas; D repeats 'impossible to use the stove'); not excessive but notable.",
+      "Proposals appear late (round 6) and are not concretely negotiated or accepted; conversation stays at problem-identification.",
+      "\"I cook most nights, and I get the soap and gas.\" is used by A as a justificatory claim that is not challenged or reconciled."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No concrete agreement was reached. B and C raised the problems (smell and unwashed pan) and in round 6 B proposed a cooking schedule and fan rules which C endorsed, but A and D did not accept or commit to any concrete arrangement. No party explicitly agreed to change behavior or give up claimed stove access, so the substantive incompatibilities remain.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B: consistent — pushed primarily for smell mitigation and proposed concrete measures only in round 6 (Turn 11).",
+      "Agent C: consistent — raised shared pan cleanliness early and supported smell-management proposals in round 6.",
+      "Agent A: consistent — defended frequent cooking and cited buying soap/gas in rounds 3 and 5; no acceptance of proposed schedule was recorded.",
+      "Agent D: consistent — repeatedly emphasized inability to use stove on weeknights and need to cook when returning from work; did not accept any proposed rules in the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B: \"This smell gets into my room and my clothes, and I can't sleep with it. We need to figure this out.\" / Agent C: \"But someone also left this pan with pork fat in the sink from last night. All of us use it.\" — two distinct substantive complaints (ongoing smell affecting sleep; an unwashed shared pan) introduced in this round.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent B: \"Yeah, the pan needs sorting too. But the cooking smell right now is what's affecting me directly.\" / Agent C: \"Okay, the smell's a problem now. We still need to figure out the pan for later, too.\" — issues reiterated and still unresolved (smell vs. pan cleanliness).",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D: \"I just got home. It's impossible to use the stove on weeknights like this.\" / Agent A: \"I cook most nights, yeah. But it's not always free when I need to cook, either. And I buy most of the dish soap and gas.\" — introduces clear opposing practical interests (access to stove/time vs. frequent use by A and A's claim of contributing supplies) and a justification from A that deepens the disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B: \"Okay, I hear you, Agent A. But the main thing is we need a way to cook without the smell staying around, especially late at night.\" / Agent C: \"Yeah, the smell is definitely a problem. We need to figure out how to manage all this.\" — B acknowledges A's position (softening) while keeping the smell as an outstanding problem; no concrete settlement yet.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D: \"...the stove was just freed up. I really need to be able to cook when I get back from work.\" / Agent A: \"Freed up now, yeah, because I just finished. I cook most nights, and I get the soap and gas.\" — restatement of opposing needs and A's material-justification repeats; disagreement remains strong and unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B: \"Maybe we need a cooking schedule, or rules about using the fan for certain foods?\" / Agent C: \"Yeah, those are good ideas. We need to figure out something that works for the smell, the cooking times, and also the cleaning.\" — proposals are offered and supported by C (softening), but A and D have not accepted any concrete arrangement, so substantive conflict remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "There is a classic common-pool/shared-resource problem: everyone uses the same pan and stove and there are no agreed household rules.",
+      "Tension is between sleep/odor control (B) and practical access to cook when needed (D), with A asserting frequent use and in-kind contributions (soap/gas).",
+      "Cleaning responsibility (pork fat in shared pan) is a separate but related collective-action issue that compounds friction.",
+      "A single-sided proposal (B's schedule/fan idea) was suggested and seconded by C but lacks buy-in from the parties whose behavior would need to change (A, D)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T16:07:44.428121+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00658825,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2841,
+      "local_latency_ms": 30287.212,
+      "output_tokens": 2939,
+      "reasoning_tokens": 1472,
+      "successful_calls": 1,
+      "total_tokens": 5780
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M2-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,123 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smell infiltrating bedrooms / affecting sleep",
+      "dirty shared pan with pork fat / who will wash it",
+      "access to stove / ability to cook on weeknights",
+      "responsibility for kitchen cleanliness and shared resources"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers state immediate practical needs clearly (B: sleep/work; D: need to cook) rather than abstract principles.",
+      "Some role- and topic-shifting occurs (A distances self from pan), but participants stay on-topic overall.",
+      "Repeated restatements of priority and timing (smell now vs pan later) create circularity without new proposals."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Multiple substantive incompatibilities remain at the end of the transcript. The smell conflict (B: 'the smell is the problem... I have to get up for work') and the dirty-pan / access conflict (C: 'Who’s going to wash it?'; D: 'I can't use it unless it's washed properly') were raised and discussed but no party agreed to clean, change cooking times, or otherwise accommodate others. No concrete mutual arrangement or accepted concession was reached.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "No participant concedes or accepts another's demand during the run; positions remain stable.",
+      "A consistently deflects responsibility for the pan ('That pan isn't from my cooking').",
+      "B consistently prioritizes immediate mitigation of smell for sleep reasons ('I have to get up for work').",
+      "C consistently presses for cleaning and links both problems to shared neglect ('The smell will go away, the pan won't')."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (A) admits to cooking; Turn 2 (B) objects: '...the smell is the problem. It's all through my room now. I have to get up for work in a few hours.' Substantive incompatibility appears between A's cooking and B's need to sleep.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (A) defends mitigation: 'I had the fan on and the window is open.' Turn 4 (B) rejects that: 'Clearly it's not enough...' The same substantive disagreement about whether current ventilation suffices remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (C): 'this pan has been here since last night. We all use it. Who's going to wash it?' Turn 6 (D): 'And it has pork in it. I can't use it unless it's washed properly.' A second, practical conflict (dirty shared pan blocking D from cooking) joins the ongoing smell dispute, increasing stakes.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (A): 'That pan isn't from my cooking.' Turn 8 (B): 'He's right, the pan is a separate thing. My problem right now is the cooking smell...' Parties acknowledge separate issues but disagree over priority; both problems remain.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (C): 'The smell will go away, the pan won't.' Turn 10 (B): '...the smell is. I have to get up in a few hours for work.' Positions on immediacy vs persistence persist without agreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (C): '...The pan will still be dirty tomorrow morning when someone needs it.' Turn 12 (D): 'It's a problem for me right now. I can't cook dinner.' D's immediate practical inability to use the stove raises urgency alongside B's sleeping concern.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 13 (A): 'Okay, who used the pan last night? Agent D needs to cook.' Turn 14 (B): '...Can we talk about the smell, please? It's not going away.' Attempts to assign responsibility and refocus do not resolve either issue.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 15 (C): 'One of us can't eat. That's a bigger problem than a smell. It's all the same thing: not cleaning up the kitchen.' Turn 16 (B): 'How is it the same thing? The pan is from whoever cooked last night. The smell is from right now.' The disagreement over priority and responsibility remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Two distinct but related problems emerged: an immediate nuisance (smell affecting B's sleep) and an ongoing hygiene/resource problem (dirty pan preventing D from cooking).",
+      "Lack of shared norms or assignment of responsibility for cleaning means individual actions produce recurring collective costs.",
+      "The pork residue creates a specific barrier (D refuses to use the pan until washed), making the issue more than a generic dirty-dish dispute — it includes a direct impediment to another's meal."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T17:56:34.267337+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00595455,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2887,
+      "local_latency_ms": 22816.936,
+      "output_tokens": 2818,
+      "reasoning_tokens": 1344,
+      "successful_calls": 1,
+      "total_tokens": 5705
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "M3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M3-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "project deadline and workload distribution",
+      "timing of Agent D's work vs family funeral/rites"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Agents express condolences and then move quickly to discuss practical constraints (deadline, who can cover the work).",
+      "Participants give concrete reasons for refusal (covering for Layla; unfamiliarity with analysis), which grounds the disagreement.",
+      "Resolution is reached by a concrete offer from the task owner (D) and explicit acceptance by teammates; little needless repetition.",
+      "Silence in later rounds does not reopen the settled issue."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent D agreed to adjust their plan and complete the section tonight despite the family rites, and teammates accepted that arrangement. Key lines: Agent D: 'I can finish it tonight and send it over.' (Turn 8) and later 'I'll be with my family. I'll work late, after. It has to be done.' (Turn 12). Agent A indicated this 'would solve it' (Turn 9) and Agent B accepted ('Okay, Agent D.' Turn 13). These statements constitute a concrete, mutual spoken agreement that settles the scheduling/work-distribution conflict.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D shifted position: initially stated need to be with family and proposed finishing 'tomorrow night' (Turn 6), then conceded to finish tonight and later clarified 'I'll be with my family. I'll work late, after.' (Turns 8 and 12).",
+      "Agent B shifted from refusing to take on the work (Turn 4) and urging D to prioritize family (Turn 10) to accepting D's plan ('Okay, Agent D.' Turn 13).",
+      "Agent A consistently pushed for earlier completion (Turn 3, Turn 7) and signaled acceptance when D offered to finish tonight ('That would solve it...' Turn 9).",
+      "Agent C remained in their original position of inability to take on the work (Turn 5)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A offers condolences (Turn 1) and Agent D states need to be with family for rites tomorrow (Turn 2). No incompatible demands expressed yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A raises the deadline/work-distribution problem and asks if someone can be brought up to speed before D goes (Turn 3). Agent B refuses to take it on citing workload (Turn 4). A substantive disagreement about who will cover D's unfinished section appears.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C also refuses to take the section (Turn 5), and Agent D says they will finish 'tomorrow night' after being away (Turn 6). With two teammates declining and D proposing a later completion that others may find too late, the incompatibility over coverage and schedule becomes clearer.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A states 'tomorrow night is too late' because integration/review is needed (Turn 7). Agent D concedes and offers to 'finish it tonight and send it over' (Turn 8), reducing the dispute though not every party has yet accepted the plan.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A indicates that D finishing tonight 'would solve it' (Turn 9), but Agent B presses that D 'should be with your family tonight' (Turn 10). The team is split between needing work done tonight and protecting D's family time, so the substantive conflict persists.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D states a concrete plan balancing both needs: 'I'll be with my family. I'll work late, after. It has to be done.' (Turn 12). Agent B accepts ('Okay, Agent D.' Turn 13), and earlier Agent A had indicated that getting it tonight 'would solve it' (Turn 9). All parties' conflicting demands are spokenly reconciled.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D thanks Agent B (Turn 14). No substantive disagreement is present or reintroduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Previously reached agreement stands; no new conflict expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No new disagreement appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The earlier plan remains unchallenged.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The core tension is a trade-off between an immovable personal obligation (funeral/rites) and a fixed client deadline; the owner of the section had unique knowledge, limiting feasible reallocation.",
+      "Resolution depended on the original owner (D) making a personal sacrifice (working after family time) rather than others taking on unfamiliar or overloaded tasks.",
+      "Teammates' explicit statements of inability (B and C) clarified the constraint space and pushed toward a solution involving D's concession."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T11:50:09.080474+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0100493,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2834,
+      "local_latency_ms": 49852.568,
+      "output_tokens": 4872,
+      "reasoning_tokens": 3200,
+      "successful_calls": 1,
+      "total_tokens": 7706
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "K2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S56-K2-R01",
+    "scenario_id": "S56"
+  },
+  "schema_version": 2
+}

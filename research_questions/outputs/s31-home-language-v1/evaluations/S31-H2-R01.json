@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who washes the shared pan",
+      "use of extractor and opening window on weeknights (ventilation)",
+      "weeknight stove use / guaranteed nights vs a strict rota",
+      "weekly cleaning rota/schedule"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants used concise, practical negotiation language and gave explicit reasons (B: need to sleep; A: cooks most nights).",
+      "B repeated the initial operational request (pan wash + extractor) early on (Turn 1 then Turn 3), but repetition helped confirm agreement rather than stall progress.",
+      "A provided a conditional compromise (sign-up + swaps) rather than capitulating to a strict rota, which moved the discussion toward practical allocation."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Practical operational issues (pan washing and ventilation) were accepted by all participants: A immediately agreed to wash and ventilate (Turn 2: 'I'll wash it now and turn on the extractor and open the window'), C and B explicitly agreed (Turn 4, Turn 10, Turn 12), and D reiterated the same expectations (Turn 11). Night assignments have largely been allocated by sign-up: D kept Tuesday (Turn 5/7/11), B took Wednesday (Turn 9), C took Thursday (Turn 10/12). The remaining substantive disagreement is about A's ability to promise a fixed weeknight: A refused a strict rota but offered a compromise—guaranteed nights via sign-up with swaps (Turn 6/8: 'I can't promise a fixed weeknight... I'll accept one guaranteed night each if we do it by sign-up and allow swaps'). That compromise was offered but not explicitly accepted by everyone by the transcript end, so not fully resolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: accepted responsibility for the immediate problem (wash pan, run extractor). Refused a strict fixed-night rota but softened to accept guaranteed nights through sign-up and swaps (Turn 2, Turn 6, Turn 8).",
+      "Agent B: initiated complaint and remained consistent, then signed up for Wednesday and reinforced operational rules (Turn 1, Turn 3, Turn 9).",
+      "Agent C: raised the unwashed pan, then accepted the pan rule, proposed a cleaning rota, and later signed up for Thursday and promised to follow ventilation/cleaning rules (Turn 4, Turn 10, Turn 12).",
+      "Agent D: proposed including stove use in the rota and requested at least one guaranteed weeknight; kept Tuesday and repeatedly requested adherence to the ventilation/pan rules (Turn 5, Turn 7, Turn 11)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 B demands: 'Agent A, can you wash that pan now and turn on the extractor and open the window? I start work at dawn and need to sleep.' Turn 2 A complies and proposes a rule: 'Okay — I'll wash it now and turn on the extractor and open the window. Can we agree that whoever uses the shared pan washes it right after?' Immediate compliance reduces the dispute, but a household rule is not yet agreed by everyone.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 B reiterates the immediate request and asks for group agreement. Turn 4 C accepts the pan rule: 'I'm fine with that rule — whoever uses the shared pan washes it right after.' C also introduces a new demand: 'Can we also do a short weekly rota for the rest of the kitchen cleaning so it's fair?' The pan-wash rule gains supporters, but the new proposal for a weekly cleaning rota is outstanding.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 D expands the proposal to include weeknight stove use in the rota and volunteers: 'Can we include weeknight stove use in the rota... I can take Tuesday nights.' Turn 6 A objects to a strict stove rota: 'I cook most nights so I can't follow a strict stove rota.' This introduces a clear substantive disagreement about whether weeknight stove access can be rigidly scheduled.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 D insists on a guarantee: 'can everyone have at least one guaranteed weeknight a week? ... Keep Tuesday for me.' Turn 8 A softens: 'I can't promise a fixed weeknight — I cook most nights. I'll accept one guaranteed night each if we do it by sign-up and allow swaps.' A conditional compromise reduces but does not fully resolve the incompatibility over guaranteed fixed nights.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 B signs up Wednesday and restates operational rules: 'I'll take Wednesday nights. But on weeknights whoever cooks must wash the shared pan right after, turn on the extractor and open the window.' Turn 10 C accepts pan rule, takes Thursday and requests extractor use. Night slots are being allocated and operational ventilation/pan rules are reinforced; A's commitment to take a guaranteed night remains the only notable open issue.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 D confirms others: 'I'll keep Tuesday. Please remember to run the extractor, open the window and wash the shared pan right after cooking.' Turn 12 C confirms Thursday and promises to follow the pan/ventilation routine. Pan-wash and ventilation practices and most night assignments have explicit commitments; A still has not picked/confirmed a guaranteed night.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Immediate operational issues (dirty pan, ventilation) were easy to resolve because individual compliance could be stated and accepted quickly.",
+      "The deeper tension is between someone who cooks most nights (A) and demands for guaranteed private use (D); that creates a trade-off between predictability and practical feasibility.",
+      "Using a mix of a weekly cleaning rota plus a volunteer sign-up for weeknight cooking emerged as a pragmatic hybrid to accommodate both fairness and uneven personal schedules."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:05:39.799332+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00895305,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2889,
+      "local_latency_ms": 39362.802,
+      "output_tokens": 4317,
+      "reasoning_tokens": 2688,
+      "successful_calls": 1,
+      "total_tokens": 7206
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "H2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-H2-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

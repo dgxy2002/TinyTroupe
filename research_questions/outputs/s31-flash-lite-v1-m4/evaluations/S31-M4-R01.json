@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen cleanliness / washing shared dishes",
+      "stove scheduling / access times",
+      "contamination of shared pan (pork fat)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants proposed practical, concrete steps (post times in group chat; clean up after cooking) rather than vague promises.",
+      "Agreement on scheduling is explicit and mutual: C proposes, D accepts, then A and B confirm.",
+      "Cleaning rule was proposed and one person (D) accepted it, but A and B never explicitly agreed; later rounds contain no follow-up.",
+      "No observable action or confirmation that the agreed steps were carried out (speech-only transcript)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Housemates reached a mutual, concrete spoken agreement to post and share usual cooking times in the group chat (scheduling). Evidence: C proposed sharing times (Turn 3), D agreed (Turn 4), A said \"I'll post my times there too\" (Turn 5) and B supported it (Turn 6). This resolves the stove-access timing issue in speech. However, the cleaning rule was only explicitly accepted by D (\"I agree to cleaning up right after cooking, Agent C.\") and proposed by C; A and B did not explicitly accept the cleaning rule nor was the unwashed pan issue resolved. Therefore only some issues (scheduling) were settled, while cleaning/contamination remain unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from stating a complaint (in the setting) to explicitly accepting cleaning responsibility: \"I agree to cleaning up right after cooking...\" (turn 2).",
+      "Agent C initiated rules/proposals (cleaning, scheduling) and gained explicit agreement on scheduling but only partial buy-in on cleaning.",
+      "Agents A and B did not change their implicit behaviors regarding cleaning; they explicitly accepted the scheduling plan (A: \"I'll post my times...\" and B: \"If everyone sticks to that...\") but did not state acceptance of the cleaning rule.",
+      "No participant explicitly retracted a position; the main change was consensual acceptance of a scheduling practice."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent C) proposes a house rule: \"Can we agree to just wash our dishes and clean the stove immediately after we're done cooking?\" Turn 2 (Agent D) accepts cleaning personally: \"I agree to cleaning up right after cooking, Agent C.\" D also raises a scheduling need: \"But can we also figure out a simple schedule for the stove? I get home late...\" => some common ground reached on cleaning (D accepts) but scheduling and responsibility for the dirty pan remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent C) suggests sharing usual cooking times in the group chat: \"Maybe we can just share our usual cooking times...\" Turn 4 (Agent D) agrees: \"That works for me. Let's just post our times there so we don't clash.\" => scheduling disagreement is being concretely addressed (agreement forming). However, the earlier issue of the unwashed pan/pork fat and whether everyone will reliably clean remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent A) and Turn 6 (Agent B) accept the scheduling plan: \"I'll post my times there too...\" and \"If everyone sticks to that, it should help.\" => stove-timing conflict has been mutually accepted in speech. The cleaning rule, while proposed and accepted by D, was not explicitly accepted by A or B in these turns; the dirty pan issue is still unaddressed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "No public speech recorded. Previous rounds show a concrete, mutual agreement to post cooking times (scheduling) but no unanimous, explicit acceptance of the cleaning rule by all housemates and no resolution of who left the pan with pork fat. Those unresolved substantive issues persist.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "No public speech recorded. The schedule-agreement remains in place from earlier rounds, but the shared-dish/cleaning responsibility and the unwashed pan with pork fat remain unaddressed and thus unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech recorded. No additional commitments or confirmations about cleaning/the pan are made; unresolved practical incompatibilities (cleaning expectations, pan contamination) persist through the end of the transcript.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Scheduling is a tractable solution for stove access and was accepted unanimously in speech, addressing the late-arrival conflict.",
+      "Cleaning and shared-dish responsibility remain unresolved because not all housemates explicitly agreed to the proposed rule; this is a lingering practical incompatibility.",
+      "The immediate hygiene/contamination problem (pan with pork fat) was noted in the scenario but was not addressed in the conversation, leaving a concrete risk for future conflict."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T15:38:43.313934+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00818305,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2609,
+      "local_latency_ms": 36663.022,
+      "output_tokens": 3967,
+      "reasoning_tokens": 2560,
+      "successful_calls": 1,
+      "total_tokens": 6576
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M4-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

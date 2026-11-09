@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen cooking smells / extractor and door policy",
+      "washing shared dishes / who cleans pans",
+      "weeknight stove access / allocation rota"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Exchange is practical and problem-focused: participants propose concrete mitigation and long-term mechanisms rather than abstract complaints.",
+      "Minimal role confusion; agents address each other directly and build on prior proposals (e.g., C's washing rule reused by others).",
+      "Few needless repetitions; key points (washing, extractor, rota) are reiterated only to confirm details."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "All parties agreed on a concrete, shared procedure: Agent D offered to post a 'simple weeknight rota on the fridge' and Agent A explicitly accepted and incorporated the earlier rules: 'Please add: whoever cooks washes or soaks their pan right after; run the extractor and keep the kitchen door closed; swap only if you tell the group.' (Turn 11 and Turn 12). Agent C had already accepted cleaning responsibility; Agent B accepted a flexible rota. The group therefore settled immediate mitigation (extractor on, door closed) and a concrete ongoing mechanism (fridge rota with swap notification).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C proposed the washing rule early and maintained it; C also performed the immediate action (soaking the pan).",
+      "Agent B moved from complaint to accepting the washing rule and a flexible rota; B also requested and got immediate mitigation (extractor on).",
+      "Agent D introduced the rota concern and then offered to create the first version on the fridge, shifting from complaint to active proposer.",
+      "Agent A initially was the source of the smell but agreed to run the extractor, accept the washing rule, and to include the rules on the fridge rota—softening from defensive to cooperative."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent B demands mitigation and immediate actions (extractor, window, door closed) and asks Agent C to soak the pan. Turn 2: Agent C agrees to soak but introduces a new rule proposal: 'whoever cooks washes their pans, or we set a simple rota.' A clear problem and competing practical expectations are present, but no one is firmly opposed yet.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent B accepts the proposed rule: 'fine, whoever cooks washes their pan' and asks Agent A to run the extractor. Turn 4: Agent C reconfirms and asks Agent A to run the extractor. The washing-rule disagreement is resolved in principle, leaving only the immediate extractor action (and A's compliance) outstanding.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: Agent D introduces a new substantive allocation issue: 'Can we have a simple weeknight stove rota so everyone gets a fair slot?' Turn 6: Agent A accepts a rota 'if it's flexible' and reiterates the washing/extractor expectations ('I'll switch the extractor on now'). A new allocation issue appears but is not opposed; details remain unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: Agent B accepts a flexible weeknight rota. Turn 8: Agent A confirms turning the extractor on and restates the 'whoever cooks washes or soaks' rule. Immediate actions are taken (extractor switched on) and agreement on principles is reached, but rota logistics still lack concrete assignment.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9: Agent B requests the extractor remain on until the smell clears. Turn 10: Agent C soaks the pan. Practical issues are being executed; no substantive disagreement is expressed this round, though the rota remains to be concretely implemented.",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11: Agent D proposes a concrete implementation: 'let's put a simple weeknight rota on the fridge ... I can write the first version now.' Turn 12: Agent A explicitly agrees and asks to include the prior agreements: 'Please add: whoever cooks washes or soaks their pan right after; run the extractor and keep the kitchen door closed; swap only if you tell the group.' This mutual, concrete agreement settles the outstanding issues.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Separating short-term mitigation (run extractor, close door, soak/wash now) from long-term allocation (weeknight rota) helped the group resolve both immediate nuisance and recurring fairness issues.",
+      "Flexibility was the main trade-off: a rota provides fairness but requires permission to swap; this preserves fairness while accommodating varied schedules.",
+      "Concrete, visible artifacts (a rota on the fridge) serve as an enforcement/coordination mechanism that closes the gap between principle and practice."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T11:13:44.957074+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00674205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2901,
+      "local_latency_ms": 28863.812,
+      "output_tokens": 3210,
+      "reasoning_tokens": 1856,
+      "successful_calls": 1,
+      "total_tokens": 6111
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "N09",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-N09-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

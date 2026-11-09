@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "pan washing / dish duty",
+      "cooking smells and extractor/window use",
+      "access to stove on weeknights"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants moved from complaint to concrete rule-making quickly and naturally; A gave a personal reason ('I cook most nights...') which framed the proposal (Turn 1).",
+      "The group repeated the exact phrasing to be posted on the fridge (Turn 7 and Turn 11), which clarified the agreement and prevented ambiguity.",
+      "Task assignment (posting) was explicit and volunteered, strengthening the settlement (Turns 10 and 12)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The household reached a mutual spoken agreement on a concrete rule: 'Whoever cooks washes their pan same night. If you need the stove on weeknights, ask to swap.' (Turn 7). A and B accepted the main rule (Turns 3–4), D accepted the rule and requested the added stove-swap clause (Turn 6) which C then restated and D confirmed (Turn 8). D volunteered to post the rule on the fridge (Turns 10, 12).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from defensive to cooperative: initially defended cooking load and proposed options, then accepted rinsing and the shared rule (Turns 1, 3).",
+      "Agent B moved from complaint to agreement and added conditioning for repeated failures and rinsing (Turns 2, 4).",
+      "Agent D shifted from a complaint about impossibility of weeknight stove use to acceptance plus a requested accommodation (Turns 6, 8).",
+      "Agent C acted as coordinator, soliciting agreement and finalizing phrasing; no participant retained an expressed unresolved demand after Round 4."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent A) defends their cooking role and proposes rules, indicating a dispute over blame and chores; Turn 2 (Agent B) objects that 'this cannot keep happening' and demands the cook washes same night, with alternatives (weekly rota) and rinsing: these lines show a clear substantive disagreement about who should clean and how to prevent smells.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A) accepts rinsing and reiterates the main rule; Turn 4 (Agent B) agrees to 'Whoever cooks washes the pan same night' and extractor/window use. Within this pair there is agreement, reducing immediate conflict, but household-wide agreement is not yet secured (C and D have not yet consented).",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent C) asks D if they're okay and suggests sticking the rule on the fridge; Turn 6 (Agent D) says 'Okay, I'm fine with that rule' and requests adding 'If you need the stove on weeknights, speak up and we'll swap.' No opposition is voiced, but the added stipulation has not yet been accepted by the whole group.",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent C) restates the fridge text exactly: 'Whoever cooks washes their pan same night. If you need the stove on weeknights, ask to swap.' Turn 8 (Agent D) responds 'Sounds good — works for me.' Combined with earlier agreement from A and B, this constitutes an explicit, mutual spoken agreement on the concrete arrangement.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent C) asks who will write and stick the rule on the fridge; Turn 10 (Agent D) volunteers. This is task assignment following the earlier settlement; no substantive disagreement is expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent C) requests posting the agreed text (quotes the phrasing) and Turn 12 (Agent D) confirms 'Okay, I'll stick it on the fridge.' The previously agreed rule is reaffirmed and a concrete action is promised; no unresolved substantive conflict remains in the transcript.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Resolution combined responsibility (cook washes same night) with practical fallbacks (rinse if you can't, weekly rota if needed) to handle recurring noncompliance.",
+      "D's stove-access concern was addressed by adding a simple ask-to-swap convention, illustrating accommodation of different schedules.",
+      "Converting norms into a posted, concrete rule and assigning someone to post it helped move verbal agreement into a likely lasting household practice."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T18:11:34.333308+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00751055,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2871,
+      "local_latency_ms": 35249.1,
+      "output_tokens": 3598,
+      "reasoning_tokens": 2304,
+      "successful_calls": 1,
+      "total_tokens": 6469
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "V4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-V4-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen cleanliness / unwashed pans",
+      "cooking odor / extractor and window usage",
+      "fair access to stove / weeknight rotation"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants use natural, direct language and propose concrete rules (naturalness high).",
+      "Frequent repetition of the same requests across rounds: \"turn on the extractor and open the window\" and requests to \"wash the pan\" (contributes to repetition_score=3).",
+      "Transcript stays consistent with the setting (single kitchen, weeknight scheduling) and roles remain clear.",
+      "Progress is made by proposals and clarifications rather than by emotional escalation."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The immediate hygiene and ventilation issues were agreed and accepted: Agent A proposed that \"whoever cooks on a weeknight washes their own pans that evening, and we open the window/use the extractor\" (Turn 1), and then explicitly agreed to comply: \"Okay — I'll wash the pan and turn on the extractor and open the window.\" (Turn 7). B and C accepted this. The scheduling/rotation demand raised by Agent D (Turn 4) received a concrete proposal from A (Turn 5) and a later clarification (Turn 14), but D has not explicitly accepted the clarified two-week-cycle assignment, so that substantive issue remains unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: moved from proposing rules to explicitly agreeing to wash the pan and to adopt the extractor/window rule, and later clarified the rotation scheme (evidence: Turns 1, 5, 7, 14).",
+      "Agent B: consistently demanded extractor/window and prompt rinsing/washing and accepted the proposed rules early (Turns 2, 6, 8).",
+      "Agent C: consistently pushed for immediate washing and accepted the extractor rule (Turns 3, 9).",
+      "Agent D: introduced a new demand (fair rotation) and asked for clarification; D has not yet accepted the clarified proposal (Turns 4, 13)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent A) proposes: \"whoever cooks on a weeknight washes their own pans... open the window/use the extractor.\" Turn 2 (Agent B) conditions agreement: \"I'll agree if we always turn on the extractor and open the window while cooking, and rinse pans right away.\" A small substantive difference (wash that evening vs. rinse right away) and the original complaints motivate the exchange, so mild conflict is present and not fully settled.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent C) accepts the extractor rule but asks Agent A to wash the pan now. Turn 4 (Agent D) introduces a new, separate demand: \"Can we add a simple weeknight rotation so everyone gets a fair stove slot? I often get home late and keep missing out.\" A new scheduling conflict is raised; none of the new points are agreed by all, so substantive disagreement remains.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent A) accepts a rotation in principle and proposes specifics: \"two weeknight slots each, swaps allowed... and whoever cooks washes their pans that night. Also let's split basic supplies cost.\" Turn 6 (Agent B) agrees and again asks A to wash the pan now. Progress toward rules is made (softening positions), but D has not yet accepted the proposed schedule, so substantive scheduling conflict remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent A): \"Okay — I'll wash the pan and turn on the extractor and open the window.\" Turn 8 (Agent B) thanks A and leaves. Immediate cleanliness/ventilation demands are accepted by the cook, reducing conflict. The rotation issue, however, is still not confirmed by D.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent C) repeats the request: \"Agent A, please wash that pan now and turn on the extractor and open the window.\" Turn 10 (Agent A) repeats compliance. This round largely repeats the settled immediate requests; the larger scheduling question remains unresolved and unaddressed this round.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 13 (Agent D) asks for clarification: \"when you say 'two weeknight slots each', what exactly do you mean? There are five weeknights.\" Turn 14 (Agent A) clarifies the proposal: \"over a two-week cycle: each person gets two assigned weeknights (8 of the 10 nights). The other two nights are flexible...\" This clarifies the scheduling proposal (decreasing tension), but D has not said they accept the clarified scheme, so the scheduling conflict remains substantively unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Two distinct problems were in play: immediate cleanliness/ventilation and longer-term fair access to the stove; the group handled them differently (quick agreement on hygiene, slower negotiation on scheduling).",
+      "A simple rotation proposal (two slots each over two weeks, swaps allowed) is a reasonable compromise but requires explicit buy-in from the late-arriving member (D) to be a true resolution.",
+      "Repeated immediate requests (wash pan/turn on extractor) were resolved by an explicit promise to act, showing that concrete behavioral commitments settled the hygiene issue quickly."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T16:14:07.857545+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 4 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00807405,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2837,
+      "local_latency_ms": 37070.034,
+      "output_tokens": 3884,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6721
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 4,
+    "run_id": "S30-C0-R04",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

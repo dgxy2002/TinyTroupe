@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "shared kitchen cleanliness / responsibility for washing dishes",
+      "single shared pan availability",
+      "peanut-allergy cross-contamination and safety",
+      "who bears the cost or effort to resolve (buying a new pan, alternate cooking arrangements)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation feels natural and succinct among housemates; turns are brief and to the point.",
+      "Key factual contribution (D's severe peanut allergy and that washing won't help) grounds the substantive issue.",
+      "Some avoidance by Agent B ('You all figure it out.') reduces engagement with problem-solving.",
+      "No participant proposes concrete remedies (buy separate pan, schedule use, compensate), so discussion stalls."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No solution was agreed. Agent D repeatedly stated a severe peanut allergy making the pan unsafe even if washed ('Washing it won't help. There was peanut oil in it. I have an allergy.' / 'So I can't use that pan. Even if it's washed.'). Other agents acknowledged the problem but offered no accommodation or action (no offer to buy a separate pan, to let D use an alternative, or to establish a cleaning protocol). Agent B declined to engage. Therefore the incompatible practical states (D cannot safely use the only pan; others expect to use it) remain unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "No participant substantially changed position during the run: Agent D consistently maintained they cannot use the pan due to allergy; Agent C consistently pushed for shared cleanliness; Agent A and Agent B continued denying use and did not offer solutions.",
+      "Agent A moved from denial to seeking a solution question ('Okay, so... what do we do, then?'), but did not propose a concrete accommodation.",
+      "Agent B shifted into avoidance ('You all figure it out.') rather than engaging or conceding responsibility."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A and Agent B both deny using the pan ('It wasn't me.' / 'I didn't use it.'), indicating a minor disagreement about who used the pan and leaving the dirty pan issue unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C states the pan needs washing; Agent D says they need to cook but can't use the pan now. This creates a clear, practical conflict between someone needing to cook and the only shared pan being unavailable.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A suggests someone wash it; Agent D says washing won't help because there was peanut oil and they have an allergy. The issue escalates to a safety/incompatibility problem (contamination vs. severe allergy).",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A asks about the allergy; Agent C frames the problem as a shared-responsibility cleanliness issue ('We all use this kitchen. We have to keep it clean for each other.'). The safety conflict remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D confirms the allergy is severe and that even washing doesn't make the pan safe ('Yes, a bad one. So I can't use that pan. Even if it's washed.'). The incompatibility persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D reiterates the pan is unsafe for them; Agent A asks what to do given there is only one pan. No solution or accommodation is proposed, so the substantive conflict remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent B declines involvement ('You all figure it out.'), while Agent C insists it's everyone's problem. The core incompatibility (pan unusable for an allergic person) is still unresolved and responsibility is contested.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent B repeats they didn't use it and are not cooking; Agent C emphasizes the shared impact ('Now one of us can't cook safely. That's a problem for all of us.'). No concrete solution is agreed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "A single shared cooking resource plus no household rules creates recurring practical conflicts.",
+      "Cross-contamination/allergy concerns can render ordinary cleaning insufficient, raising safety constraints beyond mere cleanliness.",
+      "Responsibility diffusion (no rules, multiple users, unclear accountability) contributes to stalemate when a health-based constraint is introduced.",
+      "Absence of proposed compensating actions (purchase, alternate cookware, staggered cooking) is why the problem remains unresolved in the transcript."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T03:36:13.004771+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0052798,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2772,
+      "local_latency_ms": 28880.385,
+      "output_tokens": 2495,
+      "reasoning_tokens": 1152,
+      "successful_calls": 1,
+      "total_tokens": 5267
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "K2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S39-K2-R01",
+    "scenario_id": "S39"
+  },
+  "schema_version": 2
+}

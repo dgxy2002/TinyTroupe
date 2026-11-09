@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen smell/ventilation on weeknights",
+      "dishwashing/shared pan (who washes shared items)",
+      "kitchen use schedule/late-night cooking slots",
+      "public calling-out / being singled out"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants made concrete, actionable commitments (wash pan now; use extractor; place roster on fridge).",
+      "Repeated plea by Agent A not to be singled out appears a few times but did not block agreement.",
+      "Discussion moved quickly from complaint to practical scheduling without protracted argument.",
+      "No role confusion; statements were consistent with the shared-flat context."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Parties reached concrete, mutual commitments: Agent A agreed to immediate and ongoing actions ('I'll wash the pan now'; 'I'll use the extractor and open the window on weeknights'). The group agreed to a roster and to put it on the fridge ('Roster on the fridge this weekend works'), and Agent D accepted a late-week slot ('I'll take one of the late-week slots'). These commitments (A doing the washing and using ventilation, group creating a roster, D taking a late slot) address the main incompatible demands and were stated and accepted in the transcript (e.g., Turn 9: 'I'll wash the pan now... Roster on the fridge this weekend works'; Turn 10: 'I'll take one of the late-week slots').",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from being defensive to accepting concrete constraints and actions: promised to wash the pan and to use extractor/window (Turn 3, Turn 9).",
+      "Agent B proposed a ventilation condition and accepted A's commitments; B's concern (early sleep) was accommodated (Turn 2, Turn 6).",
+      "Agent D requested reserved late slots and then accepted one when offered (Turn 8, Turn 10), showing a shift from complaint to concrete participation in the solution.",
+      "Agent C consistently pushed for a concrete implementation (fridge roster) rather than just verbal agreement and offered to prepare a template (Turn 7, Turn 13)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent A) frames the problem and proposes rules: 'everyone washes their own things (or we do a roster)'; Turn 2 (Agent B) accepts washing/roster but adds a condition about smells: 'on weeknights please use the extractor and open the window or avoid really smelly cooking late.' Substantive disagreement about kitchen smell/duties is present but both propose solutions.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A) accepts B's condition and offers to wash the pan: 'Okay. I'll use the extractor and open the window on weeknights... I'll wash the pan now.' Turn 4 (Agent B) requests immediate action: 'Can you open the window and switch on the extractor now so the smell doesn't get into my room?' Positions soften and a concrete step is requested, so conflict decreases but some implementation and roster questions remain.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent A) reports taking the action: 'Okay — I'll open the window and switch on the extractor now.' Turn 6 (Agent B) thanks them. The smell issue is addressed; remaining minor issue: roster/dishwashing implementation and the unwashed pan are not yet fully completed or scheduled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent C) pushes for a concrete follow-up: 'Let's put the rule on the fridge or set a simple roster this weekend... Agent A, can you wash the pan now like you said?' Turn 8 (Agent D) asks for reserved weeknight slots for late cooks and also asks Agent A to wash the pan. No party rejects others' proposals, so disagreement remains minor and procedural (when/how to implement).",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent A) follows through and agrees to the concrete plan: 'Okay — I'll wash the pan now. Roster on the fridge this weekend works; reserve a couple of weeknight slots for late cooks.' Turn 10 (Agent D) accepts a late-week slot: 'Okay, thanks Agent A — I'll take one of the late-week slots.' Key substantive conflicts (smell control, dishwashing responsibility, and scheduling of late cooking) receive concrete commitments and acceptance.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent A) and Turn 13 (Agent C) confirm meeting to implement the roster: 'See you this weekend to put the roster up.' 'Let's pick a time this weekend... Are you all free Saturday evening? I can write a simple template and bring it.' No substantive disagreement remains.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Conflict centered on trade-off between one person's cooking as downtime and others' need for sleep; a ventilation protocol addressed this.",
+      "Dishwashing issue resolved by agreeing principle (wash your own or roster) plus a concrete follow-up to implement a roster.",
+      "Scheduling (reserved late-night slots) is an effective accommodation for recurring late cooks and was accepted by the late cook (Agent D).",
+      "Interpersonal tension about public calling-out was acknowledged and defused by requests to avoid singling people out, which participants echoed."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T16:09:02.466003+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00812155,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2875,
+      "local_latency_ms": 33956.195,
+      "output_tokens": 3903,
+      "reasoning_tokens": 2432,
+      "successful_calls": 1,
+      "total_tokens": 6778
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 3,
+    "run_id": "S30-C0-R03",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

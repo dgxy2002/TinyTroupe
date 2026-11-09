@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smells spreading to bedrooms",
+      "unwashed shared pan in sink / cleaning responsibility",
+      "using the stove on weeknights (quiet/sleep needs)",
+      "scheduling no-cook nights and rotation",
+      "use of extractor/window"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents provided concrete reasons (A: works from home and buys supplies; B: starts early; D: gets home late) which grounded their positions.",
+      "Agent A proactively proposed rules and volunteered immediate compliance, helping de-escalate tension (Turn 1, Turn 3).",
+      "Agent B repeated the immediate-action request twice (Turns 2 and 10), a small but noticeable repetition.",
+      "Agent D raised a scheduling constraint which was addressed by A's monthly rotation proposal (Turn 6, Turn 7)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Participants agreed concrete shared rules and a rotating schedule. Agent A proposed rules and immediate compliance ('I'll open the window, turn the extractor on, and put the pan in the rack' — Turn 3). Agent B picked specific no-cook nights ('Monday and Thursday' — Turn 8) and accepted 'rotate monthly' to accommodate Agent D's late schedule (Turn 7). The group also agreed on the ongoing behaviour: 'everyone rinses and either washes or puts used pans in the rack the same night, and we open the window and use the extractor' (Turn 1, reiterated Turn 9). These mutual, explicit commitments settled the substantive disagreements about cleanliness, smell, and scheduling.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: Moved from defensive explanation to constructive proposer and verbally complied with immediate requests (Turn 1 -> Turn 3 -> Turn 11).",
+      "Agent B: Shifted from complaint to cooperative negotiator, insisted on immediate action twice but accepted proposed rules and specific nights (Turn 2 -> Turn 4 -> Turn 8).",
+      "Agent C: Pushed for a concrete group rule and to settle nights (Turn 5) and did not need to change position after agreement.",
+      "Agent D: Initially complained about weeknight cooking (opening situation) but in-round stated willingness to follow cleaning rule and asked only for scheduling consideration; his concern was accommodated by rotation (Turn 6)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent A) acknowledges smell and dirty pan are annoying but asks not to be singled out and proposes rules. Turn 2 (Agent B) insists immediate action: 'can you open the window, turn the extractor on and put the pan in the rack now?' This round contains clear incompatible expectations (A cooks frequently; others need less smell/cleanliness), and a concrete immediate demand by B, so substantive disagreement is present but A is proposing a path forward.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A) agrees to B's immediate request and repeats the proposed future rule. Turn 4 (Agent B) accepts and suggests picking 1–2 no-cook weeknights later. The acute issue is softened by A's immediate compliance, but the scheduling detail and enforcement of the rule remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent C) pushes for explicit agreement to rinse and pick no-cook nights. Turn 6 (Agent D) agrees to rinsing and 1–2 no-cook nights but raises a constraint ('I get home late most nights, so please don't pick nights that block me every week'). A potential scheduling conflict appears (which nights to choose/rotate), so a mild substantive disagreement remains while common ground exists on basic behaviours.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent A) asks Agent B to pick the nights and proposes monthly rotation to address Agent D's concern. Turn 8 (Agent B) selects 'Monday and Thursday' and accepts monthly rotation. The schedule and rotation are explicitly agreed, resolving the scheduling incompatibility.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent A) restates the agreed rules (rinse, rack, extractor/window) and the rotation. Turn 10 (Agent B) requests the immediate action again, but no substantive disagreement is expressed—the earlier agreement stands and the round contains no new incompatible demands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent A) carries out the immediate actions in speech and reiterates the rules. Turn 12 (Agent B) thanks and waits. The previously contested issues are settled in speech and there is no ongoing substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The conflict combined two types of problems: behaviour (clean dishes, use extractor) and scheduling (which nights are no-cook).",
+      "Offering both procedural rules (rinse/put in rack, use extractor) and a rotating schedule resolved inter-personal fairness concerns (D's late arrival).",
+      "Immediate, visible compliance (A agreeing to open window and rack the pan) helped shift the conversation from accusation to coordination."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T07:00:35.657716+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00677825,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2953,
+      "local_latency_ms": 27334.617,
+      "output_tokens": 3020,
+      "reasoning_tokens": 1600,
+      "successful_calls": 1,
+      "total_tokens": 5973
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "W1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-W1-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

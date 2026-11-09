@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "strong-smelling cooking / odors invading bedrooms",
+      "dirty shared pan left unwashed",
+      "fair access to stove (late arrival vs frequent cookers)",
+      "sharing cost of basics (soap, gas)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants offered concrete, operational solutions (whiteboard, 45-minute slots) rather than only abstract rules.",
+      "Requests and concessions were proportional and role-based (A notes cooking schedule; D requests fairness due to late arrival).",
+      "Minor repetition of the extractor/open-window/wash request but it helped secure explicit agreement rather than creating noise."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Housemates agreed concrete, mutually-acceptable rules and a scheduling system. Key lines: Agent A proposed washing and a rule: \"whoever cooks washes their things, and we split basics like soap and gas.\" Agent D requested scheduling: \"can we have a simple whiteboard to book stove slots so I get a fair chance?\" Agent A implemented it: \"I'll put it on the kitchen wall next to the stove, at eye level. Slots 45 minutes each — start tonight; swap with someone if you need more time.\" Agent C and A then confirmed practice for the evening: \"Agreed. We'll run the extractor, open the window, and wash pans straight away tonight.\" \"Good — let's stick to it tonight.\" These statements show who adjusted what (A agreed to install the board and follow wash rule; others accepted the 45-minute slots and extractor/window practice) and that the final outstanding demand (nighttime odor control and slotting) was accepted by all.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: initially defended frequent cooking as a break but quickly accepted rules, agreed to wash the pan immediately and to install the whiteboard (softened position).",
+      "Agent B: maintained the need to eliminate smell before sleep and repeatedly asked for extractor/window/wash; persisted until others explicitly agreed (position held until acceptance).",
+      "Agent C: moved from complaint about the unwashed pan to proposing the washing/extractor rule and swap option (from complaint to constructive proposer).",
+      "Agent D: introduced a new concern (fair stove access) and accepted the group's rule and the 45-minute slot compromise."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent B: \"The real problem is the smell — can we avoid strong-smelling cooking on weeknights, or at least always run the extractor, open the window and wash pans straight away?\" Agent A: \"I'll wash that pan now. I cook most nights — it's my break after work. Let's agree: whoever cooks washes their things, and we split basics like soap and gas.\" (A offers a rule and washes the pan; B's need for smell gone before sleep remains a practical incompatibility.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C: \"...whoever cooks washes their own stuff straight away, and run the extractor and open the window for strong smells. If you're too tired, ask someone to swap...\" Agent D: \"One request: I get home late on weeknights — can we have a simple whiteboard to book stove slots so I get a fair chance?\" (C supports washing/extractor; D introduces a new scheduling fairness demand.)",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A: \"Okay — whiteboard for stove slots sounds fair. Let's agree: whoever cooks washes their things straight away, run the extractor and open the window for strong smells...\" Agent D: \"Okay, that's fine. Who will put up the whiteboard and where should we put it? When should we start using it?\" (Agreement on principles but operational details remain open.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A: \"I can put up the whiteboard by the kitchen wall next to the stove. We'll start using it tonight.\" Agent D: \"Okay, start tonight. I'll book my slot when I get home. Where exactly will you put the board, and how long are the slots?\" (Location promised but slot length still unresolved.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A: \"I'll put it on the kitchen wall next to the stove, at eye level. Slots 45 minutes each — start tonight; swap with someone if you need more time.\" Agent B: \"Okay, whiteboard and 45-minute slots work. Can we all agree to run the extractor, open the window and wash pans straight away tonight?\" (Slots specified and accepted; the immediate-night practice is still awaiting explicit agreement.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C: \"Agreed. We'll run the extractor, open the window, and wash pans straight away tonight. If you can't, swap or ask someone to wash.\" Agent A: \"Good — let's stick to it tonight.\" (All housemates explicitly accept the concrete measures for tonight and the scheduling rule.)",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Main tension was between convenience of the frequent cook (A) and the sleep/odor needs of others (B), resolved by process rules rather than banning cooking.",
+      "Scheduling (whiteboard slots) is an effective compromise to balance late arrivals and frequent cooks.",
+      "A clear rule assigning responsibility for immediate washing of one’s own cookware addresses the shared-pan cleanliness problem.",
+      "Splitting basics (soap/gas) removes a potential source of free-riding and was accepted without dispute."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:12:20.434166+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0078128,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2936,
+      "local_latency_ms": 35345.787,
+      "output_tokens": 3741,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6677
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "H3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-H3-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

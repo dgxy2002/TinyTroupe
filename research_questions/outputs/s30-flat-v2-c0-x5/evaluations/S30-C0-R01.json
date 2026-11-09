@@ -1,0 +1,113 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen cleanliness / unwashed shared pan",
+      "cooking smells / ventilation",
+      "allocation of stove usage (weeknight rota)",
+      "shared fund / cost-sharing for supplies"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants provide concise, task-focused proposals and acceptances — the conversation reads like a natural household negotiation (e.g., Agent A's initial proposal and Agent B/C's quick acceptance).",
+      "There is some repetition of the core rule phrase across turns (\"whoever cooks washes their pans that night, we run the extractor/open a window\"), but each repetition advances the plan (assignments, commitments).",
+      "Speakers ground positions in personal constraints (Agent B: sleep/shift; Agent D: can't cook otherwise on weeknights), which makes trade-offs explicit and actionable.",
+      "No role confusion or factual inconsistencies; each round builds on prior commitments."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group agreed on concrete house rules and a rota, and the immediate cleanliness problem was taken on verbally. Concretely: Agent A proposed the rules (\"whoever cooks washes their pans that night, and we always run the extractor/open a window... small shared fund or a rota\") and participants accepted them (Agent B: \"Okay, let's do that.\"). Night slots were allocated across rounds (Agent B: \"I'll take Tuesdays and Thursdays.\" Agent C: \"I'll take Monday and Friday.\" Agent D: \"I'll take Wednesday.\" Agent A: \"I'll take Saturday and Sunday.\"). The immediate dirty-pan issue was settled verbally when Agent C said, \"I'll wash the pan now since we've all agreed,\" and Agent A agreed to contribute to the fund: \"I'll chip in tonight.\" One substantive element remains open: the exact contribution amount for the shared fund (Agent A asks, \"How much does everyone put?\").",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: started by proposing rules and objecting to being the default culprit, later accepted a rota and agreed to chip in: evidence — Turn 1 proposal and Turn 13 \"I'll chip in tonight.\"",
+      "Agent B: initially complained about smells and then supported the proposed rules and took two nights (Turn 2 and Turn 6), maintaining position but offering constructive participation.",
+      "Agent C: escalated the cleanliness complaint (found the pan) but shifted to cooperative action by accepting the rules and volunteering to wash the pan: Turn 3 and Turn 11 \"I'll wash the pan now since we've all agreed.\"",
+      "Agent D: initially requested at least two weeknight slots (Turn 4) but then accepted Wednesday only (Turn 8) without explicit objection afterward — a softened position visible in the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A proposes rules to prevent repeated smells and asks whoever left the pan to wash it now: \"whoever cooks washes their pans that night, and we always run the extractor/open a window... For tonight, can whoever left the pan please wash it now?\" Agent B accepts the proposal and urges immediate washing: \"Whoever left the pan, please wash it now — the smell's already in the corridor and I need to sleep early for my shift.\" The substantive disagreement (smells/unwashed pan and responsibility) is being actively addressed but not fully settled (pan still not confirmed washed).",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C agrees to the proposed rules and offers to wash the pan if the rules are followed. Agent D introduces a new, substantive scheduling demand: \"Can we also agree a simple weeknight rota so everyone gets at least two stove slots a week? I can't cook otherwise on weeknights.\" This adds a new incompatible interest (how stove access is allocated) that has not yet been resolved.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A accepts a weeknight rota while restating the hygiene/ventilation conditions: \"I agree to a weeknight rota. Condition: whoever cooks washes their pans the same night, and we always run the extractor or open a window.\" Agent B immediately picks nights: \"I'll take Tuesdays and Thursdays.\" The scheduling dispute is being operationalized, reducing tension, but not all slots or D's original request (two slots) are finalized.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C takes Monday and Friday and reiterates the hygiene/fund condition and willingness to wash now: \"I'll take Monday and Friday. I'll wash the pan now if we all stick to the rules... everyone chips into the shared fund tonight.\" Agent D takes Wednesday: \"I'll take Wednesday... Agent A — which nights will you take?\" The rota is filling in, but D's earlier desire for two weeknight slots remains unaddressed and the shared fund mechanism is not yet specified.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A takes Saturday and Sunday: \"I'll take Saturday and Sunday.\" Agent B reiterates the hygiene/ventilation rule as a condition for acceptance. Most scheduling conflicts appear to be allocated across the week, but the shared fund amount and final confirmation of immediate pan-washing remain open.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C affirms they will wash the pan now since the group agreed: \"Okay — I accept. I'll wash the pan now since we've all agreed.\" Agent A agrees to chip in: \"I'll chip in tonight. How much does everyone put?\" The immediate cleanliness issue is handled verbally, and contributors are committing to pay, but the concrete amount for the shared fund remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Lack of explicit household rules produced recurring friction; a simple rule set (wash, ventilate, fund/rota) directly addresses the main points of friction.",
+      "Agents used a mix of conditional offers and concrete commitments to convert a high-level rule into an operational plan (rota + nightly responsibility).",
+      "One participant (Agent D) framed the problem as limited stove access; the group's chosen allocation met overall coverage but did not explicitly deliver the two weeknight slots D originally requested.",
+      "Immediate cleanliness was resolved verbally when a roommate volunteered to wash the pan and others agreed to fund contributions, but the fund's amount remains undetermined."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T15:57:52.774116+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 6 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0095273,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2962,
+      "local_latency_ms": 38601.681,
+      "output_tokens": 4595,
+      "reasoning_tokens": 2944,
+      "successful_calls": 1,
+      "total_tokens": 7557
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-C0-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

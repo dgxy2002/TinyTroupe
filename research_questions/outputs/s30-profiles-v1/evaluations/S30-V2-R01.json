@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen smells / cooking odors affecting bedrooms",
+      "unwashed shared pans / shared-dishwashing responsibilities",
+      "shared expenses for soap/gas",
+      "fair access to the stove / scheduling weeknight cooking"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Agents offered concise, practical proposals rather than vague promises ('I'll turn the fan on and cover the pan tonight').",
+      "There were multiple short confirmations across rounds; some repetition of the same commitments occurred but it served to secure buy-in rather than stall the conversation.",
+      "Proposed mechanisms were concrete and administrable (use group chat to claim weeknights; alternating tie-breaker)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "All four participants made explicit, mutually accepted commitments: Agent A agreed to immediate mitigation ('I'll turn the fan on and cover the pan tonight') and proposed shared expectations; Agents B, C, and D agreed to 'wash shared pans the same night and chip in for soap/gas' (confirmed across Rounds 2–6); Agent C proposed and the group accepted a concrete scheduling rule for weeknights ('whoever says they'll cook for a weeknight by dinner gets priority; if two people want the same night, they alternate next time'); Agent D confirmed acceptance of chores, costs, and using the group chat to claim weeknights ('Okay — I'll wash shared pans, chip in for soap/gas, and use the group chat to claim weeknights.'). These explicit confirmations in Round 6 show the incompatible demands were settled by mutual agreement.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened their position by accepting the immediate mitigation request and offering to keep the fan on and cover the pan ('Okay, I'll turn the fan on and cover the pan tonight').",
+      "Agents B and C moved from complaint to explicit commitment to wash same-night and chip in (confirmed in Rounds 2–5).",
+      "Agent D introduced a new demand for fair stove access in Round 3, then accepted the group's proposed claiming rule and confirmed chores/cost-sharing in Round 6.",
+      "Overall, each participant made at least one explicit concession or commitment; no one retained an outstanding incompatible demand by the end."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent B and Agent C raise complaints about smells and a dirty pan while Agent A defends cooking frequency and offers conditional compromises: 'I'm happy to try to cut down on strong smells and keep the fan on, if everyone agrees to wash shared pans the same night and chip in for soap/gas.' This establishes clear incompatible claims about chores, smells, and expectations that are not yet settled.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A accepts an immediate mitigation request ('I'll turn the fan on and cover the pan tonight') and asks others to commit to washing and chipping in, while Agent B supports this. The immediate smell complaint is de-escalated, but the shared-chore/expense commitments remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C agrees to wash and chip in but Agent D accepts those chores only while raising a new, substantive incompatible demand about fair stove access: 'I need a fair chance to use the stove on weeknights — can we take turns cooking at dinner time or agree a simple rule...' This expands the dispute to scheduling/capacity of the shared resource.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C proposes a concrete scheduling rule ('whoever says they'll cook for a weeknight by dinner gets priority; if two people want the same night, they alternate next time') and Agent A accepts it. This substantially reduces the stove-access conflict, though some confirmations on chores/expenses and final acceptance by everyone are still outstanding.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B confirms washing and chipping in and using the group chat; Agent C prompts Agent D to confirm. Only Agent D's final confirmation remains, so the residual disagreement is minor.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D explicitly agrees to the proposed commitments ('Okay — I'll wash shared pans, chip in for soap/gas, and use the group chat to claim weeknights.') and Agent C restates settlement ('Good — that's settled.'). All substantive incompatibilities about smells, shared chores/expenses, and stove scheduling have been accepted by everyone.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Two distinct but related resource problems were present: immediate nuisance (smell & unwashed pans) and recurring resource access (stove scheduling).",
+      "The group combined short-term mitigation (fan/cover tonight) with medium-term institutional fixes (shared chores/expenses + a claiming system) to resolve trade-offs.",
+      "Using a simple, first-come-by-deadline claiming rule plus an alternation tie-breaker addresses fairness without requiring a complex rota."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T18:01:07.798592+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00701805,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2965,
+      "local_latency_ms": 37156.265,
+      "output_tokens": 3340,
+      "reasoning_tokens": 1984,
+      "successful_calls": 1,
+      "total_tokens": 6305
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "V2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-V2-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

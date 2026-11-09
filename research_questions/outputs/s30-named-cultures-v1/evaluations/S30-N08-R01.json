@@ -1,0 +1,103 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": false,
+    "conflict_topics": [],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Efficient, cooperative problem-solving: participants propose specific, practical rules rather than abstract complaints.",
+      "Concrete arrangements (rota, swap/post in group chat, wash rule) are specified quickly and accepted.",
+      "One remaining coordination task (who posts/organises shared supplies) was raised but not contested."
+    ],
+    "dialogue_repetition_score": 0,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No substantive incompatible demands were voiced in the transcript. All four housemates accepted common rules (use lids/extractor, wash pans — including 'whoever cooks washes their pan', chip in for supplies) and agreed a Mon–Thu rotating weeknight roster with swap/posting procedure. No contested positions remained.",
+    "final_status": "no_conflict",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B and Agent C quickly accepted Agent A's initial proposals (no resistance).",
+      "Agent D introduced a new request (weeknight rota) and it was adopted without objection.",
+      "Agent A accepted the rota assignment and requested clarification on who will post and manage shared supplies; no one opposed any proposals."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent A proposed rules (use lids/extractor, wash own pans, chip in). Turn 2: Agent B immediately accepted those proposals and volunteered compliance. No incompatible demands or refusals were expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent A asked Agents C and D to commit to the proposed rules. Turn 4: Agent B reiterated agreement and added a reason (needs to sleep). No disagreement from others in this round.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: Agent C agreed to lids/extractor, washing, chipping in, and added 'whoever cooks washes their pans.' Turn 6: Agent D accepted those points and requested a weeknight rota. The rota request was a new proposal but met no opposition in this round.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: Agent C proposed a rotating weeknight roster with swap/posting rules and reiterated the wash rule. Turn 8: Agent D accepted the rota, asked who takes which night, and agreed to post swaps. No incompatible positions appeared.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9: Agent C proposed a specific Mon–Thu rotation with named assignments. Turn 10: Agent D confirmed Thursday and asked whether it starts this week. There was confirmation but no objection.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11: Agent C confirmed the rota starts this week and reiterated the cooking/cleaning rule. Turn 13: Agent A accepted their assigned night and asked who will post the rota and organise shared-supplies contributions. No substantive disagreement remained.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Participants moved from complaint to concrete rule proposals quickly, focusing on operational fixes (lids, extractor, wash, rota).",
+      "Fairness concern (D's access to stove) was addressed by introducing a rotating roster rather than ad hoc negotiation.",
+      "Cleaning responsibility was framed both as 'wash your own pans' and a specific rule that the cook washes their pan before leaving the kitchen."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T11:08:19.051929+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0059883,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2918,
+      "local_latency_ms": 24553.551,
+      "output_tokens": 2831,
+      "reasoning_tokens": 1792,
+      "successful_calls": 1,
+      "total_tokens": 5749
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "N08",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-N08-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

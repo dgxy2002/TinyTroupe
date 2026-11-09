@@ -1,0 +1,113 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen cooking smells/ventilation (extractor and window)",
+      "responsibility for rinsing/cleaning shared pans",
+      "use of stove on weeknights / heavy frying (heads-up and scheduling)",
+      "division of cleaning duties and shared costs",
+      "follow-through/enforcement of agreed actions"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants propose concrete, practical measures (extractor/window, lids, rota, early/late split) rather than abstract rules; exchanges feel natural and solution-focused.",
+      "There is some repeated prompting about ventilation in rounds 4–6 (\"Did you turn the extractor on...\", \"please turn the extractor on...\") after an apparent verbal commitment, which signals a follow-through gap.",
+      "Speakers clearly attribute reasons and trade-offs (A: cooks for break and buys supplies; B: has early shift), which grounds negotiation."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Household members reached explicit, mutual spoken agreements on shared kitchen norms (who does cleaning, rinsing pans nightly, use of lids/extractor/heads-up for heavy frying, and an early/late stove split). Evidence: Agent C: \"Okay, agreed. Let's rotate a quick shared clean each week ... I can do the first one.\" Agent D: \"... let's keep an early/late split ... I can take the late slot some nights.\" Agent A: \"Okay — early/late split works. Let's each pick early or late ... Quick heads-up before heavy frying agreed.\" Those mutual agreements constitute settlement of the recurring responsibility and scheduling disputes (rounds 1–3). However, an immediate practical issue (ventilation/extractor actually being turned on) was not confirmed by the transcript and reopened in rounds 4–6, so the run is only partially resolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moves from defensive framing (Turn 1: \"it's not fair to blame me alone\") to accepting shared rules and conditions for continuing to cook (Turns 3 and 7: agreeing to extractor/heads-up/early-late split).",
+      "Agent B moves from complaint/urgency (initial situation) to accepting the proposed rules (Turn 2) but continues to press for immediate ventilation when the smell persists (Turns 8, 13, 15).",
+      "Agent C shifts from noting a problem (unwashed pan in opening situation) to proposing a concrete solution (cleaning rotation, Turn 5).",
+      "Agent D introduces a new scheduling adjustment (Turn 6) and offers to take responsibility for some late slots; that suggestion is accepted (Turn 7).",
+      "No participant retracts the negotiated rules; the only position that remains unconfirmed is A's immediate action to operate the extractor/window (promised but not verified in transcript)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent A) defends: \"I cook most nights ... it's not fair to blame me alone; can we agree ...\" — this signals an interpersonal dispute about responsibility. Turn 2 (Agent B) accepts the proposal and demands immediate ventilation: \"Can you turn the extractor on and open the window now?\" A mild substantive disagreement about responsibility and an unresolved immediate request (ventilation) remain.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A) states: \"Okay — I'll turn the extractor on and open the window now. Agreed: everyone rinses shared pans the same night, use lids, and give a heads-up for heavy frying.\" Turn 5 (Agent C) agrees and proposes a cleaning rotation: \"Okay, agreed. Let's rotate a quick shared clean each week ... I can do the first one.\" The immediate ventilation request is claimed satisfied and shared cleaning/cost expectations are mutually accepted in speech.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 6 (Agent D) proposes an additional scheduling rule and offers responsibility: \"... give a quick heads-up ... let's keep an early/late split ... I can take the late slot some nights.\" Turn 7 (Agent A) accepts: \"Okay — early/late split works. Let's each pick early or late ... Quick heads-up before heavy frying agreed.\" No substantive disagreement appears; rules are clarified and accepted.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 8 (Agent B): \"Did you turn the extractor on and open the window? The smell's still in the corridor.\" Turn 9 (Agent C): \"I didn't — Agent A said they'd turn it on. Agent A, can you check the extractor and open the window? The smell's still in the corridor.\" An actionable commitment that previously appeared made is now disputed; the immediate practical problem (ventilation/smell) is back and unresolved.",
+        "movement": "reopened",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 11 (Agent A): \"Okay — I'll check the extractor and open the window now.\" Turn 13 (Agent B): repeated urgency: \"Agent A, please turn the extractor on and open the window now. The smell's still in the corridor and I have an early shift.\" The substantive disagreement about follow-through remains, but A's promise reduces escalation (no confirmed action yet).",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 14 (Agent A): \"I'll turn the extractor on and open the window now.\" Turn 15 (Agent B): \"Okay — I'll wait a few minutes. Tell me when the extractor and window are on.\" The parties reiterate a practical solution but there is still no confirmation the extractor/window are on, so a small unresolved practical issue remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The core tension is between one person's frequent cooking and the shared burden of cleaning and smell mitigation; mutually acceptable rules (rota + scheduling + heads-up) address both duties and predictability.",
+      "Concrete, short-term commitments (turn extractor on now) are distinct from longer-term rule agreements; failure to confirm immediate actions can reopen conflict even after rules are agreed.",
+      "Offering specific compensating behaviors (A's willingness to keep cooking if cleaning/costs are fair; D offering late slots) facilitates compromise and rapid agreement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T18:51:30.690253+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 3 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00929805,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2957,
+      "local_latency_ms": 47918.139,
+      "output_tokens": 4481,
+      "reasoning_tokens": 2816,
+      "successful_calls": 1,
+      "total_tokens": 7438
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "P2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-P2-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

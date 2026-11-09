@@ -1,0 +1,113 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "weeknight stove access / rota",
+      "wash-up / dirty dishes",
+      "ventilation while cooking (extractor fan / window)",
+      "weekend deep-clean rota",
+      "notice required for swapping weeknight cooking"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concise, pragmatic proposals and explicit reasons (A: cooking as break; D: arrives after dinner starts).",
+      "Quick, actionable concessions: A accepts nightly wash-up and ventilation requests and rinses the pan immediately ('I'll turn the extractor on... and rinse the pan now.' — Turn 8).",
+      "The stove access dispute is handled by trade-off rather than by rigid rules; negotiation centers on notice and swapping rather than abstract fairness."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Cleaning and ventilation issues were agreed: Agent A accepted nightly wash-up and the weekend deep-clean rota ('I agree to nightly wash-up and the weekend deep-clean rota.' — Turn 3), and agreed to use the extractor and open the window when cooking ('I'll turn on the extractor and open the window when I cook on weeknights.' — Turn 5). The remaining substantive dispute about weeknight stove access was addressed by compromise in Round 6: Agent A refused a fixed weeknight rota but offered a swap arrangement ('I can't do a fixed weeknight rota ... I'll swap one weeknight a week with you if you ask me in advance.' — Turn 11) and Agent D accepted to ask in advance while requesting a concrete notice time ('Okay, I'll ask in advance. Can we agree I ask by the evening before...' — Turn 12). This settles the main allocation tension into a swap-by-request arrangement, though the exact notice timing remains to be specified.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: shifted from being the de facto regular weeknight cook with no prior commitments to agreeing nightly wash-up, ventilation use, and a conditional swap policy for weeknights ('I'll swap one weeknight a week with you if you ask me in advance.' — Turns 3,5,11).",
+      "Agent D: shifted from demanding a fixed weeknight rota to accepting the swap-by-request compromise, proposing a concrete notice time ('Okay, I'll ask in advance... ask by the evening before' — Turn 12).",
+      "Agent C: consistently pushed for wash-up and cleaning structure and accepted the agreed weekend deep-clean rota ('Can we do a simple rule... I'll take the first deep clean if everyone agrees...' — Turn 1; Turn 9).",
+      "Agent B: requested ventilation when cooking and was satisfied when A agreed to use extractor/window and to do it immediately when asked ('please turn the extractor on and open the window now.' — Turn 6)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent C) proposes mandatory wash-up and weekend deep-clean rota and asks someone to wash the pan now; Turn 2 (Agent D) accepts nightly wash-up but asks for a weeknight stove rota because they 'usually get home after dinner starts and keep getting left out.' Two incompatible expectations about weeknight stove access appear.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A) accepts nightly wash-up and weekend deep-clean rota but refuses a fixed weeknight rota, offering swaps instead: 'I usually cook most weeknights... Compromise:... weekend stove rota, and if someone wants a weeknight they can ask me in advance and I'll swap one night a week.' Turn 4 (Agent B) requests extractor/window use. Stove allocation disagreement remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent A) agrees to turn on extractor and open the window on weeknights: 'I'll turn on the extractor and open the window when I cook on weeknights.' Turn 6 (Agent B) asks A to do it now. Ventilation issue is being addressed, but the weeknight stove allocation disagreement continues.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent C) asks A to turn the extractor on now and wash/rinse the pan; Turn 8 (Agent A) complies: 'I'll turn the extractor on, open the window, and rinse the pan now.' Immediate cleanliness/ventilation requests are resolved, but the stove-rotation issue remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent C) accepts the cleaning arrangements. Turn 10 (Agent D) reiterates the weeknight stove demand: 'Can we do a simple weeknight rota so everyone has one guaranteed weekday, or at least you swap one night a week with me?' The core stove-access conflict is reasserted.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent A) reiterates refusal of a fixed rota but offers a concrete swap policy: 'I'll swap one weeknight a week with you if you ask me in advance. Weekend rota still stands.' Turn 12 (Agent D) accepts asking in advance and requests a concrete notice time: 'Okay, I'll ask in advance. Can we agree I ask by the evening before and you'll swap one weeknight a week when you can? If that doesn't work, tell me what notice you'd accept.' Major disagreement about guaranteed weeknight access is reduced to a swap/notice-detail outstanding.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Core tension is practical: A's routine need to cook many weeknights conflicts with others' need for guaranteed access or predictability (D).",
+      "Simple operational rules (nightly wash-up, extractor on, weekend deep-clean rota) remove immediate shared-cost externalities and were quickly accepted.",
+      "Allocation disputes are often resolved pragmatically by a swap-on-request system with agreed notice, rather than a strict rota, when one party has asymmetrical needs.",
+      "A remaining coordination detail (exact notice period) is necessary to convert the swap promise into a reliable entitlement and avoid future friction."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T07:26:00.109369+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 6 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00835805,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2917,
+      "local_latency_ms": 46029.828,
+      "output_tokens": 4016,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6933
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "W5",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-W5-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "washing shared dishes / who does full washes",
+      "kitchen ventilation / cooking smell (extractor & window)",
+      "stove scheduling / late-night cooking access"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is cooperative and goal-oriented: proposals, acceptances, and concrete assignments appear in sequence.",
+      "Some repeated prompting occurs (B repeatedly asks A to turn on the extractor), producing mild redundancy.",
+      "Speakers stay on-topic and consistent with the setting (no role confusion)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group reached an explicit, mutual arrangement: Agent C committed to wash the pan tonight ('I'll wash the pan tonight.'), Agent C proposed and the others accepted a weekly rotation for full washes with Agent D taking the first week ('let's rotate weekly' — 'Rotation sounds fair ... I'm okay to take a week.'; 'Agent D can start next week.'), and Agent A agreed to use the extractor and open the window when cooking and to do so immediately when asked ('I’ll also use the extractor and open the window when I cook.'; 'Okay — I'll turn the extractor on and open the window now.'). These statements constitute the concrete adjustments and who made them (C: washes now + rotation proposer; D: accepts first week; A: extractor/window commitment). No one requested payment or reciprocal concessions beyond the turn-taking rotation.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C changed position from pointing out an unwashed pan to volunteering to wash it and proposing a rotation (Turn 5: 'I'll wash the pan tonight... let's rotate weekly').",
+      "Agent D accepted the rotation and offered to take the first week (Turn 6: 'I'm okay to take a week'), later confirmed (Round 5).",
+      "Agent A initially limited their help (offered rinsing) but accepted the extractor/window practice and verbally committed to turn them on (Turn 1; Turn 11).",
+      "Agent B began by demanding immediate action but ultimately accepted the group's proposed rules and assignments; no participant later retracted an accepted arrangement."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A says they can't do a full wash and asks someone else to ('I can't do the full wash tonight — can someone else wash it?'), while Agent B immediately asks Agent A to wash tonight and to turn on the extractor ('Agent A — can you wash the pan tonight and turn on the extractor and open the window now?'). These are incompatible expectations about who does the full wash now.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A reiterates they can only rinse and dry but not do the full wash ('I can rinse it and put it in the drying rack now, and I'll turn on the extractor and open the window. I can't do the full wash tonight — can someone else wash it?'), while Agent B presses C or D to wash or offers to if they don't ('Agent C, Agent D — can one of you do the full wash tonight? If not, I will.'). The disagreement about who will do the full wash remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C volunteers to wash tonight and proposes a rotation to share full washes ('I'll wash the pan tonight. But we need to share full washes — let's rotate weekly so everyone does one week each.'), which directly resolves the immediate wash dispute, while Agent D accepts rotation but raises a separate scheduling concern about late cooks ('Rotation sounds fair ... can we add a simple stove rule so late cooks aren't locked out?'). A new but related issue (stove scheduling) is introduced even as the original wash conflict is being reduced.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A and Agent B both indicate the rotation and late-cook announcement idea are acceptable ('Okay — rotation and the 'announce if you're cooking late' rule work for me.'; 'Rotation sounds fine — who wants first week?'), and they ask who will wash tonight. The immediate disagreements are softening, but a small unresolved detail (who starts the rotation/confirmation of washing action and extractor use) remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C explicitly confirms they will wash tonight and that Agent D will start the rotation next week ('I'll wash it tonight. Agent D said they're fine to take the first week, so Agent D can start next week.'), and Agent A confirms they will turn the extractor on and open the window now ('Okay — I'll turn the extractor on and open the window now.'). These statements create a concrete, mutual agreement on the main disputed items (who washes tonight, the weekly rotation, and extractor/window use).",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Participants repeat the commitments (Agent C: 'Okay — I'll wash it tonight. Agent D, you're up next week.') and Agent B again requests extractor use ('Agent A — please turn the extractor on and open the window now; the smell's already in the corridor.'), but no new substantive disagreement appears and earlier mutual agreements remain in place.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Immediate practical tasks (washing the pan, turning on extractor) were handled by volunteers or promises, while a recurring burden (full washes) was solved with a time-share (weekly rotation).",
+      "A late-cooking access issue was raised as a scheduling constraint, resolved by a lightweight 'announce if cooking late' rule to avoid lockouts.",
+      "Resolution combined a one-off concession (C washing tonight) with a standing rule (rotation + announcement), a common mixed strategy for shared-space problems."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T15:17:33.183164+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Adjusted resolution_round from 5 to 6 to match the conflict trajectory."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01058,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2896,
+      "local_latency_ms": 56322.413,
+      "output_tokens": 4928,
+      "reasoning_tokens": 3392,
+      "successful_calls": 1,
+      "total_tokens": 7824
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-C0-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

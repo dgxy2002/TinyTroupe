@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen odors / smelly cooking",
+      "dirty shared dishes / cleaning",
+      "stove access / fair-use scheduling"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Concise, cooperative proposals: participants made clear, concrete rules rather than vague promises (e.g., Turn 5 and Turn 7).",
+      "One participant turned a complaint into an actionable rule (Agent C proposed the house rule) which helped structure the discussion.",
+      "Few repeated restatements; the group moved quickly from problem statement to specific solutions."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group adopted a set of shared rules and a stove-priority system that settled the substantive disputes. Key quoted lines: Agent A summarized the agreement: \"We'll stick with extractor on, rinse and put pans away the same night, give a quick heads-up for smelly cooking, and use Agent D's priority rule.\" Agent D specified the chosen stove rule: \"Let's do priority for whoever missed out last night, and rotate weeks if both missed.\" Concretely: Agent A agreed to use the extractor, avoid late smelly cooking or give a heads-up; Agent C agreed to rinse and put pans away (and rinsed the pan immediately); Agent D proposed and then selected the stove-priority system; Agent B's request for heads-ups and less late-smelly cooking was accepted. This combination of clarification of expectations and compromise over stove access resolved the outstanding issues.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened and conceded to behavioral limits: agreed to use extractor, rinse pans, avoid late smelly cooking or give a heads-up (Turn 3 and Turn 9).",
+      "Agent B moved from complaint to acceptance once concrete mitigations were offered (Turn 2 → Turn 4).",
+      "Agent C moved from complaint about an unwashed pan to proposing a house rule and immediately enacted the rule by rinsing the pan (Turn 5 → Turn 11).",
+      "Agent D introduced the stove-access fairness mechanism and then selected the priority-then-rotate system (Turn 6 → Turn 8)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent A proposes a conditional offer: \"I'm fine to keep cooking if everyone rinses their pans that night and we use the extractor.\" Turn 2 — Agent B accepts that baseline but adds a new constraint: \"Can we also avoid very smelly cooking late? I need to sleep early for an early shift.\" A clear household problem is asserted and initial positions are stated, so conflict has begun but is not entrenched.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent A concedes to the requested behaviors and offers a mitigation: \"I'll avoid very smelly dishes late — if I must cook one, I'll do it earlier or give everyone a heads-up...\" Turn 4 — Agent B: \"Sounds good. Works for me — a quick heads-up...\" The immediate smell/cleaning complaint between A and B is being settled, but other substantive issues from the opening (dirty shared pan, stove access fairness) remain unaddressed by C and D.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent C proposes a concrete house rule covering rinsing, extractor use, heads-ups, and chore swaps: \"Can we all agree to that?\" Turn 6 — Agent D agrees and raises a fair-use addition for stove priority. The round shows cooperative rulemaking with only one remaining unresolved detail (the exact stove-priority implementation).",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent A accepts the suggested mechanisms and delegates choice: \"Priority to whoever missed out the night before; if both missed, rotate weeks or flip a coin. Agent D, you can pick which system.\" Turn 8 — Agent D confirms the choice: \"Okay. Let's do priority for whoever missed out last night, and rotate weeks if both missed.\" The stove-access fairness issue is concretely decided and the household rules are fully specified.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 — Agent A restates agreement: \"Okay, fine — agreed. We'll stick with extractor on, rinse and put pans away the same night, give a quick heads-up for smelly cooking, and use Agent D's priority rule.\" Turn 11 — Agent C: \"Great — that works. I'll rinse this pan now.\" The previously disputed issues are confirmed and one immediate action (rinsing the pan) is taken.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 14 — Agent B: \"Good, thanks. That helps.\" Turn 15 — Agent C: \"Cool.\" No new substantive disagreements; participants express appreciation and acceptance of the agreed rules.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Addressing three related problems (smell, cleanliness, stove access) together allowed for a compact set of house rules that covered most practical disputes.",
+      "Explicit fair-use rules (priority for missed nights; rotate if both missed) resolved the scarce-resource tension (stove access) without needing outside intervention.",
+      "Immediate, small actions (Agent C rinsing the pan) reinforced trust and helped confirm the rules were actionable."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T17:56:48.435935+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00785555,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2851,
+      "local_latency_ms": 40979.798,
+      "output_tokens": 3773,
+      "reasoning_tokens": 2304,
+      "successful_calls": 1,
+      "total_tokens": 6624
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "V1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-V1-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

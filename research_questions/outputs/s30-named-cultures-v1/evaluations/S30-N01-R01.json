@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking schedule / rotation and late slots",
+      "whose obligation to wash pans and when",
+      "smell and extractor/door use",
+      "shared supplies costs and reimbursement"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants offered concrete proposals and reasons (sleep/early shift, working from home) rather than abstract complaints.",
+      "C moved to operationalize decisions by creating a shared note and rota — practical step that advanced implementation.",
+      "There is minimal needless repetition; most turns add a new detail or acceptance."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Several substantive issues were agreed: use of extractor fan and closing corridor door and avoiding late cooking before B's early shift (A: \"I won't cook late before your early shift, and I'll use the extractor fan and close the corridor door when I cook late.\"), the rule that whoever cooks washes their pan the same night, and a shared note to track supplies with monthly settlement (C: \"we track shared supplies in a shared note and settle monthly\"). The parties also began implementing a weekly rotation (C: \"we keep Agent D's weekly early/late rotation...\" and D was scheduled for the late slot that week). However, Agent A's specific demand to keep one late slot every other week remains unaddressed and thus unresolved (A: \"I need to keep one late slot every other week since I work from home\"). Because most issues were settled but this scheduling exception was not resolved, final_status is partially_resolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: retained their request for an exception (\"I need to keep one late slot every other week\") but conceded to extractor use and avoiding late cooking before B's early shift.",
+      "Agent B: moved from complaint to practical offer—willing to take early slots and proposed concrete extractor/door measures and reimbursement options.",
+      "Agent C: shifted into coordinator role, proposing the rota, shared note, and monthly settlement and offering to implement them.",
+      "Agent D: proposed the initial rotation and accepted the operational plan, asking to be scheduled for the first late slot; no backtracking on the rotation was recorded."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent D): \"two people cook earlier, two later, and we rotate the late slot each week. Also, whoever cooks washes their own pan.\" vs Turn 2 (Agent A): \"can I keep some late slots sometimes?\" — A accepts rotation but requests an exception to the proposed strict rotation.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent B) requests constraints for late cooking: \"avoid late cooking the night before my early shift... use the extractor fan and close the corridor door\" and offers to take early slots. Turn 4 (Agent A) agrees to B's constraints but reiterates: \"I need to keep one late slot every other week since I work from home.\" Several points are agreed, but A's exception to the rotation remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent B) offers a supplies settlement: split / reimburse monthly or track receipts. Turn 6 (Agent C) proposes: \"we keep Agent D's weekly early/late rotation, whoever cooks that night washes their pan, and we track shared supplies in a shared note and settle monthly.\" Many items are adopted, but C's rota statement does not address A's request for a preserved late slot, so that incompatibility persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent D): \"please make the shared note and put me down for a late slot this week so the rotation starts.\" and Turn 8 (Agent C): \"I'll make the shared note now and put you down for the late slot this week.\" This moves from negotiation into scheduling that could conflict with A's stated need to retain a late slot every other week.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent D): \"No objections. Sounds good — please go ahead and put me down for the late slot this week.\" and Turn 10 (Agent C): \"Okay — I'll create the shared note and put you down for this week's late slot.\" The group proceeds with the rotation schedule without resolving A's previously stated exception.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 (Agent D): \"Okay.\" No new concessions or adjustments are recorded; the rota is being started in a way that appears incompatible with Agent A's request to retain one late slot every other week (A's line in Turn 4: \"I need to keep one late slot every other week since I work from home\").",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Main tension is scheduling: a simple weekly rotation conflicts with Agent A's need for extra late slots due to working from home.",
+      "Smell management is actionable (extractor, corridor door) and was accepted, which reduces one source of friction.",
+      "Financial/household supply issue was resolved by agreeing to track supplies in a shared note and monthly settlement, removing a potential recurring source of dispute."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T08:11:28.910110+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00724455,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2903,
+      "local_latency_ms": 33352.693,
+      "output_tokens": 3461,
+      "reasoning_tokens": 2048,
+      "successful_calls": 1,
+      "total_tokens": 6364
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "N01",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-N01-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

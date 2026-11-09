@@ -1,0 +1,148 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "alcohol at the housewarming party",
+      "comfort/preferences of visiting parents (no alcohol present)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants moved quickly from conflict statement to clarification and a concrete time-limited compromise.",
+      "Several speakers used the phrase 'that works' to confirm agreement (minor repetition).",
+      "No role confusion; speakers referenced concrete constraints (parents' presence and duration)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group agreed to a time-limited compromise: they will not serve alcohol while Agent D's parents are present (around 'an hour or two' at the start), and will bring out the alcohol after they leave. Evidence: Agent C proposed 'we just don't serve any drinks for the first couple of hours. When your parents leave, we can bring out the alcohol.' Agent D accepted: 'Yeah, okay. That works.' Agent A confirmed: 'We can just keep everything in the fridge until they leave.' Agent B: 'Yeah, that works for me.' All parties whose demands conflicted explicitly accepted this arrangement.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D retained the underlying concern (parents uncomfortable with alcohol) but accepted a limited accommodation once duration was clarified (softened position).",
+      "Agents A and B conceded immediate, visible serving of alcohol for the first couple of hours and agreed to keep drinks in the fridge until parents leave.",
+      "Agent C changed no position but facilitated a compromise proposal; no participant later reversed their stated acceptance in the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent D: 'Actually, about the drinks... My parents are coming on Saturday. We don't drink, so they would be uncomfortable with alcohol here.' (This introduces an incompatibility with the planned alcohol at the party.)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: 'Are you saying we can't have any alcohol at the party?' and Agent B: 'Wait, no alcohol at all? I've invited people from work. I told them it was a party.' (Positions clash: D's concern vs A/B's expectation of alcohol.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C: 'How long will your parents be here for, Agent D?' Agent D: 'Just for a little while at the beginning. Maybe an hour or two? They'll want to see the place and say hi.' (Clarification reduces severity by identifying a limited time window.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C: 'Okay, so we just don't serve any drinks for the first couple of hours. When your parents leave, we can bring out the alcohol.' Agent D: 'Yeah, okay. That works. Thanks.' (A specific compromise is proposed and accepted by D, but other hosts have not yet confirmed.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A: 'Okay, that works. We can just keep everything in the fridge until they leave.' Agent B: 'Yeah, that works for me.' (All parties whose demands were in conflict explicitly accept the time-limited arrangement.)",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior concrete agreement (round 5) remains in effect.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior concrete agreement (round 5) remains in effect.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior concrete agreement (round 5) remains in effect.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior concrete agreement (round 5) remains in effect.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior concrete agreement (round 5) remains in effect.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior concrete agreement (round 5) remains in effect.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior concrete agreement (round 5) remains in effect.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Clarifying the duration of the conflicting condition (parents present for ~1-2 hours) enabled a time-limited accommodation.",
+      "A third party (Agent C) acted as a broker, proposing a concrete compromise that satisfied both sets of interests.",
+      "The resolution balanced respect for guests' family preferences with hosts' plans by sequencing alcohol availability rather than banning it outright."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T10:31:09.573478+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0073168,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2712,
+      "local_latency_ms": 32638.931,
+      "output_tokens": 3521,
+      "reasoning_tokens": 1984,
+      "successful_calls": 1,
+      "total_tokens": 6233
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "HW2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S50-HW2-R01",
+    "scenario_id": "S50"
+  },
+  "schema_version": 2
+}

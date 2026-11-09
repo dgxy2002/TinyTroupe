@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "shared cookware cleanliness (who washes the pan)",
+      "kitchen rota and time slots (who takes which weeknight slot)",
+      "use of extractor / kitchen odor control"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants proposed concrete solutions quickly (rule + rota) and assigned slots rather than leaving abstract complaints.",
+      "There is some repeated prompting to wash the pan and to switch on the extractor (B asks multiple times), producing mild repetition.",
+      "A expressed conditional acceptance ('on two conditions: everyone actually washes...') which is a reasonable enforcement concern, not an outright rejection.",
+      "D offered and accepted the late slot but never returned to confirm the key duty (washing), creating the outstanding issue."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The group agreed on the substantive rule and a concrete rota structure: multiple participants explicitly voiced the rule 'whoever uses shared cookware washes it' (Turn 1: 'whoever uses shared cookware washes it') and confirmed the rota 'rota starts next week' (Turn 11: 'I confirm... the rota can start next week'; Turn 12: 'Rota starts next week — I'll take Wednesday'). Assignments were made: B accepted the early slot, C took Wednesday, A offered to take the remaining night, and D was offered and accepted the late slot ('I'll take the late slot every week' — Turn 5). However, D never explicitly confirmed the core duty (washing after use). Three housemates (A, B, C) confirmed washing; D has not confirmed. Because this last, relevant commitment was not affirmed, the run ends with the practical incompatibility unresolved (the rota depends on everyone's commitment).",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A moved from being the implied recent user (opening) to offering to wash the pan and to take the remaining rota night, while adding conditions for compliance ('everyone actually washes...') — evidence: Turn 2 and Turn 6.",
+      "Agent B consistently pushed for early slot and immediate action; then confirmed willingness to participate in the rota (Turn 3, Turn 9, Turn 11).",
+      "Agent C proposed the rota and later confirmed participation and took Wednesday (Turn 4, Turn 12).",
+      "Agent D proposed and accepted the late slot (Turn 1, Turn 5) but did not explicitly confirm the required washing duty — no position change toward washing was recorded."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent D asked who used the pan and proposed a rule and rota; Agent A immediately offered to wash the pan and agreed to the proposed rule. No incompatible demands were made (Turn 1: 'whoever uses shared cookware washes it'; Turn 2: 'I'll wash the pan now').",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent B and Agent C both agreed to the 'whoever uses shared cookware washes it' rule and C proposed a concrete simple rota with slots assigned (Turn 3–4). No one opposed the proposal; the remaining slot was unresolved but not contested.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D accepted the late slot (Turn 5). Agent A accepted the remaining night and set two conditions about actual compliance and sticking to the rota (Turn 6). Conditions expressed expectations but no party opposed them — no substantive incompatibility yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B accepted the early slot and asked A to wash and switch on the extractor; Agent A agreed and asked for final confirmations from everyone that they will wash and start the rota next week (Turn 7–8). All requests were met with acceptance from some but not yet all; no opposing positions expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B verbally confirmed commitment and the rota start (Turn 9). Agent A repeated that they would wash and switch on the extractor and asked C and D to confirm (Turn 10). No explicit opposition was voiced in this round.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "By the end of round 6 three housemates (A, B, C) have stated they will wash shared cookware and that the rota starts next week (e.g. Turn 10: 'I'll wash the pan and switch on the extractor'; Turn 11: 'I confirm I'll wash shared cookware after use and the rota can start next week'; Turn 12: 'I confirm I'll wash shared cookware after use. Rota starts next week — I'll take Wednesday.'). Agent D, however, has taken the late slot (Turn 5: 'I'll take the late slot every week') but has not explicitly confirmed that they will wash shared cookware after use. That outstanding lack of confirmation leaves a mild unresolved practical conflict about whether the rota will have full commitment and whether D",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The main tensions are practical: B needs early quiet for sleep, D arrives late and needs a late slot, A cooks most nights and is concerned about fairness/enforcement.",
+      "Housemates can agree on rules and share time slots verbally, but a rota that relies on full participation needs explicit confirmation from every person; a missing confirmation is a meaningful unresolved risk.",
+      "Requests about immediate practical remedies (wash pan, switch on extractor) were handled by A's promises, but the larger coordination problem is enforcement and accountability for future compliance."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T11:38:53.684315+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00856005,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3037,
+      "local_latency_ms": 38086.996,
+      "output_tokens": 4102,
+      "reasoning_tokens": 2624,
+      "successful_calls": 1,
+      "total_tokens": 7139
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M1-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

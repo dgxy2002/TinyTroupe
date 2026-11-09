@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen cleanliness / unwashed shared pan",
+      "access to stove (blocked by unwashed pan)",
+      "cooking smells spreading into bedrooms",
+      "use of extractor fan and closing the kitchen door"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is concise and practical; participants state concrete complaints and quickly move to a simple rule.",
+      "Two related but distinct issues (smell and unwashed pan) are handled in parallel, which is efficient.",
+      "Little needless repetition; most turns advance the problem or propose a solution."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The group agreed concrete behavioral rules: Agent C proposed \"agree to wash whatever we use as soon as we're done cooking,\" D accepted (\"Sounds good to me\"), and Agent A explicitly accepted: \"Fine. We wash our own things. And I can close the door.\" This mutual acceptance settled both the cleaning and smell-mitigation demands.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from defensive (noting they'd finished and claiming they used the fan) to explicit acceptance: \"Fine. We wash our own things. And I can close the door.\"",
+      "Agent C advanced from complaint to proposing a concrete household rule (wash as soon as done) and remained consistent.",
+      "Agent D shifted from complaint to endorsing the proposed rule (\"Sounds good to me\").",
+      "Agent B introduced the smell concern and requested mitigations (fan use, close door); B's request was accepted as part of the final compromise."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent D: \"By the time I get home, the kitchen's always a mess or someone's using it. I just want to cook.\" vs Agent A: \"I just finished. But the pan from last night is still there.\" — a clear dispute over kitchen state and use.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D: \"Right, and I can't use the pan. So I still can't cook.\" and Agent A: \"Well, it needs to be washed.\" — the same practical incompatibility (access to pan/stove) persists without resolution.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B raises a new but related issue: \"The smell is the problem... Can you please use the fan and close the door when you're cooking?\" Agent A replies defensively: \"I was using the fan.\" — introduces a second substantive complaint (smell mitigation) and disagreement about whether current behavior suffices.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B: \"The fan's not enough then. It's still really strong. Can you shut the kitchen door as well next time?\" and Agent C: \"But nobody can use the stove until this pan is washed.\" — stronger opposing positions (a demand to change cooking behavior and an insistence that the unwashed pan prevents others from cooking).",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D: \"Exactly.\" (supports C). Agent C proposes a concrete rule: \"So, can we just agree to wash whatever we use as soon as we're done cooking?\" — moves toward resolution but not yet accepted by all (A has not agreed yet).",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D: \"Sounds good to me.\" and Agent A: \"Fine. We wash our own things. And I can close the door.\" — explicit mutual acceptance of the proposed practical arrangements.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The conflict involved two linked practical problems: a persistent smell nuisance and a shared unwashed pan that blocks stove use.",
+      "Majority alignment (B, C, D) applied pressure toward a shared-norm solution; a direct proposal from C produced a focal solution.",
+      "Resolution is pragmatic and behavioral (wash your own items; close the door) but contains no enforcement or follow-up mechanism."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:57:03.866240+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00599405,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2685,
+      "local_latency_ms": 25849.834,
+      "output_tokens": 2863,
+      "reasoning_tokens": 1664,
+      "successful_calls": 1,
+      "total_tokens": 5548
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M1-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

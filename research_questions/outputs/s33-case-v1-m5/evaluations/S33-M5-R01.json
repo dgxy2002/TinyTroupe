@@ -1,0 +1,124 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking schedule/stove access",
+      "kitchen ventilation/food smells",
+      "shared cookware cleanliness/who washes shared items"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation moves from complaint to concrete proposals (scheduling and a house-rule), which is natural and productive. (e.g., Turn 3–4 scheduling exchange; Turn 14 rule proposal).",
+      "Few repetitions; turns are concise and on-topic. One participant (A) initially denies responsibility then accepts a rule (Turn 10, Turn 18).",
+      "No role confusion; factual claims are limited and consistent with the setting."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent C proposed a household norm: '...can we just agree that if you use a shared pot, you wash it as soon as you're done?' (Turn 14). Agent D accepted: 'Yeah, that's fair.' (Turn 15). Agent A then agreed: 'Fine. As long as we don't just assume who made the mess.' (Turn 18). Thus the shared-pan/cleaning conflict was settled by group acceptance of a 'wash after use' rule, with A adding a condition against presumptive blame. The ventilation/smell request (open window) was not agreed and remains unsettled.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: began by stating a scheduling constraint (Turn 1) and later accepted the scheduling compromise implicitly (Turn 3) and supported the cleaning rule (Turn 15).",
+      "Agent A: initially defensive about the unwashed pan ('That wasn't me.' Turn 10) but agreed to the 'wash after use' norm in Round 8 ('Fine. ...') and also agreed to finish cooking by 8:15 (Turn 4).",
+      "Agent C: consistently pushed for cleaning and proposed the explicit rule (Turn 14); maintained position until others accepted.",
+      "Agent B: raised the smell/ventilation problem and requested window opening (Turns 5,7) but did not receive an explicit agreement on that request by the transcript end."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent D: 'By the time I can get to the stove, it's already too late for me to start cooking.' Agent A: 'What time do you want to cook?' — a scheduling incompatibility is introduced but not yet resolved.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D: 'I'm usually ready to cook around 8:15.' Agent A: 'Okay, I can be done by 8:15.' — parties agree on a cooking time, resolving the scheduling tension.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B: 'When you cook, can you use the fan and open the window?' Agent A: 'I do use the fan.' — a new smell/ventilation complaint appears and remains unsettled (open window not agreed).",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B: 'It's not enough, the smell is all the way to my room. Can you open the window as well?' Agent C: 'Okay, but what about the pan from last night?' — the ventilation complaint intensifies and a separate cleanliness conflict (unwashed pan) is introduced; both unresolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A: 'That wasn't me.' Agent C: 'Okay. But it's been here since last night. It needs to be washed.' — continued dispute about who used/should clean the shared pan; no settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A: 'Then whoever used it should wash it.' Agent C: '...Can we just agree that if you use a shared pot, you wash it as soon as you're done?' — a proposed house rule reduces immediate tension but is not yet accepted by all.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D: 'Yeah, that's fair.' Agent C: 'So are we all doing that? Wash it straight after you use it?' — emergence of agreement from D; some outstanding acceptance remains (not everyone has explicitly confirmed).",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A: 'Fine. As long as we don't just assume who made the mess.' Agent C: 'Okay. It's not about blaming. Agent B, are you okay with that?' — A explicitly accepts the washing-after-use rule (with a condition); the cleaning issue is effectively settled among those who spoke, but the ventilation/smell request (open window) was not agreed and remains a minor unresolved issue.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Scheduling conflicts can be resolved quickly by specifying and matching times (Agent D gave 8:15; Agent A agreed).",
+      "Cleanliness problems were persistent until a concrete behavioral rule ('wash after use') was proposed and accepted; explicit rules help prevent recurring shared-resource disputes.",
+      "Ventilation/odor concerns remained unresolved because the requested mitigation (open window) was not explicitly agreed to, showing that multiple distinct friction points can coexist and require separate agreements."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T16:54:16.575217+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 8 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00774805,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2789,
+      "local_latency_ms": 36164.558,
+      "output_tokens": 3727,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6516
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "M5",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S33-M5-R01",
+    "scenario_id": "S33"
+  },
+  "schema_version": 2
+}

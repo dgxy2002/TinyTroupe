@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smell/ventilation",
+      "unclean shared dishes",
+      "weeknight stove access and fair rota/scheduling"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants spoke in concise, ordinary-household language and offered concrete fixes (open window, wash pan) rather than abstract admonitions.",
+      "There is noticeable repetition across rounds: multiple reiterations of 'we'll set the rota tomorrow' without new detail.",
+      "Speakers stayed consistent about facts and roles (who cooks, who is late), and proposed reasonable trade-offs (fairness, late-arrival flexibility)."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Immediate hygiene/ventilation problems were addressed by commitments from the responsible parties: Agent A promised to mitigate the smell tonight by opening the window and switching on the extractor (\"Tonight I'll open the window and turn on the extractor\") and Agent C agreed to wash the shared pan immediately (\"Okay, I'll wash the pan now\"). Those concrete, person-specific fixes settled the immediate complaints. The broader substantive issue—what fair weekday rota or concrete kitchen rules will be—was not decided; the group only agreed to \"set rules tomorrow,\" leaving that conflict unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent C moved from complaining about the dirty pan to committing to wash it immediately (Turn 2 -> Turn 6).",
+      "Agent A shifted from being the target of complaints to promising immediate mitigation (open window/extractor) while defending that future rules should be fair (Turn 4 and 8).",
+      "Agents B and D retained their positions (B pressing for immediate action and rules; D pushing for inclusion in a weekday rota) but accepted the plan to negotiate rules tomorrow."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B demands immediate action and rules: \"Agent A, can you open the kitchen window and switch the extractor on... Whoever left the pan, please wash or move it out now. Let’s agree on basic kitchen rules tomorrow...\" Agent C echoes and adds a rule suggestion: \"Agent A, can you open the window and switch the extractor on? I'll wash this pan now, but we need to agree simple kitchen rules tomorrow...\" Strong, explicit incompatible expectations about kitchen cleanliness/ventilation and responsibility appear.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D proposes a rota including late arrivals: \"Can we agree a simple weekday rota... I usually get home late, so please include me.\" Agent A concedes to set rules tomorrow and offers immediate mitigation: \"Tonight I'll open the window and turn on the extractor; Agent C said they'd wash the pan.\" The immediate tension is softened by promises to act and to set rules, but the substantive details of fairness remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B repeats the immediate request: \"Please switch the extractor on and wash the pan now...\" Agent C accepts a concrete fix: \"Okay, I'll wash the pan now.\" The pan-cleaning issue is being addressed; the broader scheduling/fairness issue remains only as a plan to resolve tomorrow.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D reiterates the rota proposal and asks to be included: \"Let's set a quick weekday rota tomorrow: each of us picks two weeknights. Please include me — I often get home late.\" Agent A agrees to set the rota and requests fairness/flexibility: \"Okay — we'll set the rota tomorrow and include you, Agent D. Make sure it's fair, includes late-arrival flexibility...\" The parties agree to negotiate rules tomorrow; substantive content is still outstanding.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Participants repeat agreement to address the issue tomorrow without adding detail: \"Okay, fair — we'll sort the rota tomorrow, Agent A.\" and \"Okay — we'll set the rota tomorrow. Make sure it's fair and includes late-arrival flexibility.\" The unresolved issue (specific rota/fairness) persists but has been downgraded to a minor outstanding matter.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D repeats closure to plan rules tomorrow: \"Okay — let's sort the rota tomorrow.\" No new disagreement appears; the scheduling/fairness issue remains pending.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The conversation contained two separable conflicts: immediate hygiene/ventilation (solved by direct offers to act) versus longer-term scheduling fairness (deferred).",
+      "Concrete, actor-specific promises (C: wash pan; A: open window/use extractor) were effective at resolving immediate grievances.",
+      "Calls for a rota centered on fairness and late-arrival accommodation; those normative concerns were not negotiated, only postponed."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T07:19:45.614756+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 3 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00694055,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2759,
+      "local_latency_ms": 37165.042,
+      "output_tokens": 3327,
+      "reasoning_tokens": 1984,
+      "successful_calls": 1,
+      "total_tokens": 6086
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "W4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-W4-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

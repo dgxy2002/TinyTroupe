@@ -1,0 +1,152 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "use of the living-room window corner",
+      "Agent D's physiotherapy/medical need for a wall space",
+      "Agent A's desk and daytime work hours",
+      "Agent C's laundry drying (no window in room, dripping issue)",
+      "Agent B's weekend hosting (unfixed, long visits) and inability to plan around short slots"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers give concrete, personal constraints (medical need, no-window room, hosting patterns) rather than abstract claims: e.g. Agent D: 'I have a back injury... I have to do these exercises every morning and evening.'",
+      "Practical proposals appear (time-sharing, wheeled rack, plastic sheet) and are discussed; responses are role-consistent and grounded in physical constraints ('it'll still drip everywhere when I move it').",
+      "Some repetition of core facts and positions (medical need, laundry immovability, weekend hosting) but the conversation stays focused and constructive rather than rhetorical."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No comprehensive settlement was reached. A and D reached a tentative time-sharing understanding for work hours (Agent A: 'morning and evening should be fine.' Agent D: 'Before 9 and after 6 is fine.'), but laundry and weekend hosting remain incompatible with D's daily physiotherapy requirement. Proposed mitigations (wheeled rack, plastic sheet) were rejected or seen as partial fixes and did not resolve the weekend hosting constraint ('that doesn't solve the problem for the weekend').",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A initially claimed the corner for work but softened to accept time-sharing: 'morning and evening should be fine.'",
+      "Agent D consistently maintained a medical need but accepted a proposed schedule around work hours ('Before 9 and after 6 is fine'), showing partial flexibility.",
+      "Agent C consistently refused to accept moving the rack (practical objection: 'it's heavy and it drips') and rejected wheel-based solution on the same grounds.",
+      "Agent B consistently asserted that weekend guest use is long/unfixed and cannot be planned around, maintaining that weekend access is a substantive constraint."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A: 'I need that corner for my work desk.' vs Agent D: 'I need a spot with a wall for my physio exercises.' Two incompatible claims over the same corner appear.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A asks about scheduling but Agent B adds an independent use: 'my friends use that corner when they come over on weekends.' The number of competing claims increases.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C: 'I need that corner to dry my laundry.' plus Agent D's medical claim 'I have a back injury... I have to do these exercises every morning and evening.' Three parties now state substantive, incompatible needs.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A and D reach a tentative time-sharing agreement ('morning and evening... before 9 and after 6 is fine'), reducing their bilateral conflict, but D still asks Agent C to clear the space, leaving other incompatibilities unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C insists the corner is necessary ('The only place I can dry my clothes') while Agent B repeats weekend use; C's immovability raises the stakes for D's and B's needs.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D requests moving the rack for 'the half hour I need' but Agent B counters that weekend visitors make clearing impossible; conflicting practical constraints persist.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D asks when guests visit; Agent B: 'They come over for the whole afternoon or evening. We can't really plan around a specific half-hour slot.' The inability to schedule around guests hardens the disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C: 'I can't just move the rack twice a day... it's heavy and it drips.' vs Agent D: 'So what am I supposed to do? Just not do my physio?' Positions appear entrenched — medical necessity versus practical impossibility.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 8
+      },
+      {
+        "evidence": "Agent A explicitly sides with Agent D ('He has a point. A medical need... is more serious'), while Agent B emphasizes spatial limits for hosting — polarization increases with little common ground.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 9
+      },
+      {
+        "evidence": "Agent C reiterates the necessity of drying clothes for all ('We all need clean clothes to wear') and Agent D presses for a solution; no new workable options are accepted, so the stalemate continues.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 10
+      },
+      {
+        "evidence": "Agent A proposes a practical mitigation ('get a laundry rack on wheels'); Agent C rejects the suggestion on grounds of dripping. Some problem-solving appears but the main conflicts remain.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 11
+      },
+      {
+        "evidence": "Agent A suggests a plastic sheet to catch water; Agent B points out this doesn't address weekend hosting. Dripping may be mitigated, but the weekend/hosting vs daily physio conflict remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The conflict is primarily about exclusive use of a single physical spot with multiple non-overlapping but incompatible needs (workstation, drying clothes, medical exercise, hosting).",
+      "Agent D and Agent A can partly accommodate each other by scheduling (before 9 / after 6), but Agent C's drying requirements and Agent B's irregular, long guest visits create scheduling constraints that can't easily be resolved by short time slots.",
+      "Physical constraints (no window in C's room, dripping when moving the rack) raise the cost of accommodation and limit simple fixes; proposed mitigations address some symptoms (drips) but not the core exclusivity on weekends."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T11:59:16.404661+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00854105,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3273,
+      "local_latency_ms": 39121.264,
+      "output_tokens": 4063,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 7336
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "K4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S62-K4-R01",
+    "scenario_id": "S62"
+  },
+  "schema_version": 2
+}

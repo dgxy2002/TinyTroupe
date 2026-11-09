@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen ventilation / cooking smells",
+      "dishwashing / shared cleaning responsibility",
+      "shared supplies payment and organisation",
+      "stove access / scheduling for weeknights"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Agents moved quickly from complaint to concrete proposals (A's rules, $10/month, rotation).",
+      "Minor repetition occurred (B asked A twice to switch on the extractor; Round 5 repeats the slot agreement), but it served confirmation rather than obstruction.",
+      "Resolution involved explicit conditional trade-offs (A offered slots or extra portions with chip-in/swap), which grounded the agreement."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The parties reached concrete, mutual arrangements: Agent A agreed to ventilation and to allow D two late-week stove slots or accept requests for extra portions conditional on chip-in or swaps: \"You can have two late-week slots each week. Or if you want extra portions some nights, ask me by the evening before and either chip in for the groceries or swap me a night.\" Agent D accepted: \"Okay — I'll take two late-week slots, Tues and Thu.\" Cleaning and supply arrangements were also accepted: Agent C committed to wash the pan tonight (\"I'll wash this pan tonight.\"), and Agent B agreed to wash his stuff and \"chip in\" and to take the first month of organising supplies. These concrete, mutual commitments settled the substantive incompatibilities.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A shifted from general proposer to compromiser by explicitly granting D two late-week slots and setting conditions for extra portions (evidence: Turn 7).",
+      "Agent D softened from a complaint about not being able to use the stove to accepting a negotiated allocation (Tues/Thu) with stated backup behaviour for extras (Turn 8).",
+      "Agent C moved from complaint about an unwashed pan to a concrete offer to wash that pan (Turn 5); Agent B earlier accepted washing and chipping in (Turn 2). No participant later revoked these commitments."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent A proposes household rules: \"everyone washes their own pans the same night and turns on the extractor/open the window when cooking\" and refuses to be \"the default cleaner or buyer of everything.\" Agent B agrees to chip in and wash tonight but also asks A to switch on the extractor immediately. C and D have not yet accepted or responded, so the original problems (smell, unwashed pan, stove use expectations) remain partly unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: \"I'll switch on the extractor and open the window now... let's each chip in $10/month and rotate who buys the shared items.\" Agent B: \"I'll chip in $10 and take the first month...\" A takes the extractor action. This reduces immediate tension, but C's unwashed pan and D's concern about stove access are still unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C re-emphasises dishwashing and offers: \"I'll wash this pan tonight.\" Agent D raises a new, explicit incompatibility with A's plan: \"when you say you'll cook most nights, does that mean I won't get to use the stove on weeknights? ... can I have a couple of late-weeknight slots, or could you cook an extra portion for me some nights?\" This is a clear substantive clash about stove access that remains unresolved at round end.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A offers a concrete accommodation: \"You can have two late-week slots each week. Or if you want extra portions some nights, ask me by the evening before and either chip in for the groceries or swap me a night.\" Agent D accepts: \"Okay — I'll take two late-week slots, Tues and Thu.\" Earlier dishwash commitments are present (Agent C: \"I'll wash this pan tonight.\" Agent B earlier: \"I'll wash my stuff tonight and chip in.\"). Supplies responsibility was accepted by B. The stove-access issue and immediate cleaning/ventilation steps have been concretely allocated and accepted.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Participants repeat and confirm the agreement: Agent D restates \"Okay — I'll take Tues and Thu.\" Agent A notes it. No new substantive disagreement appears; earlier settlements remain in place.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Previous concrete agreements (washing, extractor use, $10/month supplies, D's stove slots) stand with no new conflict introduced.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Three separate but related problems (smell/ventilation, unwashed dishes, and stove access) required distinct solutions; the group addressed each with a targeted commitment rather than a single blanket rule.",
+      "Practical scheduling (stove slots) can be resolved by allocating fixed times plus a conditional mechanism (request + chip-in/swap) to handle ad hoc needs.",
+      "Assigning responsibility for shared supplies ($10/month, rotating purchaser) and an explicit first volunteer (B) reduced ambiguity about ongoing chores/costs."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T18:45:38.750702+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0096843,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2902,
+      "local_latency_ms": 62658.049,
+      "output_tokens": 4681,
+      "reasoning_tokens": 3264,
+      "successful_calls": 1,
+      "total_tokens": 7583
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "P1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-P1-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

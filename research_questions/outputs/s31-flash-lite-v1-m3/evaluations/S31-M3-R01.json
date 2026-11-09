@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smells affecting bedrooms/sleep",
+      "unwashed shared pan (pork fat) / responsibility for washing shared cookware",
+      "use of extractor fan/ventilation",
+      "stove use on weeknights (scheduling / whether cooking at night is acceptable)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Quick, concrete proposal from B (use fan + wash immediately) led to swift acceptances from A and others—efficient practical resolution of the cleanliness/smell issue.",
+      "D repeats identical or near-identical agreement multiple times across rounds (Rounds 3–6), producing needless repetition without new content: 'That works for me.' / 'Definitely, that makes things much easier for everyone.'",
+      "The conversation stays consistent with the facts in the setting; however one raised issue (stove use on weeknights) was left unaddressed."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Housemates agreed on immediate cleaning and ventilation norms but did not address the separate scheduling complaint. Concretely: Agent A committed to the behavioral change: 'I'll make sure to use the fan and clean up right after,' Agent B accepted ('Sounds good.'), Agent C asked for a group rule: 'can we all agree to wash the pan right after we use it from now on?' and Agent D assented: 'That works for me.' These lines show a mutual spoken agreement to wash the pan immediately and use the extractor fan. However, Agent D's earlier claim that 'it is impossible to use the stove on weeknights' was not discussed or settled, so some substantive disagreement remains.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A softened/changed position by accepting the proposed behavior: 'I'll make sure to use the fan and clean up right after.'",
+      "Agent B initiated a rule proposal and accepted A's commitment ('Sounds good.').",
+      "Agent C pushed for an explicit group agreement to wash the pan after use; this was accepted.",
+      "Agent D initially raised a broader complaint about weeknight stove use but did not pursue it; D later agreed to washing, so D changed to accept the cleaning norm but left the scheduling claim unresolved.",
+      "Overall: several participants adjusted toward a shared behavioral norm (washing + fan), but the separate scheduling demand (no/stove-limit on weeknights) was not altered or resolved by others."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Opening situation: B said 'this cannot keep happening' about smells; C found last night's pan with pork fat; D said 'it is impossible to use the stove on weeknights.' In Round 1 A defends: 'I'm not the only one... so it's not fair to pin every problem on me.' B proposes rules (fan + wash). Multiple opposing expectations (who is responsible, whether stove use on weeknights is acceptable) are present and unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "A agrees to use the fan and clean up: 'I'll make sure to use the fan and clean up right after,' and B accepts. This reduces the immediate dispute over cleanliness/smell, but the earlier claim about stove use on weeknights (D) remains unaddressed, so some substantive disagreement persists.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "C asks for a group rule: 'can we all agree to wash the pan right after we use it from now on?' and D replies 'That works for me.' The group reaches mutual agreement on washing/use of the fan (A had already agreed). However, the separate issue about limiting stove use on weeknights was not discussed or resolved, so a substantive disagreement remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "No new substantive claims; D repeats agreement ('That works for me.'). The cleaning/fan agreement stands, but the unresolved stove-on-weeknights issue persists silently.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Only repeated confirmations from D ('Definitely, that makes things much easier for everyone.'). No discussion of the earlier claim about stove use on weeknights; that incompatibility remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Further repetition from D without addressing the unresolved issue. The agreed behavior (wash pan after use; use extractor fan) remains accepted but the stove-scheduling complaint is still not settled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Lack of prior household rules created ambiguity about responsibility for shared cookware and ventilation; a simple behavioral rule (wash immediately/use fan) directly addresses both smell and cleanliness.",
+      "Mutual, explicit verbal commitments in a speech-only setting counted as settlement for the pan/ventilation issue: all four participants voiced acceptance.",
+      "A distinct practical demand (limiting or forbidding stove use on weeknights) was introduced but never negotiated, so partial resolution left an outstanding scheduling conflict."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T15:36:27.282562+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0103968,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2688,
+      "local_latency_ms": 47540.962,
+      "output_tokens": 5064,
+      "reasoning_tokens": 3712,
+      "successful_calls": 1,
+      "total_tokens": 7752
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M3-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

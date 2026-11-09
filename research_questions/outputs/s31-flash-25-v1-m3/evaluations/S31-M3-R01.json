@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smell/spread into bedrooms",
+      "dirty shared pan / cleaning responsibility",
+      "stove access / weeknight scheduling",
+      "who provides kitchen supplies"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 3,
+    "dialogue_quality_notes": [
+      "Several lines are verbatim or near-verbatim repeats (Agent A repeated lines in Rounds 1/2 and again in Round 6; Agent C repeats the same acknowledgement multiple times), which inflates perceived agreement but adds little progress.",
+      "Speakers give concrete reasons (A: buys supplies/needs break; D: returns late), which helps clarify underlying constraints but no concrete follow-up is proposed.",
+      "Grounding is consistent — participants refer to the same shared facts (unwashed pan, smell, stove availability)."
+    ],
+    "dialogue_repetition_score": 4,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Multiple substantive incompatibilities persist with no mutual agreement or enacted changes: smells from cooking repeatedly spreading (B's complaint), an unwashed shared pan with pork fat (C's complaint), and D's inability to use the stove on weeknights because it's occupied when they return. Some participants acknowledged others' perspectives (e.g. C and A acknowledged others' points), but no one proposed or accepted concrete arrangements (who will clean, schedule stove time, or mitigate smells), so the conflict remains unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A softened toward D's scheduling complaint by Round 6: \"Okay, I get it. The stove is busy by the time you're back.\" (shows understanding but not commitment to change).",
+      "Agent C moved from complaining about the dirty pan to acknowledging A's contributions (Rounds 2–3), but did not request or accept a cleaning plan.",
+      "Agent D clarified their position (can't cook weeknights due to timing) and remained in that position; no accommodation was secured.",
+      "Overall, participants provided clarifications and acknowledgements, but no one shifted to accept another's concrete demand or proposed a binding compromise."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent A: \"I cook most nights because it's my only break. And I'm usually the one buying the dish soap and gas for the kitchen, too.\" (Defensive claim of responsibility; no settlement of the earlier complaints about smell, the unwashed pan, or stove access.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 4,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 9 — Agent A repeats: \"I cook most nights... I buy the dish soap and gas... I get that the smell is an issue, but it's not just me.\" Turn 11 — Agent C: \"Okay, I hear you about cooking and buying stuff.\" (Acknowledgement from C softens immediate tension but does not resolve stove access, cleaning, or smell issues.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Turns 15 & 19 — Agent C repeats: \"Okay, I hear you about cooking and buying stuff.\" (Repetition of acknowledgement; no concrete agreement on cleaning, smell mitigation, or stove scheduling.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 24 — Agent D: \"Yeah, I hear all that. But what about me? I still can't cook on weeknights.\" (Introduces/foregrounds a distinct and substantive scheduling/access complaint about stove use; adds to unresolved issues.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 25 — Agent A: \"Why can't you cook on weeknights?\" Turn 26 — Agent D: \"I get home after everyone else. By the time I'm back, the stove is usually taken, or someone's just finishing up.\" (Clarifies D's complaint but does not settle competing claims on stove time, cleaning, or smell.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turns 27 & 30 — Agent A: \"Okay, I get it. The stove is busy by the time you're back.\" (Acknowledge/softening from A reduces immediate rhetorical tension but no concrete arrangement or change in behavior is agreed or enacted.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Conflict has multiple linked dimensions: cleanliness (shared pan), nuisance (smell spreading), and access (stove scheduling).",
+      "Agent A frames their frequent cooking as a personal need and a contribution (buying supplies), which complicates simple blame for smell.",
+      "Agent D's inability to cook on weeknights is a practical scheduling problem rather than a normative dispute, and would require coordination (schedule or shared rules) to resolve.",
+      "Acknowledgement (\"I hear you\") occurred but was not paired with commitments or concrete trade-offs, so it did not resolve practical incompatibilities."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T16:10:58.898409+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00769755,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2691,
+      "local_latency_ms": 34465.419,
+      "output_tokens": 3714,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6405
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M3-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

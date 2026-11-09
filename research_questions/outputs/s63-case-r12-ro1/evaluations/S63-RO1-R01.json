@@ -1,0 +1,153 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who works the two days around the Hari Raya Puasa public holiday",
+      "fairness/turn-taking for holiday coverage",
+      "religious observance (Hari Raya) versus prepaid family holiday",
+      "childcare constraints"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers provide concrete, independent reasons (paid bookings, childcare closure, religious obligations) rather than abstract claims.",
+      "Several turns restate prior positions verbatim or near-verbatim (e.g., multiple \"I can't cancel\" and \"I've done my bit\" lines).",
+      "No proposed solution, manager decision, or third-party intervention appears in the transcript.",
+      "Conversation is consistent with the workplace setting and constraints (no relief staff, two required on duty)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No settlement was reached. All four staff stated they could not work the two contested days (e.g., Agent A: \"I've already booked a family holiday, months ago.\" Agent B: \"My kid's childcare is closed on those days.\" Agent D: \"I need those days for Hari Raya.\" Agent B at the end: \"Make that four of us. ... I have no choice.\"). No one offered an accepted trade, accommodation, or concrete arrangement to ensure two people would be on duty, so the substantive incompatibility remained unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A consistently refused to change: Turn 1 \"I can't change mine...\" and repeated in Turns 5, 9, 22.",
+      "Agent B consistently maintained inability to change due to childcare: Turn 2 and final Turn 28 \"Make that four of us... I have no choice.\"",
+      "Agent C consistently invoked past coverage entitlement and demanded time off: Turn 3, Turn 17, Turn 21/23; no backdown observed.",
+      "Agent D consistently asserted the religious need to be off for Hari Raya and did not offer compromise: Turn 4, Turn 10, Turn 24, Turn 26."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A: \"I can't change mine. I've already booked a family holiday, months ago.\" Agent B: \"I can't change either. My kid's childcare is closed on those days.\" (Two staff declare they cannot change; a potential staffing problem is set up but not yet contested.)",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C: \"I want those days off as well. I've covered every holiday for two years.\" Agent D: \"I need those days for Hari Raya.\" (Now four staff have expressed leave claims for two days that require two people on duty — clear substantive incompatibility emerges.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A: \"I can't cancel it.\" Agent C: \"And we all have our reasons.\" (Positions and reasons repeated; conflict about who will work remains unresolved.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D: \"But this is the biggest holiday for us.\" Agent A: \"...the whole family's trip is booked. I can't just cancel on them.\" (Reinforces incompatible claims: religious observance vs prepaid family holiday.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D describes specific Hari Raya activities: \"The day before is for preparing... The second day is for visiting relatives.\" Agent A: expresses sympathy but remains unavailable. (No accommodation or solution proposed.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D: \"But a holiday is not the same as Hari Raya.\" Agent A: \"...flights and hotels are already paid for. I can't get the money back.\" (Conflicting weights of obligations restated; no resolution.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C: \"I've worked every single holiday for two years so you all could have your leave.\" Agent D: \"I've only been here a few months.\" (Fairness/entitlement dispute intensifies the incompatibility about who must work.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C: \"It's someone else's turn.\" Agent D: \"So it's their turn, then.\" (Positions on turn-taking remain contested; no agreement reached.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "Agent A repeats inability to cancel: \"My trip is booked and paid for.\" Agent C reiterates turn-taking: \"It is about whose turn it is.\" (Standoff continues with mutual insistence.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 9
+      },
+      {
+        "evidence": "Agent A: \"I'm not available. The holiday is booked.\" Agent C: \"But two people still have to work. And I've done my bit.\" (Practical need to staff shifts remains unmet; no one offers to cover.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D: \"So that's two people who aren't working. We still need two people on duty. And I can't work on Hari Raya.\" Agent A: \"Well, I can't work either.\" (At least three staff state they cannot work, creating an entrenched staffing impasse.)",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 11
+      },
+      {
+        "evidence": "Agent D: \"So that's three of us who can't work.\" Agent B: \"Make that four of us. My childcare is closed on both days. I have no choice.\" (All four staff confirm inability to work those days — complete, unresolved impasse.)",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Conflict arises from a scarcity problem: two required on duty vs four staff requesting leave.",
+      "Different types of obligations (religious observance, prepaid family travel, childcare) create competing, non-comparable claims.",
+      "A history of one person covering holidays (Agent C) produces fairness claims but no mechanism for enforcing rotation.",
+      "Because there is no established priority rule and no relief staff, individual constraints lead quickly to a collective impasse."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T12:26:35.568326+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00725505,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2961,
+      "local_latency_ms": 33352.565,
+      "output_tokens": 3459,
+      "reasoning_tokens": 1664,
+      "successful_calls": 1,
+      "total_tokens": 6420
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "RO1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S63-RO1-R01",
+    "scenario_id": "S63"
+  },
+  "schema_version": 2
+}

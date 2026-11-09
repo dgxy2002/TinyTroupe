@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "washing shared dishes",
+      "weeknight stove access / fairness (rota vs notice)",
+      "cooking smells and extractor use / closing corridor door"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Efficient, solution-focused negotiation: proposals, clarifications, and acceptances occur quickly.",
+      "Minor needless repetition: D restates the extractor request and thanks in Rounds 5–6 despite prior agreement.",
+      "Speakers stayed on-topic and consistent about the physical issues (dishes, notices, extractor)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group agreed concrete household procedures: (1) \"whoever cooks washes what they used before leaving the kitchen that night\" (C's proposal, accepted by D, A, and B), (2) on weeknights people should \"call or text quickly before you start cooking\" with a rota only if notice keeps failing (C's clarified rule, accepted by D and A), and (3) cooks will use the extractor and close the corridor door before cooking to limit smells (B's request accepted by A). Key supporting lines: C: \"whoever cooks washes what they used... On weeknights, please call or text...\" D: \"Okay, that works for me. I'll text before I start cooking...\" A: \"Okay — I'll turn the extractor on and close the corridor door when I cook.\" These concrete acceptances by the relevant parties constitute settlement.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C initiated a washing/notice rule and retained that position throughout; others accepted it (D in Round 2, A in Round 3, B in Round 3).",
+      "Agent D shifted from complaint to acceptance of C's rule and offered the call/text idea (accepted in Round 2).",
+      "Agent A moved from being the source of the smell complaint context to accepting the wash/notice rule and agreeing to use the extractor and close the door (Turns 5 and 7).",
+      "Agent B added the extractor/door requirement and accepted the overall rules once A agreed (Turns 6 and 8)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (C) proposes a rule for washing: \"whoever cooks washes what they used before leaving the kitchen that night.\" Turn 2 (D) raises an additional demand about weeknight fairness: \"Can we also add a simple weeknight stove rota or a 'please call before you start' rule?\" These are competing expectations about kitchen use and responsibility and start the concrete negotiation.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (C) clarifies a combined proposal including wash, notice, swap, and rota-if-needed: \"whoever cooks washes... On weeknights, please call or text... If the notice rule keeps failing, we'll set a simple stove rota.\" Turn 4 (D) accepts: \"Okay, that works for me. I'll text before I start...\" The explicit acceptance reduces the intensity of the disagreement but some household-wide enforcement and practical detail remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (A) accepts the wash/notice/swap plan: \"Okay, that works for me. I'll follow it...\" Turn 6 (B) introduces an additional practical demand to reduce smell: \"Can you switch on the extractor fan and close the corridor door while you're cooking?\" This is a new, minor condition but not opposed by others, so the substantive disagreement is small and softening.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (A) accepts B's request: \"Okay — I'll turn the extractor on and close the corridor door when I cook.\" Turn 8 (B) asks only for the extractor to be on before starting: \"Please switch the extractor on before you start cooking.\" At this point the core incompatible demands (who washes, how weeknight cooking is signalled, and using extractor/closing door to limit smells) have explicit, concrete acceptance from the relevant parties.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10 (D) repeats the extractor request to A: \"Agent A, please turn the extractor on before you start cooking — that'll help...\" Turn 11 (A) reconfirms compliance: \"Okay — I'll switch the extractor on before I start cooking.\" No new substantive disagreement appears; statements restate the already-agreed rule.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turns 12 and 15 (D) offer confirmation/thanks: \"Okay — that'll help...\" and \"Okay - thanks, Agent A. That should help...\" No new demands or disagreements are expressed; the conversation repeats acknowledgement of the prior agreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Three distinct practical tensions were present: responsibility for washing, fair access to a single stove on weeknights, and reducing lingering cooking smells.",
+      "The group used a tiered approach: preferred lightweight notice rule first (call/text), with a rota as a fallback if the notice system fails.",
+      "Practical mitigation (turning on extractor and closing door) was accepted quickly and served as a low-cost accommodation to the smell issue."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T07:06:43.164957+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0077688,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2808,
+      "local_latency_ms": 30697.9,
+      "output_tokens": 3735,
+      "reasoning_tokens": 2304,
+      "successful_calls": 1,
+      "total_tokens": 6543
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "W2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-W2-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

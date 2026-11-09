@@ -1,0 +1,122 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "use of shared house fund for alcohol",
+      "fairness of cost-sharing for non-alcoholic drinks",
+      "who should pay after the fund is empty"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is concise and realistic; agents state factual information and normative claims (e.g., fairness).",
+      "Key factual reveal (fund empty and A's personal $20) occurs clearly in Turn 6: 'The fund is empty now, I put in about $20 of my own to cover it.'",
+      "Some back-and-forth repeats the fairness concern (D raises it twice), but not excessively."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No affirmative agreement was reached. Competing proposals were made but not accepted by all parties: Agent C proposed equal contributions ('we each put in another $10' — Turn 13) and Agent D proposed that drinkers cover soft drink costs ('the people who are drinking the alcohol should cover the cost' — Turn 16). Agent A has not accepted either solution and no mutual, concrete settlement was stated.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C moved from proposing an equal $10 contribution (Turn 13) to acknowledging that might be unfair and asking for alternatives (Turn 15) — a softening of position.",
+      "Agent D consistently pressed the fairness principle that non-drinkers shouldn't subsidize alcohol and proposed drinkers pay (Turn 16).",
+      "Agent A defended the purchase as for the party and noted personal contribution to cover part of cost but did not accept a proposed settlement.",
+      "Agent B consistently sought non-alcoholic options and highlighted payment practicalities but did not change position."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B raises inclusion of non-alcohol drinkers: 'What about for people who don't drink alcohol? We should get some soft drinks or something.' This introduces a minor incompatibility with Agent A's statement that 'drinks are sorted.'",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent B assumes payment from the house fund: 'We'll use the house fund for it, right?' That creates a substantive issue about who will pay, moving beyond a simple suggestion to a funding expectation.",
+        "movement": "escalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C asks about cost and Agent A reveals the fund is empty and that he covered ~$20 personally: 'The fund is empty now, I put in about $20 of my own to cover it.' The revelation creates a clear practical incompatibility about shared funds and prior assumptions.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D explicitly frames this as unfair: 'so the whole house fund went to alcohol? That doesn't seem fair to the people who don't drink.' This is a direct substantive complaint about the allocation of the shared fund.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A defends the purchase as for the party ('It's for the party.') while Agent D reiterates the fairness concern ('The point is the shared money is all gone on one thing that not everyone can even have.'), leaving the core dispute unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "The practical consequence is raised: with the fund empty, how to pay for non-alcoholic drinks? Agent B: 'So how are we going to pay for the soft drinks now the fund is empty?' The unresolved fairness/cost-sharing conflict persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C proposes equal contributions ('how about we each put in another $10 for soft drinks and snacks?') and Agent D objects that this would make non-drinkers pay twice ('How is that fair?'). Competing proposals exist but no agreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C concedes the unfairness ('You're right, that's not fair. My mistake.') and asks for a fair solution; Agent D proposes that 'the people who are drinking the alcohol should cover the cost of the soft drinks.' Positions soften but no mutual agreement is recorded.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "The core tension is between collective funds being spent on a good (alcohol) not usable by all and how subsequent shared expenses should be allocated.",
+      "Lack of prior agreement on what shared funds may be spent on allowed A to purchase alcohol, but revealing the fund is empty changed feasible payment options for inclusive drinks.",
+      "Proposed solutions split along two principles: equal split among housemates (C) versus beneficiary-pays (D). No trade-off resolution was reached."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T09:01:51.628050+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00663255,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2847,
+      "local_latency_ms": 34445.578,
+      "output_tokens": 3162,
+      "reasoning_tokens": 1792,
+      "successful_calls": 1,
+      "total_tokens": 6009
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "K4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S45-K4-R01",
+    "scenario_id": "S45"
+  },
+  "schema_version": 2
+}

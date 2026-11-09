@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smell/ventilation",
+      "unwashed shared dishes",
+      "payment for dish soap and gas (cost-sharing and shared tab)",
+      "use of stove on weeknights / turn allocation / scheduling"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants communicate directly and practically: proposals are concrete (fan on, pan washed, shared tab).",
+      "Little needless repetition; each agent adds new info or confirmation rather than restating the same point.",
+      "Roles and facts stay consistent (who suggested what and who accepted is clear).",
+      "One participant (D) raises a distinct scheduling concern that is not integrated into the final set of rules."
+    ],
+    "dialogue_repetition_score": 0,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group reached explicit agreements on several points: fan use and immediate cleanup—Agent A proposed 'the pan gets washed the same night, and the fan goes on whenever anyone cooks,' and Agent B accepted: 'Fine by me, pan same night and fan on when anyone cooks.' Cost-sharing was agreed as a four-way split with a shared tab: B suggested 'Split it four ways... Maybe keep a shared tab,' A volunteered to start it ('I'll start it tonight'), and C and D explicitly agreed ('Four ways is fine by me.' / 'Yeah, four ways is fine by me. Just keep the tab...'). These settlements concerned smell, washing, and payment. An important issue remains unsettled: D asked for a rota because he 'gets home late' and 'hardly use[s] the stove on weeknights' and explicitly asked to 'sort out whose turn it is.' B and C instead insisted on no rota and on 'whoever cooks' handling fan/washing, and D's preference for scheduled turns was never accepted or addressed further. Therefore the run is partially resolved: costs and immediate kitchen-behaviour rules settled; scheduling/turn allocation unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: Proposed rules and volunteered to start the shared tab ('I'll start it tonight') — moved from complaining to proposing and administrating.",
+      "Agent B: Initially complained about smell and accepted A's proposals, later opposed a rota ('No rota needed... Whoever cooks runs the fan and washes the pan that night.') — retained a preference for informal usage rather than scheduled turns.",
+      "Agent C: Raised the unwashed pan issue and accepted the group's proposals and cost split, adding a minor rule that 'everyone clears their own stuff off the counter.'",
+      "Agent D: Initially objected to inclusion in cost split; then accepted the four-way split ('Four ways is fine by me') but requested a rota due to late arrival — kept a distinct scheduling demand that was not accepted."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A proposes rules: 'the pan gets washed the same night, and the fan goes on whenever anyone cooks'; Agent B accepts: 'Fine by me, pan same night and fan on when anyone cooks.' This reduces the initial smell/pan complaints but leaves cost allocation unresolved ('I've also been buying the dish soap and gas, so that should go on the list too.').",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "A repeats need to sort soap and gas: 'Still need to sort the soap and gas, though.' B proposes a solution: 'Split it four ways... Maybe keep a shared tab so nobody forgets.' New sub-issue (money/administration) is introduced but not yet agreed by all.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "A agrees to the four-way split and to start the tab: 'Four ways is fine. Shared tab works, I'll start it tonight.' D then raises a potential objection about inclusion: 'Wait, does the four-way split include me? I'm new, so I haven't agreed to it yet.' This opens a new point of possible disagreement (new housemate consent).",
+        "movement": "escalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "B insists the split includes D: 'Yes, it includes you.' D accepts the cost split but raises a separate operational concern: 'But I get home late, so I hardly use the stove on weeknights. Can we sort out whose turn it is?' This introduces a substantive unresolved disagreement about scheduling/turns.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "B rejects the rota idea and sets an operational rule: 'No rota needed... Whoever cooks runs the fan and washes the pan that night.' C accepts: 'Works for me... Whoever cooks washes up, and everyone clears their own stuff off the counter.' D's request for turn allocation is not accepted or addressed further, so the disagreement about weeknight use/scheduling remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "B confirms the cost plan with C: 'Agent C, what about soap and gas? Four ways on a shared tab, you okay with that?' C accepts: 'Yeah, four ways is fine by me. Just keep the tab so nobody forgets.' Cost allocation and tab administration are agreed, but the earlier scheduling/turns issue raised by D remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 3,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Group quickly agreed on low-effort, shared behavioural norms (fan use and same-night washing) which address the immediate smell and unwashed-dish complaints.",
+      "Cost-sharing was an obvious, solvable administrative issue and was resolved by a simple equal split and a shared tab, with one member volunteering to start it.",
+      "A deeper issue—fairness around stove use on weeknights for a late-arriving housemate—creates a persistent incompatibility between an individual's scheduling preference (D) and the group's preference for informal, on-demand use (B/C)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T18:48:39.073443+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00782755,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2787,
+      "local_latency_ms": 35904.628,
+      "output_tokens": 3767,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6554
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "V2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-V2-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

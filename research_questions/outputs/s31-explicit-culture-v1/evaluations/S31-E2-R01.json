@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who must clean shared pans / default cleaner",
+      "no heavy frying on weeknights",
+      "use of extractor/window to mitigate smells",
+      "stove rotation: scope and fairness (weeknight rota vs first-come)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Multiple participants use the repeated, concrete prompt: 'wash the pan now and turn on the extractor and open the window' (Turn 1, 2, 7, 8, 9) — clear immediate mitigation language.",
+      "Rules are proposed and iterated succinctly ('wash shared pans right after use' and 'no heavy frying on weeknights'), which helps move toward agreement.",
+      "Some repetition of the rota request (Turn 5, 11) prolongs the unresolved sub-issue about rotation scope."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The household reached agreement on immediate mitigation and two core rules: wash shared pans right after use and no heavy frying on weeknights. Evidence: Agent A agreed to the immediate requests ('Okay, I'll wash the pan and turn the extractor on now.' / 'Okay — I'll wash the pan and turn on the extractor and open the window now.'), Agent C pushed the two-rule proposal ('Let's try two simple rules: wash shared pans right after use, and no heavy frying on weeknights'), and Agent D accepted those rules ('Okay, I'm fine with those rules.'). A modified position in return by accepting a rota only 'in principle' and limiting it: 'Let's make rotation apply only to heavy frying or to booked stove slots.' That limited rota has not been fully accepted by all as a final arrangement, so the rota issue remains open.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: moved from being the apparent cook tied to the smell to immediate compliance ('I'll wash the pan ...') and accepted a limited rota in principle ('rotation only applies to heavy frying or to booked stove slots').",
+      "Agent B: consistently demanded immediate cleaning and mitigation; position unchanged.",
+      "Agent C: consistently demanded cleaning and proposed the two rules; later explicitly agreed to A's limited-rotation compromise.",
+      "Agent D: initially supported the two rules and advocated a weeknight rotation; continued to request a rota throughout and has not explicitly accepted the exact limitation A proposes."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B demands: 'Agent A, please wash that pan now and turn on the extractor and open the window' and proposes rules ('no heavy frying on weeknights or that shared pans get cleaned right after use'). Agent C repeats and adds frustration about being 'the default cleaner.' A has not yet responded, so a clear substantive disagreement about cleaning responsibility and weeknight frying has just arisen.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A complies with the immediate request ('Okay, I'll wash the pan and turn the extractor on now') but conditions the rule on reciprocity ('if shared pans must be cleaned right after use, everyone needs to do it — I can't be the default cleaner'). Agent C proposes two concrete rules. The dispute over responsibility remains but immediate action reduces tension.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D accepts the two rules but requests a weeknight rotation ('Can we add a simple weeknight rotation...'). Agent A accepts rotation 'in principle' but limits it ('...not for every weeknight. Let's make rotation apply only to heavy frying or to booked stove slots'). This is a clear disagreement about the scope of a rota but both sides offer compromise language.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B and Agent C reiterate the immediate requests to Agent A to wash the pan and ventilate ('Please wash the pan now and turn on the extractor and open the window'). No new substantive shift; original demands and the outstanding question about rotation scope persist.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A confirms immediate compliance ('Okay — I'll wash the pan and turn on the extractor and open the window now') and restates the negotiated rules and the limited-rotation position. Agent C explicitly agrees ('Okay — agreed. Rotation only for heavy frying or booked slots.'). Most substantive issues (cleaning, no heavy frying) are accepted; only small disagreement about rota breadth remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D again requests a weeknight rota ('Can we also set a simple weeknight rota...'). Agent A reaffirms acceptance of a rota only for heavy frying or reserved slots and otherwise first-come ('I'm fine with a rota for fairness, but only for heavy frying or reserved stove slots'). The core dispute over how broadly rotation applies persists but is minor.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "There are two distinct clusters of issues: immediate mitigation/cleaning (concrete, easily agreed) and ongoing fairness of stove access (normative, harder to settle).",
+      "A's main resistance is about unequal burden: A accepts immediate cleaning but conditionally (reciprocity) resists being 'the default cleaner.'",
+      "Participants converged quickly on simple, enforceable rules (wash pans, no heavy frying), but the more procedural fairness question (how to run a rota) remained open."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:04:49.013352+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0081658,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2940,
+      "local_latency_ms": 35360.945,
+      "output_tokens": 3917,
+      "reasoning_tokens": 2432,
+      "successful_calls": 1,
+      "total_tokens": 6857
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "E2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-E2-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

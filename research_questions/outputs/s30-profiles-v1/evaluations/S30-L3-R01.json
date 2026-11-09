@@ -1,0 +1,113 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "unwashed shared cookware / cleaning responsibility",
+      "kitchen ventilation during cooking",
+      "weeknight stove access / cooking schedule",
+      "late-night cooking allowance and contributions (supplies/cleaning)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants moved from complaint to concrete proposals and bargaining quickly (natural negotiation).",
+      "Some repeated lines (Agent C's 'I'm not the house cleaner' repeated twice; Agent B repeated extractor request), but repetition did not stall resolution.",
+      "All proposals and counterproposals stayed consistent with the known facts (one stove, shared pans, ventilation).",
+      "Agreements included conditional trade-offs (exclusive nights in exchange for supplies/cleaning), which is constructive."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The household reached a concrete agreement in Round 5: everyone accepted the wash-and-vent rule and a scheduling method where each person picks two weeknights; Agent A agreed to allow Agent D two late weeknights conditional on heads-ups and contribution to supplies/cleaning, and Agent D accepted and chose specific nights. Key lines: Agent A: \"whoever uses shared pans washes them the same day, and we open the window/turn on the extractor when cooking.\" Agent A (conditional acceptance): \"You can have two late weeknights—pick them now, give a heads-up before you cook, and help with supplies or do cleaning.\" Agent D (acceptance and specifics): \"I'll take Tuesday and Thursday as my two late weeknights. I'll give a heads-up before I cook, and I'll help buy supplies.\" These statements show mutual spoken agreement on who does what (washing same day, use extractor, schedule, D buys supplies and gives notice), so the remaining substantive issues were settled in Round 5.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from proposing simple rules and rejecting a strict rota to endorsing a flexible two-night-per-person approach with conditional concessions: Turn 1 vs Turn 9/11.",
+      "Agent C consistently insisted on everyone washing their own pans and agreed to wash the pan immediately; retained position on fairness while complying with immediate request: Turn 3 and Turn 7.",
+      "Agent D proposed a strict schedule but accepted the preference-based two-night solution and secured two late nights by offering to buy supplies and give notice: Turn 4 then Turn 10.",
+      "Agent B consistently supported the rules and scheduling idea and pressed for immediate compliance with extractor use and pan washing (no substantive change of position)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A proposes household rules and directly asks Agent C to wash last night's pan now: \"...whoever uses shared pans washes them the same day, and we open the window/turn on the extractor when cooking. Agent C, please wash last night's pan now.\" Agent B supports the rules and repeats the demand, but Agent C has not yet responded.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C accepts washing the pan but objects to being singled out and insists on everyone washing their own pans: \"I'll wash the pan now. But I'm not the house cleaner: if we're doing rules, everyone should wash their own pans the same day and not just point at one person.\" Agent D introduces a new scheduling proposal (stove rota). The normative issue of who is responsible for washing and how to manage stove time becomes explicit.",
+        "movement": "escalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A rejects a strict rota and offers a softer alternative: \"Let's each pick two preferred weeknights. If you need a night, ask ahead. If you want exclusive nights, help with supplies or do extra cleaning.\" Agent B accepts the two-night idea. The dispute shifts from a strict rota to a preference-based arrangement but remains unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C reiterates the wash-everyone rule: \"...everyone washes their own pans the same day.\" Agent D accepts the wash-and-vent rule and restates the two-weeknight cooking idea while requesting two late nights for himself. Positions are converging but D's request for late nights is a new specific demand that remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A accepts D's late-night request with conditions: \"You can have two late weeknights—pick them now, give a heads-up before you cook, and help with supplies or do cleaning.\" Agent D picks specific nights and agrees to heads-up and buying supplies: \"I'll take Tuesday and Thursday as my two late weeknights. I'll give a heads-up before I cook, and I'll help buy supplies.\" This round records concrete mutual commitments on washing/venting, scheduling, and supplies, settling the main substantive issues.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A reiterates the agreed conditions: \"Tuesday and Thursday works. Give a heads-up before you cook, and please chip in for supplies.\" Agent B repeats the immediate request to use extractor and window and asks if the pan is washed: \"...tonight I need the extractor on and the window open. Agent C, is the pan washed?\" No new substantive disagreement is introduced and the agreements from round 5 remain in place.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The main tension combined two issues: immediate annoyance (smell/unwashed pan) and ongoing scheduling/effort fairness; resolving both required rules and a sharing mechanism.",
+      "A compromise approach (preferred nights plus heads-ups) resolved the rota dispute without imposing a strict schedule.",
+      "Conditioning exclusive or preferred nights on extra contributions (supplies/cleaning) was an effective bargaining move that satisfied both convenience and fairness concerns.",
+      "Concrete, specific commitments (named nights, promise to buy supplies, promise to wash same day) enabled settlement in a speech-only transcript."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T17:36:33.562905+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Adjusted resolution_round from 5 to 6 to match the conflict trajectory."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0079693,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2874,
+      "local_latency_ms": 39320.974,
+      "output_tokens": 3827,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6701
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "L3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-L3-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

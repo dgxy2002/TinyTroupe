@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "use of the living-room window corner",
+      "shrine (daily prayers) vs drying laundry",
+      "workspace (desk) needing light",
+      "shared space allocation and religious accommodation"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete, practical reasons (light for calls, window for drying, cleanliness for shrine) rather than abstract claims.",
+      "Agent B attempts mediation (timing, alternative spots) but these are repeatedly rejected due to practical constraints.",
+      "There is some repetition: multiple rounds reiterate 'no other place' and 'room too small' (e.g., Turns 13, 17, 26)."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end of round 12 the parties have not agreed on concrete allocations. Agent C requires the window corner to dry laundry (no alternate spot), Agent A requires it for a desk with sufficient light (no room alternative), and Agent D requires a clean spot for daily prayers and asserts no space in their bedroom. Attempts to schedule or find alternate spots were proposed but rejected or shown infeasible. No party accepted another's proposal or conceded a concrete arrangement.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "No participant reversed their central position: Agent A consistently insisted the desk must stay in the corner; Agent C consistently insisted laundry must be there; Agent D consistently insisted on needing a clean spot for prayers.",
+      "Agent B shifted from proposing time-sharing (Round 4) to exploring other spots and acknowledging infeasibility (Rounds 9–12), but did not change any other party's stance."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent A): 'Oh, but that's where I have my work desk. It's the only place with enough light for my calls.' vs Turn 2 (Agent D): 'I understand, but my room is too small. It needs a clean spot somewhere.' — direct incompatible claims for the same physical corner (desk vs shrine).",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A) reiterates desk necessity; Turn 4 (Agent B): 'Actually, my friends usually sit in that corner when they come over on weekends.' — a third competing use appears, increasing the stakes and number of incompatible claims.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent C): 'I dry my laundry there. My room has no window.' plus Turn 6 (Agent D): 'It's not just for decoration. It's for daily prayers.' — laundry and daily religious use conflict with existing claims; multiple parties assert essential needs.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent A) acknowledges the shrine: 'I understand it's for prayers...' and Turn 8 (Agent B) proposes timing: 'maybe we can work out the timing?' — an attempt at compromise appears, though the incompatibility remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent C): 'My laundry can't really follow a schedule. It needs to hang there until it's dry.' and Turn 10 (Agent D): 'You can't have a shrine next to drying laundry. The space needs to be kept clean.' — the scheduling idea is rejected and a direct incompatibility (clean shrine vs drying laundry) is asserted.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 (Agent B): 'That's a fair point. So maybe it's not just about timing.' and Turn 13 (Agent C): 'I understand that. But there is no other place with a window.' — positions remain: laundry needs window; shrine needs cleanliness/space; desk needs light.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 14 (Agent D): 'So there's no other way to dry laundry, but I have to find another way to pray?' — D frames this as a personal loss, increasing tension. Turn 16 (Agent B) queries options, but no solution is found.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 17 (Agent C): 'For my laundry, I have looked. There is nowhere else in the flat.' and Turn 18 (Agent D): 'So I just don't have a place to pray in the flat where I live?' — both needs are reiterated with no accommodation identified.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "Turn 20 (Agent B): proposes 'any other spots in the flat we could use?' but Turn 21 (Agent C): 'The kitchen has cooking smells, and the bathroom is too damp. The clothes won't dry properly.' — alternatives rejected; core conflict persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 9
+      },
+      {
+        "evidence": "Turn 22 (Agent B): 'Okay, so the laundry has to be there. What about the desk or the shrine? Can they go anywhere else?' and Turn 24 (Agent D): 'I've already said my room is too small. There is no other space.' — D reiterates lack of alternatives; conflict narrowed but unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 10
+      },
+      {
+        "evidence": "Turn 25 (Agent B) asks Agent A about desk alternatives; Turn 26 (Agent A): 'No, like I said, my room can't fit a desk. This is the only place I can work.' — A and D both insist their needs require the corner; no settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 11
+      },
+      {
+        "evidence": "Turn 28 (Agent D): 'So I'm the only one who gets no space?' and Turn 30 (Agent B): 'If any one of us claims that corner permanently, the other three lose it. We all get no space then.' — mutual recognition of the stalemate but no resolution reached.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Three incompatible practical needs converge on one scarce resource: sunlight/ventilation (for drying and desk light) and a clean, stable surface for prayer.",
+      "Scheduling was a considered remedy but fails because drying laundry requires extended, unpredictable time and the shrine requires daily, regular access/cleanliness.",
+      "Physical constraints of private rooms (too small, no window) make relocation within the flat infeasible, producing a true spatial scarcity rather than simple preference conflict."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T11:58:42.341562+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0070008,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3048,
+      "local_latency_ms": 32250.228,
+      "output_tokens": 3321,
+      "reasoning_tokens": 1472,
+      "successful_calls": 1,
+      "total_tokens": 6369
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "K2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S60-K2-R01",
+    "scenario_id": "S60"
+  },
+  "schema_version": 2
+}

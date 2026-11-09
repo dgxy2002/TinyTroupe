@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "stove scheduling / access",
+      "kitchen cleanliness / unwashed shared pan",
+      "cooking smells / extractor fan use"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Multiple participants propose practical solutions (schedule, fan, washing up) and one participant volunteers a concrete slot and cleanup duty.",
+      "Agent D repeatedly declares closure ('Sounds good. Thanks everyone, glad we've got this sorted.') despite only partial, non-specific confirmations from others.",
+      "No one addressed the immediate factual issue of who used the pork-fat pan; that specific accountability was left unspoken."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Housemates reached partial agreement on process and one person's slot: Agent D proposed a schedule and asked for a slot ('could I have the 8 to 9 PM slot for cooking? I'll make sure to clean up and use the fan.'), and Agent A accepted ('8 to 9 PM works for me, Agent D.'). B and C agreed in principle to a schedule and fan use ('A schedule sounds good' / 'A schedule and using the fan both sound fine to me'), but they did not specify or confirm concrete time slots or take responsibility for the unwashed pan with pork fat. Therefore scheduling and fan-use were agreed in principle (compromise), but accountability for the dirty pan and full mutual confirmation of all time slots remain unsettled.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: moved from complaint ('it is impossible to use the stove on weeknights') to proposing a schedule and offering the 8–9 PM slot plus cleanup ('I'll make sure to clean up and use the fan').",
+      "Agent A: accepted the scheduling idea and specifically accepted Agent D's 8–9 PM slot ('8 to 9 PM works for me, Agent D.').",
+      "Agent B and Agent C: both expressed support for a schedule and fan use ('A schedule sounds good' / 'A schedule and using the fan both sound fine to me') but did not commit to concrete cooking times or accept responsibility for the unwashed pan.",
+      "No participant took responsibility on record for the existing pork-fat pan; that position remained unchanged and unclaimed."
+    ],
+    "premature_consensus_observed": true,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent D) opens a proposal for a shared rule: 'Look, can we just set a rough schedule for the stove?' and Turn 2 (Agent A) accepts the idea and adds a hygiene expectation: 'A schedule sounds fair. ... We should also agree to wash up right after.' A concrete demand to change shared behavior was introduced but no one rejected it yet; underlying issues (smell, dirty pan) remain unaddressed.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent B) supports the schedule and adds a ventilation requirement: 'Can we make sure the extractor fan is always on while cooking too?' Turn 4 (Agent C) also agrees: 'A schedule and using the fan both sound fine to me.' The conversation shows emerging agreement on process and mitigation (fan), softening the initial dispute, though not all concrete times or responsibility for the dirty pan were settled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent D) proposes a specific slot and offers a duty: '...could I have the 8 to 9 PM slot for cooking? I'll make sure to clean up and use the fan.' Turn 6 (Agent A) accepts the slot: '8 to 9 PM works for me, Agent D.' The specific allocation and promise reduce dispute intensity, but not everyone (B and C) explicitly confirmed times or who used the unwashed pan.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent D) declares closure: 'Sounds good. Thanks everyone, glad we've got this sorted.' This indicates perceived agreement; however B and C did not state concrete time commitments and the earlier issue of the pork-fat pan was not explicitly resolved, so substantive disagreement remains minor.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turns 15 and 19 (Agent D) repeat: 'Sounds good. Thanks everyone, glad we've got this sorted.' No new commitments from other parties or confirmation of remaining items (specific slots for B/C, accountability for the unwashed pan). The situation is reiterated but not advanced.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No new conflict expressed, but outstanding issues remain from earlier rounds (full mutual acceptance of concrete schedule and responsibility for the unwashed pan).",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Participants converged quickly on process-level fixes (shared schedule and extractor fan) rather than directly assigning blame or investigating the unwashed pan.",
+      "One late-arriving housemate (Agent D) proactively claimed a concrete slot and pledged cleanup, which reduced tension but created a one-sided apparent resolution because others did not confirm times.",
+      "The core practical incompatibility (who cleans shared cookware and how to prevent smells) was not fully resolved; agreeing to 'wash up right after' and 'use the fan' are stepwise mitigations but require mutual commitment to be effective."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T15:30:52.322678+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00787855,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2687,
+      "local_latency_ms": 35381.993,
+      "output_tokens": 3805,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6492
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M1-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

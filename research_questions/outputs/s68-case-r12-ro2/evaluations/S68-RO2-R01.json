@@ -1,0 +1,153 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Leave allocation for the day before and the day after Deepavali",
+      "Childcare responsibility vs. family prayers vs. family trip (competing immovable obligations)",
+      "Whether to resolve by drawing/lottery (decision procedure fairness)",
+      "Agent C's conditional offer: work Deepavali days in exchange for Christmas off"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants state concrete, personal reasons (childcare, prayers, family trip) rather than abstract claims, which increases realism.",
+      "A and D shift toward an impartial mechanism ('draw') while B consistently objects, showing independent positions rather than groupthink.",
+      "Agent C introduces a conditional trade (work Deepavali days in return for Christmas) which broadens the negotiation space but is never reconciled.",
+      "Some repetition of immovable reasons occurs ('we both need that day off', 'my prayers aren't just a holiday plan'), but it serves to justify positions rather than stall."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No mutually accepted settlement was reached. Agents A, B, and D each asserted immovable reasons for the same Deepavali day(s); Agent C offered to work only in exchange for Christmas off. D proposed deciding by a draw; A eventually accepted drawing ('If we have to draw, then fine.'), but B explicitly refused a lottery because of childcare responsibility ('I can't leave my child's safety to a game of chance.'). There is no round where every affected party accepts the same concrete arrangement, so the substantive allocation conflict remains unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C: initially volunteered to work those Deepavali days but only conditionally — 'I can work those days... But if I do, I want Christmas off.' (Turn 3, Turn 9). This position is stable throughout.",
+      "Agent A: initially asserted leave ('I've put in for those two days.' Turn 1) and later accepts a draw if necessary ('If we have to draw, then fine.' Turn 21), showing a reluctant concession toward an impartial procedure.",
+      "Agent D: consistently insists on the importance of their Deepavali days (prayers and visiting relatives) and proposes a lottery as an impartial solution (Turn 20, Turn 24).",
+      "Agent B: consistently prioritizes childcare for the first day and refuses the lottery option because of dependent responsibility ('I can't leave my child's safety to a game of chance.' Turn 25), showing no substantive concession."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: 'I've put in for those two days.' plus Turn 2: 'I need at least the first day.' — two overlapping leave claims are present (given the opening situation that three people have requested), creating an initial allocation conflict.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: 'I can work those days for Deepavali. But if I do, I want Christmas off.' and Turn 4: 'I also need those two days.' — a conditional offer from Agent C introduces a trade-off (Deepavali vs Christmas) while Agent D reiterates an immovable claim, increasing the substantive complexity.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: 'I know, Agent D. But three of us have asked.' and Turn 6: '...the day before is for family prayers and the day after is for visiting relatives.' — the incompatibility among multiple leave requests is acknowledged and reasons for leave are asserted, but no resolution is reached.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 8: 'If Agent C is working, that means two of us can be off. I can work the second day, but I really do need the first day off.' — a concrete staffing proposal is offered (softening), though it depends on acceptance by others.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9: 'Fine. As long as I get Christmas.' and Turn 10: 'The first day is more important for my family. We have prayers. I need that day.' — the conditional acceptance by C and D's insistence keep the conditional trade-off unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11: 'What if you and I both take the first day, and Agent A works? I can still work the second day.' — B proposes a plan that effectively requires A to give up their leave, creating a stronger direct clash between claims.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 14: 'Why am I the one who has to work? My family is leaving that day.' and Turn 15: 'It's because both Agent D and I have things on that day that we can't move.' — explicit, incompatible, immovable demands from multiple parties produce entrenched disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 16: 'And my family trip can be moved? We're all leaving on that day.' and Turn 18: 'She has a point. It's not fair to just decide she has to work.' — the dispute about who must yield continues without settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 8
+      },
+      {
+        "evidence": "Turn 19: 'But what other option is there? We both need that day off.' and Turn 20: '...maybe we should just draw for it? For who has to work that first day.' — D proposes a neutral decision procedure (lottery), which attempts to de-escalate the stalemate but is not yet accepted by all.",
+        "movement": "deescalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 9
+      },
+      {
+        "evidence": "Turn 21: 'If we have to draw, then fine.' (A) versus Turn 22: 'I can't draw for it... If I lose, my child has nowhere to go.' (B) — one party accepts the lottery while another objects strongly, so the underlying incompatibility persists.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 10
+      },
+      {
+        "evidence": "Turn 24: '...my prayers aren't just a holiday plan either. None of us can move our plans. That's why I suggested we draw.' and Turn 25: '...I can't leave my child's safety to a game of chance.' — both sides restate immovable reasons and the acceptability of the proposed decision method remains contested.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 11
+      },
+      {
+        "evidence": "Turn 26: '...That's why I said we should draw.' and Turn 27: 'He has a point. It's not for us to decide whose reason is bigger.' — A and D endorse an impartial lottery as fair, but B still objects (earlier), so the dispute is unresolved though it shifts toward agreeing on a mechanism without unanimous consent.",
+        "movement": "deescalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The core tension is fairness (who decides whose reason is 'bigger') versus differential vulnerability (childcare dependence makes random allocation unacceptable to B).",
+      "Introducing a compensation trade (C wants Christmas off) creates a multi-issue negotiation, but it increases complexity because Christmas leave is a separate scarce resource.",
+      "Absence of an established rule pushes participants toward an impartial procedure (lottery), but impartiality is not acceptable to parties with asymmetric stakes.",
+      "A partial procedural agreement (A and D favor draw) is insufficient without unanimous acceptance when one party faces dependent obligations."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T20:43:51.748179+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0106965,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3114,
+      "local_latency_ms": 47091.038,
+      "output_tokens": 4959,
+      "reasoning_tokens": 2880,
+      "successful_calls": 1,
+      "total_tokens": 8073
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "RO2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S68-RO2-R01",
+    "scenario_id": "S68"
+  },
+  "schema_version": 2
+}

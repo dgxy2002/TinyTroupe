@@ -1,0 +1,122 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Evening stove access / scheduling",
+      "Cooking smells spreading",
+      "Shared pan left unwashed / dishwashing responsibility"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Dialogue is concise and realistic for flatmate negotiation — direct requests, short proposals, quick acceptance.",
+      "Some duplicated lines (Agent C's repeated phrasing) appear in the transcript, creating mild repetition.",
+      "Participants offered concrete proposals (times, fan/door rule, washing rule) rather than vague assurances."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group reached concrete, accepted arrangements: scheduling was accommodated when Agent A offered to be done by 8:30 and Agent D accepted ('Okay. I can be done by 8:30. Would that work?' / 'Yeah, 8:30 is fine. Thanks.'). The smell concern was addressed when Agent B asked to keep the kitchen door closed and use the fan and Agent A agreed ('Can we please keep the kitchen door closed and use the fan when cooking?' / 'Okay. We can do that.'). The leftover pan was resolved when Agent A volunteered to wash it immediately and urged adherence to the new rule, and Agent C accepted ('I'll wash it now, and we all just stick to the new rule from tonight.' / 'Okay. That works. Thanks.').",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A offered a concrete scheduling adjustment (will be done by 8:30) — moved from implicit late cooking to an earlier finish.",
+      "Agent D initially complained about access but explicitly accepted A's offered time ('8:30 is fine').",
+      "Agent B proposed a smell-control rule; Agent A accepted it (no further dispute).",
+      "Agent A volunteered to resolve the immediate dish issue (washing the pan), closing the remaining practical gap; Agent C accepted."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 7,
+    "round_scores": [
+      {
+        "evidence": "Agent D: '...I get home from work and can't cook my own dinner.' Agent A: 'What time do you need to cook?' — D raises an incompatible practical need (evening stove access) but no agreement yet.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D: 'I usually get home around 8.' Agent A: 'Okay. I can be done by 8:30. Would that work?' — A offers an accommodation on the scheduling conflict, but D has not yet accepted within this round.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B: '...It's the smell. Can we please keep the kitchen door closed and use the fan when cooking?' Agent A: 'Okay. We can do that.' — The smell issue is explicitly raised and A agrees, but the earlier scheduling/stove-access issue remains unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C: 'Okay, but we still have last night's pan in the sink.' — A new practical conflict (dirty shared pan) is introduced; previous scheduling and smell issues remain outstanding.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D: 'Yeah, 8:30 is fine. Thanks.' (accepts the scheduling accommodation). Agent A: '...maybe we can just agree that whoever uses it, washes it straight after?' — Scheduling resolved; the washing rule is proposed but not yet fully assigned for the existing pan.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C: 'Yeah, that's a good rule. So who's washing this one from last night?' — The new rule is endorsed (agreement on future conduct) but responsibility for the existing dirty pan is still unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A: 'I don't know who left it. I'll wash it now, and we all just stick to the new rule from tonight.' Agent C: 'Okay. That works. Thanks.' — The outstanding practical issue (who cleans the pan) is concretely resolved by A volunteering to wash it and others accepting the house rule.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C repeats acceptance/thanks ('Okay. That works. Thanks.') — no new substantive disagreement and previous issues remain settled.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "There were multiple overlapping, but separable issues: stove scheduling, smell mitigation, and dishwashing responsibility.",
+      "Simple, specific rules (close door/use fan; wash pans immediately) plus one-off cleanup (A washing last night's pan) resolved the practical frictions.",
+      "Resolutions combined clarification/house rules (fan/door), compromise on timing (A adjusting to D's schedule), and a concession (A washing the pan)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T16:56:54.166998+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00784605,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2765,
+      "local_latency_ms": 35935.286,
+      "output_tokens": 3779,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6544
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "M5",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S35-M5-R01",
+    "scenario_id": "S35"
+  },
+  "schema_version": 2
+}

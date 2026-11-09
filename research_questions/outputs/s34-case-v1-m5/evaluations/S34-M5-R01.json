@@ -1,0 +1,125 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "stove scheduling/use",
+      "cooking smells / ventilation",
+      "shared dishes / cleaning",
+      "incense smell/source"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants identified three concrete problems (stove access, smell/ventilation, dirty shared pans) and addressed them separately, which aided clarity.",
+      "Agreement language is explicit at times (e.g., C: 'that's one thing settled'), though one party immediately qualifies that other issues remain.",
+      "Proposed practical fixes (fan+door, cleanup rule, group-chat notices) are concrete and actionable."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group agreed on a clear cleaning rule: \"clean up right after you use the kitchen\" — Agent C states this as settled (Round 6: \"Good. So we're agreed on cleaning up right after we cook. That's one thing settled.\"). Agent A had already accepted cleaning as fair (Round 5: \"Cleaning up straight away is fair.\"). For ventilation, Agent A agreed to \"use the fan and close the door\" (Round 3). Stove scheduling remains unresolved but D proposed and A accepted a tentative coordination method (message the group chat) — Agent A: \"Okay, a message in the chat works for me.\" B and C have not yet explicitly agreed to the messaging approach, so the stove-access issue remains open.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from resisting a fixed stove schedule to accepting ventilation measures (fan + close door) and agreeing to the group-chat notification (Rounds 3, 17).",
+      "Agent C shifted from complaining about a specific dirty pan to proposing a general cleaning rule and treating that rule as settled (Rounds 2, 4, 13).",
+      "Agent D remained consistent in prioritizing stove access, moved from proposing a schedule to proposing messaging coordination when schedule was rejected (Rounds 1, 16).",
+      "Agent B consistently emphasized smell/ventilation and expressed agreement with measures like fan + door, but did not yet explicitly confirm the group-chat proposal by the end of the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "clarification",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent D opens with a demand for a stove schedule: \"can we sort out a time for the stove? ... Maybe we can have a schedule?\" Agent A resists: \"A schedule might be difficult. I work from home ... Also, that pan isn't mine.\" Clear substantive disagreement about whether a fixed stove schedule is feasible and about pan ownership.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "New, separate substantive complaints are raised (smell and dirty pan): Agent B: \"Can you just use the fan and close the kitchen door when you cook?\" Agent C: \"that pan isn't mine\" / calls out last night's pan in the sink. The single issue from round 1 (stove access) has broadened into multiple unresolved practical conflicts.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D summarizes the three problems and proposes general rules: \"Maybe we need some general rules for the kitchen to sort all this out?\" Agent A concedes on ventilation and supports rules: \"Okay, I can use the fan and close the door. And some rules for everyone might be fair.\" Tension reduces for smell/house rules, but stove-scheduling and dish-cleaning remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C proposes a concrete cleaning rule: \"clean up right after you use the kitchen? Wash your pans, wipe the stove...\" Agent B thanks Agent A earlier; no explicit objection. The cleaning issue is moving toward agreement, but stove scheduling and incense/smell source remain unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D reiterates stove-time is the 'real problem': \"Can we also have a rule about stove time?\" Agent A reiterates the obstacle to a fixed schedule: \"a stove schedule is still a problem for me. My work isn't that predictable.\" Active, unresolved disagreement about how to coordinate stove use persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C asserts the cleaning rule is settled: \"we're agreed on cleaning up right after we cook. That's one thing settled.\" Agent D pushes back that the stove is still unsolved: \"It's not settled. That's one rule. We haven't sorted out the stove yet.\" Minor meta-disagreement about whether an issue is fully settled; substantive stove conflict remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C clarifies the cleaning settlement: \"I just meant the cleaning part is settled.\" Agent D proposes a flexible coordination measure (group chat notices) as an alternative to a fixed schedule: \"what if we just message the group chat before we start cooking?\" This moves the stove issue toward a practical solution but does not finalize it.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A accepts the proposed messaging approach: \"Okay, a message in the chat works for me.\" Agent D asks B and C for confirmation. Cleaning is treated as settled; the stove coordination proposal has partial buy-in (A + D) but awaits explicit agreement from B and C.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Cleaning is the easiest, lowest-cost issue to resolve; the group reached explicit agreement on it first.",
+      "Stove scheduling is hard because at least one member (Agent A) has unpredictable cooking times due to working from home; this makes a fixed schedule infeasible.",
+      "A flexible coordination mechanism (group-chat notice) was proposed as a compromise between fixed scheduling and first-come use."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T16:53:49.234370+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 6 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00921975,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2927,
+      "local_latency_ms": 41580.931,
+      "output_tokens": 4244,
+      "reasoning_tokens": 2624,
+      "successful_calls": 1,
+      "total_tokens": 7171
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "M5",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S34-M5-R01",
+    "scenario_id": "S34"
+  },
+  "schema_version": 2
+}

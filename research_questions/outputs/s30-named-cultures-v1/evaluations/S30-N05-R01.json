@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen/stove access on weeknights",
+      "cooking smells spreading to bedrooms",
+      "shared pans left unwashed / cleaning responsibility",
+      "allocation of weeknight cooking turns (roster)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Efficient, functional negotiation from complaint to concrete roster within a few turns.",
+      "Participants repeatedly restated the pan-washing rule (minor repetition) but did not explore enforcement or exception handling.",
+      "Speakers gave concise reasons for proposals (e.g., D: 'I usually get home later'), which helped assign nights pragmatically."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Housemates agreed to a concrete roster and a cleanliness rule. Key lines: Agent B: \"I'll take Thursday.\" Agent A: \"Great — roster's set: I'll take Monday, Agent D Tuesday, Agent C Wednesday, Agent B Thursday. We'll all wash shared pans right after use.\" This shows who adjusted (each person accepted a specific night) and the shared obligation (wash pans immediately).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from being the implicit default cook to accepting a roster and relinquishing default status: 'I agree if we make a simple roster now so I'm not the default.'",
+      "Agent D initiated the rule and then took responsibility for Tuesday (consistent position-taking rather than reversal).",
+      "Agent B moved from complaint to accepting a specific night: 'I'll take Thursday.'",
+      "Agent C volunteered Wednesday and later restated agreement; no substantive change after the initial volunteer."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent D raises a collective demand: \"we need a simple rule. Weeknight stove turns plus 'wash shared pans right after you use them'\"; Agent A accepts the idea but asks for a roster so they are not the default: \"I agree if we make a simple roster now so I'm not the default.\" Conflict over kitchen use and responsibilities is articulated but not yet settled.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent B proposes a concrete allocation: \"Let's each take one weeknight. Wash shared pans right after use.\" Agent C volunteers: \"I'll take Wednesday... Let's write a simple roster now.\" The parties move from complaint to concrete proposals, reducing but not yet resolving who takes which remaining nights.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D accepts a specific night: \"I'll take Tuesday.\" Agent A assigns nights tentatively and asks Agent B: \"Agent B — will you take Thursday or do you want a different night?\" Only one night remains unconfirmed, so substantive disagreement is minor.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B confirms: \"I'll take Thursday.\" Agent A affirms the full roster and the cleanliness rule: \"Great — roster's set: I'll take Monday, Agent D Tuesday, Agent C Wednesday, Agent B Thursday. We'll all wash shared pans right after use.\" The allocation and the pan-washing rule are explicitly agreed by all named parties.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C restates agreement: \"Okay, roster's set. I'll stick to Wednesday — let's all wash shared pans right after use.\" This repeats the already-confirmed arrangement; no substantive conflict is present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The previously established roster and cleaning rule remain in effect with no new disagreements introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Converting vague complaints (smells, dirty pan, 'impossible to use stove') into a simple division of labor (roster + wash rule) removed the practical incompatibility.",
+      "Practical constraints (D's later arrival) shaped the allocation quickly and reduced bargaining.",
+      "The cleaning rule addresses shared cleanliness but does not explicitly address smell mitigation beyond turn-taking; that remaining technical gap was not discussed."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T08:37:15.074508+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00638005,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2661,
+      "local_latency_ms": 27258.302,
+      "output_tokens": 3059,
+      "reasoning_tokens": 1856,
+      "successful_calls": 1,
+      "total_tokens": 5720
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "N05",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-N05-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

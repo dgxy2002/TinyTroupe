@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen odors/extractor fan use",
+      "dirty shared pan/cleaning up after cooking",
+      "difficulty using stove on weeknights"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is concise and polite; a clear, simple rule was proposed and accepted (quote: \"Can we just make sure the extractor fan is always on while cooking and wash the pan right after?\").",
+      "There is excessive literal repetition by Agent B across Rounds 4–6 (same line repeated multiple times).",
+      "No role confusion; speakers remain consistent and commitments are explicit."
+    ],
+    "dialogue_repetition_score": 4,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "All four housemates verbally agreed to the concrete housekeeping rule proposed by Agent B: use the extractor fan while cooking and wash the shared pan immediately after cooking. Key lines: Agent B proposed the rule: \"Can we just make sure the extractor fan is always on while cooking and wash the pan right after?\" Agent D accepted: \"Sure, that works for me. I'll make sure to use the fan and clean up after I cook.\" Agent A accepted: \"Sure, that works. I'll use the fan and clean up.\" Agent C had earlier said \"Sounds good to me, Agent B.\" These mutual, explicit acceptances constitute the settlement of the substantive disagreement about smells and unwashed shared cookware.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent B initiated the complaint and proposal and remained in the same position (advocated rule).",
+      "Agent C immediately agreed to the proposed rule (no change necessary).",
+      "Agent D moved from unspecified/uncommitted to acceptance in Round 2: \"I'll make sure to use the fan and clean up after I cook.\"",
+      "Agent A moved from uncommitted to acceptance in Round 3 and added a factual note about supplies: \"I usually keep the kitchen stocked with soap and other supplies for everyone too.\""
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "clarification",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Agent B raised a household problem and proposed a rule: \"Can we just make sure the extractor fan is always on while cooking and wash the pan right after?\" Agent C agreed, but A and D had not yet committed, so the substantive disagreement (who will change behavior about fan and sink cleanup) was still unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent B asked A and D to commit; Agent D replied: \"Sure, that works for me. I'll make sure to use the fan and clean up after I cook.\" D's commitment reduced the outstanding disagreement, but A remained uncommitted at the end of the round.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B asked Agent A to agree and Agent A responded: \"Sure, that works. I'll use the fan and clean up.\" C had already agreed earlier. All four household members explicitly accepted the proposed rule by the end of this round, resolving the substantive disagreement about fan use and immediate cleanup.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Rounds 4 contains thanks and repetition from Agent B (e.g. \"Thanks, Agent A. Appreciate you keeping the supplies stocked. Glad we are all on the same page now.\"). No new substantive disagreement appeared.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Repeated appreciative comments from Agent B; no substantive conflict or reopened issues.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "More repetition of the same closing line from Agent B; no new substantive issues introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Simple, concrete behavioral rules (fan on + wash pan immediately) were sufficient for rapid consensus among housemates.",
+      "One member (Agent A) noted they already keep supplies stocked, which reduces friction for implementation (useful practical detail).",
+      "The original problems combined odor/spread and shared cookware hygiene; the verbal agreement addresses both by specifying fan use and immediate cleaning, though it relies on future compliance rather than enforcement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T15:33:35.152008+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00528055,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2759,
+      "local_latency_ms": 22779.369,
+      "output_tokens": 2497,
+      "reasoning_tokens": 1472,
+      "successful_calls": 1,
+      "total_tokens": 5256
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M2-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

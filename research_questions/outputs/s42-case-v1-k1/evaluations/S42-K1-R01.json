@@ -1,0 +1,123 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "alcohol presence at shared home/party",
+      "use of shared house fund to buy alcohol",
+      "who should reimburse the cost of alcohol",
+      "social expectations of guests (Agent B's invited colleagues/boss)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers give concrete reasons: D cites discomfort, A cites sunk cost and non-returnable purchase, B cites social expectation (boss), C focuses on fairness of house fund (Turns 6,9,7,10).",
+      "Agents articulate trade-offs and possible compromises (Turn 15), keeping discussion substantive rather than evasive.",
+      "No role confusion; statements remain consistent with the setting (shared flat, house fund)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No agreement reached. Agent D consistently objects to alcohol being served in the flat (Turn 6, Turn 11, Turn 13). Other housemates point to sunk costs and guest expectations: Agent A spent ~$150 from the house fund and cannot return the drinks (Turn 9), and Agent B has told colleagues including his boss there would be drinks (Turn 7). Agent C raised that the house fund should not pay for alcohol and suggested A and B cover costs (Turn 10), but no one accepted a concrete settlement. Agent D proposed a compromise (non-alcoholic home party + external drinks) in Turn 15, which Agent A rejected (Turn 16). The incompatible demands (no alcohol at home vs guests expecting/paid-for alcohol) remain unsettled.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D remained firm in opposing alcohol at the home throughout (Turns 6,11,13).",
+      "Agent A initially assumed alcohol was acceptable (bought drinks) and then defended the purchase citing sunk cost and invitations (Turns 1,9,14); A did not accept D's no-alcohol stance by the end.",
+      "Agent C shifted focus from asking cost to arguing fairness about the house fund and suggesting A and B should cover costs (Turns 8,10,12), but did not settle the broader norm question.",
+      "Agent B raised the practical consequence of guest expectations (Turn 7) and volunteered to help get non-alcoholic drinks earlier (Turn 4), but did not change the central contested positions by the end."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 Agent A: 'Oh, I just realised, I didn't get any non-alcoholic drinks... We'll get some juices' and Turn 2 Agent B: 'Yeah, good idea. We'll need some anyway.' — planning only, no disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 Agent A asks for someone to buy non-alcoholic drinks and Turn 4 Agent B volunteers to get them. Cooperative logistics, no conflict introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 Agent A asks Agent D preference; Turn 6 Agent D: '...I'm not comfortable with alcohol being at the party here in our home.' This introduces a clear substantive disagreement about whether alcohol should be present in the shared flat.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 Agent B: 'Oh. That's a problem. I've invited people from work, including my boss, and I told them there'd be drinks.' and Turn 8 Agent C asks about cost. The disagreement now has practical consequences (guest expectations) and financial stakes, increasing its intensity.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 Agent A: '...I used the house fund. It was about $150... shop doesn't take returns.' Turn 10 Agent C: '...the house fund is for things we all share. It's not fair for Agent D's money to pay for alcohol. You and Agent B should cover the cost...' A concrete dispute over who should bear the expense appears alongside D's earlier objection.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 Agent D: reiterates discomfort ('it's not about the money. I'm just not comfortable with alcohol being served at the party here'). Turn 12 Agent C: '...we still have to figure out the money.' Two distinct unresolved issues (norms about alcohol at home vs who pays) persist without convergence.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 13 Agent D: '...even if that is sorted, I'm still not comfortable with the alcohol being served here.' Turn 14 Agent A: '...I've already spent about $150... can't return it. And Agent B's told his boss...' Parties are firmly entrenched: D refuses alcohol in the home on principle, others cite sunk cost and social/professional expectations.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 15 Agent D offers a compromise: 'keep the party here non-alcoholic, and maybe you could take your friends for drinks somewhere else after.' Turn 16 Agent A rejects it as inadequate: 'We're still out the money... a bit weird to invite people... especially for Agent B's boss.' The compromise is refused and the core incompatibility persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "This is a values vs practicality conflict: Agent D's normative boundary (no alcohol at home) conflicts with others' practical commitments (sunk cost, guests expecting alcohol).",
+      "There are two linked but separable disputes: (1) policy about alcohol in the shared home, (2) allocation of sunk cost from the house fund. Both are unresolved.",
+      "A proposed accommodation (non-alcoholic home party + external drinks) addresses the normative concern but fails to resolve the sunk-cost/social-expectation problems for others."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T09:01:48.059078+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00665005,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2957,
+      "local_latency_ms": 34249.476,
+      "output_tokens": 3157,
+      "reasoning_tokens": 1536,
+      "successful_calls": 1,
+      "total_tokens": 6114
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "K1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S42-K1-R01",
+    "scenario_id": "S42"
+  },
+  "schema_version": 2
+}

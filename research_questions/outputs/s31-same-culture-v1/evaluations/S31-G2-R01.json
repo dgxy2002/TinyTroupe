@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "washing shared cookware immediately after use",
+      "avoiding strong-smell/pork cooking on weeknights",
+      "giving a heads-up for late cooking",
+      "blame for unwashed shared pan",
+      "fair access to stove on weeknights"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants propose concrete, practical rules (wash-after-use, avoid strong smells/pork, give heads-up) rather than abstract principles.",
+      "C provides immediate action (\"I'll wash the pan now\") which helps settle the immediate problem.",
+      "Some redundant confirmations occur (D repeats adherence multiple times in Round 5).",
+      "Roles and factual points remain consistent (who cooks pork, who returned late) and are referenced in support of positions."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Housemates agreed to concrete rules and immediate actions. Key quoted lines: B proposed the rules: \"Can we agree to wash shared cookware right after use and avoid strong-smell/pork cooking on weeknights?\" C agreed and acted: \"Agree... I'll wash the pan now.\" A earlier accepted practical steps: \"Fine — I will open the window, switch the extractor, and give a heads-up if I cook late.\" D likewise accepted heads-up and wash-after-use. Together these constitute a mutual spoken agreement: everyone accepted wash-after-use, avoid strong smells/pork on weeknights, and give a quick heads-up when cooking late; C also washed the pan immediately.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: initially the target of complaint; defended not cooking pork but agreed to practical steps and the wash-after-use rule (Round 2: \"Fine — I will open the window...\"; Round 4: \"We're agreed...\").",
+      "Agent D: started by saying stove use on weeknights felt \"impossible\" but accepted wash-after-use and heads-up norms (Round 2 & 4: \"I'll give a quick heads-up...\").",
+      "Agent C: moved from pointing out the dirty pan to immediate remediation and constructive proposals (Round 1 & 3: \"I'll wash the pan now... If you can't, tell us and wash before you go to bed; if this keeps happening we'll set a simple weekly rota.\").",
+      "Agent B: consistently pushed for rules and immediate action; remained the instigator of the proposed norms but accepted the group's wording when others agreed."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Agent B demands immediate changes and new rules: \"Can you open the kitchen window and switch the extractor on? ... wash shared cookware right after use and avoid strong-smell/pork cooking on weeknights?\" Agent A has not yet responded; C supports washing the pan but the core incompatibility (B's demand versus A's recent cooking) is unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "D accepts the wash-after-use norm but requests fair chance to use the stove and proposes heads-up: \"washing shared pans right after use is fair... just give a quick heads-up if someone needs to cook late.\" A concedes practical actions but pushes back on blame: \"Fine — I will open the window... I don't cook pork, so that pan wasn't mine; everyone must wash shared cookware right after use.\" Tension about blame remains but substantive demands are largely accepted.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Group reaches explicit, mutual acceptance of the proposed rules. B asks for confirmation; C: \"Agree... I'll wash the pan now.\" Combined with earlier acceptances (A and D), the household accepts: wash shared pans after use, avoid strong smells/pork on weeknights, and give a quick heads-up if cooking late.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Participants reaffirm and enact the agreement: D: \"I'll give a quick heads-up...\" A: \"I'll open the window and switch the extractor on now. We're agreed: wash shared cookware right after use, avoid strong smells/pork on weeknights, and give a quick heads-up...\" No substantive disagreement appears.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "D repeatedly confirms adherence to the agreed rules: \"I'll stick to wash-after-use and give a quick heads-up...\" No new disagreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior agreement stands and no new conflict appears.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The conflict combined an immediate practical issue (unwashed pan with pork fat causing smell) with ongoing schedule/comfort concerns (B needs sleep; D returns late).",
+      "Resolution blended immediate remediation (C washed the pan, A opened window/extractor) with standing norms (wash-after-use, heads-up for late cooking) and a backup rota proposal.",
+      "Blame was a secondary tension; A defended not being the pork cook but still accepted procedural rules, which helped de-escalate the interpersonal element."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:09:12.049498+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00766605,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2965,
+      "local_latency_ms": 36570.642,
+      "output_tokens": 3664,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6629
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "G2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-G2-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

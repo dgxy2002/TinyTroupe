@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "unclean shared pan / cleaning responsibility",
+      "cooking smell affecting roommates / sleep",
+      "stove availability / weeknight cooking schedule (late-slot rota)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants offered concrete, practical proposals rather than only complaints (A proposing rule and rota; D requesting a guaranteed evening).",
+      "Immediate problem solved by a volunteer rather than prolonged negotiation: 'I'll wash it now.' (Turn 3).",
+      "Few repetitive exchanges; C restates the washing rule twice ('But everyone must stick to Agent A's rule...').",
+      "Commitments to finalise details were explicitly delegated to the group chat, keeping the face-to-face talk compact."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Housemates agreed to a standing cleaning rule and a concrete scheduling compromise. Key agreed items: Agent A's rule 'whoever uses a shared pan washes it the same night.' (Turn 1) Agent C volunteered to address the immediate problem: 'I'll wash it now.' (Turn 3). For the scheduling conflict Agent A proposed 'each of us gets one guaranteed late slot per week; the other weeknights are open' and instructed swaps via group chat (Turn 5); other agents accepted the rota in principle and committed to post their chosen nights in the chat (Turns 9,10,12,13). Thus the sanitation issue was volunteered and addressed and the stove-access issue was settled by a shared rota arrangement accepted by the group.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A proposed rules and a rota and maintained that solution throughout (Turn 1, Turn 5).",
+      "Agent B initially demanded immediate action and accepted the cleaning rule and rota quickly ('Okay, that rule works.' Turn 2; 'The rota's fine.' Turn 6).",
+      "Agent C moved from complaint to action: noticed the dirty pan, pledged to wash it ('I'll wash it now.' Turn 3), and reiterated the agreed rule (Turn 8).",
+      "Agent D introduced the scheduling demand (need for a guaranteed late slot) and then accepted the proposed rota and committed to post their slot (Turns 4, 13)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A proposes a household rule: 'whoever uses a shared pan washes it the same night.' Agent B accepts the rule but demands immediate action: 'Whoever used the pan last night, please wash it now; if no one does, Agent A, can you wash it so the smell stops? I need to sleep early.' A substantive incompatible state remains (dirty shared pan/smell; no one confirmed washing).",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C volunteers to wash the pan: 'I'll wash it now.' C and D both endorse the proposed washing rule. D raises a separate, substantive scheduling demand: 'I still can't really use the stove on weeknights — ... Can we do a short weeknight rota or give everyone one late slot...' The immediate cleaning is offered, but the scheduling conflict is explicit and unresolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A proposes a concrete rota: 'each of us gets one guaranteed late slot per week; the other weeknights are open... If you can't make your slot, swap on the group chat.' Agent B accepts: 'The rota's fine.' The main disagreement (how to make stove access fair) has a concrete compromise proposal that others begin to accept; only minor administrative confirmation remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A asks Agent C to carry out the immediate cleaning: 'Agent C, you said you'd wash it — can you do it now...' Agent C confirms: 'Okay — I'll wash it now. ... We'll finalise the weeknight rota in the chat.' Immediate sanitation is being addressed; the rota is deferred to the chat but accepted in principle.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D requests concrete confirmations in chat; Agent A posts a slot: 'I'll confirm mine in the chat — Friday works for me.' Only minor outstanding action (others posting their chosen nights) remains; no substantive opposition is present.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C and Agent D commit to add their late slots in the chat: 'Okay — I'll add my late slot in the chat tonight.' and 'Okay. I'll add my slot in the chat now.' The household has mutually accepted the cleaning norm ('whoever uses a shared pan washes it the same night') and a concrete rota scheme ('each of us gets one guaranteed late slot per week; ... swap on the group chat'). The immediate cleaning was volunteered and affirmed earlier ('I'll wash it now'), and scheduling was accepted and being confirmed by members.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The conflict split into an immediate sanitation problem (dirty pan/smell) and an ongoing resource-allocation problem (fair stove access on weeknights).",
+      "Immediate sanitation was resolved quickly by a volunteer (C) after a clear rule was proposed; this removed the urgent impact (smell) while the longer-term scheduling was negotiated.",
+      "The scheduling tension was resolved via an explicit, shareable mechanism (one guaranteed late slot per person per week plus swaps), illustrating a compromise that balances recurring needs."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T11:51:59.339774+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00850405,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2917,
+      "local_latency_ms": 36912.579,
+      "output_tokens": 4089,
+      "reasoning_tokens": 2624,
+      "successful_calls": 1,
+      "total_tokens": 7006
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M3-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

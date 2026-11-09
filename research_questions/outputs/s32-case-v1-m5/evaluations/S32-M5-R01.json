@@ -1,0 +1,122 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen smell / strong-smelling cooking",
+      "unwashed shared pan / cleaning responsibilities",
+      "stove access / timing / schedule"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is concise and realistic; participants offer concrete constraints (e.g. work hours) rather than abstract claims.",
+      "Proposals appear: a cleaning rule (Turn 9), a ban on strong smells (Turn 12), and a timing/schedule solution (Turns 14,16). None are accepted explicitly.",
+      "Some defensive language but no escalation into personal attack; exchanges stay focused on practical issues."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Multiple substantive conflicts remain unresolved: (1) smell from cooking (B requests no strong-smelling foods on weeknights; A has not accepted this restriction), (2) shared-cleaning (C proposed 'whoever uses something, washes it' in Turn 9 but no one explicitly accepted), and (3) stove access/timing (D proposed being done by 8 in Turn 16, A countered in Turn 17 that this is hard due to work). No mutual, concrete agreement was made on any of these points.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C moved from complaint to an explicit corrective proposal: 'whoever uses something, washes it' (Turn 9). No recorded acceptance.",
+      "Agent D progressed from complaint about late access (Turn 1) to proposing concrete scheduling (Turns 14,16). No agreement from others.",
+      "Agent B escalated from reporting impact (Turn 3) to proposing a behavioral restriction on strong smells (Turn 12). No acceptance recorded.",
+      "Agent A consistently defended their cooking time (Turn 2) and pushed back on scheduling feasibility (Turn 15, Turn 17); A did not accept suggested restrictions or rules during the run."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent D: 'By the time I get home, someone's always using it... it's nearly nine o'clock before I can even start to cook.' / Turn 2 — Agent A: 'I work from home, so this is the time I get to cook.' (competing practical needs for stove time)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent B: 'It's the smell. It's going right into my room.' / Turn 4 — Agent A: 'I use the fan. The window is open.' (disagreement about whether mitigation is sufficient)",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent B: 'It's not working. The smell is still coming into my room.' (contradicts A's claim the fan/window suffice) / Turn 6 — Agent C: 'And someone left this pan in the sink from last night.' (adds unwashed-pan cleanliness issue)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 8 — Agent A: 'I'm not the only one who uses pans.' (defensive) / Turn 9 — Agent C: 'Okay. Then can we agree that whoever uses something, washes it?' (explicit proposal toward resolving the cleaning complaint)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10 — Agent D: 'Okay, but can we also talk about timing?... if I can't even get to the stove until nine, the washing up is also going to be late.' / Turn 11 — Agent A: 'So it's the smell, the washing up, and the time. What's the suggestion?' (timing issue remains active)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 — Agent B: 'For me it's the smell. Can we just not cook things with such a strong smell on weeknights?' (requests behavioral restriction) / Turn 13 — Agent C: 'That pan from last night also adds to the smell. If we don't clean as we go, it makes it worse for everyone.' (reinforces cleaning as cause)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 14 — Agent D: 'Right, but none of that solves the problem that I can't even get to the stove. Can we make a schedule? Or just agree that the kitchen needs to be free by a certain time?' / Turn 15 — Agent A: 'A schedule? How is that going to work? Are we booking time slots?' (proposal met with skepticism; timing conflict persists)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 16 — Agent D: '...people try to be done by 8, so others can get a chance to cook before it gets too late.' / Turn 17 — Agent A: 'I'm working until 6 or 7. Being done by 8 is a bit hard.' (directly opposing practical constraints vs requested deadline)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "There are at least three distinct but related problems: smell, cleanliness, and stove access timing; they interact (unclean pans worsen smell; timing affects when washing can be done).",
+      "Mitigation (fan/window) is contested — B reports it as ineffective, so technical fixes alone are not trusted.",
+      "Proposals differ in cost and feasibility: cleaning rule is low-cost but needs buy-in; banning smelly cooking imposes lifestyle limits; scheduling raises coordination burdens given differing work patterns."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T16:54:07.963003+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00697255,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2855,
+      "local_latency_ms": 32264.899,
+      "output_tokens": 3331,
+      "reasoning_tokens": 1792,
+      "successful_calls": 1,
+      "total_tokens": 6186
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "M5",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S32-M5-R01",
+    "scenario_id": "S32"
+  },
+  "schema_version": 2
+}

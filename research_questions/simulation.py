@@ -25,6 +25,11 @@ AGENT_PROMPT_PATH = (
     / "prompts"
     / "tiny_person_conflict_pilot.mustache"
 )
+# The same template without its two rules against acting on background, for the explicit
+# culture cells only. Built by label_probe.template_without_rule, so the two stay comparable.
+NO_CULTURE_RULE_PROMPT_PATH = AGENT_PROMPT_PATH.with_name(
+    "tiny_person_conflict_no_culture_rule.mustache"
+)
 
 
 
@@ -897,6 +902,20 @@ def _agent_persona(
     cultural_background = agent_preset.get("cultural_background")
     if cultural_background is not None:
         persona["cultural_background"] = cultural_background
+    for field in ("biography", "personal_values"):
+        if agent_preset.get(field):
+            persona[field] = agent_preset[field]
+    if agent_preset.get("thinking_language"):
+        language = agent_preset["thinking_language"]
+        persona["other_facts"].append(
+            f"You think in {language}: write your private THINK actions in {language}, apart "
+            "from the STRATEGY label. When you TALK, speak English."
+        )
+    if agent_preset.get("explicit_culture"):
+        persona["other_facts"].append(
+            "Act and reason based on typical cultural values in "
+            f"{agent_preset['explicit_culture']} culture."
+        )
     return persona
 
 
@@ -913,7 +932,11 @@ def create_scenario_instance(
     participants: dict[str, TinyPerson] = {}
     for agent_id, agent_preset in preset["agents"].items():
         person = TinyPerson(name=agent_preset["display_name"])
-        person._prompt_template_path = str(AGENT_PROMPT_PATH)
+        person._prompt_template_path = str(
+            NO_CULTURE_RULE_PROMPT_PATH
+            if (preset.get("profile_treatment") or {}).get("explicit_culture")
+            else AGENT_PROMPT_PATH
+        )
         if preset["scenario_id"] in KITCHEN_SCENARIO_IDS:
             person.add_mental_faculty(
                 _kitchen_action_faculty(
@@ -958,6 +981,9 @@ def create_scenario_instance(
         initial_datetime=datetime.fromisoformat(preset["initial_datetime"]),
         broadcast_if_no_target=True,
     )
+    first_speaker = (preset.get("profile_treatment") or {}).get("first_speaker")
+    if first_speaker:
+        world.scheduler_cursor = list(participants).index(first_speaker)
 
     shared_context = [
         "You are participating in a simulated ordinary face-to-face interaction in Singapore.",

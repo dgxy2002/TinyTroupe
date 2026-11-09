@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "kitchen cleanliness (unwashed pans)",
+      "cooking smells / extractor fan/window use",
+      "stove time allocation / weeknight rotation"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Clear, practical proposals (rotation, wash same night, fan/window) with explicit immediate-action requests.",
+      "Some needless repetition of the immediate request to turn on the extractor fan across rounds 5–6.",
+      "Participants negotiated a concrete schedule and a swap procedure (post in group chat), which is appropriately specific for a speech-only transcript.",
+      "Tone is cooperative; agreements are explicit and conditional points are addressed."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Housemates agreed on concrete shared rules and a stove rotation. Agent A proposed a rotation and cleaning/fan rules (Turn 5: 'Let's try a simple rotation ... Also, everyone wash pans the same night and please turn on the fan and open the window when cooking.'). Agent D accepted the rotation with a swap condition (Turn 6: 'One condition: if someone needs a different night, can we swap with notice?'). Agent A then accepted swaps with notice and posting in the group chat (Turn 7: 'Okay, swaps are fine — just give notice and post the change in the group chat so everyone knows.'), which closed the remaining allocation dispute. The cleaning and fan/window expectations were also mutually stated and accepted.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from describing current behavior ('I cook most nights and I buy most shared stuff') to accepting a shared rotation and concrete obligations (wash same night, use fan), and later accepted swaps with notice ('Okay, swaps are fine — just give notice and post the change in the group chat').",
+      "Agent D moved from complaining about being skipped to requesting a rotation and then accepting the proposed schedule with a swap condition ('One condition: ... swap with notice').",
+      "Agents B and C initially raised complaints (smell, unwashed pan) and then accepted the proposed rules (wash same night, turn on fan).",
+      "No participant reversed an accepted substantive position after agreement; remaining movement after agreement was limited to requests for immediate action (turn fan on)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent A proposed shared rules (clean pans same night, wipe stove, use fan). Agent B accepted and requested immediate action (fan/window) but did not oppose A's proposal—no incompatible demands were expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D introduced a new, incompatible practical demand: a weeknight rotation so D gets stove time ('I get home late and keep getting skipped'). No allocation or schedule had been agreed yet, so a substantive allocation conflict was present and unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A proposed a concrete rotation (D: Tue/Thu; A: Mon/Wed/Fri) and restated cleaning/fan rules. Agent D accepted but added a condition allowing swaps with notice. The main stove-allocation conflict was largely addressed by the proposed schedule, but the swap procedure/acceptance remained unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A accepted swaps with notice and posting in the group chat and restated the cleaning and extractor-fan rules: 'Okay, swaps are fine — just give notice and post the change in the group chat so everyone knows.' This produced a concrete, mutually stated arrangement for rotation and swaps, resolving the allocation conflict.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A promised to switch the extractor fan on and open the window now. Agent B reiterated the immediate request but no party opposed the agreement—no substantive conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C repeated the request for the fan/window and Agent A again promised to switch them on. All parties maintained the previously agreed rules; no new or continuing incompatible demands were expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Stove-access conflict was primarily about allocation (who cooks when); a simple day-based rotation resolved the core incompatibility.",
+      "Cleaning and ventilation concerns were framed as household norms (wash same night, use extractor fan/open window) and accepted without protracted debate.",
+      "The swap-with-notice mechanism (and requirement to post changes) addressed practical coordination costs and information asymmetry, turning a contested allocation into a manageable schedule."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T16:19:01.956753+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00733555,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2867,
+      "local_latency_ms": 35048.417,
+      "output_tokens": 3511,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6378
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "C0",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 5,
+    "run_id": "S30-C0-R05",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

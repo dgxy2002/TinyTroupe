@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "immediate unwashed shared pan / cleaning",
+      "kitchen smells entering bedrooms",
+      "who cooks which nights (weeknight allocation)",
+      "sharing costs for soap/gas",
+      "lack of an agreed cleaning/cooking rota"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Exchange is concise and goal-directed; proposals and counter-requests are made clearly (e.g., \"cookers clean\" vs. rota).",
+      "Multiple rounds repeat the same operational request (wash pan, wipe hob, sort rota tomorrow), but repetition serves confirmation rather than stalling.",
+      "Speakers reference specific practical constraints (work-from-home, late arrivals) which grounds the negotiation in real trade-offs."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The housemates agreed a concrete shared arrangement: adopt 'cookers clean', create and write down an equal-weeknights rota with everyone's name, and split soap/gas costs. Agent A accepted immediate cleaning duties for tonight (\"I'll turn on the extractor and open the window, wash the pan and wipe the hob\") and agreed to the longer-term allocation. Agent D's request for guaranteed weeknights was accepted in the final agreement (Agent A: \"equal weeknights and put everyone's name on the rota. We'll make sure you get at least one weeknight.\"). The parties also agreed to finalize exact nights and the cost split tomorrow, so the main substantive incompatibilities were mutually accepted and scheduled for concrete follow-up.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from proposing options to accepting immediate requests and agreeing to an equal-weeknights rota; evidence: Turn 3 and Turn 11.",
+      "Agent D shifted from a complaint about impossibility of using the stove to asking for a guaranteed fair turn and then accepting the equal-weeknights plan; evidence: Turn 8, Turn 10, Turn 12.",
+      "Agent B and Agent C maintained consistent positions emphasizing immediate cleanliness and supported arranging a rota/cost split tomorrow (B Turn 2; C Turn 5 and Turn 7)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A opens with a proposal and conditions: \"My proposal: whoever cooks that night washes the pan and cleans the hob, or we set a simple cleaning rota.\" Agent B responds with an immediate demand: \"Please turn on the extractor and open the kitchen window now, and wash the pan and wipe the hob tonight... Can you do that, Agent A?\" This establishes clear incompatible expectations about immediate cleaning and longer-term sharing of chores/costs.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A agrees to the immediate requests: \"Yes, I can do that tonight. I'll turn on the extractor and open the window, wash the pan and wipe the hob...\" Agent B accepts: \"Alright, that works for me.\" The immediate dispute over tonight's mess is resolved, but the substantive questions of sharing costs and a rota remain unsettled: \"We still need to sort sharing costs and a simple cleaning rota — can we talk about that tomorrow?\"",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C reiterates the immediate request: \"Agent A — please wash the pan and wipe the hob tonight. Let's sort sharing costs and a simple cleaning rota tomorrow...\" Agent A complies: \"Okay — I'll wash the pan and wipe the hob tonight.\" Immediate cleanliness is secured, but the rota and cost-sharing problem remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D introduces a new substantive demand about allocation fairness: \"I need a fair turn on weeknights — can the rota guarantee that for me?\" This raises a concrete, potentially contentious allocation issue (who gets weeknights) that has not yet been agreed, so substantive disagreement escalates beyond the immediate cleaning task.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A offers a plan to address allocation: \"Yes — we can guarantee fair weeknights. Tomorrow let's agree how many weeknights each person takes, make a simple rota...\" Agent D replies: \"Okay, that works... Make sure I get at least one weeknight—I usually get home late and don't want to be left out.\" The core allocation dispute is being negotiated and partly accepted in principle, but specifics (equal nights, exact assignments) are not yet finalized.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agents reach a concrete, mutual spoken agreement: Agent A: \"Okay — equal weeknights and put everyone's name on the rota. We'll make sure you get at least one weeknight. Tomorrow we'll pick the exact nights, keep 'cookers clean', and agree how we split soap/gas.\" Agent D: \"Okay. Tomorrow let's write the rota down and pick specific weeknights so I know which night is mine.\" This explicit, mutual arrangement resolves the substantive conflicts about cleaning, allocation of weeknights, and cost-sharing (to be specified tomorrow).",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Tension combined an immediate cleanliness/smell problem with a recurring fairness/resource problem (who cooks and who pays).",
+      "Resolving immediate hygiene (A washing pan tonight) reduced emotional pressure and enabled negotiation of the structural issue (the rota and cost-sharing).",
+      "A concrete promise to document the rota and equalize weeknights (with names) served as the decisive step from negotiation to settlement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T08:23:07.586979+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00877205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2989,
+      "local_latency_ms": 39440.767,
+      "output_tokens": 4214,
+      "reasoning_tokens": 2752,
+      "successful_calls": 1,
+      "total_tokens": 7203
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "N03",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-N03-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "unclean shared cookware (unwashed pan)",
+      "cooking smells spreading into bedrooms",
+      "coordination/announcement of stove use"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Household-style, concise speech with practical proposals and immediate offers to act ('I'll wash that pan now').",
+      "Participants moved quickly from complaint to concrete rule-making rather than prolonged arguing.",
+      "Some repetition of agreement phrasing ('Okay — agreed') but not excessive."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agents agreed a concrete, mutual practice: 'From now on, cooks should wash any pan they use on weeknights.' Agent C committed to wash the pan immediately and turn on the extractor and open the window ('I'll wash that pan now and turn on the extractor and open the window'), and others agreed to announce stove use ('I'll say when I'm using the stove' / 'if you're still going to use the stove, just say so out loud'). This mutual spoken agreement on concrete actions settled the immediate cleanliness and smell problems.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A moved from a defensive position ('I cook most nights... If that pan was mine I'll wash it now') to accepting the shared rule and agreeing to announce stove usage.",
+      "Agent B maintained the complaint but accepted the proposed rule and left to try to sleep once agreement was reached.",
+      "Agent C took immediate responsibility for the unwashed pan and proposed a clear weekday rule and a fallback (rinse + notify).",
+      "Agent D added a coordination request (announce stove use) and agreed to follow the proposed rule."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "clarification",
+    "resolution_round": 2,
+    "round_scores": [
+      {
+        "evidence": "Agent A offers a rule (cooks wash pans immediately) but only tentatively offers to wash ('If that pan was mine I'll wash it now'). Agent B demands immediate action ('Please wash that pan now, turn on the extractor and open the window') and asks everyone to follow the rule on weeknights. A substantive issue (smell/unwashed pan) is raised and a rule proposal is made, but the immediate practical demand (wash now / extractor on) has not yet been confirmed, so some conflict remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C accepts responsibility and says 'I'll wash that pan now and turn on the extractor and open the window' and proposes a concrete rule and fallback ('From now on, cooks should wash any pan they use on weeknights. If you're in a rush, at least rinse and tell the rest of us'). Agent D agrees to follow and requests stove-use announcements. The immediate practical problem is addressed and house rules are mutually clarified.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A agrees to announce when using the stove and asks everyone to do the same; Agent D agrees. No new disagreements are raised; the previously settled rules are reaffirmed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agents A and B reiterate agreement ('Let's stick to it'; 'Okay — agreed') and B returns to their room. No new substantive conflict appears.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no new conflict. Prior settlement stands in the transcript.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no new conflict. Prior settlement stands in the transcript.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The core problem combined norm absence (no shared kitchen rules) with an immediate practical issue (unwashed pan causing smells).",
+      "A quick, concrete behavioral rule (wash pan on weeknights; if rushed, rinse and notify) plus procedural signals (announce stove use, run extractor, open window) resolved both immediate and ongoing coordination problems.",
+      "Responsibility was shifted pragmatically: one person volunteered to fix the immediate problem, and the group adopted a clarified expectation for future behavior."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:18:11.339732+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0059963,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2726,
+      "local_latency_ms": 27489.586,
+      "output_tokens": 2859,
+      "reasoning_tokens": 1664,
+      "successful_calls": 1,
+      "total_tokens": 5585
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M8",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M8-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

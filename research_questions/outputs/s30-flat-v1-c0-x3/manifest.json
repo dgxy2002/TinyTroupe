@@ -1,0 +1,82 @@
+{
+  "agent_max_completion_tokens": 4096,
+  "agent_prompt_render": "mental-state-merged-v1",
+  "agent_prompt_sha256": "2a02716cf367595c4357a421ffc128df9da2f5bfce0933949b9108f5f8903cfa",
+  "api_type": "openrouter",
+  "created_at": "2026-11-05T15:07:52.707731+00:00",
+  "evaluation_timing": "after_complete_run",
+  "evaluator_max_completion_tokens": 12000,
+  "evaluator_model": "openai/gpt-5-mini",
+  "evaluator_prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+  "evaluator_prompt_version": "conflict-trajectory-rubric-v2.6",
+  "experiment_id": "s30-flat-v1-c0-x3",
+  "experiment_preset": {
+    "configuration_ids": [
+      "C0"
+    ],
+    "conversation_mode": "hybrid_self_selection",
+    "debrief_after_run": true,
+    "description": "Recurring shared-flat dispute, conversation only, no resolution notice. Free-resolution: do not pool with resolution-expected scenarios. C0 only; a small check of whether this scenario produces real resolution.",
+    "evaluate_after_run": true,
+    "name": "calibration-s30-flat",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetitions_per_configuration": 3,
+    "rounds_per_run": 6,
+    "scenario_ids": [
+      "S30"
+    ],
+    "stop_on_resolution": false
+  },
+  "fixed_horizon": true,
+  "git_commit": "3b65ab9c2b4f3e1120e9080e7cdfbf6fd4f229c1",
+  "models_are_distinct": false,
+  "protocol_sha256": "a7692b6a5fcef1c2c0c4375c29f8bdb44f1ede9191b0f6d9ff1005efd190f783",
+  "run_specs": [
+    {
+      "configuration_id": "C0",
+      "conversation_mode": "hybrid_self_selection",
+      "evaluate_after_run": true,
+      "experiment_name": "calibration-s30-flat",
+      "parallelize_agent_actions": false,
+      "randomize_agent_order": false,
+      "repetition": 1,
+      "rounds": 6,
+      "run_id": "S30-C0-R01",
+      "scenario_id": "S30",
+      "stop_on_resolution": false
+    },
+    {
+      "configuration_id": "C0",
+      "conversation_mode": "hybrid_self_selection",
+      "evaluate_after_run": true,
+      "experiment_name": "calibration-s30-flat",
+      "parallelize_agent_actions": false,
+      "randomize_agent_order": false,
+      "repetition": 2,
+      "rounds": 6,
+      "run_id": "S30-C0-R02",
+      "scenario_id": "S30",
+      "stop_on_resolution": false
+    },
+    {
+      "configuration_id": "C0",
+      "conversation_mode": "hybrid_self_selection",
+      "evaluate_after_run": true,
+      "experiment_name": "calibration-s30-flat",
+      "parallelize_agent_actions": false,
+      "randomize_agent_order": false,
+      "repetition": 3,
+      "rounds": 6,
+      "run_id": "S30-C0-R03",
+      "scenario_id": "S30",
+      "stop_on_resolution": false
+    }
+  ],
+  "scenario_module_sha256": {
+    "S30": "15be973ed7ba17d5258b4da430b2671056bc0d5989210173da3ebc62f5d52c01"
+  },
+  "schema_version": 1,
+  "simulation_model": "openai/gpt-5-mini",
+  "stop_on_resolution": false
+}

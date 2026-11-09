@@ -1,0 +1,107 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Unwashed shared pan / dishwashing responsibility",
+      "Stove access / scheduling (who can cook when)",
+      "Cooking smell spreading into bedrooms",
+      "Entitlement/justification based on buying supplies"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants speak like roommates with concise, situational claims (e.g., C: 'someone needs to wash it').",
+      "Positions are restated rather than developed into options or proposals (some repetition of stove-access and washing claims).",
+      "No confusion about roles or facts; the physical setting and constraints remain consistent throughout."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No substantive agreement was reached. Multiple incompatible issues (who washes the shared pan, how to manage stove access/times, and the smell problem) were raised and defended (e.g., Agent A arguing entitlement because they buy supplies, Agents C/D insisting buying supplies doesn't excuse not washing). No party accepted another's proposal and no concrete mutual arrangement was agreed in the transcript.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "No participant changed position during the run: A maintained that they need to cook and asserted entitlement from buying supplies; C and D maintained that someone must wash the pan and rejected entitlement as an excuse; B emphasized smell but did not propose a compromise.",
+      "Positions were reinforced by repetition and counterstatements rather than negotiated concessions."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent C): '...This pan is still here from last night.' Turn 2 (Agent D): '...I still need to cook though, and it's always impossible to get on the stove this late.' -- Two substantive problems (unwashed shared pan; stove access) are raised and are incompatible interests.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A): 'Whose pan is it anyway?' Turn 4 (Agent C): 'Doesn't matter whose it is. Someone needs to wash it.' -- The complaint about the unwashed pan is reiterated and the demand for someone to clean it remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent D): '...we still have to figure out the stove access. It's always a problem for me when I get back late.' Turn 6 (Agent A): 'I cook most nights because it's the only break I get after working from home all day.' -- Directly competing claims over stove priority/times create a clearer substantive disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent B): 'The smell is the problem, not when you cook.' Turn 8 (Agent C): 'Yeah, the smell is bad too.' -- A related but distinct substantive issue (cooking smell affecting others) is added; no settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent D): '...I also need to cook when I get home. It's tough when the stove is always taken.' Turn 10 (Agent A): '...I'm the one who buys all the dish soap and gas for the stove, so I use it.' -- Agent A asserts an entitlement-based justification for continued use; others' access needs remain in direct conflict.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 (Agent C): 'Buying soap doesn't mean you don't have to wash up.' Turn 13 (Agent D): 'Buying stuff for the flat doesn't mean you get to skip washing up.' -- Other agents explicitly reject Agent A's entitlement argument; the dispute over washing, responsibility, smell, and stove access remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Tension is partly between contribution (buying dish soap/gas) and reciprocal chores: A treats contribution as entitlement, others treat it as insufficient to avoid cleaning.",
+      "Temporal access needs conflict: one person cooks most nights for personal break, another needs to cook after returning late—there is no schedule or agreed priority.",
+      "The smell issue links to both washing practices (dirty pan) and cooking timing; addressing one problem (washing) might reduce smell but not resolve stove scheduling."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T16:12:58.677435+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0058133,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2722,
+      "local_latency_ms": 24018.463,
+      "output_tokens": 2768,
+      "reasoning_tokens": 1536,
+      "successful_calls": 1,
+      "total_tokens": 5490
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M4-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

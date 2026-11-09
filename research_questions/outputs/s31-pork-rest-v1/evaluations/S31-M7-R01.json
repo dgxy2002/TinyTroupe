@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "shared pan washing/cleanliness",
+      "assignment of weeknight stove use / guaranteed weeknight per person",
+      "type of rota (strict weekly guarantee vs. voluntary sign-up/monthly trial)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete reasons for positions (A: \"I cook most nights\"; B: needs sleep before early shift).",
+      "Cleaning/behavior rule and scheduling rule are separated and negotiated independently; immediate practical need (wash now) was addressed quickly.",
+      "Some repetition: wash/rinse and rota proposals recur across multiple turns, but not excessively."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The immediate cleanliness conflict was settled when Agent A agreed to clean the pan now and to rinse after future use: \"Okay — I'll rinse and wash the pan now.\" and later \"I'll rinse the pan right after I use it next time.\" The scheduling dispute was not settled: Agent D insisted on \"one guaranteed weeknight per person,\" while Agent A insisted she \"can't promise a guaranteed weeknight every week\" and proposed alternatives (monthly rota trial or voluntary sign-up).",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: softened on the immediate issue (agreed to wash now and rinse next time) and offered a one-week concession (keep Monday free this week) but maintained refusal of a weekly guaranteed night: evidence Turn 7, Turn 10, Turn 13.",
+      "Agent D: initially proposed a weeknight rota (Turn 2), accepted voluntary sign-up in principle (Turn 4) but subsequently insisted on a weekly guarantee (Turn 12), showing a tightening of position on fairness.",
+      "Agent C: consistently demanded cleaning and rule-setting; accepted A's promise to clean and pressed for a rule-setting meeting (Turns 1, 9, 11).",
+      "Agent B: raised the immediate practical need (sleep before early shift) and requested cleaning now (Turn 6); did not change position beyond that request."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent C) proposes a cleaning rule: \"Can we agree whoever uses the shared pan washes it right away?\"; Turn 2 (Agent D) agrees on wash/rinse but adds a new demand for a \"weeknight rota\", introducing a scheduling claim that could conflict with others' cooking patterns.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent A) accepts wash/rinse but rejects a \"strict weeknight rota\" saying \"I cook most nights,\" proposing voluntary sign-up instead. Turn 4 (Agent D) accepts voluntary sign-up but insists on a guarantee: \"everyone gets one weeknight per week\" and asks A to leave Monday open. Clear opposing positions on guarantees vs. voluntary arrangement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent A) partially concedes: \"I can keep Monday free this week, but I can't promise every week,\" softening the clash but refusing the weekly guarantee. Turn 6 (Agent B) raises an immediate practical demand: \"Agent A, can you wash or at least rinse the pan now?\" (urgent need to sleep).",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent A) complies with the immediate request: \"Okay — I'll rinse and wash the pan now.\" Turn 9 (Agent C) thanks and reiterates the wash-after-use expectation. The immediate cleanliness conflict is settled, but the scheduling/guaranteed-night issue remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10 (Agent A) reaffirms: \"Okay — I'll rinse the pan right after I use it next time.\" Turn 11 (Agent C) proposes formalizing a kitchen rule the next evening. No settlement of the weekly-guarantee vs. voluntary-signup dispute.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 (Agent D) repeats the demand for a guaranteed weeknight per person: \"When we set rules, can we add one guaranteed weeknight per person?\" and re-states the wash/rinse rule. Turn 13 (Agent A) again refuses the guaranteed-weeknight commitment: \"I can't promise a guaranteed weeknight every week; I cook most evenings,\" offering alternatives (monthly rota trial or voluntary sign-up + accountability). The core scheduling disagreement remains.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The conversation separates two distinct issues: hygiene (shared pan) and fairness/scheduling (weeknight use).",
+      "Agent A is willing to make short-term or one-off accommodations (wash now; keep Monday free this week) but resists a standing weekly guarantee due to frequent cooking.",
+      "Agent D seeks an enforceable fairness mechanism (guaranteed nights), while A prefers voluntary sign-up or a less frequent/monthly rotation—a substantive trade-off between fairness and flexibility."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:11:33.797888+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 4 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0075303,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2870,
+      "local_latency_ms": 33535.394,
+      "output_tokens": 3608,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6478
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M7",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M7-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

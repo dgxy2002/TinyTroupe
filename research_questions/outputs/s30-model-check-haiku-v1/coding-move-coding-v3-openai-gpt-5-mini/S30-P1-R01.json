@@ -1,0 +1,107 @@
+{
+  "coded_at": "2026-11-05T18:50:04.595936+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "concerns": [
+          {
+            "detail": "who uses the stove",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "not being the only one blamed for the smell/pan",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "blame_or_reputation"
+          }
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "concerns": [
+          {
+            "detail": "smell disrupting sleep / need to sleep before early shift",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "practical_cost"
+          },
+          {
+            "detail": "taking on washing the pan",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          }
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "concerns": [
+          {
+            "detail": "doing weekend cleaning for everyone",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "fair_share"
+          }
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "concerns": [
+          {
+            "detail": "who can use the stove on weeknights",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "access"
+          }
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [
+        "practical_cost",
+        "fair_share"
+      ],
+      "exists": true,
+      "gave_way": [
+        "Agent B"
+      ],
+      "summary": "They agreed that while Agent A cooks the extractor fan will run and the corridor door will be kept shut, and Agent B will wash the shared pan tonight; issues about who gets the stove on weeknights and the weekend cleaning remain unresolved.",
+      "unsettled": [
+        "access"
+      ]
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 1,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      }
+    ]
+  },
+  "model": "openai/gpt-5-mini",
+  "prompt_sha256": "274bbf00deb9c922b59721150b73018c8143640ddf225c477e5630eb16b595bc",
+  "prompt_version": "move-coding-v3",
+  "run_id": "S30-P1-R01"
+}

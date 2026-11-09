@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking schedule (early/late slots)",
+      "shared pans: rinsing and washing overnight dishes",
+      "kitchen smells and ventilation",
+      "splitting shared household costs",
+      "notification/covering swaps"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants quickly converged on concrete, implementable rules (slots, rinsing, overnight washing).",
+      "Agent A raised a cost/singling-out concern which was addressed by others agreeing to split costs; this helped avoid lingering resentment.",
+      "Minor needless repetition: Agent B's closing thanks/sleep line appears twice (Turn 11 and Turn 14)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end of Round 2 the group reached mutual, concrete spoken agreements: they accepted the proposed time slots \"early cooks 6–8, late cooks 8–10\" (Turn 1/Turn 3/Turn 4), agreed that everyone should \"rinse shared pans after use\" and that anyone who \"leaves a shared pan overnight you wash it next morning\" (Turn 2, Turn 3, Turn 4), and accepted splitting shared costs (Turn 2 and Turn 3). These were affirmed by multiple participants in their own words, satisfying the speech-only settlement rule.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A initially pushed back on being singled out and insisted on cost-splitting; then accepted the schedule while keeping the cost and cleaning conditions (Turn 2).",
+      "Agents B and C accepted the schedule and cleaning rules (Turns 3 and 4) and made an immediate ventilation request later (Turn 9).",
+      "Agent D proposed the initial plan and accepted the swap/notification clarifications (Turns 1 and 5). Overall, all participants converged on the agreed rules and no one maintained an opposing position by the end of the run."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 2,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (Agent D) proposes a schedule and rinsing rules. Turn 2 (Agent A) accepts the schedule but adds conditions and a complaint about being singled out and cost-sharing: \"the schedule's fine. Let's try early 6–8 and late 8–10. Two things: everyone rinse shared pans after use, and if you leave a shared pan overnight you wash it next morning. Also, I buy most shared stuff like soap and gas; if we're making rules, split those costs or don't single me out in front of everyone.\" This shows mild substantive friction about who bears cost/attention and how rules are framed; the substantive issues remain unsettled at round end.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (Agent B) and Turn 4 (Agent C) both accept the 6–8 / 8–10 plan and restate cleaning expectations and cost-splitting: \"Okay, fine with 6–8 and 8–10... Everyone rinse shared pans and wash any pan left overnight next morning. Splitting shared costs sounds fair.\" and \"I'm fine with the 6–8 / 8–10 plan. One ask: please wash any shared pan you leave overnight first thing in the morning — I don't want to be the default cleaner.\" These are mutual, concrete spoken agreements on schedule and cleaning duties, so the main substantive disagreements are settled in speech by the end of this round.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 (Agent D) asks if swaps are allowed; Turn 6 (Agent A) explicitly permits swaps and specifies responsibilities: \"Yeah, swaps are fine. Whoever covers the slot that night also takes the washing/rinse duties for what they use. If you swap, tell the rest of us so we know.\" No substantive disagreement appears.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 (Agent D) asks how to notify others for swaps; Turn 8 (Agent A) prescribes using the house chat and last-minute calls/texts: \"Use the house chat. Post 'SWAP: date, slot, name' and confirm there before you cook. If it's last-minute, call or text the person on duty.\" Procedural clarification only; no conflict.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 (Agent B) requests immediate ventilation: \"Can you please turn on the extractor and open the window now? The smell's already at my door...\" Turn 10 (Agent A) immediately complies: \"Okay, I'll turn on the extractor and open the window.\" Cooperative action; no substantive disagreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11 and Turn 14 (Agent B) express thanks and intent to sleep: \"Thanks, Agent A. I'll try to sleep now.\" No new or continuing substantive disagreement appears.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "A simple time-slot compromise (early/late) functioned as a low-friction coordination mechanism for a single-stove household.",
+      "Cleaning norms framed as 'whoever uses/whoever leaves overnight' plus a swap-notification rule allocate both duty and accountability, reducing the risk of a default cleaner.",
+      "Explicit mention of shared-cost contributions matter to perceived fairness; Agent A's concern was neutralized by others accepting cost-sharing."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T07:12:43.305245+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.009601,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2884,
+      "local_latency_ms": 40771.571,
+      "output_tokens": 4440,
+      "reasoning_tokens": 2944,
+      "successful_calls": 1,
+      "total_tokens": 7324
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "W3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-W3-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,109 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smells / extractor and window use",
+      "unwashed shared pans / washing responsibility",
+      "weeknight stove access / scheduling (rota)",
+      "shared supplies contribution"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Natural, concise roommate negotiation; participants offer concrete proposals rather than vague complaints.",
+      "Minor repetition around asking to be told when extractor/window are on (Turns 4, 6, 10, 12).",
+      "Roles and practical constraints remain consistent throughout (who cooks, who arrives late)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The group agreed a concrete weeknight rota and supporting rules in Round 5. Agent A proposed: \"Okay—simple rota: each of us takes one fixed weeknight; swap if you can't make it. Everyone washes their own pans, uses the fan/window while cooking, and we all chip in for supplies.\" (Turn 9). Agent B accepted: \"Rota's fine.\" (Turn 10). This is an affirmative, mutual spoken agreement on allocation of weeknight cooking slots and shared responsibilities.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A shifted from stating they 'cook most nights' (Turn 1) to accepting a fixed weeknight rota (Turn 9) — a substantive position change to accommodate others.",
+      "Agent D introduced the scheduling demand (Turn 8) and received the requested accommodation via the rota in Round 5.",
+      "Agent B consistently pushed for immediate mitigation (extractor/window on and notification) and accepted the longer-term rota; B repeatedly asked for confirmation when the extractor/window were actually on (Turns 4, 6, 10, 12).",
+      "Agent C's complaint about an unwashed shared pan was addressed implicitly when A and others agreed that 'everyone washes their own pans' (Turn 1, Turn 3, Turn 9)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent A responds to the initial complaints by proposing household rules (Turn 1: \"Let's agree: everyone washes their own pans, use the fan/window when cooking, and we all contribute to shared supplies.\"). Agent B accepts the idea but asks for immediate mitigation and reiterates the pan-washing expectation (Turn 2). The core disagreements (smells, unwashed pans, stove usage expectations) are raised and partly addressed, but not all parties have agreed yet, so substantive conflict remains.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A agrees to take immediate action and accepts the pan-washing rule (Turn 3: \"I'll turn the extractor on and open the window now. I'm fine with everyone washing their own pans right after cooking.\"). Agent B requests notification (Turn 4). The immediate tensions are softened by A's acceptance, but not all parties have confirmed and practical confirmation of action is pending.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Conversation focuses on confirming the extractor/window being turned on (Turn 5–6). No new substantive disagreement is voiced in this round, but earlier issues (e.g., whether everyone will adhere to the agreed rules and scheduling concerns raised by D earlier) are still unresolved with respect to all parties.",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D introduces a new, substantive demand for a weeknight rota (Turn 8: \"Can we make a simple weeknight rota so everyone gets a regular slot? I get home late most nights and need one weeknight slot.\"), which potentially conflicts with A's earlier claim to cook most nights (Turn 1). The proposal raises a clear allocation conflict that has not yet been resolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A offers a concrete rota and repeats the household rules (Turn 9: \"Okay—simple rota: each of us takes one fixed weeknight; swap if you can't make it. Everyone washes their own pans, uses the fan/window while cooking, and we all chip in for supplies. I'm fine with that.\"). Agent B explicitly accepts the rota (Turn 10: \"Rota's fine.\"). The scheduling conflict introduced by D is affirmatively settled by mutual acceptance of the rota and associated rules.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A repeats the immediate action promise to turn on extractor and open the window (Turn 11) and Agent B asks for confirmation when that is done (Turn 12). No new substantive conflict appears; the previously raised issues (rota, washing pans, ventilation) have been agreed on in Round 5.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Two levels of solution were negotiated: immediate mitigation (use extractor/window when cooking) and a structural allocation (weeknight rota) to handle recurring access conflicts.",
+      "Cleaning responsibility and shared supplies were bundled with the rota, which helped produce a single, mutually acceptable agreement.",
+      "A's willingness to accept a rota resolved the scheduling tension that could have persisted between A's preference to cook most nights and D's late arrival."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T17:32:09.423091+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00887455,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2799,
+      "local_latency_ms": 37219.387,
+      "output_tokens": 4289,
+      "reasoning_tokens": 2880,
+      "successful_calls": 1,
+      "total_tokens": 7088
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "L2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-L2-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

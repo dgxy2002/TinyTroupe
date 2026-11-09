@@ -1,0 +1,110 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "shared-pan washing",
+      "weeknight stove access (slots)",
+      "contribution for dish soap and occasional deep cleans",
+      "kitchen ventilation/door closure when frying"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Conversations are concise and realistic; participants give concrete proposals (pan rule; early/late slots).",
+      "There is moderate repetition: multiple rounds of asking Agent D to post slots and repeated prompts to confirm contributions.",
+      "Speakers give role-specific reasons (e.g., A: cooks most nights; B: needs sleep early; D: returns late), which grounds proposals."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Housemates reached clear agreement on immediate pan-cleaning and a simple early/late weeknight stove slot system (Agent D proposed: \"Whoever uses the shared pan washes it immediately, and let's have weeknight stove slots...\"). Several agents accepted ventilation/door-use requests (e.g., Agent B: \"I'll use the extractor and keep the corridor door closed when frying\"). Contributions for dish soap and occasional deep cleans were partially secured: Agent B stated \"I'll chip in for dish soap,\" and Agent A later confirmed \"I'll chip in for dish soap and occasional deep cleans.\" However, at the end of the run at least one housemate (Agent C) had not committed to contributing, and Agent D did not explicitly state they would chip in, leaving the cost-sharing / confirmation issue unresolved. Because key rules were agreed but the household-wide confirmation on shared costs was not secured from everyone, the outcome is partially_resolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: initially asked for everyone to chip in (Round 1) and later explicitly confirmed they will chip in (Round 6): \"I'll chip in for dish soap and occasional deep cleans.\" (softening from proposal to personal commitment).",
+      "Agent B: moved from complaint to concrete commitments early on — accepted pan rule and slots and explicitly: \"I'll chip in for dish soap.\"",
+      "Agent C: volunteered to wash the pan multiple times (e.g., \"I'll wash tonight's pan\") but did not commit to contributing to dish soap; position on cost-sharing remains unset.",
+      "Agent D: initiated the rules and claimed the late slot, repeatedly offered to post slots and solicit confirmations, but did not explicitly state they would chip in for supplies during the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent D proposed rules: \"Whoever uses the shared pan washes it immediately, and let's have weeknight stove slots...\" Agent A accepted the rules but added a new requirement: \"...I cook most nights and buy most of the shared stuff, so can we agree everyone chips in for dish soap or helps with the occasional deep clean?\" (A's added demand creates an unresolved expectation.)",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent B accepts the pan rule and slots and explicitly agrees to contribute: \"I'll chip in for dish soap.\" Agent C agrees to try the rules and offers to wash the pan tonight but does not commit to contributing; the main outstanding issue (full household confirmation to chip in) is reduced but not closed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D says they will post slots and claims the late slot: \"I'll post the early/late slots in the group chat now... I usually get home late, so I'll claim the late slot...\" Agent A reiterates the chip-in request and asks D to get confirmations: \"Agent D, can you ask everyone in the chat to confirm they'll contribute?\" The dish-soap/cleaning contribution remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B explicitly affirms contribution and behavior changes: \"I'll chip in for dish soap and for occasional deep cleans. I'll use the extractor and keep the corridor door closed when frying...\" Agent C repeats the request for D to post slots. Most rules are being accepted, leaving only a minor outstanding confirmation from at least one person.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D says they will post and asks for confirmations: \"I'll post the early/late slots in the group chat now and ask everyone to confirm they'll chip in...\" Agent C again asks A and B to confirm. The disagreement is small and procedural (who still needs to confirm).",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D posts slots and requests confirmation: \"Posting early/late weeknight stove slots now... Please confirm here you'll chip in for dish soap and occasional deep cleans.\" Agent A then explicitly confirms: \"I'll chip in for dish soap and occasional deep cleans. I usually take the early slot...\" At least one person (Agent C) has not committed to chipping in, so a minor substantive disagreement remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Two simple, narrow rules (wash shared pan immediately; fixed simple slots) are easier to gain quick agreement on than a detailed rota.",
+      "Contribution for consumables (dish soap) requires explicit, per-person confirmation; a general proposal alone did not secure universal buy-in.",
+      "Requests about ventilation/door closure are framed as reasonable accommodations tied to practical needs (sleep, smell) and drew quick acceptance from some housemates.",
+      "Organizer requests (repeated asks for D to post the slots) can create procedural friction if the organizer delays or must be prompted multiple times."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T13:58:18.831035+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00945475,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3091,
+      "local_latency_ms": 36643.482,
+      "output_tokens": 4341,
+      "reasoning_tokens": 2816,
+      "successful_calls": 1,
+      "total_tokens": 7432
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "M5",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-M5-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

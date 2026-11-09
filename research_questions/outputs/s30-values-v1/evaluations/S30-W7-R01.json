@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "strong-smelling cooking affecting roommates' sleep/rooms",
+      "washing and clearing shared pans/dishes",
+      "fair access to the single stove on weeknights / turn-taking"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants iteratively proposed and accepted specific household norms (extractor, window, washing pans, heads-up) in ordinary conversational turns.",
+      "There is modest repetition of commitments (A repeats agreement multiple times) but it serves to confirm rather than obstruct.",
+      "One participant (C) converted a rule into an immediate action by volunteering to wash the pan, which concretely enacted the agreed norm."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end of the run all four participants accepted a shared set of norms (extractor/window on weeknights; wash shared pans; give a quick heads-up if almost done; short turns for stove). Evidence of mutual acceptance: Agent A accepted the core rules: \"I'll use the extractor, open the window, wash any shared pans I use, and give a quick heads-up...\" Agent B originally proposed the rule: \"On weeknights... please use the extractor, open the kitchen window and wash shared pans afterwards.\" The last outstanding concrete issue (last night's shared pan) was settled when Agent C offered to wash it if unclaimed: \"If nobody claims it, I'll wash it tonight so the rule actually starts.\" This is a concrete, accepted arrangement and ends the remaining substantive disagreements.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B initiated the rules and retained their position (wanted rules to protect sleep); they accepted subsequent refinements.",
+      "Agent C moved from complaint about an unwashed pan to supporting the rule and then volunteering to wash it if unclaimed (softened from complaint to accommodation).",
+      "Agent D expressed concern about stove access but accepted the heads-up/short-turn proposal and offered to wash the pan if he used it (accepted coordination norms).",
+      "Agent A initially was the target of complaint but accepted the rules, repeated the commitments, and asked not to be singled out — A retained a preference not to be publicly blamed while agreeing to the behavioral rules."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent B raised a substantive complaint about smells and sleep impact and proposed rules: \"On weeknights, if you cook strong-smelling food please use the extractor, open the kitchen window and wash shared pans afterwards...\" Agent C immediately agreed but added a duty: \"whoever cooks must wash any shared pans and wipe the area before leaving.\" The problem and proposed obligations appear but are not settled for all parties.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D proposed a coordination rule for stove use: \"take short turns or give a quick heads-up...\" Agent A accepted and committed to several measures, while requesting not to be singled out: \"I'll use the extractor... In return, don't single me out in front of everyone...\" The exchange softens confrontation and shows growing agreement, but some details remain open.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C pushed a specific, immediate obligation about last night's shared pan: \"whoever used last night's shared pan, please wash it tonight. If you can't, rinse it and finish within 24 hours.\" This introduces a concrete demand directed at an unknown party (potentially contentious) that is not yet resolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D said \"If I used that pan I'll wash it tonight\" and asked to stick to the heads-up idea; Agent A reiterated agreement to extractor, window, washing pans and heads-up. Commitments reduce friction, but the specific pan ownership and immediate washing remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C again asked directly: \"Can whoever used last night's shared pan wash it now?\" Agent D said he doesn't think he used it but would wash if he did. The pan is still unclaimed/unwashed, so the substantive obligation remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A repeated the requested obligation: \"If it was yours, please wash it tonight...\" Agent C then offered a concrete, conditional resolution: \"If nobody claims it, I'll wash it tonight so the rule actually starts.\" That affirmative offer settles the immediate pan issue and the previously formed household rules were mutually accepted by participants.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The root practical tension combined nuisance (smells affecting sleep) and unclear shared responsibilities (who washes shared pans).",
+      "Mutual agreement was achieved by specifying simple, enforceable behaviors (use extractor/window; wash shared pans; heads-up/short turns).",
+      "Immediate compliance was ensured by a conditional offer: if no one claims the pan, another roommate will wash it tonight — shifting an ambiguous duty into a concrete action."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-06T07:38:58.767609+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0073168,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2920,
+      "local_latency_ms": 38256.036,
+      "output_tokens": 3495,
+      "reasoning_tokens": 2112,
+      "successful_calls": 1,
+      "total_tokens": 6415
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "W7",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-W7-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

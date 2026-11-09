@@ -1,0 +1,108 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cleaning shared pan / responsibility to wash immediately",
+      "weekday stove hours and posting for exceptions (6–9pm weekdays with exceptions)",
+      "use of extractor/window to limit cooking odour"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants traded concrete requests and concrete concessions (washing now, extractor/window, fixed hours with exceptions) rather than only abstract complaints.",
+      "There is some repetitive urging for confirmation (multiple turns asking A to confirm once the pan is washed).",
+      "Speakers provided short practical reasons (B: early shift; D: gets home late) which grounded their proposals."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent A accepted the immediate remediation and the scheduling compromise and Agent B agreed to post the hours: Turn 5 — Agent A: \"...I'll turn on the extractor, open the window and wash the pan now. I can agree to weekday stove hours 6–9pm, but we should allow exceptions...\"; Turn 6 — Agent B: \"...I'll post in the chat about weekday stove hours 6–9pm with exceptions...\". Thus Agent A agreed to wash and ventilate now and to the 6–9pm weekday window with exceptions; Agent B agreed to post the schedule in the chat; C and D endorsed the arrangement.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: initially offered a rule (wash after cooking) but resisted nightly posting; then in Round 3 accepted immediate washing and the 6–9pm with exceptions schedule (softened position).",
+      "Agent B: initially demanded immediate remediation and proposed fixed hours; later agreed to post the schedule in chat and sought confirmation — position stayed consistent but shifted to providing the administrative action (posting).",
+      "Agent C: consistently demanded cleaning and confirmation; did not change position but accepted the group's agreed arrangement.",
+      "Agent D: initially complained about impossibility of using stove on weeknights, then accepted the 6–9pm weekdays with exceptions (moved from complaint to acceptance of a compromise)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent C: \"Whoever used that pan, please wash it now. Also, let's agree: if you cook, you wash the shared pan right after.\" (demand for immediate washing and new rule). Turn 2 — Agent D: \"Can we also post in the group chat if you need the stove tonight? I often get home late.\" (introduces a related scheduling/request norm). The immediate mess/odour problem is raised and no one addressed the requested immediate action yet.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent A: \"Fine — I'll wash the shared pan after I cook. I can't post every night though; let's agree on stove hours or only ask people to post when they need the stove outside usual dinner times.\" (refuses nightly posting, offers a different rule and does not commit to washing now). Turn 4 — Agent B: \"Agent A, please turn on the extractor, open the kitchen window and wash the pan now — the smell's already in the corridor... Also let’s agree stove hours on weekdays, e.g. 6–9pm; we can confirm it in the chat.\" (demands immediate action and proposes a fixed hours solution). The immediate demand to wash and to ventilate conflicts with A's statement that they will wash only after cooking",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent A: \"Okay — I'll turn on the extractor, open the window and wash the pan now. I can agree to weekday stove hours 6–9pm, but we should allow exceptions if someone needs to cook outside that window and posts in the chat.\" Turn 6 — Agent B: \"Okay — please wash the pan now and turn on the extractor and open the window. I'll post in the chat about weekday stove hours 6–9pm with exceptions; can you confirm there once the pan's washed?\" (Agent A accepts the immediate remediation request and accepts the 6–9pm weekdays with exceptions; Agent B agrees to post — mutual, concrete spoken agreement resolving the substantive disputes in this round).",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent C repeats the request and the proposed hours. Turn 8 — Agent D: \"Fine — 6–9pm weekdays with exceptions. Agent B, please post it in the chat and confirm once the pan's washed.\" (participants reiterate and endorse the same arrangements already accepted in Round 3; no new substantive disagreement appears).",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 — Agent B: \"Okay — I'll post 6–9pm weekdays with exceptions in the chat now. Agent A, please confirm here once the pan's washed and the extractor and window are on so I can sleep.\" Turn 10 — Agent C repeats the request. (Procedural follow-up and requests for confirmation after the already-agreed actions; no new substantive conflict.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 — Agent A: \"Okay — I'll turn on the extractor, open the window and wash the pan now. I'll confirm here once it's done.\" Turn 13 — Agent C: \"Okay — please confirm here (and in the chat) once the pan's washed and the extractor and window are on.\" (Confirmation and restatement of the arrangements; no new substantive disagreement.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "Two linked issues: an immediate practical problem (unwashed pan and odour) and a recurring coordination problem (when people may use the stove).",
+      "A compromise (set weekday hours 6–9pm but allow posted exceptions) resolved the recurring coordination complaint while preserving occasional flexibility.",
+      "Immediate remediation was secured by a direct request and an explicit acceptance from the person responsible (Agent A) within the same round; the chat post and confirmations are procedural follow-ups."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-07T14:17:46.895300+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00876255,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2951,
+      "local_latency_ms": 39918.987,
+      "output_tokens": 4214,
+      "reasoning_tokens": 2624,
+      "successful_calls": 1,
+      "total_tokens": 7165
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "E4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S31-E4-R01",
+    "scenario_id": "S31"
+  },
+  "schema_version": 2
+}

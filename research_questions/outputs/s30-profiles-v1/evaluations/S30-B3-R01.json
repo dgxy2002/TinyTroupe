@@ -1,0 +1,111 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking smell spreading",
+      "unwashed shared dishes",
+      "use of stove on weeknights / late-cooking slots",
+      "who is responsible for cleaning and ventilation"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants offered concrete, context-specific proposals (slots, extractor/window, wash-your-pans) rather than only complaints.",
+      "Key practical steps were requested and then voiced as promises ('I'll turn the extractor on', 'I'll wash the pan now'), which in a speech-only transcript count as settlement.",
+      "Minimal needless repetition; some bystander confirming language (post in chat) for record-keeping."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Housemates agreed concrete rules and immediate actions: Agent A accepted a scheduling compromise ('I can agree to one guaranteed late slot per person each week.'), the group agreed the safety/cleanliness rule ('whoever cooks must use the extractor/open a window and wash their pans') and made immediate mutual commitments to mitigate the current problem (Agent A: 'I'll turn the extractor on and crack the window now.'; Agent C: 'I'll wash the pan now.'). Agent D's late-slot was later confirmed (Thursday after 8pm). These spoken agreements settle the substantive disputes.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A retained the desire to keep cooking most nights but conceded to shared responsibilities and to guaranteed late slots ('I can agree to one guaranteed late slot per person each week.').",
+      "Agent C moved from complaint about an unwashed pan to committing to wash it immediately ('I'll wash last night's pan now.' / 'I'll wash the pan now.').",
+      "Agent D introduced a need for fairness (late slot) and accepted the group's compromise, later picking Thursday after 8pm.",
+      "Agent B pressed for immediate mitigation (extractor/window) and accepted the group's agreed responsibilities once actions were promised.",
+      "Overall, multiple participants adjusted stances toward a practical, recorded arrangement rather than maintaining entrenched positions."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent A insists they will continue to cook ('I cook most nights—it's my break... and I don't plan to stop.'), while Agent B and Agent C state this is a recurring problem (B: 'this cannot keep happening.'; C: found last night's pan unwashed). No immediate actions taken to remove smell or wash the pan.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C agrees to wash the pan now ('Okay — I'll wash last night's pan now.'), reducing the immediate dish conflict; Agent D raises a new scheduling demand ('can we each have one guaranteed late slot per week') which is unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A offers a concrete compromise on scheduling ('I can agree to one guaranteed late slot per person each week') and reiterates the rule about extractor/window and washing. D accepts in principle later, reducing the scheduling dispute. The remaining small unresolved point is immediate extractor/window use (not yet confirmed).",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B presses for immediate mitigation because smell spread to the corridor and they have an early shift ('please turn the extractor on and crack the kitchen window now. Smell's already in the corridor and I have an early shift.'), but no one has yet complied, so the immediate practical conflict persists.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Concrete, mutual commitments are made and voiced: Agent A: 'Okay — I'll turn the extractor on and crack the window now.' Agent C: 'I'll wash the pan now.' These spoken, concrete promises settle the immediate smell/dish problems in this speech-only transcript.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Scheduling detail confirmation with no disagreement: Agent D: 'I'll take Thursday after 8pm as my weekly late slot.' Agent A: 'Okay — Thursday after 8pm works.' Request to post it in the chat recorded; no opposing claims.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      }
+    ],
+    "substantive_insights": [
+      "The main tension was between one person's routine (A cooking most nights) and others' practical needs (B's early shift, smell spread).",
+      "A simple rule tying responsibility to action ('whoever cooks washes pans' + use extractor/open window) addresses both cleanliness and smell, reducing friction.",
+      "Scheduling guaranteed 'late' slots is an effective compromise to share access to the stove while preserving A's preference to cook most nights.",
+      "Immediate mitigation (turning on extractor, washing pan) was necessary to resolve the acute problem even after scheduling was negotiated."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-05T17:51:35.424361+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00771915,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2859,
+      "local_latency_ms": 37715.209,
+      "output_tokens": 3819,
+      "reasoning_tokens": 2496,
+      "successful_calls": 1,
+      "total_tokens": 6678
+    }
+  },
+  "run": {
+    "completed_rounds": 6,
+    "configuration_id": "B3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S30-B3-R01",
+    "scenario_id": "S30"
+  },
+  "schema_version": 2
+}

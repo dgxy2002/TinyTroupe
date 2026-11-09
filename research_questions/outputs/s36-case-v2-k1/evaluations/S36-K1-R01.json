@@ -1,0 +1,123 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who is responsible for cleaning the shared pan",
+      "special/ritual cleaning requirement because pan contacted pork",
+      "establishing a household rule for washing up after use"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is concise and resembles natural household negotiation (e.g., denials, explanation, request for rule).",
+      "Key explanatory turn: Agent D explains the ritual cleaning requirement (Turn 6), which introduces the real reason for the extra burden.",
+      "Agent C pushes responsibility (Turn 9) providing a contrasting norm (user should clean) that forces a practical solution.",
+      "Resolution proceeds by one person volunteering a one-time concession and the group accepting a future rule; little circular repetition after settlement."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The substantive practical problem (D could not use the pan because it had touched pork and required ritual cleaning) was handled by Agent D volunteering to do the special cleaning this time and the group subsequently agreeing on a forward rule to wash the pan immediately after use. Key lines: Agent D offered to do the cleaning and requested a rule ('I'll do the cleaning this time. But can we please agree that from now on, we all wash the pan right after using it? Especially with pork.' — Turn 10). All housemates then agreed: Agent A 'Yes' (Turn 13), Agent B 'Yeah, fine' (Turn 16), and Agent C 'Yes. And not just the pan. We should all clean up after ourselves, every time.' (Turn 18).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A initially denied use ('It wasn't me.' — Turn 1) and later accepted the proposed rule to wash immediately after using the pan ('Yes.' — Turn 13).",
+      "Agent B initially denied use ('Me neither.' — Turn 2) and later agreed to the rule ('Yeah, fine.' — Turn 16).",
+      "Agent C pushed for user-responsibility (Turn 9) but ends by endorsing a collective standard ('We should all clean up after ourselves, every time.' — Turn 18).",
+      "Agent D asserted a religious/ritual constraint (Turn 6), volunteered to perform the special cleaning this time (Turn 10), and requested a preventive household rule; D effectively made a one-time concession to secure a shared practice."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 8,
+    "round_scores": [
+      {
+        "evidence": "Agent A and Agent B both immediately deny using the pan (Turns 1-2) after Agent C found it unwashed; the practical problem (someone must wash it) is present but no one has agreed to do so.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C says someone needs to wash so Agent D can cook (Turn 3). Agent D explains that because there was pork, normal washing is insufficient and a special cleaning is required (Turn 4), creating a clear practical incompatibility: D cannot use the pan until it is specially cleaned.",
+        "movement": "escalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A asks what special cleaning means (Turn 5) and Agent D describes a ritual cleaning requirement (Turn 6). The requirement raises the burden but no one has agreed to undertake it yet.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A questions the practicality of obtaining 'earth' (Turn 7) while Agent C asserts that whoever used the pan should be responsible for sorting it out (Turn 9). This is an explicit claim about responsibility in tension with earlier denials, producing clear disagreement about who must act.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D offers to obtain the special clay and do the special cleaning this time and requests a new household rule that everyone wash the pan right after using it, especially after pork (Turn 10). Agent A accepts the housekeeping idea though continues to deny having used the pan (Turn 11). The immediate practical problem (special cleaning) is offered to be resolved by D, but the collective agreement is not yet universal.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D asks for an all-person agreement to wash the pan after use (Turn 12) and Agent A explicitly agrees (Turn 13). Two housemates (B, C) have not yet confirmed, so the shared-rule conflict remains unresolved but diminished.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D asks B and B confirms agreement to the rule (Turns 14, 16). Only Agent C remains to confirm; the dispute is nearly settled but not yet fully resolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C confirms agreement (Turn 18) and broadens it to clean up after ourselves every time. All four have now agreed to the household practice of cleaning after use; D's one-time offer to do the special cleaning was made earlier (Turn 10) and was not contested.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      }
+    ],
+    "substantive_insights": [
+      "Religious/ritual cleaning requirements can create asymmetric burdens in shared living spaces; practical solutions may require one-time concessions plus preventive rules.",
+      "There was a tension between individual responsibility (who used it should clean) and shared norms (everyone cleans up immediately); the group moved to a shared-norm solution.",
+      "The specific culprit was never identified, but the practical need (clean pan for dinner) and a future preventative rule were sufficient to resolve the conflict."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-08T03:19:12.310802+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00748855,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2791,
+      "local_latency_ms": 36894.04,
+      "output_tokens": 3597,
+      "reasoning_tokens": 2048,
+      "successful_calls": 1,
+      "total_tokens": 6388
+    }
+  },
+  "run": {
+    "completed_rounds": 8,
+    "configuration_id": "K1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S36-K1-R01",
+    "scenario_id": "S36"
+  },
+  "schema_version": 2
+}
