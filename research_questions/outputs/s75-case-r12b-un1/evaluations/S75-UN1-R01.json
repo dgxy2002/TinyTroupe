@@ -1,0 +1,151 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "uniform visibility rule vs religious jewelry (red thread)",
+      "fairness/inconsistent enforcement (earrings vs thread)",
+      "acceptable methods to hide jewelry (plasters vs tudung/covering)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "A sets and enforces policy, then provides a clear operational test ('not visible') — helpful clarification.",
+      "B repeats her proposal (plasters) and later accepts the clarified rule; some minor repetition but not excessive.",
+      "D states a religious constraint and offers a practical workaround (covering), which was accepted.",
+      "Overall concise, workplace-appropriate exchange with direct problem-solving language."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "A clarified the policy to allow items that are not visible and explicitly disallowed plasters. Evidence: A: 'No plasters. But if the tudung covers them completely and no one can see them, fine.' D agreed to cover the thread ('I'll make sure it's covered.') and B accepted the clarified rule ('Okay, fine.'). This concrete mutual acceptance settled the disagreements.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A (shift lead) moved from a strict reading ('everything off') to an accommodation allowing covered items: 'If it's not visible, then it's fine.'",
+      "Agent D initially objected to removal for religious reasons and then accepted the accommodation: 'I'll make sure it's covered.'",
+      "Agent B raised a fairness complaint, proposed plasters, and then accepted A's clarified rule allowing coverage by tudung but not plasters: 'Okay, fine.'",
+      "Agent C did not take a position and did not change stance."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "A asserts rule and tells D 'that means the thread too.' D objects: 'This isn't just a bracelet, it's a religious thing. I can't take it off. What if I cover it so it's not visible?' — clear incompatible demands (rule vs religious practice).",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "A accepts a covering: 'If it's not visible, then it's fine.' D agrees: 'Okay, thanks. I'll make sure it's covered.' The immediate objection about the thread is accommodated by allowing it to be covered.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "B raises a new fairness/inconsistency objection: 'Hang on. So he can cover his, but I had to take my earrings out?' A replies by restating D can't take it off and noting covering is possible—issue of equal treatment is introduced and remains unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "B proposes a method and repeats it: 'I can put plasters over them. My tudung covers them anyway. If they're not visible, what does it matter?' The fairness/inconsistency concern persists; no final decision yet.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "A gives the concrete boundary and disallows one proposed method: 'No plasters. But if the tudung covers them completely and no one can see them, fine.' B accepts: 'Okay, fine.' The outstanding fairness/inconsistency concern is settled by permitting covered items (except plasters).",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Conversation moves to closing: 'Okay, are we ready to close up now?' — no substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "A: 'Okay, good. Let's close up.' No conflict expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The central tension was between a uniform visibility requirement and sincerely held religious practices that cannot be removed; defining 'visibility' enabled an accommodation.",
+      "Fairness concerns (different items have different practical removability) were raised and resolved by applying a single visible/non-visible standard rather than identical treatment of all items.",
+      "The employer declined one particular hiding method (plasters), indicating the resolution balanced appearance/health/safety or policy concerns with religious accommodation."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T08:46:53.046874+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00824455,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2751,
+      "local_latency_ms": 34960.62,
+      "output_tokens": 3980,
+      "reasoning_tokens": 2496,
+      "successful_calls": 1,
+      "total_tokens": 6731
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "UN1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S75-UN1-R01",
+    "scenario_id": "S75"
+  },
+  "schema_version": 2
+}

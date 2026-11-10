@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "early-morning cooking noise during Ramadan vs roommates' sleep/schedules",
+      "noise when warming food affecting a light sleeper",
+      "lack of pre-existing household noise rules (context)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants gave concrete, personal reasons (A: client presentations; B: exams; D: Ramadan; C: light sleeper), which supported targeted proposals.",
+      "Resolution occurred via a concrete behavioral commitment from Agent D: 'I'll cook the night before.' and 'Okay, I'll be careful.'",
+      "There is noticeable repetitive thanking from Agent C across many rounds after resolution, which is unnecessary duplication but not substantive."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent D agreed to change behavior to avoid the incompatibility: 'Okay, I can do that. I'll cook the night before.' (resolving the morning cooking noise). Agent C's separate concern about warming noise was also accepted: 'Okay, I'll be careful.' The accommodations were made by Agent D with no reciprocal demands from others.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D shifted from announcing a recurring morning activity ('it will be the same every morning') to making two concrete behavioral changes: 'I'll cook the night before.' and 'Okay, I'll be careful.' (Rounds 3 and 6).",
+      "Agent A and B proposed and supported a practical solution (pre-cooking) rather than insisting on prohibition; they retained their need for quiet but accepted D's accommodation.",
+      "Agent C introduced a separate but related requirement (minimize warming noise) and promptly accepted D's agreement; no party reversed positions after their stated commitments."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A: 'Agent D, that's a problem for me. I have client presentations on Monday mornings. I can't be awake at five.' Agent D: 'It's for Ramadan. I have to eat before sunrise for the next month.' — direct incompatibility between D's planned morning cooking and A's need to sleep.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A proposes a concrete mitigation: 'could you cook the night before so you only have to warm it in the morning?' Agent B supports this. Conflict remains but a proposed accommodation reduces severity.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D accepts the proposal: 'Okay, I can do that. I'll cook the night before.' Agent A: 'Thanks, Agent D.' — the main incompatibility (morning cooking noise) is explicitly addressed by D's promise.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Only confirmations and thanks: Agent D 'No problem.' Agent B 'Thanks, Agent D.' No new dispute.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C raises a related but separate concern: 'When you're warming up your food, could you just be extra careful about noise with the microwave and plates?' — a minor unresolved request about warming noise adjacent to C's bedroom.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D agrees: 'Okay, I'll be careful.' Agent C: 'Thanks, Agent D.' The warming/noise concern is explicitly accepted by D.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Repeated thanks from Agent C only; no substantive disagreement present ('Thanks, Agent D. I appreciate it.').",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Only thanks and appreciation from Agent C; no new substantive issues raised.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Continued brief acknowledgements from Agent C; no conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior agreements remain in place.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Religious practices (Ramadan fasting) can conflict with shared living schedules; practical scheduling (pre-cooking) can resolve noise impacts without preventing the practice.",
+      "Different occupants raised distinct but related concerns (general early-morning noise vs warming noise near C's bedroom); addressing both required two specific concessions from D.",
+      "Conflict was resolved by one party accommodating others' needs rather than by mutual trade-offs or external rules."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T09:15:40.162212+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00813005,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2813,
+      "local_latency_ms": 38001.124,
+      "output_tokens": 3915,
+      "reasoning_tokens": 2432,
+      "successful_calls": 1,
+      "total_tokens": 6728
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "NO1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S86-NO1-R01",
+    "scenario_id": "S86"
+  },
+  "schema_version": 2
+}

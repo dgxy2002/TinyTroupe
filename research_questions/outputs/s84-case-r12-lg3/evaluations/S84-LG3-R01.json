@@ -1,0 +1,148 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "exclusion from decision-making due to colleagues switching to Tamil while making a change",
+      "inclusion in future decision conversations"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants addressed the exclusion quickly with apology and an explicit promise ('It won't happen again'), then Agent D verbally accepted.",
+      "Discussion then shifted to practical details of the presentation change; no further disagreement emerged.",
+      "Sparse late-round inactivity is recorded as no speech; this does not imply unresolved conflict."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent A and B apologized and Agent A promised not to exclude Agent D in future: Agent A: 'Fair enough. It won't happen again.' Agent D accepted that assurance: 'Okay, thank you.' This mutual acceptance settled the exclusion complaint.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A and Agent B moved from having made a decision in another language to apologizing and promising to include Agent D ('Fair enough. It won't happen again.'), showing concession.",
+      "Agent D moved from complaint ('Next time, I need to be part of the actual conversation') to acceptance ('Okay, thank you'), indicating the dispute was settled.",
+      "No participant resisted the presentation change; Agent D agreed to adjust their slide as described by Agent A."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Agent D: 'making decisions about my work in Tamil excludes me. Next time, I need to be part of the actual conversation.' Agent A: 'You're right. We switched to Tamil to move faster...'",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: 'Fair enough. It won't happen again.' Agent B: 'Sorry, Agent D. We weren't thinking.' (Apology and promise given; Agent D has not yet verbally accepted in this round.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D: 'Okay, thank you.' (Agent D accepts the apology/promise.)",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Discussion moves to the content change. Agent C: 'Yeah, it's a good change.' Agent D: 'Okay, so what exactly is the change?'",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A explains the change: 'We're moving the user analytics section to the start...' Agent D asks about implications for slides.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A: 'It's mainly reordering... you'll probably need to adjust your introduction slide.' Agent D: 'Okay, that's fine. I can adjust the intro.'",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A: 'Okay, good.' (No disagreement.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The core substantive issue was procedural: a colleague felt excluded from decisions about their work when the team code-switched languages.",
+      "Resolution relied on a direct apology and an explicit promise to include the excluded colleague in future conversations.",
+      "The substantive content change (reordering slides) was informational and accepted with a small practical adjustment (intro slide), not contested."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T09:25:57.576642+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00614955,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2699,
+      "local_latency_ms": 29229.271,
+      "output_tokens": 2939,
+      "reasoning_tokens": 1600,
+      "successful_calls": 1,
+      "total_tokens": 5638
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "LG3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S84-LG3-R01",
+    "scenario_id": "S84"
+  },
+  "schema_version": 2
+}

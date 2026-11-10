@@ -266,6 +266,121 @@ PROFILE_CONFIGURATIONS.update(
         "RO4": _cast({**_RO_FIXED, "D": ("Chinese", "Jun Jie")}),
     }
 )
+# FL1-FL4: casts for scenario 5 (farewell lunch). The issue is food, so roles A-C are the same three
+# Catholics in every cell (no second Buddhist in the Buddhist variant). D is male throughout. The
+# control D is Chinese, as in RO4, so D is never of the same background as A-C.
+PROFILE_CONFIGURATIONS.update(
+    {
+        "FL1": _cast({**_RO_FIXED, "D": ("Malay", "Hafiz")}),
+        "FL2": _cast({**_RO_FIXED, "D": ("Indian", "Karthik")}),
+        "FL3": _cast({**_RO_FIXED, "D": ("Chinese", "Wei Ming")}),
+        "FL4": _cast({**_RO_FIXED, "D": ("Chinese", "Jun Jie")}),
+    }
+)
+# UN1-UN4 (scenario 6, uniform rule) and VD1-VD3 (scenario 8, void deck wake): the variant faiths
+# include Hindu, Buddhist and Catholic, so roles A-C are the same three Malay Muslims. UN D is male
+# throughout and VD D female throughout; neither D shares a background with A-C.
+_MALAY_FIXED = {"A": ("Malay", "Hafiz"), "B": ("Malay", "Nurul"), "C": ("Malay", "Irfan")}
+PROFILE_CONFIGURATIONS.update(
+    {
+        "UN1": _cast({**_MALAY_FIXED, "D": ("Indian", "Karthik")}),
+        "UN2": _cast({**_MALAY_FIXED, "D": ("Chinese", "Wei Ming")}),
+        "UN3": _cast({**_MALAY_FIXED, "D": ("Eurasian", "Daniel Pereira")}),
+        "UN4": _cast({**_MALAY_FIXED, "D": ("Chinese", "Jun Jie")}),
+        "VD1": _cast({**_MALAY_FIXED, "D": ("Chinese", "Xin Yi")}),
+        "VD2": _cast({**_MALAY_FIXED, "D": ("Eurasian", "Rachel Pereira")}),
+        "VD3": _cast({**_MALAY_FIXED, "D": ("Indian", "Priya")}),
+    }
+)
+# LG1-LG4: scenario 10 (meetings in another language). The key is the majority, so roles A-C share a
+# background (Chinese, Malay, Indian) and D is the same English-only Eurasian in every cell; LG4 is the
+# mixed control. A-C are male, female, male in every cell.
+_LANGUAGE_D = ("Eurasian", "Rachel Pereira")
+PROFILE_CONFIGURATIONS.update(
+    {
+        "LG1": _cast({"A": ("Chinese", "Wei Ming"), "B": ("Chinese", "Hui Min"), "C": ("Chinese", "Jun Jie"), "D": _LANGUAGE_D}),
+        "LG2": _cast({"A": ("Malay", "Hafiz"), "B": ("Malay", "Nurul"), "C": ("Malay", "Irfan"), "D": _LANGUAGE_D}),
+        "LG3": _cast({"A": ("Indian", "Karthik"), "B": ("Indian", "Priya"), "C": ("Indian", "Suresh"), "D": _LANGUAGE_D}),
+        "LG4": _cast({"A": ("Chinese", "Wei Ming"), "B": ("Malay", "Nurul"), "C": ("Indian", "Suresh"), "D": _LANGUAGE_D}),
+    }
+)
+# NO1-NO4 (scenario 11, early-morning noise), WK1-WK4 (scenario 12, weekly slot) and RM1-RM4 (scenario 13,
+# spare office room): the variant faiths are Muslim, Hindu and Buddhist, so roles A-C are three Catholics,
+# the same people in every cell of a scenario. NO and RM have a female D throughout, WK a male D (Friday
+# prayers at the mosque). The control D is Chinese, so D never shares a background with A-C.
+_NOISE_FIXED = {"A": ("Eurasian", "Marcus de Souza"), "B": ("Eurasian", "Rachel Pereira"), "C": ("Eurasian", "Natalie Rodrigues")}
+_OFFICE_FIXED = {"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Eurasian", "Marcus de Souza"), "C": ("Eurasian", "Rachel Pereira")}
+PROFILE_CONFIGURATIONS.update(
+    {
+        "NO1": _cast({**_NOISE_FIXED, "D": ("Malay", "Aisyah")}),
+        "NO2": _cast({**_NOISE_FIXED, "D": ("Indian", "Priya")}),
+        "NO3": _cast({**_NOISE_FIXED, "D": ("Chinese", "Xin Yi")}),
+        "NO4": _cast({**_NOISE_FIXED, "D": ("Chinese", "Hui Min")}),
+        "WK1": _cast({**_OFFICE_FIXED, "D": ("Malay", "Hafiz")}),
+        "WK2": _cast({**_OFFICE_FIXED, "D": ("Indian", "Karthik")}),
+        "WK3": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Wei Ming")}),
+        "WK4": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Jun Jie")}),
+        "RM1": _cast({**_OFFICE_FIXED, "D": ("Malay", "Nurul")}),
+        "RM2": _cast({**_OFFICE_FIXED, "D": ("Indian", "Kavitha")}),
+        "RM3": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Xin Yi")}),
+        "RM4": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Hui Min")}),
+    }
+)
+# HX1-HX2: race-versus-religion test on scenario 1 (S46, housewarming, Muslim need). HW1 with only Agent D
+# changed: the same Muslim faith and need, held by an Indian Muslim (HX1) or a Chinese Muslim (HX2) instead
+# of a Malay. The shared setting still says D "is Muslim and eats halal", so only D's name, label, and home
+# language change. Everyone else is the HW1 cast.
+_MUSLIM_BIOGRAPHY = (
+    "You grew up in an HDB flat in Singapore and went to local schools. You speak {languages} at home. "
+    "You are Muslim and eat halal. You go home for Hari Raya every year."
+)
+_HW1_FIXED = {"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Chinese", "Jun Jie"), "C": ("Indian", "Suresh")}
+PROFILE_CONFIGURATIONS.update(
+    {
+        "HX1": {
+            **_cast({**_HW1_FIXED, "D": ("Indian", "Fathima")}),
+            "biography_overrides": {"D": _MUSLIM_BIOGRAPHY.format(languages="Tamil and English")},
+        },
+        "HX2": {
+            **_cast({**_HW1_FIXED, "D": ("Chinese", "Mei Ling")}),
+            "biography_overrides": {"D": _MUSLIM_BIOGRAPHY.format(languages="Mandarin and English")},
+        },
+        # Crossed cells, to separate the name others see from D's own label: HX3 keeps the name Aisyah with
+        # a Chinese label and Mandarin at home; HX4 keeps the Malay label and biography with the name Mei Ling.
+        "HX3": {
+            **_cast({**_HW1_FIXED, "D": ("Chinese", "Aisyah")}),
+            "biography_overrides": {"D": _MUSLIM_BIOGRAPHY.format(languages="Mandarin and English")},
+        },
+        "HX4": _cast({**_HW1_FIXED, "D": ("Malay", "Mei Ling")}),
+    }
+)
+# SM1-SM4: scenario 15 (cooking smells), the first case scenario with no religion in it. Every role gets a
+# biography without a faith line, and the shared setting states backgrounds, not faiths. Roles A-C are the NO
+# cast; D is female, with the same names as the NO cells.
+_SECULAR_BIOGRAPHY = (
+    "You grew up in an HDB flat in Singapore and went to local schools. You speak {languages} at home."
+)
+_SECULAR_LANGUAGES = {"Chinese": "Mandarin and English", "Eurasian": "English", "Indian": "Tamil and English", "Malay": "Malay and English"}
+
+
+def _secular_cast(roles: dict[str, tuple[str, str]]) -> dict[str, Any]:
+    return {
+        **_cast(roles),
+        "biography_overrides": {
+            role: _SECULAR_BIOGRAPHY.format(languages=_SECULAR_LANGUAGES[background])
+            for role, (background, _) in roles.items()
+        },
+    }
+
+
+PROFILE_CONFIGURATIONS.update(
+    {
+        "SM1": _secular_cast({**_NOISE_FIXED, "D": ("Malay", "Aisyah")}),
+        "SM2": _secular_cast({**_NOISE_FIXED, "D": ("Indian", "Priya")}),
+        "SM3": _secular_cast({**_NOISE_FIXED, "D": ("Chinese", "Xin Yi")}),
+        "SM4": _secular_cast({**_NOISE_FIXED, "D": ("Chinese", "Hui Min")}),
+    }
+)
 # K3: M2's placement (Hafiz, Priya, Marcus de Souza, Xin Yi) for S40 and S41, Agent A opening.
 PROFILE_CONFIGURATIONS["K3"] = {
     **PROFILE_CONFIGURATIONS["M2"],
@@ -414,8 +529,8 @@ def validate_scenario(scenario: ScenarioPreset) -> None:
         raise ValueError(
             f"{scenario.scenario_id} must define exactly agents {AGENT_IDS}."
         )
-    if not scenario.scenario_id.startswith("S") or len(scenario.scenario_id) != 3:
-        raise ValueError("scenario_id must use the S01-S99 form.")
+    if not (scenario.scenario_id.startswith("S") and scenario.scenario_id[1:].isdigit() and len(scenario.scenario_id) in (3, 4)):
+        raise ValueError("scenario_id must use the S01-S999 form.")
     parsed_datetime = datetime.fromisoformat(scenario.initial_datetime)
     if parsed_datetime.tzinfo is None:
         raise ValueError("initial_datetime must include an explicit UTC offset.")
@@ -507,7 +622,8 @@ def materialize_configuration(
                 else cultural_background
             )
         if profile and profile.get("biography"):
-            payload["agents"][agent_id]["biography"] = (
+            override = (profile.get("biography_overrides") or {}).get(agent_id)
+            payload["agents"][agent_id]["biography"] = override or (
                 PERSONAL_BIOGRAPHIES if profile["biography"] == "personal" else BIOGRAPHIES
             )[cultural_background]
         if profile and profile.get("home_language_thinking"):

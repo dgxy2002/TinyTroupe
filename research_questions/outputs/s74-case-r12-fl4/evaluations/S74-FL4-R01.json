@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Restaurant choice for farewell lunch (Korean barbecue vs alternatives)",
+      "Dietary restriction and cross-contamination (Agent D's coeliac disease)",
+      "Whether to ask the leaving colleague before changing her chosen restaurant",
+      "Timing constraints for Agent C's meeting"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete, contextual reasons (coeliac cross-contamination, meeting time), which grounds the disagreement.",
+      "There is some repeated restatement of the same procedural objection by Agent B ('shouldn't we ask her') across rounds 6–10, but overall the flow is natural and focused on resolving logistics.",
+      "Agent A moves from information-gathering to decisive accommodation, using clear, concrete language to close the practical choice ('So the barbecue is out.'; 'Let's just pick one so I can book it.')."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end of the run the group had affirmatively agreed to abandon the Korean barbecue (to accommodate Agent D's coeliac disease) and to pick a quicker alternative (Japanese or Vietnamese) so they can eat together. Evidence: Turn 11: Agent A: 'So the barbecue is out.' and Turn 25: Agent A: '...So, Japanese or Vietnamese? Let's just pick one so I can book it.' However, Agent B's substantive demand that the leaving colleague be asked before the plan was changed was never explicitly accepted by B after A's decision — B earlier said she would 'talk to her' (Turn 20) and repeatedly argued to respect the leaver's choice (Turns 12,14,18), but did not explicitly agree to the group's decision to change without asking. Because that procedural preference was not verbally withdrawn or accepted, the run leaves that issue outstanding; the practical dietary/accommodation issue was settled in favor of changing the venue.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: Moved from initial planner to active accommodator — first asked what D could eat (Turn 5) then explicitly removed barbecue from options (Turn 11) and pushed to pick an alternative (Turn 25).",
+      "Agent D: Consistently maintained a no-go for the barbecue due to coeliac disease (Turns 4,6); later offered a personal compromise (eat beforehand) but A rejected that (Turn 22–23).",
+      "Agent B: Consistently advocated respecting the leaver's original choice and to consult her before changing (Turns 12,14,18,20). B proposed a private consultation (Turn 20) but never explicitly accepted the group's final decision within the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 2: Agent B: 'Sounds good.' Turn 3: Agent C: 'What time are we going? I have a meeting at 2.30.' (No substantive disagreement; scheduling question only.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 4: Agent D: 'Actually, about the restaurant... I can't eat there. I have coeliac disease, so the marinades are a problem for me.' (Introduces a clear incompatibility with the booked Korean barbecue.)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 6: Agent D: 'It's a definite no-go.' Turn 7: Agent A: 'Right. Okay, we'll have to change it then.' (Conflict remains but A accepts change is needed, softening the disagreement.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 8: Agent B: '...why don't we call the restaurant first? Maybe they can make something separate for Agent D.' vs Turn 9: Agent C: 'Even if they can, barbecue takes a long time. I really can't be late for my 2.30.' (Disagreement about whether to try to keep the booking or change.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10: Agent D: '...Maybe we should look for somewhere quicker?' Turn 11: Agent A: 'You're right, it does take a while. So the barbecue is out. Let's find somewhere else.' (Group moves toward replacing the restaurant — tension reduced but plan not finalized.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12: Agent B: 'But it's her farewell lunch. She chose the place she wanted. Shouldn't we ask her before we change the plan completely?' vs Turn 13: Agent C: 'She'll just say to go wherever works for us. The barbecue is out for two people, so we need a new plan.' (Clear disagreement about whether to consult the leaving colleague.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 14: Agent B: '...Her choice should be the one that matters.' vs Turn 15: Agent C: 'But the choice has to work for everyone who's going.' (Positions repeated and remain opposed.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 16: Agent D: 'Japanese is usually quick. Or maybe Vietnamese? I can normally find something to eat at either.' Turn 17: Agent A: 'Okay, Japanese or Vietnamese.' (New options proposed, but the outstanding procedural disagreement (ask vs decide) from earlier rounds is not addressed.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Turn 18: Agent B: 'This isn't just another team lunch. It's her farewell. Are we really going to pick a new place without even asking her?' vs Turn 19: Agent C: 'And what is she supposed to say to that? It puts her in a bad position. We should just solve it.' (The earlier procedural dispute is reopened and restated.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "Turn 20: Agent B: 'I'll talk to her, just the two of us, and see what she'd like to do instead.' vs Turn 21: Agent C: 'And what if she says she still wants to go there?' (B offers a less public way to consult, softening immediate tension though the substantive problem may persist.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 10
+      },
+      {
+        "evidence": "Turn 22: Agent D: 'If she really wants to go there, we can still go. I can eat beforehand...' Turn 23: Agent A: 'No, Agent D. That's kind of you, but we're not doing that. It's a farewell lunch for the team, and that means we all eat together. We'll just find a different place.' (A rejects D's individual concession and insists on a collective accommodation — moves toward settling the main practical issue, but B's request to ask the leaver first is not explicitly accepted.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 11
+      },
+      {
+        "evidence": "Turn 24: Agent D: 'Okay.' Turn 25: Agent A: 'Right. We're not going to put her in an awkward position. We'll just sort it. So, Japanese or Vietnamese? Let's just pick one so I can book it.' (Group settles on replacing the barbecue and narrows choices, but there is no explicit acceptance from Agent B of foregoing asking the leaving colleague.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Tension is primarily between honoring the leaving colleague's expressed preference and the practical need to include everyone safely (Agent D's dietary restriction).",
+      "A secondary tension concerns process: whether to ask the leaver (which risks putting her in an awkward position) versus deciding on a safe, quick alternative for the team's sake.",
+      "Timing constraints (Agent C's meeting) shaped acceptability of alternatives and pushed the group away from slow options like barbecue."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T06:58:24.146030+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0125878,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3140,
+      "local_latency_ms": 54290.558,
+      "output_tokens": 6103,
+      "reasoning_tokens": 3904,
+      "successful_calls": 1,
+      "total_tokens": 9243
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "FL4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S74-FL4-R01",
+    "scenario_id": "S74"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "decision made without the affected member present / process of inclusion",
+      "assignment of client-side validation task to Agent D",
+      "future inclusion in decision-making about one's work"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Apology and offer to revisit are natural workplace repair moves ('Yeah, sorry about that', 'We have until Friday').",
+      "Technical rationale is briefly articulated and accepted ('We added a client-side data validation step...' ; 'Okay, that makes sense.').",
+      "Closure lines 'Okay. Let's get back to it.' are repeated a few times after resolution.",
+      "Silent rounds recorded as no public speech; no reopening of the issue."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent D accepted the technical change ('The change is fine.') and requested future inclusion ('in the future, I need to be in the conversation if it's about my work.'). Agent A explicitly agreed ('Agreed.'), resolving both the assignment question and the procedural complaint by mutual acceptance.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from an initial complaint about being excluded to accepting the technical change and requesting future inclusion ('The change is fine. But in the future, I need to be in the conversation if it's about my work.').",
+      "Agent A acknowledged the shorthand error and agreed to the request to include D in future decisions ('You're right, we fell into the old shorthand.'; 'Agreed.').",
+      "Agent B offered an apology; Agent C reinforced the technical rationale but did not change position."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 7,
+    "round_scores": [
+      {
+        "evidence": "Agent D reports being excluded after the decision appeared only in the minutes; Agent A admits shorthand but only offers the decision 'can be revisited' ('You're right, we fell into the old shorthand. ... But the decision can be revisited. We have until Friday.'; Agent D: 'Okay. Let's revisit it. When is a good time to talk?'). This starts an explicit disagreement about process/consultation and the decision's status.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A volunteers to discuss now ('Now is good. Let's sort it out.') and Agent B apologizes ('Yeah, sorry about that, Agent D. Let's talk it through.'), reducing tension but not yet resolving the substantive questions about the change or inclusion.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D asks for details about the change ('Can you walk me through the change?'), and Agent A begins to explain the technical rationale ('We added a client-side data validation step...it fits best with your module.'), moving the conversation toward substance but leaving the process complaint open.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D probes why it belongs to his module ('And why does it fit best with my module?') and Agent A explains ('Because your module handles the data entry before it's sent to the API. It's the first point where we can catch the error.'), reducing technical disagreement though the initial process concern remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C supports the technical rationale ('He's right. If we do it on the server side, it's already too late.'), and Agent D accepts the technical point ('Okay, that makes sense.'), so the assignment issue is settled but the complaint about being excluded still lingers implicitly.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A checks agreement ('Good. So we're agreed on the change?') and Agent D accepts the change but reasserts the process issue ('The change is fine. But in the future, I need to be in the conversation if it's about my work.'), converting the unresolved issue into an explicit request.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A accepts D's request ('Agreed.') and Agent D acknowledges ('Good.'), so both the substantive assignment and the procedural complaint are settled by mutual acceptance: D accepted the technical change and A agreed to include D in future decisions.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Participants return to work with no further disagreement recorded ('Okay. Let's get back to it.' repeated).",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict present in the transcript.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Final closure line 'Okay. Let's get back to it.' from Agent A; no further disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Tension was between efficiency (using familiar shorthand) and procedural fairness (including the affected person).",
+      "Technical trade-off clarified: earlier validation belongs in Agent D's module because it handles data entry before the API.",
+      "Resolution combined technical clarification plus a process accommodation (commitment to include Agent D in future decisions)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T09:25:10.063193+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0079803,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2774,
+      "local_latency_ms": 36113.507,
+      "output_tokens": 3845,
+      "reasoning_tokens": 2240,
+      "successful_calls": 1,
+      "total_tokens": 6619
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "LG4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S85-LG4-R01",
+    "scenario_id": "S85"
+  },
+  "schema_version": 2
+}

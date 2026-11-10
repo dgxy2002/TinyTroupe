@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Request to change the dinner rota because Agent D will be vegetarian for a month",
+      "Agent A's inability or lack of skill to cook vegetarian meals",
+      "Whether plain rice and vegetables count as an acceptable shared meal",
+      "Arrangement proposed: Agent D to cook Monday vegetarian main to be reheated other nights"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents gave concise, context-appropriate reasons (A: lack of skill; D: religious obligation) rather than vague complaints.",
+      "Practical solution proposed quickly (D's Monday batch) and explicitly accepted, producing a clean resolution.",
+      "Conversation is natural and efficient; no rambling or role confusion. Minor hedging from A ('I guess') when accepting."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent D proposed a concrete accommodation and the group accepted it. Key lines: D: \"what if I take the Monday cooking slot for the next month? I can make a big batch of a vegetarian main, like a dhal. Then on your nights, I can just eat that...\" A: \"Okay, I guess that could work. For one month...\" B: \"That sounds fine.\" By this agreement, Agent D adjusts (taking Monday and preparing the vegetarian main) and the others accept that they will heat/eat that main on their nights for the month.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from requesting a rota change to offering a specific accommodation: taking Monday and preparing a bulk vegetarian main to be reheated on other nights (evidence: Turn 10).",
+      "Agent A shifted from objecting ('I don't know how to cook anything vegetarian', 'That's not a proper meal') to accepting D's plan ('Okay, I guess that could work. For one month...').",
+      "Agents B and C were consistently accommodating/supportive and did not materially change position beyond endorsing the proposed solution."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent D announces a change: \"The month of Purattasi is starting tomorrow. I'll be vegetarian for the whole month.\" This creates an incompatibility with the usual rota but no one has objected yet.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A raises a practical problem: \"I don't know how to cook anything vegetarian.\" Agent B suggests a simple workaround, but A's inability is a clear substantive obstacle to continuing the rota unchanged.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "A substantive disagreement emerges about adequacy of a simple vegetarian option: A: \"That's not a proper meal... I can't just serve up plain rice and boiled veg.\" vs B: \"It's fine. It doesn't have to be a 'proper' meal...\" The core incompatibility (what counts as an acceptable shared meal) remains unsettled.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "C softens the dispute by downplaying schedule changes: \"as long as I'm still only cooking one night a week, you all can work it out.\" D offers an accommodation: \"If you're cooking meat and a vegetable side, I can just have the vegetables and rice.\" Proposals reduce tension but A's communal-meal concern is not yet resolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "A reasserts the principle of eating the same meal together: \"But the point is for us to eat the same meal together.\" D responds with a concrete alternative plan: \"what if I take the Monday cooking slot for the next month? I can make a big batch of a vegetarian main, like a dhal...\" The debate is still present but a concrete resolution is proposed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Group accepts D's concrete proposal: A: \"Okay, I guess that could work. For one month, right? So you'll make a big pot on Monday...\" and B: \"That sounds fine.\" The incompatible demands are explicitly settled by agreement to D's plan.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "D reiterates the plan: \"Yeah, exactly. Just for this month...\" and C: \"Okay, that works for me.\" No new disagreement is raised; the previously reached agreement is reaffirmed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Earlier, participants had mutually accepted the plan.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The settlement from round 6 stands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Agreement previously affirmed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No new issues raised.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The parties had already agreed to D's Monday cooking plan.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The core tension was between maintaining a shared communal meal and accommodating an individual's temporary dietary restriction.",
+      "A practical, low-friction compromise (one person prepares a shared vegetarian main) resolved both the fairness and food-preparation skill constraints.",
+      "Explicit, concrete proposals (who will cook which night and how food will be reused) were decisive in moving from disagreement to agreement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T08:28:18.159617+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00851555,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2867,
+      "local_latency_ms": 38612.132,
+      "output_tokens": 4101,
+      "reasoning_tokens": 2432,
+      "successful_calls": 1,
+      "total_tokens": 6968
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "FR2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S52-FR2-R01",
+    "scenario_id": "S52"
+  },
+  "schema_version": 2
+}

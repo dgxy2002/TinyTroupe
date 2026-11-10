@@ -1,0 +1,151 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "roster scheduling / shift assignment",
+      "Friday evening religious observance (Agent D's temple attendance)",
+      "swap of Saturday morning and Sunday afternoon shifts"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants gave concrete reasons for constraints (Turn 2 D: 'I go to the temple...', Turn 4 B: '...my kid has swimming lessons'), which grounded proposals.",
+      "B proposed a clear three-way swap (Turn 13), and that trade was iterated and confirmed by others.",
+      "There is some needless repetition: B repeats the confirmation (Turns 20 and 23) and A repeats 'Okay, settled. I'll send it in.' multiple times (Turns 29, 37, 41).",
+      "Roles, facts, and slots stayed consistent and the conversation remained focused on the practical constraint."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The team agreed a three-way swap that removes the incompatible Friday assignment: Agent A accepted taking the Friday evening slot, Agent D agreed to take Agent B's Saturday morning slot, and Agent B agreed to take Agent A's Sunday afternoon slot. Evidence: B proposed the swap ('...you take Friday evening, Agent D takes my Saturday morning, and I take your Sunday slot?' — Turn 20/23), A accepted ('Yes, that works for me.' — Turn 24), and D had agreed to take Saturday morning earlier ('I can take the Saturday morning slot.' — Turn 11; reaffirmed Turn 25).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: initially objected to Friday (Turn 2) but offered flexibility and explicitly agreed to take Saturday morning ('I can take the Saturday morning slot.' — Turn 11; 'Yes, Saturday morning is good for me.' — Turn 25).",
+      "Agent B: initially could not do Friday and needed Saturday morning moved (Turn 4), then proposed and agreed to take A's Sunday slot as part of the three-way swap (Turn 13, Turn 20/23).",
+      "Agent A: initiated the query and ultimately accepted taking the Friday evening slot ('Yes, that works for me.' — Turn 24).",
+      "Agent C: did not change position and explicitly said they could not take another regular slot (Turn 5)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 9,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 A: 'Is there a problem with Friday?' — Turn 2 D: 'Yes. I go to the temple with my family on Friday evenings.' (D objects to the assigned Friday slot.)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 A: 'Okay. Can anyone swap with Agent D for the Friday slot?' — Turn 4 B: 'I can't do Friday evenings. And I need to move my Saturday morning slot.' (B cannot cover Friday and adds another constraint, making a swap harder.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 C: 'I can't take on another regular slot.' — Turn 6 D: 'I can take another slot. Any other evening is fine, or a weekend.' (D offers flexibility which begins to reduce the conflict; C cannot help.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 A: 'Agent B, what slot can you do instead of Saturday morning?' — Turn 8 B: 'Agent D can take my Saturday morning slot. I can do another weekend slot, or any evening except Friday.' (B proposes a concrete reassignment involving D, lowering the level of conflict.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 A: 'But if Agent D takes Saturday morning, that leaves Friday evening open, and you can't do Fridays.' — Turn 11 D: 'I can take the Saturday morning slot.' (D explicitly agrees to take Saturday morning but Friday remains unresolved.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 A: '...that still leaves the Friday evening slot open.' — Turn 13 B: 'How about this: Agent D takes my Saturday morning, you take Friday evening, and I'll take your slot?' (B proposes a three-way swap, reducing conflict though A hasn't yet accepted.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 14 A: 'What's my slot on the draft?' — Turn 15 B: 'I don't remember. Does anyone have the roster there?' (Procedural clarification; the proposed swap remains unconfirmed.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 19 A: 'I'm on Sunday afternoon. You want to take that?' — Turn 20 B: 'Yes, Sunday afternoon is fine. So to confirm: you take Friday evening, Agent D takes my Saturday morning, and I take your Sunday slot?' (A concrete confirmation is proposed; parties have not all verbally accepted yet in this round.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 8
+      },
+      {
+        "evidence": "Turn 23 B: (repeats confirmation) 'Yes... to confirm: you take Friday evening, Agent D takes my Saturday morning, and I take your Sunday slot?' — Turn 24 A: 'Yes, that works for me. Agent D, are you good with Saturday morning?' (A accepts the swap; D had earlier said 'I can take the Saturday morning slot.' (Turn 11). With these acceptances the conflicting assignment is mutually reallocated.)",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Turn 25 D: 'Yes, Saturday morning is good for me.' — Turn 26 B: 'Great, so that's settled then.' (Reaffirmation after the agreement; no substantive conflict present.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Turn 29 A: 'Okay, settled. I'll send it in.' (Administrative closure; no dispute.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Turn 37 A: 'Okay, settled. I'll send it in.' — Turn 41 A: 'Okay, settled. I'll send it in.' (Repeated confirmations; no substantive conflict.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Religious observance (D's Friday temple attendance) created a hard availability constraint that required rearranging three people's weekly slots.",
+      "Family obligations (B's child's swimming lessons) limited possible covers and made a straightforward one-for-one swap impossible.",
+      "Because one colleague (C) could not take another regular slot, resolving the conflict required a three-way compromise rather than a two-person swap."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T09:35:49.163460+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01148705,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2921,
+      "local_latency_ms": 51520.839,
+      "output_tokens": 5580,
+      "reasoning_tokens": 3648,
+      "successful_calls": 1,
+      "total_tokens": 8501
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "WK2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S91-WK2-R01",
+    "scenario_id": "S91"
+  },
+  "schema_version": 2
+}

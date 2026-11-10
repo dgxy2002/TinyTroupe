@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "work schedule swap",
+      "family commitments (hospital visits, child's lessons)",
+      "fairness of changing assigned slots"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Colleagues used concrete reasons (hospital visit, swimming lessons) to justify requests — explanation supports substantive negotiation.",
+      "Some needless repetition: Agent B repeatedly restated the fairness complaint and Agent A repeatedly defended keeping B's slot (Turns 13–24).",
+      "Final resolution was reached by explicit restatement and affirmation (Turns 32–33), which is good practice to avoid lingering ambiguity."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "A three-way swap was agreed: Agent A agreed to take Agent D's Thursday slot; Agent D agreed to take Agent B's Saturday morning slot; and Agent B agreed to take Agent A's Sunday slot. Evidence: Agent B proposed the swap ('I'll take his Sunday slot if he'll take my Saturday morning.' — Turn 30), Agent D restated the arrangement ('So... Agent A takes my Thursday, I take your Saturday, and you take her Sunday?' — Turn 32), and Agent A affirmed: 'Yes. That's the plan. I'll change it now.' (Turn 33).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B moved from insisting 'It has to change' (Turn 10) and claiming equality of family reasons (Turn 13) to clarifying availability and offering a concrete swap (Turns 25, 28, 30).",
+      "Agent A initially tried to preserve Agent B's slot (Turns 9, 14) but ultimately agreed to take Agent D's Thursday and confirmed the final plan (Turn 33).",
+      "Agent D started by requesting a change (Turn 2), indicated flexibility (Turn 6), and accepted the three-way swap as restated (Turn 32).",
+      "Agent C did not change position or participate in the swap negotiation (Turn 5)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 12,
+    "round_scores": [
+      {
+        "evidence": "Turn 2 — Agent D: 'I have to take my father to the hospital on Thursday afternoons.' (Request raised; no incompatible claim yet.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent A asks for swaps; Turn 4 — Agent B: 'I can't do Saturday mornings.' (Availability constraints stated but no direct disagreement yet.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent C: 'I can't do a permanent swap.' Turn 6 — Agent D: 'I can take another slot. Weekends or evenings are fine.' (Constraints stated; no expressed conflict.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent A proposes: 'I'll take the Thursday slot. Agent D, you take mine on Sunday afternoon.' Turn 8 — Agent B asks: 'So what about Saturday morning?' (Potentially incompatible effects on B's slot begin to appear.)",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 — Agent A: 'That's your slot. It doesn't change.' vs Turn 10 — Agent B: 'It has to change. I'm the only one who can take my kid to their lesson.' (Direct, substantive disagreement about whether B's slot may be changed.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 13 — Agent B: 'You changed the roster for Agent D. That's a family reason. So is mine.' Turn 14 — Agent A: 'Agent B, nobody is touching your slot. Your Saturday is not changing.' (Disagreement broadened to fairness and equal treatment.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 15 — Agent B: 'So his family commitment is important and mine isn't?' (Continued contest over whether B's family reason is given equal weight.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 19 — Agent A: '...We respected your reason. That's why your slot is not changing.' Turn 20 — Agent B: 'How is leaving my slot the same \"respecting my reason\"?' (Argument persists; no settlement.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "Turn 23 — Agent B: 'That's not respecting my reason. That's ignoring it.' Turn 24 — Agent A defends: 'We kept your slot the same *because* of your reason.' (Positions remain directly opposed.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 9
+      },
+      {
+        "evidence": "Turn 25 — Agent B clarifies: 'I said I can't do Saturday mornings. I never said I can't do any other time.' Turn 28 — Agent B: 'I can do another slot. Just not Saturday mornings.' (Clarification reduces the scope of the incompatibility.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 10
+      },
+      {
+        "evidence": "Turn 29 — Agent A: 'Fine. You want a different slot. Which one?' Turn 30 — Agent B: 'Agent D said weekends are fine. I'll take his Sunday slot if he'll take my Saturday morning.' (Concrete swap offer, disagreement largely resolved pending acceptance.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 11
+      },
+      {
+        "evidence": "Turn 32 — Agent D restates: 'So... Agent A takes my Thursday, I take your Saturday, and you take her Sunday?' Turn 33 — Agent A: 'Yes. That's the plan. I'll change it now.' (Mutual, concrete arrangement affirmed; conflict settled.)",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The disagreement centered on whether preserving one person's slot while altering another's was fair — this is a distributive fairness issue rather than a dispute about facts.",
+      "Ambiguity in earlier statements ('I can't do Saturday mornings') created a temporary escalation; a simple clarification (Round 10) reduced conflict and enabled a solution.",
+      "A three-way swap distributed burden: each person gave up or took a different slot, allowing all family needs to be accommodated without hiring relief staff."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T09:42:31.810095+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01130055,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2991,
+      "local_latency_ms": 51111.808,
+      "output_tokens": 5478,
+      "reasoning_tokens": 3648,
+      "successful_calls": 1,
+      "total_tokens": 8469
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "WK4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S93-WK4-R01",
+    "scenario_id": "S93"
+  },
+  "schema_version": 2
+}

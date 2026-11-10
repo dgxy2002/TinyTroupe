@@ -1,0 +1,155 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Interpretation of the 'nothing visible' uniform rule (covering vs removal)",
+      "Accommodation of a medical alert bracelet vs enforcement for other accessories (earrings)",
+      "Perceived unequal treatment of personal/religious items",
+      "Whether a shift lead can make/implement exceptions to head-office policy"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agent A acts as an active coordinator and issues practical decisions (e.g., Turn 19).",
+      "Agent B repeatedly raises fairness and literal-rule concerns, anchoring the dispute in enforcement experience (e.g., Turn 4, 10, 17).",
+      "Agent C mostly echoes the literal reading of the rule and supports B's procedural objection (e.g., Turn 5, 13, 18).",
+      "Agent D provides a factual, solvable constraint (medical need) and accepts an accommodation early (Turn 6, 8)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent D agreed to cover the medical bracelet (Turn 7–8: Agent A asked if it could be covered; Agent D: 'Yes, I can cover it.' and Turn 9: 'A wristband works.'), so the specific conflict over D's bracelet was accommodated. However, the larger disputes remained: Agent A declared that earrings must be removed while the bracelet must be covered ('For tomorrow, the bracelet gets covered and the earrings come off. That's it.' — Turn 19), and Agent B continued to object to both the unequal treatment and Agent A's authority to make that decision (Turn 20: 'Why are you the one making the call?'; Turn 22: 'Shift lead isn't manager. You can't just change a rule from head office.'). No mutual agreement resolving those issues is recorded, so the run is only partially resolved (bracelet accommodated; policy interpretation and authority unresolved).",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent D changed position by agreeing to cover the medical bracelet (Turn 8: 'Yes, I can cover it.'; earlier insisted on wearing it in Turn 6).",
+      "Agent A consistently held and restated the accommodation/implementation position (e.g., Turn 7, Turn 9, Turn 19, Turn 24) and did not concede.",
+      "Agent B consistently objected to unequal treatment and to A's unilateral decision and did not soften that position (e.g., Turn 10, 15, 17, 20, 22).",
+      "Agent C remained aligned with the literal-rule interpretation and supported B's objections (e.g., Turn 5, 13, 18, 23)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent A reads the rule. Turn 2: Agent B asks a clarifying question about Agent D's bracelet — no incompatible claims yet, just a query.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent A interprets the rule as 'nothing visible' and says items must be covered or not worn. Turn 4: Agent B reports she was told to remove earrings outright. A substantive disagreement over whether covering is allowed appears.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: Agent C supports Agent B's report that removal (not covering) was required. Turn 6: Agent D asserts a conflicting practical necessity ('It's a medical bracelet. I have to wear it.'), raising a clear dispute between strict rule enforcement and medical need.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: Agent A asks whether the bracelet can be covered. Turn 8: Agent D agrees they can cover it ('Yes, I can cover it.'). The specific conflict over D's bracelet becomes accommodated, but the broader disagreement about earrings and policy remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9: Agent A accepts covering as a solution for the bracelet ('A wristband works'). Turn 10: Agent B objects to differential treatment ('Why is it different? They didn't tell me I could cover them.'), re-escalating disagreement about fairness and policy interpretation.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11: Agent A distinguishes medical item vs accessory. Turn 12: Agent B reiterates objection that D gets an option she did not. The substantive disagreement over unequal treatment and rule interpretation persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 13: Agent C emphasizes 'The rule is the rule' and recounts the instruction to remove earrings. Turn 14: Agent A repeats the medical-item distinction. Positions remain opposed on policy enforcement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 15: Agent B frames the issue as a moral/unfair priority ('So his medical reason is more important than my personal reason?'). Turn 16: Agent A maintains the medical/accessory distinction. The dispute intensifies into a strong disagreement about fairness and exceptions.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "Turn 17: Agent B points to the literal rule text ('The rule says \"nothing visible\"'). Turn 18: Agent C backs that reading. A's exception for a medical item remains contested; the conflict broadens around literal rule interpretation.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 9
+      },
+      {
+        "evidence": "Turn 19: Agent A issues a unilateral decision for tomorrow ('...the bracelet gets covered and the earrings come off. That's it.'). Turn 20: Agent B challenges A's authority to make that call. The substantive dispute now includes authority to decide and remains unresolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 10
+      },
+      {
+        "evidence": "Turn 21: Agent A invokes shift-lead authority ('Because I'm the shift lead. It's my call.'). Turn 22: Agent B rejects that basis ('Shift lead isn't manager. You can't just change a rule from head office.'). The disagreement about who may change/implement head-office rules continues.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 11
+      },
+      {
+        "evidence": "Turn 23: Agent C supports B's point that they can't change head-office rules. Turn 24: Agent A restates that she must answer to the manager and that it's her call. The core disputes (policy interpretation, unequal treatment, and authority) remain unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Teams distinguish between medical necessity and 'accessory' status; medical items may be treated as special-cased if the team accepts a covering accommodation.",
+      "Literal wording ('nothing visible') creates ambiguity about whether covering is allowed; that ambiguity fuels contest between members who received different prior instructions.",
+      "Conflict includes both rule interpretation and authority to implement or adapt rules at the store level — resolving one practical issue (bracelet covering) did not resolve authority/fairness disputes.",
+      "A unilateral decision by a shift lead (without head-office confirmation) tends to generate pushback even if meant as a practical compromise for an imminent manager visit."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T08:46:17.771625+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 4 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00988055,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3039,
+      "local_latency_ms": 43813.162,
+      "output_tokens": 4762,
+      "reasoning_tokens": 2752,
+      "successful_calls": 1,
+      "total_tokens": 7801
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "UN4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S78-UN4-R01",
+    "scenario_id": "S78"
+  },
+  "schema_version": 2
+}

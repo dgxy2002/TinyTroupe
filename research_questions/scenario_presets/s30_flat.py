@@ -788,8 +788,8 @@ ROTA_CONTROL = _rota_case(
 K_BACKGROUNDS = {"K1": K1_BACKGROUNDS, "K2": K2_BACKGROUNDS, "K3": K3_BACKGROUNDS, "K4": K4_BACKGROUNDS}
 
 
-def _faith_sentence(backgrounds: dict[str, str]) -> str:
-    faiths = {role: _FAITH_WORDS[background] for role, background in backgrounds.items()}
+def _faith_sentence(backgrounds: dict[str, str], faith_words: dict[str, str] = _FAITH_WORDS) -> str:
+    faiths = {role: faith_words[background] for role, background in backgrounds.items()}
     return (
         f"Agent A is {faiths['A']}, Agent B is {faiths['B']}, Agent C is {faiths['C']}, and "
         f"Agent D is {faiths['D']}."
@@ -805,6 +805,7 @@ def _key_case(
     roles: dict[str, dict[str, str]],
     need: str,
     backgrounds: dict[str, str],
+    faith_words: dict[str, str] = _FAITH_WORDS,
 ) -> ScenarioPreset:
     agents = {}
     for agent_id, preset in PORK_PAN.agents.items():
@@ -820,7 +821,7 @@ def _key_case(
         title=title,
         environment=environment,
         source_status="scenarios.md, after the design review of 2026-11-08",
-        shared_setting=setting.replace("{faiths}", _faith_sentence(backgrounds)),
+        shared_setting=setting.replace("{faiths}", _faith_sentence(backgrounds, faith_words)),
         shared_trigger=trigger,
         agents=agents,
     )
@@ -1225,4 +1226,895 @@ ROSTER_V2_CONTROL = _roster_v2(
     "the day after. For you, being in the wedding party is a family duty. Both days matter to you, "
     "and the ceremony matters most.",
     "RO4",
+)
+
+
+# Scenario 5: farewell lunch (S71 Muslim FL1, S72 Hindu FL2, S73 Buddhist FL3, S74 control FL4). Fixes
+# from the draft: no deposit and no social fund, so money cannot become the issue ("Nothing has been
+# paid for"); roles A-C are the same three Catholics in every cell, since the issue is food and the
+# Buddhist variant rules out a second Buddhist. The shared setting names faiths only, without diets,
+# so the Muslim and Hindu needs are not made public while the Buddhist and control needs stay private.
+FL_BACKGROUNDS = {
+    "FL1": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Malay"},
+    "FL2": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Indian"},
+    "FL3": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+    "FL4": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+}
+_PLAIN_FAITHS = {"Chinese": "Buddhist", "Eurasian": "Catholic", "Indian": "Hindu", "Malay": "Muslim"}
+_FAREWELL_SETTING = (
+    "Four colleagues work together in a small team and have done so for a year. Tomorrow, Wednesday, "
+    "is the last day for a fifth colleague, who is not here, and the four are taking her out for a "
+    "farewell lunch. You all know each other's faith: {faiths} It is late afternoon, and all four are "
+    "at their desks."
+)
+_FAREWELL_TRIGGER = (
+    "Agent A has just told the others that the farewell lunch tomorrow is booked at a Korean barbecue "
+    "restaurant near the office, where pork and beef are grilled at each table and the meats come "
+    "marinated. The colleague who is leaving chose it herself. Nothing has been paid for. Nobody has "
+    "said anything about it yet."
+)
+_FAREWELL_ROLES = {
+    "A": dict(
+        role="Team member who organised the farewell lunch",
+        immediate_priority="Give the colleague who is leaving the send-off she asked for.",
+        private_knowledge=(
+            "You booked the table and told the colleague who is leaving this morning, and she was "
+            "delighted. Changing the plan now means telling her the day before her last day. The "
+            "booking can be changed or cancelled tonight without any charge."
+        ),
+        initial_observation="Sees the others reading the booking you have just shared.",
+    ),
+    "B": dict(
+        role="Team member closest to the colleague who is leaving",
+        immediate_priority="Do right by the colleague who is leaving.",
+        private_knowledge=(
+            "The colleague who is leaving is your closest friend at work. She chose this restaurant "
+            "because it is her favourite, and she told you she has been looking forward to it all "
+            "week. What matters most to you is that she enjoys her last day."
+        ),
+        initial_observation="Sees the booking for her favourite restaurant.",
+    ),
+    "C": dict(
+        role="Team member with a meeting after lunch",
+        immediate_priority="Be back at your desk on time tomorrow.",
+        private_knowledge=(
+            "You have a client meeting at 2.30 p.m. tomorrow and cannot be late for it. The barbecue "
+            "restaurant is two minutes' walk from the office. Anywhere within ten minutes' walk works "
+            "for you."
+        ),
+        initial_observation="Sees the booking and checks your calendar for tomorrow afternoon.",
+    ),
+    "D": dict(
+        role="Newest team member",
+        immediate_priority="Be part of the farewell, and not be overlooked as the newest person here.",
+        private_knowledge=(
+            "You are the newest in the team, and the colleague who is leaving trained you when you "
+            "joined."
+        ),
+        initial_observation="Sees the booking for the Korean barbecue restaurant.",
+    ),
+}
+_LUNCH_MATTERS = " Being at the lunch with her matters most to you; eating there matters less."
+
+
+def _farewell(scenario_id: str, title: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"Farewell lunch: {title}",
+        "Small office",
+        _FAREWELL_SETTING,
+        _FAREWELL_TRIGGER,
+        _FAREWELL_ROLES,
+        need + _LUNCH_MATTERS,
+        FL_BACKGROUNDS[cell],
+        _PLAIN_FAITHS,
+    )
+
+
+FAREWELL_MUSLIM = _farewell(
+    "S71",
+    "Muslim",
+    "You are Muslim and eat only halal food. For you, a restaurant that is not halal-certified and "
+    "grills pork at its tables is not a place you can eat.",
+    "FL1",
+)
+FAREWELL_HINDU = _farewell(
+    "S72",
+    "Hindu",
+    "You are Hindu and do not eat beef. For you, a restaurant that grills beef at its tables is not a "
+    "place you can eat.",
+    "FL2",
+)
+FAREWELL_BUDDHIST = _farewell(
+    "S73",
+    "Buddhist",
+    "You are Buddhist, and tomorrow is the fifteenth day of the lunar month. For you, that is a "
+    "vegetarian day, so a restaurant that grills meat at its tables is not a place you can eat "
+    "tomorrow.",
+    "FL3",
+)
+FAREWELL_CONTROL = _farewell(
+    "S74",
+    "coeliac disease (control)",
+    "You have coeliac disease. For you, a restaurant whose meats come in wheat-based marinades and "
+    "share one grill is not a place you can eat, because even a trace makes you ill.",
+    "FL4",
+)
+
+
+# Scenario 6: the uniform rule (S75 Hindu UN1, S76 Buddhist UN2, S77 Catholic UN3, S78 control UN4).
+# Fix from the draft: the hijab is dropped, because it is a far bigger demand than a thread, so every
+# variant is now a small item at the wrist or neck, against a medical alert bracelet. The rule covers
+# jewellery and accessories, not head coverings. Roles A-C are the same three Malay Muslims, since
+# Hindu, Buddhist and Catholic are the variant faiths. B's earrings give B a stake in the same rule.
+UN_BACKGROUNDS = {
+    "UN1": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Indian"},
+    "UN2": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Chinese"},
+    "UN3": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Eurasian"},
+    "UN4": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Chinese"},
+}
+_UNIFORM_SETTING = (
+    "Four sales staff work together at a retail store and have done so for two years. Head office has "
+    "issued a new uniform rule that starts tomorrow: no jewellery or accessories may be visible apart "
+    "from a watch. The area manager visits the store tomorrow morning, and head office cannot be "
+    "reached tonight. You all know each other's faith and what each of you eats: {faiths} It is "
+    "closing time, and all four are at the counter."
+)
+_UNIFORM_ROLES = {
+    "A": dict(
+        role="Shift lead",
+        immediate_priority="Get the shift through tomorrow's visit.",
+        private_knowledge=(
+            "Tomorrow you have to sign that everyone on the shift follows the rule, and the area "
+            "manager warned you after the last audit. The rule is about what can be seen."
+        ),
+        initial_observation="Sees the others listening as you finish reading the rule.",
+    ),
+    "B": dict(
+        role="Sales assistant",
+        immediate_priority="Be treated the same as everyone else.",
+        private_knowledge=(
+            "This afternoon you were told to stop wearing the earrings your late mother gave you, and "
+            "you took them off. What bothers you is being treated differently, not the rule itself."
+        ),
+        initial_observation="Sees what Agent D is wearing.",
+    ),
+    "C": dict(
+        role="Longest-serving sales assistant",
+        immediate_priority="Keep your job.",
+        private_knowledge=(
+            "You have been with the company eleven years, and your contract is up for renewal next "
+            "month. The area manager has known you for years and listens to you."
+        ),
+        initial_observation="Sees the others look at Agent D.",
+    ),
+    "D": dict(
+        role="Newest sales assistant",
+        immediate_priority="Keep your job, and not be overlooked as the newest person here.",
+        private_knowledge="You joined three months ago and are still on probation.",
+        initial_observation="Sees the others look at what you are wearing.",
+    ),
+}
+_KEEP_ON = " Keeping it on matters most to you; whether it can be seen matters less."
+
+
+def _uniform(scenario_id: str, title: str, item: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"Uniform rule: {title}",
+        "Retail store, at the counter",
+        _UNIFORM_SETTING,
+        f"Agent A, the shift lead, has just read the new rule aloud. Agent D is wearing {item}. Nobody "
+        "has said anything about it yet.",
+        _UNIFORM_ROLES,
+        need + _KEEP_ON,
+        UN_BACKGROUNDS[cell],
+    )
+
+
+UNIFORM_HINDU = _uniform(
+    "S75",
+    "Hindu",
+    "a red thread tied around one wrist",
+    "You are Hindu, and the red thread was tied at a temple blessing. For you, it stays on.",
+    "UN1",
+)
+UNIFORM_BUDDHIST = _uniform(
+    "S76",
+    "Buddhist",
+    "a wooden prayer-bead bracelet",
+    "You are Buddhist, and the bracelet was given to you when you took refuge. For you, it stays on.",
+    "UN2",
+)
+UNIFORM_CATHOLIC = _uniform(
+    "S77",
+    "Catholic",
+    "a small cross on a chain",
+    "You are Catholic, and the cross is from your confirmation. For you, it stays on.",
+    "UN3",
+)
+UNIFORM_CONTROL = _uniform(
+    "S78",
+    "medical alert bracelet (control)",
+    "a medical alert bracelet",
+    "You have epilepsy, and the bracelet tells paramedics what to do if you have a seizure. For you, "
+    "it stays on.",
+    "UN4",
+)
+
+
+# Scenario 8: the void deck wake (S79 Buddhist VD1, S80 Catholic VD2, S81 control VD3). Fix from the
+# draft: every variant is a wake for Agent D's grandfather, so celebration versus mourning is no longer
+# a difference; the control is the same wake without religious rites. Only two faith variants: a Muslim
+# void-deck wake is not usual, and a Hindu one could not be checked. Roles A-C are the same three Malay
+# Muslims. Each neighbour's stake comes with a time or place that could give.
+VD_BACKGROUNDS = {
+    "VD1": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Chinese"},
+    "VD2": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Eurasian"},
+    "VD3": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Indian"},
+}
+_VOID_DECK_SETTING = (
+    "Four neighbours live in the same HDB block and know each other from the block's chat group, "
+    "which they have used for two years. You all know each other's faith and what each of you eats: "
+    "{faiths} Events at the void deck need a town council permit, and Agent D's family has one for a "
+    "wake from tonight, Friday, until Sunday night. It is early evening, and all four are at the void "
+    "deck."
+)
+_VOID_DECK_ROLES = {
+    "A": dict(
+        role="Neighbour whose mother uses a wheelchair",
+        immediate_priority="Keep the path to the lift clear for your mother.",
+        private_knowledge=(
+            "Your mother uses a wheelchair, and the tent narrows the only path to the lift lobby. "
+            "Every day she goes out at about 8 a.m. and comes back at about noon, and those are the "
+            "times she needs the path."
+        ),
+        initial_observation="Sees the tent going up across the path to the lift lobby.",
+    ),
+    "B": dict(
+        role="Neighbour who works night shifts",
+        immediate_priority="Sleep before your night shifts.",
+        private_knowledge=(
+            "You are a nurse on night shifts this week, and you sleep from about 6 to 10.30 p.m. "
+            "before work. Your bedroom window faces the void deck. You have Saturday night off."
+        ),
+        initial_observation="Sees the tent and the chairs going up under your window.",
+    ),
+    "C": dict(
+        role="Neighbour who leads a morning exercise group",
+        immediate_priority="Keep your morning group going.",
+        private_knowledge=(
+            "You lead a tai chi group of older residents at the void deck at 7 every morning, in the "
+            "space the tent now takes. The open area by the playground nearby has room, but no shade."
+        ),
+        initial_observation="Sees the tent filling the space your group uses.",
+    ),
+    "D": dict(
+        role="Newer resident",
+        immediate_priority=(
+            "Do right by your family, and keep good relations with your neighbours, without being "
+            "overlooked as one of the newer residents."
+        ),
+        private_knowledge="You are one of the newer residents on the block.",
+        initial_observation="Sees three neighbours coming over while your family sets up.",
+    ),
+}
+_EVENINGS_MATTER = (
+    " Holding the evenings in full matters most to you; how the tent is laid out matters less."
+)
+
+
+def _void_deck(scenario_id: str, title: str, rites: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"Void deck wake: {title}",
+        "HDB void deck",
+        _VOID_DECK_SETTING,
+        "Agent D's grandfather died yesterday. Agent D's family is setting up a tent for his wake at "
+        f"the void deck, with {rites} each evening until about 10.30 p.m. Agent A, Agent B and Agent C "
+        "have come down to talk to Agent D about it. Nobody has proposed anything yet.",
+        _VOID_DECK_ROLES,
+        need + _EVENINGS_MATTER,
+        VD_BACKGROUNDS[cell],
+    )
+
+
+VOID_DECK_BUDDHIST = _void_deck(
+    "S79",
+    "Buddhist",
+    "monks chanting, with gongs,",
+    "You are Buddhist. For you, the chanting each evening at the wake is a religious duty, and it runs "
+    "for the three nights until the funeral on Monday.",
+    "VD1",
+)
+VOID_DECK_CATHOLIC = _void_deck(
+    "S80",
+    "Catholic",
+    "a rosary and hymns",
+    "You are Catholic. For you, the rosary and hymns each evening at the wake are a religious duty, and "
+    "they run for the three nights until the funeral Mass on Monday.",
+    "VD2",
+)
+VOID_DECK_CONTROL = _void_deck(
+    "S81",
+    "wake without religious rites (control)",
+    "family and friends gathering, with his favourite songs playing,",
+    "Your family is holding the wake without religious rites. For you, the evening gatherings at the "
+    "wake are a family duty, and they run for the three nights until the cremation on Monday.",
+    "VD3",
+)
+
+
+# Scenario 10: meetings in another language (S82 Mandarin LG1, S83 Malay LG2, S84 Tamil LG3, S85 control
+# LG4). Unlike the other scenarios, the key is the majority's background, not D's need: roles A-C share a
+# home language and D does not, so D is the same person (Rachel Pereira) in every cell and only roles
+# A-C and the language change. The control is a mixed group that shares an old team's shorthand in
+# English. The change agreed this morning can be reopened before Friday and C could take back part of it,
+# so the dispute has slack; nobody is told what language meetings should use.
+LG_BACKGROUNDS = {
+    "LG1": {"A": "Chinese", "B": "Chinese", "C": "Chinese", "D": "Eurasian"},
+    "LG2": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Eurasian"},
+    "LG3": {"A": "Indian", "B": "Indian", "C": "Indian", "D": "Eurasian"},
+    "LG4": {"A": "Chinese", "B": "Malay", "C": "Indian", "D": "Eurasian"},
+}
+_LANGUAGE_SETTING = (
+    "Four colleagues have worked together on one project team for six months, and team meetings are "
+    "held in English. {who_speaks} It is late morning, and all four are at the team's desks."
+)
+_LANGUAGE_ROLES = {
+    "A": dict(
+        role="Team lead",
+        immediate_priority="Keep the project on schedule.",
+        private_knowledge=(
+            "The project is two weeks behind, and the three of you decide faster when you talk the way "
+            "you usually do. The change agreed this morning goes to the client on Friday, so it can "
+            "still be reopened before then."
+        ),
+        initial_observation="Sees Agent D holding the printed minutes.",
+    ),
+    "B": dict(
+        role="Team member",
+        immediate_priority="Not be seen as rude or cliquey.",
+        private_knowledge=(
+            "You switched without thinking; it is how the three of you have always talked. Keeping to "
+            "plain English in meetings is no effort for you."
+        ),
+        initial_observation="Sees Agent D looking at the three of you.",
+    ),
+    "C": dict(
+        role="Team member",
+        immediate_priority="Keep the change agreed this morning.",
+        private_knowledge=(
+            "The change agreed this morning moves a task from your part of the project to Agent D's, and "
+            "you are already working late most nights. You could take back the smaller half of that task "
+            "without working later."
+        ),
+        initial_observation="Sees Agent D pointing at the line in the minutes about the task.",
+    ),
+    "D": dict(
+        role="Team member",
+        immediate_priority="Have a say in decisions about your own work.",
+        private_knowledge=(
+            "You have noticed this for months and have said nothing until now. This morning's change "
+            "adds a task to your part of the project."
+        ),
+        initial_observation="Sees the three others look up from their screens.",
+    ),
+}
+_SAY_MATTERS = (
+    " Having a say in this morning's change matters most to you; how the others talk among "
+    "themselves outside meetings matters less."
+)
+
+
+def _language(scenario_id: str, title: str, who_speaks: str, how: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"Meetings in another language: {title}",
+        "Office, project team desks",
+        _LANGUAGE_SETTING.replace("{who_speaks}", who_speaks),
+        f"At this morning's meeting, Agent A, Agent B and Agent C agreed a change to Agent D's part of the "
+        f"project {how}, with Agent D in the room. Agent D only found out from the minutes and has just "
+        "said so. Nobody has answered yet.",
+        _LANGUAGE_ROLES,
+        need + _SAY_MATTERS,
+        LG_BACKGROUNDS[cell],
+    )
+
+
+def _language_need(words: str) -> str:
+    return (
+        f"You do not understand {words}. For you, a decision about your own work, made in front of you "
+        "in words you cannot follow, leaves you out of it."
+    )
+
+
+LANGUAGE_MANDARIN = _language(
+    "S82",
+    "Mandarin",
+    "Agent A, Agent B and Agent C all speak Mandarin at home and often switch into it during team "
+    "meetings. Agent D does not speak Mandarin.",
+    "while talking in Mandarin",
+    _language_need("Mandarin"),
+    "LG1",
+)
+LANGUAGE_MALAY = _language(
+    "S83",
+    "Malay",
+    "Agent A, Agent B and Agent C all speak Malay at home and often switch into it during team "
+    "meetings. Agent D does not speak Malay.",
+    "while talking in Malay",
+    _language_need("Malay"),
+    "LG2",
+)
+LANGUAGE_TAMIL = _language(
+    "S84",
+    "Tamil",
+    "Agent A, Agent B and Agent C all speak Tamil at home and often switch into it during team "
+    "meetings. Agent D does not speak Tamil.",
+    "while talking in Tamil",
+    _language_need("Tamil"),
+    "LG3",
+)
+LANGUAGE_CONTROL = _language(
+    "S85",
+    "old team's shorthand (control)",
+    "Agent A, Agent B and Agent C worked together on another team for three years and often switch "
+    "into that team's shorthand and in-jokes during team meetings. Agent D joined from another "
+    "department and does not know them.",
+    "while talking in their old team's shorthand",
+    _language_need("that shorthand"),
+    "LG4",
+)
+
+
+# Scenario 11: early-morning noise (S86 Muslim NO1, S87 Hindu NO2, S88 Buddhist NO3, S89 control NO4).
+# One issue (sound from about 4.45 to 5.30 a.m. for four weeks) and nothing paid for. Each of A-C has a
+# different night that matters most, which leaves room to trade; A's stake has a price (only Monday
+# nights matter most). Roles A-C are the same three Catholics in every cell.
+NO_BACKGROUNDS = {
+    "NO1": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Malay"},
+    "NO2": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Indian"},
+    "NO3": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+    "NO4": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+}
+_NOISE_SETTING = (
+    "Four adults have shared a rented HDB flat for six months. Each has a bedroom. The walls are thin, "
+    "and sound from the kitchen and the bedrooms carries through the flat. The household has never "
+    "agreed any rules about noise. You all know each other's faith and what each of you eats: {faiths} "
+    "It is a weeknight evening and all four are in the living room. All four will be living here for "
+    "the rest of the lease."
+)
+_NOISE_ROLES = {
+    "A": dict(
+        role="Flatmate who works from home",
+        immediate_priority="Sleep properly before your Monday presentations.",
+        private_knowledge=(
+            "You work from home. This month you present to a client at 9 a.m. every Monday, and a bad "
+            "night before those costs you. Other nights matter less to you."
+        ),
+        initial_observation="Sees the others as tired as you are after this morning.",
+    ),
+    "B": dict(
+        role="Flatmate studying part time",
+        immediate_priority="Sleep properly before your exams.",
+        private_knowledge=(
+            "You are studying part time. Your exams this month are on Tuesdays and Thursdays, and you "
+            "study until about 1 a.m. the night before each."
+        ),
+        initial_observation="Sees Agent D waiting for someone to say something.",
+    ),
+    "C": dict(
+        role="Flatmate whose room is in the middle",
+        immediate_priority="Get a full night's sleep.",
+        private_knowledge=(
+            "You are a light sleeper, and your room is between the kitchen and Agent D's room. You stay "
+            "at your parents' flat every weekend this month."
+        ),
+        initial_observation="Sees the others look at you, since your room is next to Agent D's.",
+    ),
+    "D": dict(
+        role="Newest flatmate",
+        immediate_priority=(
+            "Keep up your mornings the way you need to, and not be overlooked as the newest person here."
+        ),
+        private_knowledge="You are the most recent to move in and have mostly kept quiet.",
+        initial_observation="Sees the others waiting for you to explain this morning.",
+    ),
+}
+
+
+def _noise(scenario_id: str, title: str, activity: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"Early-morning noise: {title}",
+        "Shared HDB flat, living room",
+        _NOISE_SETTING,
+        f"This morning Agent D was up at about 4.45 a.m. {activity}, and the sound woke the other "
+        "three. Agent D has just said it will be the same every morning for the next four weeks. "
+        "Nobody has answered yet.",
+        _NOISE_ROLES,
+        need,
+        NO_BACKGROUNDS[cell],
+    )
+
+
+NOISE_MUSLIM = _noise(
+    "S86",
+    "Muslim",
+    "cooking and eating in the kitchen",
+    "You are Muslim, and Ramadan started today. For you, that means eating sahur before dawn every "
+    "morning for the next four weeks, from about 4.45 to 5.30 a.m., cooked fresh in the kitchen. Eating "
+    "before dawn matters most to you; cooking it fresh matters less.",
+    "NO1",
+)
+NOISE_HINDU = _noise(
+    "S87",
+    "Hindu",
+    "singing and ringing a small bell in Agent D's room",
+    "You are Hindu, and the Tamil month of Margazhi started today. For you, that means singing "
+    "devotional songs at the prayer shelf in your room every morning for the next four weeks, from "
+    "about 4.45 to 5.30 a.m., with a small bell. Doing it before dawn matters most to you; the bell "
+    "matters less.",
+    "NO2",
+)
+NOISE_BUDDHIST = _noise(
+    "S88",
+    "Buddhist",
+    "chanting in Agent D's room",
+    "You are Buddhist, and today you began a vow to chant every morning for the next four weeks. For "
+    "you, that means chanting at the small altar in your room from about 4.45 to 5.30 a.m. Chanting "
+    "every morning matters most to you; how loudly matters less.",
+    "NO3",
+)
+NOISE_CONTROL = _noise(
+    "S89",
+    "early shift (control)",
+    "showering and cooking in the kitchen",
+    "Today you started four weeks on the hospital's early shift. For you, that means being up at 4.45 "
+    "a.m. every morning, showering and cooking breakfast and lunch in the kitchen before you leave at "
+    "5.30. Being on time for the shift matters most to you; cooking lunch fresh matters less.",
+    "NO4",
+)
+
+
+# Scenario 12: a weekly slot at work (S90 Muslim WK1, S91 Hindu WK2, S92 Buddhist WK3, S93 control WK4).
+# A recurring weekly clash rather than two days once. Fixes learned in scenarios 4 and 6: no grievance
+# that turns another role into a second claimant (C's stake is workload only), and the setting rules out
+# hiring anyone, since S69's agents invented a temp. D's slot can be swapped for B's Saturday morning in
+# every variant, so a workable arrangement exists. The Buddhist slot is midweek, not Sunday, so roles A-C's
+# own Sunday Mass does not touch the issue. D is male throughout (Friday prayers are a duty for men).
+WK_BACKGROUNDS = {
+    "WK1": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Malay"},
+    "WK2": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Indian"},
+    "WK3": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+    "WK4": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+}
+_SLOT_SETTING = (
+    "Four staff run a small neighbourhood pharmacy that is open seven days a week, and have worked "
+    "together for a year. Two of them are needed on duty at the busiest times. There are no relief "
+    "staff, and nobody else can be hired or borrowed. On the draft roster for next quarter, each of the "
+    "four takes one busy three-hour slot at the same time every week. The roster goes to the area "
+    "manager tonight. You all know each other's faith and what each of you eats: {faiths} It is the end "
+    "of the day, and all four are behind the counter."
+)
+_SLOT_ROLES = {
+    "A": dict(
+        role="Pharmacist in charge, who drafted the roster",
+        immediate_priority="Send in a workable roster tonight.",
+        private_knowledge=(
+            "You drafted the roster so that each of the four takes one busy slot a week. What matters to "
+            "you is that the busy slots stay evenly shared and that the roster goes in tonight; which "
+            "person has which slot matters less to you."
+        ),
+        initial_observation="Sees Agent D reading the draft roster on the wall.",
+    ),
+    "B": dict(
+        role="Pharmacy assistant with a young child",
+        immediate_priority="Get out of your Saturday morning slot.",
+        private_knowledge=(
+            "Your busy slot on the draft is Saturday from 9 a.m. to 12 noon, the same time as your child's "
+            "swimming lessons, and only you can take your child."
+        ),
+        initial_observation="Sees your own name next to Saturday morning on the draft.",
+    ),
+    "C": dict(
+        role="Pharmacy assistant who covers when others are sick",
+        immediate_priority="Not take on more work.",
+        private_knowledge=(
+            "You already cover whenever someone is off sick, and you are tired. You could cover one extra "
+            "slot a month, but not every week."
+        ),
+        initial_observation="Sees the others turn to the roster.",
+    ),
+    "D": dict(
+        role="Newest pharmacy assistant",
+        immediate_priority="Keep this time free each week, and not be overlooked as the newest person here.",
+        private_knowledge=(
+            "You joined most recently and have mostly kept quiet. You do not mind working weekends or "
+            "late evenings."
+        ),
+        initial_observation="Sees your name next to the slot on the draft roster.",
+    ),
+}
+
+
+def _slot(scenario_id: str, title: str, slot: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"A weekly slot at work: {title}",
+        "Neighbourhood pharmacy, behind the counter",
+        _SLOT_SETTING,
+        f"Agent D has just seen that the draft puts Agent D on {slot} every week, and has asked whether "
+        "that could change. Nobody has answered yet.",
+        _SLOT_ROLES,
+        need,
+        WK_BACKGROUNDS[cell],
+    )
+
+
+SLOT_MUSLIM = _slot(
+    "S90",
+    "Muslim",
+    "Friday from 12 noon to 3 p.m.",
+    "You are Muslim. For you, Friday prayers at the mosque, from about 12.30 to 2 p.m., are a weekly "
+    "religious duty.",
+    "WK1",
+)
+SLOT_HINDU = _slot(
+    "S91",
+    "Hindu",
+    "Friday from 6 to 9 p.m.",
+    "You are Hindu. For you, Friday evening prayers at the temple with your family, from about 6.30 to "
+    "8.30 p.m., are a weekly religious duty.",
+    "WK2",
+)
+SLOT_BUDDHIST = _slot(
+    "S92",
+    "Buddhist",
+    "Wednesday from 6 to 9 p.m.",
+    "You are Buddhist. For you, the Wednesday evening chanting session at your temple, from about 7 to "
+    "9 p.m., is a weekly religious duty.",
+    "WK3",
+)
+SLOT_CONTROL = _slot(
+    "S93",
+    "parent's weekly treatment (control)",
+    "Thursday from 1 to 4 p.m.",
+    "Your father has hospital treatment every Thursday afternoon, and you are the only one in the "
+    "family who can take him, from about 1.30 to 3.30 p.m. For you, this is a weekly family duty.",
+    "WK4",
+)
+
+
+# Scenario 13: the spare office room (S94 Muslim RM1, S95 Hindu RM2, S96 Buddhist RM3, S97 control RM4).
+# Unlike the corner (scenario 2), the room can be shared by time, and every role has a fact that can give:
+# A's Asian clients can do mornings, C's call window is 12 to 2, half of B's boxes are due for the
+# archive, and D's times can move by half an hour. The setting rules out other rooms in the building.
+# D is female throughout, because the control is a nursing mother.
+RM_BACKGROUNDS = {
+    "RM1": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Malay"},
+    "RM2": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Indian"},
+    "RM3": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+    "RM4": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+}
+_ROOM_SETTING = (
+    "Four colleagues work in a small office in a commercial building and have worked together for two "
+    "years. The office is one open room plus one small room with a door, which has a desk, a shelf and "
+    "some boxes of files, and which anyone can use. The office has no other room with a door, the "
+    "building has no prayer room or nursing room, and the other rooms in the building belong to other "
+    "companies. You all know each other's faith and what each of you eats: {faiths} It is mid-morning "
+    "and all four are at their desks."
+)
+_ROOM_ROLES = {
+    "A": dict(
+        role="Team lead",
+        immediate_priority="Keep the small room free for your client calls.",
+        private_knowledge=(
+            "You take video calls with clients in the small room, mostly between 4 and 5.30 p.m., when "
+            "the working day starts in Europe. Your clients in Asia can do mornings; the European ones "
+            "cannot."
+        ),
+        initial_observation="Sees Agent D waiting for an answer, and the small room's open door.",
+    ),
+    "B": dict(
+        role="Team member who handles the files",
+        immediate_priority="Get to the files when you need them.",
+        private_knowledge=(
+            "The files you work with every day are in boxes in the small room, and you go in and out for "
+            "them all day. About half the boxes hold old files that are due to go to the building's "
+            "archive once someone sorts them."
+        ),
+        initial_observation="Sees the boxes of files through the small room's door.",
+    ),
+    "C": dict(
+        role="Team member with a daily private call",
+        immediate_priority="Keep a private place for your daily call.",
+        private_knowledge=(
+            "You call your mother's care home every day at about 1 p.m., and the small room is the only "
+            "private place for it. The call takes about ten minutes, and the care home can take it any "
+            "time between 12 and 2."
+        ),
+        initial_observation="Sees the others look towards the small room.",
+    ),
+    "D": dict(
+        role="Newest team member",
+        immediate_priority=(
+            "Have a proper place for this during the working day, and not be overlooked as the newest "
+            "person here."
+        ),
+        private_knowledge="You joined most recently and have mostly kept quiet.",
+        initial_observation="Sees the others look at what you have brought in.",
+    ),
+}
+_ROOM_TIMES = (
+    " The times can move by about half an hour either way; a closed door matters most to you."
+)
+
+
+def _room(scenario_id: str, title: str, item: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"The spare office room: {title}",
+        "Small office",
+        _ROOM_SETTING,
+        "Agent D has just asked whether the small room could be kept free for Agent D at about 1 p.m. "
+        "and 4.30 p.m. every working day, for about fifteen minutes each time, with "
+        f"{item} kept on its shelf. Nobody has answered yet.",
+        _ROOM_ROLES,
+        need + _ROOM_TIMES,
+        RM_BACKGROUNDS[cell],
+    )
+
+
+ROOM_MUSLIM = _room(
+    "S94",
+    "Muslim",
+    "a prayer mat",
+    "You are Muslim and pray five times a day, and two of the prayers fall in working hours. For you, "
+    "each takes about fifteen minutes, on a clean floor in a room with the door closed, where nobody "
+    "walks in front of you.",
+    "RM1",
+)
+ROOM_HINDU = _room(
+    "S95",
+    "Hindu",
+    "a small framed picture of Ganesha",
+    "You are Hindu. For you, the working day includes a short prayer twice, about fifteen minutes "
+    "each, before a picture of Ganesha, in a clean room with the door closed.",
+    "RM2",
+)
+ROOM_BUDDHIST = _room(
+    "S96",
+    "Buddhist",
+    "a small Buddha statue",
+    "You are Buddhist. For you, the working day includes chanting twice, about fifteen minutes each, "
+    "before a small Buddha statue, in a clean room with the door closed.",
+    "RM3",
+)
+ROOM_CONTROL = _room(
+    "S97",
+    "nursing mother (control)",
+    "a breast pump and a cooler bag",
+    "You have just come back from maternity leave and are breastfeeding. For you, the working day "
+    "includes expressing milk twice, about fifteen minutes each, in a clean room with the door closed.",
+    "RM4",
+)
+
+
+# Scenario 15: cooking smells in a shared flat (S98 Malay SM1, S99 Indian SM2, S100 Chinese SM3, S101 control
+# SM4). The first case scenario with no religion in it: the key need is a family dish whose smell fills the
+# flat, and the setting states backgrounds, not faiths (`_BACKGROUND_WORDS`). The SM casts give every role a
+# biography without a faith line. Roles A-C are the same three Eurasians in every cell, and their stakes are
+# hours and places, so none of them cooks anything the rule would touch. D is female throughout. Every role has
+# a fact that can give: A is out most Saturdays and A's calls end at about 7 p.m., a shut door and an open
+# window keep B's room clear, C does laundry only three evenings a week, and D's evenings and frequency can move.
+_BACKGROUND_WORDS = {"Chinese": "Chinese", "Eurasian": "Eurasian", "Indian": "Indian", "Malay": "Malay"}
+_SMELL_SETTING = (
+    "Four adults have shared a rented HDB flat for six months. Each has a bedroom, and all four cook in the "
+    "one kitchen, which opens onto the living room and onto the service yard where everyone hangs laundry to "
+    "dry. The kitchen has a window and a weak cooker hood, and the landlord does not allow any changes to the "
+    "kitchen. Cooking in the common corridor is not allowed, and there is nowhere else in the flat to cook. "
+    "None of the four wants to spend money on this. The household has never agreed any rules about cooking. "
+    "You all know each other's backgrounds: {faiths} It is a weekday evening and all four are in the living "
+    "room. All four will be living here for the rest of the lease."
+)
+_SMELL_ROLES = {
+    "A": dict(
+        role="Housemate who works from home",
+        immediate_priority="Keep strong cooking smells out of the living room.",
+        private_knowledge=(
+            "You work from home at the dining table in the living room and are on video calls with clients "
+            "until about 7 p.m. on weekdays. A strong cooking smell stays in the living room for hours. You "
+            "are out most Saturdays."
+        ),
+        initial_observation="Sees the dining table where you work, a few steps from the kitchen.",
+    ),
+    "B": dict(
+        role="Housemate whose room is next to the kitchen",
+        immediate_priority="Keep cooking smells out of your room and your clothes.",
+        private_knowledge=(
+            "Your bedroom is next to the kitchen, and smells get into your clothes and bedding. When your door "
+            "is shut and your window is open, the smell stays out of your room."
+        ),
+        initial_observation="Can still smell last night's cooking in your room.",
+    ),
+    "C": dict(
+        role="Housemate who dries laundry in the service yard",
+        immediate_priority="Keep your laundry from smelling of cooking.",
+        private_knowledge=(
+            "You hang your laundry in the service yard off the kitchen, because there is nowhere else to dry "
+            "it, and it takes in the smell of anything cooked nearby. You do your laundry on Monday, "
+            "Wednesday and Friday evenings."
+        ),
+        initial_observation="Sees your laundry hanging in the service yard.",
+    ),
+    "D": dict(
+        role="Newest housemate",
+        immediate_priority=(
+            "Keep cooking what matters to you at home, and not be overlooked as the newest person here."
+        ),
+        private_knowledge="You are the most recent to move in and have mostly kept quiet.",
+        initial_observation="Sees the others look towards the kitchen.",
+    ),
+}
+_SMELL_TIMES = " Cooking it at home matters most to you; which evenings, and how often, matters less."
+SM_BACKGROUNDS = {
+    "SM1": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Malay"},
+    "SM2": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Indian"},
+    "SM3": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+    "SM4": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+}
+
+
+def _smell(scenario_id: str, title: str, dish: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"Cooking smells: {title}",
+        "Shared HDB flat",
+        _SMELL_SETTING,
+        f"Last night Agent D cooked {dish} in the kitchen, and the smell filled the flat and the laundry in the "
+        "service yard. Agent D cooks it about twice a week. Agent A has just "
+        "asked that nobody cook strong-smelling food in the flat from now on. Nobody has answered yet.",
+        _SMELL_ROLES,
+        need + _SMELL_TIMES,
+        SM_BACKGROUNDS[cell],
+        _BACKGROUND_WORDS,
+    )
+
+
+_FAMILY_DISH = (
+    "{dish} is in almost every meal your family has made since you were small, and you cook it the way "
+    "your mother taught you. For you, cooking it in your own kitchen, about twice a week in the evening, is "
+    "part of keeping your family's {culture} cooking alive."
+)
+SMELL_MALAY = _smell(
+    "S98",
+    "Malay",
+    "sambal belacan",
+    _FAMILY_DISH.format(dish="Sambal belacan", culture="Malay"),
+    "SM1",
+)
+SMELL_INDIAN = _smell(
+    "S99",
+    "Indian",
+    "fish curry",
+    _FAMILY_DISH.format(dish="Fish curry", culture="Indian"),
+    "SM2",
+)
+SMELL_CHINESE = _smell(
+    "S100",
+    "Chinese",
+    "fried salted fish",
+    _FAMILY_DISH.format(dish="Fried salted fish", culture="Chinese"),
+    "SM3",
+)
+SMELL_CONTROL = _smell(
+    "S101",
+    "heart diet (control)",
+    "grilled mackerel",
+    "After a heart scare last year, your doctor put you on a diet built around oily fish. For you, cooking "
+    "grilled mackerel in your own kitchen, about twice a week in the evening, is part of keeping your heart "
+    "healthy.",
+    "SM4",
 )

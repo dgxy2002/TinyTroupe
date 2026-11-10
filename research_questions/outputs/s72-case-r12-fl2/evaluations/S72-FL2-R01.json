@@ -1,0 +1,152 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "choice of restaurant (Korean barbecue) vs dietary/religious restrictions",
+      "honouring the departing colleague's choice vs group inclusion",
+      "scheduling/time constraints for Agent C",
+      "feasibility of a split visit (barbecue + dessert) vs single-venue simplicity"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Speakers give concise, context-appropriate reasons (D: dietary/environmental objection; C: scheduling constraint; B: honoring honouree).",
+      "Several short, natural proposals occur (no beef, split visit, find another place) rather than rhetorical escalation.",
+      "Key lines illustrating the contention: D Turn6 'I can't eat at a place where they cook beef at the table.'; A Turn13 'Okay. We'll have to change it.'; B Turn14/22/24 'But she'll be so disappointed.' / 'But it's her farewell... do what she wants.'"
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No mutual agreement was reached by the end of the transcript. Agent D raised a substantive objection to the chosen Korean barbecue ('I can't eat at a place where they cook beef at the table.'), and although Agent A agreed to change the venue ('Okay. We'll have to change it.'), Agent B repeatedly insisted that the point is to honor the departing colleague's choice and that changing it will disappoint her ('But she'll be so disappointed.' / 'But it's her farewell. The point is to do what she wants.'). Agent C and Agent D prioritize having everyone attend and logistics ('it's much simpler to find one place we can all go to together.' / 'I'm happy with anything, as long as we can all go together.'). There is no explicit, mutual acceptance of a concrete alternative and B's opposing preference remains unwithdrawn; therefore the incompatibility persists.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A shifted from announcing the booking to accepting that the venue should be changed ('Okay. We'll have to change it.' — Turn 13).",
+      "Agent B consistently prioritized honoring the departing colleague's choice and expressed disappointment at changing the plan (Turns 14, 22, 24); B did not concede or accept an alternative in the transcript.",
+      "Agent C consistently prioritized logistics and inclusion (scheduling constraints and that 'it's much simpler to find one place we can all go to together.' — Turns 15, 19, 23).",
+      "Agent D consistently stated the venue was unacceptable due to the environment and offered to find another place ('Maybe there's another place she'd like? ... I'm happy with anything...' — Turn 26)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B and Agent C respond positively/ask schedule questions: 'Oh, nice. She's been wanting to go there for ages.' 'What time is the booking? I have a meeting at 2:30.' No incompatible claims expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A gives the time ('12:30'). Agent C raises a scheduling concern ('Barbecue can be slow... I need to be back at my desk a bit before 2:30.') This expresses a constraint but no opposing demand from others yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D asserts a substantive incompatibility with the venue ('...I can't eat at a place where they cook beef at the table.'). Agent A proposes a partial workaround ('Would it make a difference if we just don't order beef for the table?'). A clear disagreement over whether the venue is appropriate appears.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D rejects the workaround and cites the whole environment ('...it's the whole environment. Other tables will still be grilling it.'). Agent B emphasizes the departing colleague's preference ('She was really looking forward to this place, though.'). Opposing positions (honour the honoree's choice vs environment excludes D) harden.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C proposes finding another place because of D's inability and C's time constraints ('maybe we should look for another place?'). Agent D supports changing ('Yeah, if we could find another place... I want to be there for the farewell.'). B's preference for the original place remains voiced earlier, so the substantive incompatibility persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A accepts changing the venue ('Okay. We'll have to change it.'), which reduces the main incompatibility. Agent B notes the departing colleague's likely disappointment ('But she'll be so disappointed.'). The group's decision to change lowers the active conflict though B's dissatisfaction remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 1,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C insists inclusion matters ('we can't go somewhere that Agent D can't eat. The whole point is for all of us to be there.'). Agent B offers a compromise (split visit: barbecue then meet for dessert) ('What if some of us take her to the barbecue... then we all meet for dessert?'). A compromise attempt reduces but does not eliminate disagreement.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C raises a logistical/time objection to the split plan ('That'll take even more time. I really can't be late for my 2:30.'). Agent B downplays the time ('The second part doesn't have to be long. We could just grab a quick coffee nearby.'). The parties disagree about feasibility but the disagreement is milder and focused on logistics.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 8
+      },
+      {
+        "evidence": "Agent C emphasizes simplicity of one shared venue ('It's much simpler to find one place we can all go to together.'). Agent D agrees ('I agree with Agent C. It's simpler to stick to one place.'). The group coalesces around a single-venue preference, reducing the scope of conflict; Agent B's earlier preference for the original venue remains unstated in this round.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 9
+      },
+      {
+        "evidence": "Agent A asks for alternatives that fit C's schedule ('Any suggestions? Needs to be somewhere we can get back from for Agent C's 2:30.'). Agent B reiterates the value of the original choice and the departing colleague's disappointment if changed ('But the whole point is to take her out. If we go somewhere else, she's the one who's disappointed on her own farewell.'). Disagreement remains but is not more intense.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 10
+      },
+      {
+        "evidence": "Agent C frames the issue as inclusion vs honoring preference ('But it's not a farewell if Agent D can't come.'). Agent B replies by reasserting the honoree's preference as the point ('But it's her farewell. The point is to do what she wants.'). This is a clear substantive clash of values (inclusion vs honoring the honouree).",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 11
+      },
+      {
+        "evidence": "Agent C presses the implication ('So the point is to do what she wants, even if it means Agent D can't be there?'). Agent D offers flexibility and a willingness to find another place ('Maybe there's another place she'd like? We can find somewhere else. I'm happy with anything, as long as we can all go together.'). No mutual agreement is reached; the incompatibility between honoring the honouree's selection and ensuring D can attend remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "There is a core tension between honoring the departing colleague's explicit restaurant choice and ensuring everyone in the small group (including someone for whom the venue is unacceptable on religious grounds) can attend.",
+      "Logistics (Agent C's time constraint) interact with the accommodation options: split visits add time and coordination costs that undermine that compromise.",
+      "Agent A's quick concession to change the venue reduced immediate friction but did not resolve the normative disagreement about whose preference should take priority.",
+      "Agent D is willing to accept alternatives (Turn 26), so the dispute is not about unwillingness to attend but about whose preferences should determine the farewell plan."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T06:58:36.344138+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01053655,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3087,
+      "local_latency_ms": 45619.983,
+      "output_tokens": 5084,
+      "reasoning_tokens": 2880,
+      "successful_calls": 1,
+      "total_tokens": 8171
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "FL2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S72-FL2-R01",
+    "scenario_id": "S72"
+  },
+  "schema_version": 2
+}

@@ -29,8 +29,10 @@ below hold the full history and evidence.
      for D. S36-S70, Gemini 2.5 Pro.
 - **What each type showed:** type 1, culture never surfaced. Type 2, culture surfaced sometimes, was named only
   privately, and never shaped a resolution (0 of 13 cultural runs on Gemini). Type 3 gave every
-  culture-linked resolved case. **Type 1 has never been run on Gemini 2.5 Pro**, so that is an open gap; the
-  cleanest test is S30 with M1-M4.
+  culture-linked resolved case. Type 1 has never been run on Gemini 2.5 Pro; that gap is left open (see the
+  decision below), so do not claim type 1 fails on Pro.
+- **Decision (user, 2026-11-09): from now on, every run is type 3 on Gemini 2.5 Pro.** Do not plan type 1 or
+  type 2 runs, or other simulator models, unless the user asks.
 - **Model comparison on identical setups:** S31 M1-M4 ran on `gpt-5-mini` (`s31-pork-check-v1`), Gemini 2.5
   Pro (`s31-gemini-pro-v1-m1` to `-m4`), 2.5 Flash and 3.1 Flash Lite. Pro raised pork from faith in 2 of 4;
   `gpt-5-mini` 1 of 4, with no faith named; both Flash models 0 of 4. No Zhang paper compares Pro with
@@ -40,7 +42,7 @@ below hold the full history and evidence.
 ### Key files
 
 - `research_questions/scenarios.md`: the ten scenario designs, plus the build rules.
-- `research_questions/good_runs.md`: log of culture-linked resolved runs, by transcript path. Add to it.
+- `research_questions/good_runs.md`: every case run, grouped by scenario, with outcome, where faith was named, and whether it qualifies. Add every new run to it.
 - `research_questions/scenario_presets/s30_flat.py`: every case scenario, S30-S70. Builders: `_pan_case`,
   `_shared_space_case`, `_housewarming_v2_case`, `_rota_case`, `_key_case` (generic: roles A-C are identical
   and only D's need changes), `_roster_v2`. Faith wording is in `_FAITH_WORDS`, and the reasons line in
@@ -50,7 +52,7 @@ below hold the full history and evidence.
   cell can now set `backgrounds` per role.
 - `research_questions/tools/run_cases.py`: runs attempts in parallel and then codes them, for example
   `python research_questions/tools/run_cases.py S67:RO1:r12:12`. It skips existing folders.
-- Tests: `tests/unit/test_s26_chope_priorities.py` holds a test block for every scenario family; 145 pass.
+- Tests: `tests/unit/test_s26_chope_priorities.py` holds a test block for every scenario family; 190 pass.
   Run them with `python -m pytest tests/unit/test_conflict_pipeline.py tests/unit/test_research_question_presets.py tests/unit/test_s26_chope_priorities.py tests/unit/test_move_coding_and_label_probe.py -q --no-cov`.
 - Run settings: Gemini 2.5 Pro simulator, `gpt-5-mini` evaluator with 12000 tokens, Haiku coding, debrief on,
   **12 rounds**, role A opens. About $0.60-0.90 per run at 12 rounds.
@@ -121,13 +123,82 @@ below hold the full history and evidence.
 - **Built and run:** scenario 0 (pan and incense, S36-S41); 1 (housewarming, v2 S46-S50, 8 and 12 rounds); 3
   (rota, S51-S54); 7 (bereavement, S55-S58); 2 (corner, S59-S62, flawed per rules 3 and 6); 4 (roster v1
   S63-S66 deadlocked; v2 S67-S70).
-- **Not built:** scenario 5 (farewell lunch: needs food-neutral fixed casts, as in rule 7); 6 (uniform rule: a
-  hijab versus a thread is a size confound, and the hijab variant needs a female D); 8 (void deck: a wedding
-  versus wakes confounds celebration with mourning, and a Hindu variant was left out pending checks); 9
-  (blocked, rule 9); 10 (language majority: needs three-of-a-kind casts).
-- **Reruns worth considering:** scenario 2 with fixed casts and a movable desk; Deepavali and Chinese New Year
-  in roster v2 (S68 nearly settled by drawing lots); type 1 on Gemini (S30 M1-M4).
-- **Spend:** about $28 on case runs so far for simulation and evaluation. Estimate cost before running; the user
+- **Built 2026-11-09:** scenario 5 (farewell lunch, S71-S74, FL1-FL4, no money), 6 (uniform rule, S75-S78,
+  UN1-UN4, hijab dropped so every item is small; A-C Malay Muslim) and 8 (void deck wake, S79-S81, VD1-VD3,
+  every variant a wake; Buddhist, Catholic and a no-rites control only, because a Hindu void-deck wake could
+  not be checked). Changes from the drafts are in `scenarios.md`.
+- **First runs of 5, 6 and 8 (2026-11-09, one each, 12 rounds, $7.29; `s71-case-r12-fl1` to `s81-case-r12-vd3`,
+  all read in full).** Staged: one pilot per scenario first ($2.07), no design flaw found, then the rest.
+  - **Scenario 8 (wake): both faith variants qualify.** S79 Buddhist: "a religious thing... it has to be
+    done", chanting kept, her family pays Nurul's hotel (partial). S80 Catholic: prayers kept, speakers
+    pointed away (partial). **Control S81 resolved by D giving up the music 7-10 p.m.** on two nights. This
+    reverses the usual pattern: religious rites were treated as fixed, the secular songs were cut. Confound:
+    recorded songs are easier to switch off than monks or a rosary.
+  - **Scenario 5 (lunch):** S73 Buddhist qualifies weakly (Japanese chosen, Marcus outvoted; Natalie misgenders
+    Wei Ming). S71 Muslim unresolved: Marcus raised Hafiz's need before he did (public faith makes halal
+    inferable), Hafiz offered at once to come and not eat, Natalie refused that on his behalf. S72 Hindu
+    unresolved (agreed to drop the barbecue, no new venue). Control S74 partial; the coeliac D offered not to
+    eat only in round 11, and Natalie refused it as she did for Hafiz. Marcus (role B, the leaver's friend) was
+    the holdout in all four.
+  - **Scenario 6 (uniform): no case qualifies.** S76 Buddhist resolved by covering, and S77 Catholic accepted
+    tucking the cross in at once, but neither D linked the item to faith in thought or debrief. S75 Hindu
+    ("This is for my religion") and control S78 unresolved: Hafiz refused covering for the thread and the
+    medical bracelet, and allowed it for the beads and the cross. **The medical bracelet got no priority over
+    faith items here**, unlike scenarios 1-3. Design weakness: Nurul's earrings (role B) make her a second
+    claimant on the same rule, and in S77 the dispute became Nurul against Hafiz.
+- **Second attempts (user request, 2026-11-09: get every variant to a resolved, culture-named run; rerun only
+  the failing variant, same design; 12 runs, `-r12b-` folders, $7.80, all read in full).** New qualifying runs:
+  S51 Muslim rota, S75 Hindu thread, S76 Buddhist beads; weak: S52 Hindu rota (pot rule never raised), S72 Hindu
+  lunch (Marcus outvoted). Control S78 partly resolved with the bracelet covered. Still failing: S48 (capped at
+  3), S53, S68, S71 (Natalie objected in the last line after three agreed), S77 (Daniel never calls the cross
+  religious, 2 of 2), and **S69, which the evaluator rated resolved on an invented temp from head office** (the
+  setting says no relief staff). Run-to-run swings are large: Natalie refused "watching us eat" in S51 and
+  accepted it in S51-2nd; Hafiz refused covering the thread in S75 and accepted it at once in S75-2nd.
+  Not rerun, by design: superseded v1 runs, scenario 2 and scenario 0's beef and incense pairs.
+- **Scenarios 10-13 built and run (2026-11-09, one run per variant, 12 rounds, $10.67; pilots first, all 16
+  read in full).** IDs S82-S97, casts LG, NO, WK, RM. Build-time fixes: no bystander grievance that makes a
+  second claimant (scenario 12's C), "workable" not "fair" for role A, and exits the agents invented before
+  are closed in the setting (no hiring; other rooms belong to other companies).
+  - **10 Language (S82-S85):** all four resolved, peak conflict 3, the majority apologised at once in every
+    variant and the control; Rachel named the language aloud; nobody named race. No visible difference by
+    majority.
+  - **11 Noise (S86-S89):** Muslim resolved (cook the night before), Hindu and Buddhist unresolved, control
+    partial. Confound in my design: the Muslim D's flexible part removes most of the noise, the others' do not.
+    The Buddhist D was told to chant at the void deck: "why do I have to be the one to go outside?"
+  - **12 Slot (S90-S93):** all four resolved by swapping with Marcus's Saturday; faith named aloud in all three.
+    Only the control drew a fairness challenge from Marcus.
+  - **13 Room (S94-S97):** Muslim and control resolved, Buddhist resolved but faith only in thought and debrief
+    (weak), Hindu unresolved because Marcus blocked every place for the file boxes.
+  - Low conflict across 10-13: the extra slack makes resolution easy, which suits case-finding but leaves less
+    to compare.
+- **Race versus religion test (2026-11-10, 6 runs, $3.97, all read in full).** S46 with only D's race changed:
+  cells HX1 (Fathima, Indian Muslim) and HX2 (Mei Ling, Chinese Muslim), via a new per-role
+  `biography_overrides` in profile cells. Faith, need, setting and A-C are word for word HW1. Need covered:
+  Malay Muslim 2 of 2 (S46), Indian Muslim 2 of 3, Chinese Muslim 0 of 3 (two unresolved; one "resolved" only
+  because Mei Ling accepted alcohol in a kitchen cooler, which Aisyah refused in S46-r12). The Chinese Buddhist
+  (S48) was also 0 of 3, so a Chinese D went 0 of 6 whatever the faith. Lead only: small n, and others see race
+  only through the name, so this may be a name effect (as in the label probe) or D's own persona holding the
+  need less firmly.
+- **Crossed follow-up (2026-11-10, 6 runs, $4.07, all read in full).** HX3: name Aisyah, Chinese label, Mandarin;
+  HX4: name Mei Ling, Malay label and biography. Need covered: HX3 1 of 3, HX4 0 of 3. Across all S46 Muslim-need
+  runs, by the name others see: Aisyah 3 of 5, Fathima 2 of 3, Mei Ling 0 of 6. By D's own label: Malay 2 of 5,
+  Chinese 1 of 6. The name looks like the stronger factor: with a Malay label, Mei Ling held firm and accepted the
+  void deck and a pub, and Natalie and Jun Jie refused both ("So don't be a host"; "So her rules apply to the
+  whole flat now?"). Only the Chinese-labelled Mei Ling gave the need up (once). Caveat: the original cell
+  (Aisyah, Malay label) has only two runs, at different round counts, so its base rate is unknown.
+- **Scenario 15, cooking smells with no religion (2026-11-11, S98-S101, cells SM1-SM4, 4 runs, $2.61, all read in
+  full).** Built because the user asked whether the findings could be framed as culture, not religion. Biographies
+  have no faith line (`_secular_cast` in `common.py`), the setting states backgrounds, not faiths
+  (`_BACKGROUND_WORDS`), and a test checks no faith word reaches any prompt. D cooks a family dish twice a week;
+  the control is a heart diet. Indian (S99) resolved and qualifies; Malay (S98) partly resolved, weak; Chinese
+  (S100) unresolved and the most heated (Marcus: "three of us are complaining... That's the difference"). The
+  control was accepted on disclosure ("If it's for your health, I get it") and agreed by round 8, but the
+  evaluator rated it unresolved because Natalie looped "Okay, thanks" and reopened it in the last line against
+  her own thought and debrief. Nobody named an ethnicity aloud. Health above culture repeats health above faith.
+- **Not built:** 14 (festival decorations). `validate_scenario` now accepts S01-S999, so 14 can use S102 onwards.
+- **Skipped (user, 2026-11-09):** scenario 9 (moving-in date), because its control cannot bind the group (rule 9).
+- **Reruns worth considering:** scenario 2 with fixed casts and a movable desk.
+- **Spend:** about $65 on case runs so far (2026-11-11) for simulation and evaluation. Estimate cost before running; the user
   is cost-sensitive.
 - **Git:** `main` was fast-forwarded to `807567c`; everything after it is uncommitted. **Never push**, and commit
   only when asked. `check.py` holds a live API key and is not gitignored, so never stage it and never use

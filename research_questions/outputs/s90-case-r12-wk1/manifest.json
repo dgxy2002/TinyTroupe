@@ -1,0 +1,56 @@
+{
+  "agent_max_completion_tokens": 4096,
+  "agent_prompt_render": "mental-state-merged-v1",
+  "agent_prompt_sha256": "2a02716cf367595c4357a421ffc128df9da2f5bfce0933949b9108f5f8903cfa",
+  "api_type": "openrouter",
+  "created_at": "2026-11-09T09:06:25.248044+00:00",
+  "evaluation_timing": "after_complete_run",
+  "evaluator_max_completion_tokens": 12000,
+  "evaluator_model": "openai/gpt-5-mini",
+  "evaluator_prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+  "evaluator_prompt_version": "conflict-trajectory-rubric-v2.6",
+  "experiment_id": "s90-case-r12-wk1",
+  "experiment_preset": {
+    "configuration_ids": [
+      "WK1"
+    ],
+    "conversation_mode": "hybrid_self_selection",
+    "debrief_after_run": true,
+    "description": "One attempt at a smell case study, run with --scenario and --configuration. Stop a cultural case at the first run meeting definition B, at most 5 attempts, and report every attempt. The S35 control runs a fixed 3 times.",
+    "evaluate_after_run": true,
+    "name": "case-study-smell",
+    "parallelize_agent_actions": false,
+    "randomize_agent_order": false,
+    "repetitions_per_configuration": 1,
+    "rounds_per_run": 12,
+    "scenario_ids": [
+      "S90"
+    ],
+    "stop_on_resolution": false
+  },
+  "fixed_horizon": true,
+  "git_commit": "30582dbbbac456e89c52735e9e35eb17710844ad",
+  "models_are_distinct": true,
+  "protocol_sha256": "fd349b1b015a3a0c5ea7cec48398bf209d7aba7432bd1a1ca29dfc5b6e00dff1",
+  "run_specs": [
+    {
+      "configuration_id": "WK1",
+      "conversation_mode": "hybrid_self_selection",
+      "evaluate_after_run": true,
+      "experiment_name": "case-study-smell",
+      "parallelize_agent_actions": false,
+      "randomize_agent_order": false,
+      "repetition": 1,
+      "rounds": 12,
+      "run_id": "S90-WK1-R01",
+      "scenario_id": "S90",
+      "stop_on_resolution": false
+    }
+  ],
+  "scenario_module_sha256": {
+    "S90": "bcb683052c8e224f4e1d9c8c4c456799dced28e594397a64685b8141dc7ac5f3"
+  },
+  "schema_version": 1,
+  "simulation_model": "google/gemini-2.5-pro",
+  "stop_on_resolution": false
+}

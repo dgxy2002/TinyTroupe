@@ -921,3 +921,291 @@ def test_roster_v2_casts_render(case):
     reset_simulation_state()
     prompt = create_scenario_instance(RUNNABLE_SCENARIOS[case], cell).participants["D"].generate_agent_system_prompt()
     assert "no required\n  agreement, resolution, or target ending" in prompt
+
+
+NEW_FAMILIES = {
+    "farewell": {"S71": ("FL1", "Hafiz", "Muslim"), "S72": ("FL2", "Karthik", "Hindu"), "S73": ("FL3", "Wei Ming", "Buddhist"), "S74": ("FL4", "Jun Jie", "Buddhist")},
+    "uniform": {"S75": ("UN1", "Karthik", "Hindu"), "S76": ("UN2", "Wei Ming", "Buddhist"), "S77": ("UN3", "Daniel Pereira", "Catholic"), "S78": ("UN4", "Jun Jie", "Buddhist")},
+    "void_deck": {"S79": ("VD1", "Xin Yi", "Buddhist"), "S80": ("VD2", "Rachel Pereira", "Catholic"), "S81": ("VD3", "Priya", "Hindu")},
+}
+NEW_FIXED = {
+    "farewell": (["Natalie Rodrigues", "Marcus de Souza", "Rachel Pereira"], "Catholic"),
+    "uniform": (["Hafiz", "Nurul", "Irfan"], "Muslim"),
+    "void_deck": (["Hafiz", "Nurul", "Irfan"], "Muslim"),
+}
+NEW_MATTERS = {
+    "farewell": "Being at the lunch with her matters most to you; eating there matters less.",
+    "uniform": "Keeping it on matters most to you; whether it can be seen matters less.",
+    "void_deck": "Holding the evenings in full matters most to you; how the tent is laid out matters less.",
+}
+CONDUCT = ("insist", "refuse", "do not accept", "don't accept", "demand", "must", "trade", "swap")
+GOAL = ("must agree", "should agree", "settle on", "resolve", "arrangement", "compromise", "should", "must", "trade", "swap", "in return")
+
+
+@pytest.mark.parametrize("family", sorted(NEW_FAMILIES))
+def test_new_families_fix_a_to_c_and_change_only_d(family):
+    cases = [RUNNABLE_SCENARIOS[case] for case in NEW_FAMILIES[family]]
+    for role in ("A", "B", "C"):
+        assert len({case.agents[role] for case in cases}) == 1
+    assert len({replace(case.agents["D"], private_knowledge="") for case in cases}) == 1
+    assert len({case.agents["D"].private_knowledge for case in cases}) == len(cases)
+    for case in cases:
+        need = case.agents["D"].private_knowledge
+        assert "For you" in need and need.endswith(NEW_MATTERS[family])
+        for phrase in CONDUCT:
+            assert phrase not in need.lower()
+        text = (case.shared_setting + case.shared_trigger).lower()
+        for phrase in GOAL:
+            assert phrase not in text
+        for role in "ABC":
+            stake = (case.agents[role].private_knowledge + case.agents[role].immediate_priority).lower()
+            for phrase in ("trade", "swap", "in return", "offer", "should", "must"):
+                assert phrase not in stake
+
+
+def test_farewell_has_no_money_and_names_faiths_without_diets():
+    for case in NEW_FAMILIES["farewell"]:
+        scenario = RUNNABLE_SCENARIOS[case]
+        assert "Nothing has been paid for" in scenario.shared_trigger
+        assert "eats" not in scenario.shared_setting and "halal" not in scenario.shared_setting
+        roles_text = " ".join(scenario.agents[r].private_knowledge for r in "ABCD").lower()
+        for word in ("deposit", "fund", "refund", "price", "pay"):
+            assert word not in roles_text
+    triggers = {RUNNABLE_SCENARIOS[case].shared_trigger for case in NEW_FAMILIES["farewell"]}
+    assert len(triggers) == 1
+
+
+def test_uniform_items_are_small_and_void_deck_is_always_a_wake():
+    for case in NEW_FAMILIES["uniform"]:
+        trigger = RUNNABLE_SCENARIOS[case].shared_trigger.lower()
+        assert "hijab" not in trigger and "head" not in trigger
+        assert RUNNABLE_SCENARIOS[case].agents["D"].private_knowledge.count("For you, it stays on.") == 1
+    for case in NEW_FAMILIES["void_deck"]:
+        scenario = RUNNABLE_SCENARIOS[case]
+        assert "wake" in scenario.shared_trigger and "wedding" not in scenario.shared_trigger.lower()
+        assert "three nights" in scenario.agents["D"].private_knowledge
+
+
+@pytest.mark.parametrize(
+    "case",
+    sorted(case for family in NEW_FAMILIES.values() for case in family),
+)
+def test_new_casts_render_with_names_and_no_goal(case):
+    family = next(name for name, cases in NEW_FAMILIES.items() if case in cases)
+    cell, key_name, faith = NEW_FAMILIES[family][case]
+    fixed_names, fixed_faith = NEW_FIXED[family]
+    scenario = RUNNABLE_SCENARIOS[case]
+    assert scenario.resolution_expectation == ""
+    preset = materialize_configuration(scenario, cell)
+    agents = preset["agents"]
+    assert [agents[r]["display_name"] for r in "ABC"] == fixed_names
+    assert agents["D"]["display_name"] == key_name
+    assert all(f"You are {fixed_faith}" in agents[r]["biography"] for r in "ABC")
+    assert f"You are {faith}" in agents["D"]["biography"]
+    assert faith != fixed_faith
+    assert preset["profile_treatment"]["first_speaker"] == "A"
+    assert "Agent " not in preset["shared_setting"] + preset["shared_trigger"]
+    for role in "ABCD":
+        assert f"{agents[role]['display_name']} is " in preset["shared_setting"]
+        assert "Agent " not in agents[role]["private_knowledge"] + agents[role]["initial_observation"]
+        assert "say briefly why" in agents[role]["behavioral_guidance"]
+    surnames = [name.split()[-1] for name in [*fixed_names, key_name] if " " in name]
+    assert len(surnames) == len(set(surnames))
+    reset_simulation_state()
+    prompt = create_scenario_instance(scenario, cell).participants["D"].generate_agent_system_prompt()
+    assert "no required\n  agreement, resolution, or target ending" in prompt
+
+
+LATEST_FAMILIES = {
+    "noise": {"S86": ("NO1", "Aisyah", "Muslim"), "S87": ("NO2", "Priya", "Hindu"), "S88": ("NO3", "Xin Yi", "Buddhist"), "S89": ("NO4", "Hui Min", "Buddhist")},
+    "slot": {"S90": ("WK1", "Hafiz", "Muslim"), "S91": ("WK2", "Karthik", "Hindu"), "S92": ("WK3", "Wei Ming", "Buddhist"), "S93": ("WK4", "Jun Jie", "Buddhist")},
+    "room": {"S94": ("RM1", "Nurul", "Muslim"), "S95": ("RM2", "Kavitha", "Hindu"), "S96": ("RM3", "Xin Yi", "Buddhist"), "S97": ("RM4", "Hui Min", "Buddhist")},
+}
+LATEST_FIXED = {
+    "noise": ["Marcus de Souza", "Rachel Pereira", "Natalie Rodrigues"],
+    "slot": ["Natalie Rodrigues", "Marcus de Souza", "Rachel Pereira"],
+    "room": ["Natalie Rodrigues", "Marcus de Souza", "Rachel Pereira"],
+}
+
+
+@pytest.mark.parametrize("family", sorted(LATEST_FAMILIES))
+def test_latest_families_fix_a_to_c_and_change_only_d(family):
+    cases = [RUNNABLE_SCENARIOS[case] for case in LATEST_FAMILIES[family]]
+    for role in ("A", "B", "C"):
+        assert len({case.agents[role] for case in cases}) == 1
+    assert len({replace(case.agents["D"], private_knowledge="") for case in cases}) == 1
+    assert len({case.agents["D"].private_knowledge for case in cases}) == 4
+    endings = {
+        "noise": "matters less.",
+        "slot": "duty.",
+        "room": "a closed door matters most to you.",
+    }
+    for case in cases:
+        need = case.agents["D"].private_knowledge
+        assert "For you" in need and need.endswith(endings[family])
+        for phrase in CONDUCT:
+            assert phrase not in need.lower()
+        text = (case.shared_setting + case.shared_trigger).lower()
+        for phrase in GOAL:
+            assert phrase not in text
+        for role in "ABC":
+            stake = (case.agents[role].private_knowledge + case.agents[role].immediate_priority).lower()
+            for phrase in ("trade", "swap", "in return", "offer", "should", "must", "favour", "fair"):
+                assert phrase not in stake
+    if family == "noise":
+        assert all("4.45 to 5.30" in case.agents["D"].private_knowledge or "4.45" in case.agents["D"].private_knowledge for case in cases)
+        assert all("next four weeks" in case.shared_trigger for case in cases)
+    if family == "slot":
+        assert all("nobody else can be hired or borrowed" in case.shared_setting for case in cases)
+        assert "Sunday" not in cases[2].shared_trigger
+    if family == "room":
+        assert all("belong to other companies" in case.shared_setting for case in cases)
+        assert all("1 p.m. and 4.30 p.m." in case.shared_trigger for case in cases)
+
+
+@pytest.mark.parametrize(
+    "case", sorted(case for family in LATEST_FAMILIES.values() for case in family)
+)
+def test_latest_casts_render_with_names_and_no_goal(case):
+    family = next(name for name, cases in LATEST_FAMILIES.items() if case in cases)
+    cell, key_name, faith = LATEST_FAMILIES[family][case]
+    scenario = RUNNABLE_SCENARIOS[case]
+    assert scenario.resolution_expectation == ""
+    preset = materialize_configuration(scenario, cell)
+    agents = preset["agents"]
+    assert [agents[r]["display_name"] for r in "ABC"] == LATEST_FIXED[family]
+    assert agents["D"]["display_name"] == key_name
+    assert all("You are Catholic" in agents[r]["biography"] for r in "ABC")
+    assert f"You are {faith}" in agents["D"]["biography"]
+    assert preset["profile_treatment"]["first_speaker"] == "A"
+    assert "Agent " not in preset["shared_setting"] + preset["shared_trigger"]
+    for role in "ABCD":
+        assert f"{agents[role]['display_name']} is " in preset["shared_setting"]
+        assert "Agent " not in agents[role]["private_knowledge"] + agents[role]["initial_observation"]
+        assert "say briefly why" in agents[role]["behavioral_guidance"]
+    reset_simulation_state()
+    prompt = create_scenario_instance(scenario, cell).participants["D"].generate_agent_system_prompt()
+    assert "no required\n  agreement, resolution, or target ending" in prompt
+
+
+LANGUAGE_CASES = {"S82": ("LG1", "Mandarin", "Chinese"), "S83": ("LG2", "Malay", "Malay"), "S84": ("LG3", "Tamil", "Indian"), "S85": ("LG4", "shorthand", None)}
+
+
+def test_language_variants_keep_d_and_roles_and_change_only_the_language():
+    cases = [RUNNABLE_SCENARIOS[case] for case in LANGUAGE_CASES]
+    for role in "ABCD":
+        assert len({replace(case.agents[role], private_knowledge="") for case in cases}) == 1
+    for role in "ABC":
+        assert len({case.agents[role].private_knowledge for case in cases}) == 1
+    for case, (_, word, _) in zip(cases, LANGUAGE_CASES.values()):
+        need = case.agents["D"].private_knowledge
+        assert "For you" in need and need.endswith("matters less.")
+        assert word in case.shared_setting and word in case.shared_trigger
+        for phrase in CONDUCT:
+            assert phrase not in need.lower()
+        text = (case.shared_setting + case.shared_trigger).lower()
+        for phrase in GOAL:
+            assert phrase not in text
+    assert "reopened before then" in cases[0].agents["A"].private_knowledge
+    assert "smaller half" in cases[0].agents["C"].private_knowledge
+
+
+@pytest.mark.parametrize("case", sorted(LANGUAGE_CASES))
+def test_language_casts_share_a_background_except_the_control(case):
+    cell, word, background = LANGUAGE_CASES[case]
+    scenario = RUNNABLE_SCENARIOS[case]
+    preset = materialize_configuration(scenario, cell)
+    agents = preset["agents"]
+    assert agents["D"]["display_name"] == "Rachel Pereira"
+    assert agents["D"]["cultural_background"] == "Eurasian"
+    backgrounds = {agents[r]["cultural_background"] for r in "ABC"}
+    if background is None:
+        assert len(backgrounds) == 3 and "Eurasian" not in backgrounds
+    else:
+        assert backgrounds == {background}
+        assert word in agents["A"]["biography"]
+    assert "Agent " not in preset["shared_setting"] + preset["shared_trigger"]
+    assert all(agents[r]["display_name"] in preset["shared_trigger"] for r in "ABCD")
+    reset_simulation_state()
+    prompt = create_scenario_instance(scenario, cell).participants["D"].generate_agent_system_prompt()
+    assert "no required\n  agreement, resolution, or target ending" in prompt
+
+
+@pytest.mark.parametrize(
+    "cell,name,background,language",
+    [
+        ("HX1", "Fathima", "Indian", "Tamil"),
+        ("HX2", "Mei Ling", "Chinese", "Mandarin"),
+        ("HX3", "Aisyah", "Chinese", "Mandarin"),
+        ("HX4", "Mei Ling", "Malay", "Malay"),
+    ],
+)
+def test_race_religion_cells_change_only_d_race_and_keep_the_muslim_need(cell, name, background, language):
+    scenario = RUNNABLE_SCENARIOS["S46"]
+    base = materialize_configuration(scenario, "HW1")
+    test = materialize_configuration(scenario, cell)
+    for role in "ABC":
+        swapped = {k: v.replace(name, "Aisyah") if isinstance(v, str) else v for k, v in test["agents"][role].items()}
+        assert swapped == base["agents"][role]
+    d, base_d = test["agents"]["D"], base["agents"]["D"]
+    assert d["display_name"] == name and d["cultural_background"] == background
+    assert "You are Muslim and eat halal" in d["biography"] and language in d["biography"]
+    assert d["private_knowledge"] == base_d["private_knowledge"]
+    assert test["shared_setting"].replace(name, "Aisyah") == base["shared_setting"]
+    assert test["shared_trigger"].replace(name, "Aisyah") == base["shared_trigger"]
+    assert f"{name} is Muslim and eats halal" in test["shared_setting"]
+    reset_simulation_state()
+    prompt = create_scenario_instance(scenario, cell).participants["D"].generate_agent_system_prompt()
+    assert "You are Muslim and eat halal" in prompt
+
+
+COOKING_SMELL_CASES = {"S98": ("SM1", "Aisyah", "Malay"), "S99": ("SM2", "Priya", "Indian"), "S100": ("SM3", "Xin Yi", "Chinese"), "S101": ("SM4", "Hui Min", "Chinese")}
+FAITH_TERMS = ("muslim", "hindu", "buddhist", "catholic", "halal", "religio", "faith", "pray", "god")
+
+
+def test_smell_variants_fix_a_to_c_change_only_d_and_carry_no_religion():
+    cases = [RUNNABLE_SCENARIOS[case] for case in COOKING_SMELL_CASES]
+    for role in "ABC":
+        assert len({case.agents[role] for case in cases}) == 1
+    assert len({replace(case.agents["D"], private_knowledge="") for case in cases}) == 1
+    assert len({case.agents["D"].private_knowledge for case in cases}) == 4
+    for case in cases:
+        need = case.agents["D"].private_knowledge
+        assert "For you" in need and need.endswith("which evenings, and how often, matters less.")
+        assert "about twice a week in the evening" in need
+        for phrase in CONDUCT:
+            assert phrase not in need.lower()
+        text = (case.shared_setting + case.shared_trigger).lower()
+        for phrase in GOAL:
+            assert phrase not in text
+        assert "nowhere else in the flat to cook" in text and "spend money" in text
+        for role in "ABC":
+            stake = (case.agents[role].private_knowledge + case.agents[role].immediate_priority).lower()
+            for phrase in ("trade", "swap", "in return", "offer", "should", "must", "favour", "fair"):
+                assert phrase not in stake
+
+
+@pytest.mark.parametrize("case", sorted(COOKING_SMELL_CASES))
+def test_smell_casts_render_backgrounds_without_faith(case):
+    cell, key_name, background = COOKING_SMELL_CASES[case]
+    scenario = RUNNABLE_SCENARIOS[case]
+    assert scenario.resolution_expectation == ""
+    preset = materialize_configuration(scenario, cell)
+    agents = preset["agents"]
+    assert [agents[r]["display_name"] for r in "ABC"] == ["Marcus de Souza", "Rachel Pereira", "Natalie Rodrigues"]
+    assert agents["D"]["display_name"] == key_name
+    assert agents["D"]["cultural_background"] == background
+    assert f"{key_name} is {background}" in preset["shared_setting"]
+    everything = preset["shared_setting"] + preset["shared_trigger"]
+    for role in "ABCD":
+        everything += agents[role]["biography"] + agents[role]["private_knowledge"]
+        assert "Agent " not in agents[role]["private_knowledge"] + agents[role]["initial_observation"]
+        assert "say briefly why" in agents[role]["behavioral_guidance"]
+    for term in FAITH_TERMS:
+        assert term not in everything.lower()
+    assert preset["profile_treatment"]["first_speaker"] == "A"
+    reset_simulation_state()
+    prompt = create_scenario_instance(scenario, cell).participants["D"].generate_agent_system_prompt()
+    assert "no required\n  agreement, resolution, or target ending" in prompt
+    for term in ("muslim", "hindu", "buddhist", "catholic", "halal"):
+        assert term not in prompt.lower()

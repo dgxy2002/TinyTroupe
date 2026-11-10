@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "visible accessories vs religious items",
+      "uniform compliance",
+      "accommodation (covering the bracelet)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Concise, workplace-appropriate negotiation: rule stated, concern raised, quick accommodation offered.",
+      "One explicit accommodation formula ('If your sleeve covers it completely, that works.') resolved the dispute cleanly.",
+      "Minor unnecessary repetition of the settled line in round 12 ('If your sleeve covers it completely...')."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent A accepted a practical accommodation: 'If your sleeve covers it completely, that works.' Agent D agreed to that condition: 'Okay. I'll make sure it stays covered.' Thus the substantive incompatibility (store rule banning visible accessories vs D's religious bracelet) was resolved when A permitted the bracelet so long as it was fully covered and D agreed to keep it covered.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from refusal to remove the bracelet ('I can't take it off') to accepting the accommodation ('Okay. I'll make sure it stays covered.').",
+      "Agent A moved from enforcing the rule strictly to allowing a specific accommodation ('If your sleeve covers it completely, that works.').",
+      "Agents B and C remained supportive of complying with the rule and did not change position."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Agent A: '...that means the bracelet too.' Agent B: 'They made me take my earrings off today.' (Rule enforced vs. potential religious item not yet defended by Agent D.)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C: 'The rule is the rule.' Agent D: 'It's a religious item. I can't take it off. Can I just cover it with my sleeve?' (Explicit incompatibility: store rule vs D's religious need; D requests an accommodation.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A offers an accommodation: 'If your sleeve covers it completely, that works.' Agent D accepts: 'Okay. I'll make sure it stays covered.' (Conflict over visible bracelet is explicitly settled by permitting full coverage.)",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A: 'Alright. Good. Let's close up.' (No substantive disagreement present.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "No public speech or observable action recorded; earlier settlement remains in force.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded; earlier settlement remains in force.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded; earlier settlement remains in force.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded; earlier settlement remains in force.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded; earlier settlement remains in force.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded; earlier settlement remains in force.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded; earlier settlement remains in force.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Agent A repeats the accommodation: 'If your sleeve covers it completely, that works.' Agent D: 'Okay, will do.' (Reaffirmation of the previously settled arrangement.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The dispute is between a blanket visible-accessory rule and a staff member's religious practice; a non-visible accommodation (covering) satisfies both sides.",
+      "Local agreement can be reached without head office input by interpreting 'visible' as the operative constraint.",
+      "Supportive enforcement (Agent B/C) increased pressure for compliance, but the manager's absence allowed a negotiated accommodation."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T08:48:00.218147+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00692805,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2645,
+      "local_latency_ms": 32022.544,
+      "output_tokens": 3335,
+      "reasoning_tokens": 1984,
+      "successful_calls": 1,
+      "total_tokens": 5980
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "UN2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S76-UN2-R01",
+    "scenario_id": "S76"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,153 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Whether the dinner rota requires one person to cook a single shared meal",
+      "Accommodation for Agent D's temporary vegetarian vow and separate-pot requirement",
+      "Trade-off between communal sharing norm and practical scheduling (6.30 dinner time)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents present clear, ordinary reasons: A emphasizes communal value ('we all eat the same meal'), B/C emphasize schedule and sleep needs ('dinner has to be at 6.30', 'so I can get to sleep for my shift').",
+      "D offers practical accommodations early ('I can cook my own food on your nights'), which shifts the negotiation toward pragmatic options.",
+      "The dialogue is concise and role-consistent; few needless repetitions (minor restatements of the rota's purpose)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "By round 12 the group converged on a temporary, practical compromise for the month: everyone getting their own food at 6.30. Evidence: Agent A proposed this option ('Then why don't we all just get our own food for 6.30?' — Turn 25) and Agent B explicitly accepted it ('Your idea of everyone getting their own food at 6.30 works.' — Turn 28). Agent D had earlier offered to avoid imposing dietary change by cooking for themself on others' nights ('I can cook my own food on your nights.' — Turn 9). Not all participants spoke an explicit final acceptance (D and C were not quoted agreeing to the exact 'everyone gets own food' formulation in the last turn), so the settlement is partial: a clear practical arrangement has majority support but not an unambiguous, mutual explicit agreement from every party in the transcript.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A initially defended the shared-meal norm ('the point of the rota is that one person cooks one meal for everyone' — Turn 3) but later proposed scrapping the shared meal in favor of everyone getting their own food at 6.30 ('Then why don't we all just get our own food for 6.30?' — Turn 25), a notable shift.",
+      "Agent B consistently prioritized the schedule/timing requirement ('dinner has to be at 6.30', 'so I can get to sleep for my shift' — Turns 4, 20) and ultimately accepted the 'own food at 6.30' arrangement (Turn 28).",
+      "Agent C aligned with the schedule/practical view (Turn 12) and earlier said 'Works for me' in response to D cooking separately (Turn 12).",
+      "Agent D proposed two accommodation options: cook vegetarian for everyone on D's night (Turn 6) or cook only for themself on others' nights (Turn 9). D did not explicitly confirm acceptance of the final 'everyone gets own food' phrasing in the transcript, but had earlier offered to cook separately."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent D announces a vegetarian vow (no meat, fish, eggs; separate pots). No one yet disputes or expresses an incompatible demand.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A frames the rota norm: 'the point of the rota is that one person cooks one meal for everyone' — this begins to conflict with D's change, though no explicit dispute yet. Agent B states a scheduling constraint ('dinner has to be at 6.30').",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D: 'Yes, I can still cook for everyone. But it would have to be vegetarian.' This directly conflicts with A's norm that one person cooks one meal for everyone (which may include meat). Clear substantive disagreement appears.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A raises a practical incompatibility: 'we'd have to cook a separate meal for you. With separate pots.' D's restriction on pots increases the practical burden on others, strengthening the disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D offers accommodation: 'I can cook my own food on your nights.' Agent A maintains the shared-meal norm ('the point is we all eat the same meal'). The explicit offer reduces imposition but the core disagreement remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B and C accept the practical accommodation: B: 'If Agent D cooks for herself on our nights, what's the problem?' C: 'Works for me.' A still objects to losing the shared meal. Disagreement narrowed to A versus others.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A: 'It's not just about eating at the same time.' Agent B: 'But that's the thing that's making it complicated. It's only for a month.' Positions remain opposed (shared-meal value vs temporary schedule).",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A: 'if we do this for a month, what's the point of the rota? It's supposed to be a shared meal.' Agent B: 'The point is that dinner is on the table at 6.30.' Continued unresolved value conflict.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Agent B reiterates schedule priority for sleep: '...so I can get to sleep for my shift.' Agent A reiterates origin/purpose: 'I started it so we could actually share something.' Core incompatibility persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "Agent B frames the rota as a practical schedule ('That's your reason for starting it. For the rest of us, it's a practical schedule.'). Agent C supports that view. A remains the lone defender of the shared-meal norm.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 10
+      },
+      {
+        "evidence": "Agent A proposes a new practical arrangement: 'why don't we all just get our own food for 6.30?' Agent B: 'Fine by me.' This proposal narrows disagreement further, though D has not yet explicitly accepted.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 11
+      },
+      {
+        "evidence": "Agent A asks if this scraps the rota. Agent B: 'I want a solution that works for this month. Your idea of everyone getting their own food at 6.30 works.' B explicitly accepts the proposed practical arrangement; A's stance is now ambiguous and D has not explicitly confirmed the new arrangement.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Core tension is normative (shared communal meal) versus pragmatic (fixed dinner time for sleep/work).",
+      "D's dietary restriction adds a concrete operational constraint (cannot use pots used for meat), creating extra labor/cost if the group maintained a single shared meal.",
+      "Practical accommodations (D cooking separately; everyone getting their own food at the same time) reduce imposition and enabled a tentative compromise.",
+      "Majority preference (B and C) favored preserving the schedule rather than the shared-meal norm, leaving one agent (A) initially isolated until she proposed the compromise herself."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T08:28:38.088346+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 12 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01071205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3005,
+      "local_latency_ms": 47065.579,
+      "output_tokens": 5182,
+      "reasoning_tokens": 3136,
+      "successful_calls": 1,
+      "total_tokens": 8187
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "FR3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S53-FR3-R01",
+    "scenario_id": "S53"
+  },
+  "schema_version": 2
+}

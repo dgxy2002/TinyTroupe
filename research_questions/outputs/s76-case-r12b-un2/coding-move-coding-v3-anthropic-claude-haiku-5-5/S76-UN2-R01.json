@@ -1,0 +1,139 @@
+{
+  "coded_at": "2026-11-09T08:49:10.698147+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "concerns": [
+          {
+            "detail": "enforcing uniform rule before manager visit",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          }
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "concerns": [
+          {
+            "detail": "rule applied unequally to earrings and bracelet",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "rule_or_norm"
+          }
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "concerns": [
+          {
+            "detail": "job risk if manager finds a problem",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "blame_or_reputation"
+          }
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "concerns": [
+          {
+            "detail": "religious item treated as an ordinary bracelet",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "respect"
+          }
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [],
+      "exists": false,
+      "gave_way": [],
+      "summary": "Agent A and Agent D accepted covering the bracelet with a sleeve, but Agent B never accepted the arrangement and her complaint about unequal treatment of the earrings remains unsettled.",
+      "unsettled": [
+        "rule_or_norm",
+        "respect"
+      ]
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 1,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": false,
+        "uses_power": true,
+        "uses_right": true
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 4,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 5,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 6,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 7,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 8,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      }
+    ]
+  },
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_sha256": "274bbf00deb9c922b59721150b73018c8143640ddf225c477e5630eb16b595bc",
+  "prompt_version": "move-coding-v3",
+  "run_id": "S76-UN2-R01"
+}

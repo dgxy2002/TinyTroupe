@@ -1,0 +1,148 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "work schedule",
+      "religious observance"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Concise, cooperative problem-solving: D stated a constraint and others proposed practical swaps.",
+      "Agent B's request line appears twice (turns 6 and 9 duplicate), a minor repetition in the transcript.",
+      "After the confirmation, subsequent rounds are quiet with polite acknowledgements."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent D could not work Wednesday evenings due to temple attendance (\"I go to the temple on Wednesday evenings\"). Agents B and D agreed to swap shifts so that B would take Wednesday evening and D would take B's Saturday morning slot; Agent A confirmed and submitted the change (\"Okay, done. Agent D for Saturday morning, Agent B for Wednesday evening. I'll send it in.\").",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D consistently held the position that Wednesdays are unavailable due to temple attendance (Turn 2: \"I go to the temple on Wednesday evenings.\").",
+      "Agent B initially reported an inability for Saturday morning (Turn 4: \"I can't do Saturday morning.\"), then agreed to take Wednesday evening and proposed the swap (Turn 6: \"I'll take Wednesday evening?\").",
+      "Agent A accepted and enacted the change by stating the updated roster and sending it in (Turn 10: \"Okay, done. Agent D for Saturday morning, Agent B for Wednesday evening. I'll send it in.\")."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent D: \"Yes. I go to the temple on Wednesday evenings. I can do another evening.\" (D objects to the draft Wednesday slot)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A proposes a swap: \"Can anyone swap with Agent D?\" Agent B replies: \"I can't do Saturday morning. Can you?\" (B states a constraint that prevents an immediate swap)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D: \"Yes, I can do Saturday morning.\" Agent B: \"Great. Agent A, can you put Agent D down for Saturday morning and I'll take Wednesday evening?\" (A proposal is made that would resolve the conflict, but A has not yet confirmed)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A: \"Okay, done. Agent D for Saturday morning, Agent B for Wednesday evening. I'll send it in.\" (explicit confirmation that the roster was changed)",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D: \"Okay. Thanks.\" Agent A: \"No problem.\" (polite acknowledgment after the confirmed change)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A: \"No problem.\" (no new disagreement)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The core incompatibility was between the published roster and D's religious obligation; the group resolved it by an explicit swap.",
+      "Resolution required both a willing coworker (B) and the roster-holder's (A's) explicit confirmation to finalize the change.",
+      "No other scheduling constraints or objections surfaced after the swap was agreed and confirmed."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T09:34:59.413216+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00649905,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2673,
+      "local_latency_ms": 28000.6,
+      "output_tokens": 3117,
+      "reasoning_tokens": 1792,
+      "successful_calls": 1,
+      "total_tokens": 5790
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "WK3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S92-WK3-R01",
+    "scenario_id": "S92"
+  },
+  "schema_version": 2
+}

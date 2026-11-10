@@ -1,0 +1,153 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "early-morning shower and kitchen noise",
+      "sleep needs for work/exams vs need to wake early for shifts",
+      "schedule accommodations (which nights to shift shower/cooking)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants give concrete, personal reasons (hospital shift, client presentations, exams) which makes positions clear.",
+      "Agent C plays a mediating/clarifying role proposing partial solutions; D offers a limited accommodation (cooking at night, Sunday shower change).",
+      "There is some repeated restatement of unwillingness by D and repeated appeals by others, which slows resolution but keeps positions clear."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent D agreed to shower the night before on Sundays only ('Okay. Just on Sunday nights? I can do that.' — Turn 8). That is an explicit, limited concession: A's Sunday need was accommodated, but B's and C's objections about multiple weekday mornings (the next four weeks) were not accepted, so the main incompatibility over weekday 4:45 showers remains.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D conceded one specific change: showering on Sunday night instead of Sunday morning ('Okay. Just on Sunday nights? I can do that.' — Turn 8) and moved cooking to nights (Turn 16/28).",
+      "Agent A accepted the Sunday-night arrangement (Turn 9) and did not press further.",
+      "Agent B continued to request additional nights (Turn 10) and did not get agreement; position unchanged.",
+      "Agent C consistently highlighted their direct disturbance and proposed compromises (Turn 13, 15) but did not obtain broader concessions; position unchanged."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: 'Agent D, 4:45 is very early.' — Turn 2: 'I know. My hospital shift starts early for the next four weeks.' (Incompatible needs—D must rise early; others dislike being woken.)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: 'I have major client presentations on Mondays. I can't be tired for those.' — Turn 4: 'My exams are on Tuesdays and Thursdays... 4:45 is a problem for me too.' (More household members state stakes, widening the conflict.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: 'My room is right between yours and the kitchen, Agent D. I can hear everything.' — Turn 6: 'What if I cook my lunch the night before?... It would be quieter.' (D offers a partial accommodation reducing cooking noise; shower issue remains.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: 'How about just for Sunday nights, could you shower the night before? That's the one that really impacts my work.' — Turn 8: 'Okay. Just on Sunday nights? I can do that.' (Explicit agreement on Sunday nights — partial settlement.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10: '...could you do the same for me on Monday and Wednesday nights? The shower at 4:45 would still wake me up before my exams.' (B introduces an additional accommodation demand beyond the Sunday concession; unresolved.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11: 'I can't do that for another two nights. I need the shower in the morning to wake me up properly before my shift.' — Turn 12: 'But you just agreed to do it for Agent A on Sundays. My exams are just as important as his work.' (Direct refusal vs renewed demand; opposing positions remain.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 13: 'What if you just do it for one of the nights... ?' — Turn 14: 'One night was already a lot for me. I can't do another one.' (Mediator proposal rejected; entrenched disagreement persists.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 15: 'This isn't just about one or two nights... I'm going to be woken up every single weekday.' — Turn 16: 'I'm already cooking at night to keep it quieter. That's the biggest change I can make.' (Scope of harm expanded by C; D holds to limited changes.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "Turn 17: 'But the shower is still really loud.' — Turn 18: 'I understand that, but... I need the shower to wake up for work. There's nothing else I can change about my mornings.' (Core incompatibility reiterated; no resolution.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 9
+      },
+      {
+        "evidence": "Turn 21: 'I've already told you, I can't change that. I've done what I can with the cooking.' — Turn 22: 'You're showering at night for Agent A. So it's not that you can't.' (C challenges consistency of D's claim, heightening disagreement.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 10
+      },
+      {
+        "evidence": "Turn 23: 'That was for one night. It's not something I can do every day.' — Turn 26: 'It's about being able to do my job. I need the shower in the morning to be alert at the hospital. One night is not the same as every day.' (D reaffirms limits; conflict over weekdays remains.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 11
+      },
+      {
+        "evidence": "Turn 27: 'And I'm the one who's going to be woken up every day. It's not just one night for me, it's four weeks.' — Turn 28: 'And I'm the one getting up at 4:45. I've already changed my cooking routine to help.' (Positions restated; main incompatibility still unresolved.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Core tension is practical: D needs a morning shower to be alert for hospital shifts; others need uninterrupted sleep for exams/work—these needs directly conflict during early mornings.",
+      "A limited accommodation (moving cooking to night) reduces some noise but does not address the dominant noise source (shower).",
+      "A one-night concession (Sunday) was acceptable to D but insufficient for roommates with repeated weekday obligations, creating a persistent unresolved issue.",
+      "Attempts to negotiate (B asking for additional nights, C proposing compromise) failed because D frames the morning shower as necessary for job performance and refuses further changes."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T09:34:02.755117+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 4 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00775455,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3119,
+      "local_latency_ms": 33855.533,
+      "output_tokens": 3689,
+      "reasoning_tokens": 1792,
+      "successful_calls": 1,
+      "total_tokens": 6808
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "NO4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S89-NO4-R01",
+    "scenario_id": "S89"
+  },
+  "schema_version": 2
+}

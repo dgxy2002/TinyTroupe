@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "visibility of jewellery under new uniform rule",
+      "religious items and accommodation (bracelet, earrings)",
+      "perceived unequal enforcement/fairness"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Concise, workplace-appropriate language; natural quick negotiation.",
+      "One participant raised a fairness grievance ('You made me take my earrings off.'), which prompted constructive solution-seeking.",
+      "Resolution was explicit and applied uniformly ('that goes for everyone')."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The team agreed on a shared interpretation of the head office rule: covered items that 'can't be seen' are acceptable. Agent A changed from instructing removal to allowing covered items ('If it's covered and can't be seen, then it's fine. That goes for everyone.'), and Agent D accepted to cover the bracelet ('I'll cover it.').",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A (shift lead) moved from a strict reading ('that means the bracelet, too') to accepting a negotiated interpretation ('If it's covered and can't be seen, then it's fine.').",
+      "Agent D initially resisted removal ('I have to keep it.') but agreed to the accommodation ('I'll cover it.').",
+      "Agent B moved from complaint about unequal treatment to accepting the common solution (implied by 'Right').",
+      "Agent C proposed a practical solution (plaster) and remained consistent as a facilitator."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "clarification",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent A: 'I think that means the bracelet, too.' Agent D: 'I have to keep it. Can I just cover it?' — incompatible demands (remove vs keep) expressed.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: 'As long as it can't be seen at all.' Agent B: 'Wait. You made me take my earrings off.' — introduces fairness complaint, broadening the disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A: 'A bracelet can be covered. How do you cover earrings?' Agent B: 'With my headscarf. Or a plaster. You didn't suggest anything for me, you just said take them off.' — ongoing dispute about interpretation and past unequal treatment.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C: 'A plaster would work. The rule is 'not visible', right?' Agent A: 'Okay, fair enough. If it's covered and can't be seen, then it's fine. That goes for everyone.' — the group agrees on a common interpretation (covered = acceptable); this settles the substantive disagreement.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B: 'Right.' Agent A: 'So we're all clear for tomorrow? Everything covered.' — confirmations after the settlement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C: 'Clear.' Agent A: 'Agent D?' — routine check for confirmation; no dispute.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D: 'Yeah, clear. I'll cover it.' — explicit acceptance of the agreed accommodation.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A: 'Okay, good. Then we're all set for tomorrow.' — closure statement; no remaining disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Primary tension was interpretive (what 'not visible' means) rather than an absolute refusal to comply with head office.",
+      "Offering concrete covering options (plaster, headscarf, cover bracelet) enabled accommodation without violating the rule.",
+      "A perceived past unequal enforcement (B's complaint) was addressed by applying the clarification to everyone, which removed that objection."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T06:58:26.881312+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0065543,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2710,
+      "local_latency_ms": 27900.213,
+      "output_tokens": 3140,
+      "reasoning_tokens": 1728,
+      "successful_calls": 1,
+      "total_tokens": 5850
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "UN2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S76-UN2-R01",
+    "scenario_id": "S76"
+  },
+  "schema_version": 2
+}

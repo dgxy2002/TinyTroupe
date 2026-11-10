@@ -1,0 +1,151 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "alcohol at party in shared home",
+      "placement of alcohol in fridge vs food",
+      "hosting responsibilities vs religious beliefs",
+      "guests' expectations and money spent on drinks"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents stay on-topic and give clear reasons: Agent D cites religion as the reason for refusal ('it's a religious thing'), Agent A cites guests and sunk cost ('I already bought all this thinking of them').",
+      "Several compromise attempts: cooler box (Turn 7), split by place (Turn 20), split by time (Turn 25)—shows iterative problem-solving.",
+      "No evidence of role confusion; dialogue is polite and collaborative in tone even while disagreeing."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No mutually accepted arrangement was reached. Agent D consistently refused to be a host at a party where alcohol is served in the shared home ('I can't be a host at a party where alcohol is served in my own home.'), while Agent A (and B) insisted guests expect drinks and Agent A had already purchased alcohol ('But a lot of our guests drink. I already bought all this thinking of them.'). Various compromises (cooler for fridge, move to a bar, split by time) were proposed but either did not address D's hosting objection or were rejected as impractical by A. The incompatible demands therefore remain unsettled.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D consistently maintained refusal to host alcohol throughout (Turns 6, 10, 16, 26).",
+      "Agent A consistently emphasized guests' expectations and the sunk cost of purchased drinks (Turns 11, 23).",
+      "Agent B supported compromise and A's concerns but did not change a core position (Turns 14, 24).",
+      "Agent C acted as mediator and proposed multiple compromises but ultimately did not change their position either (Turns 7, 20, 25)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A put drinks in the fridge and said 'the drinks are sorted.' Agent B thanked Agent A (Turns 2-3). No substantive disagreement appeared.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C asked about alcohol in the fridge and Agent D replied, 'Actually, no, I'm not comfortable with it being in the fridge with my food. To be honest, I'm not really comfortable with having alcohol at the party here at all. For me, it's a religious thing.' (Turns 5-6). This introduces a clear substantive incompatibility between Agent A's purchase/storage and Agent D's religious hosting constraint.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C proposed a cooler box to separate drinks from food and to discuss the party; Agent D said 'A cooler box could work for the fridge... But the bigger problem for me is still the alcohol at the party itself.' (Turns 7-8). The fridge issue is partly addressed but the core host/party alcohol conflict remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D asserted a firm position: 'Since this is our home and we're all hosting, I'm just not comfortable if we serve alcohol. For me, as a Muslim, hosting a party with alcohol is not okay.' (Turn 10). This is a strong, principled refusal that raises the stakes with respect to hosting duties.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A pushed back: 'But a lot of our guests drink. I already bought all this thinking of them.' Agent D reiterated the importance: 'this is a really important religious rule. I can't be a host at a party where alcohol is served in my own home.' (Turns 11-12). Material investment and guest expectations deepen the disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A suggested keeping drinks in a separate cooler and allowing self-service; Agent B called it 'a fair compromise' (Turns 13-14). This softens the immediate fridge/serving tension but does not resolve Agent D's hosting objection.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C clarified that the core issue is Agent D being a host at a party with alcohol; Agent D confirmed: 'Yes, exactly... I can't be a host where alcohol is being served.' (Turns 15-16). Clarification is achieved but the fundamental incompatibility remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A and Agent B emphasized guest expectations and prior statements: '...a lot of them will be expecting a beer or a glass of wine.' and 'I've already told my manager and a couple of colleagues that we'd have drinks.' (Turns 18-19). Pressure from guests/commitments strengthens the conflict again.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "Agent C proposed splitting the event (no-alcohol housewarming here, then go to a bar); Agent D accepted: 'That's a really good idea... I'd be happy with that.' (Turns 20-21). D's acceptance reduces the core hosting conflict temporarily, though A and others have not yet agreed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 9
+      },
+      {
+        "evidence": "Agent A objected that the suggestion doesn't solve the problem of already-bought drinks and moving guests mid-party: 'I can't return them... are we really going to ask all our guests to move to a bar in the middle of the party?' Agent B agreed. (Turns 23-24). The earlier de-escalation is contested and the disagreement resurfaces strongly.",
+        "movement": "reopened",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 10
+      },
+      {
+        "evidence": "Agent C proposed splitting by time (7–9 no alcohol, then optional drinks) to avoid D hosting the alcohol portion; Agent D said he still wouldn't be comfortable because it's still his home and the party would continue with alcohol. (Turns 25-26). The attempt fails to remove the core objection.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 11
+      },
+      {
+        "evidence": "Agent C conceded being out of ideas and Agent D thanked them; no party arrangement acceptable to all was reached. The substantive incompatibility—Agent D's refusal to host any alcohol in the shared home vs Agents A/B's desire to provide alcohol for guests—remains. (Turns 27-28).",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Core tension is host identity/responsibility in a shared home versus individual religious commitments: D treats any hosted alcohol as incompatible with being a host.",
+      "Practical constraints (already-purchased alcohol, guest expectations, work colleagues informed) strengthen A/B's resistance to no-alcohol solutions.",
+      "Proposals that remove alcohol from the physical shared-home context (bar) or from hosting duties (time-splitting) partially address concerns but do not resolve the problem because D still feels ownership of the home during evening hours."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-10T12:38:19.778947+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0084835,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3430,
+      "local_latency_ms": 47961.06,
+      "output_tokens": 3813,
+      "reasoning_tokens": 1856,
+      "successful_calls": 1,
+      "total_tokens": 7243
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "HX2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S46-HX2-R01",
+    "scenario_id": "S46"
+  },
+  "schema_version": 2
+}

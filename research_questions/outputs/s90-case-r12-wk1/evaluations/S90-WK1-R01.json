@@ -1,0 +1,151 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Friday 12:00-15:00 roster slot conflicting with Agent D's prayer time",
+      "Saturday morning roster slot conflicting with Agent B's childcare (swimming lessons)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Practical constraints are explicitly stated: prayer time (D) and child's swimming lessons (B).",
+      "Agent C initially says: \"I can't take on another regular weekly shift.\" then clarifies: \"I can swap. I can't add hours.\" — useful clarification that enables resolution.",
+      "Agent B repeats the same inability twice (Turn 15 and Turn 18): \"I can't do them. My kid has swimming lessons.\" — a small amount of needless repetition.",
+      "Agent A functions as coordinator and summarizes outcomes: \"Okay, settled then.\" and \"I'll send it in tonight.\""
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Both scheduling conflicts were settled by mutual swaps. For the Friday conflict, Agent C agreed to swap with Agent D (Turn 6: \"I can swap. I can't add hours.\"); Agent D accepted (Turn 11: \"Yes, that works. Thanks.\"). For the Saturday conflict, Agent D volunteered to take Saturday mornings (Turn 22: \"I can do Saturday mornings.\"), A proposed that Agent B take D's slot (Turn 23: \"So you'll take Saturday morning, and Agent B, you take Agent D's slot?\"), and Agent B accepted (Turn 24: \"Yes, that works for me.\"). Agent A then confirmed: \"Great. It's settled then. I'll send it in tonight.\" (Turn 28).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C moved from an apparent refusal to add hours (Turn 3: \"I can't take on another regular weekly shift.\") to offering a swap (Turn 6: \"I can swap. I can't add hours.\").",
+      "Agent D moved from expressing the conflict (Turn 4: \"That's my prayer time on Friday.\") to accepting a specific swap (Turn 11: \"Yes, that works. Thanks.\").",
+      "Agent B maintained inability for Saturday mornings (Turn 15/18: \"I can't do them. My kid has swimming lessons.\") but accepted taking Agent D's slot when proposed (Turn 24: \"Yes, that works for me.\").",
+      "Agent A consistently acted as coordinator, proposing swaps and confirming settlements (Turn 1, Turn 7, Turn 23, Turn 28)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 9,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent A: \"We can change it. Can anyone swap with Agent D?\" — a swap is requested. Turn 2: Agent B: \"I can't do Saturday mornings.\" — creates a constraint for available swaps.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent C: \"I can't take on another regular weekly shift.\" — limits options. Turn 4: Agent D: \"That's my prayer time on Friday.\" — states a firm incompatibility with the rostered Friday slot.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: Agent A asks for clarification. Turn 6: Agent C: \"I can swap. I can't add hours.\" — opens the swap option while keeping the constraint of no extra hours.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: Agent A proposes the swap. Turn 11: Agent D: \"Yes, that works. Thanks.\" — D accepts the swap and the Friday/prayer conflict is settled.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 12: Agent A: \"Okay, settled then.\" Turn 13: Agent B: \"So, about Saturday mornings.\" — reintroduces a second scheduling conflict (B's Saturday constraint).",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 14: Agent A asks about Saturday mornings. Turn 15: Agent B: \"I can't do them. My kid has swimming lessons.\" — gives the reason but does not resolve the need for a swap.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 18: Agent B repeats: \"I can't do them. My kid has swimming lessons.\" Turn 19: Agent A: \"Okay. Can anyone swap with Agent B?\" — conflict persists and is explicitly soliciting swaps.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 22: Agent D: \"I can do Saturday mornings.\" — offers a concrete solution. Turn 23: Agent A: \"So you'll take Saturday morning, and Agent B, you take Agent D's slot?\" — proposes the specific swap (not yet confirmed).",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 8
+      },
+      {
+        "evidence": "Turn 24: Agent B: \"Yes, that works for me.\" Turn 28: Agent A: \"Great. It's settled then. I'll send it in tonight.\" — the Saturday/Friday swap is accepted and the second conflict is resolved.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Religious observance created a concrete unavailability (Friday noon) that required an explicit swap rather than added hours.",
+      "Childcare obligations constrained Saturday availability, but that was solvable by swapping with a colleague who volunteered.",
+      "No extra hours were taken on; the group resolved both issues solely by swapping existing weekly slots, respecting agents' no-add-hours constraint (Agent C).",
+      "Coordination relied on direct, concrete commitments (\"I can do...\", \"Yes, that works for me.\"), which counted as settlement in this speech-only transcript."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T09:14:23.899789+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00866455,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2759,
+      "local_latency_ms": 42350.743,
+      "output_tokens": 4189,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6948
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "WK1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S90-WK1-R01",
+    "scenario_id": "S90"
+  },
+  "schema_version": 2
+}

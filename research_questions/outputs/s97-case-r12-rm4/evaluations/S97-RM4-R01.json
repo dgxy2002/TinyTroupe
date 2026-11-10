@@ -1,0 +1,151 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "room scheduling",
+      "privacy for pumping (private use of room)",
+      "access to files / room locking",
+      "relocation of boxes/files"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants provide concrete reasons (client calls, private calls, file access) and practical proposals (time shifts, moving boxes).",
+      "There is some needless repetition of short acknowledgements (many \"Okay, thanks.\" / \"Great.\").",
+      "Speakers stay consistent about physical constraints and roles (who uses the room and why)."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Parties agreed concrete schedule adjustments and a material accommodation: Agent D moved the 1pm slot to 12:30 and the afternoon request to 3:30 (Agent D: \"I can come a bit earlier, like 12:30.\" and earlier A accepted 3:30), and Agent B agreed to relocate the daily-use boxes out of the room (Agent B: \"They can go next to my desk.\"), with Agent D explicitly accepting the repeated proposal (Agent D: \"Yes, that's a great idea. That would work perfectly. Thanks, Agent B.\"). These explicit statements show who adjusted what and what was asked in return.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D adjusted requested times when told of clashes: proposed 3:30 for the afternoon and 12:30 for the midday slot (D: \"Is 3.30 okay?\"; \"I can come a bit earlier, like 12:30.\").",
+      "Agent B moved from objection to active accommodation: initially objected to locking (\"If the room is locked I can't get my work done.\"), then proposed and agreed to moving boxes (\"They can go next to my desk.\").",
+      "Agent C conceded their 1pm slot when D proposed 12:30 (C: \"Yes, 12:30 works for me.\").",
+      "Agent A agreed to the adjusted afternoon time (A: \"Yes, 3.30 works.\")."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 11,
+    "round_scores": [
+      {
+        "evidence": "Agent A: \"The 1 p.m. should be fine. But I often have client calls in that room from 4 p.m. onwards. Can you do the afternoon one any earlier?\"; Agent D: \"Yes, I can. Is 3.30 okay?\" — Scheduling incompatibility about the afternoon slot is raised and a counter-proposal is made but not yet confirmed.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent B: \"I'm in and out of that room all day for the files. If the room is locked I can't get my work done.\" — A substantive access/operational conflict appears (privacy/locking vs B's file access) and is unresolved at the end of the round.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C: \"Agent D, the 1 p.m. slot is a problem. I use that room for a private call every day around that time.\"; Agent D: \"I can come a bit earlier, like 12:30.\"; Agent D to B: \"it's only for fifteen minutes. I do need the privacy.\" — The 1 p.m. scheduling conflict is addressed (D offers 12:30), but B's access concern remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B: \"If I'm blocked for fifteen minutes, my work stops. Can we move the boxes I use daily out of that room?\"; Agent C: \"Yes, 12:30 works for me.\" — B proposes a concrete mitigation (moving boxes); scheduling conflict with C appears resolved, but the access issue is pending implementation.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D: \"Okay, 12:30 is fine. ... Moving the boxes you need daily sounds like a good idea. Where can they go?\"; Agent B: \"They can go next to my desk. That should keep them out of the main walkway.\" — Parties agree on new times (12:30 and 3:30) and a concrete relocation for the boxes, settling the key incompatibilities.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B repeats: \"They can go next to my desk.\"; Agent D: \"Okay, that works.\" — Confirmation/repetition after the agreement; no new substantive conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent B: \"Okay, thanks.\" (repeated) — No substantive disagreement or new issues raised.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent B: \"Okay, thanks.\" (repeated) — Continued confirmation; no new substantive conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent B: \"Okay, thanks.\" (repeated) — No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Agent B: \"I get that, but I can't predict when I'll need a file. What if we move the boxes I use every day out of that room? Then you can have it whenever. Half of those are old files anyway.\" — B restates/unpacks unpredictability and again proposes moving boxes; this reopens the operational issue until accepted.",
+        "movement": "reopened",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D: \"Yes, that's a great idea. That would work perfectly. Thanks, Agent B.\"; Agent B: \"Great.\" — The reiterated proposal is explicitly accepted, removing the remaining incompatibility.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Agent B: \"Great.\" (repeated) — No substantive disagreement; closure language only.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Two separate conflicts existed: scheduling conflicts among users and an operational access conflict about files and locking; both required different solutions.",
+      "Resolution combined schedule changes (D moved to 12:30 and 3:30) and a physical accommodation (B agreed to relocate boxes), distributing adjustment across parties.",
+      "B's recurring concern about unpredictability was handled by relocating boxes to allow short, locked uses without stopping B's workflow."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-09T09:47:11.719593+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01058555,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2995,
+      "local_latency_ms": 48044.206,
+      "output_tokens": 5120,
+      "reasoning_tokens": 3264,
+      "successful_calls": 1,
+      "total_tokens": 8115
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "RM4",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S97-RM4-R01",
+    "scenario_id": "S97"
+  },
+  "schema_version": 2
+}

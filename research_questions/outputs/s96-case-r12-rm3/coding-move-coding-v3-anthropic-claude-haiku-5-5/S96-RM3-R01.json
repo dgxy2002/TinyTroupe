@@ -1,0 +1,170 @@
+{
+  "coded_at": "2026-11-09T09:44:36.409293+00:00",
+  "coding": {
+    "agents": [
+      {
+        "agent": "Agent A",
+        "concerns": [
+          {
+            "detail": "afternoon room use for European calls from 4 p.m.",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          }
+        ]
+      },
+      {
+        "agent": "Agent B",
+        "concerns": [
+          {
+            "detail": "getting files from the room throughout the day",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          },
+          {
+            "detail": "room blocked off without being asked first",
+            "in_speech": false,
+            "in_thoughts": true,
+            "tag": "respect"
+          }
+        ]
+      },
+      {
+        "agent": "Agent C",
+        "concerns": [
+          {
+            "detail": "private room at 1 p.m. for daily call to mother's care home",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          }
+        ]
+      },
+      {
+        "agent": "Agent D",
+        "concerns": [
+          {
+            "detail": "private room with closed door for fifteen-minute practice",
+            "in_speech": true,
+            "in_thoughts": true,
+            "tag": "access"
+          }
+        ]
+      }
+    ],
+    "arrangement": {
+      "covers": [
+        "access"
+      ],
+      "exists": true,
+      "gave_way": [
+        "Agent D"
+      ],
+      "summary": "All four accepted that Agent D uses the room at 12:30 and 3:30 for fifteen minutes with the active files moved out to Agent B's desk, so the room access conflict is settled.",
+      "unsettled": []
+    },
+    "turns": [
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 1,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 2,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 3,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 4,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 5,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 6,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 7,
+        "uses_interest": true,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": true,
+        "conditional_ask": false,
+        "line": 8,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 9,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 10,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 11,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      },
+      {
+        "concedes": false,
+        "conditional_ask": false,
+        "line": 12,
+        "uses_interest": false,
+        "uses_power": false,
+        "uses_right": false
+      }
+    ]
+  },
+  "model": "anthropic/claude-haiku-5.5",
+  "prompt_sha256": "274bbf00deb9c922b59721150b73018c8143640ddf225c477e5630eb16b595bc",
+  "prompt_version": "move-coding-v3",
+  "run_id": "S96-RM3-R01"
+}
