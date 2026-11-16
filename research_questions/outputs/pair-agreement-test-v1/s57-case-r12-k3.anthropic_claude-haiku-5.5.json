@@ -1,0 +1,97 @@
+{
+  "rubric": "pair-agreement-v1",
+  "model": "anthropic/claude-haiku-5.5",
+  "folder": "s57-case-r12-k3",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1731,
+    "completion_tokens": 1956,
+    "total_tokens": 3687,
+    "cost": 0.0011511,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0011511,
+      "upstream_inference_prompt_cost": 0.0001731,
+      "upstream_inference_completions_cost": 0.000978
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1332,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to cover Agent D's unfinished analysis section before Thursday's pitch, given D's bereavement and D's offer to work on it tonight",
+  "pairs": {
+    "A-B": {
+      "start": -1,
+      "end": 2,
+      "engaged": true,
+      "evidence": "Turn 9 A asks B to review the analysis tomorrow; Turn 10 B agrees: \"I can review it tomorrow afternoon.\"",
+      "cultures": "Malay - Indian",
+      "includes_D": false
+    },
+    "A-C": {
+      "start": -1,
+      "end": 1,
+      "engaged": true,
+      "evidence": "Turn 9 A asks C to help with slides and sourcing; Turn 12 C agrees, \"I'll help after that's done\", and Turn 19 C commits to starting the slides after finishing his part.",
+      "cultures": "Malay - Eurasian",
+      "includes_D": false
+    },
+    "A-D": {
+      "start": -2,
+      "end": 1,
+      "engaged": true,
+      "evidence": "Turn 7 A rejects D working after the wake; Turn 15 D defers, \"Okay, Agent A. If you're sure,\" though still worried about A's workload.",
+      "cultures": "Malay - Chinese",
+      "includes_D": true
+    },
+    "B-C": {
+      "start": 1,
+      "end": 1,
+      "engaged": false,
+      "evidence": "Turn 4 B says \"I can't take on more\" and Turn 5 C says \"I can't do her section\"; neither addresses the other, and their end tasks (review and slides) do not conflict.",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false
+    },
+    "B-D": {
+      "start": 0,
+      "end": 0,
+      "engaged": false,
+      "evidence": "Turn 4 B declines extra work and Turn 6 D offers to work tonight; neither speaks to the other's position.",
+      "cultures": "Indian - Chinese",
+      "includes_D": true
+    },
+    "C-D": {
+      "start": 0,
+      "end": 1,
+      "engaged": true,
+      "evidence": "Turn 6 D replies \"I understand\" to C's refusal; Turn 17 C says \"Don't worry about my part. I'll get it done,\" answering D's worry in Turn 15, and Turn 19 C commits to finishing by tomorrow.",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true
+    }
+  }
+}

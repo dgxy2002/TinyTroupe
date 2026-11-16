@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s78-case-r12-un4",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Irfan"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1944,
+    "completion_tokens": 632,
+    "total_tokens": 2576,
+    "cost": 0.010208,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010208,
+      "upstream_inference_prompt_cost": 0.003888,
+      "upstream_inference_completions_cost": 0.00632
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D may keep wearing a medical alert bracelet (visible or covered) despite the new no-accessories uniform rule before tomorrow's area manager visit",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says the memo has no medical exception (5) and A agrees 'She's right' (6); but B then asks why she wasn't told she could cover earrings (8) and A says rule applies to everyone (9).",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-C": {
+      "start": 0.8,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C: 'The memo is from head office. We can't make exceptions. Agent A is right' (11); C backs A again on the sweatband (26).",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.05
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": -0.85,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A insists it must come off and won't allow covering or explaining to manager (3, 13, 18, 23, 31); D keeps pressing 'either my health or my job?' (32).",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": -0.15
+    },
+    "B-C": {
+      "start": 0.3,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both rely on the memo having no exceptions (5, 11), but they never address each other directly.",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.4,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says the memo has no medical exception (5), but also asks if covering is okay (8), partly taking up D's cover idea.",
+      "roles": "B-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": -0.7,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C rejects D's sweatband idea: 'A sweatband is an accessory too. That doesn't fix it' (26), and says no exceptions can be made (11).",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": -0.1
+    }
+  }
+}

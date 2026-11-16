@@ -4,6 +4,142 @@ Working notes for the conflict-simulation research in `research_questions/`. Rea
 `reference folders/handover.md` first; this file records what was added after it. Nothing
 here is evidence about real cultural groups.
 
+## CURRENT PHASE: culture pairs and agreement scores (2026-11-16). Read this first.
+
+The case-study phase (HANDOVER below) is finished. The user is now moving to a majority/minority framing,
+scored on the transcripts already collected before any new runs.
+
+**Folders.** At the user's request, `research_questions/outputs/` was renamed to `research_questions/outputs_old/`
+(all 152 run folders) and a new empty `outputs/` was created for this phase. Every run path in the sections below
+and in `good_runs.md` (`outputs/s46-...`) now lives under `outputs_old/`. `runner.py` and `tools/run_cases.py`
+write to the new `outputs/`, and `run_cases.py`'s "skip existing folder" check sees only the new folder, so always
+use fresh experiment IDs. In git, the move shows as 1,920 deleted and untracked files until the user commits it.
+
+**Definitions agreed with the user:**
+
+- **Culture is a bundle** of race, faith and name: Chinese/Buddhist, Malay/Muslim, Indian/Hindu, Eurasian/Catholic
+  (the user's choice: "assume Chinese is Buddhist, Malay is Muslim"). Report it as a typical pairing, not a claim
+  about anyone. The race test (HX) and scenario 15 (no faith) are the only runs that break the bundle.
+- **Majority** means Singapore's real-world majority, so only Chinese; Malay, Indian and Eurasian are minorities.
+  The room majority (how many agents share a culture) is a separate idea the user may test later. "3 + 1" rooms
+  (for example 3 Chinese with 1 Malay) were discussed and then **set aside by the user for now**: "I purely just
+  want to see the pairs of culture."
+- **Current task: an agreement score for every pair of agents within a run, grouped by culture pair** (Chinese –
+  Malay, Chinese – Indian, Malay – Indian, Chinese – Eurasian, Malay – Eurasian, Indian – Eurasian). Undirected
+  agreement plus a "who moved" field, which carries the direction.
+
+**Transcript selection (`research_questions/culture_pair_runs.csv`, 65 unique transcripts, all in `outputs_old/`).**
+One row per culture pair and transcript, with scenario, cell, D's culture, A-C cultures, need type, rounds, room type
+and a flawed-design flag. Rebuild it from the repo root with `python research_questions/tools/culture_pair_inventory.py`
+(writes `culture_pair_inventory.csv`, one row per type-3 transcript) and then
+`python research_questions/tools/culture_pair_select.py` (checked to reproduce the CSV exactly). The fixed rule,
+chosen without looking at outcomes:
+
+- First attempts only (no `-r12b-`/`-r12c-`; second attempts were run only for variants that failed), type 3 only
+  (S36 onwards), 8- and 12-round runs, all designs, health controls included.
+- Pairs without Eurasian keep every run: Chinese – Malay 28, Chinese – Indian 35, Malay – Indian 26.
+- Pairs with Eurasian are capped at 35 (user's choice): Malay – Eurasian 35 (all, including flawed S63), Chinese –
+  Eurasian 35 of 53, Indian – Eurasian 35 of 43. Order of inclusion: the 24 one-of-each runs first, then sound design
+  before flawed, 12 rounds before 8, cultural need before control, main variant before race test, round-robin across
+  scenarios.
+- Why the Asian pairs are few: rule 7 filled most rooms with three Eurasian Catholics (or three Malays in scenarios 6
+  and 8), so only the K casts, HW1/HX and LG4 put Chinese, Malay and Indian agents in one room. The 24 one-of-each
+  runs (pan and incense, housewarming v1 and v2, bereavement, corner, language control) give every pair once each.
+
+**Scorer: `research_questions/tools/pair_agreement.py`** (rubric `pair-agreement-v2-decimal`). Reads the public `.md`
+transcript, replaces names with Agent A-D and removes the sentence listing faiths or backgrounds, so the coder never
+sees culture labels (a faith said aloud stays). For each of the six pairs it returns `start` and `end` (free decimals
+-1.00 to 1.00), `engaged`, `moved` (one letter, "both" or "neither") and `evidence` with turn numbers; the script adds
+`roles`, `cultures`, `includes_D` and `change` (end minus start). Writes to `outputs/<--out>/` and refuses an
+existing folder. Example:
+`python research_questions/tools/pair_agreement.py --out <new-id> --models anthropic/claude-sonnet-5.5 --folders s57-case-r12-k3`
+
+**Tests so far (3 transcripts: S46-HW1, S57-K3, S56-K2; total about $0.20).** Folders `outputs/pair-agreement-test-v1`
+(labelled -2..2, three models), `-points-b`, `-decimal-a`, `-decimal-b`, `-v2` (current rubric).
+
+- **Model:** Sonnet 5.5 on free decimals was the most consistent from one try to the next (mean difference 0.06-0.09
+  on -1..1, no jumps of 0.5 or more); gpt-5-mini was not (0.22, and swings such as -0.3 to 1.0 on the same pair, plus
+  1.0 in 27 of 72 scores). Plan agreed in principle: Sonnet only, two passes averaged; no Gemini (it ran the agents).
+  Cost about $0.009 a transcript, about $1.20 for the 65 with two passes.
+- **The user chose free decimals** over labelled points "so the LLM has more freedom".
+- **What the scores show so far:** the start score finds the conflict (A-D starts at -0.3 to -0.8 in all three); end
+  scores in resolved runs are all high, so the end mostly repeats the outcome; the most opposed pair follows role A
+  (organiser or lead), whatever A's culture, so analyse culture pairs with the role pair alongside; `moved` separates a
+  two-way compromise (S46: both) from D giving in (S57, S56: only D moved). Pairs with `engaged: false` sit near 0-0.5
+  and should be analysed separately so they do not dilute the averages.
+
+**Full scoring (2026-11-17, user approved; `outputs/pair-agreement-v2-sonnet-a` and `-b`, two Sonnet passes over all
+65, $1.27).** `tools/pair_agreement_report.py <pass-a> <pass-b>` averages the passes, keeps only pairs whose transcript
+is selected for that culture pair, writes `pairs_long.csv` (one row per pair of agents) into the first pass folder and
+prints tables (all, includes D, A-C only, engaged only, cultural need only). The passes agreed closely: mean gap 0.08
+on start, 0.06 on end, "moved" identical in 235 of 264 pairs.
+
+- **Pairs vs runs:** "pairs" are pairs of agents inside a transcript, so a room of three Eurasians with a Malay D gives
+  three Malay - Eurasian pairs from one run (35 runs gave 53-56 Eurasian pairs). Weight each run once: average within the
+  run first. The report script still weights by pair; the run-weighted numbers below were computed ad hoc (the user was
+  offered a switch of the script and did not answer). Run weighting barely changed anything.
+- **Run-weighted table (all 65, health controls included):** start / end / change (95% bootstrap by run, change only):
+  Chinese - Malay +0.03 / +0.39 / +0.36 (+0.18 to +0.53); Chinese - Indian -0.01 / +0.28 / +0.29 (+0.13 to +0.48);
+  Malay - Indian +0.10 / +0.30 / +0.20 (+0.09 to +0.33); Chinese - Eurasian +0.03 / +0.36 / +0.33 (+0.19 to +0.47);
+  Malay - Eurasian -0.12 / +0.29 / +0.41 (+0.25 to +0.57); Indian - Eurasian -0.10 / +0.34 / +0.44 (+0.29 to +0.59).
+- **Conclusion agreed with the user: no culture pair differs reliably.** Every pair starts near neutral and ends about
+  +0.3; all intervals overlap. The user asked whether "Malay - Indian changed least" can be claimed: no. It is post hoc
+  (one of six pairs is always lowest), its interval overlaps even the largest, it started highest (less room to rise),
+  and in the same conversations it ends level with the room. Report it only as a description with that caveat.
+- **Same-conversation test (the fairest one):** in the 24 one-of-each runs every pair is present, so each pair was
+  compared with the average of all six pairs in the same run. Every pair is within about 0.15 of its room (end: Chinese
+  - Malay +0.09, Chinese - Indian -0.08, Malay - Indian +0.02, Chinese - Eurasian +0.08, Malay - Eurasian -0.09, Indian -
+  Eurasian -0.02). The earlier "Chinese - Malay highest, Malay - Indian lowest" in cultural need runs came from the pairs
+  drawing on different runs, not from culture. Role mix also differs by pair (Chinese - Malay is the D pair in 15 of 24).
+- **What drives the score:** the run's outcome (mean end per run: unresolved -0.02, partly resolved +0.34, resolved
+  +0.74) and role (A against D is the most opposed pair whatever the cultures). Eurasian pairs start lowest because the
+  Eurasians are usually the room facing D: build structure, not culture.
+- **Directed version (others towards D, by D's culture):** uses the same agent pairs, but keeps "Chinese towards a Malay
+  need" apart from "Malay towards a Chinese need", which the undirected score averages together. Pooled, Eurasian agents
+  towards a Chinese D end lowest (+0.18 vs +0.37-0.39 for a Malay or Indian D), but within the same scenario the Chinese D
+  is lower in only 5 of 11 scenarios (mean gap -0.11), and single cells swing from -0.6 to +0.9 between scenarios. Almost
+  every cell is one run, so this measures the luck of single conversations.
+- **Bias check (cultural or faith need runs, D pairs, deduplicated):** others towards D end: Chinese D +0.32 (16 runs,
+  9 unresolved), Malay D +0.42 (16, 6 unresolved), Indian D +0.29 (16, 8 unresolved); intervals overlap. **No sign that
+  the majority is favoured.** Lead only: the Malay D gave way more often than the others gave way to her (10 vs 6; the
+  Chinese D 6 vs 8, the Indian D 5 vs 8), which fits the case reading (sertu, Hari Raya). Health controls here (9 runs,
+  end +0.16, 6 unresolved) seem to contradict "health above faith", but the cap pushed controls to the back, so the 9 are
+  mostly rotating-cast controls from pan, incense and corner; the fixed-cast controls behind "health above faith" (S49,
+  S54, S70, S89, S93, S97) were left out. Offered, not done: score every fixed-cast run including all controls (about
+  $0.20 more) to test "health above faith" with these scores.
+- **Overall:** the existing transcripts were built to find single cases, mostly one run per cell, so they cannot
+  separate a culture or bias effect from run-to-run noise. What they support: no large difference by culture pair, and
+  the score follows outcome and role A. Reportable patterns stay those from the case readings (faith holder bears the
+  cost, faith needs challenged and health needs accepted, the Chinese name lead), as descriptions.
+
+**Design discussion for the next experiment (2026-11-17, nothing built or run).**
+
+- Suggested: repeated runs of one cell set, about 5 runs per cell (a rate instead of a coin flip), the same room, D
+  rotating through Chinese, Malay and Indian plus a health control; bias = difference in "who gave way" and "need met"
+  between the Chinese D and the minority D, each against its control. First idea was scenario 15 (smells, SM1-SM4, 20
+  runs, about $13, rotate 2-3 names per culture because names alone move outcomes).
+- **The user's objection:** type 1 runs without faith never showed culture, so how can a Chinese person be simulated?
+  Answer given: the failure was not linking culture to the conflict, not leaving out faith (scenario 15 has no faith and
+  culture surfaced). Three ways to simulate culture: tell the agent how the culture behaves (circular and a stereotype;
+  E1-E4 showed nothing), identity facts only (did nothing on `gpt-5-mini`; never tried on Pro), or facts plus a concrete
+  practice linked to the conflict (type 3, the right one). Richer facts are allowed as long as they are facts, not rules
+  of conduct: home language or dialect, festivals kept, a family routine, food.
+- **The user then pointed out** that removing the word "Muslim" changes nothing: "eats halal" is a religious fact the
+  model knows. Agreed. The variable that matters is **the kind of need: a rule** ("for you, X is something you do not
+  do": halal, no beef, precepts, no moving house in the seventh month) **or a custom** (a family dish, a reunion dinner).
+  Typical Malay and Indian needs are rules, typical Chinese needs are customs, so giving each culture its typical need
+  can make the Chinese D look weaker for that reason alone (rule 13).
+- **Current proposal, awaiting the user:** design 2 as the main test: each culture's typical need matched in strength
+  as a rule, using Chinese folk rules (mourning customs, seventh-month taboos, Qing Ming as a duty), with scenario 15
+  (customs for everyone) as the check. If the Chinese D still gets less room with an equally strong rule, that points to
+  the model; if the gap appears only with customs, it was the kind of need. I offered to sketch that scenario and check
+  it against the 13 build rules before pricing; not started.
+
+**Next steps:** wait for the user to choose. Options on the table: (1) sketch the rule-matched scenario and price ~5 runs
+per cell; (2) score all fixed-cast runs including every control (about $0.20); (3) read a sample of transcripts
+against the pair scores; (4) switch the report script to run weighting. No runs without a cost estimate and the user's
+go-ahead.
+
 ## HANDOVER: start here (2026-11-09)
 
 A new session is continuing the cultural case studies. This section is self-contained; the dated sections
@@ -200,9 +336,13 @@ below hold the full history and evidence.
 - **Reruns worth considering:** scenario 2 with fixed casts and a movable desk.
 - **Spend:** about $65 on case runs so far (2026-11-11) for simulation and evaluation. Estimate cost before running; the user
   is cost-sensitive.
-- **Git:** `main` was fast-forwarded to `807567c`; everything after it is uncommitted. **Never push**, and commit
-  only when asked. `check.py` holds a live API key and is not gitignored, so never stage it and never use
-  `git add .`.
+- **Git (updated 2026-11-16):** the case-study work is committed and pushed by the user, up to `1c599edf`. Uncommitted
+  now: the `outputs` to `outputs_old` rename, `culture_pair_runs.csv`, `culture_pair_inventory.csv`,
+  `tools/pair_agreement.py`, `tools/pair_agreement_report.py`, `tools/culture_pair_inventory.py`,
+  `tools/culture_pair_select.py`, the new `outputs/` folders (tests plus `pair-agreement-v2-sonnet-a`/`-b`) and this file.
+  The user is moving to another device: anything not committed and pushed by the user will not be there. **Never push**, and commit only when asked. `check.py` once held a live API key; as of
+  2026-11-17 it no longer exists anywhere in the repo and no `.py` file contains an OpenRouter key, but it is not
+  gitignored, so if it reappears never stage it, and still avoid `git add .`.
 
 ## Read first: blank-prompt bug and S26-S29 (2026-11-05)
 
@@ -746,7 +886,7 @@ and commit only when asked. `check.py` holds a live API key and is not gitignore
 S28. `tiny_person.py` line ~749 passes `emotions` as `attention`; left as is so S28 stays comparable.
 
 Tests: add `tests/unit/test_s26_chope_priorities.py` and
-`tests/unit/test_move_coding_and_label_probe.py` to the command below; 145 pass.
+`tests/unit/test_move_coding_and_label_probe.py` to the command below; 190 pass (2026-11-11).
 
 ## Older handoff (2026-11-03), superseded by HANDOVER at the top
 

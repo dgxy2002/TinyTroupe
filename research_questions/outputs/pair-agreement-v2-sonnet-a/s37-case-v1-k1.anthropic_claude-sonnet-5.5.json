@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s37-case-v1-k1",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1413,
+    "completion_tokens": 679,
+    "total_tokens": 2092,
+    "cost": 0.009616,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009616,
+      "upstream_inference_prompt_cost": 0.002826,
+      "upstream_inference_completions_cost": 0.00679
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who should wash the shellfish-contaminated shared pan now (so D can cook), and whether a wash-after-use rule fixes things going forward",
+  "pairs": {
+    "A-B": {
+      "start": 0.1,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Both deny using the pan and refuse to clean it (T1, T4, T15, T17); B accepts A's rule 'Fine' (T8) but asks about now, and A has no answer (T9).",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": -0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C pushes that it's in 'our sink' and everyone lives here (T13); A insists 'it's not my mess to clean up' (T17).",
+      "roles": "A-C",
+      "cultures": "Indian - Chinese",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "A-D": {
+      "start": 0.0,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D says someone must clean the pan (T14); A refuses to clean it (T15, T17), though A's rule (T7) addresses the future.",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": -0.2
+    },
+    "B-C": {
+      "start": -0.2,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C: 'So you're just leaving it for the rest of us?' (T11); B: 'It's not my pan' (T12); C: 'We all live here' (T13).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D says none of that helps (T14) needing the pan cleaned; B says the pan isn't his and leaves to bed (T10, T12), though B says 'that doesn't make the pan clean' (T16).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": -0.2
+    },
+    "C-D": {
+      "start": 0.4,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C acknowledges 'Agent D needs to cook' (T5); D agrees 'Yes, I do' (T6) and D wants the pan cleaned (T14) while C argues it's a shared responsibility (T13).",
+      "roles": "C-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

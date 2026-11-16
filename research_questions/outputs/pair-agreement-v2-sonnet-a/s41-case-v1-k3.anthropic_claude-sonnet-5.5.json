@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s41-case-v1-k3",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1512,
+    "completion_tokens": 529,
+    "total_tokens": 2041,
+    "cost": 0.008314,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008314,
+      "upstream_inference_prompt_cost": 0.003024,
+      "upstream_inference_completions_cost": 0.00529
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can keep using steaming medicated oil in their room given the smell is keeping Agent B (and bothering A) from sleeping.",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A (21) says the smell is strong out here and will make work tough; B (22) 'See? It's not just me' — A backs B's complaint.",
+      "roles": "A-B",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C never speaks in the transcript; no basis to compare positions.",
+      "roles": "A-C",
+      "cultures": "Malay - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": -0.3,
+      "end": -0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A (21) complains about the smell; D (23) keeps insisting the doctor requires it, though D doesn't reply to A directly.",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C says nothing, so no relation can be judged.",
+      "roles": "B-C",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.6,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B asks for door closed/window open (4, 9); D refuses both (8, 13); B: 'That's not going to work' (19); D: 'But what can I do?' (23).",
+      "roles": "B-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": -0.2
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C is silent, so nothing to compare with D.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

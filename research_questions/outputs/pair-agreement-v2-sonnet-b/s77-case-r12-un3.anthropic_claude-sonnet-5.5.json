@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s77-case-r12-un3",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Irfan"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1895,
+    "completion_tokens": 614,
+    "total_tokens": 2509,
+    "cost": 0.00993,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00993,
+      "upstream_inference_prompt_cost": 0.00379,
+      "upstream_inference_completions_cost": 0.00614
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether B must remove earrings while D may just tuck in his cross under the new 'nothing visible' rule, i.e. whether the rule is applied consistently.",
+  "pairs": {
+    "A-B": {
+      "start": -0.6,
+      "end": -0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B: 'If it's the same rule, he has to take his off too' (11); A: 'Take them out... or I'll have to send you home' (35); A refuses a plaster (16).",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "A-C": {
+      "start": 0.7,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C: ''Not visible' is the rule' (12); A: 'He's right. The rule is 'not visible'' (14).",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": 0.7,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D: 'I'll just tuck it in' (6); A: 'Okay, good. As long as it's not visible, we're fine' (7).",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "B-C": {
+      "start": -0.5,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C tells B 'Earrings you can't tuck in. It's different' (5) and 'Let's not make this a problem' (12), while B keeps insisting on unfairness.",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": -0.2,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B objects that D can hide his while she must remove hers (9); D only says he'll tuck it in (6) and never addresses B.",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C accepts tucking in as 'not visible' (5, 12) and D tucks in (6); they never address each other directly.",
+      "roles": "C-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

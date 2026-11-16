@@ -1,0 +1,97 @@
+{
+  "rubric": "pair-agreement-v1-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s57-case-r12-k3",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1728,
+    "completion_tokens": 579,
+    "total_tokens": 2307,
+    "cost": 0.009246,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009246,
+      "upstream_inference_prompt_cost": 0.003456,
+      "upstream_inference_completions_cost": 0.00579
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to complete Agent D's unfinished pitch section by Thursday while D attends the wake: whether D works tonight or A, B and C share the work.",
+  "pairs": {
+    "A-B": {
+      "start": 0.1,
+      "end": 0.7,
+      "engaged": true,
+      "evidence": "B said they could not take on more (4), then agreed to review A's analysis tomorrow afternoon (10) after A's plan (9).",
+      "cultures": "Malay - Indian",
+      "includes_D": false
+    },
+    "A-C": {
+      "start": -0.2,
+      "end": 0.6,
+      "engaged": true,
+      "evidence": "C refused to take D's section (5), then agreed to help with slides after finishing their own part (12, 19), answering A's questions (18).",
+      "cultures": "Malay - Eurasian",
+      "includes_D": false
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": 0.7,
+      "engaged": true,
+      "evidence": "A rejected D's offer to work tonight (7, 14). D resisted (8, 13), then conceded: 'Okay, Agent A. If you're sure' (15), and left it with the team (20).",
+      "cultures": "Malay - Chinese",
+      "includes_D": true
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.5,
+      "engaged": false,
+      "evidence": "Both said they could not take on D's section (4, 5), and both later went along with A's plan (10, 12). They never addressed each other.",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false
+    },
+    "B-D": {
+      "start": -0.2,
+      "end": 0.4,
+      "engaged": false,
+      "evidence": "B said they could not take on more (4). D accepted the shared plan (15, 20), which includes B's review (10). They did not address each other directly.",
+      "cultures": "Indian - Chinese",
+      "includes_D": true
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": true,
+      "evidence": "D worried about C being behind (13, 15). C answered 'Don't worry about my part. I'll get it done' (17). D then thanked everyone and accepted the plan (20).",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true
+    }
+  }
+}

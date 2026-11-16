@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s91-case-r12-wk2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1733,
+    "completion_tokens": 574,
+    "total_tokens": 2307,
+    "cost": 0.009206,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009206,
+      "upstream_inference_prompt_cost": 0.003466,
+      "upstream_inference_completions_cost": 0.00574
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Rearranging the roster so Agent D avoids Friday evening and Agent B avoids Saturday morning, while all slots stay covered",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A noted Friday would stay open (T9, T12); B proposed A take Friday and B take A's Sunday slot (T13); A agreed (T24), B said settled (T26).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 1.0
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C only said they can't take another regular slot (T5) and never addressed A or the final plan.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asked about swaps (T3) and D offered other slots (T6); D accepted Saturday morning (T11, T25); A confirmed and sent the plan (T24, T29).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.7
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C spoke once (T5) and never interacted with B's proposals.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.5,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B proposed D take Saturday morning (T8); D agreed (T11, T25); B said settled (T26).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C declined another slot (T5) while D offered to take one (T6), but they never spoke to each other and C took no stance on the final plan.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

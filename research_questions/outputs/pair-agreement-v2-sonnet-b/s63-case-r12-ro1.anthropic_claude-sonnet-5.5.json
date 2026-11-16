@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s63-case-r12-ro1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1685,
+    "completion_tokens": 646,
+    "total_tokens": 2331,
+    "cost": 0.00983,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00983,
+      "upstream_inference_prompt_cost": 0.00337,
+      "upstream_inference_completions_cost": 0.00646
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who gets leave on the two working days around Hari Raya Puasa, when only two of four staff can be off and all four claim they cannot work",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A (T1) and B (T2) both say they cannot change; neither speaks to the other, and B (T28) still refuses to work, as does A (T25).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": -0.5,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A (T19) says 'This isn't about whose turn it is'; C (T21) replies 'It is about whose turn it is'. Both still want the days off.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-D": {
+      "start": -0.2,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A sympathises (T5, T11, T13) but refuses to cancel; D keeps pressing the holiday's importance (T8-T12). Later they share the point that neither can work (T24-T26).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": -0.4,
+      "end": -0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B (T2, T28) won't work; C (T3, T15-T23) also claims the days and says it is someone else's turn. They never address each other.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.2,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B (T28) joins D's tally ('Make that four of us') after D (T26). They share the point that two must work, but both still want leave.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "C-D": {
+      "start": -0.5,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C (T15-T17) says it is someone else's turn; D (T16) says 'I've only been here a few months' and (T18) 'So it's their turn, then', turning it back on C. Both still claim the days.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s56-case-r12-k2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1480,
+    "completion_tokens": 604,
+    "total_tokens": 2084,
+    "cost": 0.009,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009,
+      "upstream_inference_prompt_cost": 0.00296,
+      "upstream_inference_completions_cost": 0.00604
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to get Agent D's half-done analysis section finished before Thursday's deadline given D's bereavement, with B and C refusing to take it on",
+  "pairs": {
+    "A-B": {
+      "start": -0.2,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A pushes D to finish tonight (T9) while B questions it ('You should be with your family tonight', T10); B then accepts 'Okay, Agent D' (T13). Partial overlap, not clear alignment.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-C": {
+      "start": 0.1,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C only declined to take the section (T5); A's pressure on D (T7, T9) is never answered by C, so little interaction.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D first proposes finishing tomorrow night (T6); A says it's too late (T7); D concedes 'You're right... I can finish it tonight' (T8); A thanks D (T9).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take D's section (T4, T5) but do not address each other.",
+      "roles": "B-C",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B questions D's plan to work tonight (T10); D insists 'It has to be done' (T12); B yields 'Okay, Agent D' (T13); D thanks B (T14).",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C refuses to take the section (T5); D replies 'I understand' (T6) and later commits to finishing it themselves; no further exchange.",
+      "roles": "C-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

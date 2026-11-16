@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s95-case-r12-rm2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Kavitha"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1841,
+    "completion_tokens": 589,
+    "total_tokens": 2430,
+    "cost": 0.009572,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009572,
+      "upstream_inference_prompt_cost": 0.003682,
+      "upstream_inference_completions_cost": 0.00589
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how the small room can be reserved for Agent D's twice-daily 15-minute use, given scheduling conflicts and Agent B's need for file access",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A backed the box-moving idea (21) but then sided with B that a walkway can't be blocked and a proper spot is needed (27).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "A-C": {
+      "start": 0.1,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "both",
+      "evidence": "A says after 5:30 works (7) and C offers a flexible time (11); A endorses C's box-moving idea (21).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D asks about 5pm (2); A says after 5:30 (7), D accepts (8); A calls the solution good (21).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "B-C": {
+      "start": -0.3,
+      "end": -0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C proposes keeping files at desk (17) and moving boxes (19); B rejects each (18, 25), and the corner stack is called a hazard.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": -0.4,
+      "end": -0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D asks B to grab files beforehand (12, 15); B refuses (14, 16); D questions B's hazard objection (26).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.4,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C moves the call time to suit D (11), D thanks C (12); D calls C's box idea good (20); both seek spots for boxes.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

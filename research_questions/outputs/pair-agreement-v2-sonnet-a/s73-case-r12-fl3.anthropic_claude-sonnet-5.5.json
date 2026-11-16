@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s73-case-r12-fl3",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2016,
+    "completion_tokens": 663,
+    "total_tokens": 2679,
+    "cost": 0.010662,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010662,
+      "upstream_inference_prompt_cost": 0.004032,
+      "upstream_inference_completions_cost": 0.00663
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether to keep the leaver's chosen Korean BBQ lunch or switch to another restaurant (given D's vegetarian day), and how to choose the new place (Japanese vs asking the leaver).",
+  "pairs": {
+    "A-B": {
+      "start": -0.3,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B questions changing the place (8,10,13) and asks to consult her (26); A refuses: 'We need to move on' (14), 'let's not bother her with it' (29).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.4
+    },
+    "A-C": {
+      "start": 0.4,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C wants a quick decision (19,23,27); A agrees 'He's right, we need to decide' (25) and 'Japanese works for everyone. I'll book it' (29).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.55
+    },
+    "A-D": {
+      "start": 0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A accepts D's need to change place (7), then adopts D's suggestions Chinese/Italian (17) and Japanese (21); D says 'we need to find another place' (6) and proposes Japanese (20).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "B-C": {
+      "start": -0.2,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B wants to think about her preferences and ask her (22,26); C replies 'That will just take more time' (27) and pushes to pick Japanese.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.5
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B asks if it could work (10) while D says no (6); D then says 'Agent B has a point' (20) but proposes Japanese, which B questions (22).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": 0.2,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "C",
+      "evidence": "C accepts either Chinese or Italian (19), then endorses D's Japanese suggestion: 'Japanese is quick and has options for everyone' (23, 27).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.6
+    }
+  }
+}

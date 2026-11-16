@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s71-case-r12-fl1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1984,
+    "completion_tokens": 622,
+    "total_tokens": 2606,
+    "cost": 0.010188,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010188,
+      "upstream_inference_prompt_cost": 0.003968,
+      "upstream_inference_completions_cost": 0.00622
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether to keep the farewell lunch at the Korean barbecue (which D can't eat at) or change venue so everyone can eat",
+  "pairs": {
+    "A-B": {
+      "start": -0.8,
+      "end": -0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B (T8, T10) defends keeping her chosen place; T22 'Why are you deciding for him?'; A (T27) still insists on finding another place.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-C": {
+      "start": -0.3,
+      "end": -0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C initially asked about alternatives (T3, T11) but then pushed to stick to the plan (T13, T25 'settled'); A rejects (T17, T27).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.6
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": -0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A says D must be able to eat (T5, T21); D repeatedly says stick to the plan (T4, T6, T24); A overrides at T27.",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "B-C": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "B initially objected (T2); C then sided with keeping the plan (T13, T25) while B backed D's wish (T20, T22); both defend sticking to the plan.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B first said D can't eat there (T2) but later defended the plan and D's wish (T8, T10, T20, T22).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "C-D": {
+      "start": 0.3,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C asked for alternatives (T3, T11), then 'If D is okay with it, stick to the plan' (T13), 'settled' (T25), matching D (T24).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.65
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s52-case-r12-fr2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1473,
+    "completion_tokens": 645,
+    "total_tokens": 2118,
+    "cost": 0.009396,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009396,
+      "upstream_inference_prompt_cost": 0.002946,
+      "upstream_inference_completions_cost": 0.00645
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to adapt the weeknight dinner rota for Agent D's month-long vegetarian observance (Purattasi) while keeping shared communal meals",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A says all their dishes have meat (T3); B offers a day swap (T10); A: 'swapping days works for me' (T11), 'we'll just swap' (T15).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C only says they can eat vegetarian if still cooking once a week (T5); A never addresses C, though A ends up accepting a swap that keeps everyone cooking once.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": -0.4,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A objects to D cooking separately (T7, T9); after the swap D says 'that works for me' (T14) and A says 'great, we'll just swap' (T15).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both say they can eat vegetarian (T4, T5); B's swap keeps everyone cooking one night, consistent with C's condition, but they do not address each other.",
+      "roles": "B-C",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.4,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B offers vegetarian recipe or swap (T10); D accepts: 'Okay, that works for me. Thanks for sorting that out' (T14).",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "C-D": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C is fine with vegetarian meals (T5) and D replies 'Okay, that's fine' (T6); D then accepts the swap (T14).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

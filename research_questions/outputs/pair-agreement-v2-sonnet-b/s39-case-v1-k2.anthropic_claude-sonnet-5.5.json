@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s39-case-v1-k2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1393,
+    "completion_tokens": 664,
+    "total_tokens": 2057,
+    "cost": 0.009426,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009426,
+      "upstream_inference_prompt_cost": 0.002786,
+      "upstream_inference_completions_cost": 0.00664
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How the household handles the only pan being contaminated with peanut oil, which D cannot safely use, and whether everyone shares responsibility for fixing it and setting kitchen rules",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Both denied using the pan (1-2); A asks what 'we' do (13) while B says 'You all figure it out' (14) and 'I'm not cooking' (16), disengaging.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-C": {
+      "start": 0.2,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A says someone has to wash it (5) and asks what we do (13); C says it's everyone's problem (15, 17). Both treat it as a shared problem, though A began by denying.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-D": {
+      "start": 0.2,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A first says someone must wash it (5), then asks whether D is safe even if washed (11) and accepts it, asking 'what do we do, then?' (13).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "B-C": {
+      "start": -0.2,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C: 'This isn't a you all problem' (15); B insists 'I didn't use it. And I'm not cooking' (16); C replies it's not about who used it (17).",
+      "roles": "B-C",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": -0.5
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": -0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B denies use (2) and says 'You all figure it out' (14), never addressing D's allergy or need; D never addresses B.",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": -0.2
+    },
+    "C-D": {
+      "start": 0.4,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says the pan needs washing (3) and later that D can't cook safely, a problem for all (17); D says he can't use the pan (4, 12). Both aligned that it's a problem to solve.",
+      "roles": "C-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.3
+    }
+  }
+}

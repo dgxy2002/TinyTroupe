@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s83-case-r12-lg2",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Irfan"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1470,
+    "completion_tokens": 519,
+    "total_tokens": 1989,
+    "cost": 0.00813,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00813,
+      "upstream_inference_prompt_cost": 0.00294,
+      "upstream_inference_completions_cost": 0.00519
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether the Malay-language decision about D's work was acceptable, and how to redo the change properly in English with D's input (including which data to use)",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A admits the process was wrong (T3); B echoes 'He's right. Let's talk about it properly' (T4) and agrees 'Sounds good' (T16).",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C never speaks; no basis to judge a relation.",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A first deflects to the change (T1), then concedes 'that was not the right way' and agrees to discuss in English (T3); A accepts D's regional-data point 'Good. Let's do that' (T13).",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.6
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C never speaks; no basis to judge a relation.",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.4,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B apologises and says 'He's right' (T4), proposed appendix data (T9) against D's view, then accepts D's plan with 'Sounds good' (T16).",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.45
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C is silent throughout.",
+      "roles": "C-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

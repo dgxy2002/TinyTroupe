@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s69-case-r12-ro3",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1327,
+    "completion_tokens": 625,
+    "total_tokens": 1952,
+    "cost": 0.008904,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008904,
+      "upstream_inference_prompt_cost": 0.002654,
+      "upstream_inference_completions_cost": 0.00625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who gets leave on the two working days around Chinese New Year, given that only two of four staff can be off and A, B and D all want both days while C offers to work in return for Christmas off",
+  "pairs": {
+    "A-B": {
+      "start": -0.3,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks B whether only the first day is needed (T9) and B confirms (T10). B restates having no childcare alternative (T17). Both still compete for the same day and nothing is settled.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.1,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C offers to work if given Christmas off, so two of the others can be off (T3, T7). A never responds to C, though A's wish for the days off is compatible with C's offer.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": -0.4,
+      "end": -0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks D whether only the first day is needed (T11). D says both (T12), and A says they also need both (T16). Both claim the same days and neither yields.",
+      "roles": "A-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": 0.1,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C's offer to work (T3, T7) would help B, but B never responds to it. B only restates their own need (T6, T10, T17).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": -0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B needs the first day (T10) and D needs both days (T12). Each states a need for the same day, and neither addresses the other directly.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C offers to work so two of the others can be off (T7). D only restates needing both days (T8, T12) and does not respond.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

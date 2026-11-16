@@ -1,0 +1,97 @@
+{
+  "rubric": "pair-agreement-v1-decimal",
+  "model": "openai/gpt-5-mini",
+  "folder": "s56-case-r12-k2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 977,
+    "completion_tokens": 3059,
+    "total_tokens": 4036,
+    "cost": 0.00636225,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00636225,
+      "upstream_inference_prompt_cost": 0.00024425,
+      "upstream_inference_completions_cost": 0.006118
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2496,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to meet the Thursday pitch deadline given Agent D's bereavement and a half-finished section (who will finish or cover the work)",
+  "pairs": {
+    "A-B": {
+      "start": -0.7,
+      "end": -0.3,
+      "engaged": true,
+      "evidence": "Agent B: 'You should be with your family tonight.' (Turn 10) — shows B prioritizing D's family time while A pushed for meeting the deadline.",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false
+    },
+    "A-C": {
+      "start": -0.7,
+      "end": -0.6,
+      "engaged": true,
+      "evidence": "Agent C: 'I also can't take on your section. I'm behind on my own...' (Turn 5) — C refuses to help while A pressed for a solution to meet the deadline.",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false
+    },
+    "A-D": {
+      "start": -0.4,
+      "end": 1.0,
+      "engaged": true,
+      "evidence": "Agent D: 'Okay. I can finish it tonight and send it over.' (Turn 8) — aligns with A's requirement that the section be finished earlier.",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true
+    },
+    "B-C": {
+      "start": 1.0,
+      "end": 1.0,
+      "engaged": false,
+      "evidence": "Both said they can't take on the section (Agent B Turn 4; Agent C Turn 5).",
+      "cultures": "Chinese - Malay",
+      "includes_D": false
+    },
+    "B-D": {
+      "start": 0.3,
+      "end": -0.2,
+      "engaged": true,
+      "evidence": "Agent B: 'You should be with your family tonight.' (Turn 10) — B urged D not to work tonight, while D ultimately chose to work late to finish.",
+      "cultures": "Chinese - Indian",
+      "includes_D": true
+    },
+    "C-D": {
+      "start": 0.3,
+      "end": 0.0,
+      "engaged": false,
+      "evidence": "Agent C: 'I also can't take on your section...' (Turn 5); Agent D: 'I'll be with my family. I'll work late, after. It has to be done.' (Turn 12) — C never offered to help and did not respond to D's final plan.",
+      "cultures": "Malay - Indian",
+      "includes_D": true
+    }
+  }
+}

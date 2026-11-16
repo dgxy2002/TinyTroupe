@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s56-case-r12-k2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1480,
+    "completion_tokens": 615,
+    "total_tokens": 2095,
+    "cost": 0.00911,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00911,
+      "upstream_inference_prompt_cost": 0.00296,
+      "upstream_inference_completions_cost": 0.00615
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to get Agent D's half-finished section done by Thursday given D's bereavement: D finishing it themselves (when) versus teammates taking it over.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks for handover (T3), B refuses to take on the work (T4); later A thanks D for finishing tonight (T9) while B questions it (T10) then accepts (T13).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-C": {
+      "start": 0.1,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A asks someone to be brought up to speed (T3); C declines to take the section (T5); neither addresses the other directly, and both end up relying on D finishing.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": -0.4,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D proposes finishing tomorrow night (T6); A says it's too late (T7); D agrees to finish tonight (T8); A thanks D (T9).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take on D's section (T4, T5); no further interaction.",
+      "roles": "B-C",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B asks D 'are you sure? You should be with your family tonight' (T10); D says they'll work late after (T12); B says 'Okay, Agent D' (T13); D thanks B (T14).",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C declines to take the section (T5); D says 'I understand' (T6) and ends up doing the work themselves.",
+      "roles": "C-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

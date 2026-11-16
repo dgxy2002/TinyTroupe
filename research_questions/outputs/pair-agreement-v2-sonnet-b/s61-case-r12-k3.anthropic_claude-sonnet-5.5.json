@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s61-case-r12-k3",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1953,
+    "completion_tokens": 711,
+    "total_tokens": 2664,
+    "cost": 0.011016,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011016,
+      "upstream_inference_prompt_cost": 0.003906,
+      "upstream_inference_completions_cost": 0.00711
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to share the single window corner of the living room among A's desk, B's weekend guests, C's laundry rack and D's new altar (D proposes a wall shelf; B objects to the permanent desk).",
+  "pairs": {
+    "A-B": {
+      "start": -0.4,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B: the desk is 'the main problem' and 'not the same thing' as the laundry (T16, T25); A: 'It has to be there... I can't just pack it up' (T19, T26). B: 'none of us gets to claim a part of the living room' (T30).",
+      "roles": "A-B",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-C": {
+      "start": 0.1,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both want to keep using the corner (T1, T5). They never address each other, and neither objects to the other's use. C's only concession is to B (T13).",
+      "roles": "A-C",
+      "cultures": "Malay - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": 0.0,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D proposes a wall shelf (T8); A says 'A shelf could work' (T9) and 'sounds like a plan' (T11) once the light is checked together (T10). D asked for a rearrangement (T6).",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.8
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C offers to move the rack when friends visit (T13); B thanks C and accepts: 'If you can move it when my friends are here, that works' (T16). They still clash over a no-permanent-items rule (T14-15).",
+      "roles": "B-C",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "D wants a workable corner for everyone (T6). B says the space is still full after D's shelf plan (T12) and later argues about the desk, but never speaks to D's altar directly.",
+      "roles": "B-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "D acknowledges C's laundry need (T6). C never speaks about the altar, and neither opposes the other.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

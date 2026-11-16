@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s98-case-r12-sm1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1805,
+    "completion_tokens": 701,
+    "total_tokens": 2506,
+    "cost": 0.01062,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01062,
+      "upstream_inference_prompt_cost": 0.00361,
+      "upstream_inference_completions_cost": 0.00701
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to handle D's strong-smelling sambal belacan cooking: ban it, use a window fan, or restrict cooking times (weekends or after 7pm).",
+  "pairs": {
+    "A-B": {
+      "start": -0.2,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A opposed strong-smelling cooking (T1) and doubted the fan (T11); B pushed the fan (T6, T12, T20). B accepted the time limit as only partial help (T18). Both want less smell but back different fixes.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": -0.2,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C backs the fan (T9, T13, T21), A says a fan is not enough (T11). C says laundry is still affected after the time deal (T19). They never address each other directly.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A asked for no strong-smelling cooking (T1) and D resisted (T4, T14). A proposed weekends or after 7pm (T15) and D agreed (T16); A thanked D (T17).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 1.6
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B changed the fan direction after C's laundry concern (T8), C accepted (T9). Both pushed the fan again together (T20, T21).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": -0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D doubted the fan and objected to setting one up each time (T10, T14). B kept pushing it (T12, T20). D never accepted the fan, and B did not accept the time compromise as sufficient (T18).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": -0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C backs the fan (T13, T21) while D doubts it (T10, T14). D accepted the time limit (T16), but C says the laundry problem remains (T19).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

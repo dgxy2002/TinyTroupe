@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s45-case-v1-k4",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1514,
+    "completion_tokens": 714,
+    "total_tokens": 2228,
+    "cost": 0.010168,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010168,
+      "upstream_inference_prompt_cost": 0.003028,
+      "upstream_inference_completions_cost": 0.00714
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to pay for soft drinks and snacks now that the house fund was spent entirely on alcohol, and whether the cost split is fair to non-drinkers.",
+  "pairs": {
+    "A-B": {
+      "start": 0.4,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A accepts B's point about soft drinks (T3); B's funding question (T12) is met by A's defense of the alcohol (T11), with no resolution.",
+      "roles": "A-B",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.2,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C questions the cost and notes the fund is empty (T5-7); A answers factually (T6) but never responds to C's $10 split (T13) or to C's later concession to D.",
+      "roles": "A-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D calls the all-alcohol spend unfair (T8, T10); A defends it: 'That's just what the alcohol cost' and 'Our guests will want drinks' (T9, T11); A never responds to D's proposal in T16.",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C tells B the soft drinks can't come from the fund (T7), then proposes an equal $10 split to answer B's question (T13); C later retracts it for D's view (T15), and B is silent.",
+      "roles": "B-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": 0.3,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B wanted soft drinks for non-drinkers (T2) and asks how to pay (T12); D wants drinkers to cover soft drinks (T16). They are broadly compatible, but B never responds directly.",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "D objects to C's $10-each plan as unfair (T14); C concedes 'You're right, that's not fair' and asks D for a fair way (T15); D proposes drinkers cover soft drinks (T16).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 1.1
+    }
+  }
+}

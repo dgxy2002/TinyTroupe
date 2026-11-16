@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s38-case-v1-k2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1490,
+    "completion_tokens": 582,
+    "total_tokens": 2072,
+    "cost": 0.0088,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0088,
+      "upstream_inference_prompt_cost": 0.00298,
+      "upstream_inference_completions_cost": 0.00582
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who deals with the beef-fouled shared pan (wash it, or replace it and who pays) so D can cook, and whether a house rule on washing up is needed",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Both deny cooking beef (1,2); A objects to everyone paying (15) and B refuses to pay (16).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C proposes a wash-up rule and washing the pan (7); A never addresses it, only denies and objects to paying (5, 11, 15).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": -0.3,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A rejects replacement as nobody is known to have used it (11) and asks D's view (13); D proposes all chip in (14), A says unfair (15).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": -0.4
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": -0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B asks others to sort it out (6); C offers a wash rule (7) but B does not respond; B only refuses to pay (16).",
+      "roles": "B-C",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D says all should chip in (14); B replies 'I'm not paying for a new pan' (16).",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": -0.4
+    },
+    "C-D": {
+      "start": 0.2,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C offers to wash the pan (7), D says washing doesn't help (8); C concedes and asks what to do (9), aligning with D's problem though not endorsing D's payment plan.",
+      "roles": "C-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

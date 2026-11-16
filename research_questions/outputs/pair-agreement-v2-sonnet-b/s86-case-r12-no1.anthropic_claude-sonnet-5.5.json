@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s86-case-r12-no1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1533,
+    "completion_tokens": 570,
+    "total_tokens": 2103,
+    "cost": 0.008766,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008766,
+      "upstream_inference_prompt_cost": 0.003066,
+      "upstream_inference_completions_cost": 0.0057
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can cook and eat at 4:45am for Ramadan without waking the others (cook the night before, be careful with noise).",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Turn 4: B says A's cook-the-night-before idea 'would help me too'; both thank D (6, 9).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A asks for night-before cooking (3); C says 'That helps' (13) and adds a request for care; no direct exchange between A and C.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": -0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A objects (1); D agrees 'I can do that. I'll cook the night before' (5); A thanks D (6).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "B-C": {
+      "start": 0.3,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B (4) supports the night-before plan; C (13) says 'That helps' and asks for extra care; no direct exchange between them.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B says it would help (4); D agrees to cook the night before (5); B thanks D (9).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.8
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C asks D to be careful with the microwave and plates (13); D says 'Okay, I'll be careful' (14); C thanks D repeatedly.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.9
+    }
+  }
+}

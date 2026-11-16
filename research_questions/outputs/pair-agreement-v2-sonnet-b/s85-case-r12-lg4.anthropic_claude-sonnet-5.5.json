@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s85-case-r12-lg4",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1465,
+    "completion_tokens": 574,
+    "total_tokens": 2039,
+    "cost": 0.00867,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00867,
+      "upstream_inference_prompt_cost": 0.00293,
+      "upstream_inference_completions_cost": 0.00574
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether the change to D's part, decided in old-team shorthand without D, should be revisited and accepted, and whether D must be included in future decisions about their work.",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A admits the shorthand fault (T1); B echoes it with 'sorry about that... Let's talk it through' (T4). They never address each other directly.",
+      "roles": "A-B",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs A's rationale: 'He's right. If we do it on the server side, it's already too late' (T10).",
+      "roles": "A-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D accepts the change after A's explanation (T11, T13); A agrees D should be in the conversation in future (T14); D says 'Good' (T15).",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.55
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B apologises and offers to talk (T4); C supports the change (T10). They share a side but never address each other.",
+      "roles": "B-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": 0.4,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B apologises to D (T4); D thanks B (T5) and later accepts the change (T13).",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "C-D": {
+      "start": 0.2,
+      "end": 0.75,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C explains why server-side is too late (T10); D replies 'Okay, that makes sense' (T11) and accepts the change (T13).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.55
+    }
+  }
+}

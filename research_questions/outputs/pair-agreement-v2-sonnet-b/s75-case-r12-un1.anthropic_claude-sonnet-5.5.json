@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s75-case-r12-un1",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Irfan"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1860,
+    "completion_tokens": 670,
+    "total_tokens": 2530,
+    "cost": 0.01042,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01042,
+      "upstream_inference_prompt_cost": 0.00372,
+      "upstream_inference_completions_cost": 0.0067
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D may keep his religious red thread on (covered) under the new no-visible-jewellery rule, or must remove it like everyone else before tomorrow's area manager visit.",
+  "pairs": {
+    "A-B": {
+      "start": 0.8,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B: 'It should be the same for everyone' (4, 16); A: 'It's the same for everyone. We can't make exceptions' (18); A agrees thread must come off (8).",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": -0.5,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs covering (5) and urges A to call or text the manager (25, 27); A refuses 'I'm not calling the manager' (26) and 'My decision is final' (22).",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": -0.9,
+      "end": -0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A: 'It has to come off' (8, 22); D: 'It stays on' (11), 'Then I can't work tomorrow' (23).",
+      "roles": "A-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": -0.7,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says covering means not visible (5); B objects (4, 14); B resents the text for D (29), C: 'This isn't about you or him' (30).",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": -0.9,
+      "end": -0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B: 'Covering it isn't the same' (14); D: 'It's not the same thing. This is for my religion' (15); B: 'only a problem because he won't follow the rule' (31).",
+      "roles": "B-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.9,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C: 'If he covers it, then it's not visible' (5); D: 'Yeah, exactly' (6); C pushes for the manager to be told (25, 27).",
+      "roles": "C-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

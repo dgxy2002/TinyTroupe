@@ -1,0 +1,97 @@
+{
+  "rubric": "pair-agreement-v1",
+  "model": "anthropic/claude-haiku-5.5",
+  "folder": "s46-case-r12-hw1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1538,
+    "completion_tokens": 2320,
+    "total_tokens": 3858,
+    "cost": 0.0013138,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0013138,
+      "upstream_inference_prompt_cost": 0.0001538,
+      "upstream_inference_completions_cost": 0.00116
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1667,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether alcohol can be served at the Saturday housewarming in the shared flat, and if so where",
+  "pairs": {
+    "A-B": {
+      "start": 2,
+      "end": 2,
+      "engaged": true,
+      "evidence": "A says the drinks are sorted (T1); B says 'looks good to me' (T2). At the end B accepts the cooler outside the door: 'Yeah, that works for me' (T19), and A had already agreed: 'a cooler outside works for me' (T17).",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false
+    },
+    "A-C": {
+      "start": 0,
+      "end": 2,
+      "engaged": true,
+      "evidence": "C proposes a cooler box outside the front door and asks A directly (T13, T15); A agrees: 'Yeah, a cooler outside works for me' (T17).",
+      "cultures": "Eurasian - Indian",
+      "includes_D": false
+    },
+    "A-D": {
+      "start": -2,
+      "end": 2,
+      "engaged": true,
+      "evidence": "A asks D if it is okay (T3), D objects (T4), and A presses on it (T8). D later agrees to the cooler outside (T14), and A confirms: 'So that's settled then' (T21).",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true
+    },
+    "B-C": {
+      "start": 0,
+      "end": 2,
+      "engaged": true,
+      "evidence": "C asks B whether the outside cooler works for B's manager (T18); B agrees: 'Yeah, that works for me' (T19).",
+      "cultures": "Chinese - Indian",
+      "includes_D": false
+    },
+    "B-D": {
+      "start": -2,
+      "end": 2,
+      "engaged": true,
+      "evidence": "B says a manager was told there would be drinks (T10), which bears on D's objection; D later agrees to the cooler outside (T14), and B accepts it (T19). D: 'Great. I'm glad we worked it out.' (T20).",
+      "cultures": "Chinese - Malay",
+      "includes_D": true
+    },
+    "C-D": {
+      "start": -1,
+      "end": 2,
+      "engaged": true,
+      "evidence": "C suggests keeping drinks in the kitchen (T11), and D rejects it (T12). C then proposes the cooler outside the door, and D accepts: 'Outside the door... I can agree to that. Thanks, Agent C.' (T14).",
+      "cultures": "Indian - Malay",
+      "includes_D": true
+    }
+  }
+}

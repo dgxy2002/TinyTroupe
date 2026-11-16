@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s46-case-v1-hw1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 588,
+    "total_tokens": 2040,
+    "cost": 0.008784,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008784,
+      "upstream_inference_prompt_cost": 0.002904,
+      "upstream_inference_completions_cost": 0.00588
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether alcohol A bought can be served at the housewarming in the shared flat, given D's objection; resolved by moving drinks to the void deck.",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B (7) notes guests expect drinks, supporting A's position; B proposes void deck (15) and A accepts it reluctantly (20).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.2,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "C suggests a cooler box (8) and later says void deck 'could work' (16); A concedes 'fine' to void deck (20).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Indian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A insists drinks are for guests (5), D objects (6); D accepts void deck (18), A says 'fine, if that's the only way' (20).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 1.1
+    },
+    "B-C": {
+      "start": 0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C's cooler box idea (8) aligned with accommodating drinks; C backs B's void deck idea: 'That could work' (16).",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B wants drinks for work guests (7); B proposes void deck (15) and D says 'that works for me' (18).",
+      "roles": "B-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C asks clarifying question about the problem (10) and D confirms (11); C supports void deck (16), D agrees (18).",
+      "roles": "C-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.6
+    }
+  }
+}

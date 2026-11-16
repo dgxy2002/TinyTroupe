@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s85-case-r12-lg4",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1465,
+    "completion_tokens": 610,
+    "total_tokens": 2075,
+    "cost": 0.00903,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00903,
+      "upstream_inference_prompt_cost": 0.00293,
+      "upstream_inference_completions_cost": 0.0061
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether the change made to D's part in the old team's shorthand, without D, should be revisited, and how D is included in decisions about their own work in future.",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both acknowledge the shorthand problem and are willing to revisit the decision (Turn 1, Turn 4); B never directly addresses A.",
+      "roles": "A-B",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs A's rationale for the validation step: 'He's right. If we do it on the server side, it's already too late.' (Turn 10)",
+      "roles": "A-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D accepts A's explanation ('that makes sense', Turn 11; 'The change is fine', Turn 13), and A agrees to include D in future (Turn 14).",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.6
+    },
+    "B-C": {
+      "start": 0.3,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B apologizes and offers to talk it through (Turn 4); C supports the change (Turn 10); neither refers to the other.",
+      "roles": "B-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "B-D": {
+      "start": 0.5,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B apologizes and agrees to talk it through with D (Turn 4); D thanks B (Turn 5) and later accepts the change (Turn 13).",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C explains why the check belongs on the client side (Turn 10) and D replies 'Okay, that makes sense' (Turn 11).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.7
+    }
+  }
+}

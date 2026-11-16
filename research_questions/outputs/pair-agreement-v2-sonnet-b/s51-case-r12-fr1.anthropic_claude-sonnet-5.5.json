@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s51-case-r12-fr1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1943,
+    "completion_tokens": 637,
+    "total_tokens": 2580,
+    "cost": 0.010256,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010256,
+      "upstream_inference_prompt_cost": 0.003886,
+      "upstream_inference_completions_cost": 0.00637
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether the dinner rota continues at 6.30 with Agent D cooking and sitting with the others while eating later (D's plan), or is paused/changed because A objects that it isn't a shared meal.",
+  "pairs": {
+    "A-B": {
+      "start": -0.5,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says 7.10 is too late (T4), accepts D's plan (T12) and refuses to pause the rota (T27), while A keeps objecting that the point is gone (T25, T30).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-C": {
+      "start": -0.5,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says D's plan works (T7) and sides with B against pausing (T28); A says it's not a shared meal and proposes pausing (T9, T25, T30).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D keeps insisting on her plan (T21, T24, T29) while A rejects it as awkward and not shared (T11, T15, T20, T30).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": -0.2
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Both accept D's plan; C: 'I'm with Agent B. Let's not pause it' (T28).",
+      "roles": "B-C",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": false,
+      "change": 0.35
+    },
+    "B-D": {
+      "start": 0.3,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B first said 7.10 is too late (T4), but then backed D's suggestion (T12) and opposed pausing (T27), matching D's plan (T29).",
+      "roles": "B-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.65
+    },
+    "C-D": {
+      "start": 0.5,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C said 'that works for me' (T7) and opposed pausing (T28); D cites C's support (T19, T26).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.45
+    }
+  }
+}

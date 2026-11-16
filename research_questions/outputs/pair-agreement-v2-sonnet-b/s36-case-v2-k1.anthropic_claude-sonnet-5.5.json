@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s36-case-v2-k1",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1436,
+    "completion_tokens": 626,
+    "total_tokens": 2062,
+    "cost": 0.009132,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009132,
+      "upstream_inference_prompt_cost": 0.002872,
+      "upstream_inference_completions_cost": 0.00626
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who deals with the unwashed pan with pork fat, and whether the household agrees a rule to wash the pan (and clean up) right after use",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A and B both denied using the pan (T1-2), and both later agreed to the wash-immediately rule (T13, T16), but they never addressed each other.",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C said whoever used it should sort it out (T9). A denied it was them (T11) and agreed to the rule (T13). C agreed to the rule and extended it to all cleaning (T18).",
+      "roles": "A-C",
+      "cultures": "Indian - Chinese",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-D": {
+      "start": 0.2,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A asked D about the special cleaning (T5, T7). D proposed the wash-after-use rule and A said 'Fine... good idea' and 'Yes' (T11, T13).",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.6
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B said 'Yeah, fine' to the rule (T16) and C said 'Yes' with an extension (T18), but they did not address each other.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "D asked B directly (T14) and B agreed 'Yeah, fine' (T16).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.8
+    },
+    "C-D": {
+      "start": 0.2,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C wanted the pan user to sort it out (T9), while D said they would do the cleaning this time (T10). C then agreed to D's rule and broadened it (T18).",
+      "roles": "C-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

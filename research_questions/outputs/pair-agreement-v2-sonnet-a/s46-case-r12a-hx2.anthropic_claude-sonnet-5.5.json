@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s46-case-r12a-hx2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Mei Ling"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2379,
+    "completion_tokens": 689,
+    "total_tokens": 3068,
+    "cost": 0.011648,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011648,
+      "upstream_inference_prompt_cost": 0.004758,
+      "upstream_inference_completions_cost": 0.00689
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether alcohol should be served at the Saturday housewarming in the shared flat, given D's religious objection to hosting it, versus A and B's wish to serve it to guests.",
+  "pairs": {
+    "A-B": {
+      "start": 0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B backs A's cooler-box compromise (14) and agrees A has a point against moving to a bar (24); both keep wanting drinks for guests.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": -0.3,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C questions A's cooler compromise (15) and proposes no-alcohol/bar plans, which A rejects (23); C concedes A's point on the awkward bar move (25), but the time split is also unresolved (27).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A: 'a lot of our guests drink' (11); D: 'I can't be a host at a party where alcohol is served' (12); D rejects the cooler idea (16); no one shifts.",
+      "roles": "A-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": -0.2,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B calls the cooler a fair compromise (14) while C doubts it (15); B objects to the bar plan (24); C concedes it is awkward (25) but still sides with D's concern.",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.7,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B supports the cooler compromise (14) which D says doesn't solve it (16); B objects to the no-alcohol bar split D accepted (24).",
+      "roles": "B-D",
+      "cultures": "Chinese - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.5,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C asks about D's concerns (5, 15) and proposes the bar split which D accepts (20-21); C agrees the time split doesn't fix it for D (27); D thanks C (28).",
+      "roles": "C-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

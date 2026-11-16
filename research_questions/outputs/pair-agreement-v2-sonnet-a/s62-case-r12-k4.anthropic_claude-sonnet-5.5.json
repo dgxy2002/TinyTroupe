@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s62-case-r12-k4",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2122,
+    "completion_tokens": 630,
+    "total_tokens": 2752,
+    "cost": 0.010544,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010544,
+      "upstream_inference_prompt_cost": 0.004244,
+      "upstream_inference_completions_cost": 0.0063
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who gets to use the living room window corner: D's twice-daily physio exercises vs A's desk, B's weekend guests, and C's laundry rack",
+  "pairs": {
+    "A-B": {
+      "start": -0.3,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A backs D's medical need over guests (T20) and seeks fixes for C's rack; B replies that the weekend problem remains unsolved (T21, T27).",
+      "roles": "A-B",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": -0.2,
+      "end": -0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A suggests wheeled rack and a plastic sheet (T24, T26); C rejects: 'It'll still drip everywhere' (T25), and C keeps refusing to move the rack.",
+      "roles": "A-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A asks D's times and agrees to morning/evening (T7); D: 'Before 9 and after 6 is fine' (T8); A says 'He has a point' (T20).",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.55
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both defend their own use of the corner against D and neither addresses the other; they are aligned in resisting D's request (T15, T18, T21, T22).",
+      "roles": "B-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.6,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D asks to work around friends' visits (T13, T16); B says it can't be planned (T15, T17, T21, T27).",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "C-D": {
+      "start": -0.6,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D asks C to move the rack for 30 mins (T13); C: 'I can't just move the rack twice a day' (T18), 'It'll still drip' (T25).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": -0.1
+    }
+  }
+}

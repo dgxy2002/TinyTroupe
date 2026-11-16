@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s55-case-r12-k1",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2114,
+    "completion_tokens": 667,
+    "total_tokens": 2781,
+    "cost": 0.010898,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010898,
+      "upstream_inference_prompt_cost": 0.004228,
+      "upstream_inference_completions_cost": 0.00667
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who covers Agent D's unfinished pitch section for Thursday while D is away for the burial, given B and C say they lack capacity or expertise",
+  "pairs": {
+    "A-B": {
+      "start": -0.7,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A insists everyone must cover and B must make hours (T3-T12); B refuses repeatedly (T4, T11, T17); A concedes 'Agent B, you just keep doing your other work' (T18).",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "A-C": {
+      "start": -0.7,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A assigns C the handover (T16, T21) and C objects (T20, T22, T24); A finally takes the analysis herself (T26), which C wanted instead of doing it.",
+      "roles": "A-C",
+      "cultures": "Indian - Chinese",
+      "includes_D": false,
+      "change": 1.3
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A tells D to go and the team will cover (T3); D offers a handover (T15), A thanks her (T16); D suggests A take it and A agrees 'Yes. Fine. walk me through it' (T25-26).",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.6
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both say they can't take on D's work (T4, T7, T20), though they never address each other; both end up relieved when A takes it (T18, T26).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B never speaks to D or about D's offer; D's final plan with A leaves B uninvolved, which matches B's stance (T17, T26).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D proposes C take the handover (T23) and C says it's not the right way (T24); D says 'You're right, Agent C' and redirects to A (T25).",
+      "roles": "C-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 1.1
+    }
+  }
+}

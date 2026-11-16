@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s94-case-r12-rm1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Nurul"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1631,
+    "completion_tokens": 690,
+    "total_tokens": 2321,
+    "cost": 0.010162,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010162,
+      "upstream_inference_prompt_cost": 0.003262,
+      "upstream_inference_completions_cost": 0.0069
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and when the small room can be reserved for Agent D's daily prayers (and a prayer mat kept there) given others' needs for the room",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A accepted 1 p.m. and 3:30 (T16); B proposed moving files out (T17) and asked if it works for everyone (T19); they never addressed each other directly, but both back the final arrangement.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A agrees to 1 p.m. and 3:30 (T1, T16); C agrees to 1:15 and endorses the files solution (T7, T18); no direct exchange, both support the final plan.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-D": {
+      "start": -0.2,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A objected to 4:30 and 3:45 (T1, T3, T14); D offered 4, 3:45 and 3:30 (T2, T8, T15); A: '3:30 works. Thanks.' (T16).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 1.1
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C: 'That sounds like a good solution' to B's file-moving proposal (T18).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B worried about file access (T4, T9, T12) and D insisted on no interruption (T13); B proposed moving files out (T17) and D said 'Yes, that works. Thank you.' (T21).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "C-D": {
+      "start": -0.2,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C said 1 p.m. was a problem (T5); C offered 1:15 for D (T7); D: 'Yes, 1:15 works for me' (T8); C backed the final plan (T18).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 1.1
+    }
+  }
+}

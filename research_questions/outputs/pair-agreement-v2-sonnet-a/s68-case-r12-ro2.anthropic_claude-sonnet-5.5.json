@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s68-case-r12-ro2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1863,
+    "completion_tokens": 595,
+    "total_tokens": 2458,
+    "cost": 0.009676,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009676,
+      "upstream_inference_prompt_cost": 0.003726,
+      "upstream_inference_completions_cost": 0.00595
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who works the first day around Deepavali (A, B, D all want it off; C will work if given Christmas off), and whether to settle it by drawing lots.",
+  "pairs": {
+    "A-B": {
+      "start": -0.5,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B proposes A works the first day (11); A objects (14, 16); at the end A accepts a draw (21, 27) while B refuses it (22, 25).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-C": {
+      "start": 0.1,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C offers to work Deepavali if given Christmas (3, 9), which helps A's leave. A never speaks to the Christmas condition.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A first says 'three of us have asked' (5), then agrees to a draw (21) and backs D: 'He has a point' (27).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 1.1
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B builds on C working so two can be off (8, 11). C says the plan sorts out Deepavali (12), but B does not take up the Christmas condition.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.2,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B and D both want the first day (8, 10) and B proposes they both take it (11). D then backs A (18) and pushes a draw (20, 24, 26), which B rejects (22, 25).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": -0.4
+    },
+    "C-D": {
+      "start": 0.2,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C's offer to work (3) helps D, but they never address each other's positions. D does not mention Christmas.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

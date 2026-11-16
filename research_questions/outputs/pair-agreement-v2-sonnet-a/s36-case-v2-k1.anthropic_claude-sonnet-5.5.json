@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s36-case-v2-k1",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1436,
+    "completion_tokens": 675,
+    "total_tokens": 2111,
+    "cost": 0.009622,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009622,
+      "upstream_inference_prompt_cost": 0.002872,
+      "upstream_inference_completions_cost": 0.00675
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who deals with the unwashed pork pan tonight, and whether the household agrees to a rule of washing the pan (and cleaning up generally) right after use.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A denies use (T1), B 'Me neither' (T2); later both accept the wash-right-after rule (T13 A 'Yes', T16 B 'Yeah, fine'), but they never address each other.",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-C": {
+      "start": -0.2,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "A",
+      "evidence": "C says the user should sort it out (T9); A says 'it wasn't me' (T11) but agrees to the rule (T13); C agrees (T18) and extends it to cleaning up after oneself.",
+      "roles": "A-C",
+      "cultures": "Indian - Chinese",
+      "includes_D": false,
+      "change": 0.8
+    },
+    "A-D": {
+      "start": 0.1,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A asks D about the special cleaning (T5, T7), then says 'Fine, washing up straight away is a good idea' (T11) and 'Yes' (T13) to D's rule.",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.8
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B only says 'Me neither' (T2) and 'Yeah, fine' (T16); C accepts the rule (T18). They share the rule but never interact.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "D asks B directly (T14); B answers 'Yeah, fine' (T16), accepting D's proposed rule.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.8
+    },
+    "C-D": {
+      "start": 0.2,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C wanted the user to fix it (T9) while D takes the cleaning on this time (T10); C then says 'Yes. And not just the pan...' (T18), endorsing the rule with a broader scope.",
+      "roles": "C-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.65
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s50-case-v1-hw2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1631,
+    "completion_tokens": 643,
+    "total_tokens": 2274,
+    "cost": 0.009692,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009692,
+      "upstream_inference_prompt_cost": 0.003262,
+      "upstream_inference_completions_cost": 0.00643
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether alcohol will be served at the housewarming given Agent D's Hindu parents are attending and object to alcohol in the home, versus A and B's need for drinks.",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A (15) says she already bought the drinks; B (16) says it is a problem for him too as he told colleagues there would be drinks. Both want drinks, but they never address each other.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C (19) acknowledges A is out of pocket and that a total ban doesn't work for her, but C stays a mediator without endorsing A's plan.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D proposes no alcohol (14); A replies she already bought it and can't return it (15). D still rejects the delay idea (18).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C (17) offers a dry period then drinks after, which addresses B's concern, and C (19) says a ban doesn't work for B, but C does not fully side with B.",
+      "roles": "B-C",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": -0.7,
+      "end": -0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "D wants no alcohol (14) and B says the drinks are needed for his manager and colleagues (16). They never speak to each other.",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C is sympathetic and offers moving the drinks out (11) or a dry period (17). D rejects both as awkward (12, 18), and C says D's concern matters but all four need a solution (19).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

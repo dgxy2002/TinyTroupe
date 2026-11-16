@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s36-case-v1-k1",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1596,
+    "completion_tokens": 680,
+    "total_tokens": 2276,
+    "cost": 0.009992,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009992,
+      "upstream_inference_prompt_cost": 0.003192,
+      "upstream_inference_completions_cost": 0.0068
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to handle the unwashed pork-fat pan tonight so D can cook (D needs a ritual clay wash), plus agreeing a wash-after-use rule going forward.",
+  "pairs": {
+    "A-B": {
+      "start": 0.1,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A suggests D order in (T11); B offers to pay for D's food (T14), a compatible order-in solution; neither addresses the pan itself.",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": -0.2,
+      "end": 0.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C pushes soap wash then 'figure out the rest' (T9); A says D can't cook tonight and should order in (T11, T13); C accepts B's payment as fine for tonight (T15) but no real alignment on the pan.",
+      "roles": "A-C",
+      "cultures": "Indian - Chinese",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": -0.3,
+      "end": -0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A tells D to order in/can't use pan (T11, T13); D says can't afford it, needs to cook, and rejects B's payment (T12, T16); A is asking about clay but no solution.",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C accepts B's offer to pay: 'Okay, that's good for tonight' (T15) and repeats the wash rule; B wanted to end things (T8, T14).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B dismisses clay as unrealistic (T8) and offers to pay (T14); D declines: 'I'd feel bad taking your money' (T16).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": -0.2
+    },
+    "C-D": {
+      "start": 0.4,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D endorses C's wash-after-use rule (T4, T16) but rejects C's soap-wash compromise (T10); both want a tonight solution for the pan.",
+      "roles": "C-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s100-case-r12-sm3",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1918,
+    "completion_tokens": 664,
+    "total_tokens": 2582,
+    "cost": 0.010476,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010476,
+      "upstream_inference_prompt_cost": 0.003836,
+      "upstream_inference_completions_cost": 0.00664
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D can keep cooking strong-smelling salted fish in the shared kitchen, and what rule or arrangement (e.g. Saturdays only) the household should adopt.",
+  "pairs": {
+    "A-B": {
+      "start": 0.8,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B backs A's complaint (T8 'He's right', T15); T22 B rejects A's Saturday proposal because of laundry, and A accepts that in T24.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.05
+    },
+    "A-C": {
+      "start": 0.7,
+      "end": 0.75,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "C complains about laundry smell (T3) and rejects the Saturday plan (T23); A concedes 'Saturdays won't work' (T24).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.05
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": -0.4,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "D resists restrictions (T6, T16, T18); A softens to 'nobody says you can't cook' and offers Saturdays (T17, T19), but D still raises objections (T20).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "B-C": {
+      "start": 0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Both complain about the smell in their clothes and laundry; C echoes B's point 'she's right' (T23) on the Saturday plan.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.8,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says the smell sticks to fabrics (T8, T15); D asks 'So because there are three of you, I cannot cook?' (T16); D's laundry point (T20) is echoed by B (T22), but B still wants the smell gone.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": -0.7,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C complains about laundry (T3) and says the smell persists on any day (T23); D cites their laundry (T20) only to reject the Saturday plan, while still defending cooking.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

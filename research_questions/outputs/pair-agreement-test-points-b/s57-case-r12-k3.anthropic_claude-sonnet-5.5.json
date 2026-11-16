@@ -1,0 +1,97 @@
+{
+  "rubric": "pair-agreement-v1-points",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s57-case-r12-k3",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1731,
+    "completion_tokens": 513,
+    "total_tokens": 2244,
+    "cost": 0.008592,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008592,
+      "upstream_inference_prompt_cost": 0.003462,
+      "upstream_inference_completions_cost": 0.00513
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who completes Agent D's unfinished pitch section for Thursday while D attends the wake: D working tonight, or A taking over with help from B and C.",
+  "pairs": {
+    "A-B": {
+      "start": 0,
+      "end": 2,
+      "engaged": true,
+      "evidence": "A asks B to review (T9, T11); B agrees to review tomorrow afternoon (T10).",
+      "cultures": "Malay - Indian",
+      "includes_D": false
+    },
+    "A-C": {
+      "start": 0,
+      "end": 2,
+      "engaged": true,
+      "evidence": "C agrees to help with slides after finishing their own part (T12, T19); A accepts and plans around that (T18).",
+      "cultures": "Malay - Eurasian",
+      "includes_D": false
+    },
+    "A-D": {
+      "start": -2,
+      "end": 2,
+      "engaged": true,
+      "evidence": "A rejected D's offer to work tonight (T7, T14). D yielded (T15), thanked everyone (T20), and A said 'We'll handle it' (T21).",
+      "cultures": "Malay - Chinese",
+      "includes_D": true
+    },
+    "B-C": {
+      "start": 1,
+      "end": 2,
+      "engaged": false,
+      "evidence": "Both said they could not take on more (T4, T5), then both agreed to A's plan (T10, T12, T19). They did not address each other.",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false
+    },
+    "B-D": {
+      "start": 0,
+      "end": 1,
+      "engaged": false,
+      "evidence": "B said little to D. B's review role (T10) fits the arrangement D accepted at T15 and T20.",
+      "cultures": "Indian - Chinese",
+      "includes_D": true
+    },
+    "C-D": {
+      "start": 0,
+      "end": 2,
+      "engaged": true,
+      "evidence": "D worried about C being behind (T13, T15); C replied 'Don't worry about my part' (T17). D then accepted the arrangement (T20).",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "rubric": "pair-agreement-v1",
+  "model": "openai/gpt-5-mini",
+  "folder": "s57-case-r12-k3",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1196,
+    "completion_tokens": 2588,
+    "total_tokens": 3784,
+    "cost": 0.005475,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005475,
+      "upstream_inference_prompt_cost": 0.000299,
+      "upstream_inference_completions_cost": 0.005176
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2112,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will complete Agent D's unfinished analysis section before the Thursday 9 a.m. deadline",
+  "pairs": {
+    "A-B": {
+      "start": -1,
+      "end": 2,
+      "engaged": true,
+      "evidence": "Turn9-10: A offered to take over the analysis and asked B to review it; B replied, 'Okay. I can review it tomorrow afternoon.' (Turn10).",
+      "cultures": "Malay - Indian",
+      "includes_D": false
+    },
+    "A-C": {
+      "start": -1,
+      "end": 2,
+      "engaged": true,
+      "evidence": "Turn11-12 & 19: A asked C to help with slide formatting and data; C said she'll help after finishing her part and 'should be done by tomorrow morning. I'll start on the slides right after.' (Turn19).",
+      "cultures": "Malay - Eurasian",
+      "includes_D": false
+    },
+    "A-D": {
+      "start": -2,
+      "end": 2,
+      "engaged": true,
+      "evidence": "Turn14 & 20: A insisted D go be with family and said 'We will manage.' D later accepted, 'Okay... I'll leave it with you all, then.' (Turn20).",
+      "cultures": "Malay - Chinese",
+      "includes_D": true
+    },
+    "B-C": {
+      "start": 2,
+      "end": 2,
+      "engaged": false,
+      "evidence": "Turn10 & 19: B agreed to review tomorrow afternoon (Turn10); C said she'll finish her part by tomorrow morning and start on the slides after (Turn19).",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false
+    },
+    "B-D": {
+      "start": 0,
+      "end": 2,
+      "engaged": false,
+      "evidence": "Turn10 & 20: B agreed to review (Turn10); D said 'I'll leave it with you all, then.' (Turn20).",
+      "cultures": "Indian - Chinese",
+      "includes_D": true
+    },
+    "C-D": {
+      "start": 0,
+      "end": 2,
+      "engaged": true,
+      "evidence": "Turn19 & 20: C committed to finishing by tomorrow morning and then doing slides (Turn19); D said he'll leave it to the team, 'I'll leave it with you all, then.' (Turn20).",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true
+    }
+  }
+}

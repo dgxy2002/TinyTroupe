@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s40-case-v1-k3",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1651,
+    "completion_tokens": 476,
+    "total_tokens": 2127,
+    "cost": 0.008062,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008062,
+      "upstream_inference_prompt_cost": 0.003302,
+      "upstream_inference_completions_cost": 0.00476
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D can burn incense all evening for a grandmother's anniversary, or must shorten or alter it so Agent B can sleep before an early shift.",
+  "pairs": {
+    "A-B": {
+      "start": 0,
+      "end": 0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Agent A never speaks in the transcript; no position on the issue.",
+      "roles": "A-B",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0,
+      "end": 0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Neither A nor C speaks; no positions can be judged.",
+      "roles": "A-C",
+      "cultures": "Malay - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": 0,
+      "end": 0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Agent A is silent throughout, so there is no relation to D's position.",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": 0,
+      "end": 0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Agent C never speaks; no position stated.",
+      "roles": "B-C",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B demands shorter burning (T9, T29); D says 'I can't. It's meant to burn for the whole evening' (T13) and only offers to shut the door (T8, T28). Neither shifts much.",
+      "roles": "B-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0,
+      "end": 0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Agent C is silent throughout; no position stated.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

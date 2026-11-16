@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s42-case-v1-k1",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1693,
+    "completion_tokens": 647,
+    "total_tokens": 2340,
+    "cost": 0.009856,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009856,
+      "upstream_inference_prompt_cost": 0.003386,
+      "upstream_inference_completions_cost": 0.00647
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether alcohol will be served at the Saturday housewarming in the shared flat (D objects), and who bears the cost of the already-bought drinks",
+  "pairs": {
+    "A-B": {
+      "start": 0.8,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B agrees on getting soft drinks (T2, T4), worries about boss expecting drinks (T7); A cites B's boss in T14, T16 — both want to keep alcohol.",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says A and B should cover the drinks cost themselves (T10); A stresses having spent $150 from the fund and unreturnable (T9, T14), not accepting.",
+      "roles": "A-C",
+      "cultures": "Indian - Chinese",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D proposes a non-alcoholic party with drinks elsewhere (T15); A rejects: 'doesn't really solve the problem' (T16).",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says A and B should pay for the drinks (T10), while B wants alcohol for his boss (T7); B never responds on money.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "B-D": {
+      "start": -0.6,
+      "end": -0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B says D's objection is 'a problem' because he told guests there would be drinks (T7); D's no-alcohol stance (T13, T15) stands; no direct exchange.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.3,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs fairness for D's money (T10); D says it's not about money (T11, T13); C insists money must be sorted (T12) and never addresses D's no-alcohol request.",
+      "roles": "C-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

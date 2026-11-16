@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s48-case-r12-hw3",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2104,
+    "completion_tokens": 646,
+    "total_tokens": 2750,
+    "cost": 0.010668,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010668,
+      "upstream_inference_prompt_cost": 0.004208,
+      "upstream_inference_completions_cost": 0.00646
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether the housewarming should serve alcohol (A's pre-bought drinks) or be alcohol-free because D objects on Buddhist grounds.",
+  "pairs": {
+    "A-B": {
+      "start": 0.1,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "B offers to split cost (18), proposes a separate drinks table (20), then a no-alcohol party with repayment (26); A resists on non-money grounds (19) and never accepts, so only partial agreement.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Indian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-C": {
+      "start": 0.1,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C suggested a cooler (13) and backed the side table (21), then offered to repay A for a no-alcohol party (27); A never accepts and wants alcohol for guests.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A questions D's late objection (9, 15) and asks 'We can't have any alcohol at all?' (23); D says 'For me, yes' (24). Neither shifts.",
+      "roles": "A-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "B-C": {
+      "start": 0.8,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C agrees with B's soft drinks (3, 5), calls the side table a good compromise (21), then backs the no-alcohol plan: 'I'll chip in' (27).",
+      "roles": "B-C",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.15
+    },
+    "B-D": {
+      "start": 0.2,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B's side-table compromise was rejected by D (22), then B proposes a no-alcohol party (26), which meets D's demand.",
+      "roles": "B-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.65,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C's cooler idea was rejected by D (14), then C backs the no-alcohol party at 27, which meets D's position.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.55
+    }
+  }
+}

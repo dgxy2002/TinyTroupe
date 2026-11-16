@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s57-case-r12-k3",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1796,
+    "completion_tokens": 651,
+    "total_tokens": 2447,
+    "cost": 0.010102,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010102,
+      "upstream_inference_prompt_cost": 0.003592,
+      "upstream_inference_completions_cost": 0.00651
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to get D's half-finished analysis section done by Thursday's pitch while D attends the wake: D working on it tonight vs. A taking it over with B reviewing and C helping.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "A asked B to review (T9); B said 'Okay. I can review it tomorrow afternoon' (T10), after initially saying they couldn't take on more (T4).",
+      "roles": "A-B",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.7
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C first said they couldn't help (T5); after A's request, C agreed to help with slides after finishing their part (T12, T19); A accepted with a timeline question (T18).",
+      "roles": "A-C",
+      "cultures": "Malay - Eurasian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D pushed to work tonight (T6, T8, T13) and A refused (T7, T14); D yielded: 'Okay, Agent A. If you're sure' (T15), 'I'll leave it with you all' (T20).",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.3
+    },
+    "B-C": {
+      "start": 0.3,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both initially declined extra work (T4, T5); later both accepted A's plan (T10, T12) but never addressed each other.",
+      "roles": "B-C",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "D",
+      "evidence": "B never addressed D; B backed A's plan (T10), and D ultimately accepted it (T15, T20).",
+      "roles": "B-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D worried about C being behind (T13, T15); C replied 'Don't worry about my part. I'll get it done' (T17); D then accepted the plan (T20).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s72-case-r12-fl2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1904,
+    "completion_tokens": 637,
+    "total_tokens": 2541,
+    "cost": 0.010178,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010178,
+      "upstream_inference_prompt_cost": 0.003808,
+      "upstream_inference_completions_cost": 0.00637
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether to keep the leaving colleague's chosen Korean barbecue (which D can't attend) or switch to a single alternative restaurant all four can go to.",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": -0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A first offered a no-beef compromise (7) and B stressed her favourite place (9); then A accepted changing (13, 21) and B kept objecting (14, 22, 24).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.7
+    },
+    "A-C": {
+      "start": 0.2,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A first defended the booking and C's timing (4); then A agreed to change (13) and 'one place it is' (21), matching C's view (15, 19).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A offered no beef (7) and D declined (8); then A: 'We'll have to change it' (13), and asked for suggestions (21), matching D's (26).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.55
+    },
+    "B-C": {
+      "start": -0.3,
+      "end": -0.85,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C suggested another place (10) and B opposed (14, 16). C rejected the split plan (17, 19); C challenged B's reasoning (23, 25).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.55
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B pushed for the original place and a split plan (16); D rejected it ('simpler to stick to one place', 20) and asked for another place (26).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": -0.5
+    },
+    "C-D": {
+      "start": 0.6,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C proposed another place (10) and D agreed (11); D 'I agree with Agent C' (20); both keep to one place together (23, 26).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.35
+    }
+  }
+}

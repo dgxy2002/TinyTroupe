@@ -1,0 +1,97 @@
+{
+  "rubric": "pair-agreement-v1-decimal",
+  "model": "openai/gpt-5-mini",
+  "folder": "s57-case-r12-k3",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1201,
+    "completion_tokens": 2237,
+    "total_tokens": 3438,
+    "cost": 0.00451505,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00451505,
+      "upstream_inference_prompt_cost": 4.105e-05,
+      "upstream_inference_completions_cost": 0.004474
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1792,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to complete the client pitch on time given Agent D's bereavement and partial section unfinished",
+  "pairs": {
+    "A-B": {
+      "start": -0.6,
+      "end": 0.9,
+      "engaged": true,
+      "evidence": "A assigned the analysis to themself and asked B to review (Turn 9); B agreed to review tomorrow afternoon (Turn 10).",
+      "cultures": "Malay - Indian",
+      "includes_D": false
+    },
+    "A-C": {
+      "start": -0.5,
+      "end": 0.85,
+      "engaged": true,
+      "evidence": "C initially said they couldn't do D's section and needed to finish their own (Turn 5), then later committed to start slides after finishing by tomorrow morning (Turn 19).",
+      "cultures": "Malay - Eurasian",
+      "includes_D": false
+    },
+    "A-D": {
+      "start": -0.9,
+      "end": 0.95,
+      "engaged": true,
+      "evidence": "D offered to finish the section that night (Turn 6) and A rejected relying on that (Turn 7); by the end D conceded and left it to the team (Turn 20).",
+      "cultures": "Malay - Chinese",
+      "includes_D": true
+    },
+    "B-C": {
+      "start": 0.7,
+      "end": 0.85,
+      "engaged": false,
+      "evidence": "Both declined to take on D's full section initially (B: Turn 4; C: Turn 5) and later accepted complementary roles under A's plan (B: will review, Turn 10; C: will start slides after finishing, Turn 19).",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false
+    },
+    "B-D": {
+      "start": 0.2,
+      "end": 0.6,
+      "engaged": false,
+      "evidence": "B said they couldn't take on more (Turn 4) while D offered to do the work (Turn 6); later B agreed to review (Turn 10) and D stepped back, leaving it to the team (Turn 20).",
+      "cultures": "Indian - Chinese",
+      "includes_D": true
+    },
+    "C-D": {
+      "start": 0.3,
+      "end": 0.75,
+      "engaged": true,
+      "evidence": "D offered to do the analysis (Turn 6) and later worried about extra work for others (Turn 15); C reassured the team they'll finish their part and help with slides (Turn 17 and Turn 19).",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true
+    }
+  }
+}

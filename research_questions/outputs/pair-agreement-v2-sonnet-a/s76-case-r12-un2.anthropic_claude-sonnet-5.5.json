@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s76-case-r12-un2",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Irfan"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1347,
+    "completion_tokens": 609,
+    "total_tokens": 1956,
+    "cost": 0.008784,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008784,
+      "upstream_inference_prompt_cost": 0.002694,
+      "upstream_inference_completions_cost": 0.00609
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to apply the new no-visible-jewellery rule tomorrow, specifically whether D's prayer bracelet (and B's earrings) can be covered rather than removed.",
+  "pairs": {
+    "A-B": {
+      "start": -0.4,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "B objected that A made her remove earrings without suggesting alternatives (4, 6); A conceded 'If it's covered... that goes for everyone' (8); B: 'Right' (9).",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 1.2
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backed the covering interpretation (7), A adopted it (8), C said 'Clear' (12).",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "D asked to cover the bracelet (2); A first questioned how (3) then accepted covering for all (8); D: 'I'll cover it' (14).",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.6
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C: 'A plaster would work' (7) endorses B's suggestion (6); B agrees 'Right' (9).",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "B-D": {
+      "start": 0.3,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both favour covering rather than removal; B's covering idea (6) matches D's request (2), both confirm the plan (9, 14), but they never address each other directly.",
+      "roles": "B-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "C-D": {
+      "start": 0.3,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C supports covering as meeting the rule (7), D plans to cover bracelet (14); no direct exchange.",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

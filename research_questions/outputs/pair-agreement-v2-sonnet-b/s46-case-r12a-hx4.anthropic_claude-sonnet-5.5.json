@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s46-case-r12a-hx4",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Mei Ling"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1971,
+    "completion_tokens": 634,
+    "total_tokens": 2605,
+    "cost": 0.010282,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010282,
+      "upstream_inference_prompt_cost": 0.003942,
+      "upstream_inference_completions_cost": 0.00634
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether the housewarming should serve alcohol (A's purchased drinks) given D's religious objection, or use a compromise like a cooler box or alcohol-free party",
+  "pairs": {
+    "A-B": {
+      "start": -0.3,
+      "end": -0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B offers cooler solutions (8, 23) and says 'We're all hosts' (15) against A's 'don't be a host'; A never adopts the compromises and still insists on alcohol (26).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": -0.1,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs the cooler ideas and says the dispute must be resolved (9, 18, 24); A keeps pushing back and says 'three of us live here too' (26), counting C on A's side though C never takes it up.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Indian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D rejects alcohol at the party and offers an alcohol-free party and repayment (19, 21); A refuses: 'It's either your way, or nothing' (26).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "B-C": {
+      "start": 0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C endorses B's cooler box (9) and the landing cooler (24), and agrees on needing to resolve it (18).",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.2,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B defends D as a host (15) but D rejects B's cooler proposals (11, 25), so they agree on D's inclusion but not the arrangement.",
+      "roles": "B-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C supports cooler options (9, 24) that D declines (11, 25); C takes no stand on the alcohol-free idea.",
+      "roles": "C-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

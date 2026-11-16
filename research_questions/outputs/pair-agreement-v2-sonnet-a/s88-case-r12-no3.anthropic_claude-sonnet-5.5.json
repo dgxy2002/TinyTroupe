@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s88-case-r12-no3",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1885,
+    "completion_tokens": 653,
+    "total_tokens": 2538,
+    "cost": 0.0103,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0103,
+      "upstream_inference_prompt_cost": 0.00377,
+      "upstream_inference_completions_cost": 0.00653
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and where Agent D can chant at 4:45 a.m. daily without waking the other three, and who should bear the burden of changing",
+  "pairs": {
+    "A-B": {
+      "start": 0.8,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B echoes A's point that sound travels (T6) and backs moving outside (T16, T18); A proposed the void deck (T13).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.05
+    },
+    "A-C": {
+      "start": 0.7,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both say the chanting disrupts their sleep (T1, T7, T21, T23); C never speaks to A directly, though both oppose D's in-flat options.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.2,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A rejects D's quieter, whisper and living-room offers (T3, T9, T11) and suggests the void deck; D refuses it as unsafe (T14), saying only 'leave' has been suggested (T22).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": -0.3
+    },
+    "B-C": {
+      "start": 0.7,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both say they cannot sleep through it and that it must change (T18, T21, T23); neither addresses the other.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.2,
+      "end": -0.55,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says quieter is not enough (T6) and asks for somewhere outside (T16); D replies 'why do I have to be the one to go outside?' (T17), and B restates the sleep need (T18).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": -0.35
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": -0.55,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C asks if the time can change (T19), D says no (T20); C says she won't be able to sleep (T21, T23), and D rejects leaving the flat as unfair (T22, T24).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": -0.25
+    }
+  }
+}

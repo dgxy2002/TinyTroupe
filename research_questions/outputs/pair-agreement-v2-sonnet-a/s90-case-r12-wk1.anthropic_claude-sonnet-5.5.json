@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s90-case-r12-wk1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1439,
+    "completion_tokens": 549,
+    "total_tokens": 1988,
+    "cost": 0.008368,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008368,
+      "upstream_inference_prompt_cost": 0.002878,
+      "upstream_inference_completions_cost": 0.00549
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Reworking the draft roster so that Agent D avoids Friday noon (prayer time) and Agent B avoids Saturday mornings, with no extra hours, before it goes to the area manager tonight.",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "A asks for swaps for B (19); B accepts taking D's slot: 'Yes, that works for me' (24); A: 'It's settled' (28).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "A asks C whether they can swap or only can't add hours (5); C says 'I can swap' (6); A confirms the swap (7).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-D": {
+      "start": 0.4,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A says 'We can change it' (1); D agrees to the swap (11) and offers Saturday mornings (22); A confirms (23, 28).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.6
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B and C never address each other; C swaps with D and B takes D's slot, so no direct exchange between them.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D offers to take Saturday morning (22) and B accepts D's slot (24).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.9
+    },
+    "C-D": {
+      "start": 0.4,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C says they can swap (6); D says 'Yes, that works' (11).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

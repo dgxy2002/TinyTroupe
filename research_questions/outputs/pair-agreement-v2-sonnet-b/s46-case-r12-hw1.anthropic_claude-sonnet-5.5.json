@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s46-case-r12-hw1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1603,
+    "completion_tokens": 651,
+    "total_tokens": 2254,
+    "cost": 0.009716,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009716,
+      "upstream_inference_prompt_cost": 0.003206,
+      "upstream_inference_completions_cost": 0.00651
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether alcohol can be served at the housewarming in the flat, resolved by keeping the drinks in a cooler box outside the front door",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.9,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B said it looked good (T2); A bought the drinks and B wanted them available. Both accepted the cooler outside (T17, T19). They never addressed each other directly.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "C proposed the cooler outside the door (T13) and asked A about it (T15). A replied 'a cooler outside works for me' (T17).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Indian",
+      "includes_D": false,
+      "change": 0.85
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D objected to any alcohol at the party (T4, T9) while A had stocked the fridge. D agreed to drinks outside the door (T14) and A accepted it (T17, T21 'that's settled').",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 1.5
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "C asked whether the cooler worked for B's manager (T18). B said 'that works for me' and thanked C (T19).",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.85
+    },
+    "B-D": {
+      "start": -0.7,
+      "end": 0.75,
+      "engaged": false,
+      "moved": "both",
+      "evidence": "B needed drinks for the manager (T10) while D wanted no alcohol (T9). Both then accepted the cooler outside (T14, T19). They never spoke to each other directly.",
+      "roles": "B-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 1.45
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C offered alternatives (T11, T13). D rejected the kitchen option (T12) but accepted the outside cooler: 'I can agree to that. Thanks, Agent C' (T14).",
+      "roles": "C-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.85
+    }
+  }
+}

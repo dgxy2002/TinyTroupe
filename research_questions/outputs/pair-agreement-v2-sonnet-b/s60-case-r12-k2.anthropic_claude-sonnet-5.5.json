@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s60-case-r12-k2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1805,
+    "completion_tokens": 662,
+    "total_tokens": 2467,
+    "cost": 0.01023,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01023,
+      "upstream_inference_prompt_cost": 0.00361,
+      "upstream_inference_completions_cost": 0.00662
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who gets to use the single window corner of the living room (shrine, work desk, laundry rack, or friends' seating), and whether a shared or alternative arrangement is possible.",
+  "pairs": {
+    "A-B": {
+      "start": -0.2,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B's weekend seating claim (4) conflicts with A; B then proposes timing (8) and asks A about alternatives (25), A refuses to move (26); B's final point (30) is neutral.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.1,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both claim the corner for their own need (3, 5, 9) and never address each other; both insist no alternative exists (17, 26).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A refuses to give up the desk (1, 3) and acknowledges D's prayer only briefly (7); D says there is no other space (24, 28); no resolution reached.",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "B-C": {
+      "start": -0.1,
+      "end": 0.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B suggests timing (8) and C rejects it (9); B accepts the point (12) and later concedes laundry has to be there (22), but C is not moved on a shared arrangement.",
+      "roles": "B-C",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.2,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B's friends use the corner (4), but B comes to question alternatives for everyone (16, 20), and B replies to D's complaint at (30) that all would lose if one claims the corner.",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": -0.6,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D says shrine can't be next to laundry (10) and complains about unequal treatment (14); C says there's no other window place (13, 17); neither yields.",
+      "roles": "C-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

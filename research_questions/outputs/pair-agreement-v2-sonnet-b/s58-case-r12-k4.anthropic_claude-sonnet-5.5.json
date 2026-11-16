@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s58-case-r12-k4",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1902,
+    "completion_tokens": 639,
+    "total_tokens": 2541,
+    "cost": 0.010194,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010194,
+      "upstream_inference_prompt_cost": 0.003804,
+      "upstream_inference_completions_cost": 0.00639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who completes Agent D's half-finished analysis section before Thursday's pitch, given D's bereavement (D working from home vs. B/C taking it vs. A taking it)",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks B to take over (T5); B declines (T6); B never takes a position on A's later plan, so the relation stays unclear.",
+      "roles": "A-B",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": -0.4,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A pushes C to take the section (T7, T12, T15), and C refuses (T8, T14, T16); A then gives in: 'I'll take over the analysis' (T18), which resolves C's objection.",
+      "roles": "A-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 1.0
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D insists on working from home (T9, T11, T17) and A refuses (T10, T18); D finally agrees: 'Okay. Yes. I can do that. Thank you' (T21), then walks A through the work (T31).",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 1.6
+    },
+    "B-C": {
+      "start": 0.2,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take on D's section (T6, T8), but neither speaks to the other and B says nothing after that.",
+      "roles": "B-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B offers condolences and declines to take the work (T6); B takes no position on D's offer to work from home or the final arrangement.",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D concedes that 'Agent C has a point' about the analysis (T17), then accepts A's plan, which takes the burden off C (T21).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

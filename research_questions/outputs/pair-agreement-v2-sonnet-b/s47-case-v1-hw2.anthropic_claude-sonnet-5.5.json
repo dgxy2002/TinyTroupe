@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s47-case-v1-hw2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1179,
+    "completion_tokens": 599,
+    "total_tokens": 1778,
+    "cost": 0.008348,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008348,
+      "upstream_inference_prompt_cost": 0.002358,
+      "upstream_inference_completions_cost": 0.00599
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will buy the non-alcoholic drinks for Saturday's housewarming (Agent B volunteered), after Agent A bought the alcohol",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B thanks A for the drinks (T2); A asks someone to buy non-alcoholic drinks (T9) and B says 'I can get them' (T10)",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.2,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C asks about non-alcoholic drinks (T5); A then asks how many are needed and has someone get them (T7, T9), which fits C's concern, but C says nothing more",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "D raises parents who don't drink (T6); A accepts and asks how many (T7), and arranges for them to be bought (T9)",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "B-C": {
+      "start": 0.2,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C asks about soft drinks (T5); B later volunteers to buy them (T10), but neither addresses the other",
+      "roles": "B-C",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": 0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B volunteers to buy the drinks D asked for (T10); D thanks B (T12) and B replies 'No problem' (T13)",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "C-D": {
+      "start": 0.4,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C asks about non-alcoholic drinks (T5) and D says they are needed (T6); C says nothing further",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s84-case-r12-lg3",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1364,
+    "completion_tokens": 579,
+    "total_tokens": 1943,
+    "cost": 0.008518,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008518,
+      "upstream_inference_prompt_cost": 0.002728,
+      "upstream_inference_completions_cost": 0.00579
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether decisions about D's work should have been made in Tamil excluding D, and how to handle the resulting change (reordering the presentation) going forward in English with D included",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A (T3) 'It won't happen again'; B (T4) apologizes to D; both on the same side but never address each other.",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C (T9) endorses the change that A presents (T7, T11); no direct exchange between them.",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": 0.2,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A concedes (T1, T3) 'Fair enough. It won't happen again', explains the change (T11, T13); D accepts (T17) 'I can adjust the intro'.",
+      "roles": "A-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.65
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B apologizes (T4) and C supports the change (T9); neither speaks to the other.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B (T4) 'Sorry, Agent D. We weren't thinking.'; D (T5) 'Okay, thank you.'",
+      "roles": "B-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.7
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C (T9) says it's a good change; D (T10) asks what it is, then accepts it (T17). C never addresses the exclusion complaint.",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

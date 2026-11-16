@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s44-case-v1-k2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1421,
+    "completion_tokens": 649,
+    "total_tokens": 2070,
+    "cost": 0.009332,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009332,
+      "upstream_inference_prompt_cost": 0.002842,
+      "upstream_inference_completions_cost": 0.00649
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether the shared house fund should pay for the alcohol for the housewarming, and then how to arrange food for everyone's guests.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B said A's offer to cover alcohol 'sounds fair' (8); B and A then agreed together on ordering halal, Chinese and Indian food (13, 17, 18). B had no prior stated position against A.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.95
+    },
+    "A-C": {
+      "start": -0.6,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "C questioned using the fund for alcohol (3, 5); A offered to pay for alcohol personally (7); C replied 'that works. Thanks' (9).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 1.5
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "D said they don't drink either (6); A then offered to cover alcohol (7), and A accepted D's Indian food idea (17).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B accepted A's fix, as C did (8, 9); B proposed halal food for C's side (11, 13) and C said 'that's a good idea' (14).",
+      "roles": "B-C",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": 0.95
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B raised no beef for D's side (11); D added Indian food to B's plan (16) and B said 'good' (18).",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.9
+    },
+    "C-D": {
+      "start": 0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C questioned alcohol from the fund (3, 5) and D said 'Yeah, I don't drink either' (6); both were satisfied by A's fix, and C agreed with the food plan that D extended (14, 16).",
+      "roles": "C-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

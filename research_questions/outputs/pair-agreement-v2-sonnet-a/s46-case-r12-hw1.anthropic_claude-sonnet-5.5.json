@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s46-case-r12-hw1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1603,
+    "completion_tokens": 655,
+    "total_tokens": 2258,
+    "cost": 0.009756,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009756,
+      "upstream_inference_prompt_cost": 0.003206,
+      "upstream_inference_completions_cost": 0.00655
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether alcohol can be served at the housewarming in the flat, resolved by keeping the drinks in a cooler box outside the front door",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.9,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Turn 2 B: 'looks good to me' (A's drinks fine). Turns 17 and 19: both accept the cooler outside; they never address each other directly.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "C asks A at turn 15 about the cooler outside; A answers at turn 17 'a cooler outside works for me'. C had no stated position before proposing.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Indian",
+      "includes_D": false,
+      "change": 0.9
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "At turn 4 D objects to alcohol; at turn 8 A questions it. D accepts outside the door at turn 14, A accepts at 17, and A says 'that's settled' at 21.",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 1.5
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "C asks B at turn 18 if the cooler is okay for the manager; B at turn 19: 'that works for me... Thanks for sorting it out.'",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.9
+    },
+    "B-D": {
+      "start": -0.7,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B needs drinks available for the manager (turn 10) while D wants no alcohol (turn 9). Both accept the cooler outside (turns 14, 19).",
+      "roles": "B-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 1.5
+    },
+    "C-D": {
+      "start": 0.2,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C offers the kitchen (11), which D rejects (12). C then proposes the cooler outside (13) and D agrees: 'I can agree to that. Thanks, Agent C' (14).",
+      "roles": "C-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.75
+    }
+  }
+}

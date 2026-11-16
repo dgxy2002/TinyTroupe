@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s92-case-r12-wk3",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1301,
+    "completion_tokens": 515,
+    "total_tokens": 1816,
+    "cost": 0.007752,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007752,
+      "upstream_inference_prompt_cost": 0.002602,
+      "upstream_inference_completions_cost": 0.00515
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D's Wednesday evening slot can be swapped so D can attend the temple, and who takes which slot on the roster",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks for a swap (T3); B offers Wednesday evening in exchange for Saturday morning (T4, T6); A confirms 'Okay, done' (T10).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-C": {
+      "start": 0,
+      "end": 0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C never speaks in the transcript, so no position can be compared.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": 0.5,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks if anyone can swap with D (T3); D agrees to Saturday morning (T5); A records it (T10); D thanks A (T13).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.45
+    },
+    "B-C": {
+      "start": 0,
+      "end": 0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C is silent throughout, so there is nothing to compare.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.5,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B asks if D can do Saturday morning (T4); D says yes (T5); B accepts and takes Wednesday (T6).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.45
+    },
+    "C-D": {
+      "start": 0,
+      "end": 0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C never speaks, so there is no stated position.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s87-case-r12-no2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2215,
+    "completion_tokens": 668,
+    "total_tokens": 2883,
+    "cost": 0.01111,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01111,
+      "upstream_inference_prompt_cost": 0.00443,
+      "upstream_inference_completions_cost": 0.00668
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D can keep singing at about 4:45 a.m. in their room daily for four weeks despite the thin walls waking the others, or must change time, place or volume.",
+  "pairs": {
+    "A-B": {
+      "start": 0.7,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B backs A's living-room idea (12), offers help carrying (17), proposes earplugs (19), then agrees with A that they may not be enough (23).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says even quiet singing will wake them (7) and that it's every weekday (26); A says the noise is too early on Monday (24). Both are against D's plan, but C's concern is broader than A's Monday-only request.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D offers only no bell and quiet singing (8, 10, 15); A says quiet isn't enough (9, 14) and 'we're stuck' (16). D rejects the living room (13).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B proposes earplugs for A and B (19). C replies that earplugs might work but would be needed every morning (20). C stays opposed to D's plan, but wants more than B's targeted fixes.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B asks for quiet singing (6), moving to the living room (12) and help carrying (17); D refuses each one (13, 18).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "C-D": {
+      "start": -0.6,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says any singing will wake them (7); D says the singing is required and only the bell is dropped (8); C says it's every weekday (26).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": -0.1
+    }
+  }
+}

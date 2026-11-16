@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s82-case-r12-lg1",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1532,
+    "completion_tokens": 1142,
+    "total_tokens": 2674,
+    "cost": 0.014484,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014484,
+      "upstream_inference_prompt_cost": 0.003064,
+      "upstream_inference_completions_cost": 0.01142
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether the Mandarin-only decision on D's work was acceptable, whether decisions will move to English, and whether D accepts the change",
+  "pairs": {
+    "A-B": {
+      "start": 0.7,
+      "end": 0.85,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A: 'that wasn't fair to you' (3); B: 'He's right. Sorry' (4)",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.15
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A: 'Agent C is right' (10) and hands off to C to explain (12); A confirms the change is agreed (17)",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": 0.4,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A concedes unfairness (3) and asks D's view (10); D: 'that sounds fine. I can do that' (15); A: 'we're agreed' (17)",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "B-C": {
+      "start": 0.2,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B apologizes (4); C skips to 'are we keeping it?' (7) and never addresses the process issue",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": 0.7,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B apologizes (4) and agrees to English decisions (6); D thanks B (5)",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C explains the rationale and scope (9, 14); D accepts: 'sounds fine. I can do that' (15); C thanks D (16)",
+      "roles": "C-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.6
+    }
+  }
+}

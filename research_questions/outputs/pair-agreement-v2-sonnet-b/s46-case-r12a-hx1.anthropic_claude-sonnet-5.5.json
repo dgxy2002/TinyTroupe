@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s46-case-r12a-hx1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Fathima"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1795,
+    "completion_tokens": 647,
+    "total_tokens": 2442,
+    "cost": 0.01006,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01006,
+      "upstream_inference_prompt_cost": 0.00359,
+      "upstream_inference_completions_cost": 0.00647
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether alcohol can be at the housewarming in the flat, given D's religious objection and A and B's commitments; resolved by serving drinks at the void deck.",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "Both wanted drinks at the party; B balked at the void deck (21), then agreed 'Okay, fine. The void deck' (26) and A said 'settled' (27).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "A-C": {
+      "start": 0.2,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "C proposed the cooler box (8) and the void deck (17); A adopted the void deck (20) and C confirmed 'Good. Settled.' (29).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Indian",
+      "includes_D": false,
+      "change": 0.7
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A wanted drinks in the fridge, D refused alcohol at home (4-6); D accepted the void deck (18) and A agreed 'Drinks at the void deck' (27).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "B-C": {
+      "start": 0.1,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B rejected D's payback offer (16); C's void deck idea (17) was accepted by B after hesitation (26); C: 'Settled' (29).",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.7
+    },
+    "B-D": {
+      "start": -0.7,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B had told guests there would be drinks (7, 16), D's offer to pay didn't help B; both ended up accepting drinks at the void deck (18, 26).",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "C-D": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D declined the cooler box (9); C understood 'at all' (10); D accepted C's void deck idea (18); C 'Settled' (29).",
+      "roles": "C-D",
+      "cultures": "Indian - Indian",
+      "includes_D": true,
+      "change": 0.6
+    }
+  }
+}
