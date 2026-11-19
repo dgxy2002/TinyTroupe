@@ -16,7 +16,7 @@ from research_questions.scenario_presets.common import (
     BIOGRAPHIES,
     VALUE_ORIENTATIONS,
 )
-from research_questions.scenario_presets.s04_variants import RESOLUTION_EXPECTATION
+from research_questions.scenario_presets.early.s04_variants import RESOLUTION_EXPECTATION
 from research_questions.label_probe import template_without_rule
 from research_questions.simulation import (
     AGENT_PROMPT_PATH,

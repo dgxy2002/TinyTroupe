@@ -15,6 +15,19 @@ and in `good_runs.md` (`outputs/s46-...`) now lives under `outputs_old/`. `runne
 write to the new `outputs/`, and `run_cases.py`'s "skip existing folder" check sees only the new folder, so always
 use fresh experiment IDs. In git, the move shows as 1,920 deleted and untracked files until the user commits it.
 
+**Preset files reorganised (2026-11-19, user request; nothing else changed).** `s30_flat.py` was split into one file
+per numbered scenario: `scenario_presets/s00_presets.py` ... `s15_presets.py` (no s09: skipped; no s14: not built),
+each holding that scenario's setting, roles, needs and its own profile cells (HW/HX in s01, FR s03, RO s04, FL s05,
+UN s06, BR s07, VD s08, LG s10, NO s11, WK s12, RM s13, SM/MJ s15). Shared pieces: `case_common.py` (`_key_case`,
+`_FAITH_WORDS`, `_REASON_RULE`, K1-K4 seating plans), `common.py` (schemas, materializer, `_cast`, K and earlier
+cells, fixed trios used by several scenarios: `_RO_FIXED`, `_MALAY_FIXED`, `_NOISE_FIXED`, `_OFFICE_FIXED`,
+`_MAJORITY_CASTS`, `MINORITY_NAMES`). `s30_flat.py` keeps S30-S35. The original S01-S10 files and the S02/S04
+variants moved to `scenario_presets/early/` (staged with `git mv`), so **older notes below that say `s02_presets.py`,
+`s04_variants.py` or "built in `s30_flat.py`" now mean `early/...` or the matching `sNN_presets.py`.**
+`MATERIALIZATION_CONFIGURATION_IDS` is now built in `scenario_presets/__init__.py`, after every file registers its
+cells. Verified: every scenario, every cell and all 16,214 scenario-cell combinations hash identically before and
+after, all 262 recorded runs from S28 on still match their stored scenario hash, and 216 tests pass.
+
 **Definitions agreed with the user:**
 
 - **Culture is a bundle** of race, faith and name: Chinese/Buddhist, Malay/Muslim, Indian/Hindu, Eurasian/Catholic
@@ -280,10 +293,12 @@ below hold the full history and evidence.
 
 - `research_questions/scenarios.md`: the ten scenario designs, plus the build rules.
 - `research_questions/good_runs.md`: every case run, grouped by scenario, with outcome, where faith was named, and whether it qualifies. Add every new run to it.
-- `research_questions/scenario_presets/s30_flat.py`: every case scenario, S30-S70. Builders: `_pan_case`,
-  `_shared_space_case`, `_housewarming_v2_case`, `_rota_case`, `_key_case` (generic: roles A-C are identical
-  and only D's need changes), `_roster_v2`. Faith wording is in `_FAITH_WORDS`, and the reasons line in
-  `_REASON_RULE`.
+- `research_questions/scenario_presets/s00_presets.py` ... `s15_presets.py` (split 2026-11-19, see the note at
+  the top of CURRENT PHASE): one file per numbered case scenario, with its setting, roles, needs and its own
+  casts. Builders such as `_pan_case`, `_housewarming_v2_case`, `_rota_case`, `_roster_v2` live in their
+  scenario's file. Shared helpers are in `case_common.py`: `_key_case` (generic: roles A-C are identical and only
+  D's need changes), the faith wording `_FAITH_WORDS`, the reasons line `_REASON_RULE`, the K seating plans.
+  `s30_flat.py` now holds only S30-S35.
 - `research_questions/scenario_presets/common.py`: `PERSONAL_BIOGRAPHIES`, cast cells K1-K4 (rotating, do
   not use for new scenarios; see flaw 6), `_cast()` and the fixed-cast cells HW1-4, FR1-4 and RO1-4. A profile
   cell can now set `backgrounds` per role.

@@ -20,7 +20,7 @@ Anything agreed exists only in speech.
 
 from dataclasses import replace
 
-from .common import AgentPreset, ScenarioPreset, validate_scenario
+from ..common import AgentPreset, ScenarioPreset, validate_scenario
 from .s04_presets import SCENARIO as S04
 
 

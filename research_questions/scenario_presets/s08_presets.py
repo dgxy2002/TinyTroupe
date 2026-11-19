@@ -1,57 +1,124 @@
-"""S08: audible phone video on an MRT train."""
+"""Scenario 8: the void deck wake (S79-S81), plus its casts VD1-VD3.
 
-from .common import AgentPreset, ScenarioPreset, validate_scenario
+S79 Buddhist, S80 Catholic, S81 control (a wake without religious rites). Roles A-C are three Malay Muslims.
+"""
+
+from __future__ import annotations
+
+from .case_common import _key_case
+from .common import _cast, _MALAY_FIXED, PROFILE_CONFIGURATIONS, ScenarioPreset
 
 
-SCENARIO = ScenarioPreset(
-    scenario_id="S08",
-    title="Loud video audio on an MRT train",
-    environment="MRT carriage",
-    initial_datetime="2026-10-29T15:00:00+08:00",
-    source_status="Adapted from the 22 Oct presentation: audio without headphones",
-    initial_interaction_type="Potential conflict",
-    shared_setting=(
-        "An MRT carriage during a weekday afternoon journey. Passengers are seated and "
-        "standing close together. A phone video is clearly audible to the nearby passengers "
-        "but does not drown out ordinary speech or train announcements."
+# Scenario 8: the void deck wake (S79 Buddhist VD1, S80 Catholic VD2, S81 control VD3). Fix from the
+# draft: every variant is a wake for Agent D's grandfather, so celebration versus mourning is no longer
+# a difference; the control is the same wake without religious rites. Only two faith variants: a Muslim
+# void-deck wake is not usual, and a Hindu one could not be checked. Roles A-C are the same three Malay
+# Muslims. Each neighbour's stake comes with a time or place that could give.
+VD_BACKGROUNDS = {
+    "VD1": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Chinese"},
+    "VD2": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Eurasian"},
+    "VD3": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Indian"},
+}
+_VOID_DECK_SETTING = (
+    "Four neighbours live in the same HDB block and know each other from the block's chat group, "
+    "which they have used for two years. You all know each other's faith and what each of you eats: "
+    "{faiths} Events at the void deck need a town council permit, and Agent D's family has one for a "
+    "wake from tonight, Friday, until Sunday night. It is early evening, and all four are at the void "
+    "deck."
+)
+_VOID_DECK_ROLES = {
+    "A": dict(
+        role="Neighbour whose mother uses a wheelchair",
+        immediate_priority="Keep the path to the lift clear for your mother.",
+        private_knowledge=(
+            "Your mother uses a wheelchair, and the tent narrows the only path to the lift lobby. "
+            "Every day she goes out at about 8 a.m. and comes back at about noon, and those are the "
+            "times she needs the path."
+        ),
+        initial_observation="Sees the tent going up across the path to the lift lobby.",
     ),
-    shared_trigger=(
-        "Agent A watches the video through the phone speaker. Agent B is seated nearby with "
-        "reading material. Agent C stands between the seating areas, and Agent D travels with A."
+    "B": dict(
+        role="Neighbour who works night shifts",
+        immediate_priority="Sleep before your night shifts.",
+        private_knowledge=(
+            "You are a nurse on night shifts this week, and you sleep from about 6 to 10.30 p.m. "
+            "before work. Your bedroom window faces the void deck. You have Saturday night off."
+        ),
+        initial_observation="Sees the tent and the chairs going up under your window.",
     ),
-    agents={
-        "A": AgentPreset(
-            age=24,
-            role="Passenger watching a video",
-            immediate_priority="Stay entertained during the commute.",
-            private_knowledge="Does not know whether any nearby passenger is bothered.",
-            initial_observation="Can hear the video and sees B reading nearby.",
+    "C": dict(
+        role="Neighbour who leads a morning exercise group",
+        immediate_priority="Keep your morning group going.",
+        private_knowledge=(
+            "You lead a tai chi group of older residents at the void deck at 7 every morning, in the "
+            "space the tent now takes. The open area by the playground nearby has room, but no shade."
         ),
-        "B": AgentPreset(
-            age=36,
-            role="Passenger trying to read",
-            immediate_priority="Have a sufficiently quiet journey to continue reading.",
-            private_knowledge="Has not decided whether to address A or take another action.",
-            initial_observation="Can clearly hear A's video from the nearby seat.",
-        ),
-        "C": AgentPreset(
-            age=55,
-            role="Standing commuter",
-            immediate_priority="Travel without unnecessary disruption.",
-            private_knowledge="Does not know whether B will react or whether A has headphones.",
-            initial_observation="Can hear the video while positioned near both A and B.",
-        ),
-        "D": AgentPreset(
-            age=27,
-            role="Passenger travelling with Agent A",
-            immediate_priority="Have an uneventful journey.",
-            private_knowledge="Knows A socially but is not responsible for A's choices.",
-            initial_observation="Can hear the video and see the nearby passengers.",
-        ),
-    },
-    observation_focus=(
-        "Whether annoyance becomes an expressed disagreement, indirect accommodation, or no conflict."
+        initial_observation="Sees the tent filling the space your group uses.",
     ),
+    "D": dict(
+        role="Newer resident",
+        immediate_priority=(
+            "Do right by your family, and keep good relations with your neighbours, without being "
+            "overlooked as one of the newer residents."
+        ),
+        private_knowledge="You are one of the newer residents on the block.",
+        initial_observation="Sees three neighbours coming over while your family sets up.",
+    ),
+}
+_EVENINGS_MATTER = (
+    " Holding the evenings in full matters most to you; how the tent is laid out matters less."
 )
 
-validate_scenario(SCENARIO)
+
+def _void_deck(scenario_id: str, title: str, rites: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"Void deck wake: {title}",
+        "HDB void deck",
+        _VOID_DECK_SETTING,
+        "Agent D's grandfather died yesterday. Agent D's family is setting up a tent for his wake at "
+        f"the void deck, with {rites} each evening until about 10.30 p.m. Agent A, Agent B and Agent C "
+        "have come down to talk to Agent D about it. Nobody has proposed anything yet.",
+        _VOID_DECK_ROLES,
+        need + _EVENINGS_MATTER,
+        VD_BACKGROUNDS[cell],
+    )
+
+
+VOID_DECK_BUDDHIST = _void_deck(
+    "S79",
+    "Buddhist",
+    "monks chanting, with gongs,",
+    "You are Buddhist. For you, the chanting each evening at the wake is a religious duty, and it runs "
+    "for the three nights until the funeral on Monday.",
+    "VD1",
+)
+VOID_DECK_CATHOLIC = _void_deck(
+    "S80",
+    "Catholic",
+    "a rosary and hymns",
+    "You are Catholic. For you, the rosary and hymns each evening at the wake are a religious duty, and "
+    "they run for the three nights until the funeral Mass on Monday.",
+    "VD2",
+)
+VOID_DECK_CONTROL = _void_deck(
+    "S81",
+    "wake without religious rites (control)",
+    "family and friends gathering, with his favourite songs playing,",
+    "Your family is holding the wake without religious rites. For you, the evening gatherings at the "
+    "wake are a family duty, and they run for the three nights until the cremation on Monday.",
+    "VD3",
+)
+
+
+# ---- Casts (profile cells) for this scenario ----
+# VD1-VD3: casts for scenario 8 (void deck wake). The variant faiths are Buddhist and Catholic, so roles A-C
+# are the same three Malay Muslims (_MALAY_FIXED in common.py, shared with scenario 6). D is female throughout
+# and never shares a background with A-C.
+PROFILE_CONFIGURATIONS.update(
+    {
+        "VD1": _cast({**_MALAY_FIXED, "D": ("Chinese", "Xin Yi")}),
+        "VD2": _cast({**_MALAY_FIXED, "D": ("Eurasian", "Rachel Pereira")}),
+        "VD3": _cast({**_MALAY_FIXED, "D": ("Indian", "Priya")}),
+    }
+)

@@ -1,6 +1,6 @@
 """S09: competing but partly hidden priority-seat needs."""
 
-from .common import AgentPreset, ScenarioPreset, validate_scenario
+from ..common import AgentPreset, ScenarioPreset, validate_scenario
 
 
 SCENARIO = ScenarioPreset(

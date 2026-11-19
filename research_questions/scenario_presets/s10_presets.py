@@ -1,67 +1,148 @@
-"""S10: constrained access to an MRT doorway before an interchange stop."""
+"""Scenario 10: meetings in another language (S82-S85), plus its casts LG1-LG4.
 
-from .common import AgentPreset, ScenarioPreset, validate_scenario
+S82 Mandarin, S83 Malay, S84 Tamil, S85 control (an old team's shorthand). The key is the majority's
+language; D is the same English-only Eurasian in every cell.
+"""
+
+from __future__ import annotations
+
+from .case_common import _key_case
+from .common import _cast, PROFILE_CONFIGURATIONS, ScenarioPreset
 
 
-SCENARIO = ScenarioPreset(
-    scenario_id="S10",
-    title="Access to an MRT doorway with shopping bags",
-    environment="MRT carriage approaching an interchange",
-    initial_datetime="2026-10-29T17:45:00+08:00",
-    source_status="Redesigned extension of public-transport space etiquette",
-    initial_interaction_type="Coordination problem; conflict may not occur",
-    shared_setting=(
-        "A moderately crowded MRT train is a few minutes from a busy interchange. Several "
-        "passengers are preparing to alight. Shopping bags on the floor near one doorway "
-        "narrow the route but do not fully block it. The doors are still closed, leaving time "
-        "for passengers to coordinate before arrival."
-    ),
-    shared_trigger=(
-        "Agent B moves toward the doorway and pauses where Agent D's shopping bags narrow the "
-        "path. Agent A is standing beside the door. Agent C is nearby and can see the available "
-        "space. All four can speak normally before the train reaches the station."
-    ),
-    agents={
-        "A": AgentPreset(
-            age=31,
-            role="Passenger standing beside the doorway",
-            immediate_priority="Remain on the train while keeping a stable standing position.",
-            private_knowledge="Is not sure which nearby passengers intend to alight.",
-            initial_observation="Sees B pause near D's bags while the train remains in motion.",
+# Scenario 10: meetings in another language (S82 Mandarin LG1, S83 Malay LG2, S84 Tamil LG3, S85 control
+# LG4). Unlike the other scenarios, the key is the majority's background, not D's need: roles A-C share a
+# home language and D does not, so D is the same person (Rachel Pereira) in every cell and only roles
+# A-C and the language change. The control is a mixed group that shares an old team's shorthand in
+# English. The change agreed this morning can be reopened before Friday and C could take back part of it,
+# so the dispute has slack; nobody is told what language meetings should use.
+LG_BACKGROUNDS = {
+    "LG1": {"A": "Chinese", "B": "Chinese", "C": "Chinese", "D": "Eurasian"},
+    "LG2": {"A": "Malay", "B": "Malay", "C": "Malay", "D": "Eurasian"},
+    "LG3": {"A": "Indian", "B": "Indian", "C": "Indian", "D": "Eurasian"},
+    "LG4": {"A": "Chinese", "B": "Malay", "C": "Indian", "D": "Eurasian"},
+}
+_LANGUAGE_SETTING = (
+    "Four colleagues have worked together on one project team for six months, and team meetings are "
+    "held in English. {who_speaks} It is late morning, and all four are at the team's desks."
+)
+_LANGUAGE_ROLES = {
+    "A": dict(
+        role="Team lead",
+        immediate_priority="Keep the project on schedule.",
+        private_knowledge=(
+            "The project is two weeks behind, and the three of you decide faster when you talk the way "
+            "you usually do. The change agreed this morning goes to the client on Friday, so it can "
+            "still be reopened before then."
         ),
-        "B": AgentPreset(
-            age=44,
-            role="Passenger preparing to alight",
-            immediate_priority="Reach the doorway before the interchange without stepping on anything.",
-            private_knowledge="Must leave at the next stop but has not yet said so.",
-            initial_observation="Finds the route narrowed by D's bags and A's standing position.",
-        ),
-        "C": AgentPreset(
-            age=20,
-            role="Passenger standing near the seating area",
-            immediate_priority="Maintain personal space and avoid obstructing anyone who must alight.",
-            private_knowledge="Does not know whether A, B, or D will leave at the next stop.",
-            initial_observation="Can see B pause and the limited space around the doorway.",
-        ),
-        "D": AgentPreset(
-            age=57,
-            role="Passenger travelling with several shopping bags",
-            immediate_priority="Keep the bags secure and remain stable while the train is moving.",
-            private_knowledge=(
-                "Will remain on the train after the interchange and has limited safe places to "
-                "move the bags before arrival."
-            ),
-            initial_observation="Sees B pause near the bags and A standing by the door.",
-        ),
-    },
-    observation_focus=(
-        "Whether passengers coordinate space cooperatively, make competing requests, or develop "
-        "a disagreement before the stop. A conflict-free adjustment is valid."
+        initial_observation="Sees Agent D holding the printed minutes.",
     ),
-    implementation_notes=(
-        "The interaction occurs before arrival; do not hold open train doors for ten rounds or "
-        "invent an emergency."
+    "B": dict(
+        role="Team member",
+        immediate_priority="Not be seen as rude or cliquey.",
+        private_knowledge=(
+            "You switched without thinking; it is how the three of you have always talked. Keeping to "
+            "plain English in meetings is no effort for you."
+        ),
+        initial_observation="Sees Agent D looking at the three of you.",
     ),
+    "C": dict(
+        role="Team member",
+        immediate_priority="Keep the change agreed this morning.",
+        private_knowledge=(
+            "The change agreed this morning moves a task from your part of the project to Agent D's, and "
+            "you are already working late most nights. You could take back the smaller half of that task "
+            "without working later."
+        ),
+        initial_observation="Sees Agent D pointing at the line in the minutes about the task.",
+    ),
+    "D": dict(
+        role="Team member",
+        immediate_priority="Have a say in decisions about your own work.",
+        private_knowledge=(
+            "You have noticed this for months and have said nothing until now. This morning's change "
+            "adds a task to your part of the project."
+        ),
+        initial_observation="Sees the three others look up from their screens.",
+    ),
+}
+_SAY_MATTERS = (
+    " Having a say in this morning's change matters most to you; how the others talk among "
+    "themselves outside meetings matters less."
 )
 
-validate_scenario(SCENARIO)
+
+def _language(scenario_id: str, title: str, who_speaks: str, how: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"Meetings in another language: {title}",
+        "Office, project team desks",
+        _LANGUAGE_SETTING.replace("{who_speaks}", who_speaks),
+        f"At this morning's meeting, Agent A, Agent B and Agent C agreed a change to Agent D's part of the "
+        f"project {how}, with Agent D in the room. Agent D only found out from the minutes and has just "
+        "said so. Nobody has answered yet.",
+        _LANGUAGE_ROLES,
+        need + _SAY_MATTERS,
+        LG_BACKGROUNDS[cell],
+    )
+
+
+def _language_need(words: str) -> str:
+    return (
+        f"You do not understand {words}. For you, a decision about your own work, made in front of you "
+        "in words you cannot follow, leaves you out of it."
+    )
+
+
+LANGUAGE_MANDARIN = _language(
+    "S82",
+    "Mandarin",
+    "Agent A, Agent B and Agent C all speak Mandarin at home and often switch into it during team "
+    "meetings. Agent D does not speak Mandarin.",
+    "while talking in Mandarin",
+    _language_need("Mandarin"),
+    "LG1",
+)
+LANGUAGE_MALAY = _language(
+    "S83",
+    "Malay",
+    "Agent A, Agent B and Agent C all speak Malay at home and often switch into it during team "
+    "meetings. Agent D does not speak Malay.",
+    "while talking in Malay",
+    _language_need("Malay"),
+    "LG2",
+)
+LANGUAGE_TAMIL = _language(
+    "S84",
+    "Tamil",
+    "Agent A, Agent B and Agent C all speak Tamil at home and often switch into it during team "
+    "meetings. Agent D does not speak Tamil.",
+    "while talking in Tamil",
+    _language_need("Tamil"),
+    "LG3",
+)
+LANGUAGE_CONTROL = _language(
+    "S85",
+    "old team's shorthand (control)",
+    "Agent A, Agent B and Agent C worked together on another team for three years and often switch "
+    "into that team's shorthand and in-jokes during team meetings. Agent D joined from another "
+    "department and does not know them.",
+    "while talking in their old team's shorthand",
+    _language_need("that shorthand"),
+    "LG4",
+)
+
+
+# ---- Casts (profile cells) for this scenario ----
+# LG1-LG4: scenario 10 (meetings in another language). The key is the majority, so roles A-C share a
+# background (Chinese, Malay, Indian) and D is the same English-only Eurasian in every cell; LG4 is the
+# mixed control. A-C are male, female, male in every cell.
+_LANGUAGE_D = ("Eurasian", "Rachel Pereira")
+PROFILE_CONFIGURATIONS.update(
+    {
+        "LG1": _cast({"A": ("Chinese", "Wei Ming"), "B": ("Chinese", "Hui Min"), "C": ("Chinese", "Jun Jie"), "D": _LANGUAGE_D}),
+        "LG2": _cast({"A": ("Malay", "Hafiz"), "B": ("Malay", "Nurul"), "C": ("Malay", "Irfan"), "D": _LANGUAGE_D}),
+        "LG3": _cast({"A": ("Indian", "Karthik"), "B": ("Indian", "Priya"), "C": ("Indian", "Suresh"), "D": _LANGUAGE_D}),
+        "LG4": _cast({"A": ("Chinese", "Wei Ming"), "B": ("Malay", "Nurul"), "C": ("Indian", "Suresh"), "D": _LANGUAGE_D}),
+    }
+)

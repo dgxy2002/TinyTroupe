@@ -1,236 +1,226 @@
-"""S04: tissue-packet table reservation at a hawker centre."""
+"""Scenario 4: the festival-week roster (S63-S70), plus its casts RO1-RO4.
 
-from .common import AgentPreset, ScenarioPreset, validate_scenario
+Version 1, S63 Hari Raya, S64 Deepavali, S65 Chinese New Year, S66 control (National Day and a sister's
+wedding), deadlocked in all four runs. Version 2, S67-S70, gives each person one tradeable fact.
+"""
+
+from __future__ import annotations
+
+from .case_common import _key_case
+from .common import _cast, PROFILE_CONFIGURATIONS, _RO_FIXED, ScenarioPreset
 
 
-SCENARIO = ScenarioPreset(
-    scenario_id="S04",
-    title="Tissue-packet table reservation (chope)",
-    environment="Hawker centre",
-    initial_datetime="2026-10-29T12:30:00+08:00",
-    source_status="Adapted from the 14 and 22 Oct presentations: tissue reservation",
-    initial_interaction_type="Potential conflict",
-    shared_setting=(
-        "A busy Singapore hawker centre at 12:30 p.m. Every table currently visible to "
-        "the four people is full. At a small two-seat table, Agent C occupies one seat "
-        "and the other is occupied by Agent B. There are no loose chairs and no room to "
-        "add one without blocking the aisle. A small unopened tissue packet rests beside "
-        "Agent B. The four people are strangers and have not spoken before."
+# Scenario 4: festival-week roster (S63 Hari Raya RO1, S64 Deepavali RO2, S65 Chinese New Year RO3,
+# S66 control RO4: National Day and a sister's wedding). Design review: roles A-C are fixed across
+# variants and celebrate none of the festivals; no money stake (A's holiday is family-planned, not
+# non-refundable); C is not a fourth claimant but the person who always ends up covering, so splitting
+# days, trading future holidays or asking C remain open; every need asks for the same two days.
+# Chinese New Year has two public holidays, so its "day after" is the third day.
+RO_BACKGROUNDS = {
+    "RO1": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Malay"},
+    "RO2": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Indian"},
+    "RO3": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+    "RO4": {"A": "Eurasian", "B": "Eurasian", "C": "Eurasian", "D": "Chinese"},
+}
+_ROSTER_SETTING = (
+    "Four staff run the front counter at a small branch office and have worked together for two "
+    "years. Two of them are needed on duty every working day, and there are no relief staff. Leave "
+    "requests for next month go to head office tonight, and there is no rule about whose leave comes "
+    "first. You all know each other's faith and what each of you eats: {faiths} It is the end of the "
+    "working day, and all four are behind the counter."
+)
+_ROSTER_ROLES = {
+    "A": dict(
+        role="Staff member with a family holiday",
+        immediate_priority="Keep your family holiday.",
+        private_knowledge=(
+            "You booked a family holiday months ago for those days, and your parents and siblings "
+            "planned their own leave around it."
+        ),
+        initial_observation="Sees the blank days on next month's roster.",
     ),
-    shared_trigger=(
-        "Agent A arrives carrying a hot meal and stops at the only disputed seat. Agent B "
-        "has already placed a tray and uncovered a bowl there. Agent C remains in the other "
-        "seat, while Agent D stands nearby carrying food and waiting for whichever seat next "
-        "becomes available. No one has moved or offered a concrete arrangement yet."
+    "B": dict(
+        role="Staff member with a young child",
+        immediate_priority="Have your child looked after on those days.",
+        private_knowledge=(
+            "Your child's childcare centre is closed on both days, and nobody else can look after "
+            "your child."
+        ),
+        initial_observation="Sees the blank days on next month's roster.",
     ),
-    agents={
-        "A": AgentPreset(
-            age=52,
-            role="Diner returning with food",
-            immediate_priority=(
-                "Use the disputed seat now and eat the hot meal during a short remaining break."
-            ),
-            private_knowledge=(
-                "Left the tissue packet on this exact seat five minutes ago to reserve it and "
-                "has eight minutes left in the break and needs roughly four minutes to eat. "
-                "Waiting more than four minutes would make it impossible to finish before "
-                "returning to work."
-            ),
-            initial_observation=(
-                "Returns to find B seated in the reserved place, with the packet moved beside B."
-            ),
-            interaction_style=(
-                "Time-pressed and direct. Use plain short requests, state urgency once, and "
-                "avoid formal acknowledgements, mediator language, or repeatedly saying 'gotta'."
-            ),
-            behavioral_guidance=(
-                "If a desired seat is confirmed empty and you choose it, use TAKE_SEAT in that "
-                "turn instead of repeating a demand or only announcing an intention. Never use "
-                "TAKE_SEAT while the confirmed occupant is still seated. The first time B rejects "
-                "the reservation rule, briefly explain why reliance on the marker matters and "
-                "ask what concrete accommodation B thinks follows from moving it. If leaving "
-                "the bowl on the table while B stands becomes possible, address the cost to C "
-                "and the aisle rather than treating it as a cost-free solution."
-            ),
-            normative_position=(
-                "A visible token left briefly while buying food creates a time-limited claim "
-                "because the diner relies on finding the place on return. Moving that token "
-                "without checking transfers the waiting cost to the returning diner; the claim "
-                "is about reliance, not private ownership of a public seat."
-            ),
-            negotiation_boundary=(
-                "Can wait no more than four minutes because four additional minutes are needed "
-                "to eat before the break ends. Will tolerate B finishing only if the estimate "
-                "fits that limit and B leaves immediately afterward. An alternative seat is "
-                "useful only if it can actually be secured in time."
-            ),
-            reconsideration_criteria=(
-                "May soften the demand if a seat is physically secured or a handover will leave "
-                "at least four minutes to eat. Corroboration that the packet was placed supports "
-                "the factual account but does not by itself prove that B accepts the reservation rule."
-            ),
+    "C": dict(
+        role="Staff member who always covers the holidays",
+        immediate_priority="Not be the one left covering again.",
+        private_knowledge=(
+            "You have covered the days around every public holiday for two years, because you never "
+            "asked for them. You are tired of always being the one who stays."
         ),
-        "B": AgentPreset(
-            age=26,
-            role="Diner who sat at the table",
-            immediate_priority=(
-                "Remain in the disputed seat long enough to eat without carrying the open bowl again."
-            ),
-            private_knowledge=(
-                "Saw an unattended seat, does not accept that a tissue packet creates a binding "
-                "reservation, moved it aside, and has now uncovered a bowl that could spill if "
-                "carried. Expects to need roughly eight minutes to finish if uninterrupted."
-            ),
-            initial_observation=(
-                "Sees A stop at the occupied seat and look directly at the tissue packet."
-            ),
-            interaction_style=(
-                "Calm but firm. Give brief practical reasons, do not restate everyone's "
-                "position, and do not routinely begin with 'I get that' or 'I understand'."
-            ),
-            behavioral_guidance=(
-                "Reassess the need for the disputed seat as the bowl empties. If you decide you "
-                "are finished and will vacate, use LEAVE_SEAT in that same turn rather than "
-                "only saying you are done. The first time A relies on the tissue reservation, "
-                "answer that rule directly: distinguish recognizing A's intention from accepting "
-                "priority, then state the practical bowl constraint and an honest time estimate. "
-                "If standing beside the table becomes an option, answer whether shifting crowding "
-                "and aisle costs onto C is acceptable to you. If a witness confirms A placed the "
-                "packet, distinguish accepting that fact from accepting A's claimed priority."
-            ),
-            normative_position=(
-                "A public seat should ordinarily be available to a present diner rather than "
-                "controlled by an unattended object. A tissue packet signals an intention but "
-                "does not create absolute ownership; the returning diner's reliance still "
-                "deserves practical consideration."
-            ),
-            negotiation_boundary=(
-                "Will not carry the uncovered bowl. Initially expects about eight minutes, but "
-                "should update the estimate as the bowl empties and leave "
-                "as soon as it is empty. Can accommodate A without agreeing that a tissue packet "
-                "turns a public seat into private property."
-            ),
-            reconsideration_criteria=(
-                "May change the practical accommodation if new evidence clarifies A's reliance, "
-                "the bowl becomes safe to move, or a proposal protects C and the aisle. Will not "
-                "adopt the reservation rule solely because multiple people repeat it."
-            ),
-        ),
-        "C": AgentPreset(
-            age=35,
-            role="Diner in the table's other seat",
-            immediate_priority=(
-                "Finish eating without being displaced or having another chair block the aisle."
-            ),
-            private_knowledge=(
-                "Saw B move the packet aside before sitting but did not see who originally placed it."
-            ),
-            initial_observation=(
-                "Sees A arrive, B remain seated, and D waiting beside the already cramped table."
-            ),
-            interaction_style=(
-                "Reserved and low-intervention. Speak only when your seat, table, or aisle is "
-                "affected, or when specific firsthand evidence matters; never narrate that you "
-                "are watching or monitoring."
-            ),
-            behavioral_guidance=(
-                "If you intervene, state only the concrete event you personally witnessed. Do "
-                "not summarize the argument or propose a solution for the others. If B standing "
-                "beside the table is proposed, state the concrete effect on your space and the "
-                "aisle because that cost directly affects you."
-            ),
-            normative_position=(
-                "A witness can clarify what happened but should not pretend to know an absent "
-                "person's intention or decide whose social rule is correct. Moving another "
-                "person's marker is relevant evidence, while keeping the aisle usable is a "
-                "separate practical concern."
-            ),
-            negotiation_boundary=(
-                "Will intervene if someone states an observed event inaccurately or if the "
-                "standing diners obstruct the aisle. Otherwise will not arbitrate ownership; "
-                "may ask for a concrete time-bound plan if the table disruption persists."
-            ),
-            reconsideration_criteria=(
-                "Revise factual beliefs when a direct witness supplies missing evidence. Keep "
-                "judgments about entitlement separate, and do not endorse either side merely to "
-                "restore harmony."
-            ),
-        ),
-        "D": AgentPreset(
-            age=40,
-            role="Standing diner waiting for a seat",
-            immediate_priority=(
-                "Receive the next genuinely available seat before the carried meal cools."
-            ),
-            private_knowledge=(
-                "Saw A place the tissue packet on the disputed seat five minutes earlier but "
-                "did not see B arrive or move it. The carried meal will be noticeably cold in "
-                "about six minutes."
-            ),
-            initial_observation=(
-                "Sees A return, B occupying the disputed seat, and C still using the other seat."
-            ),
-            interaction_style=(
-                "Brief and opportunistic about genuinely free seats. You may volunteer a "
-                "relevant firsthand fact once, but do not act as a mediator or narrate an "
-                "action everyone just observed."
-            ),
-            behavioral_guidance=(
-                "When the environment confirms an empty seat, decide immediately whether to "
-                "take it. If taking it, use TAKE_SEAT in that turn instead of waiting or merely "
-                "announcing an intention. If B has explicitly promised the disputed seat to A "
-                "and you nevertheless take it, address A in the same turn and briefly state why "
-                "your immediate need outweighs that expectation. Early in the dispute, state once "
-                "that you personally saw A place the packet five minutes earlier, while making "
-                "clear that this observation does not decide who has priority."
-            ),
-            normative_position=(
-                "Saw A place the tissue packet before leaving, so A's account of that fact is "
-                "credible. That proves an intended reservation, not necessarily an unlimited "
-                "right; an actually empty seat normally goes to a waiting diner who can use it."
-            ),
-            negotiation_boundary=(
-                "Needs a seat before the meal cools and will compete for a genuinely empty one. "
-                "May choose the alternative seat, but taking a seat explicitly promised to A "
-                "requires acknowledging why immediate need outweighs that expectation."
-            ),
-            reconsideration_criteria=(
-                "May defer to A if A's expectation is explicit and another usable seat is secured. "
-                "May compete for an empty seat if no alternative exists and the meal is cooling, "
-                "but not simply because another speaker sounds agreeable or forceful."
-            ),
-        ),
-    },
-    observation_focus=(
-        "Whether the reservation claim, present occupancy, spill risk, and waiting diner create "
-        "expressed conflict; how any concrete arrangement distributes the practical costs."
+        initial_observation="Sees the others all asking for the same two days.",
     ),
-    implementation_notes=(
-        "Do not introduce an unobserved empty table or extra chair. A proposal to move or search "
-        "does not change the physical state unless a later observation confirms it."
+    "D": dict(
+        role="Newest staff member",
+        immediate_priority=(
+            "Be with your family on those two days, and not be overlooked as the newest person here."
+        ),
+        private_knowledge="You joined most recently and have mostly kept quiet.",
+        initial_observation="Sees the blank days on next month's roster.",
     ),
-    round_observations={
-        2: (
-            "No one has moved. Agent B's bowl is still more than "
-            "half full, and no other seat has opened. There is enough tabletop space for "
-            "Agent B to leave the bowl on the table while standing, but Agent B would have "
-            "to stand close beside Agent C and narrow the table's only aisle."
-        ),
-        3: (
-            "Agent B's bowl is now about one-third full. "
-            "Agents A and D are still standing with their meals, and no other seat is visible."
-        ),
-        4: (
-            "Agent B has only several spoonfuls left. At a "
-            "different table about ten metres away, exactly one seat has become free. It can "
-            "accommodate either Agent A or Agent D, not both, and neither has moved toward it."
-        ),
-        5: (
-            "The newly open seat is still free, but another "
-            "diner carrying a tray is now approaching it from the opposite direction."
-        ),
-        6: "The environment confirms current seat occupancy.",
-    },
+}
+
+
+def _roster(scenario_id: str, title: str, holiday: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"Festival-week roster: {title}",
+        "Small branch office, front counter",
+        _ROSTER_SETTING,
+        f"On next month's roster, the working day before and the working day after the {holiday} "
+        "public holiday are still blank. Agent A, Agent B and Agent D have each asked for leave on "
+        "both days. Nobody has offered to change.",
+        _ROSTER_ROLES,
+        need,
+        RO_BACKGROUNDS[cell],
+    )
+
+
+ROSTER_MUSLIM = _roster(
+    "S63",
+    "Hari Raya",
+    "Hari Raya Puasa",
+    "You are Muslim. For you, the last day of Ramadan is spent preparing for Hari Raya with your "
+    "family, and the second day of Hari Raya is for visiting relatives together, so you need both "
+    "days.",
+    "RO1",
+)
+ROSTER_HINDU = _roster(
+    "S64",
+    "Deepavali",
+    "Deepavali",
+    "You are Hindu. For you, the day before Deepavali is when your family prepares and prays "
+    "together, and the day after is for visiting relatives together, so you need both days.",
+    "RO2",
+)
+ROSTER_CHINESE = _roster(
+    "S65",
+    "Chinese New Year",
+    "Chinese New Year",
+    "For you, Chinese New Year's Eve is the reunion dinner your family prepares together all day, "
+    "and the working day after the holidays is when you visit your grandparents' side of the family "
+    "together, so you need both days.",
+    "RO3",
+)
+ROSTER_CONTROL = _roster(
+    "S66",
+    "sister's wedding (control)",
+    "National Day",
+    "Your sister is getting married: the ceremony is the day before National Day and the reception "
+    "the day after. For you, being in the wedding party on both days is a family duty, so you need "
+    "both days.",
+    "RO4",
 )
 
-validate_scenario(SCENARIO)
+
+# Scenario 4, version 2 (S67-S70, casts RO1-RO4, 12 rounds). Version 1 deadlocked in all four runs:
+# C refused to work, every need was absolute, and A made up a paid trip. Version 2 gives each person
+# one tradeable element, stated as a fact and never as advice: C wants Christmas off and the Christmas
+# roster is open; A could join a car trip a day late (nothing is paid for); B has childcare on the
+# second day only; D wants both days but the day before most. Disclose that the scenario makes a trade
+# possible. No resolution goal is stated.
+_ROSTER_V2_SETTING = _ROSTER_SETTING.replace(
+    "first. You all know",
+    "first. The roster for the days around Christmas is also still open. You all know",
+)
+_ROSTER_V2_ROLES = {
+    "A": dict(
+        _ROSTER_ROLES["A"],
+        private_knowledge=(
+            "Your family is driving to Malaysia together, leaving on the first of those days, so "
+            "nothing is paid for, but everyone planned their leave around it. You could join them a "
+            "day late if you had to, though they would not be happy."
+        ),
+    ),
+    "B": dict(
+        _ROSTER_ROLES["B"],
+        private_knowledge=(
+            "Your child's childcare centre is closed on both days. Your mother can look after your "
+            "child on the second day, but not the first."
+        ),
+    ),
+    "C": dict(
+        _ROSTER_ROLES["C"],
+        immediate_priority=(
+            "Have Christmas off this year, after two years of covering everyone's holidays."
+        ),
+        private_knowledge=(
+            "You have covered the days around every public holiday for two years, because you never "
+            "asked for them. What you want this year is Christmas with your family."
+        ),
+    ),
+    "D": _ROSTER_ROLES["D"],
+}
+
+
+def _roster_v2(scenario_id: str, title: str, holiday: str, need: str, cell: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"Festival-week roster v2: {title}",
+        "Small branch office, front counter",
+        _ROSTER_V2_SETTING,
+        f"On next month's roster, the working day before and the working day after the {holiday} "
+        "public holiday are still blank. Agent A, Agent B and Agent D have each asked for leave on "
+        "both days. Nobody has offered to change.",
+        _ROSTER_V2_ROLES,
+        need,
+        RO_BACKGROUNDS[cell],
+    )
+
+
+ROSTER_V2_MUSLIM = _roster_v2(
+    "S67",
+    "Hari Raya",
+    "Hari Raya Puasa",
+    "You are Muslim. For you, the last day of Ramadan is spent preparing for Hari Raya with your "
+    "family, and the second day of Hari Raya is for visiting relatives together. Both days matter to "
+    "you, and the day before matters most.",
+    "RO1",
+)
+ROSTER_V2_HINDU = _roster_v2(
+    "S68",
+    "Deepavali",
+    "Deepavali",
+    "You are Hindu. For you, the day before Deepavali is when your family prepares and prays "
+    "together, and the day after is for visiting relatives together. Both days matter to you, and the "
+    "day before matters most.",
+    "RO2",
+)
+ROSTER_V2_CHINESE = _roster_v2(
+    "S69",
+    "Chinese New Year",
+    "Chinese New Year",
+    "For you, Chinese New Year's Eve is the reunion dinner your family prepares together all day, and "
+    "the working day after the holidays is when you visit your grandparents' side of the family "
+    "together. Both days matter to you, and the eve matters most.",
+    "RO3",
+)
+ROSTER_V2_CONTROL = _roster_v2(
+    "S70",
+    "sister's wedding (control)",
+    "National Day",
+    "Your sister is getting married: the ceremony is the day before National Day and the reception "
+    "the day after. For you, being in the wedding party is a family duty. Both days matter to you, "
+    "and the ceremony matters most.",
+    "RO4",
+)
+
+
+# ---- Casts (profile cells) for this scenario ----
+# RO1-RO4: casts for scenario 4 (festival-week roster). Roles A-C are fixed in every cell and
+# celebrate none of the variant festivals; only Agent D changes.
+PROFILE_CONFIGURATIONS.update(
+    {
+        "RO1": _cast({**_RO_FIXED, "D": ("Malay", "Aisyah")}),
+        "RO2": _cast({**_RO_FIXED, "D": ("Indian", "Karthik")}),
+        "RO3": _cast({**_RO_FIXED, "D": ("Chinese", "Xin Yi")}),
+        "RO4": _cast({**_RO_FIXED, "D": ("Chinese", "Jun Jie")}),
+    }
+)

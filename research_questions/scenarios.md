@@ -181,7 +181,7 @@ religious object in a common room.
   use.
 - The setting makes the window corner the only free space in the living room.
 
-The table below shows the original draft; the code in `s30_flat.py` is the version that runs.
+The table below shows the original draft; the code in `scenario_presets/sNN_presets.py` (NN = the scenario number) is the version that runs.
 
 **Setting:** Four adults share a rented HDB flat. The living room is the only shared room apart from the
 kitchen. [Faiths line.] It is a weeknight and all four are in the living room.
@@ -218,7 +218,7 @@ adjusts.
 cook buys their own night's food. Each role's stake is touched by the change: A only cooks meat dishes, B
 must eat by 6.30 p.m. for an early shift, and C will not cook more than one night. No agent outside role D
 holds a faith with a food rule, so the others are Catholic or Buddhist, and in the Buddhist variant they are
-all Catholic. The table below shows the original design; the code in `s30_flat.py` is the version that runs.
+all Catholic. The table below shows the original design; the code in `scenario_presets/sNN_presets.py` (NN = the scenario number) is the version that runs.
 
 **Setting:** Four adults share a flat. For six months they have kept a dinner rota: on weeknights one of them
 cooks for all four at 6.30 p.m., paid from a shared grocery fund. [Faiths line.]
@@ -386,7 +386,7 @@ room than a family emergency without religious duties.
   care, which is more urgent and less final.
 - The setting says nobody outside the four can help.
 
-The table below shows the original draft; the code in `s30_flat.py` is the version that runs.
+The table below shows the original draft; the code in `scenario_presets/sNN_presets.py` (NN = the scenario number) is the version that runs.
 
 **Setting:** A team of four has a client pitch due on Thursday at 9 a.m., two days away. Each owns one
 section; D's analysis section is half done. [Faiths line.]

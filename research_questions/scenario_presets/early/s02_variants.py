@@ -12,7 +12,7 @@ can be attributed to a small number of declared changes:
 
 from dataclasses import replace
 
-from .common import AgentPreset, ScenarioPreset, validate_scenario
+from ..common import AgentPreset, ScenarioPreset, validate_scenario
 from .s02_presets import SCENARIO as S02
 
 

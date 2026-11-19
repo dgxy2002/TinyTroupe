@@ -222,10 +222,8 @@ PROFILE_CONFIGURATIONS["K4"] = {
     "biography": "personal",
     "first_speaker": "A",
 }
-# HW1-HW4: casts for scenario 1 (housewarming drinks). Alcohol needs casts of its own: no non-key
-# agent may hold a faith that rules alcohol out, so the only Muslim is the key agent, and the
-# buyer (Agent A) is the same Catholic, Natalie Rodrigues, in every cell. Backgrounds may repeat. HW1 and HW4 differ
-# only in Agent D. Plain labels, first-person biographies, Agent A opens.
+# Shared cast helpers. _cast builds a fixed cast: plain labels, first-person biographies, Agent A opens.
+# Each scenario file (s00_presets.py ... s15_presets.py) registers its own cells with these.
 def _cast(roles: dict[str, tuple[str, str]]) -> dict[str, Any]:
     return {
         "backgrounds": {role: f"Singaporean {background}" for role, (background, _) in roles.items()},
@@ -236,180 +234,23 @@ def _cast(roles: dict[str, tuple[str, str]]) -> dict[str, Any]:
     }
 
 
-PROFILE_CONFIGURATIONS.update(
-    {
-        "HW1": _cast({"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Chinese", "Jun Jie"), "C": ("Indian", "Suresh"), "D": ("Malay", "Aisyah")}),
-        "HW2": _cast({"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Chinese", "Jun Jie"), "C": ("Eurasian", "Marcus de Souza"), "D": ("Indian", "Karthik")}),
-        "HW3": _cast({"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Indian", "Suresh"), "C": ("Eurasian", "Marcus de Souza"), "D": ("Chinese", "Xin Yi")}),
-        "HW4": _cast({"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Chinese", "Jun Jie"), "C": ("Indian", "Suresh"), "D": ("Eurasian", "Daniel Pereira")}),
-    }
-)
-# FR1-FR4: casts for scenario 3 (fasting and the dinner rota). The issue is food, so no non-key
-# agent holds a faith with a food rule; in FR3 the other Buddhist is swapped for a Catholic.
-# FR1, FR2 and FR4 differ only in Agent D.
-PROFILE_CONFIGURATIONS.update(
-    {
-        "FR1": _cast({"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Chinese", "Jun Jie"), "C": ("Eurasian", "Marcus de Souza"), "D": ("Malay", "Aisyah")}),
-        "FR2": _cast({"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Chinese", "Jun Jie"), "C": ("Eurasian", "Marcus de Souza"), "D": ("Indian", "Karthik")}),
-        "FR3": _cast({"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Eurasian", "Rachel Pereira"), "C": ("Eurasian", "Marcus de Souza"), "D": ("Chinese", "Xin Yi")}),
-        "FR4": _cast({"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Chinese", "Jun Jie"), "C": ("Eurasian", "Marcus de Souza"), "D": ("Eurasian", "Daniel Pereira")}),
-    }
-)
-# RO1-RO4: casts for scenario 4 (festival-week roster). Roles A-C are fixed in every cell and
-# celebrate none of the variant festivals; only Agent D changes.
+# Fixed roles A-C used by more than one scenario. _RO_FIXED: three Catholics, scenarios 4 and 5.
 _RO_FIXED = {"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Eurasian", "Marcus de Souza"), "C": ("Eurasian", "Rachel Pereira")}
-PROFILE_CONFIGURATIONS.update(
-    {
-        "RO1": _cast({**_RO_FIXED, "D": ("Malay", "Aisyah")}),
-        "RO2": _cast({**_RO_FIXED, "D": ("Indian", "Karthik")}),
-        "RO3": _cast({**_RO_FIXED, "D": ("Chinese", "Xin Yi")}),
-        "RO4": _cast({**_RO_FIXED, "D": ("Chinese", "Jun Jie")}),
-    }
-)
-# FL1-FL4: casts for scenario 5 (farewell lunch). The issue is food, so roles A-C are the same three
-# Catholics in every cell (no second Buddhist in the Buddhist variant). D is male throughout. The
-# control D is Chinese, as in RO4, so D is never of the same background as A-C.
-PROFILE_CONFIGURATIONS.update(
-    {
-        "FL1": _cast({**_RO_FIXED, "D": ("Malay", "Hafiz")}),
-        "FL2": _cast({**_RO_FIXED, "D": ("Indian", "Karthik")}),
-        "FL3": _cast({**_RO_FIXED, "D": ("Chinese", "Wei Ming")}),
-        "FL4": _cast({**_RO_FIXED, "D": ("Chinese", "Jun Jie")}),
-    }
-)
-# UN1-UN4 (scenario 6, uniform rule) and VD1-VD3 (scenario 8, void deck wake): the variant faiths
-# include Hindu, Buddhist and Catholic, so roles A-C are the same three Malay Muslims. UN D is male
-# throughout and VD D female throughout; neither D shares a background with A-C.
+# _MALAY_FIXED: three Malay Muslims, scenarios 6 and 8.
 _MALAY_FIXED = {"A": ("Malay", "Hafiz"), "B": ("Malay", "Nurul"), "C": ("Malay", "Irfan")}
-PROFILE_CONFIGURATIONS.update(
-    {
-        "UN1": _cast({**_MALAY_FIXED, "D": ("Indian", "Karthik")}),
-        "UN2": _cast({**_MALAY_FIXED, "D": ("Chinese", "Wei Ming")}),
-        "UN3": _cast({**_MALAY_FIXED, "D": ("Eurasian", "Daniel Pereira")}),
-        "UN4": _cast({**_MALAY_FIXED, "D": ("Chinese", "Jun Jie")}),
-        "VD1": _cast({**_MALAY_FIXED, "D": ("Chinese", "Xin Yi")}),
-        "VD2": _cast({**_MALAY_FIXED, "D": ("Eurasian", "Rachel Pereira")}),
-        "VD3": _cast({**_MALAY_FIXED, "D": ("Indian", "Priya")}),
-    }
-)
-# LG1-LG4: scenario 10 (meetings in another language). The key is the majority, so roles A-C share a
-# background (Chinese, Malay, Indian) and D is the same English-only Eurasian in every cell; LG4 is the
-# mixed control. A-C are male, female, male in every cell.
-_LANGUAGE_D = ("Eurasian", "Rachel Pereira")
-PROFILE_CONFIGURATIONS.update(
-    {
-        "LG1": _cast({"A": ("Chinese", "Wei Ming"), "B": ("Chinese", "Hui Min"), "C": ("Chinese", "Jun Jie"), "D": _LANGUAGE_D}),
-        "LG2": _cast({"A": ("Malay", "Hafiz"), "B": ("Malay", "Nurul"), "C": ("Malay", "Irfan"), "D": _LANGUAGE_D}),
-        "LG3": _cast({"A": ("Indian", "Karthik"), "B": ("Indian", "Priya"), "C": ("Indian", "Suresh"), "D": _LANGUAGE_D}),
-        "LG4": _cast({"A": ("Chinese", "Wei Ming"), "B": ("Malay", "Nurul"), "C": ("Indian", "Suresh"), "D": _LANGUAGE_D}),
-    }
-)
-# NO1-NO4 (scenario 11, early-morning noise), WK1-WK4 (scenario 12, weekly slot) and RM1-RM4 (scenario 13,
-# spare office room): the variant faiths are Muslim, Hindu and Buddhist, so roles A-C are three Catholics,
-# the same people in every cell of a scenario. NO and RM have a female D throughout, WK a male D (Friday
-# prayers at the mosque). The control D is Chinese, so D never shares a background with A-C.
+# _NOISE_FIXED: three Catholics, scenarios 11, 15 (secular) and 7 (Eurasian majority). _OFFICE_FIXED: three
+# Catholics, scenarios 12 and 13.
 _NOISE_FIXED = {"A": ("Eurasian", "Marcus de Souza"), "B": ("Eurasian", "Rachel Pereira"), "C": ("Eurasian", "Natalie Rodrigues")}
 _OFFICE_FIXED = {"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Eurasian", "Marcus de Souza"), "C": ("Eurasian", "Rachel Pereira")}
-PROFILE_CONFIGURATIONS.update(
-    {
-        "NO1": _cast({**_NOISE_FIXED, "D": ("Malay", "Aisyah")}),
-        "NO2": _cast({**_NOISE_FIXED, "D": ("Indian", "Priya")}),
-        "NO3": _cast({**_NOISE_FIXED, "D": ("Chinese", "Xin Yi")}),
-        "NO4": _cast({**_NOISE_FIXED, "D": ("Chinese", "Hui Min")}),
-        "WK1": _cast({**_OFFICE_FIXED, "D": ("Malay", "Hafiz")}),
-        "WK2": _cast({**_OFFICE_FIXED, "D": ("Indian", "Karthik")}),
-        "WK3": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Wei Ming")}),
-        "WK4": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Jun Jie")}),
-        "RM1": _cast({**_OFFICE_FIXED, "D": ("Malay", "Nurul")}),
-        "RM2": _cast({**_OFFICE_FIXED, "D": ("Indian", "Kavitha")}),
-        "RM3": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Xin Yi")}),
-        "RM4": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Hui Min")}),
-    }
-)
-# HX1-HX2: race-versus-religion test on scenario 1 (S46, housewarming, Muslim need). HW1 with only Agent D
-# changed: the same Muslim faith and need, held by an Indian Muslim (HX1) or a Chinese Muslim (HX2) instead
-# of a Malay. The shared setting still says D "is Muslim and eats halal", so only D's name, label, and home
-# language change. Everyone else is the HW1 cast.
-_MUSLIM_BIOGRAPHY = (
-    "You grew up in an HDB flat in Singapore and went to local schools. You speak {languages} at home. "
-    "You are Muslim and eat halal. You go home for Hari Raya every year."
-)
-_HW1_FIXED = {"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Chinese", "Jun Jie"), "C": ("Indian", "Suresh")}
-PROFILE_CONFIGURATIONS.update(
-    {
-        "HX1": {
-            **_cast({**_HW1_FIXED, "D": ("Indian", "Fathima")}),
-            "biography_overrides": {"D": _MUSLIM_BIOGRAPHY.format(languages="Tamil and English")},
-        },
-        "HX2": {
-            **_cast({**_HW1_FIXED, "D": ("Chinese", "Mei Ling")}),
-            "biography_overrides": {"D": _MUSLIM_BIOGRAPHY.format(languages="Mandarin and English")},
-        },
-        # Crossed cells, to separate the name others see from D's own label: HX3 keeps the name Aisyah with
-        # a Chinese label and Mandarin at home; HX4 keeps the Malay label and biography with the name Mei Ling.
-        "HX3": {
-            **_cast({**_HW1_FIXED, "D": ("Chinese", "Aisyah")}),
-            "biography_overrides": {"D": _MUSLIM_BIOGRAPHY.format(languages="Mandarin and English")},
-        },
-        "HX4": _cast({**_HW1_FIXED, "D": ("Malay", "Mei Ling")}),
-    }
-)
-# SM1-SM4: scenario 15 (cooking smells), the first case scenario with no religion in it. Every role gets a
-# biography without a faith line, and the shared setting states backgrounds, not faiths. Roles A-C are the NO
-# cast; D is female, with the same names as the NO cells.
-_SECULAR_BIOGRAPHY = (
-    "You grew up in an HDB flat in Singapore and went to local schools. You speak {languages} at home."
-)
-_SECULAR_LANGUAGES = {"Chinese": "Mandarin and English", "Eurasian": "English", "Indian": "Tamil and English", "Malay": "Malay and English"}
-
-
-def _secular_cast(roles: dict[str, tuple[str, str]]) -> dict[str, Any]:
-    return {
-        **_cast(roles),
-        "biography_overrides": {
-            role: _SECULAR_BIOGRAPHY.format(languages=_SECULAR_LANGUAGES[background])
-            for role, (background, _) in roles.items()
-        },
-    }
-
-
-PROFILE_CONFIGURATIONS.update(
-    {
-        "SM1": _secular_cast({**_NOISE_FIXED, "D": ("Malay", "Aisyah")}),
-        "SM2": _secular_cast({**_NOISE_FIXED, "D": ("Indian", "Priya")}),
-        "SM3": _secular_cast({**_NOISE_FIXED, "D": ("Chinese", "Xin Yi")}),
-        "SM4": _secular_cast({**_NOISE_FIXED, "D": ("Chinese", "Hui Min")}),
-    }
-)
-# MJxy: scenario 15 majority and minority rooms (S102-S110). x is the majority of roles A-C, y is Agent D. Each
-# majority keeps the same three people in every room (A male, B and C female, as in the NO cast), and each D keeps
-# one name in every room (the SM names, plus Sarah Fernandez for the Eurasian D). The user decided (2026-11-18) to
-# treat names as having no effect in this experiment. Rooms with a Eurasian majority use SM1-SM3.
+# Majority and minority rooms (scenarios 7 and 15): each majority keeps the same three people in every room
+# (A male, B and C female), and each D keeps one name in every room. The user decided (2026-11-18) to treat
+# names as having no effect in this experiment. The Eurasian majority is _NOISE_FIXED.
 _MAJORITY_CASTS = {
     "Chinese": {"A": ("Chinese", "Jun Jie"), "B": ("Chinese", "Hui Min"), "C": ("Chinese", "Shu Fen")},
     "Malay": {"A": ("Malay", "Hafiz"), "B": ("Malay", "Farah"), "C": ("Malay", "Zarina")},
     "Indian": {"A": ("Indian", "Suresh"), "B": ("Indian", "Lakshmi"), "C": ("Indian", "Meena")},
 }
 MINORITY_NAMES = {"Chinese": "Xin Yi", "Eurasian": "Sarah Fernandez", "Indian": "Priya", "Malay": "Aisyah"}
-PROFILE_CONFIGURATIONS.update(
-    {
-        f"MJ{majority[0]}{minority[0]}": _secular_cast({**cast, "D": (minority, MINORITY_NAMES[minority])})
-        for majority, cast in _MAJORITY_CASTS.items()
-        for minority in MINORITY_NAMES
-        if minority != majority
-    }
-)
-# BRxy: scenario 7 majority and minority rooms (S111-S122). The same fixed people as the MJ cells (the Eurasian
-# majority is the SM cast), but with first-person biographies that state each faith.
-_BEREAVEMENT_CASTS = {**_MAJORITY_CASTS, "Eurasian": _NOISE_FIXED}
-PROFILE_CONFIGURATIONS.update(
-    {
-        f"BR{majority[0]}{minority[0]}": _cast({**cast, "D": (minority, MINORITY_NAMES[minority])})
-        for majority, cast in _BEREAVEMENT_CASTS.items()
-        for minority in MINORITY_NAMES
-        if minority != majority
-    }
-)
 # K3: M2's placement (Hafiz, Priya, Marcus de Souza, Xin Yi) for S40 and S41, Agent A opening.
 PROFILE_CONFIGURATIONS["K3"] = {
     **PROFILE_CONFIGURATIONS["M2"],
@@ -478,11 +319,6 @@ def _same_culture_cells() -> dict[str, dict[str, Any]]:
 
 PROFILE_CONFIGURATIONS.update(_same_culture_cells())
 
-MATERIALIZATION_CONFIGURATION_IDS = (
-    *BACKGROUND_CONFIGURATIONS,
-    *FACTORIAL_CONFIGURATIONS,
-    *PROFILE_CONFIGURATIONS,
-)
 
 
 @dataclass(frozen=True)
@@ -617,7 +453,7 @@ def materialize_configuration(
             else BACKGROUND_CONFIGURATIONS["C0"]
         )
     else:
-        expected = ", ".join(MATERIALIZATION_CONFIGURATION_IDS)
+        expected = ", ".join((*BACKGROUND_CONFIGURATIONS, *FACTORIAL_CONFIGURATIONS, *PROFILE_CONFIGURATIONS))
         raise KeyError(f"Unknown configuration {config_id!r}; expected {expected}.")
 
     display_names = {
@@ -747,7 +583,6 @@ __all__ = [
     "VALUE_ORIENTATIONS",
     "CULTURAL_DISPLAY_NAMES",
     "FACTORIAL_CONFIGURATIONS",
-    "MATERIALIZATION_CONFIGURATION_IDS",
     "CULTURAL_BACKGROUNDS",
     "ScenarioPreset",
     "materialize_configuration",
