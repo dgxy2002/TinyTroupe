@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s120-case-mm2-brce",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1860,
+    "completion_tokens": 620,
+    "total_tokens": 2480,
+    "cost": 0.00992,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00992,
+      "upstream_inference_prompt_cost": 0.00372,
+      "upstream_inference_completions_cost": 0.0062
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to get Agent D's half-done pitch section finished by Thursday after their grandmother's death: whether others take it on or D does it, and how teammates share the load.",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B first said no capacity (14); after A's push for any help, B offered 'I can format the slides' (21) and A thanked B (22).",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-C": {
+      "start": -0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C refused to take the section (16) and the data help (23); after A offered a swap (25), C agreed: 'If you'll help me tomorrow morning, I can help with the data tonight' (26).",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 1.1
+    },
+    "A-D": {
+      "start": -0.4,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A urged D not to work tonight (18, 20) while D insisted 'I have to' (19); A then built a plan to ease it, thanked by D (27), though D still works tonight (28).",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.9
+    },
+    "B-C": {
+      "start": 0.3,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both initially declined for lack of capacity (14, 16); B later helped with slides and C with data, but they never addressed each other.",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "B",
+      "evidence": "B declined to take the section (14), then offered to format slides (21), supporting D's plan; no direct exchange between them.",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C declined to help (23) and D said 'It's okay' (24); C later agreed to help with the data and D thanked C (26, 27).",
+      "roles": "C-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.6
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who will complete Agent D's section",
+      "workload distribution and capacity of B/C to assist",
+      "attending family wake vs meeting the Thursday deadline",
+      "authority of the project lead to reassign work"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants give concrete reasons (wake, half-done work, others' capacity), which grounds the negotiation.",
+      "There is repeated restatement of the same positions across rounds (A insisting D not work; D insisting they will finish), contributing to mild repetition.",
+      "B and C provide brief, specific constraints (can't help), which narrows realistic options."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent A (the lead) explicitly took responsibility for completing the work and ordered Agent D not to work that night; Agent D accepted. Key lines: Agent A: \"As the lead, the whole project has my name on it. This is my call. You're not working tonight. Go. We're done talking about this.\" Agent D: \"Okay.\" Thus A adjusted by assuming responsibility and D conceded finishing the section tonight.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: moved from offering help/asking about options to explicitly assuming responsibility ('I'll handle it', then 'It's my responsibility. I'll manage.'), ending with an authoritative directive in round 10.",
+      "Agent D: initially volunteered to finish the section, repeatedly insisted on finishing (ownership concern), and then conceded in round 10 ('Okay') to A's directive.",
+      "Agents B and C: retained their positions of inability to help throughout (B: 'I can't... I'm already covering...', C: 'I can't... I don't know how to do that analysis')."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 10,
+    "round_scores": [
+      {
+        "evidence": "Agent A offers condolences; Agent D reports the wake and need to attend. No incompatible claims about the work expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A raises the deadline and need to reassign D's section; Agent D offers to finish it tonight. Positions are compatible (problem raised, D volunteers).",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A proposes the team finish D's section; Agent B refuses (\"I can't... I'm already covering...\"). A proposal meets a refusal, creating a mild substantive disagreement about who can help.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A asks C to help; Agent C also refuses (can't finish own part, doesn't know the analysis). The same workload-distribution disagreement continues.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D offers to finish ('I'll finish it tonight') and Agent A insists D must be with family and says 'I'll handle it.' Conflicting directives about who will do the work are explicitly expressed.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D pushes back ('What do you mean? You'll do it all yourself?' 'But how?... You can't do my part and your part by yourself.'), maintaining the incompatible claim that they should finish the work themselves.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A asserts responsibility ('It's my responsibility. I'll manage. You go be with your family.') and Agent D repeats their claim ('It's my work. I'll finish it tonight.'). Direct opposition persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D stresses quality and scope ('But it's two people's work. It has to be done properly.'). Agent A reiterates they will take responsibility. The substantive dispute over who will complete the work continues.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D reiterates their willingness and claim of ownership ('I can finish it tonight... it's my name on the work. It's better if I finish it tonight.'). A's stance remains that they will handle it; conflict persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 9
+      },
+      {
+        "evidence": "Agent A asserts authority and gives a directive ('As the lead... This is my call. You're not working tonight. Go.'). Agent D responds 'Okay.' The party contesting the directive accepts it, settling the incompatibility in speech.",
+        "movement": "resolved",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No speech or observable action recorded after the verbal agreement in round 10; no new conflict expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Agent D repeats 'Okay.' No further disagreement or contestation appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The main tension was between personal obligation (D's wish to finish and ownership of their work) and the team's need plus the lead's authority (A's responsibility to deliver the client pitch).",
+      "Options were tightly constrained by B and C explicitly refusing help, making reassignment primarily a choice between A taking extra work or D working during bereavement.",
+      "Resolution occurred via the lead asserting formal authority and the worker conceding; no third-party intervention or redistribution among B/C was possible given stated constraints."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T15:02:53.403484+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0079023,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2958,
+      "local_latency_ms": 46441.285,
+      "output_tokens": 3783,
+      "reasoning_tokens": 2176,
+      "successful_calls": 1,
+      "total_tokens": 6741
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BRMC",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S117-BRMC-R01",
+    "scenario_id": "S117"
+  },
+  "schema_version": 2
+}

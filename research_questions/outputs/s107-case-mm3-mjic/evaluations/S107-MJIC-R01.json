@@ -1,0 +1,152 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "strong-smelling cooking in shared kitchen",
+      "smell affecting rooms and laundry",
+      "impact of kitchen odor on work in living room"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Speakers provide concrete reasons (smell into room, laundry, work) which supports substantive negotiation.",
+      "Agent D initially defends cooking as inherently smelly ('All cooking has smells. It's a kitchen.') before accepting a compromise.",
+      "Agent A repeatedly restates closure ('Okay, great. Glad we could agree.'), producing noticeable repetition across rounds.",
+      "After the explicit settlement in round 5, subsequent rounds mostly repeat or reaffirm the same agreement."
+    ],
+    "dialogue_repetition_score": 4,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By round 5 the household endorsed a compromise: no very strong-smelling food on weekday evenings, with weekends allowed. Evidence: Agent A proposed the weekday restriction ('no super strong-smelling food on weekday nights?'), Agents B and C accepted it, and Agent D explicitly conceded ('Okay. Weekends are fine.'). Agent A acknowledged the agreement ('Okay, great. Glad we could agree.').",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: shifted from asking 'nobody cook strong-smelling food' to proposing a shared rule limiting 'super strong-smelling food on weekday nights' (evidence: Turn 7).",
+      "Agent D: initially resisted by pointing out cooking smells generally ('All cooking has smells.') and deflecting ('Your curries have strong smells too.'), then conceded to the weekday/weekend compromise ('Okay. Weekends are fine.') in round 5.",
+      "Agents B and C: consistently supported A's concern and the subsequent compromise (Turns 2, 3, 8, 11).",
+      "Overall: several participants softened or adjusted positions to accept a time-bound compromise, producing a lasting spoken agreement."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent B and C support Agent A's request ('I agree. The smell gets into my room.'; 'My laundry too.'), so a preference conflict exists but no opposition has yet been voiced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D objects ('All cooking has smells. It's a kitchen.') while Agent A insists some smells are much stronger and affect work ('They fill the living room for hours. I work here.') — clear substantive disagreement about whether a restriction is justified.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D deflects ('Your curries have strong smells too.') but Agent A accepts the point and reframes to a mutual compromise ('Okay, you're right. So maybe for all of us, no super strong-smelling food on weekday nights?') — disagreement remains but a compromise proposal reduces intensity.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B and C explicitly accept the proposed compromise ('That sounds fair.'; 'That works for me.'), decreasing the outstanding conflict; Agent D has not yet accepted.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D accepts the compromise ('Okay. Weekends are fine.') and Agent A acknowledges agreement ('Okay, great. Glad we could agree.'), producing an explicit mutual arrangement banning very strong smells on weekday evenings.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Only a repetition by Agent A ('Okay, great. Glad we could agree.'). No new disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Another repeat of agreement by Agent A. No conflict appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Agent A repeats and restates the agreed arrangement ('How about we all agree not to cook very strong-smelling food on weekday evenings?') but this reiterates the prior settlement rather than reopening disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Agent B and C reconfirm the agreement ('Yes, that's fair.'; 'Works for me.'), consistent with the resolved state.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Agent D restates acceptance ('Okay. Weekends are fine for me.') and Agent A confirms ('Okay, that works. Weekday evenings it is.'), reaffirming the earlier resolution.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The main tension is between individual habitual cooking practices and shared-space externalities (odor affecting rooms/laundry/work).",
+      "Framing the rule as applying to everyone (A's shift to 'for all of us') helped convert a defensive reaction into a mutual compromise.",
+      "A concrete time-based restriction (weekday evenings banned, weekends allowed) resolved the trade-off between residents' cooking preferences and others' needs.",
+      "Explicit acceptance by the previously-defensive party (Agent D) was the decisive step to settlement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T12:53:05.587163+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0090913,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2794,
+      "local_latency_ms": 42253.55,
+      "output_tokens": 4398,
+      "reasoning_tokens": 2816,
+      "successful_calls": 1,
+      "total_tokens": 7192
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJIC",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S107-MJIC-R01",
+    "scenario_id": "S107"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s117-case-mm2-brmc",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1681,
+    "completion_tokens": 573,
+    "total_tokens": 2254,
+    "cost": 0.009092,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009092,
+      "upstream_inference_prompt_cost": 0.003362,
+      "upstream_inference_completions_cost": 0.00573
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will cover Agent D's unfinished analysis section for the Thursday pitch while D attends the wake",
+  "pairs": {
+    "A-B": {
+      "start": -0.2,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "B refuses extra work (T6); A accepts ('I forgot'), then takes the section herself (T13) and tells B to carry on (T18), B: 'Right.' (T19)",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "A-C": {
+      "start": -0.3,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A asks C to take it on (T10); C refuses as too risky (T11); A concedes 'You're right, it's too risky. Then I'll do it' (T13)",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.8
+    },
+    "A-D": {
+      "start": 0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A takes on the section and D agrees to walk A through it (T13-14); they begin the walkthrough (T30-31)",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take on D's section (T6, T8) and carry on with their own (T19, T21); they never address each other",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B said nothing to D; B accepts A's plan that D briefs A (T18-19)",
+      "roles": "B-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D offers C a walkthrough (T9), then backs C: 'She's right. It's too risky.' (T12)",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.7
+    }
+  }
+}

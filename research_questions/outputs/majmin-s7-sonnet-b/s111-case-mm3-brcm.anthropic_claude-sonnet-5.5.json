@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s111-case-mm3-brcm",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1548,
+    "completion_tokens": 618,
+    "total_tokens": 2166,
+    "cost": 0.009276,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009276,
+      "upstream_inference_prompt_cost": 0.003096,
+      "upstream_inference_completions_cost": 0.00618
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will finish Agent D's half-done pitch section before Thursday while D is away for the burial and family; A volunteers to finish it alone.",
+  "pairs": {
+    "A-B": {
+      "start": -0.4,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "Turn 5 A proposes a three-way split; turn 6 B objects 'I can't take on more'; turn 10 A takes it on alone and B says 'Okay' (turn 11).",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 1.0
+    },
+    "A-C": {
+      "start": -0.2,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "A asks C how they are placed (turn 7); C says they can't help (turn 9); A then takes the section alone (turn 10), which fits C's position.",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.8
+    },
+    "A-D": {
+      "start": 0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D asks how to handle it (turn 4); A says 'We'll handle this' (turn 12); D thanks A (turns 13, 16, 42); A: 'Go. Be with your family' (turn 51).",
+      "roles": "A-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "B-C": {
+      "start": 0.3,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B (turn 6) and C (turn 9) each decline to take on more work, and both accept A's plan. They never address each other.",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B says only 'Okay' (turn 11) to A's plan. D does not address B, and D accepts A's plan.",
+      "roles": "B-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C says they can't do D's analysis (turn 9), and D accepts A's offer. They never address each other.",
+      "roles": "C-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.4
+    }
+  }
+}

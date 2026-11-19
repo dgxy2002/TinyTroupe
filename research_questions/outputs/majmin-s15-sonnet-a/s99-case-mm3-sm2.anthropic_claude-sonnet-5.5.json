@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s99-case-mm3-sm2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 739,
+    "total_tokens": 2504,
+    "cost": 0.01092,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01092,
+      "upstream_inference_prompt_cost": 0.00353,
+      "upstream_inference_completions_cost": 0.00739
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether strong-smelling cooking (e.g. D's fish curry) should be restricted or managed in the shared flat, and how (ban, ventilation, heads-up)",
+  "pairs": {
+    "A-B": {
+      "start": 0.4,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B agrees smell is a problem (T2) but proposes window opening (T8) and heads-up (T20) rather than A's restriction (T1, T11); A doesn't take up these ideas.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C complains of laundry smell (T3) and rejects the window idea (T9), which fits A's concern, but C never endorses a restriction or addresses A directly.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D resists: 'All cooking has a smell' (T6), 'So I should stop cooking my own food?' (T12); A insists 'we shouldn't be making smells that get on everything' (T17). D later concedes laundry has nowhere to go (T16, T24) but not the ban.",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "B-C": {
+      "start": -0.1,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C rebuts B's window idea (T9), B's heads-up/laundry-in-rooms idea (T21, T23: 'It won't dry in my room'); B keeps proposing workarounds.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.4
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": -0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D rejects B's window idea ('She's right', T10 re C) and says there's nowhere for laundry (T24), undermining B's heads-up plan; D's stance isn't clearly pro or anti B's idea otherwise.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "C-D": {
+      "start": 0.3,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D backs C: 'She's right. The smell goes everywhere' (T10), 'Exactly' (T16), 'She's right. There's nowhere for wet laundry' (T24); though they differ on the ultimate cooking restriction.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s108-case-mm3-mjce",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1823,
+    "completion_tokens": 690,
+    "total_tokens": 2513,
+    "cost": 0.010546,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010546,
+      "upstream_inference_prompt_cost": 0.003646,
+      "upstream_inference_completions_cost": 0.0069
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can keep cooking strong-smelling curry in the shared kitchen without the smell affecting the others' work, clothes and laundry",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both object to the smell (T1, T2). A accepts after-7 cooking (T7), and B accepts once a week (T18). They never address each other directly, and A is silent on the final arrangement.",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both complain about the smell (T1, T3). C accepts the Tuesday/Thursday arrangement (T21+). A accepted after-7 cooking (T7) and never spoke to C.",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": 0.0,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A opens by asking for no smelly cooking at all (T1). D replies that the only kitchen is shared (T4). A then asks for cooking after 7 (T5), D agrees (T6), and A accepts (T7).",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.8
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C rejects B's window idea (T13). Both then accept once a week, with C's day constraint (T18, T19, T21). Their positions were never opposed.",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "B-D": {
+      "start": -0.2,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B says the smell still reaches the room (T8). B proposes cooking once a week (T16), D agrees (T17), and B accepts (T18).",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 1.1
+    },
+    "C-D": {
+      "start": -0.2,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C says night cooking still smells up the laundry (T9). C names the laundry days (T19), D agrees to Tuesday or Thursday (T20), and C accepts repeatedly (T21+).",
+      "roles": "C-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 1.1
+    }
+  }
+}

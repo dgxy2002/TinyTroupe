@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s104-case-mm3-mjci",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1819,
+    "completion_tokens": 678,
+    "total_tokens": 2497,
+    "cost": 0.010418,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010418,
+      "upstream_inference_prompt_cost": 0.003638,
+      "upstream_inference_completions_cost": 0.00678
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether to restrict strong-smelling cooking (D's fish curry) in the shared kitchen, and whether a time-based rule (no cooking before 7 p.m. weekdays) is enough.",
+  "pairs": {
+    "A-B": {
+      "start": 0.8,
+      "end": 0.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B backed A's ban at turn 2, but by turns 22-25 B rejects A's narrow before-7pm proposal as 'not a separate issue'; A insists it's separate (turn 24).",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": -0.8
+    },
+    "A-C": {
+      "start": 0.8,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C agreed at turn 3, but at turns 9, 15 and 23 says timing doesn't matter, which conflicts with A's time-limited proposal; A never concedes.",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": -0.7
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": -0.3,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A narrowed from a blanket ban to weekdays before 7pm (turns 11, 17), which is a partial concession; D still objects ('So what am I supposed to do? Not cook?', turn 16).",
+      "roles": "A-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "B-C": {
+      "start": 0.9,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B and C echo each other throughout (turns 8-9, 14-15, 22-23); C says 'She's right' at 23.",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.05
+    },
+    "B-D": {
+      "start": -0.8,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D resists restrictions and says all must cook (turn 10). B still wants a rule covering all times. D does cite B's point (turn 12) but only as a tactic, not as agreement.",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": -0.8,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C's laundry complaint continues (turns 9, 15, 23), while D resists limits on cooking (turns 10, 16).",
+      "roles": "C-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

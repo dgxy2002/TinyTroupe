@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s111-case-mm2-brcm",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2225,
+    "completion_tokens": 603,
+    "total_tokens": 2828,
+    "cost": 0.01048,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01048,
+      "upstream_inference_prompt_cost": 0.00445,
+      "upstream_inference_completions_cost": 0.00603
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will complete Agent D's half-finished analysis section for Thursday's pitch after D's grandmother's death, and how.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks B for capacity (T9) and B declines (T10); A accepts and moves on to C. They never took opposing positions.",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": -0.7,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C refuses (T12, T15, T20); A offers help, review and to present the section (T24); C agrees: 'I can do it' (T25).",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 1.6
+    },
+    "A-D": {
+      "start": -0.2,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A rejects D's 'maybe late at night' plan (T5); D sends notes and sets up a call (T8, T30). A refuses D's offer to finish it and tells D to be with family (T14, T31).",
+      "roles": "A-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 1.1
+    },
+    "B-C": {
+      "start": 0.1,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take the section (T10, T12), but they never address each other. B is silent afterward.",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B says only that they can't take it (T10). D replies generally, 'I understand' (T13). B takes no further part.",
+      "roles": "B-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C backs A's call for a firm plan (T7) but initially refuses to take over (T12, T15). C then agrees to take it with D's call (T25), and D thanks C (T30).",
+      "roles": "C-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.6
+    }
+  }
+}

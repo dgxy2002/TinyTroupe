@@ -1,0 +1,154 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Whether Agent D must stop or limit cooking strong-smelling food (devil curry)",
+      "Timing/scheduling of cooking (weekdays vs weekends vs Sunday evenings)",
+      "Smell affecting laundry in service yard and bedrooms",
+      "Who is responsible for monitoring/letting others know when laundry area is clear",
+      "Who pays for mitigation measures (fan)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is conversational and gives concrete reasons (e.g., work calls, laundry), which improves naturalness.",
+      "There is a duplicated utterance in Round 8 ('Not always. My Friday laundry is often still there on Sunday.'), indicating minor repetition.",
+      "Participants propose pragmatic options (weekends, notice, specific Sunday evening, fan) showing problem-solving rather than mere reiteration."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No substantive agreement was finalized by the end of the transcript. Narrow agreements were reached and then challenged: Agent D agreed to 'weekends' (Round 3) and later to give advance notice (Rounds 5–6). However, B and C identified that weekends/notice do not eliminate smell into rooms or cover laundry timing (Rounds 4, 7–9). D's proposals to rely on others to notify (Round 10) were rejected, and the alternative mitigation (buying a fan) produced a new dispute about cost-sharing (Round 12). Thus the core incompatibility—D's continued cooking of a strong-smelling dish versus others' interest in avoiding smell and laundry contamination—remained unsettled.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: Initially insisted on continuing to cook the family dish ('I'm going to keep making it.'), but conceded to 'weekends' (Round 3), agreed to give advance notice (Round 6), and later proposed splitting the cost for a fan (Round 12) — shows stepwise softening and offers of compromise.",
+      "Agent A: Began by requesting that nobody cook strong-smelling food and proposed weekends (Round 2); after D accepted weekends A simply acknowledged agreement and did not press further in the transcript.",
+      "Agent B: Supported Agent A's initial request, highlighted impacts on bedroom and laundry, and accepted notification as a helpful mitigation (Rounds 1, 5–6).",
+      "Agent C: Supported initial request but repeatedly raised practical constraints (no space for laundry, variable drying times) and resisted being tasked with monitoring or paying for mitigation (Rounds 4, 7, 10, 12).",
+      "Overall: Several participants softened or offered compromises (D notably), but key disagreements about practicality and cost remained; no party fully retreated from their core interests."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B and Agent C both agree with Agent A's request that nobody cook strong-smelling food: 'I agree.' / 'Yeah, my laundry is the same.'",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D asserts they will keep making the dish despite apologies: '...it's a family dish and I'm going to keep making it.' Agent A counters with a restriction: 'What about cooking it on weekends?' — a clear substantive disagreement about whether D must stop or limit cooking.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D concedes to Agent A's suggestion: 'Okay, weekends work for me.' Agent A accepts: 'Okay, thanks.' The immediate scheduling dispute is settled in this round.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B and Agent C point out that weekends won't prevent smell entering rooms or laundry: 'But the smell will still get into my room and the laundry, even on a weekend.' This reopens the core problem despite the earlier agreement.",
+        "movement": "reopened",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D offers a mitigation (advance notice): 'What if I let you all know before I start cooking it, so you can bring your laundry in?' Agent B accepts that this 'helps' but notes remaining impact on the room: '...but the smell will still get into my room.'",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D agrees to the notification proposal: 'Okay, sure. I can do that.' Agent B responds positively: 'Okay, thanks.' The specific dispute about notice is resolved, though the underlying smell problem remains.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C raises a practical obstacle to the proposed solution (no room to store laundry): 'But where are we supposed to move the laundry to? There's no space in our rooms for it.' Agent D then proposes limiting cooking to Sunday evenings — creating a new scheduling proposal that conflicts with variable laundry timing.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C asserts that Sunday won't reliably work: 'Not always. My Friday laundry is often still there on Sunday.' (Repeated line indicates unresolved concern.) The dispute about whether a Sunday-only plan would avoid smell remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D asks when laundry is usually cleared: 'So when is the laundry usually cleared on a weekend?' Agent C: 'There's no fixed time. It just depends on the weather.' The unpredictability keeps the scheduling issue unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "Agent D proposes that others notify them when the laundry area is clear: '...how about you let me know when the laundry area is clear on a weekend, and I'll cook it then.' Agent C objects to being tasked with monitoring: 'So I have to be the one to check and let you know every weekend? That's not going to work for me.' This shifts burden and creates a clear disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D asks for suggestions: 'If none of them work for you all, then what do you suggest I do?' Agent C proposes a technical mitigation: 'Could you put a fan in the kitchen and point it out the window when you cook? To blow the smell outside...' — moving toward a compromise.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 11
+      },
+      {
+        "evidence": "Agent D offers to split cost for a fan: 'If we split one, I can do that.' Agent C rejects paying on principle: 'I don't think I should have to pay for a fan. It's your cooking that's causing the smell.' This creates a new unresolved dispute over who bears mitigation cost.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "A simple scheduling compromise (weekends) initially seemed acceptable but failed because the smell affects rooms and laundry regardless of day.",
+      "Notification reduces some harms (enabling doors to be closed or laundry brought in) but shifts burdens onto other household members and does not fully eliminate smell.",
+      "Technical mitigation (fan) is functionally promising but raises a distributive conflict over who should pay for it — the cook (Agent D) or the household.",
+      "A resolution will likely require a combination of measures (scheduling, notice, a physical exhaust solution) and agreement on who bears costs/responsibilities; single unilateral fixes are insufficient."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T13:02:58.098086+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0092933,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3146,
+      "local_latency_ms": 40578.304,
+      "output_tokens": 4455,
+      "reasoning_tokens": 2432,
+      "successful_calls": 1,
+      "total_tokens": 7601
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJME",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S109-MJME-R01",
+    "scenario_id": "S109"
+  },
+  "schema_version": 2
+}

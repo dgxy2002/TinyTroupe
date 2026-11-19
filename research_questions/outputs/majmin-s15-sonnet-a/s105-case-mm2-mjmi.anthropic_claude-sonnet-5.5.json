@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s105-case-mm2-mjmi",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2052,
+    "completion_tokens": 767,
+    "total_tokens": 2819,
+    "cost": 0.011774,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011774,
+      "upstream_inference_prompt_cost": 0.004104,
+      "upstream_inference_completions_cost": 0.00767
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How Agent D can keep cooking strong-smelling food (fish curry) without the smell disrupting A's work calls, B's room and C's laundry.",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A asked for no strong-smelling cooking (T1); B said it gets into her room (T2) and later accepted D's window-and-hood plan (T23). They never address each other directly.",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-C": {
+      "start": 0.4,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both complained about the smell (T1, T3). A wanted cooking after 7pm on weekdays or Saturday (T5), and C agreed to Tue/Thu/weekend (T21), which is compatible with A's request. They never address each other.",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A asked for no strong-smelling food (T1). D apologised and offered a compromise (T4). A proposed after 7pm or Saturday (T5), D accepted (T6), and the final plan keeps after 7pm and the weekend (T18, T27).",
+      "roles": "A-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.9
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both said the timing doesn't fix the smell (T8, T9). C doubted that the hood would be enough (T15), while B accepted the hood plan (T23). Neither addresses the other.",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B said changing the time doesn't help (T8) and suggested the window and hood (T14). D offered to open the window and use the hood every time (T22) and B accepted (T23); D called it settled (T27).",
+      "roles": "B-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "C-D": {
+      "start": -0.2,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C said the time doesn't help (T9) and asked for weekends only (T11). D questioned it (T12, T16), C narrowed it to Mon/Wed/Fri laundry (T17), D offered Tue/Thu/weekend (T18), and C accepted (T21).",
+      "roles": "C-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 1.1
+    }
+  }
+}

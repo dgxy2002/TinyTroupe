@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who will complete Agent D's section after bereavement",
+      "Ability of teammates to take on extra work before the Thursday deadline"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Workplace-appropriate, concise exchanges; participants give brief reasons for inability: B 'I can't take on anything extra', C 'I'm behind... wouldn't know how to do the analysis'.",
+      "Resolution is concrete and verbal: A requests a deliverable time and D accepts; this satisfies speech-only settlement rules.",
+      "Some minimal small-talk ('Okay', thanks) repeats after agreement but not excessively."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent A proposed a concrete arrangement and Agent D accepted it: A said 'send the team what you have by tomorrow evening.' (Turn 9) Agent D agreed: 'Okay. I'll send what I have by tomorrow evening.' (Turn 13). Agent D (the person responsible for the missing work) conceded to complete and deliver the section by tomorrow evening; the rest of the team accepted this arrangement.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from announcing bereavement (Round 1) to offering to work from home and finish (Round 3) and then explicitly agreeing to send materials by tomorrow evening (Round 6).",
+      "Agent A shifted from expressing concern about the deadline (Round 2) to proposing a specific deliverable schedule (Round 5), facilitating settlement.",
+      "Agent B maintained their refusal to take on extra work (Turn 4) and did not change that position during the run.",
+      "Agent C stated inability to do the analysis (Turn 5) and endorsed the team's proposed arrangement (Turn 11) but did not change capability."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Turn 1-2: Agent A offers condolences and Agent D thanks them and states the wake will be for two days and they have to be there. No substantive disagreement about work is expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3-4: Agent A raises the practical problem of completing the pitch: 'we'll need to figure out how to get your section done.' Agent B replies explicitly that they 'can't take on anything extra.' This creates a clear substantive disagreement about who will cover the missing work.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5-6: Agent C says they are behind and 'wouldn't know how to do the analysis part.' Agent D offers to work from home and finish it: 'I can work on it from home... I can finish it.' The explicit refusals remain, but D's offer reduces the practical incompatibility.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7-8: Agent A voices doubt 'will you really be able to? That's a lot to take on right now.' Agent D reaffirms 'I will get it done.' Positions are restated (concern vs. D's commitment) but no new settlement yet.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9 and 11: Agent A proposes a concrete interim arrangement: 'send the team what you have by tomorrow evening.' Agent C supports the plan. The issue moves toward a concrete agreement but D has not yet confirmed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 13-14: Agent D accepts the concrete request: 'Okay. I'll send what I have by tomorrow evening.' Agent A thanks them. This is an explicit, mutual, concrete spoken agreement that settles the task-allocation issue for the deadline.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 15: Agent D repeats 'Okay.' No new disagreement appears; the earlier arrangement stands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The concrete agreement from round 6 remains unchallenged.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The team agreement remains in place.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Agreement still stands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No outstanding dispute introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The main tension was a practical allocation problem: a looming deadline vs. an unforeseeable bereavement and limited backup capacity.",
+      "Three different constraints were voiced: D's absence for two days, B's inability to add work, and C's lack of skills/time for the analysis portion.",
+      "The team resolved the allocation by having the responsible author (D) commit to finishing and sending partial work by a concrete deadline, rather than redistributing the task to others."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T15:22:24.144052+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0080453,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2722,
+      "local_latency_ms": 49030.798,
+      "output_tokens": 3884,
+      "reasoning_tokens": 2304,
+      "successful_calls": 1,
+      "total_tokens": 6606
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BREC",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S119-BREC-R01",
+    "scenario_id": "S119"
+  },
+  "schema_version": 2
+}

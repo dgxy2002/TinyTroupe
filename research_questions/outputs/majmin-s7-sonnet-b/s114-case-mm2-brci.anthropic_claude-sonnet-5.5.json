@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s114-case-mm2-brci",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2049,
+    "completion_tokens": 656,
+    "total_tokens": 2705,
+    "cost": 0.010658,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010658,
+      "upstream_inference_prompt_cost": 0.004098,
+      "upstream_inference_completions_cost": 0.00656
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D should leave the pitch work to the team or take her laptop and finish her analysis section from home, and with what safeguards.",
+  "pairs": {
+    "A-B": {
+      "start": -0.5,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A insisted D leave the laptop (T15, T17); B argued 'Letting her finish it is less risky' (T18); A conceded 'You're right' (T20).",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 1.3
+    },
+    "A-C": {
+      "start": 0.2,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A said 'Agent C has a good point' (T13) and pushed D to leave the laptop; C then said letting D try is better (T19); A conceded and set a 10 p.m. check (T20).",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A told D to leave the laptop (T15) and D refused (T14); A then allowed the laptop with a 10 p.m. upload (T20), and D accepted (T21).",
+      "roles": "A-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 1.6
+    },
+    "B-C": {
+      "start": -0.2,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "B backed D working from home (T7); C questioned it and asked for a plan B (T10, T12); C then said 'Agent B's right' (T19).",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 1.1
+    },
+    "B-D": {
+      "start": 0.9,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B: 'that would be a big help' (T7); D agreed to do it tonight (T8); B argued D should be allowed to finish (T16, T18).",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.05
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C doubted D could finish tonight (T10, T12); D insisted (T11); C later said it's better to let D try (T19), and D accepted the 10 p.m. plan (T21).",
+      "roles": "C-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 1.1
+    }
+  }
+}

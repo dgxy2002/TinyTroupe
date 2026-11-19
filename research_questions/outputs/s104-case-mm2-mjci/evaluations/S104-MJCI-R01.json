@@ -1,0 +1,151 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "strong-smelling cooking (curry) in shared flat",
+      "smell affecting laundry in service yard",
+      "smell entering bedroom during/after cooking",
+      "cooking schedule/times and notification before cooking"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants gave concrete reasons (A: client video calls; C: laundry smell; B: bedroom proximity; D: dietary necessity) which grounded proposals.",
+      "Practical, incremental problem-solving: propose mitigation (hood/window), time-shift, avoid specific laundry nights, and notification.",
+      "Minor needless repetition: B repeated the same proposal verbatim (Turns 21 and 24)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agents agreed a concrete accommodation: D will cook after 7pm on weekdays, avoid Monday/Wednesday/Friday (when C does laundry), and notify B before starting to cook so B can close his door. Key lines: Turn 10 'Okay, I can cook after 7.' Turn 16 'If I cook on the other nights, not Monday, Wednesday, or Friday, will that be okay?' Turn 19 'Yes, ... that works for me.' Turn 21 'If you just let me know before you start to cook, I can close my door.' Turn 25 'Okay, I can do that.'",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from implicit resistance to agreeing to concrete accommodations: first accepted cooking after 7 (Turn 10), then agreed to avoid M/W/F for C (turns 16–19), and finally agreed to notify B before cooking (Turn 25).",
+      "Agent A obtained the key concession she sought (later cooking) and accepted it (Turn 11).",
+      "Agent C initially complained about laundry smell but explicitly accepted the proposed non-M/W/F schedule (Turn 19).",
+      "Agent B retained concern about smell entering his room but shifted to a practical accommodation (notification + closing door) and accepted D's agreement (Turns 21, 24, 26)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 11,
+    "round_scores": [
+      {
+        "evidence": "Agent A had requested no strong-smelling cooking; Agents B and C report they are affected (B: room next to kitchen; C: laundry smells). The incompatible request (no strong cooking) is now public but D has not yet responded.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D acknowledges smell but defends the food as what he eats at home; Agent A reports work-from-home video calls are affected. Positions are clarified and incompatible (D's need to cook vs A's need for no smell).",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "B proposes mitigation (open window/use hood); C counters that the hood is weak and smell still reaches the service yard. The underlying incompatibility remains; proposed mitigation is judged ineffective.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "D confirms using hood/window but acknowledges it is insufficient; A proposes a time-based compromise (cook after 7 p.m.). The proposal moves toward accommodation but is not yet accepted.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "D accepts A's suggested time: 'Okay, I can cook after 7.' A accepts. The main A–D timing conflict is provisionally settled, but other residents' concerns remain untested.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "B and C point out the smell will still reach B's room after 7 and C's laundry is done in the evening, undermining the prior timing agreement and reopening substantive incompatibilities.",
+        "movement": "reopened",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "D requests specific laundry times; C provides them (Mon/Wed/Fri evenings). Parties are gathering constraints to seek an accommodation, reducing immediate tension but not resolving it.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "D proposes cooking on nights other than Mon/Wed/Fri to avoid C's laundry; C says that would work. B remains concerned that any evening smell will enter his room, so one issue is resolved (C) while B's concern persists.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 8
+      },
+      {
+        "evidence": "C confirms the non-M/W/F arrangement works; D reports he has changed days but highlights he 'has to cook' and asks what else to do. B's smell-into-room problem is still unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "B offers a practical accommodation: if D notifies before cooking, B can close his door to avoid smell. This is a concrete proposal addressing B's remaining objection but awaits D's acceptance. (B repeats the offer.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 10
+      },
+      {
+        "evidence": "D accepts B's proposal: 'Okay, I can do that.' B acknowledges. By the end of this round the group has a concrete arrangement: D will cook after 7, avoid C's laundry nights (Mon/Wed/Fri), and notify B before cooking so B can close his door.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded; the substantive conflict was resolved in round 11 and no new issues were raised.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The core conflict was practical (ventilation constraints + fixed cooking needs) rather than purely normative; solutions required trade-offs in time and notice.",
+      "A weak hood and a shared service yard made technical mitigation insufficient, so scheduling and communication were necessary accommodations.",
+      "Splitting the problem into separate concerns (A's video calls, C's laundry schedule, B's bedroom smell) allowed a mixed solution addressing each concern."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T12:24:56.562897+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01042105,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3001,
+      "local_latency_ms": 42279.015,
+      "output_tokens": 5037,
+      "reasoning_tokens": 3264,
+      "successful_calls": 1,
+      "total_tokens": 8038
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJCI",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S104-MJCI-R01",
+    "scenario_id": "S104"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s113-case-mm2-brem",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1339,
+    "completion_tokens": 639,
+    "total_tokens": 1978,
+    "cost": 0.009068,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009068,
+      "upstream_inference_prompt_cost": 0.002678,
+      "upstream_inference_completions_cost": 0.00639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to get D's half-finished analysis section done for Thursday's pitch while D is away for the burial and prayers (D finishing it from home vs. handing off).",
+  "pairs": {
+    "A-B": {
+      "start": 0,
+      "end": 0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B only offers condolences (turns 16, 18, 21) and never takes a position on the deadline or on how to finish D's section, so there is nothing to compare with A.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A flags the deadline (turn 3) and C says D's analysis is beyond them (turn 5). C backs D finishing from home (turn 7) and A accepts it (turn 9). They don't address each other directly.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A raises the deadline (turn 3). D offers to finish from home (turn 6) and commits 'I'll get it done' (turn 8). A thanks D and asks to be kept in the loop (turn 9).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.6
+    },
+    "B-C": {
+      "start": 0,
+      "end": 0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B says nothing about the work, only condolences, so no shared position can be read.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B offers condolences and D thanks B (turns 16-18, 22). Neither says anything about the work plan.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": 0.4,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C says 'I don't know how to do her analysis' (turn 5). D offers to finish from home or hand off (turn 6). C endorses finishing from home (turn 7) and D agrees (turn 8).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

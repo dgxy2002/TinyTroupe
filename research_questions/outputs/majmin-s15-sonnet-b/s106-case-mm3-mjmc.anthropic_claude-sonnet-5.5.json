@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s106-case-mm3-mjmc",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1905,
+    "completion_tokens": 598,
+    "total_tokens": 2503,
+    "cost": 0.00979,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00979,
+      "upstream_inference_prompt_cost": 0.00381,
+      "upstream_inference_completions_cost": 0.00598
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how often Agent D can cook strong-smelling fried salted fish in the shared kitchen given smell in rooms and laundry",
+  "pairs": {
+    "A-B": {
+      "start": 0.9,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both initially wanted no strong-smelling cooking (T2 B agrees with A); later A accepts once-a-week weekend (T24) while B says it doesn't change the problem (T26).",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "A-C": {
+      "start": 0.8,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "A",
+      "evidence": "C backed A's request (T3), but A accepted a weekend/once-weekly compromise (T7, T24) while C says no day works (T27).",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A asked for no smelly cooking; D proposed weekends (T6), A said 'perfect' (T7) and 'once a week on a weekend would work' (T24).",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "B-C": {
+      "start": 0.8,
+      "end": 0.9,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both consistently say the smell is a problem regardless of day (T26, T27).",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.8,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D asks B directly (T25) about once a week; B says it doesn't really change the problem (T26).",
+      "roles": "B-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": -0.8,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D proposes multiple timings (T10, T16, T23); C rejects each (T11, T17, T27: 'doesn't matter what day it is').",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

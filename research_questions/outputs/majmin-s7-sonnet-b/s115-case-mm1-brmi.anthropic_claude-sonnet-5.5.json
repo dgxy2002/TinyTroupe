@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s115-case-mm1-brmi",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1480,
+    "completion_tokens": 563,
+    "total_tokens": 2043,
+    "cost": 0.00859,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00859,
+      "upstream_inference_prompt_cost": 0.00296,
+      "upstream_inference_completions_cost": 0.00563
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who covers Agent D's unfinished analysis section for Thursday's pitch while D is away for the bereavement; A volunteers after B and C decline.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "B refuses extra work (4); A accepts B's refusal and takes the section herself (8); B says 'Okay. Thanks, Agent A' (9).",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A asks C (5); C says she can't (7); A accepts and takes it on (8). C later offers only a farewell (25).",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "A-D": {
+      "start": 0.6,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks D to send materials (10); D thanks A and sends them (11, 14); A says 'Go be with your family' (15).",
+      "roles": "A-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.35
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take on the work (4, 7) but never address each other.",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.3,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says 'Take care, Agent D' (17); D thanks B (18). B never takes a position on D's absence.",
+      "roles": "B-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says 'Take care, Agent D' (25); D replies 'You too, Agent C. Thank you.' (26).",
+      "roles": "C-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

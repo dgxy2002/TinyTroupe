@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s110-case-mm3-mjie",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1583,
+    "completion_tokens": 670,
+    "total_tokens": 2253,
+    "cost": 0.009866,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009866,
+      "upstream_inference_prompt_cost": 0.003166,
+      "upstream_inference_completions_cost": 0.0067
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can keep cooking strong-smelling devil curry in the shared flat given the smell affecting others' calls, rooms and laundry",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "A asked for no strong-smelling food (T1); B first said the day doesn't matter (T8), then accepted once-weekly Saturday cooking with window open (T14, T18), which fits A's Saturday arrangement.",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C complained about smell (T3) and said the day doesn't matter (T9), then said opening the window would work (T15), accepting the arrangement A helped set up.",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A asked for no strong-smelling cooking (T1), proposed Saturday (T5); D agreed (T6), then agreed to once weekly and window open (T13, T16); A thanked D (T7).",
+      "roles": "A-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 1.35
+    },
+    "B-C": {
+      "start": 0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C: 'She's right. The day doesn't matter for my laundry either' (T9); C backs B's window solution (T15).",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.6,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B rejected the Saturday and notification fixes (T8, T12); D offered once a week (T13), B proposed window open and door shut (T14), D agreed (T16), B thanked (T18).",
+      "roles": "B-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 1.45
+    },
+    "C-D": {
+      "start": -0.5,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C said the day doesn't matter (T9); D offered notice, once a week; C said an open window works (T15); D agreed to open the window (T16).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 1.3
+    }
+  }
+}

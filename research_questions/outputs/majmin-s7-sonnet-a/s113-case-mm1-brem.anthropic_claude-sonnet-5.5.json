@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s113-case-mm1-brem",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1823,
+    "completion_tokens": 576,
+    "total_tokens": 2399,
+    "cost": 0.009406,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009406,
+      "upstream_inference_prompt_cost": 0.003646,
+      "upstream_inference_completions_cost": 0.00576
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who completes Agent D's half-done analysis section before Thursday: D working from home, or a teammate (B or C) taking it over.",
+  "pairs": {
+    "A-B": {
+      "start": -0.5,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A pushes B to take the section (5, 25, 27 'What does can't mean?'); B repeatedly refuses (6, 26, 28).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-C": {
+      "start": -0.4,
+      "end": -0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks C to take over (7, 31); C refused at 8 citing no experience and being behind, no change shown.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": -0.85,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A: 'We're not making Agent D work through this' (10, 25); D insists 'My plan works... I will do it from home' (16, 19, 30).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": -0.05
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both independently decline to take D's section (6, 8); they never address each other.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.2,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B can't take it, which supports D's claim; D cites B: 'See? She can't' (30). D's plan is the fallback B's refusal leaves open, though B never endorses it.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "C-D": {
+      "start": 0.2,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C's refusal (8) leaves D's home-work plan as the only option (21, 24); C never endorses it.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

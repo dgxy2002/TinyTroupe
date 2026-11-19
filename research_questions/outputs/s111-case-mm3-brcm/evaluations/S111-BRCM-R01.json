@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who will complete Agent D's unfinished analysis section",
+      "Fixed project deadline (Thursday 9 a.m.) vs. Agent D's need to be with family"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Agent A takes initiative quickly to reconcile deadline pressures with a teammate's bereavement.",
+      "Agent B and C state concrete constraints (B: already covering someone on leave; C: lacks skill for analysis).",
+      "Multiple rounds contain short, repetitive acknowledgements ('Okay', 'Thank you'), but this does not obscure the substantive decision in Round 5."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent A volunteered to take responsibility for finishing Agent D's section and the team accepted this reallocation. Key lines: 'Okay. Then I'll finish Agent D's section.' (Agent A, Turn 10) and 'Okay.' (Agent B, Turn 11). This removed the incompatibility between the deadline and Agent D's absence.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A changed position by volunteering to finish Agent D's section (Turn 10), resolving the conflict.",
+      "Agent B maintained their refusal to take on more work (Turn 6) and then accepted A's proposed arrangement (Turn 11).",
+      "Agent C maintained their inability to do the analysis (Turn 9); they did not change position during the run.",
+      "Agent D removed themselves from responsibility for the deadline period and expressed gratitude; D did not contest the coverage plan."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent A expresses condolences and Agent D reports a family burial and need to be with family for two days (Turns 1-2). No incompatible claims yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A raises the fixed Thursday 9 a.m. deadline (Turn 3); Agent D notes their section is half done and asks how to handle it (Turn 4). A potential practical conflict (who will finish the work) appears but is not yet contested.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A proposes the three others split the remainder (Turn 5). Agent B refuses to take on more, citing existing coverage (Turn 6). This is a clear substantive disagreement about who will cover the missing work.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A emphasizes the immovable deadline and asks Agent C for availability (Turn 7). Agent C reports their own section is unfinished and that they don't know how to do Agent D's analysis (Turn 9). Two teammates decline capacity, increasing the incompatibility between the need for coverage and available effort/skills.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A volunteers to finish Agent D's section (Turn 10) and Agent B accepts (Turn 11). This is an explicit, concrete reallocation of the outstanding work: A takes responsibility, resolving the prior incompatibility about coverage.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A tells Agent D to be with family and Agent D thanks them and says they'll check in when able (Turns 12-13). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D thanks Agent A again and Agent A acknowledges (Turns 16-17). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A says 'Don't worry about it' and Agent D replies 'Okay' (Turns 21-22). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D repeats 'Okay' (Turns 26, 30). No substantive disagreement or new issues introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Agent D repeats 'Okay' (Turns 34, 38). Conversation remains supportive; no unresolved substantive conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D thanks the team and Agent A replies 'It's okay' (Turns 42-43). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Agent A reiterates 'Don't worry' and 'Go. Be with your family.' (Turns 47, 51). No substantive disagreement remains.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The main tension is practical: a fixed external deadline versus an unavoidable personal emergency.",
+      "Resolution required a unilateral extra burden (Agent A volunteering) rather than redistribution among multiple teammates because others lacked capacity or skills.",
+      "Agent C's inability to do the analysis was a skills mismatch rather than unwillingness, which influenced the feasible solutions.",
+      "The accepted resolution prioritized the teammate's need (Agent D to be with family) at the cost of concentrating work on Agent A."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T14:19:45.724394+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0071018,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2836,
+      "local_latency_ms": 39649.572,
+      "output_tokens": 3398,
+      "reasoning_tokens": 1856,
+      "successful_calls": 1,
+      "total_tokens": 6234
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BRCM",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S111-BRCM-R01",
+    "scenario_id": "S111"
+  },
+  "schema_version": 2
+}

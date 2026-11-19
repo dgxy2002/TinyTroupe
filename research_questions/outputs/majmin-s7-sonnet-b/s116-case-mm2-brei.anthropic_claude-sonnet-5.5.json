@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s116-case-mm2-brei",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1958,
+    "completion_tokens": 583,
+    "total_tokens": 2541,
+    "cost": 0.009746,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009746,
+      "upstream_inference_prompt_cost": 0.003916,
+      "upstream_inference_completions_cost": 0.00583
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D should finish their analysis section from home during bereavement, or Agent A should take over the work and D should rest; B and C declined to help.",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks B to help cover D's section (T3), B declines (T4), A accepts 'understood' (T5); neither shifts. They agree D shouldn't be left to do it, but B proposes nothing.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks C to split the analysis (T5), C declines (T6); no further interaction.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": -0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A: 'I will handle the work. That is the end of it' (T23, T33); D: 'You don't know the analysis... I will finish it from home' (T34). Neither yields.",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take on D's analysis (T4, T6), but they don't address each other.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B never speaks to D; B declines to cover, which is consistent with D finishing it themselves (T7), but B takes no stance on it.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C declines to help (T6) and D proposes to do it themselves (T7); they never address each other.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "strong-smelling cooking (devil curry)",
+      "smell affecting laundry",
+      "smell disrupting work-from-home video calls"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Speakers give concrete reasons for their positions (work calls, laundry, cultural attachment).",
+      "Resolution is reached quickly via a specific scheduling and mitigation proposal (weekends + open window).",
+      "Minor repetition: Agent A repeats 'Okay, that's settled then. Thanks.' twice."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "All parties agreed to a concrete arrangement: Agent D agreed to cook the strong-smelling dish on weekends and to open the kitchen window while cooking. Evidence: Agent D: 'Okay, weekends could work.' Agent B: 'Weekends are better, yeah. Can you also open the kitchen window when you cook?' Agent D: 'Yeah, sure. I can open the window.' Agent C later confirmed: 'Yeah, weekends are fine.' Agent A then acknowledged: 'Okay, that's settled then. Thanks.'",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D changed position by agreeing to shift cooking of the strong-smelling dish to weekends and to open the kitchen window ('Okay, weekends could work.'; 'I can open the window.').",
+      "Agent A moved from requesting 'nobody cook strong-smelling food in the flat' to accepting a compromise ('What about cooking it on the weekend instead?' and later 'Okay, that's settled then. Thanks.').",
+      "Agents B and C retained their concerns but accepted the proposed compromise (B: 'Weekends are better, yeah.' C: 'Yeah, weekends are fine.')."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent A: 'The smell is very strong when I'm on video calls in the evening.' Agent B: 'It gets in my room too. The smell is all in my clothes.' (Problem stated, conflict emerges between cooking practice and others' needs.)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C: 'My laundry is in the service yard. The smell goes right into it.' Agent D: 'Sorry, I know the smell is strong. It's just... that's the food I grew up eating.' (Affected parties describe harms; Agent D signals personal attachment, keeping the substantive disagreement active.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A proposes a restriction: 'What about cooking it on the weekend instead?' Agent D: 'Okay, weekends could work. Agent B, Agent C, is that better for you two?' (A concrete proposal and initial acceptance by D reduce but do not yet fully settle the disagreement because others have not yet agreed.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B: 'Weekends are better, yeah. Can you also open the kitchen window when you cook?' Agent D: 'Yeah, sure. I can open the window.' (All relevant parties either propose or accept a concrete arrangement: cooking on weekends and opening window.)",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B: 'Okay, thanks.' Agent C: 'Yeah, weekends are fine.' (Confirmations from the other residents that the proposed arrangement is acceptable.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] (No new conflict introduced; previous agreement stands as last recorded state.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A: 'Okay, that's settled then. Thanks.' (Reiteration of the settlement; no new disagreement.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] (No new conflict.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] (No new conflict.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] (No new conflict.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] (No new conflict.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] (No new conflict.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The core incompatibility was between D's cooking habit and others' exposure during weekdays (work calls, laundry).",
+      "Agent D's cultural attachment to the dish reduced likelihood of outright prohibition; framing a schedule change (weekends) allowed a face-saving solution.",
+      "Mitigation (opening the window) was paired with schedule adjustment to address residual smell concerns.",
+      "No formal household rule was created, but a verbal, mutually accepted arrangement was established."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T13:00:57.639627+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Adjusted resolution_round from 5 to 4 to match the conflict trajectory."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00712805,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2781,
+      "local_latency_ms": 35499.146,
+      "output_tokens": 3418,
+      "reasoning_tokens": 1856,
+      "successful_calls": 1,
+      "total_tokens": 6199
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJME",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S109-MJME-R01",
+    "scenario_id": "S109"
+  },
+  "schema_version": 2
+}

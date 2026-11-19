@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s117-case-mm1-brmc",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1684,
+    "completion_tokens": 588,
+    "total_tokens": 2272,
+    "cost": 0.009248,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009248,
+      "upstream_inference_prompt_cost": 0.003368,
+      "upstream_inference_completions_cost": 0.00588
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who completes Agent D's half-done pitch section before Thursday: D finishing it tonight, or A taking it over so D can attend the wake",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks the team to help finish D's section and B refuses (T5-6); A accepts 'understood' (T7), and B says nothing further about A's takeover.",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks C to take on some of the work (T7); C declines (T8); A then takes everything on alone (T10), and C is silent after.",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D repeatedly insists 'I'll finish it tonight' (T4, 9, 16, 21, 24); A overrides with 'This is my call' (T25); D yields with 'Okay' (T26, 33, 37), though only through compliance.",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.0
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both separately say they can't take on D's work (T6, T8); they never address each other.",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B only says they can't help (T6); D cites it at T14 but they never discuss D's plan directly.",
+      "roles": "B-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C says they can't help (T8); D mentions it in T14 but the two never address each other.",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

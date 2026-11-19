@@ -1,0 +1,151 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "strong-smelling cooking (sambal belacan)",
+      "cooking schedule/timing",
+      "laundry odor contamination",
+      "work-from-home disturbance (living room smell during calls)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants provided concrete constraints and reasons (work calls, laundry schedule) which structured the negotiation.",
+      "Resolution arose from an explicit proposal by D and verbal acceptances from all others; confirmations ('Okay, great') followed.",
+      "Some redundant confirmations from D after agreement, but not materially repetitive."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent D proposed limiting sambal cooking to \"Tuesdays, Thursdays, or on the weekend\" (Turn 9). Agent A accepted: \"Yeah, that works for me. Thanks.\" (Turn 10). Agent B: \"That works for me too.\" (Turn 12). Agent C: \"Yeah, that works for me. Thanks.\" (Turn 14). All four explicitly accepted the proposed schedule, so the scheduling conflict was resolved by a compromise in which D restricted when the strong-smelling dish is cooked and the others accepted those days.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from stating they regularly eat sambal to proposing a constrained schedule (Tues/Thurs/weekend) — D adjusted behavior by offering limits.",
+      "Agent A shifted from asking that nobody cook strong-smelling food 'from now on' to accepting D's proposed schedule (accepted the compromise).",
+      "Agent B initially suggested a heads-up but ultimately accepted the proposed schedule.",
+      "Agent C maintained concern about laundry timing but accepted the proposed schedule once it fit their laundry days."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent B: \"My room's right next to the kitchen... What if whoever's cooking just gives a heads-up first?\" Agent C: \"That works for your room, but the service yard is right there. My laundry will still get the smell.\" — shows a clear substantive incompatibility between A's request to stop strong-smelling cooking and the practical impacts on others.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D: \"I know the smell is strong. It's the sambal. I eat it with most of my meals.\" Agent A: \"Could you maybe cook it late at night, or on the weekend?\" — positions clarified but still in conflict (D's cooking habit vs A's restriction).",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B: \"Weekends or late at night would work for me.\" Agent C: \"Late at night on weekdays is still a problem for me. I do my laundry on Mondays, Wednesdays, and Fridays...\" — continued disagreement about acceptable timing because of laundry.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D: \"What about Tuesdays, Thursdays, or on the weekend? I only cook it about twice a week.\" Agent A: \"Yeah, that works for me.\" — D offers a constrained schedule and A accepts, reducing but not yet eliminating conflict (C has not yet agreed).",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B: \"That works for me too.\" Agent C: \"Yeah, that works for me. Thanks.\" — all four have accepted D's proposed schedule (Tuesdays, Thursdays, or weekend), so the substantive scheduling conflict is settled.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D: \"Okay, great.\" (Turn 15 and Turn 19) — confirmations after the agreement; no new conflict expressed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "[No public speech or observable action recorded] — no new disagreement; prior spoken agreement stands.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "[No public speech or observable action recorded]",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Agent D: \"Okay, great.\" (Turn 43) — further confirmation of the previously agreed schedule; no new substantive disagreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Tension was between A's desire to avoid strong smells (especially while working from home) and D's regular food practices; laundry in the service yard created an additional practical impact on C.",
+      "Scheduling is an effective trade-off: limiting cooking to specific days accommodated both the cook's preference and others' needs.",
+      "Different occupants had distinct constraints (room proximity, laundry days, work calls) that needed to be balanced rather than a blanket ban."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T13:11:28.516244+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0080493,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2842,
+      "local_latency_ms": 36576.11,
+      "output_tokens": 3871,
+      "reasoning_tokens": 2304,
+      "successful_calls": 1,
+      "total_tokens": 6713
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "SM1",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S98-SM1-R01",
+    "scenario_id": "S98"
+  },
+  "schema_version": 2
+}

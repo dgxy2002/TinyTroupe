@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s119-case-mm2-brec",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1969,
+    "completion_tokens": 624,
+    "total_tokens": 2593,
+    "cost": 0.010178,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010178,
+      "upstream_inference_prompt_cost": 0.003938,
+      "upstream_inference_completions_cost": 0.00624
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will complete Agent D's section of the Thursday pitch after D's grandmother's death; A takes it over, B and C decline, D agrees and briefs A.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B said they can't take on more (turn 4); A took over the section (turn 7). B never addressed A or the arrangement; A noted a 'tight spot' (turn 3).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C declined to help (turn 5), then thanked A: 'That's a big help' (turn 11), endorsing A's takeover.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": -0.2,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D first proposed working evenings (turn 6); A said 'that's not right' and offered to take over (turn 7). D accepted and briefed A (turns 8-27).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "B-C": {
+      "start": 0.8,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both declined to take on more work (turns 4, 5); neither addressed the other, and B stayed silent after A's takeover while C endorsed it.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B said they can't take on more (turn 4); D said 'I understand' (turn 6), but B never took a position on the final arrangement.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D answered C's refusal with 'I understand' (turn 6); C later welcomed A's takeover (turn 11), which D also accepted.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

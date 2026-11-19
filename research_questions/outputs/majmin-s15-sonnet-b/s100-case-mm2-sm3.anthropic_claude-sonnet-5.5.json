@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s100-case-mm2-sm3",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1850,
+    "completion_tokens": 720,
+    "total_tokens": 2570,
+    "cost": 0.0109,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0109,
+      "upstream_inference_prompt_cost": 0.0037,
+      "upstream_inference_completions_cost": 0.0072
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and when Agent D can cook strong-smelling salted fish in the shared flat, and what arrangement limits the smell's impact on the others.",
+  "pairs": {
+    "A-B": {
+      "start": 1.0,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Turn 2 B agrees with A's ban request; later B says the time doesn't matter (13) and accepts a heads-up arrangement (21) instead of a ban. A and B never address each other after turn 2.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "A-C": {
+      "start": 1.0,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Turn 3 C backs A's complaint; later C accepts weekend cooking with advance notice (25, 29), which fits A's accepted once-a-week weekend plan (16). They never address each other directly.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D opposes a ban (4) and asks to discuss timing (8); A agrees (9). D offers a check-in (10) and weekend once a week (15), and A accepts: 'That works for me' (16).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 1.7
+    },
+    "B-C": {
+      "start": 1.0,
+      "end": 0.9,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both complain about smell (2, 3), say time doesn't help (13, 14), object to the weekend plan (17, 18), and each accept a notice-based accommodation (21, 25).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": -0.8,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B objects (17), then offers 'If you just tell me before you start, I can close my door' (21); D replies 'Okay, I can let you know' (22) and later confirms the plan (26).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 1.5
+    },
+    "C-D": {
+      "start": -0.8,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C says laundry will still get the smell (18); D asks C directly (22); C proposes avoiding laundry on the cooking day if told (25); D 'Okay, that works' (26); C 'works for me' (29).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 1.6
+    }
+  }
+}

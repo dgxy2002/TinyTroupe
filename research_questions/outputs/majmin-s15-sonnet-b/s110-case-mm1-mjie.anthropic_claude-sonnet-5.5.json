@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s110-case-mm1-mjie",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1758,
+    "completion_tokens": 684,
+    "total_tokens": 2442,
+    "cost": 0.010356,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010356,
+      "upstream_inference_prompt_cost": 0.003516,
+      "upstream_inference_completions_cost": 0.00684
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and when Agent D can cook strong-smelling food (devil curry) given smell affecting laundry and living room; settled on Saturday and Sunday.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B asks A what would work (T16) and A answers with Saturday (T17); B's window/hood idea was never taken up by A, and B did not state a final position on the Sat/Sun deal.",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A proposes Saturday (T17), C says Saturday works (T19); A says Sunday fine (T21), C says Sunday fine too (T23).",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.9
+    },
+    "A-D": {
+      "start": -0.4,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A first asked for no strong-smelling cooking and rejected Tue/Fri (T15); D then accepted A's Saturday (T20); A accepted Sunday (T21); D concluded 'Saturday and Sunday it is' (T24).",
+      "roles": "A-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 1.3
+    },
+    "B-C": {
+      "start": -0.5,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C rejected B's hood idea (T9, T11); B said 'better than nothing' (T10); later C agreed to weekends, B silent.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.7
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B proposed hood/window (T8); D pursued scheduling instead; B never commented on the final Sat/Sun deal.",
+      "roles": "B-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": -0.2,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C rejected notice-before-cooking (T5); D dropped it and proposed days (T6, T12); C asked which days (T13), agreed to Saturday (T19) and Sunday (T23); D confirmed (T24).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 1.1
+    }
+  }
+}

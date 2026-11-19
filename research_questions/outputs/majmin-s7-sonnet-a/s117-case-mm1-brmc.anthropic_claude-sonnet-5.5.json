@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s117-case-mm1-brmc",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1684,
+    "completion_tokens": 613,
+    "total_tokens": 2297,
+    "cost": 0.009498,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009498,
+      "upstream_inference_prompt_cost": 0.003368,
+      "upstream_inference_completions_cost": 0.00613
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will complete Agent D's half-done pitch section before Thursday: D finishing it tonight, or A taking it over so D can attend the wake.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks the three to finish D's work (5), B declines (6); A accepts (7) and then takes it on alone (10), so B is not pressed further and no real disagreement remains.",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks C to take on some of it (7), C declines (8); A then decides to handle it alone (10), so C's refusal is not contested.",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D repeatedly insists 'I'll finish it tonight' (4, 9, 16, 21, 24); A overrides: 'This is my call... We're done talking' (25); D yields: 'Okay' (26, 33, 37). D complies but did not clearly endorse.",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.0
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take on D's section (6, 8); they never address each other.",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B says only that they can't help (6); D refers to B's refusal (14) but B never takes a position on D's plan.",
+      "roles": "B-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C says they can't help and can't do the analysis (8); D cites this (14) but C does not address D's plan.",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

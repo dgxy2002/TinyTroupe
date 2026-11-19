@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s109-case-mm3-mjme",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1999,
+    "completion_tokens": 745,
+    "total_tokens": 2744,
+    "cost": 0.011448,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011448,
+      "upstream_inference_prompt_cost": 0.003998,
+      "upstream_inference_completions_cost": 0.00745
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can keep cooking strong-smelling devil curry in the shared flat without its smell affecting the others' laundry, rooms and work; A and B initially wanted it stopped.",
+  "pairs": {
+    "A-B": {
+      "start": 0.8,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B agrees with A's initial request (turn 2). A accepts weekends (turn 7), but B says the smell still gets into the room (turn 8), then accepts a warning so she can shut her door (turns 12, 14). They never address each other directly.",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.4
+    },
+    "A-C": {
+      "start": 0.7,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C backs the no-smell stance (turn 3). A settles for weekends (turn 7), but C keeps objecting about laundry and refuses to pay for a fan (turns 9, 36). A is silent after turn 7.",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.5
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D initially refuses to stop cooking (turn 4). A proposes weekends in turn 5, D agrees in turn 6, and A thanks D in turn 7.",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 1.3
+    },
+    "B-C": {
+      "start": 0.8,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says 'She's right' in support of B (turn 9). B later accepts D's notice plan (turn 14) while C keeps raising new objections (turns 15, 28, 36).",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "B-D": {
+      "start": -0.6,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "D offers advance notice (turn 10). B says that helps and asks for a heads-up to shut her door (turn 12). D agrees (turn 13) and B thanks D (turn 14).",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 1.3
+    },
+    "C-D": {
+      "start": -0.6,
+      "end": -0.3,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D keeps offering options and C rejects each (turns 17, 28). C proposes the fan (turn 32) and D partly accepts if the cost is split (turn 33). C refuses to pay (turn 36), so the dispute remains.",
+      "roles": "C-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.3
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s112-case-mm3-brim",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1788,
+    "completion_tokens": 628,
+    "total_tokens": 2416,
+    "cost": 0.009856,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009856,
+      "upstream_inference_prompt_cost": 0.003576,
+      "upstream_inference_completions_cost": 0.00628
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D should finish their own pitch section tonight despite their grandmother's death, or whether teammates should help cover it, and when it will be delivered",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": -0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A proposes B, C and A help finish D's section (12); B declines: 'I can't. I'm already covering for someone' (13). A later accepts no other option (37).",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-C": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Both doubt D can work tonight (5, 7) and press for a delivery time (9, 10). C declines A's request for help (15), but both end worried and agree there is no other option (36-38).",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A doubts D can work tonight and offers to take over (5, 12); D insists 'It's my part. I'll do it tonight' (16); A yields: 'Okay, Agent D. If you're sure' (17).",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.9
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to help (13, 15) but never address each other; B says almost nothing else.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B only declines A's offer (13) and never takes a position on D's plan; D does not address B.",
+      "roles": "B-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": -0.4,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C backs doubts about D's plan (7) and asks when it will come (9); D gives a timeline (11); C later just waits and hopes D delivers (36, 38).",
+      "roles": "C-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.6
+    }
+  }
+}

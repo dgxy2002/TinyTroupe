@@ -1,0 +1,153 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Strong-smelling cooking (sambal belacan) affecting shared spaces",
+      "Timing of cooking relative to A's video calls",
+      "Laundry in service yard absorbing smells",
+      "Bedroom odor intrusion"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Agents negotiated with concrete, practical proposals (scheduling by nights, opening window, closing doors) rather than abstract principles.",
+      "Key acceptance lines made settlements explicit: D 'after 7 p.m. works' (Turn17); C 'Yes, that works.' (Turn21); B 'Yes, if I close my door, that works.' (Turn26).",
+      "Minor redundancy: D repeats the settlement statement twice at the end (Turns 27 and 31)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Parties agreed concrete accommodations: D accepted cooking after 7 p.m. and on specific nights (D: 'Okay, after 7 p.m. works for me.' Turn17; D: 'So, after 7 p.m. on Tuesdays and Thursdays? That works for me.' Turn20), C accepted that schedule ('Yes, that works.' Turn21), and D offered to open the kitchen window while cooking while B agreed to close their bedroom door ('I can open the kitchen window when I cook.' Turn25; 'Yes, if I close my door, that works.' Turn26). These mutual, explicit acceptances settled the outstanding incompatible demands.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: initially resisted limitations ('It's a kitchen. We all cook.' Turn4) but then accepted constraints—timing (after 7 p.m., and Tue/Thu) and a physical mitigation (open window) (Turns17,20,25).",
+      "Agent B: initially complained about room smell but accepted the practical mitigation of closing their door when D cooks ('Yes, if I close my door, that works.' Turn26).",
+      "Agent C: proposed a schedule to protect laundry (Mon/Wed/Fri) (Turn11) but accepted D's counterproposal for Tue/Thu ('Yes, that works.' Turn21), showing flexibility.",
+      "Agent A: maintained the original request for no strong-smelling cooking during call times and accepted the after-7pm arrangement (Turn16); A's position did not reverse but was accommodated by others' concessions."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": 12,
+    "round_scores": [
+      {
+        "evidence": "Agent A asks that nobody cook strong-smelling food in the flat; Agent B supports that the smell reaches his room (Turn1-2). A clear substantive demand is made but no acceptance yet.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D pushes back: 'Okay, I hear you about the smell. But it's a kitchen. We all cook. Your food has smells too.' (Turn4). This directly resists A's request and frames the kitchen as shared, increasing conflict.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "A narrows the complaint to 'very strong' smells; D challenges the definition and points to curries: 'What is a \"very strong\" smell? Your curries have strong smells too.' (Turn5-6). The substantive disagreement about which smells should be restricted continues.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "A explains difference of sambal smell; B proposes a mitigation: 'What if we all just agree to close our bedroom doors when we're cooking something strong?' (Turn7-8). A practical proposal appears, softening the dispute though not resolving it.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "C points out bedroom-door proposal doesn't address laundry in the service yard: 'That doesn't help the laundry in the service yard.' (Turn9). B agrees (Turn10). The issue broadens (multiple incompatible interests), making resolution harder.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "C proposes specific laundry days: 'I do my laundry on Monday, Wednesday, and Friday evenings. Could you cook it on the other nights?' (Turn11). A replies the timing doesn't help their calls (Turn12). The schedule clash remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "D expresses concern about being heavily restricted: 'So I can't cook on any weekday evening at all? It's a shared kitchen.' (Turn15). A responds with concrete alternatives: '...after 7 p.m. Could you do it after that, or on Saturday?' (Turn16). Positions sharpen over allowable times.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "D concedes a timing constraint: 'Okay, after 7 p.m. works for me.' (Turn17). This reduces the direct conflict with A, but B and C's problems (room/laundry) remain.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Negotiation over concrete nights: C asks about their Mon/Wed/Fri proposal (Turn19); D offers 'after 7 p.m. on Tuesdays and Thursdays' (Turn20). Parties are narrowing options, reducing but not eliminating disagreement.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "C accepts D's proposed nights ('Yes, that works.' Turn21), but B reiterates the smell will still affect their room regardless of schedule (Turn23). B's concern remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 10
+      },
+      {
+        "evidence": "D offers a physical mitigation: 'I can open the kitchen window when I cook.' (Turn25). B accepts: 'Yes, if I close my door, that works.' (Turn26). This directly resolves B's room concern; only a minor remaining issue (service-yard laundry was already accommodated by schedule changes) is left to confirm.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 11
+      },
+      {
+        "evidence": "Agent D affirms settlement: 'Okay, good. So that's settled then.' (Turn27 and repeated Turn31). By this point all parties have accepted concrete arrangements (timing and window/door mitigation).",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Conflict arose from differing effects of smells: video-call interference, laundry contamination, and room intrusion require different mitigations.",
+      "Resolution combined time-based scheduling (to avoid clashes with laundry and calls) and physical mitigation (open window / close door), showing plural solutions for multi-issue conflicts.",
+      "Participants were willing to trade small inconveniences (D limiting cooking nights/times; B closing door) rather than spend money or change the kitchen, which aligns with the opening constraint that no one wants to pay for fixes."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T12:15:43.659233+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Adjusted resolution_round from 11 to 12 to match the conflict trajectory."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0099623,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3078,
+      "local_latency_ms": 45512.623,
+      "output_tokens": 4798,
+      "reasoning_tokens": 2880,
+      "successful_calls": 1,
+      "total_tokens": 7876
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJIM",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S103-MJIM-R01",
+    "scenario_id": "S103"
+  },
+  "schema_version": 2
+}

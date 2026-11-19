@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s118-case-mm3-bric",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1386,
+    "completion_tokens": 578,
+    "total_tokens": 1964,
+    "cost": 0.008552,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008552,
+      "upstream_inference_prompt_cost": 0.002772,
+      "upstream_inference_completions_cost": 0.00578
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who completes Agent D's half-done analysis section for Thursday's pitch while D is at the wake: teammates take over (A's proposal) or D does it from home (D's position).",
+  "pairs": {
+    "A-B": {
+      "start": -0.3,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A proposes B, C and A take over (T3); B refuses 'I can't' (T4). A accepts it and ends up leaving D to do the work.",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": -0.3,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks C to take part (T5); C declines (T6). A drops the request.",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A first says D shouldn't have to work (T8); then 'If you're sure... do what you can' (T10, T13) and 'Okay, Agent D' (T23), accepting D's plan. D thanks A (T14).",
+      "roles": "A-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.9
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take over the section (T4, T6); neither addresses the other.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B declines to help (T4) and D says they will do it themselves (T7), which fits together, but neither speaks to the other.",
+      "roles": "B-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C declines to take the work (T6) and D says they will do it from home (T7); no direct exchange.",
+      "roles": "C-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

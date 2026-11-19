@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s109-case-mm3-mjme",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1999,
+    "completion_tokens": 665,
+    "total_tokens": 2664,
+    "cost": 0.010648,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010648,
+      "upstream_inference_prompt_cost": 0.003998,
+      "upstream_inference_completions_cost": 0.00665
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can keep cooking strong-smelling devil curry in the shared flat without its smell affecting others' rooms, laundry and work calls",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A asks for no strong-smelling cooking (T1); B agrees (T2). Later A accepted weekends (T7) while B says weekends still smell (T8), though B's concerns are partly met by notice (T12-14).",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-C": {
+      "start": 0.6,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C backs A's request (T3); A accepts weekend cooking (T7), but C says the day doesn't matter (T9) and rejects every D proposal through T36.",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A asks for no such cooking (T1), D refuses (T4); A proposes weekends (T5), D says 'weekends work for me' (T6), A thanks (T7).",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "B-C": {
+      "start": 0.8,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says 'She's right' backing B's point (T9); B later accepts notice to shut the door (T12-14) while C keeps objecting about laundry and the fan cost (T15-36).",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "B-D": {
+      "start": -0.6,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B objects to weekend smell (T8); D offers notice (T10); B asks for notice to shut the door (T12); D agrees (T13), B thanks (T14).",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "C-D": {
+      "start": -0.6,
+      "end": -0.3,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C rejects D's Sunday and check-in ideas (T17, T28); suggests a fan, D agrees to split it (T33), but C refuses to pay (T36).",
+      "roles": "C-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.3
+    }
+  }
+}

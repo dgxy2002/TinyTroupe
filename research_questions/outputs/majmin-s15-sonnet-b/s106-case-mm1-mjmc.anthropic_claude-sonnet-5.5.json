@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s106-case-mm1-mjmc",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1643,
+    "completion_tokens": 598,
+    "total_tokens": 2241,
+    "cost": 0.009266,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009266,
+      "upstream_inference_prompt_cost": 0.003286,
+      "upstream_inference_completions_cost": 0.00598
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D may cook strong-smelling fried salted fish in the shared flat, which A asked to stop; settled on weekends only plus notice to B.",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A (T1) and B (T2) both complain about the smell; both accept weekends (T7, T10). They never address each other directly.",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C (T3) complains about the smell and later accepts weekends (T14), as A did (T7). No direct exchange between them.",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A rejected D's notice offer (T5: 'I can't close a door'); D proposed weekends only (T6) and A agreed (T7).",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both complained about the smell (T2, T3) and both accept weekends (T10, T14). They don't address each other.",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B asked for notice before cooking (T10); D agreed (T11) and repeated 'I'll let you know, Agent B' (T15). B said 'Okay' (T41).",
+      "roles": "B-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D asked C (T11); C replied 'weekends are fine' (T14); D confirmed 'weekends it is' (T15).",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.15
+    }
+  }
+}

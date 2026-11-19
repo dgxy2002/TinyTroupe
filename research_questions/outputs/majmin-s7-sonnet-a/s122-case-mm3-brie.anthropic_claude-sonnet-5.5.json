@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s122-case-mm3-brie",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2256,
+    "completion_tokens": 657,
+    "total_tokens": 2913,
+    "cost": 0.011082,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011082,
+      "upstream_inference_prompt_cost": 0.004512,
+      "upstream_inference_completions_cost": 0.00657
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who completes Agent D's half-finished analysis section before Thursday: Agent D tonight, or A, B and C splitting it up",
+  "pairs": {
+    "A-B": {
+      "start": -0.6,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A insists the three will split D's work (T10, T20, T24); B refuses (T6, T11, T21: 'Being a team doesn't mean you get to decide I have time that I don't').",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-C": {
+      "start": -0.2,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says her section is behind and she can't do the analysis (T9). A answers 'I hear you both' and keeps pushing the team split (T10, T24). C never agrees to it and never speaks again.",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A and D are warm at first, and A promises to cover (T3). Then D insists on finishing tonight (T15, T17, T23, T25) and A flatly refuses (T16, T18, T24, T26, 'The decision is made').",
+      "roles": "A-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": -1.0
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B (T6) and C (T9) both say they lack capacity, but neither addresses the other, and C says nothing after T10.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B asks 'Agent D said she would do it tonight. Why isn't that the plan?' (T19). D replies 'Agent B has a point... I'll finish it tonight' (T23).",
+      "roles": "B-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C speaks only at T9 and D never addresses C. No direct exchange or clear alignment.",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

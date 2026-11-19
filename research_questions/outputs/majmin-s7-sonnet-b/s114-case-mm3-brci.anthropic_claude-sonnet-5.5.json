@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s114-case-mm3-brci",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1389,
+    "completion_tokens": 625,
+    "total_tokens": 2014,
+    "cost": 0.009028,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009028,
+      "upstream_inference_prompt_cost": 0.002778,
+      "upstream_inference_completions_cost": 0.00625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will complete Agent D's half-done analysis section before Thursday's pitch, given D's bereavement: B and C decline to help, D agrees to do it from home.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A asks what to do about the section (3); B says they can't cover (4); neither addresses the other further, though both end up accepting D doing it.",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C declines to help (5) without addressing A; A ends up accepting D doing it (9, 12). No direct exchange.",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.3,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A first says D should be with family and asks about the deadline (3), then questions D's taking it on (7). After D insists (8), A accepts: 'Okay, Agent D. If you're sure' (9, 12). D agrees to update (13).",
+      "roles": "A-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.7
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take the analysis (4, 5) and neither addresses the other.",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.2,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says 'I'm sorry, I can't' (4), D says 'I understand' and will do it (6). B offers condolences (15), D thanks B (16). No change in positions.",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": -0.2,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says 'I can't either' (5), D responds 'Okay. I understand. I'll work on it from home' (6). D accepts C's refusal.",
+      "roles": "C-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.4
+    }
+  }
+}

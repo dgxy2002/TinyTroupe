@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "who will complete Agent D's analysis section",
+      "meeting the Thursday deadline vs Agent D's bereavement leave"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is concise and task-focused; agents state constraints and then negotiate workload.",
+      "Agent A moves from empathy to concrete problem-solving (volunteering to cover the work).",
+      "Agent D repeats status and brief acknowledgements multiple times ('Okay, thanks.'), causing some low-level repetition."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent A volunteered to take on Agent D's analysis, conditional on colleagues finishing their own sections. Key lines: Agent A — 'I'll cover Agent D's section. I need your two sections completely finished.' Agent B accepted: 'Okay.' Agent C accepted: 'Okay.' Agent D offered limited support by phone: 'I'll keep my phone on if you have any questions about the analysis.' These statements together constitute an explicit allocation of tasks and mutual acceptance.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A changed position from responder to active doer by volunteering to cover Agent D's section ('I'll cover Agent D's section.').",
+      "Agent B initially refused additional work ('I can't either. I'm already covering for someone on leave.' / 'I physically can't take on any more.') but then agreed to complete their own section ('Okay.').",
+      "Agent C initially refused to take on the analysis ('I can't do the analysis part.') but later agreed to finish their assigned section ('Okay.').",
+      "Agent D remained unavailable for in-person work but offered limited support by phone ('I'll keep my phone on if you have any questions about the analysis.')."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 7,
+    "round_scores": [
+      {
+        "evidence": "Agent D announces a family death and leave: 'The cremation is tomorrow. I have to be with my family for the next two days.' No incompatible claims or demands were made.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A raises the deadline problem ('the pitch is Thursday morning. We need to figure out how to get your part done.') and Agent C asks about status, but no one yet refuses or asserts an incompatible demand.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D: 'It's about half done.' Agent C explicitly refuses to take on the analysis: 'I can't do the analysis part. And I'm still trying to finish my own section.' This is a clear substantive incompatibility with the team's need for the analysis to be completed.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B also refuses: 'I can't either. I'm already covering for someone on leave.' Agent A presses the importance of meeting the deadline: 'If we miss it, we could lose the account. We all have to find a way to get this done.' Opposing positions (cannot take more work vs. obligation to deliver) persist and escalate the conflict.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B reiterates inability: 'I've worked late every night this week. I physically can't take on any more.' Agent A volunteer-resolves part of the incompatibility: 'Okay. If you're both at your limit, then I'll cover Agent D's section. I need your two sections completely finished.' The highest conflict expressed (inability vs. obligation) occurred this round, but A's offer begins to deescalate; the team's acceptance of A's condition is not yet confirmed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B accepts A's condition: 'Okay.' Agent A commits: 'Right. I'll start on Agent D's analysis. Let's get this done.' Remaining issue: Agent C has not yet confirmed finishing their section.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C accepts: 'Okay.' Agent D offers availability for questions: 'I'll keep my phone on if you have any questions about the analysis.' This produces an explicit, mutual arrangement: A will cover D's section and B and C will finish their own sections.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Expressions of support and closure only ('Thanks, Agent D.' / 'Okay, thanks.'). No substantive disagreement remains.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Repeated brief acknowledgements from Agent D ('Okay, thanks.'). No new substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Agent D continues brief acknowledgements ('Okay, thanks.' / 'Okay. Thank you.'). No conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "More brief acknowledgements from Agent D. No substantive disagreement present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Agent D repeats status ('It's about half done. All the files are on the shared drive.') and again acknowledges. No new or remaining conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Tension was between a fixed client deadline and a team member's immediate bereavement obligation.",
+      "One team member (Agent A) resolved the incompatibility by taking on additional work rather than redistributing analysis to others who were at capacity.",
+      "Agent D's partial completion and shared-drive files reduced friction and made the concession feasible (D: 'It's about half done. All the files are on the shared drive.')."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T15:00:46.032175+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00769855,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2879,
+      "local_latency_ms": 35457.393,
+      "output_tokens": 3691,
+      "reasoning_tokens": 2048,
+      "successful_calls": 1,
+      "total_tokens": 6570
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BREI",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S116-BREI-R01",
+    "scenario_id": "S116"
+  },
+  "schema_version": 2
+}

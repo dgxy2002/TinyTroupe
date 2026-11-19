@@ -1209,3 +1209,111 @@ def test_smell_casts_render_backgrounds_without_faith(case):
     assert "no required\n  agreement, resolution, or target ending" in prompt
     for term in ("muslim", "hindu", "buddhist", "catholic", "halal"):
         assert term not in prompt.lower()
+
+
+# Scenario 15 majority and minority rooms: every ordered pair of backgrounds once, with only the room changing.
+SMELL_ROOM_CELLS = {
+    "S98": "SM1", "S99": "SM2", "S100": "SM3", "S102": "MJCM", "S103": "MJIM", "S104": "MJCI", "S105": "MJMI",
+    "S106": "MJMC", "S107": "MJIC", "S108": "MJCE", "S109": "MJME", "S110": "MJIE",
+}
+MAJORITY_NAMES = {
+    "Chinese": ["Jun Jie", "Hui Min", "Shu Fen"],
+    "Eurasian": ["Marcus de Souza", "Rachel Pereira", "Natalie Rodrigues"],
+    "Indian": ["Suresh", "Lakshmi", "Meena"],
+    "Malay": ["Hafiz", "Farah", "Zarina"],
+}
+MINORITY_D = {"Chinese": "Xin Yi", "Eurasian": "Sarah Fernandez", "Indian": "Priya", "Malay": "Aisyah"}
+
+
+def _room(case):
+    preset = materialize_configuration(RUNNABLE_SCENARIOS[case], SMELL_ROOM_CELLS[case])
+    agents = preset["agents"]
+    return preset, {agents[r]["cultural_background"] for r in "ABC"}, agents["D"]["cultural_background"]
+
+
+def test_smell_rooms_cover_every_ordered_pair_once_and_change_only_the_room():
+    rooms = [_room(case) for case in SMELL_ROOM_CELLS]
+    pairs = []
+    for preset, majority, minority in rooms:
+        assert len(majority) == 1 and minority not in majority
+        pairs.append((majority.pop(), minority))
+    assert len(set(pairs)) == 12
+    base = RUNNABLE_SCENARIOS["S98"]
+    for case in SMELL_ROOM_CELLS:
+        scenario = RUNNABLE_SCENARIOS[case]
+        for role in "ABC":
+            assert scenario.agents[role] == base.agents[role]
+        assert replace(scenario.agents["D"], private_knowledge="") == replace(base.agents["D"], private_knowledge="")
+        assert scenario.shared_setting.split("You all know")[0] == base.shared_setting.split("You all know")[0]
+        assert scenario.shared_setting.split("Agent D is ")[1].split(".", 1)[1] == base.shared_setting.split("Agent D is ")[1].split(".", 1)[1]
+        assert re.sub(r"cooked .+? in the kitchen", "", scenario.shared_trigger) == re.sub(r"cooked .+? in the kitchen", "", base.shared_trigger)
+        need = scenario.agents["D"].private_knowledge
+        assert need.startswith(base.agents["D"].private_knowledge.split(" Sambal")[0])
+        assert need.endswith("which evenings, and how often, matters less.") and "about twice a week in the evening" in need
+
+
+@pytest.mark.parametrize("case", sorted(SMELL_ROOM_CELLS))
+def test_smell_rooms_keep_fixed_names_and_carry_no_religion(case):
+    preset, majority, minority = _room(case)
+    agents = preset["agents"]
+    majority = majority.pop()
+    assert [agents[r]["display_name"] for r in "ABC"] == MAJORITY_NAMES[majority]
+    assert agents["D"]["display_name"] == MINORITY_D[minority]
+    names = MAJORITY_NAMES[majority] + [MINORITY_D[minority]]
+    assert ", ".join(f"{n} is {b}" for n, b in zip(names[:3], [majority] * 3)) + f", and {names[3]} is {minority}." in preset["shared_setting"]
+    everything = preset["shared_setting"] + preset["shared_trigger"]
+    for role in "ABCD":
+        everything += agents[role]["biography"] + agents[role]["private_knowledge"]
+        assert "Agent " not in agents[role]["private_knowledge"] + agents[role]["initial_observation"]
+    for term in FAITH_TERMS:
+        assert term not in everything.lower()
+    assert f"family's {minority} cooking alive" in agents["D"]["private_knowledge"]
+    assert preset["profile_treatment"]["first_speaker"] == "A"
+
+
+# Scenario 7 majority and minority rooms: every ordered pair once, the S57 roles and setting, faith in every
+# biography, and D's need set by D's faith.
+BEREAVEMENT_ROOM_CELLS = {
+    "S111": "BRCM", "S112": "BRIM", "S113": "BREM", "S114": "BRCI", "S115": "BRMI", "S116": "BREI",
+    "S117": "BRMC", "S118": "BRIC", "S119": "BREC", "S120": "BRCE", "S121": "BRME", "S122": "BRIE",
+}
+BEREAVEMENT_FAITH = {"Chinese": "Buddhist", "Eurasian": "Catholic", "Indian": "Hindu", "Malay": "Muslim"}
+
+
+def test_bereavement_rooms_cover_every_ordered_pair_once_and_change_only_the_room():
+    pairs = set()
+    base = RUNNABLE_SCENARIOS["S57"]
+    for case, cell in BEREAVEMENT_ROOM_CELLS.items():
+        scenario = RUNNABLE_SCENARIOS[case]
+        agents = materialize_configuration(scenario, cell)["agents"]
+        majority = {agents[r]["cultural_background"] for r in "ABC"}
+        minority = agents["D"]["cultural_background"]
+        assert len(majority) == 1 and minority not in majority
+        pairs.add((majority.pop(), minority))
+        for role in "ABC":
+            assert scenario.agents[role] == base.agents[role]
+        assert replace(scenario.agents["D"], private_knowledge="") == replace(base.agents["D"], private_knowledge="")
+        assert scenario.shared_trigger == base.shared_trigger
+        assert scenario.shared_setting.split("eats: ")[0] == base.shared_setting.split("eats: ")[0]
+        assert scenario.shared_setting.split("A client pitch")[1] == base.shared_setting.split("A client pitch")[1]
+    assert len(pairs) == 12
+
+
+@pytest.mark.parametrize("case", sorted(BEREAVEMENT_ROOM_CELLS))
+def test_bereavement_rooms_keep_fixed_names_and_state_every_faith(case):
+    preset = materialize_configuration(RUNNABLE_SCENARIOS[case], BEREAVEMENT_ROOM_CELLS[case])
+    agents = preset["agents"]
+    majority, minority = agents["A"]["cultural_background"], agents["D"]["cultural_background"]
+    assert [agents[r]["display_name"] for r in "ABC"] == MAJORITY_NAMES[majority]
+    assert agents["D"]["display_name"] == MINORITY_D[minority]
+    for role in "ABCD":
+        faith = BEREAVEMENT_FAITH[agents[role]["cultural_background"]]
+        assert f"You are {faith}" in agents[role]["biography"]
+        assert f"{agents[role]['display_name']} is {faith}" in preset["shared_setting"]
+    need = agents["D"]["private_knowledge"]
+    assert f"You are {BEREAVEMENT_FAITH[minority]}." in need
+    assert need.endswith("For you, taking part is a religious duty, and it means being with your family, not at work, for the next two days.")
+    for phrase in CONDUCT:
+        assert phrase not in need.lower()
+    assert "Thursday" not in need
+    assert preset["profile_treatment"]["first_speaker"] == "A"

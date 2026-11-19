@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "strong-smelling cooking (fried salted fish)",
+      "impact on laundry",
+      "impact on work-from-home calls / timing"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Natural, concise turn-taking and concrete reasons (work calls, laundry) shaped proposals.",
+      "Participants moved from statement of harm to practical scheduling and behavioral adjustments.",
+      "Small amount of repetitive closing remarks by Agent D ('Okay, thanks everyone.') but not problematic."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "All parties reached a concrete arrangement: Agent D agreed to limit the strong-smelling dish to 'only cook it once a week, on a weekend,' to 'tell you before I start,' and to 'make sure the door to the yard is closed.' Agent A accepted 'A weekend works for me.' Agent B agreed conditionally: 'If you tell me before you cook, I can just close my door.' Agent C accepted: 'If the door is closed and it's on a weekend, that works for me.' (Agreement reached in Round 7.)",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from initial defense ('That's just normal home cooking for me.') to a concrete behavioral concession: 'only cook it once a week, on a weekend... tell you before I start... make sure the door to the yard is closed.'",
+      "Agent A moved from requesting a ban on strong-smelling cooking to accepting the weekend-limited arrangement: 'A weekend works for me.'",
+      "Agents B and C shifted from describing impacts to accepting the compromise with conditions (B: 'If you tell me before you cook, I can just close my door.' C: 'If the door is closed and it's on a weekend, that works for me.')."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 7,
+    "round_scores": [
+      {
+        "evidence": "Agent B: 'Yeah, it's quite bad for me also. My room is just next to the kitchen...' Agent C: 'My laundry also. Everything smells of fish after it's been hanging there.' (supports Agent A's request; problem asserted but no opposing view yet)",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D: 'That's just normal home cooking for me.' vs Agent A: 'The smell is a real problem when I'm on calls with clients.' (clear incompatible expectations: D treats it as normal, A experiences practical harm)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D offers an accommodation: 'Maybe I can cook at other times.' Agent A gives constraint: 'My calls are usually done by 7 p.m.' (proposal to change behavior reduces immediate intensity)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B: 'Even after 7 p.m., the smell is still a problem for me.' Agent C: 'Same. I do my laundry in the evenings.' (the time-shift proposal fails to meet other residents' needs)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D proposes a concrete compromise: '...only cook it once a week, on a weekend? I can tell you before I start, and I'll make sure the door to the yard is closed.' Agent A: 'A weekend works for me.' (moves toward settlement but not yet accepted by all)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B accepts conditionally: 'If you tell me before you cook, I can just close my door.' (reduces disagreement; one occupant still needs to confirm)",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C: 'Okay. If the door is closed and it's on a weekend, that works for me.' (all four have accepted the weekend/notification/door-closed arrangement)",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D: 'Okay, thanks everyone.' (closure and no further objections recorded)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D: 'Okay, thanks everyone.' (repeated thanks; no new disagreement)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Conflict centered on an unavoidable shared-space externality (smell) impacting different activities: work-from-home calls and drying laundry.",
+      "Because the landlord forbids physical changes and no one will pay for modifications, time/frequency/notification became the feasible bargaining space.",
+      "Resolution combined a behavioral concession by the cook (limit frequency, notify, close door) and small accommodations by others (close doors), a typical mixed-cost compromise in shared housing."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T12:42:56.972732+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0085163,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2894,
+      "local_latency_ms": 39829.857,
+      "output_tokens": 4098,
+      "reasoning_tokens": 2560,
+      "successful_calls": 1,
+      "total_tokens": 6992
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJMC",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S106-MJMC-R01",
+    "scenario_id": "S106"
+  },
+  "schema_version": 2
+}

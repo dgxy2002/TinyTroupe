@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s113-case-mm3-brem",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1920,
+    "completion_tokens": 633,
+    "total_tokens": 2553,
+    "cost": 0.01017,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01017,
+      "upstream_inference_prompt_cost": 0.00384,
+      "upstream_inference_completions_cost": 0.00633
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who completes Agent D's unfinished analysis section before Thursday's deadline while D is away for a family bereavement",
+  "pairs": {
+    "A-B": {
+      "start": -0.6,
+      "end": -0.3,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "B refuses to take on analysis or stay late (T8, T19, T21); A insists 'not a request' (T20), then drops the demand and tells the others to just do their own sections (T24).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": -0.3,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "C says she can't take the analysis (T11, T14); A pushes (T12, T15), then offers to lead and support C (T18), and finally lets everyone just do their own sections (T24).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A accepts D's leave (T3) but treats the analysis as needing takeover; D offers to finish it from home (T23) and A says 'That settles it' (T24); A tells D to go be with family (T28).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take the analysis (T8, T11, T14) but never address each other; both end up with only their own sections (T24).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B offers condolences (T4) and D thanks B (T5); B never comments on D's offer to finish the section (T23).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C never speaks to D; C wanted a plan (T17), and D's offer to finish the section (T23) resolves it, but C does not respond.",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

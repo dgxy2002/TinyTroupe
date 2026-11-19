@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s116-case-mm3-brei",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1603,
+    "completion_tokens": 607,
+    "total_tokens": 2210,
+    "cost": 0.009276,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009276,
+      "upstream_inference_prompt_cost": 0.003206,
+      "upstream_inference_completions_cost": 0.00607
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will complete Agent D's half-done analysis section for the Thursday pitch while D is away for family bereavement",
+  "pairs": {
+    "A-B": {
+      "start": -0.4,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B said 'I physically can't take on any more' (11); A then took on D's section and asked for B's section finished (12); B replied 'Okay' (13).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 1.1
+    },
+    "A-C": {
+      "start": -0.4,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C said 'I can't do the analysis part' (7); A accepted covering it and asked for C's section finished (12, 14); C said 'Okay' (16).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 1.1
+    },
+    "A-D": {
+      "start": 0.2,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A pressed on the deadline (3), then took D's section (12, 14); D thanked A and offered phone availability (18); A: 'You just take care of your family' (19).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.7
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both declined to take on the analysis (7, 9) and both accepted A's plan with 'Okay' (13, 16).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B never addressed D directly; B declined to help (9, 11) but accepted A covering D's section (13), which D welcomed (18).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C asked D where they left off (5) and D replied (6); C declined the analysis (7), then accepted A's plan (16) which D endorsed (18).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.3
+    }
+  }
+}

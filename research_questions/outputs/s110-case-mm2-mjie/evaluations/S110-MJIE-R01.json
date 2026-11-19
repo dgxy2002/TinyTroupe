@@ -1,0 +1,151 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking strong-smelling food",
+      "kitchen smell affecting calls and laundry",
+      "cooking schedule and timing",
+      "ventilation/use of fan"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Exchange is concise and negotiative; participants propose concrete mitigations (weekend-only, fan, schedule, after-7).",
+      "Agents provide factual constraints (laundry days, work calls) that ground proposals.",
+      "No unnecessary repetition; proposals proceed logically from problem to trial mitigation to schedule/time compromise."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Parties reached a concrete, mutual schedule and time that address the main incompatible demands: Agent D agreed to limit cooking days and times (\"Okay. So I'll cook on Tuesdays, Thursdays, or the weekend.\" then refined to \"So, Tuesdays and Thursdays after 7.\"), Agent C accepted the days that avoid laundry nights (\"Okay, that works.\"), and Agent A accepted the after-7 timing to protect work calls (\"Yeah, after 7 is fine.\"). D adjusted cooking times/days in return for permission to continue cooking the dish; others accepted that adjustment.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: initially defended the food as culturally significant (\"It's devil curry... It's what I grew up with\") but expressed willingness to avoid causing problems and later agreed to limit days and time (\"Okay. So I'll cook on Tuesdays, Thursdays...\", \"I can cook after 7 p.m.\").",
+      "Agent A: started by requesting no strong smells implicitly for work calls and moved to accept a concrete compromise (after-7 timing): \"Yeah, after 7 is fine.\"",
+      "Agent C: moved from complaint (laundry picks up smell) to a specific scheduling request (avoid Mon/Wed/Fri) and accepted D's proposed days: \"I do my laundry on Monday, Wednesday, and Friday... Can you cook it on the other days?\" then \"Okay, that works.\"",
+      "Agent B: offered a personal mitigation (closing door/open window) and did not insist on broader schedule changes; B's position remained largely consistent."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 11,
+    "round_scores": [
+      {
+        "evidence": "Agent A: \"...I'm on video calls for work right here until 7 p.m. The smell is a bit much.\" Agent B: \"Yeah, my room is right next to the kitchen. The smell gets into everything.\" — multiple people report the smell as a problem, starting an incompatibility between cooking strong-smelling food and others' use of the flat.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C: \"My laundry is drying in the service yard. It picks up the smell.\" Agent D: \"It's devil curry. It's what I grew up with. But I don't want to cause problems.\" — roles and stakes are clarified: D has a recurring cooking practice that causes the smell; others report concrete harms (laundry, rooms).",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A: \"How about you cook it on the weekend?\" Agent D: \"The weekend could work. Agent B, Agent C, would that be any better for the smell... ?\" — A offers a constraint and D expresses willingness to consider, reducing immediate hostility though not settled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B: \"The day doesn't make a difference. The smell is the same.\" Agent D: \"What if I open the kitchen window and use a fan... ?\" — weekend proposal is contested; D proposes a mitigation but disagreement about whether timing solves the problem remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A: \"We can try it. But if the smell is still strong, can we just stick to cooking it on the weekend?\" Agent D: \"Okay, let's try the fan. But if that doesn't work, the weekend plan still leaves the same problem for Agent B and the laundry, doesn't it?\" — parties agree to trial a mitigation while noting unresolved effects on others.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A: \"You're right, it doesn't.\" Agent B: \"If I shut my door and open my window, the smell stays out of my room. It's fine.\" — partial technical mitigation for B reduces one person's stake, though laundry and living-room smell still contested.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C: \"Right, but that doesn't help the laundry.\" Agent B: \"You're right.\" — agreement that B's mitigation doesn't solve C's problem; no new settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C: \"A fan might just blow the smell into the service yard.\" Agent C: \"I do my laundry on Monday, Wednesday, and Friday evenings. Can you cook it on the other days?\" — C proposes a specific scheduling restriction to avoid laundry nights, sharpening the incompatibility into a concrete demand.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D: \"Okay. So I'll cook on Tuesdays, Thursdays, or the weekend. That works for me.\" Agent C: \"Okay, that works. Thanks.\" — explicit agreement between D and C on days reduces the conflict over laundry scheduling, though other concerns (living-room smell during calls) remain unsettled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 9
+      },
+      {
+        "evidence": "Agent A: \"But Tuesdays and Thursdays are still weekdays. The smell in the living room is the problem for my calls.\" Agent D: \"Oh, right. I can cook after 7 p.m. on those days. Would that work?\" — A raises remaining living-room/work concern; D offers a time adjustment as mitigation.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 10
+      },
+      {
+        "evidence": "Agent A: \"Yeah, after 7 is fine.\" Agent D: \"Okay, great. So, Tuesdays and Thursdays after 7.\" — mutual, concrete acceptance of days and times resolves the substantive scheduling/timing conflict in speech-only terms.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Conflict combined temporal (when to cook) and spatial (smell reaching laundry and rooms) dimensions, requiring multiple mitigations.",
+      "Resolution combined a schedule (avoid C's laundry days) and a timing restriction (after 7) to protect A's calls — a layered compromise.",
+      "Technical mitigations (window/fan, closing door) partially solved individual impacts (B), but scheduling was needed for shared spaces (living room, service yard)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T13:08:23.250973+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01053655,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3031,
+      "local_latency_ms": 50111.329,
+      "output_tokens": 5091,
+      "reasoning_tokens": 3136,
+      "successful_calls": 1,
+      "total_tokens": 8122
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJIE",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S110-MJIE-R01",
+    "scenario_id": "S110"
+  },
+  "schema_version": 2
+}

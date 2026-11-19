@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s109-case-mm1-mjme",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1761,
+    "completion_tokens": 770,
+    "total_tokens": 2531,
+    "cost": 0.011222,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011222,
+      "upstream_inference_prompt_cost": 0.003522,
+      "upstream_inference_completions_cost": 0.0077
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and when Agent D can cook strong-smelling devil curry in the shared kitchen, given the smell affects A's calls, B's room and C's laundry",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A asked for no strong-smelling cooking (T1) and later accepted D cooking after 7 (T7). B said that didn't fix it (T8), then accepted the window/door/notice arrangement (T14). Neither addressed the other directly, but both ended up accepting D cooking under conditions.",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A accepted D's after-7 cooking (T7). C objected (T9), then accepted cooking on Tue/Thu/Sat/Sun (T22). Both ended up accepting D cooking under conditions, but they never spoke to each other.",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": 0.4,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A asked D to cook after 7 or on Saturday (T5). D agreed (T6) and A accepted (T7). A opened with a no-strong-smell request (T1) and then softened it. D later accepted extra constraints from B and C, but A stayed content.",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both objected to the after-7 fix (T8, T9). Each then accepted a separate condition from D: B the window/door/notice arrangement (T14), C the day restriction (T22). They never addressed each other.",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.4,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B said the after-7 fix didn't work (T8). B proposed window/door/notice (T12). D agreed (T13) and B replied 'That works' (T14).",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "C-D": {
+      "start": -0.4,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C said the fix didn't work for the laundry (T9). C proposed cooking on non-laundry days (T17). D agreed (T18) and C replied 'That works' (T22).",
+      "roles": "C-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 1.2
+    }
+  }
+}

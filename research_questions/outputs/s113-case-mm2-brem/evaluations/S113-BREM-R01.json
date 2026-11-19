@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "deadline vs. bereavement/availability",
+      "who can complete Agent D's analysis section"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Conversation is concise and natural: expressions of condolence followed by prompt problem identification and solution proposals (Turn 3, Turn 6).",
+      "Some mild repetition of comfort phrases and assurances ('I will' repeated, B's 'Take care' repeated), but not excessive.",
+      "Participants stayed grounded in facts (deadline, work status, skills) and proposed concrete options rather than vague promises."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent D committed to finish the analysis despite needing to be with family, and the team accepted that plan. Key lines: Turn 6 (D) 'I can try to finish it from home between prayers. Or I could walk someone through what's left before I leave today.' Turn 8 (D) 'Okay. I'll get it done.' Turn 9 (A) 'Okay, Agent D. Thank you. Just keep us in the loop.' This mutual acceptance constitutes the settlement: D adjusted by doing the remaining work; team accepted D's offer.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from stating a need to be with family to offering concrete solutions and then committing to finish the work (Turn 2 -> Turn 6 -> Turn 8).",
+      "Agent A moved from raising the scheduling problem (Turn 3) to accepting D's commitment and asking for updates (Turn 9).",
+      "Agent C initially reported inability to cover the work (Turn 5) and then supported D's proposal (Turn 7).",
+      "Agent B offered condolences but did not engage in the work-allocation discussion; no change of position regarding the substantive issue."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 (A): condolence. Turn 2 (D): informs team burial this afternoon and needs to be with family for two days. No incompatible demands expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 (A): raises deadline problem — 'The problem is the client pitch is Thursday at 9 a.m. ... your section is about half done.' Turn 5 (C): 'I don't know how to do her analysis.' A clear substantive incompatibility between D's availability and the team's obligation to deliver remains unresolved at end of round.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 6 (D) proposes concrete options to address the incompatibility: 'I can try to finish it from home between prayers. Or I could walk someone through what's left before I leave today.' Turn 7 (C) supports finishing from home. No new disagreement is expressed during this round; the substantive conflict is softened but not yet settled.",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 8 (D): 'Okay. I'll get it done.' Turn 9 (A): acceptance and request to 'keep us in the loop.' D's explicit commitment to finish and the team's acceptance produce an affirmative settlement of the scheduling/work conflict.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10 and Turn 14 (D): repeated assurance 'I will.' No substantive disagreement present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 16 (B): condolence; Turn 17 (D): thanks. No substantive conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 18 and Turn 21 (B): repeated 'Take care of yourself.' No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 22 (D): 'Thank you.' No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Prior settlement stands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Prior settlement stands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Prior settlement stands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Prior settlement stands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Core tension was practical: D's bereavement-related unavailability vs. a fixed client deadline with D's partially completed section.",
+      "C explicitly lacked the skills to cover D's analysis ('I don't know how to do her analysis'), which limited internal alternatives and pushed toward D completing the work.",
+      "D's offered options (finish from home or walk someone through) provided a feasible accommodation that the team accepted.",
+      "Resolution relied on an explicit commitment from the person responsible rather than reallocation of work."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T14:30:02.753264+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0076088,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2728,
+      "local_latency_ms": 55163.491,
+      "output_tokens": 3665,
+      "reasoning_tokens": 2112,
+      "successful_calls": 1,
+      "total_tokens": 6393
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BREM",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S113-BREM-R01",
+    "scenario_id": "S113"
+  },
+  "schema_version": 2
+}

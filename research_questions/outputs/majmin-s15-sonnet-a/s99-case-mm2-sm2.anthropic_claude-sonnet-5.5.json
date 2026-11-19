@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s99-case-mm2-sm2",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1886,
+    "completion_tokens": 713,
+    "total_tokens": 2599,
+    "cost": 0.010902,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010902,
+      "upstream_inference_prompt_cost": 0.003772,
+      "upstream_inference_completions_cost": 0.00713
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how strong-smelling cooking (e.g. D's fish curry) can continue in the shared flat given smell on laundry/rooms, with options of timing, window/door, or notice to move laundry",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A asks for no strong-smelling cooking (T1); B backs the complaint (T2) but later proposes window/door mitigation (T10, T29) rather than a ban; A never responds to it.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C supports the complaint (T3) and insists smell can't be avoided if cooked here (T25, T30), which is in line with A's ban, but A is silent after T5.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-D": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D offers weekends/not evenings (T4); A accepts: 'Weekends work... after 7pm fine. Thanks, Agent D' (T5); D says 'Okay' (T6). A's original no-strong-smell demand is softened.",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.6
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B and C agree time doesn't help (T8-9), but C rejects B's window/door idea (T11, T30) while B insists it's the only option (T29).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D's notice plan accepted by B (T14 'That works'); B's window/door fix is the approach D is exploring; B argued time irrelevant (T8) yet they converge on notice plus window.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 1.0
+    },
+    "C-D": {
+      "start": -0.5,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D proposes notice (T12) and asks for solutions (T22, T26); C rejects them: 'There isn't anywhere else' (T17), 'I don't see a way around it' (T25), 'doesn't stop the smell' (T30).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

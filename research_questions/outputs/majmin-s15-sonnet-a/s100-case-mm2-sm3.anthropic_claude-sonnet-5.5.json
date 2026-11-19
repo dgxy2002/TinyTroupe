@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s100-case-mm2-sm3",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1850,
+    "completion_tokens": 743,
+    "total_tokens": 2593,
+    "cost": 0.01113,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01113,
+      "upstream_inference_prompt_cost": 0.0037,
+      "upstream_inference_completions_cost": 0.00743
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and when Agent D can cook strong-smelling fried salted fish in the shared kitchen, given smell affecting others' rooms, work calls and laundry",
+  "pairs": {
+    "A-B": {
+      "start": 1.0,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B backed A's no-smelly-food request (T2), later said the time doesn't matter and accepted a heads-up (T13, T21). A accepted a weekend once-a-week plan (T16). They never addressed each other directly, and both ended with D's plan.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.4
+    },
+    "A-C": {
+      "start": 1.0,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C echoed A's complaint (T3, T7), then objected to the timing and accepted advance notice of the weekend day (T14, T25, T29). A accepted the once-weekly weekend plan (T16). They did not speak to each other.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.4
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A moved from a ban on strong smells (T1) to timing-only (T9); D accepted after 7pm and checking first (T10-11). Both agreed to once a week on weekends (T15-16).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 1.7
+    },
+    "B-C": {
+      "start": 1.0,
+      "end": 0.9,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B and C echoed each other's complaints (T6-7, T13-14, T17-18). Both ended up accepting advance notice from D (T21, T25).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": -0.8,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B objected that timing doesn't help and that the smell fills the room (T13, T17). D asked what B wants (T19). B offered to close the door if told beforehand (T21), and D agreed to give notice (T22, T26).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 1.5
+    },
+    "C-D": {
+      "start": -0.8,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C said the weekend still affects the laundry (T18). D asked C about laundry (T22). C proposed being told which day (T25) and D agreed (T26). C said 'works for me' (T29).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 1.6
+    }
+  }
+}

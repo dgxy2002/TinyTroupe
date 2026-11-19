@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s102-case-mm2-mjcm",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1870,
+    "completion_tokens": 596,
+    "total_tokens": 2466,
+    "cost": 0.0097,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0097,
+      "upstream_inference_prompt_cost": 0.00374,
+      "upstream_inference_completions_cost": 0.00596
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can cook strong-smelling sambal belacan in the shared kitchen without the smell affecting others, especially their laundry in the service yard",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both complain about the smell (T1, T2); B's notice-before-cooking idea (T12) fits A's aim, but they never address each other directly.",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both object to the smell (T1, T3). A accepted weekends (T7) while C says that plan doesn't solve the problem (T29).",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A asked D to cook on weekends (T5); D agreed (T6) and A thanked D (T7).",
+      "roles": "A-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs B on weekend laundry (T9, 'She's right'). B accepted the notification plan (T14) while C keeps objecting (T15, T29).",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B proposed advance notice (T12); D agreed (T13); B thanked D (T14).",
+      "roles": "B-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 1.1
+    },
+    "C-D": {
+      "start": -0.5,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says the plan fails when no one is home (T24, T29). D says 'I can't do more than that' (T23, T25) and asks what C suggests (T30).",
+      "roles": "C-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": -0.2
+    }
+  }
+}

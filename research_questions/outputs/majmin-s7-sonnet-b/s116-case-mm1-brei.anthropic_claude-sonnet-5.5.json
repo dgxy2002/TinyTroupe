@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s116-case-mm1-brei",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1581,
+    "completion_tokens": 603,
+    "total_tokens": 2184,
+    "cost": 0.009192,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009192,
+      "upstream_inference_prompt_cost": 0.003162,
+      "upstream_inference_completions_cost": 0.00603
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D's half-finished analysis section should be reassigned to a colleague while D is away for the funeral, or D finishes it remotely by Thursday's pitch",
+  "pairs": {
+    "A-B": {
+      "start": 0.2,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A asks B to take over (7) and to be ready to review tomorrow (12); B refuses to take it on but will look at it (13, 16); A accepts: 'Understood' (17).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks whether someone could take the section over (3); C says she can't (5); A moves on to B and C does not disagree.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A rejects D's offer to work from home and wants another plan (7); D insists on finishing it (8, 11); A concedes: 'A draft by tonight works' (12, 21).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 1.0
+    },
+    "B-C": {
+      "start": 0.1,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C says she can't take it over (5); B also can't take it on (13); neither addresses the other.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "D says no one else should take it over (8, 11); B declines to take it on (13, 16), which fits D's plan, but neither addresses the other.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D: 'She's right, it would be hard to hand over' (6), agreeing with C's statement (5).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "coverage of Agent D's analysis section due Thursday",
+      "team workload distribution against an imminent deadline"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Conversation is natural and concise: immediate condolences followed by practical reallocation of work.",
+      "Key concrete commitments were stated explicitly: A volunteering to finish the section and D committing to send materials ('I'll send everything over to you right now.').",
+      "Those who could not help cited concrete constraints ('I can't take on any more...','My part is already behind...'), giving substantive reasons rather than generic refusals."
+    ],
+    "dialogue_repetition_score": 0,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent A volunteered to take on the outstanding work and Agent D agreed to provide materials, resolving who would complete the analysis. Key lines: Agent A: 'Okay. If no one else can, I'll handle it. I'll finish Agent D's section.' Agent D: 'I'll send everything over to you right now.'",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent A moved from offering condolences to actively taking responsibility for the missing work: 'I'll handle it. I'll finish Agent D's section.'",
+      "Agent B and Agent C retained their positions of being unable to take more work (no softening beyond acknowledgment); B explicitly said 'I can't take on any more.' C said 'I can't.'",
+      "Agent D shifted from needing to be with family to delegating by promising to send existing materials: 'I'll send everything over to you right now.'"
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent D announces a family bereavement and need to be with family; Agent A offers condolences. No incompatible demands about the deadline or work are raised. (Turn 1-2)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A raises the deadline and need to cover Agent D's section; Agent B refuses to take more work: 'I can't take on any more.' This creates a clear disagreement about who will cover the work. (Turn 3-4)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A asks Agent C to cover; Agent C also refuses: 'I can't. My part is already behind, and I don't know how to do that analysis.' Now two team members decline, increasing the strength of the unresolved coverage problem. (Turn 5,7)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A volunteers to take the work: 'Okay. If no one else can, I'll handle it. I'll finish Agent D's section.' Agent B accepts that arrangement ('Okay. Thanks, Agent A.'), de-escalating the coverage disagreement. (Turn 8-9)",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A asks Agent D to send materials and Agent D agrees to send everything: 'Right. Agent D, when you have a moment, can you send me everything you have for your section?' / 'I'll send everything over to you right now.' No conflict. (Turn 10-11)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D confirms sending materials: 'Okay, sending it to you now.' Agent A: 'Okay, thanks. Go be with your family.' No conflict. (Turn 14-15)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Expressions of sympathy and well-wishes: 'Thank you.' / 'Take care, Agent D.' No conflict. (Turn 16-17)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D thanks Agent B: 'Thank you, Agent B.' No conflict. (Turn 18)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent C offers condolences and Agent D thanks them. No conflict. (Turn 25-26)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The primary tension was between an urgent external deadline and a sudden personal emergency; resolution required a quick reallocation of responsibility.",
+      "Resolution depended on one team member's willingness to absorb extra work rather than negotiated trade-offs or external help (none available).",
+      "Concrete, immediate handoff of materials (D sending files) was a necessary condition for the accommodation to be effective."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T14:46:49.674403+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00846805,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2821,
+      "local_latency_ms": 37095.643,
+      "output_tokens": 4083,
+      "reasoning_tokens": 2560,
+      "successful_calls": 1,
+      "total_tokens": 6904
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BRMI",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S115-BRMI-R01",
+    "scenario_id": "S115"
+  },
+  "schema_version": 2
+}

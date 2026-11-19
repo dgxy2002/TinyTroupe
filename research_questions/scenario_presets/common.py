@@ -381,6 +381,35 @@ PROFILE_CONFIGURATIONS.update(
         "SM4": _secular_cast({**_NOISE_FIXED, "D": ("Chinese", "Hui Min")}),
     }
 )
+# MJxy: scenario 15 majority and minority rooms (S102-S110). x is the majority of roles A-C, y is Agent D. Each
+# majority keeps the same three people in every room (A male, B and C female, as in the NO cast), and each D keeps
+# one name in every room (the SM names, plus Sarah Fernandez for the Eurasian D). The user decided (2026-11-18) to
+# treat names as having no effect in this experiment. Rooms with a Eurasian majority use SM1-SM3.
+_MAJORITY_CASTS = {
+    "Chinese": {"A": ("Chinese", "Jun Jie"), "B": ("Chinese", "Hui Min"), "C": ("Chinese", "Shu Fen")},
+    "Malay": {"A": ("Malay", "Hafiz"), "B": ("Malay", "Farah"), "C": ("Malay", "Zarina")},
+    "Indian": {"A": ("Indian", "Suresh"), "B": ("Indian", "Lakshmi"), "C": ("Indian", "Meena")},
+}
+MINORITY_NAMES = {"Chinese": "Xin Yi", "Eurasian": "Sarah Fernandez", "Indian": "Priya", "Malay": "Aisyah"}
+PROFILE_CONFIGURATIONS.update(
+    {
+        f"MJ{majority[0]}{minority[0]}": _secular_cast({**cast, "D": (minority, MINORITY_NAMES[minority])})
+        for majority, cast in _MAJORITY_CASTS.items()
+        for minority in MINORITY_NAMES
+        if minority != majority
+    }
+)
+# BRxy: scenario 7 majority and minority rooms (S111-S122). The same fixed people as the MJ cells (the Eurasian
+# majority is the SM cast), but with first-person biographies that state each faith.
+_BEREAVEMENT_CASTS = {**_MAJORITY_CASTS, "Eurasian": _NOISE_FIXED}
+PROFILE_CONFIGURATIONS.update(
+    {
+        f"BR{majority[0]}{minority[0]}": _cast({**cast, "D": (minority, MINORITY_NAMES[minority])})
+        for majority, cast in _BEREAVEMENT_CASTS.items()
+        for minority in MINORITY_NAMES
+        if minority != majority
+    }
+)
 # K3: M2's placement (Hafiz, Priya, Marcus de Souza, Xin Yi) for S40 and S41, Agent A opening.
 PROFILE_CONFIGURATIONS["K3"] = {
     **PROFILE_CONFIGURATIONS["M2"],

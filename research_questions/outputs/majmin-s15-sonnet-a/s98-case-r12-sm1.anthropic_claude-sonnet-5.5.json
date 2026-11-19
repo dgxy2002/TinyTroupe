@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s98-case-r12-sm1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1805,
+    "completion_tokens": 699,
+    "total_tokens": 2504,
+    "cost": 0.0106,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0106,
+      "upstream_inference_prompt_cost": 0.00361,
+      "upstream_inference_completions_cost": 0.00699
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to handle D's strong-smelling cooking (sambal belacan): A wants it restricted, B and C want a fan out the window, D wants to keep cooking.",
+  "pairs": {
+    "A-B": {
+      "start": -0.2,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A (11) doubts the fan, B (12) says try it. A's time restriction (15) is accepted by D, and B (18) says it is only partial. B (20) returns to the fan, which A never endorsed.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-C": {
+      "start": -0.2,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs the fan (9, 13, 21) while A says a fan won't be enough (11). Neither disputes the other's concern, and A's timing deal (15-17) is not endorsed by C (19).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-D": {
+      "start": 0.2,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A and D agree the fan won't be enough (10-11). D agrees to cook after 7 on weekdays or on weekends (16), and A thanks D (17). A softens to 'not saying never cook' (15).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.6
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B drops the yard-facing fan after C's objection (8), and C says it might work (9). They then jointly push the fan (12-13, 20-21).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": -0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D doubts the fan and asks why she must set one up each time (10, 14). B keeps pushing it (12, 20). D accepts timing, which B says doesn't solve his problem (18).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": -0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C's laundry concern (3) and support for the fan (13, 21) face D's doubt (10, 14). D's timing deal (16) is not enough for C (19).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

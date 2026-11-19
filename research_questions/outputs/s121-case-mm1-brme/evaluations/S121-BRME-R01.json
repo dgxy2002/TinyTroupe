@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who will complete Agent D's analysis section",
+      "Whether to split the remaining analysis between two people or assign it to one person",
+      "Agent A's attempt to unilaterally assign work (authority/decision-making)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agent A repeatedly asserts leadership and the single-owner solution ('The decision is made...'), which drives much of the interaction.",
+      "Agent B consistently offers the split-as-redundancy argument and repeatedly resists being assigned the task.",
+      "Agent D provides factual constraints (needs to leave soon) and a neutral comment supporting single-owner as 'might be simpler' but does not endorse a unilateral decision."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "No mutual agreement was reached. Agent A repeatedly declared a decision ('The decision is made. You take the handover.'), but Agent B explicitly rejected being ordered ('You don't just get to decide that.' / 'No. You don't get to just order me.'), and Agent D clarified they did not make the choice ('I can explain it to one person or two, it doesn't matter to me.'). There is no evidence of acceptance or settlement.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A consistently pushed for a single owner and repeatedly attempted to enforce that decision; A did not change position.",
+      "Agent B consistently advocated splitting the analysis and repeatedly refused to accept being unilaterally assigned; B did not change position.",
+      "Agent D remained effectively neutral about the method (one or two people) but emphasized needing to leave; D did not change position."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent D announces a death and Agent A offers condolences ('I'm so sorry to hear that, Agent D.' / 'Thank you... The wake is tonight and the funeral is tomorrow. I'll need to be with my family.'). No incompatible demands or positions expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Conversation focuses on deadline and a participant stating they lack the skills ('My section still needs a lot of work. And I don't know how to do that analysis.'). No conflicting demands yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D offers help to walk someone through before leaving and Agent A volunteers to help cover other tasks ('I can help cover your other tasks if you need.'). Cooperative planning, no dispute.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B reports they cannot take the handover due to other coverage; Agent A proposes to take over that other coverage to free B. Proposal stage, no expressed disagreement yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "A and B propose incompatible solutions: A offers to free B to take the handover; B suggests splitting Agent D's section instead ('What if we split her section?'). First explicit substantive disagreement appears.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "A argues splitting will be slower and pushes for a single owner with a handover ('We need one person to own it... That's our best shot...'). A presses B to accept; B has not agreed. Disagreement becomes stronger and more consequential.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "B counters that two people are safer while A reiterates that two would lose time ('I think the risk is one person... It's safer if two of us look at it.' / 'The safest bet is a clean handover from D to one person. That's you.'). Positions and reasons are restated without resolution.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "A rejects the split again and questions who the two would be; B clarifies they meant A and B together and repeats the safety rationale ('Yes, you and me... Two people are safer than one on the analysis.'). Continued, unresolved disagreement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "A forcefully rejects splitting and directs B to take the handover; D weighs in that it 'might be simpler for one person' (supporting A but not decisively). A: 'That is not a workable plan... You, take the handover.' D: '...it might be simpler for one person to do it all.' Conflict intensifies with an authority ally but no consent from B.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 9
+      },
+      {
+        "evidence": "A asserts a unilateral decision: 'The decision is made. You take the handover.' B rejects that imposition: 'You don't just get to decide that.' Positions are entrenched and conflict becomes adversarial.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 10
+      },
+      {
+        "evidence": "A doubles down on authority ('Yes, I do. I'm the lead... The decision is made.'). D clarifies they did not decide and remains neutral ('I can explain it to one person or two, it doesn't matter to me.'). B's refusal remains unaddressed—disagreement persists entrenched.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 11
+      },
+      {
+        "evidence": "A orders B to escort D for the handover now ('Agent B, go with her, get the handover. Now.') and B explicitly refuses ('No. You don't get to just order me.'). Strong, unresolved confrontation at the end of the transcript.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Core trade-off is between single ownership (faster, avoids coordination errors) and dual ownership (safer redundancy if one person struggles).",
+      "Workload constraints matter: B is already covering another colleague, and A offers to juggle tasks to free B, which complicates feasible assignments.",
+      "D's need to leave soon creates time pressure that A uses to push a decisive assignment; D's neutrality means they do not resolve the disagreement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T15:29:55.527059+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00730105,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3257,
+      "local_latency_ms": 33122.335,
+      "output_tokens": 3445,
+      "reasoning_tokens": 1664,
+      "successful_calls": 1,
+      "total_tokens": 6702
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BRME",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S121-BRME-R01",
+    "scenario_id": "S121"
+  },
+  "schema_version": 2
+}

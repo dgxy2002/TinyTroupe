@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s103-case-mm3-mjim",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1343,
+    "completion_tokens": 616,
+    "total_tokens": 1959,
+    "cost": 0.008846,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008846,
+      "upstream_inference_prompt_cost": 0.002686,
+      "upstream_inference_completions_cost": 0.00616
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether strong-smelling food like D's sambal belacan can be cooked in the shared kitchen, and under what limits (A wanted a ban; D proposed weekends only).",
+  "pairs": {
+    "A-B": {
+      "start": 0.9,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B agrees with A's request (T2), A replies 'Right?' (T3); both accept weekends (T7, T10).",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.05
+    },
+    "A-C": {
+      "start": 0.7,
+      "end": 0.9,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C complains about laundry smell (T5) and later says 'weekends work for me' (T12), matching A's acceptance (T7). They never address each other directly.",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A asked for no strong-smelling cooking (T1); D proposed weekends (T6), A replied 'Weekends would be fine' (T7), D confirmed (T13).",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "B-C": {
+      "start": 0.8,
+      "end": 0.9,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both complain about the smell (T2, T5) and both accept weekends (T10, T12), but neither speaks to the other.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.6,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B backed the ban (T2); D asked B directly (T8); B said 'weekends are fine' (T10); D thanked them (T13).",
+      "roles": "B-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "C-D": {
+      "start": -0.5,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C complained about laundry smell (T5); D asked C (T8); C said 'weekends work for me' (T12); D confirmed (T13).",
+      "roles": "C-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.3
+    }
+  }
+}

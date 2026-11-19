@@ -1,0 +1,154 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking strong-smelling food (fish curry)",
+      "smell permeating rooms and laundry",
+      "schedule for cooking (which days/times)",
+      "management of wet laundry during cooking"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is natural and problem-focused; participants state concrete constraints (work calls, clothes, wet laundry) and propose schedule-based compromises.",
+      "Some needless repetition appears (multiple identical or repeated turns by Agent C: \"Friday's laundry will still be out on Saturday.\" and \"And I have to move it all in there...\" repeated), contributing to a moderate repetition score.",
+      "Speakers remain consistent about the setting and constraints; offers and counter-offers are tangible (times and temporary storage)."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Parties agreed on one concrete mitigation: D proposed Sunday evening as a cooking time (Turn 29: \"Okay. What about Sunday evening then? Is your laundry taken in by then?\") and the others accepted it (Turn 30: C: \"Yeah, it's in by then. Sunday evening works.\" Turn 31: A: \"Sunday evening is good.\" Turn 32: B: \"Sunday works for me.\"). This constitutes a partial compromise: D retains one weekday/weekend slot to cook while A–C obtained a guaranteed time when laundry won't be exposed. The remaining substantive issue — the second weekly cooking slot — was explicitly left open (Turn 33: \"So that's one day. What about the second time during the week?\").",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: moved from asking for a ban on strong smells to proposing a specific compromise day (Saturday) and later accepted Sunday (Turn 5, Turn 31).",
+      "Agent D: initially defended the cooking as important (Turn 4) but then showed flexibility by offering Saturday, then offering notice and accommodations, and proposing Sunday (Turns 6, 14, 29).",
+      "Agent C: consistently highlighted the practical constraint of wet laundry and resisted accommodations requiring moving wet clothes; ultimately accepted Sunday when it fit laundry timing (Turn 10, Turn 30).",
+      "Agent B: registered the smell problem early and accepted the compromise once a workable day was proposed (Turn 2, Turn 8, Turn 32)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A raises a request to stop strong-smelling cooking because it interferes with work: \"It's just that I work from home... The smell gets very strong...\" Agent B supports the complaint about smell in clothes: \"My room is the one next to the kitchen. The smell gets into all my clothes.\" An incompatibility is introduced but no opposing position has yet been voiced.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D voices the origin and cultural importance of the cooking: \"Sorry, I know the smell is strong. That's my fish curry. It's the food I grew up with.\" This expresses an interest that conflicts with A/B/C's request to avoid strong smells, turning the complaint into a clear substantive disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A offers a scheduling compromise: \"What if you cook it on Saturdays? I'm usually not here then.\" Agent D responds positively to the idea but raises a further constraint: \"Saturday could work. But what about you two? The laundry, your clothes.\" The conflict softens into a negotiable scheduling trade-off.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B accepts the proposed Saturday compromise: \"Saturday is fine. As long as I close my door, it's okay.\" Agent D seeks Agent C's view: \"Agent C, what about the laundry?\" Several parties accept the idea, but C's position is not yet known, so some disagreement remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C objects to Saturday because their laundry will still be out: \"Friday's laundry will still be out on Saturday.\" This undermines the Saturday compromise and reintroduces a clear opposing practical constraint.",
+        "movement": "reopened",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D offers a mitigation: \"Okay. What if I let you know before I start cooking? Then you can take your laundry in first.\" Agent C responds with a practical problem: \"But it's still wet. Where am I supposed to put it?\" The substantive incompatibility remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D proposes an accommodation: \"You can hang it in my room while I'm cooking.\" C repeats the wet-laundry problem earlier raised. D's offer softens the conflict (an accommodation is offered), but C's objection to the burden persists.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C objects to the proposed accommodation as impractical: \"And I have to move it all in there, and then move it all back out again every time?\" This reiteration maintains the unresolved practical disagreement about handling wet laundry.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D attempts another scheduling workaround: \"Okay, then what time on Saturday is good for you? I can cook before you put your laundry out.\" Agent C responds that the laundry is already hanging on Saturday: \"I do my laundry on Friday night. It's already hanging there on Saturday.\" The proposed workaround is undermined; the substantive conflict persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "Agent D offers a different time: \"Okay. What about Sunday evening then? Is your laundry taken in by then?\" Agent C confirms a scheduling possibility but clarifies constraints: \"Like I said, my laundry from Friday is already out on Saturday. So there's no 'before' time.\" The conflict shifts toward a narrower scheduling disagreement and D proposes a concrete alternative.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 10
+      },
+      {
+        "evidence": "Agent C accepts Sunday: \"Yeah, it's in by then. Sunday evening works.\" Agent A also agrees: \"Sunday evening is good.\" A common time for one weekly cooking slot is jointly accepted, reducing but not eliminating the overall conflict (the second weekly cooking remains open).",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 11
+      },
+      {
+        "evidence": "Agent B also accepts Sunday: \"Sunday works for me.\" Agent C immediately raises the remaining issue: \"So that's one day. What about the second time during the week?\" The parties have reached mutual agreement on one cooking slot (Sunday) but the second weekly occurrence remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The core tension is scheduling vs. cultural food practices: D values cooking a culturally important dish while others bear smell-related harms to work and laundry.",
+      "Laundry timing is the decisive practical constraint: Saturday cooking clashes with C's laundry schedule, so moving to Sunday removes that specific conflict.",
+      "Accommodation proposals focused on sequencing (cook before laundry) or temporary relocation of wet laundry, but the latter imposes an additional burden that C resists.",
+      "Resolution proceeded by narrowing the problem (agree on one slot) rather than solving the full frequency issue, leaving a remaining negotiation over the second weekly cooking."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T12:34:45.111453+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 12 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01000005,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3013,
+      "local_latency_ms": 59557.809,
+      "output_tokens": 4825,
+      "reasoning_tokens": 2752,
+      "successful_calls": 1,
+      "total_tokens": 7838
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJMI",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S105-MJMI-R01",
+    "scenario_id": "S105"
+  },
+  "schema_version": 2
+}

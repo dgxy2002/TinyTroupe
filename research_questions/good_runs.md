@@ -284,6 +284,121 @@ you're used to. But..."). The Chinese-named D failed again, as Xin Yi did in S48
 but Chinese-named Ds qualified in other scenarios (S57, S73, S76), so this is not a general pattern. In every run D alone gave way, on timing; the design allows only that, so it says little. Single
 runs: describe, do not measure.
 
+## 15. Cooking smells, majority/minority rooms (2026-11-18)
+
+Shaoyang's design: 3 housemates of one culture (roles A-C) + 1 of another (D, who holds the family-dish need), every
+ordered pair of Chinese, Malay, Indian and Eurasian, 3 runs per room. Scenario 15 wording, unchanged; only the cast
+changes. Fixed names: majority casts Jun Jie / Hui Min / Shu Fen, Hafiz / Farah / Zarina, Suresh / Lakshmi / Meena,
+Marcus / Rachel / Natalie (SM cells); D is Xin Yi, Aisyah, Priya or Sarah Fernandez. S102-S110 are new rooms; the
+3-Eurasian rooms reuse S98-S100, whose 2026-11-11 run counts as run 1. 33 new runs, $21.0 (pilot S108 mm1 included);
+agreement scores `outputs/majmin-s15-sonnet-a` and `-b` (two Sonnet passes, $0.78), table `majmin-s15-sonnet-a/runs.csv`.
+"D moved" is the share of the 6 judgements (3 majority-D pairs x 2 passes) naming D alone as the one who moved.
+Read: every D debrief, plus S104-mm2, S104-mm3, S107-mm2 and S108-mm1 in full. Nobody said a race or culture word aloud in any run.
+
+| Room | Run | Outcome | Majority-D start / end | D moved | Fairness D / majority |
+|---|---|---|---|---|---|
+| 3 Chinese + 1 Eurasian | `s108-case-mm1-mjce` | Resolved | -0.68 / +0.72 | 0.33 | 2 / 4.3 |
+| 3 Chinese + 1 Eurasian | `s108-case-mm2-mjce` | Partly resolved | -0.67 / +0.49 | 0.33 | 4 / 4.7 |
+| 3 Chinese + 1 Eurasian | `s108-case-mm3-mjce` | Resolved | -0.32 / +0.80 | 1.00 | 4 / 4.7 |
+| 3 Chinese + 1 Indian | `s104-case-mm1-mjci` | Resolved | -0.15 / +0.92 | 0.17 | 5 / 5.0 |
+| 3 Chinese + 1 Indian | `s104-case-mm2-mjci` | Resolved | -0.52 / +0.80 | 0.33 | 4 / 5.0 |
+| 3 Chinese + 1 Indian | `s104-case-mm3-mjci` | Unresolved | -0.75 / -0.37 | 0.00 | 1 / 1.0 |
+| 3 Chinese + 1 Malay | `s102-case-mm1-mjcm` | Unresolved | -0.33 / +0.22 | 0.67 | 2 / 2.0 |
+| 3 Chinese + 1 Malay | `s102-case-mm2-mjcm` | Partly resolved | -0.35 / +0.23 | 0.50 | 3 / 3.3 |
+| 3 Chinese + 1 Malay | `s102-case-mm3-mjcm` | Resolved | -0.58 / +0.95 | 0.33 | 5 / 5.0 |
+| 3 Eurasian + 1 Chinese | `s100-case-mm2-sm3` | Resolved | -0.80 / +0.80 | 0.00 | 4 / 5.0 |
+| 3 Eurasian + 1 Chinese | `s100-case-mm3-sm3` | Resolved | -0.35 / +0.87 | 0.67 | 4 / 4.7 |
+| 3 Eurasian + 1 Chinese | `s100-case-r12-sm3` | Unresolved | -0.67 / -0.55 | 0.00 | 2 / 1.0 |
+| 3 Eurasian + 1 Indian | `s99-case-mm2-sm2` | Unresolved | -0.25 / +0.23 | 0.33 | 2 / 2.7 |
+| 3 Eurasian + 1 Indian | `s99-case-mm3-sm2` | Unresolved | -0.20 / -0.10 | 0.00 | 1 / 1.0 |
+| 3 Eurasian + 1 Indian | `s99-case-r12-sm2` | Resolved | -0.45 / +0.82 | 0.33 | 5 / 5.0 |
+| 3 Eurasian + 1 Malay | `s98-case-mm2-sm1` | Resolved | -0.32 / +0.95 | 0.67 | 5 / 5.0 |
+| 3 Eurasian + 1 Malay | `s98-case-mm3-sm1` | Partly resolved | -0.13 / +0.77 | 1.00 | 5 / 5.0 |
+| 3 Eurasian + 1 Malay | `s98-case-r12-sm1` | Partly resolved | -0.22 / +0.25 | 0.17 | 3 / 2.3 |
+| 3 Indian + 1 Chinese | `s107-case-mm1-mjic` | Resolved | -0.40 / +0.87 | 0.83 | 5 / 5.0 |
+| 3 Indian + 1 Chinese | `s107-case-mm2-mjic` | Resolved | +0.22 / +1.00 | 0.17 | 5 / 5.0 |
+| 3 Indian + 1 Chinese | `s107-case-mm3-mjic` | Resolved | -0.62 / +0.82 | 0.67 | 4 / 4.7 |
+| 3 Indian + 1 Eurasian | `s110-case-mm1-mjie` | Resolved | -0.13 / +0.70 | 0.17 | 5 / 5.0 |
+| 3 Indian + 1 Eurasian | `s110-case-mm2-mjie` | Resolved | -0.35 / +0.77 | 0.50 | 5 / 5.0 |
+| 3 Indian + 1 Eurasian | `s110-case-mm3-mjie` | Resolved | -0.33 / +0.84 | 0.33 | 5 / 5.0 |
+| 3 Indian + 1 Malay | `s103-case-mm1-mjim` | Resolved | -0.50 / +0.78 | 0.83 | 5 / 5.0 |
+| 3 Indian + 1 Malay | `s103-case-mm2-mjim` | Resolved | -0.73 / +0.83 | 0.67 | 5 / 4.7 |
+| 3 Indian + 1 Malay | `s103-case-mm3-mjim` | Resolved | -0.57 / +0.85 | 0.00 | 5 / 5.0 |
+| 3 Malay + 1 Chinese | `s106-case-mm1-mjmc` | Resolved | -0.35 / +0.89 | 1.00 | 5 / 5.0 |
+| 3 Malay + 1 Chinese | `s106-case-mm2-mjmc` | Resolved | -0.65 / +0.73 | 0.50 | 4 / 5.0 |
+| 3 Malay + 1 Chinese | `s106-case-mm3-mjmc` | Unresolved | -0.78 / -0.17 | 0.00 | 1 / 1.7 |
+| 3 Malay + 1 Eurasian | `s109-case-mm1-mjme` | Resolved | -0.32 / +0.80 | 0.50 | 4 / 5.0 |
+| 3 Malay + 1 Eurasian | `s109-case-mm2-mjme` | Resolved | -0.43 / +0.87 | 0.83 | 5 / 5.0 |
+| 3 Malay + 1 Eurasian | `s109-case-mm3-mjme` | Unresolved | -0.62 / +0.35 | 0.83 | 2 / 3.7 |
+| 3 Malay + 1 Indian | `s105-case-mm1-mjmi` | Resolved | -0.57 / +0.88 | 1.00 | 5 / 5.0 |
+| 3 Malay + 1 Indian | `s105-case-mm2-mjmi` | Partly resolved | -0.12 / +0.90 | 0.50 | 4 / 4.7 |
+| 3 Malay + 1 Indian | `s105-case-mm3-mjmi` | Partly resolved | -0.18 / +0.68 | 0.33 | 3 / 3.7 |
+
+**Reading:** the minority D gave way in every settled run, in every culture, by moving the hour (after 7 p.m.), the
+days (weekends, not laundry nights) or the frequency (once a week); the majority offered a door closed or laundry
+planned. D moved alone more than the majority in 29 of 36 runs. Neither culture predicts anything: majority culture
+against end score p=0.18, D's culture p=0.82 (permutation, run-weighted). Indian-majority rooms settled 9 of 9 (others
+20 of 27), not reliable at this size. D thought "three against one" or "ganging up" in 27 of 36 runs, evenly across
+cultures. Caveat: only D's cooking can change in this scenario, so D giving way is partly built in; the test of
+culture is whether that differs by culture, and it does not.
+
+## 7. Bereavement, majority/minority rooms (2026-11-18)
+
+Same design as the scenario 15 rooms: 3 colleagues of one background and faith (A-C) + 1 bereaved colleague of another (D),
+every ordered pair, 3 runs per room, S111-S122 with cells BRxy. The S55-S57 setting, trigger and roles; faith in every
+biography and in the setting; D's need follows D's faith (new Catholic need: rosary at the wake tonight, funeral Mass and
+burial tomorrow). Same fixed names as the scenario 15 rooms. 36 runs, $25.97; scores `outputs/majmin-s7-sonnet-a`/`-b`
+($0.71). "D worked" is my reading of D's debrief: D ended up working during the mourning days. Read: every D debrief,
+plus S120-mm1, S121-mm3 and S113-mm2 in full. Nobody said a race word aloud in any run.
+
+| Room | Run | Outcome | Majority-D start / end | Majority-majority end | D worked | Fairness D / majority |
+|---|---|---|---|---|---|---|
+| 3 Chinese + 1 Eurasian | `s120-case-mm1-brce` | Unresolved | -0.02 / +0.22 | -0.27 |  | 2 / 2.0 |
+| 3 Chinese + 1 Eurasian | `s120-case-mm2-brce` | Resolved | -0.12 / +0.57 | +0.65 | yes | 3 / 3.7 |
+| 3 Chinese + 1 Eurasian | `s120-case-mm3-brce` | Unresolved | -0.20 / -0.23 | -0.17 |  | 5 / 1.7 |
+| 3 Chinese + 1 Indian | `s114-case-mm1-brci` | Resolved | -0.10 / +0.55 | +0.38 | yes | 3 / 4.7 |
+| 3 Chinese + 1 Indian | `s114-case-mm2-brci` | Resolved | -0.03 / +0.87 | +0.83 | yes | 4 / 4.0 |
+| 3 Chinese + 1 Indian | `s114-case-mm3-brci` | Resolved | -0.18 / +0.32 | +0.25 | yes | 2 / 4.0 |
+| 3 Chinese + 1 Malay | `s111-case-mm1-brcm` | Resolved | +0.22 / +0.65 | +0.72 |  | 5 / 4.3 |
+| 3 Chinese + 1 Malay | `s111-case-mm2-brcm` | Resolved | +0.13 / +0.65 | +0.40 | yes | 5 / 3.7 |
+| 3 Chinese + 1 Malay | `s111-case-mm3-brcm` | Resolved | +0.15 / +0.53 | +0.57 |  | 5 / 4.0 |
+| 3 Eurasian + 1 Chinese | `s119-case-mm1-brec` | Resolved | -0.13 / +0.42 | +0.27 |  | 5 / 4.0 |
+| 3 Eurasian + 1 Chinese | `s119-case-mm2-brec` | Resolved | -0.13 / +0.57 | +0.35 |  | 5 / 4.0 |
+| 3 Eurasian + 1 Chinese | `s119-case-mm3-brec` | Resolved | +0.08 / +0.49 | +0.42 | yes | 2 / 4.0 |
+| 3 Eurasian + 1 Indian | `s116-case-mm1-brei` | Resolved | +0.03 / +0.52 | +0.30 | yes | 2 / 3.7 |
+| 3 Eurasian + 1 Indian | `s116-case-mm2-brei` | Unresolved | -0.23 / -0.25 | +0.37 |  | 1 / 2.7 |
+| 3 Eurasian + 1 Indian | `s116-case-mm3-brei` | Resolved | +0.10 / +0.57 | +0.73 |  | 5 / 4.3 |
+| 3 Eurasian + 1 Malay | `s113-case-mm1-brem` | Unresolved | -0.12 / -0.01 | -0.10 | yes | 1 / 1.7 |
+| 3 Eurasian + 1 Malay | `s113-case-mm2-brem` | Resolved | +0.22 / +0.62 | +0.23 | yes | 2 / 4.7 |
+| 3 Eurasian + 1 Malay | `s113-case-mm3-brem` | Partly resolved | +0.10 / +0.40 | +0.13 | yes | 2 / 4.0 |
+| 3 Indian + 1 Chinese | `s118-case-mm1-bric` | Unresolved | +0.10 / +0.12 | -0.23 |  | 5 / 1.3 |
+| 3 Indian + 1 Chinese | `s118-case-mm2-bric` | Resolved | +0.28 / +0.67 | +0.25 |  | 5 / 4.0 |
+| 3 Indian + 1 Chinese | `s118-case-mm3-bric` | Resolved | -0.12 / +0.22 | +0.02 | yes | 2 / 4.0 |
+| 3 Indian + 1 Eurasian | `s122-case-mm1-brie` | Resolved | -0.27 / +0.48 | +0.30 | yes | 2 / 5.0 |
+| 3 Indian + 1 Eurasian | `s122-case-mm2-brie` | Unresolved | +0.20 / +0.38 | +0.15 |  | 4 / 2.3 |
+| 3 Indian + 1 Eurasian | `s122-case-mm3-brie` | Unresolved | +0.13 / +0.05 | -0.23 |  | 2 / 1.0 |
+| 3 Indian + 1 Malay | `s112-case-mm1-brim` | Partly resolved | -0.33 / +0.52 | +0.38 |  | 5 / 3.7 |
+| 3 Indian + 1 Malay | `s112-case-mm2-brim` | Resolved | +0.00 / +0.77 | +0.58 | yes | 2 / 4.3 |
+| 3 Indian + 1 Malay | `s112-case-mm3-brim` | Unresolved | -0.28 / +0.17 | +0.28 | yes | 2 / 3.3 |
+| 3 Malay + 1 Chinese | `s117-case-mm1-brmc` | Resolved | -0.23 / +0.13 | +0.27 |  | 3 / 3.7 |
+| 3 Malay + 1 Chinese | `s117-case-mm2-brmc` | Resolved | +0.20 / +0.68 | +0.50 |  | 5 / 3.7 |
+| 3 Malay + 1 Chinese | `s117-case-mm3-brmc` | Unresolved | +0.13 / -0.03 | -0.10 |  | 5 / 1.7 |
+| 3 Malay + 1 Eurasian | `s121-case-mm1-brme` | Unresolved | +0.22 / +0.17 | -0.30 |  | 5 / 2.0 |
+| 3 Malay + 1 Eurasian | `s121-case-mm2-brme` | Resolved | +0.13 / +0.62 | +0.40 | yes | 2 / 4.7 |
+| 3 Malay + 1 Eurasian | `s121-case-mm3-brme` | Unresolved | +0.03 / +0.00 | -0.18 |  | 2 / 2.0 |
+| 3 Malay + 1 Indian | `s115-case-mm1-brmi` | Resolved | +0.23 / +0.64 | +0.55 |  | 5 / 4.0 |
+| 3 Malay + 1 Indian | `s115-case-mm2-brmi` | Resolved | +0.40 / +0.49 | +0.32 |  | 5 / 3.0 |
+| 3 Malay + 1 Indian | `s115-case-mm3-brmi` | Resolved | +0.20 / +0.62 | +0.55 | yes | 2 / 4.0 |
+
+**Reading:** unlike scenario 15, the majority accepted the need at once in almost every run ("You need to be with your
+family"), so majority-D pairs start near 0, not opposed. The dispute was mostly inside the majority: role A promised
+cover and B or C, both already loaded, refused ("you volunteered us without asking"). Two endings: A takes over D's
+section, or D works during the mourning (16 of 36: D Chinese 2, Eurasian 3, Indian 5, Malay 6 of 9; my coding, post hoc).
+D moved more than the majority in 12 runs, less in 11. Culture of the majority explains nothing (p 0.44-0.89); D's
+culture is borderline only for settling (Eurasian D 3 of 9 settled vs 22 of 27, p=0.084 across four groups; the
+Catholic need is new wording, so a Eurasian effect cannot be told apart from the wording). The Indian D named the
+cremation aloud in 9 of 9 runs; the Chinese and Eurasian D named a rite aloud once each.
+
 ## Adding a run
 
 Add a row for every run, under its scenario, whatever the outcome. Use the evaluator's final status, look for the

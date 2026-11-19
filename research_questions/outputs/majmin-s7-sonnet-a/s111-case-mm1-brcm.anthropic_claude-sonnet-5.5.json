@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s111-case-mm1-brcm",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1731,
+    "completion_tokens": 587,
+    "total_tokens": 2318,
+    "cost": 0.009332,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009332,
+      "upstream_inference_prompt_cost": 0.003462,
+      "upstream_inference_completions_cost": 0.00587
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will cover Agent D's half-finished pitch section after D's grandmother's death, so D can go home before Thursday's deadline",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "B objects to A's plan to share D's work (T4, T6); A revises so A takes the section and B's plate stays clear (T8); B agrees 'Okay, thanks' (T9).",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.7
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "C says they're behind and can't do D's analysis (T7); A takes the analysis and tells C to focus on their own part (T8); C says 'that works' (T11).",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.7
+    },
+    "A-D": {
+      "start": 0.5,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A tells D to go home and offers to take the section (T1, T3, T8); D accepts, walks A through what's left, and thanks A repeatedly (T13-T24).",
+      "roles": "A-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.45
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B and C never address each other; both accept A's revised plan (T9, T11).",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B and D never address each other; B accepts A's plan (T9) and D accepts it too (T13).",
+      "roles": "B-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C and D never address each other; C says the plan 'works' (T11) and D agrees to it (T13).",
+      "roles": "C-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.4
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "coverage of the analysis section for the Thursday deadline",
+      "Agent D's need to be with family for bereavement rites vs completing work"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants use natural condolence language and briefly address the practical problem.",
+      "A single repeated line from Agent A ('Okay, Agent D. If you're sure...') appears once as an exact duplicate.",
+      "Conversation is short and focused; no attempts to reorganize workload beyond D's offer.",
+      "Resolution rests on D's voluntary commitment rather than redistributing work."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent D agreed to complete the analysis despite the bereavement and the rest of the team accepted this commitment. Key lines: Agent D: 'Okay. I understand. I'll work on it from home. It'll be done.' and later 'Okay. I will.' Agent A signaled acceptance: 'Okay, Agent D. If you're sure. Just let us know how you're getting on.'",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent D moved from stating a need to be with family to committing to complete the analysis: 'I'll work on it from home. It'll be done.' then 'Okay. I will.'",
+      "Agent A moved from raising the scheduling problem and expressing concern to accepting D's commitment: 'Okay, Agent D. If you're sure.'",
+      "Agents B and C maintained their initial refusal to take on the analysis ('I can't') and did not change position."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent D announces a bereavement and need to be with family: 'The cremation is tomorrow. I need to be with my family today and tomorrow for the rites.' No substantive disagreement about work yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A raises the deadline and asks how to cover the analysis: 'That leaves us with the deadline... What are we going to do about the analysis section?' Agent B immediately refuses to help: 'I'm sorry, I can't. I'm already covering for our colleague who's on leave.' An incompatibility about who will do the analysis appears.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C also refuses: 'I can't either. I don't know how to do that analysis, and I'm still trying to finish my own part.' The team's inability to reassign the task plus Agent D's need to be with family creates a strong practical conflict. Agent D responds by volunteering: 'Okay. I understand. I'll work on it from home. It'll be done.' (Promise made but practical incompatibility remains.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A questions whether D should take this on given the bereavement: 'Are you sure, Agent D? That's a lot to take on right now.' Agent D reaffirms both the need and the commitment: 'I have to. I'll get it done.' The substantive incompatibility (family duties vs delivery) persists without concrete mitigation.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A expresses conditional acceptance: 'Okay, Agent D. If you're sure. Just let us know how you're getting on.' (Line repeated.) The team begins to accept D's offer, lowering but not eliminating the remaining practical risk that the analysis may not be completed while D is attending rites.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D explicitly commits: 'Okay. I will.' Agent A offers condolences and does not object further. The team (via A) accepts D's commitment and D accepts responsibility; the immediate scheduling conflict is therefore settled by D's concession to do the work.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Only condolences exchanged: 'My condolences, Agent D.' 'Thanks, Agent B.' No substantive disagreement remains or is expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The team is understaffed/has no available backup: both B and C explicitly cannot take on the analysis, creating single-point dependency.",
+      "There is a tension between personal bereavement obligations and deliverable deadlines; the team resolves this by having the affected person absorb additional workload (a concession).",
+      "The settlement is durable in the transcript (D repeatedly affirms), but it relies on a risky promise rather than structural reassignment or external help."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T14:40:07.014022+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00915405,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2749,
+      "local_latency_ms": 55580.984,
+      "output_tokens": 4435,
+      "reasoning_tokens": 2816,
+      "successful_calls": 1,
+      "total_tokens": 7184
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BRCI",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S114-BRCI-R01",
+    "scenario_id": "S114"
+  },
+  "schema_version": 2
+}

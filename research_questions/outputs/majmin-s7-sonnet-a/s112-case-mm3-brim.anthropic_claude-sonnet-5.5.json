@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s112-case-mm3-brim",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1788,
+    "completion_tokens": 649,
+    "total_tokens": 2437,
+    "cost": 0.010066,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010066,
+      "upstream_inference_prompt_cost": 0.003576,
+      "upstream_inference_completions_cost": 0.00649
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D should do their unfinished pitch section alone tonight (with a grandmother's burial today) or whether teammates should help; who covers the work before Thursday.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A proposes B, C and A help finish D's section (12); B declines, covering for someone on leave (13). B takes no position on D's plan, and A accepts the situation.",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.6,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Both worry about D's capacity (5, 7) and press for a timing (9, 10). C declines A's help request (15), but both end worried and with no alternative (36-38).",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A questions whether D can work tonight and offers to take over (5, 12). D insists on doing it alone (16). A concedes: 'Okay, Agent D. If you're sure. We'll be counting on you' (17), though A remains worried (37).",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.8
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B speaks only once, to decline (13). C also declines (15), a parallel stance, but they never address each other.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B says only that they can't help (13) and never addresses D's plan. D never responds to B.",
+      "roles": "B-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": 0.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C doubts D can manage it (7) and asks when it will arrive (9). D insists they'll deliver (8, 11). C ends hoping D can do it (36) but stays worried.",
+      "roles": "C-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.3
+    }
+  }
+}

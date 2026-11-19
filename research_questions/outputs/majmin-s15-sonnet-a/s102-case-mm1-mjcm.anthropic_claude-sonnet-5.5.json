@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s102-case-mm1-mjcm",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1882,
+    "completion_tokens": 774,
+    "total_tokens": 2656,
+    "cost": 0.011504,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011504,
+      "upstream_inference_prompt_cost": 0.003764,
+      "upstream_inference_completions_cost": 0.00774
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D may keep cooking strong-smelling sambal in the shared kitchen (ban vs. warning vs. limiting frequency/day), given smell in rooms, living room and laundry",
+  "pairs": {
+    "A-B": {
+      "start": 0.4,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A wants a ban, later Saturday-only (T1, T22); B only wants a warning and says the day doesn't matter (T25); A says a warning doesn't help the living room (T20). Both want D to curb the smell but they favour different fixes.",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.6,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both are bothered by the smell (T3, T5); C says a warning doesn't help the laundry (T9), A says it doesn't help the living room (T20). C never takes a position on the Saturday proposal, and A says others can speak for themselves (T24).",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D resists the ban (T4, T10, T12), then offers to cook once a week (T21). A calls that better and proposes Saturday (T22). D asks about B and C instead of accepting (T23), so there is no final agreement.",
+      "roles": "A-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 1.0
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B calls the laundry a 'different problem' (T16) and C says it's the same smell (T17). B keeps pushing the warning, which C says doesn't help the laundry (T9).",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B asks D repeatedly for a warning (T8, T14, T18). D deflects with C's laundry and asks whether the warning would be a house rule (T15, T19), but never refuses it outright. D asks what works for B (T23), and B answers that a warning is all he needs (T25).",
+      "roles": "B-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": 0.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D raises C's laundry (T15), which looks sympathetic, and asks what works for C (T23). C never answers and never responds to the once-a-week offer, so there is no clear agreement.",
+      "roles": "C-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.3
+    }
+  }
+}

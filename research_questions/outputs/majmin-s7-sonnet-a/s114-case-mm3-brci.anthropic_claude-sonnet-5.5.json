@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s114-case-mm3-brci",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1389,
+    "completion_tokens": 590,
+    "total_tokens": 1979,
+    "cost": 0.008678,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008678,
+      "upstream_inference_prompt_cost": 0.002778,
+      "upstream_inference_completions_cost": 0.0059
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will do the unfinished analysis section before Thursday's deadline while D is away for family rites; B and C decline, D takes it on alone.",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks what to do about the analysis (T3); B declines (T4); both accept D's plan and B offers condolences (T15), but they never discuss each other's positions directly.",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks the team what to do (T3); C says she can't help (T5); A accepts D's plan without addressing C.",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.2,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A questions whether D is sure (T7) but then accepts D's plan: 'Okay, Agent D. If you're sure' (T9); D agrees to update (T13).",
+      "roles": "A-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.7
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take the work (T4, T5) and neither addresses the other.",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.1,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B declines to help (T4); D accepts alone (T6); B offers condolences (T15) and D thanks B (T16), with no change in B's stance.",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": -0.1,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says she can't do the analysis (T5); D replies 'Okay. I understand. I'll work on it from home' (T6).",
+      "roles": "C-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.4
+    }
+  }
+}

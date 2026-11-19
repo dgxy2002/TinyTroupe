@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s98-case-mm3-sm1",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1710,
+    "completion_tokens": 774,
+    "total_tokens": 2484,
+    "cost": 0.01116,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01116,
+      "upstream_inference_prompt_cost": 0.00342,
+      "upstream_inference_completions_cost": 0.00774
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How Agent D can keep cooking strong-smelling sambal belacan in the shared kitchen without the smell disturbing A's calls, B's room and C's laundry.",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A wanted no strong-smelling cooking and then proposed timing (T5). B said timing doesn't fix it (T8), then proposed a heads-up (T12) and said 'we have a plan' (T20). Both appear to accept the final plan.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A proposed cooking after 7 p.m. or at weekends (T5). C said timing makes no difference (T9), then asked for cooking on other nights (T16). Both accepted D's compromise (T7, T18). They never addressed each other directly.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": 0.2,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A asked for no strong-smelling food (T1); D accepted cooking after 7 p.m. or at weekends (T6) and A thanked D (T7). D then accepted the later restrictions (T13, T17).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B (T8) and C (T9, 'Exactly') both said the timing fix doesn't work. B then offered a heads-up (T12). C said a heads-up doesn't help the laundry (T16). B and C both endorsed the final plan (T18, T20).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B rejected the timing fix (T8) and D asked what the solution was (T10). B proposed a heads-up and D replied 'Okay, Agent B, I can do that' (T12-13).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 1.1
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C rejected the timing fix (T9). C asked D to cook on nights other than Mon/Wed/Fri (T16), D agreed (T17) and C replied 'That works' (T18).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 1.1
+    }
+  }
+}

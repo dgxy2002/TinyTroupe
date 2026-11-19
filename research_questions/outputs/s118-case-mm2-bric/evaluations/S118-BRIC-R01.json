@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Redistribution of work to cover Agent D's section before the Thursday deadline",
+      "Who is able/qualified to perform the analysis (expertise constraint)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Natural, concise office problem-solving dialogue with clear role-based constraints and pragmatic planning.",
+      "One minor repetition: Agent A repeated the request for a walkthrough (Round 7); Agent D repeated a sentence in Round 11.",
+      "Contributions are grounded in explicit constraints (capacity, expertise, funeral attendance) and lead directly to a concrete plan."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent A dropped the earlier expectation that all three would share the load and instead redistributed tasks so B was not required to take on more: Agent D agreed to give a walkthrough, Agent C agreed to write the summary after that walkthrough, and Agent A volunteered to handle the data entry. Key lines: Agent A's assignment ('So, Agent C, you'll do the summary after the walkthrough. I'll handle the data entry. Does that work?') and Agent C's acceptance ('Yes, that works.'). This removed the incompatibility with Agent B's prior refusal to take on more ('I can't take on more').",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B retained their position of refusing additional work throughout ('I can't take on more...').",
+      "Agent C moved from 'I don't know how to do the analysis' to agreeing to write the summary after a walkthrough ('I can try...', later 'Yes, that works.').",
+      "Agent A shifted from proposing that the three cover the work to taking on data entry personally and reassigning the summary to C ('I'll handle the data entry.').",
+      "Agent D offered to provide the necessary walkthrough and thus enabled the redistribution ('Yes, of course. I can do that now.')."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 8,
+    "round_scores": [
+      {
+        "evidence": "Agent D announces a family death; Agent A offers condolences. (Turn 1–2)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Team recognizes a scheduling problem needs a plan but no incompatible positions are stated. (Turn 3–4: 'That does raise the problem... We need a plan.' / 'What should we do?')",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A proposes the three of them cover the missing section; Agent B explicitly refuses ('I can't take on more...'). (Turn 5–6)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A insists the work still must be done; Agent B reiterates inability to take on more ('But I'm telling you, I can't take on anything else.'). (Turn 7–8)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C says they cannot do the analysis; Agent D reports the section is only half done and needs final data and a summary—reducing available options and intensifying the workload conflict. (Turn 9–10)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C offers to try writing the summary if walked through the analysis, expressing a conditional willingness rather than refusal ('I can try, but I'll need someone to walk me through the analysis first.'). The original disagreement over who must take extra work remains unresolved (B's refusal). (Turn 11–12)",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A asks (repeats) that Agent D give Agent C a walkthrough before leaving; no party changes the earlier expressed positions (the burden distribution is still not fully agreed by everyone). (Turn 13 and repeated)",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D agrees to do the walkthrough now; Agent A assigns roles: A will handle data entry, C will write the summary after the walkthrough. C later accepts. This removes the incompatible demand on B without needing B to take on more. ('Yes, of course. I can do that now.' / 'So, Agent C, you'll do the summary after the walkthrough. I'll handle the data entry. Does that work?') (Turn 17–18)",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent C accepts the proposed division of labor ('Yes, that works.') and group proceeds to act. (Turn 20–21)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Coordination to begin the walkthrough; no disagreement. (Turn 24–25)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D begins the walkthrough at their desk; repeated utterance but no substantive conflict. (Turn 26–29)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable actions recorded; the earlier assignment and walkthrough are in progress. (Round 12 silence)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The key constraint was both availability (Agent D's bereavement) and skill: Agent C cannot perform the analysis without a walkthrough, so redistribution required both skill transfer and task reallocation.",
+      "Resolution was achieved by reallocating tasks among those present (A and C) plus a short knowledge transfer from D, rather than requiring the overloaded Agent B to take on more.",
+      "The group's practical focus (who will do which concrete task) rather than moralizing about obligations enabled a quick accommodation."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T15:12:42.416341+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0101053,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2930,
+      "local_latency_ms": 45464.301,
+      "output_tokens": 4888,
+      "reasoning_tokens": 3200,
+      "successful_calls": 1,
+      "total_tokens": 7818
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BRIC",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S118-BRIC-R01",
+    "scenario_id": "S118"
+  },
+  "schema_version": 2
+}

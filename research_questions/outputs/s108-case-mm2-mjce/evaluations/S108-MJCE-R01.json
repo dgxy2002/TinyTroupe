@@ -1,0 +1,153 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "strong-smelling cooking (devil curry) in shared flat",
+      "smell infiltrating bedrooms and laundry in service yard",
+      "interference with work calls in living room",
+      "scheduling (time/day/frequency) and laundry drying constraints"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants discuss concrete constraints (work calls, laundry drying) and propose specific scheduling solutions rather than only asserting positions.",
+      "Agent D demonstrates iterative concessions (notice, time shift, reduced frequency) in response to others' reasons.",
+      "C introduces an important technical constraint (wet laundry won't dry indoors) that changes feasible solutions.",
+      "Conversation remains focused on practical accommodations with little off-topic repetition."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "By the end of the run the parties had negotiated a concrete compromise proposal but not all parties had explicitly accepted it. Agent D offered several concessions: to give prior notice (\"I'll still give you a heads-up\" — Turn 12), to cook after 7 p.m. (\"I'll cook after 7 p.m., and I'll still give you a heads-up\" — Turn 12) — which Agent A accepted (\"Okay, that works for me.\" — Turn 13) — and to reduce frequency to once a week (Turn 17). Agent B agreed to be notified and offered a personal mitigation (\"Just let me know before you start, and I can do that.\" — Turn 19). Agent C provided her laundry schedule (\"I do my laundry on Monday, Wednesday and Friday evenings.\" — Turn 28), and Agent D then proposed moving cooking to Saturday evenings (\"So, what if I only cook it on Saturday evenings? Would that work for everyone?\" — Turn 29). These moves represent a compromise by Agent D (time, frequency, and notice) and partial accommodations by others, but the transcript ends before all roommates explicitly accept the Saturday-evening plan, so the settlement is not fully confirmed.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A: retained core demand (no disruptive smell during calls) but accepted time-based accommodation (agreed to after-7pm, Turn 13).",
+      "Agent D: shifted from defending regular cooking to proposing multiple accommodations — prior notice (Turn 10/12), after-7pm cooking (Turn 12), reduced frequency (Turn 17), and Saturday-only proposal (Turn 29).",
+      "Agent B: initially aligned with A/C's complaint, then proposed a personal mitigation (shut door/open window) and agreed to be notified (Turn 19).",
+      "Agent C: maintained concern about laundry-drying and provided concrete schedule information (Turn 28); did not accept Saturday proposal in the transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A requested that nobody cook strong-smelling food (opening); Agents B and C immediately agreed that the smell affects their rooms and laundry (Turns 2-3).",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D defended cooking as 'my home food' and apologized that it bothered others (Turn 4), while Agent A said the smell is a real problem for work calls in the living room (Turn 5) — opposing claims about whether the cooking should occur.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D asked for details about A's calls (Turn 6) and A said calls are on weekdays until about 7 p.m. (Turn 7) — the parties moved toward identifying a possible accommodation, but the substantive incompatibility remained.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agents B and C stated that shifting cooking time doesn't solve the problem because the smell still gets into their rooms and the laundry (Turns 8-9), broadening the set of conflicting interests.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D proposed warning before cooking so others could take in laundry (Turn 10); Agent A said that helps the laundry but does not solve the living-room smell during calls (Turn 11) — a concrete partial proposal, but still insufficient for A.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D offered to cook after 7 p.m. with a heads-up (Turn 12) and Agent A accepted that arrangement (Turn 13), resolving A's immediate schedule conflict but leaving other concerns outstanding.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      },
+      {
+        "evidence": "When D asked B and C (Turn 14), Agent B replied the after-7pm proposal does not solve the issue for her room because the smell still gets in (Turn 16), reopening the unresolved practical conflicts.",
+        "movement": "reopened",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D offered to limit the cooking to once a week (Turn 17); Agent B said once a week is better and offered a personal mitigation (shut door and open window) if given prior notice (Turn 19). This reduced intensity but did not settle laundry/drying concerns.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D agreed to B's plan and sought C's view (Turn 20); Agent C raised a new practical objection that bringing wet laundry into her room would prevent drying and create dampness (Turn 21), creating a fresh incompatibility.",
+        "movement": "reopened",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "Agent B endorsed C's concern (Turn 23) and Agent D acknowledged and asked about a better timing/day for laundry (Turn 25), showing willingness to adjust but with no settled arrangement yet.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 10
+      },
+      {
+        "evidence": "Agent A reported being out all day Saturday (Turn 26); Agent B observed that this helps the living-room issue but laundry could still be out on Saturday (Turn 27). The exchange provided information but left issues unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 11
+      },
+      {
+        "evidence": "Agent C gave her laundry schedule (Mon/Wed/Fri evenings, Turn 28) and Agent D proposed to cook only on Saturday evenings (Turn 29). The proposal, if accepted, would avoid most conflicts raised so far, but explicit acceptance by all parties is not yet recorded.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "A's primary problem is timing: client calls until ~7 p.m.; shifting cooking later addresses that concern.",
+      "Laundry-drying times are a separate constraint that make a simple 'bring laundry in during cooking' solution infeasible for C.",
+      "B is willing to mitigate personal exposure by closing her door and opening a window if given prior notice.",
+      "D is willing to change practice substantially (time, frequency, prior notice) to accommodate others, enabling a feasible compromise (Saturday evenings)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T12:51:41.963072+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0108298,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3124,
+      "local_latency_ms": 49003.372,
+      "output_tokens": 5226,
+      "reasoning_tokens": 3264,
+      "successful_calls": 1,
+      "total_tokens": 8350
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJCE",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S108-MJCE-R01",
+    "scenario_id": "S108"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s114-case-mm1-brci",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1598,
+    "completion_tokens": 638,
+    "total_tokens": 2236,
+    "cost": 0.009576,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009576,
+      "upstream_inference_prompt_cost": 0.003196,
+      "upstream_inference_completions_cost": 0.00638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will complete D's half-done analysis section for Thursday's pitch after D's bereavement: the team takes over, or D finishes it from home.",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A proposes the team take over D's section (T1); B declines (T2). Later both accept D doing the work from home (T8, T32); neither addresses the other's view beyond that.",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.4,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A proposes splitting the section with C (T3); C says they can't do it (T4). A then accepts D finishing it (T8) and tells everyone to focus on their own sections (T13).",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": -0.2,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A proposes taking over D's section (T1) and D insists on doing it (T5, T7). A then agrees: 'Okay, Agent D. If you're sure' (T8).",
+      "roles": "A-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 1.1
+    },
+    "B-C": {
+      "start": 0.3,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B and C each say they can't take on D's section (T2, T4), but neither speaks to the other. Both are later fine with D doing it.",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B can't cover for D (T2). B offers condolences (T14) and D thanks them (T15). Both are consistent with D finishing the work alone.",
+      "roles": "B-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": 0.2,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C can't do D's analysis (T4); D says they will finish it themselves (T5). C offers condolences and D thanks C (T10-11).",
+      "roles": "C-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.4
+    }
+  }
+}

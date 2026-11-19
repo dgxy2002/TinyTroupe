@@ -1,0 +1,152 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Cooking strong-smelling food in a shared flat",
+      "Smell penetrating bedrooms and laundry in service yard",
+      "Feasibility of temporal restrictions and ventilation measures",
+      "Lack of storage/space to remove laundry during cooking"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is natural and pragmatic: participants give concrete reasons (work calls, laundry smell) and propose specific mitigations.",
+      "Some repetition: C repeatedly emphasizes laundry contamination and that temporal fixes don't solve it.",
+      "Roles and physical constraints remain consistent with the setting (single kitchen, service yard, landlord restrictions)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "No substantive agreement was reached that addressed all affected parties. A and D reached a narrow temporal compromise ('Weekends work. And after 7 p.m. on weekdays is fine for me too. Thanks, Agent D.' / 'Okay.'), but B and C rejected the temporal fix because the smell still reaches rooms and the laundry. Proposed mitigations (open window, shut door, prior notice to bring laundry in) were discussed but found impractical because 'There isn't anywhere else' to place wet laundry. Agents disagree about whether mitigation is sufficient ('better than nothing' vs 'it doesn't stop the smell'). The practical incompatibility between cooking these foods in the single shared kitchen and protecting the laundry/rooms therefore remains unresolved.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened a strict initial demand to accept a temporal compromise ('Weekends work... after 7 p.m.') and expressed gratitude when Agent D agreed.",
+      "Agent D offered concessions (avoid evenings, cook weekends, notify before cooking) and accepted A's temporal compromise early on.",
+      "Agent B moved from supporting A's complaint to proposing practical mitigations (open window, shut door) and later endorsing notice-plus-ventilation as 'better than nothing.'",
+      "Agent C consistently held that the smell will contaminate laundry/rooms and did not accept the temporal or ventilation solutions, repeatedly emphasizing the lack of alternative storage."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A demands that nobody cook strong-smelling food 'from now on' and Agent B reports the smell enters their room — a clear incompatibility with Agent D's known cooking practice.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D offers a concession: 'I can cook on weekends, or not in the evening,' which reduces the immediate clash with Agent A but does not resolve other residents' laundry concerns.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A accepts the temporal compromise ('Weekends work. And after 7 p.m. on weekdays is fine for me too. Thanks, Agent D.') and Agent D agrees, resolving A–D timing dispute but not the laundry/room smell issues raised by others.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B and Agent C reject the temporal solution: 'the time doesn't really matter for my room, or the laundry,' reopening the dispute for other affected parties.",
+        "movement": "reopened",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B proposes mitigation (open window and shut door) but Agent C points out the service yard connection: 'The service yard is right off the kitchen, though. The smell will still get to the laundry.' No resolution.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D offers a practical mitigation: 'What if I let you know before I cook? Then you can bring the laundry in.' Agent B accepts this approach as part of a package of measures.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C raises a new practical obstacle: 'And put the wet laundry where? In my room?' showing the proposed mitigation creates a new incompatibility about space and storage.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C: 'There isn't anywhere else.' Agent D asks 'How long would it need to be out of the yard for?' — the conversation confirms a persistent logistical barrier without resolution.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Agent B suggests shorter duration with the window open; Agent C responds that the smell 'still has to clear' and that the laundry still must go somewhere. No agreement reached on feasibility.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "Agent D asks for suggestions; Agent C replies decisively: 'If the food is cooked here, the smell will get on the laundry.' This frames an unresolved, strongly opposed practical incompatibility (cooking vs. laundry smell).",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D explicitly queries the implied ban: 'So, does that mean no one can cook anything with a strong smell?' Agent C repeats the unavoidable consequence, maintaining the stalemate.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 11
+      },
+      {
+        "evidence": "Agent B accepts the mitigation as 'better than nothing,' while Agent C insists it 'doesn't stop the smell from getting on the clothes.' The core disagreement over whether cooking can occur without affecting laundry remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Temporal limits on cooking can satisfy some residents (A) but do not address smell reaching laundry or adjacent rooms.",
+      "Simple ventilation (window open, door shut) is limited because the service yard is directly adjacent to the kitchen.",
+      "Notifying housemates before cooking could mitigate damage to laundry only if there is available space to store or move wet clothes — which there is not.",
+      "The core dispute is practical and structural (shared layout), not merely preferences; resolving it requires changing use of space or behaviors that participants have not agreed to."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T13:17:08.739693+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00925305,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3065,
+      "local_latency_ms": 47532.471,
+      "output_tokens": 4445,
+      "reasoning_tokens": 2688,
+      "successful_calls": 1,
+      "total_tokens": 7510
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "SM2",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S99-SM2-R01",
+    "scenario_id": "S99"
+  },
+  "schema_version": 2
+}

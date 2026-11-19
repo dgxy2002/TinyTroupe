@@ -1,0 +1,154 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who will complete the analysis section after Agent D's absence",
+      "Whether team members must stay late/cover additional shifts",
+      "Redistribution of workload given skills and current cover responsibilities"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "A's managerial/authoritative tone drives much of the interaction (e.g., \"This is not a request\").",
+      "B repeatedly cites concrete capacity constraints rather than mere refusal (e.g., covering another colleague).",
+      "D's solution is a decisive turning point and is confirmed explicitly (Turns 23 and 27).",
+      "C consistently signals lack of skill/time, which shaped feasible options."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent D volunteered to finish their section remotely after prayers, resolving the immediate problem of the incomplete analysis: \"I can work from home. After the prayers, late at night. I can finish my section.\" (Turn 23) and later: \"Yes, I'm sure. I'll get it done.\" (Turn 27). That concession removed the need for others to reassign or fully cover the analysis. However the earlier substantive disagreement between Agent A and Agent B about mandatory overtime/staying late (A: \"This is not a request... We're all staying.\" Turn 20; B: \"I am not staying later.\" Turn 21) was never accepted or withdrawn and therefore remains unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: shifted from taking immediate leave to offering to complete their section remotely after prayers (Turn 23: \"I can work from home... I can finish my section.\"). This is a meaningful position change that helped resolve the workload issue.",
+      "Agent A: initially demanded collective overtime and reallocation, later accepted D's plan and effectively stepped back from forcing everyone to stay (Turn 24: \"That settles it.\").",
+      "Agent B: consistently refused to stay late due to existing cover obligations and did not change position (Turn 8: \"I'm at my limit.\" Turn 21: \"I am not staying later.\").",
+      "Agent C: consistently reported inability/insufficient skill to take lead on the analysis and did not take on that role."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turns 1-2: Agent A expresses sympathy and asks if Agent D will take time off; Agent D confirms the burial and need to be with family. No incompatible claims or demands expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent A notes the analysis is half-finished and reminds of the Thursday deadline; Turn 4: condolences from Agent B. No party objects or makes conflicting demands yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 7: Agent A proposes that B and C take over and split what's left. This is a proposal but no expressed refusal or incompatibility in this round.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 8: Agent B refuses: \"I can't... I'm at my limit.\" Turn 9: Agent A pushes back, asking what can be taken off B's plate. This introduces a clear disagreement about who will cover the work.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10: Agent B explains the cover obligation \"That can't be moved.\" Turn 11: Agent C says they're behind and lacks the needed skill. Both responses deepen the incompatibility with A's request that others take the work.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12: Agent A insists the work \"has to be done\" and proposes everyone take a piece. Turn 14: Agent C rejects that, saying a walkthrough won't be enough and they must finish their own section. Positions harden over redistribution and capability.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 15: Agent A emphasizes collective responsibility if analysis isn't done. Turn 17: Agent C presses for an actual plan and reiterates inability to lead. The substantive disagreement about who will do the analysis persists without resolution.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 18: Agent A unilaterally assigns themselves as lead and orders everyone to stay late. Turn 19: Agent B objects they cannot stay later. A new, sharper conflict emerges over imposed overtime and authority.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "Turn 20: Agent A asserts authority: \"This is not a request... We're all staying.\" Turn 21: Agent B strongly refuses: \"You don't get to decide that for me... I am not staying later.\" This is entrenched opposition between A and B about required overtime.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 9
+      },
+      {
+        "evidence": "Turn 23: Agent D offers to work from home late and finish their section. Turn 24: Agent A accepts D's offer and states \"That settles it,\" telling others to finish their own sections. D's offer reduces the workload dispute over completion but B's refusal to stay (expressed earlier) remains unaccepted—the overtime dispute is unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 10
+      },
+      {
+        "evidence": "Turn 27: Agent D confirms: \"Yes, I'm sure. I'll get it done.\" Turn 28: Agent A releases D to be with family. The main analysis-completion conflict is affirmatively addressed by D's commitment, but the prior substantive disagreement between A and B about staying late remains unresolved (no acceptance from B).",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 11
+      },
+      {
+        "evidence": "Turn 29: Agent D thanks A. No new statements. The analysis completion has been secured by D's prior commitment, but Agent B's explicit refusal to stay late and the tension with Agent A persist unaddressed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 3,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Primary operational constraint was coverage: B was already covering someone else and could not absorb more work.",
+      "Skill mismatch limited redistribution: C could not confidently take over the analysis even with walkthroughs.",
+      "A's initial insistence on shared overtime escalated interpersonal conflict; a unilateral assertion of authority was resisted by B.",
+      "D's willingness to finish their own section remotely resolved the core deliverable risk without forcing other team members to overcommit."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T14:37:04.404917+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 11 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01128955,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3107,
+      "local_latency_ms": 75155.572,
+      "output_tokens": 5458,
+      "reasoning_tokens": 3584,
+      "successful_calls": 1,
+      "total_tokens": 8565
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BREM",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S113-BREM-R01",
+    "scenario_id": "S113"
+  },
+  "schema_version": 2
+}

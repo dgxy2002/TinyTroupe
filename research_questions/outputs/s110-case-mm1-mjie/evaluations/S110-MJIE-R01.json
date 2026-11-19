@@ -1,0 +1,154 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "strong-smelling cooking (devil curry)",
+      "laundry smell and placement",
+      "ventilation effectiveness (weak hood / open window)",
+      "timing/scheduling for cooking (weekday vs weekend)",
+      "living room smell affecting work-from-home calls"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants gave concrete constraints (A: \"I work from home\", C: laundry location) which grounded proposals.",
+      "Several practical proposals were explored (notification, set days, ventilation) rather than vague concessions.",
+      "Some repetition occurred about hood effectiveness and scheduling, but it supported clarification rather than redundancy.",
+      "B was less active in final acceptance but did not object to the weekend compromise."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agents agreed that Agent D will cook the strong-smelling dish on Saturday and Sunday only, accommodating A's work-from-home needs and C's laundry schedule. Evidence: Agent D proposed weekend days (\"Saturday is fine... What about Sunday as well?\"); Agent A: \"Sunday is fine by me.\" Agent C: \"Sunday is fine for me too.\" Agent D then confirmed: \"Okay, great. Saturday and Sunday it is, then.\"",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from cooking twice a week without constraint to accepting weekend-only (Saturday and Sunday) cooking (Turn 9: \"Saturday is fine... What about Sunday as well?\"; Turn 24: \"Saturday and Sunday it is, then.\").",
+      "Agent A shifted from requesting no strong-smelling food to accepting weekend cooking (Turn 17 suggested Saturday; Turn 21: \"Sunday is fine by me.\").",
+      "Agent C maintained concern about laundry but ultimately accepted the weekend schedule (Turn 19: \"Saturday works for me.\" Turn 23: \"Sunday is fine for me too.\").",
+      "Agent B expressed fewer constraints early (Turn 2) and did not explicitly change position but did not object to the weekend arrangement."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 10,
+    "round_scores": [
+      {
+        "evidence": "Agent B: \"My room's next to the kitchen, so it's worst for me. But if I close my door and open my window, the smell doesn't get in.\" Agent C: \"My laundry is in the service yard. It can't close a door.\" (Shows a clear, substantive disagreement about whether the smell can be mitigated and who is affected.)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D: \"What if I let you know before I cook, so you can bring the laundry in first?\" Agent C: \"And put the wet clothes where? In my room?\" (Proposal met with a practical objection; conflict persists.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D: \"What if I only cook on certain days, so you can plan your laundry around it?\" Agent A: \"The problem for me is the living room itself. The smell stays for hours, and I work from home at this table.\" (Scheduling proposal clashes with A's need for a smell-free workspace — a stronger incompatibility emerges.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B: \"...we open the kitchen window and use the hood?\" Agent C: \"That hood is too weak. The smell will still get out.\" (Disagreement about the effectiveness of ventilation as a mitigation.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B: \"It's weak, I know. But it's better than nothing, isn't it?\" Agent C: \"Not when the laundry is right next to it. It makes no difference, the smell still gets in.\" (Positions reiterated; practical disagreement remains.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D: \"Agent C, what about my last idea then? If I only cook on set days, can you plan your laundry around that?\" Agent C: \"What days are you thinking of?\" (Moves from abstract disagreement to concrete scheduling negotiation—some de-escalation.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D: \"How about Tuesday and Friday evenings?\" Agent A: \"That doesn't help me. Tuesday and Friday are work days. The smell will still be in the living room while I'm on calls.\" (Proposed days directly conflict with A's work schedule; incompatibility sharpens.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent B: \"So what do you suggest for the living room, Agent A? If scheduling doesn't work, what does?\" Agent A: \"Can she cook it on Saturday instead? I'm usually out then.\" (A offers a concrete alternative, moving toward compromise.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Agent C: \"Saturday works for me. That's not a laundry day.\" Agent D: \"Saturday is fine. I usually cook it twice a week, though. What about Sunday as well?\" (Agreement on Saturday; D requests Sunday too — negotiation continues but shifts toward weekend-only cooking.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "Agent A: \"Sunday is fine by me.\" Agent C: \"Sunday is fine for me too.\" (The key remaining parties accept D's proposal for weekend cooking, removing the substantive incompatibility between A's request and D's cooking frequency.)",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D: \"Okay, great. Saturday and Sunday it is, then.\" (Confirmation of the weekend-only cooking arrangement.)",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded. (No new conflict appears; the previously reached weekend schedule stands unchallenged.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Main trade-off is D's desire to cook twice weekly versus A's need for a smell-free living/work area.",
+      "Laundry placement (service yard that can't close) is a critical factor limiting simple ventilation fixes.",
+      "Weak kitchen ventilation makes scheduling the most viable accommodation within landlord constraints.",
+      "Weekend-only cooking aligns with multiple roommates' schedules (A usually out on Saturday; others agreeable)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T13:02:19.830252+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0103383,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2982,
+      "local_latency_ms": 53903.643,
+      "output_tokens": 4998,
+      "reasoning_tokens": 3136,
+      "successful_calls": 1,
+      "total_tokens": 7980
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJIE",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S110-MJIE-R01",
+    "scenario_id": "S110"
+  },
+  "schema_version": 2
+}

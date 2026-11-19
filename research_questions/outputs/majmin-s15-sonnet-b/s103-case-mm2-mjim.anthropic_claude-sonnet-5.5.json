@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s103-case-mm2-mjim",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1623,
+    "completion_tokens": 769,
+    "total_tokens": 2392,
+    "cost": 0.010936,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010936,
+      "upstream_inference_prompt_cost": 0.003246,
+      "upstream_inference_completions_cost": 0.00769
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and when Agent D can cook strong-smelling food (sambal belacan) in the shared kitchen; the group ends up with D cooking it on weekends only.",
+  "pairs": {
+    "A-B": {
+      "start": 1.0,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B agreed with A's no-strong-smell request (turn 2). A accepted cooking after 7 (turn 11), while B said smell is still a problem after 7 (turn 8) and proposed weekends (turn 17). A never commented on the weekend plan, so the alignment is only partial.",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C complained about the smell on laundry (turn 3), supporting A's cause. C's objection (turn 9) conflicts with A's after-7 plan, but C accepts weekends (turn 20). A said nothing about it.",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D initially refused to stop cooking (turn 4). A moved to the after-7 compromise (turn 11). D offered to cook at other times (turn 6) and accepted weekends (turn 18). A never explicitly endorsed weekends.",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "B-C": {
+      "start": 0.9,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Both objected to the smell (turns 2, 3) and the after-7 plan (turns 8, 9). Both rejected the door and laundry fixes (turns 13, 14). B proposed weekends and C accepted (turn 20).",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.8,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D resisted at first (turn 4). B proposed weekends (turn 17), D accepted (turn 18), and B thanked D (turn 19).",
+      "roles": "B-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.8
+    },
+    "C-D": {
+      "start": -0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C complained about the laundry smell (turn 3). D agreed to cook on weekends (turn 18), and C said 'Weekends are fine for me too. Thanks, Agent D' (turn 20).",
+      "roles": "C-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.7
+    }
+  }
+}

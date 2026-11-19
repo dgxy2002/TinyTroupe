@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s121-case-mm1-brme",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2066,
+    "completion_tokens": 572,
+    "total_tokens": 2638,
+    "cost": 0.009852,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009852,
+      "upstream_inference_prompt_cost": 0.004132,
+      "upstream_inference_completions_cost": 0.00572
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who takes over Agent D's unfinished analysis section before Thursday: one person (B) as A insists, or split between two people as B proposes",
+  "pairs": {
+    "A-B": {
+      "start": -0.5,
+      "end": -0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A insists B alone take the handover (T14, T24, T32); B counters with a split and refuses: 'No. You don't get to just order me' (T33)",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.4
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C only says their section needs work and they can't do the analysis (T5); A refers to it (T22) but C takes no position on the plan",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": 0.5,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D offers a handover (T6), A accepts (T7); D says one person 'might be' simpler (T26) but then says one or two doesn't matter (T31), so A's claim of D's support is overstated",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "No exchange between B and C; C stated only that they can't do the analysis (T5)",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B defends D's 'might be' as not a decision (T28); D says one or two people doesn't matter (T31), staying neutral",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C and D never address each other; C takes no position on the handover",
+      "roles": "C-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

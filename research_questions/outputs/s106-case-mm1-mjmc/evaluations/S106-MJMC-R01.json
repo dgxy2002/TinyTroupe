@@ -1,0 +1,148 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Strong-smelling cooking (fried salted fish) causing smell in living room, bedrooms, and laundry; impact on work-from-home video calls and laundry odor"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents gave concise, context-grounded reasons (work calls, room location, laundry) rather than vague complaints.",
+      "Agent D repeatedly restated the final agreement verbatim in multiple rounds (Rounds 7–8), producing needless repetition.",
+      "The sequence moves from problem statement to a concrete scheduling-and-notice compromise—clear, practical negotiation."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "The group agreed that Agent D will restrict cooking the strong-smelling dish to weekends and will notify others beforehand. Key lines showing the settlement: Agent A: \"Yes, weekends would be fine. That works for me.\" Agent B: \"Weekends are okay, but can you just let me know before you start?\" Agent D: \"Okay, great. So weekends it is, and I'll let you know, Agent B.\" Agent C: \"Yes, weekends are fine.\" This shows D adjusted (limiting cooking and promising notice) and others accepted that arrangement.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D changed position by offering mitigations and ultimately conceding to limit the strong-smelling cooking to weekends and to notify others (Turn 4, Turn 6, Turn 15).",
+      "Agent A softened from a general ban (original request) to accepting a weekends-only arrangement (Turn 7).",
+      "Agent B added a minor condition (advance notice) and got D's agreement (Turn 10–11).",
+      "Agent C moved from complaint to acceptance (Turn 3 to Turn 14)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A: \"It's because I work from home, at this table. The smell is very strong when I'm on video calls with clients.\" Agent B: \"My room is next to the kitchen, the smell comes in also.\" (Problem stated; A had earlier asked that nobody cook strong-smelling food; no offer or agreement yet.)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C: \"The smell gets into my laundry also.\" Agent D: \"Okay, I hear you all. I didn't know the smell was that bad. What if I let you know before I cook it? Then you can close your doors and bring in your laundry first.\" (D offers a mitigation, reducing but not eliminating A's original request.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A: \"Thanks, but my desk is here in the living room. I can't close a door on the smell.\" Agent D: \"Okay. What if I only cook it on the weekends? Would that work?\" (D proposes a schedule alternative that addresses A's inability to close a door.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A: \"Yes, weekends would be fine. That works for me.\" Agent D: \"Agent B, Agent C, is that okay with you two as well?\" (A accepts the weekend proposal; pending acceptance from B and C.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B: \"Weekends are okay, but can you just let me know before you start? Then I can close my door.\" Agent D: \"Sure, I can do that. Agent C, how about you?\" (B adds a minor condition; D agrees to notify.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent C: \"Yes, weekends are fine. My laundry won't be out then.\" Agent D: \"Okay, great. So weekends it is, and I'll let you know, Agent B.\" (All parties accept the weekend-only cooking arrangement with notice; the substantive conflict is settled.)",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D repeats: \"Okay, great. So weekends it is, and I'll let you know, Agent B.\" (Repetition of the settled arrangement; no new disagreement.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D repeats again: \"Okay, great. So weekends it is, and I'll let you know, Agent B.\" (No new content; arrangement remains settled.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Agent B: \"Okay.\" Agent B: \"Alright.\" (Brief acknowledgements after the agreement; no renewed disagreement.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Conflict arose from clashing practical interests: D's cooking habit vs A's need for an odor-free workspace and others' laundry concerns.",
+      "Options were limited by physical constraints (no alternative cooking areas, weak hood, landlord forbids changes), which steered parties toward scheduling and notification as viable solutions.",
+      "Resolution relied on a temporal accommodation (weekends-only) plus communication (D will notify), rather than elimination of the activity."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T12:42:00.852945+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00733155,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2915,
+      "local_latency_ms": 35518.685,
+      "output_tokens": 3503,
+      "reasoning_tokens": 1856,
+      "successful_calls": 1,
+      "total_tokens": 6418
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJMC",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S106-MJMC-R01",
+    "scenario_id": "S106"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s122-case-mm1-brie",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1654,
+    "completion_tokens": 641,
+    "total_tokens": 2295,
+    "cost": 0.009718,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009718,
+      "upstream_inference_prompt_cost": 0.003308,
+      "upstream_inference_completions_cost": 0.00641
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who covers Agent D's half-finished pitch section while D is at the wake and funeral; D ends up offering to finish it from home themselves.",
+  "pairs": {
+    "A-B": {
+      "start": -0.3,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A proposes splitting the section three ways (T3); B refuses (T6); A accepts 'Understood' (T7); the matter is later settled by D's offer, with no further disagreement.",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A asks C how much they can take on (T7); C says they can't (T8); A then goes with D's offer (T10-12) and no conflict remains.",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": -0.2,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D first says they can't work (T2); then offers to finish at home (T9); A says 'quickest if you do it' (T10); D: 'I'll do it' (T11); A: 'Thank you... huge help' (T12).",
+      "roles": "A-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 1.0
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B (T6) and C (T8) each decline to take on the work, but neither addresses the other.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B declines to cover (T6); D then offers to do it themselves (T9, T11); B says 'Look after yourself' (T13); D thanks B (T14).",
+      "roles": "B-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "C-D": {
+      "start": -0.2,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C says they can't do D's analysis (T8); D offers to finish it or walk someone through it (T9); C expresses sympathy (T21) and D thanks them (T22).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.4
+    }
+  }
+}

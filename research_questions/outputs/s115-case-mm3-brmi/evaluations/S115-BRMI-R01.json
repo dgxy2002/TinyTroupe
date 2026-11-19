@@ -1,0 +1,148 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who will complete Agent D's section for the client pitch (coverage of work / deadline responsibility)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Turns are natural and role-appropriate: condolence followed by practical problem-solving.",
+      "Refusals include concrete reasons ('covering for Amir', 'my section is behind', 'don't know how to do her analysis'), which grounds the negotiation.",
+      "Resolution is achieved by a concrete promise from the person responsible rather than by pressure on other team members.",
+      "Some repeated brief 'Thanks.' lines occur but do not impede clarity."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent D committed to finish their section from home and the team accepted that plan. Key lines: Agent D: 'I can work from home. I'll finish my section. You don't need to cover for me.' Agent A (accepting): 'Okay, Agent D. Thank you. We are counting on you. Keep us updated...' This mutual acceptance ended the coverage conflict.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from announcing a personal need to offering and reaffirming a commitment to finish the section ('I can work from home... I will manage it').",
+      "Agent A shifted from proposing redistribution of D's work to accepting D's commitment and relying on it ('We are counting on you').",
+      "Agent B and Agent C retained their initial refusals to take on additional work, with reasons given; they did not change position."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A offers condolences and asks if Agent D needs to go be with family; Agent D confirms. No incompatible claims or demands expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A proposes the team cover Agent D's section: '...that means we need to cover Agent D's section. Let's look at what's left and divide it between the three of us.' Agent B refuses: 'I can't. I'm already covering for Amir. I've worked late every night this week.' Clear, unresolved disagreement about who will cover the work.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A asks Agent C to split the remaining work with A; Agent C refuses and gives reasons: 'I can't... My section is behind already, and I don't know how to do her analysis work.' The coverage problem persists and another team member declines, increasing strain on the proposal.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D offers to work from home and finish the section: 'I can work from home. I'll finish my section. You don't need to cover for me.' Agent A asks 'are you sure?' — the offer reduces the active incompatibility but others have not yet explicitly accepted the new plan.",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D reaffirms the plan: 'Yes. I need to be with my family, and the work needs to get done. I will manage it.' This strengthens D's promise but the team has not yet explicitly completed acceptance, so a small amount of uncertainty remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A accepts D's commitment and places reliance on it: 'Okay, Agent D. Thank you. We are counting on you. Keep us updated...' Agent D: 'I will.' The practical incompatibility (who will complete the section) is affirmatively settled by D's promise and A's acceptance.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Condolences and thanks are exchanged ('Thanks.' / 'Agent D, I'm sorry for your loss.'). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Further condolences and thanks ('Thanks, Agent B.' / 'Agent D, I'm sorry for your loss.'). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D thanks Agent C. Conversation remains condolence-focused with no conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D repeats thanks and states 'I need to go now.' No disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Agent B: 'Take care, Agent D.' Agent D: 'Thanks, Agent B.' No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Capacity constraints and skill mismatch drove refusals: B cited workload, C cited being behind and lacking analysis skills.",
+      "The clearest path to resolving a last-minute gap was the owner (Agent D) taking responsibility rather than redistributing tasks.",
+      "Concrete, actionable commitments (who will do what) resolved the practical incompatibility; expressions of sympathy alone did not."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T14:51:36.610266+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0092463,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2886,
+      "local_latency_ms": 40205.776,
+      "output_tokens": 4464,
+      "reasoning_tokens": 2880,
+      "successful_calls": 1,
+      "total_tokens": 7350
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BRMI",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S115-BRMI-R01",
+    "scenario_id": "S115"
+  },
+  "schema_version": 2
+}

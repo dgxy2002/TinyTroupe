@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s108-case-mm2-mjce",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1972,
+    "completion_tokens": 716,
+    "total_tokens": 2688,
+    "cost": 0.011104,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011104,
+      "upstream_inference_prompt_cost": 0.003944,
+      "upstream_inference_completions_cost": 0.00716
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and when Agent D can cook strong-smelling curry in the shared kitchen without the smell bothering the others' calls, rooms and laundry",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Both opposed the smell at the start (turns 2, 5); B says timing doesn't fix it (8), and later B's door-and-window workaround (19) and A's okay to 7pm (13) both accept D's compromise. They never fully converge on one arrangement.",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.6,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both objected to the smell (turns 3, 5). A accepted the after-7pm plan (13), but C still objects over laundry (21) and only offers her laundry days (28). They never address each other directly.",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A first asked for no smelly cooking (1) and D defended it (4). Then D offered to cook after 7pm with a warning (12) and A said 'that works for me' (13). A also volunteered Saturdays (26).",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 1.5
+    },
+    "B-C": {
+      "start": 0.7,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B and C back each other repeatedly (9, 23: 'She's right'). Both still raise laundry problems, and neither has accepted the plan.",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.6,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B rejected the after-7pm plan (16). D offered once a week (17). B accepted with a shut door and a warning (19), and D said 'I can definitely do that' (20). B's laundry concern remains (27).",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 1.1
+    },
+    "C-D": {
+      "start": -0.6,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C objects that wet laundry will make her room damp (21). D concedes and asks for a better time (25), and C gives her laundry days (28). D proposes Saturday evenings (29), but C hasn't yet accepted.",
+      "roles": "C-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.8
+    }
+  }
+}

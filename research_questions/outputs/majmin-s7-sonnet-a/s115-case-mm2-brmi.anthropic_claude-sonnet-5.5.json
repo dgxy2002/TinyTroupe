@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s115-case-mm2-brmi",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1744,
+    "completion_tokens": 644,
+    "total_tokens": 2388,
+    "cost": 0.009928,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009928,
+      "upstream_inference_prompt_cost": 0.003488,
+      "upstream_inference_completions_cost": 0.00644
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who completes Agent D's unfinished pitch section while D is away: A alone taking it over versus splitting it among the team",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B said 'He said he'll take it. I think we should let him' (turn 16), which supports A's plan, but B never addressed A directly.",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-C": {
+      "start": -0.6,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C proposed splitting (turn 9) and A rejected it (turn 11). C then conceded with 'Fine. But if it's too much... ask for help' (turns 17, 20), and A replied 'I won't' (turn 21).",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.9
+    },
+    "A-D": {
+      "start": 0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D first agreed splitting made sense (turn 10), then said 'Okay, Agent A. Let's do it' (turn 12) and walked A through the files (turns 29-34).",
+      "roles": "A-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "B-C": {
+      "start": -0.5,
+      "end": 0.0,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C asked B's opinion and said it's a lot (turn 15). B said let A do it (turn 16). C answered 'Fine' (turn 17), still with a caveat.",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "D",
+      "evidence": "B backed A taking the work (turn 16); D agreed to the handover (turn 12). They never spoke to each other.",
+      "roles": "B-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "C-D": {
+      "start": 0.6,
+      "end": 0.0,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D said 'Agent C's right' about splitting (turn 10), then dropped it and agreed to A's one-owner handover (turn 12), while C stayed uneasy.",
+      "roles": "C-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": -0.6
+    }
+  }
+}

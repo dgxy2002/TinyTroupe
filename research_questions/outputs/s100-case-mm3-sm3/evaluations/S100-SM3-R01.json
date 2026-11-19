@@ -1,0 +1,153 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "strong-smelling cooking (fried salted fish)",
+      "laundry odor in service yard",
+      "cooking schedule (weekdays vs weekends)",
+      "advance notification before cooking"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is concise and practical: proposals and responses are short and focused (e.g., A proposes weekends, D accepts).",
+      "Some needless repetition of acknowledgements after settlement ('Okay, thanks.' repeated many times in later rounds).",
+      "Speakers provide grounded reasons and trade-offs (work-from-home calls, laundry drying times, family food tradition).",
+      "Roles and facts remain consistent throughout; no confusion about who said or agreed to what."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agents reached a concrete, mutual arrangement by Round 8: Agent D agreed to restrict cooking the strong-smelling dish to weekends ('I can't cook on other nights. I've already agreed with Agent A that I'll only do it on weekends.'), Agent C agreed to shift laundry to a weekend morning so it would be dry before D's usual evening cooking ('If I do it on a weekend morning, it should be dry by the evening. That works.'), and Agent B obtained D's promise to give a heads-up before weekend cooking ('I'll let you know before I start cooking on the weekends.'). All affected parties verbally accepted these terms.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from resisting change ('I can't really stop cooking it.') to conceding a temporal limit: 'Okay, weekends could work for me.' and later 'I can't cook on other nights... I'll only do it on weekends.'",
+      "Agent C shifted from objecting to the notification-only solution ('That doesn't really help me.') to accommodating the agreed weekend plan by changing laundry timing: 'If I do it on a weekend morning... That works.'",
+      "Agent A proposed a compromise (weekends) and accepted D's agreement without further concession: 'Yeah, that works for me.'",
+      "Agent B consistently sought a smaller accommodation (heads-up) and retained that position until D agreed: 'Can you just give a heads-up before you cook?' — 'I'll let you know before I start cooking on the weekends.'"
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 8,
+    "round_scores": [
+      {
+        "evidence": "Turn 1 — Agent A: 'When the smell is really strong it hangs around the living room for hours...'; opening request (prior): A had asked that nobody cook strong-smelling food from now on. This raises a potential incompatible demand but no opponent has responded yet.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3 — Agent C: 'My laundry's in the service yard and it gets the smell too.' Turn 4 — Agent D: '...I can't really stop cooking it.' D's explicit refusal conflicts with A's earlier request, creating a clear substantive incompatibility over cooking practice.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5 — Agent A: 'How about cooking it on weekends?' Turn 6 — Agent D: 'Okay, weekends could work for me.' A and D move toward a scheduling compromise, reducing but not eliminating other parties' concerns (B/C not yet fully addressed).",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7 — Agent A: 'Yeah, that works for me.' Turn 9 — Agent B: 'The day doesn't really matter for me... Can you just give a heads-up before you cook?' B accepts the weekend idea conditionally (notification), leaving minor outstanding adjustments.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 10 — Agent D: 'Yeah, sure. I can let you know.' Turn 11 — Agent B: 'Okay, thanks.' B's concern (notification) is accepted; C's laundry issue remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 12 — Agent C: 'That doesn't really help me. The laundry's still hanging right there next to the kitchen.' This raises a new practical incompatibility between C's laundry schedule and D's agreed cooking-on-weekends plan. Turn 13 — Agent D: 'You're right. What do you think would work for the laundry?'",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 14 — Agent C: 'I do my laundry on Monday, Wednesday, and Friday evenings. Could you cook it on the other nights?' Turn 15 — Agent D: '...I already agreed with Agent A I'd only cook this on weekends. What if you do your laundry on a weekend morning?' D defends the weekend commitment and proposes an alternative, so the disagreement is negotiated but not yet settled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 18 — Agent D: 'I can't cook on other nights. I've already agreed with Agent A that I'll only do it on weekends.' Turn 19 — Agent C: 'Okay. If I do it on a weekend morning, it should be dry by the evening. That works.' C accepts D's weekend restriction and agrees to shift laundry; substantive incompatibilities are jointly settled.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Turn 20 & Turn 23 — Agent D: 'Okay, good.' No further objections or outstanding incompatibilities are raised; previous settlement stands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Turn 27 — Agent D: 'Agent B, I'll let you know before I start cooking on the weekends.' Turn 28 — Agent B: 'Okay, thanks.' B's request for notification is confirmed, no outstanding disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Turn 32 & Turn 36 — Agent B repeats 'Okay, thanks.' These are confirmations after the substantive agreement; no new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Turn 40 & Turn 44 — Agent B repeats 'Okay, thanks.' Continued acknowledgements; no substantive disagreements introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Tension was primarily practical: cultural food practice vs shared-space impacts (smell affecting clothes, calls, laundry).",
+      "Scheduling (weekend-only cooking) is an effective compromise when structural changes and expenses are off the table.",
+      "Notification alone did not solve all problems—laundry location/timing had to be adjusted to eliminate the remaining incompatibility.",
+      "Final settlement distributed adjustment across parties: D limited cooking times, C changed laundry timing, B got notifications, A's work concerns were addressed."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T13:22:53.347937+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00883505,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3025,
+      "local_latency_ms": 44175.641,
+      "output_tokens": 4241,
+      "reasoning_tokens": 2304,
+      "successful_calls": 1,
+      "total_tokens": 7266
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "SM3",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S100-SM3-R01",
+    "scenario_id": "S100"
+  },
+  "schema_version": 2
+}

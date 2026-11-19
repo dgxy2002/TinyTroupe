@@ -5,7 +5,7 @@ Usage (from the repo root):
         --models anthropic/claude-sonnet-5.5 openai/gpt-5-mini \
         --folders s57-case-r12-k3 s46-case-r12-hw1
 
-Reads research_questions/outputs_old/<folder>/transcripts/*.md. Names are replaced with Agent A-D and the
+Reads research_questions/outputs/<folder>/transcripts/*.md, or outputs_old/ if the run is not in outputs/. Names are replaced with Agent A-D and the
 opening sentence that lists backgrounds or faiths is removed, so the coder does not see who is which culture.
 Culture is joined back from the run's cast afterwards. Writes one JSON per transcript and model to
 research_questions/outputs/<out>/ and refuses to overwrite an existing folder.
@@ -71,7 +71,8 @@ def rubric(scale: str) -> str:
 
 
 def masked_transcript(folder: str) -> tuple[str, dict]:
-    tj = glob.glob(str(OLD / folder / "transcripts" / "*.json"))[0]
+    # new runs live in outputs/, the case-study runs in outputs_old/
+    tj = (glob.glob(str(NEW / folder / "transcripts" / "*.json")) or glob.glob(str(OLD / folder / "transcripts" / "*.json")))[0]
     md = tj[:-5] + ".md"
     data = json.loads(open(tj, encoding="utf-8").read(), strict=False)
     agents = data["scenario"]["agents"]

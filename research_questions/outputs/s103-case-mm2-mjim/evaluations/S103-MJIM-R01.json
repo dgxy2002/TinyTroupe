@@ -1,0 +1,154 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking strong-smelling food (sambal belacan)",
+      "timing/scheduling of cooking",
+      "laundry absorbing odours",
+      "work-from-home video calls being disrupted",
+      "feasibility of mitigation (closing doors, moving laundry)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation proceeds like a typical housemate negotiation: clear statements of needs, practical constraints, and suggested accommodations.",
+      "Key useful formulas: D's initial refusal ('I can't just stop cooking it.'), D's later time-based offer ('I can cook at other times'), and final concession ('Weekends I can do').",
+      "Minimal needless repetition; parties introduce new constraints (heat, laundry) as discussion progresses.",
+      "No role confusion; statements are grounded in the shared environment (laundry, calls, room heat)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agents reached a scheduling compromise: Agent D agreed to restrict cooking the strong-smelling sambal belacan to weekends ('Okay. Weekends I can do.' — Turn 18). Agents B and C accepted this ('Okay, thanks.' — Turn 19; 'Weekends are fine for me too. Thanks, Agent D.' — Turn 20). Agent A had earlier accepted a different mitigation ('If you cook after 7, that works for me.' — Turn 11) and raised no objection to the weekends-only arrangement, so the household settled on weekends-only cooking as the operative accommodation.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: initially resisted stopping ('I can't just stop cooking it.'), then offered timing alternatives ('I can cook at other times') and ultimately conceded to limit cooking to weekends ('Okay. Weekends I can do.' — Turn 18).",
+      "Agent A: started by requesting no strong-smelling cooking, then softened to accept weekday-after-7 mitigation ('If you cook after 7, that works for me.' — Turn 11); did not object to the later weekends-only arrangement.",
+      "Agent B: supported the initial no-cook request, rejected weekday-after-7 as insufficient due to lingering smell, proposed weekends-only ('Could you cook it just on weekends?'), and accepted D's concession.",
+      "Agent C: raised laundry-specific constraints and later explicitly accepted the weekends-only compromise ('Weekends are fine for me too.' — Turn 20)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 9,
+    "round_scores": [
+      {
+        "evidence": "Agent A asked that nobody cook strong-smelling food in the flat from now on; Agents B and C immediately supported the complaint (B: smell gets into my clothes; C: my laundry smells of belacan).",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D replied explicitly that they can't stop cooking it ('this is my food. I can't just stop cooking it'), while Agent A explained a conflicting practical need (work calls from the dining table).",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D offered a practical accommodation ('I can cook at other times'). Agent A provided a concrete time constraint ('My calls are usually done by 7 p.m. on weekdays'), moving discussion toward scheduling rather than outright prohibition.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agents B and C reported that the proposed mitigation won't work for them (B: 'The smell is still a problem for me, even after 7.' C: '...my laundry ... will still absorb the smell'), reintroducing substantive incompatibility among household needs.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D proposed notifying others before cooking and Agent A accepted cooking after 7 ('If you cook after 7, that works for me'), showing partial agreement though B/C concerns remain unaddressed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agents B and C explained practical barriers to the mitigation (B: closing door makes room very hot; C: nowhere to hang wet laundry), which reopens the disagreement about feasible solutions.",
+        "movement": "reopened",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D asked for suggestions ('What do you suggest we do then?') and Agent B proposed limiting the cooking to weekends ('Could you cook it just on weekends?'), shifting toward a compromise option.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D accepted the proposal ('Okay. Weekends I can do.'), and Agent B acknowledged this. Some parties (notably Agent A) had earlier accepted a different mitigation (after 7), so one minor remaining uncertainty persisted until others explicitly agreed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 8
+      },
+      {
+        "evidence": "Agent C explicitly accepted the weekends-only arrangement ('Weekends are fine for me too. Thanks, Agent D.'). With Agent D's acceptance in round 8 and B/C acceptance by round 9, the substantive disagreement about when sambal belacan may be cooked was settled.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded; the weekends-only arrangement previously agreed stands and no one raised objections.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Core tension was between cultural/food practices and shared-space externalities (odour affecting laundry and work calls).",
+      "Proposed mitigations (closing doors, moving laundry, notification, cooking at other times) exposed trade-offs: they solved some parties' problems but created others (heat, damp laundry).",
+      "A temporal compromise (limiting strong-smelling cooking to weekends) was viable because it reduced overlap with weekday work and accommodated household constraints.",
+      "Explicitly naming constraints and concrete times (calls done by 7 p.m.; weekends) enabled the group to converge on an actionable arrangement."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T12:24:20.137323+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0103763,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2902,
+      "local_latency_ms": 45742.865,
+      "output_tokens": 5027,
+      "reasoning_tokens": 3264,
+      "successful_calls": 1,
+      "total_tokens": 7929
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJIM",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S103-MJIM-R01",
+    "scenario_id": "S103"
+  },
+  "schema_version": 2
+}

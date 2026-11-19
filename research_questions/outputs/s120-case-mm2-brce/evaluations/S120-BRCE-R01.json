@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who will complete Agent D's analysis section for the Thursday pitch",
+      "Whether Agent D should work during bereavement",
+      "Allocation/trade of tasks across team members"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Conversation reads as natural workplace interaction: condolences followed by pragmatic planning.",
+      "Agent A plays a mediating/organizing role, proposing trade-offs rather than imposing orders.",
+      "Participants give brief reasons for (in)capacity (e.g., Turn 14, Turn 16) which grounds decisions."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The team agreed a specific trade to cover the outstanding work: Agent A offered to help Agent C with C's section the next morning in exchange for Agent C helping Agent D with the data tonight. Key lines: Turn 25: 'Agent C, if you help Agent D with the data tonight, I'll help you with your section first thing tomorrow morning.' Turn 26: 'Okay. If you'll help me tomorrow morning, I can help with the data tonight.' Both parties explicitly accepted the arrangement, resolving the coverage incompatibility.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent C moved from refusal to conditional acceptance after Agent A offered reciprocal help (Turn 23 -> Turn 26).",
+      "Agent A shifted from raising the deadline to proposing a concrete trade and offering assistance (Turn 11 -> Turn 25).",
+      "Agent D initially stated need to be with family (Turn 12) but then volunteered to work (Turn 17); D ultimately accepted the team's redistribution of smaller tasks and thanked them (Turn 27).",
+      "Agent B remained consistent in capacity limits but contributed a specific, limited task (formatting) (Turn 21)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 11,
+    "round_scores": [
+      {
+        "evidence": "Only condolences exchanged (Turn 1: 'I'm so sorry for your loss, Agent D.'; Turn 2: 'Thank you, Agent A.'). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "More condolences (Turn 4: 'I'm sorry for your loss, Agent D.'; Turn 5: 'Thank you, Agent B.'). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Condolence from Agent C (Turn 8) and thanks (Turn 9). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A raises the deadline and need to plan (Turn 11: 'we do need to figure out a plan for the pitch deadline on Thursday.') Agent D responds that they must be with family (Turn 12: 'I have to be with my family.'). This creates a clear incompatibility about who will complete the work.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A asks others to cover D's section (Turn 13). Agent B refuses due to own coverage (Turn 14: 'I don't have the capacity.'). The team's ability to meet the deadline is now in stronger conflict.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A asks Agent C to take the section (Turn 15). Agent C says they also cannot and lack the skills (Turn 16: 'I can't... I don't know how to do that analysis.'), leaving the team with no obvious cover and deepening the incompatibility.",
+        "movement": "escalated",
+        "peak_conflict_score": 5,
+        "remaining_conflict_score": 5,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D offers to work after the wake and send it in the morning (Turn 17: 'I can work on it tonight...'). Agent A questions whether D should be working now (Turn 18), so a disagreement about the appropriate response remains but the immediate coverage problem is partially addressed by D's offer.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D insists it's their section and 'I'll manage' (Turn 19). Agent A reiterates concern that D should not work (Turn 20) and proposes shifting smaller tasks. The core disagreement (whether D should work tonight) persists but the team begins to allocate parts.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 8
+      },
+      {
+        "evidence": "Agent A requests dividing tasks (Turn 20). Agent B volunteers to format slides (Turn 21), which reduces the workload on Agent D and lowers the level of conflict.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 9
+      },
+      {
+        "evidence": "Agent C declines to help with data tonight because of their own work (Turn 23: 'I need to focus on my own section.'). Agent D again asserts 'I'll get it done tonight' (Turn 24). The tension about who will do the remaining practical tasks resurfaces.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 10
+      },
+      {
+        "evidence": "Agent A proposes a concrete trade: 'Agent C, if you help Agent D with the data tonight, I'll help you with your section first thing tomorrow morning.' (Turn 25). Agent C accepts that deal (Turn 26: 'Okay. If you'll help me tomorrow morning, I can help with the data tonight.'). This is an explicit, mutual agreement resolving the coverage conflict.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Plan reaffirmed and closing remarks (Turns 27–28). No substantive disagreement remains.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Tension was primarily practical: a fixed deadline vs. sudden bereavement and limited internal capacity.",
+      "Agents provided concrete constraints (covering other leaves, behind on own section) rather than vague refusals, which helped identify a trade solution.",
+      "The eventual resolution used a temporal trade (help tonight vs. help tomorrow), preserving D's ability to focus on family while ensuring deliverables."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T15:22:55.791754+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0073023,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3046,
+      "local_latency_ms": 34006.885,
+      "output_tokens": 3472,
+      "reasoning_tokens": 1728,
+      "successful_calls": 1,
+      "total_tokens": 6518
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BRCE",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S120-BRCE-R01",
+    "scenario_id": "S120"
+  },
+  "schema_version": 2
+}

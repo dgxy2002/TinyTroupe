@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "cooking strong-smelling food in shared flat",
+      "kitchen smells affecting work (video calls) and laundry"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agent A clearly described the problem and proposed a concrete, narrow solution ('cook it on Saturdays instead'), which enabled settlement.",
+      "Agent D expressed a personal/cultural reason but accepted the proposed schedule rather than insisting on full freedom.",
+      "Agent C repeated 'Saturday works for me' multiple times after agreement, producing needless repetition.",
+      "Several rounds contained no public speech, but this is a speech-only transcript so the verbal agreement in round 3 is sufficient to count as settlement."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent A asked that nobody cook strong-smelling food during the week and proposed a schedule: 'Could you cook it on Saturdays instead?' Agent D accepted the scheduling compromise: 'Okay. I can cook it on Saturdays.' Other housemates subsequently confirmed ('Saturday works for me'), so the incompatible demands were settled by D restricting that cooking to Saturdays.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D shifted from asserting cultural attachment ('That's the food I grew up with') to conceding a behavioral change: 'Okay. I can cook it on Saturdays.'",
+      "Agent A moved from a general request ('nobody cook strong-smelling food') to proposing a specific accommodation ('Could you cook it on Saturdays instead?'), enabling agreement.",
+      "Agents B and C expressed alignment with A's concern and later confirmed acceptance of the compromise; C repeated confirmations several times."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Agent A: 'The smell from the kitchen is very strong ... difficult when I'm on video calls.' Agent B: 'My room is the one next to the kitchen. The smell gets into all my clothes.' These statements establish an incompatibility between cooking strong-smelling food and others' work/clean-clothes interests.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C: 'My laundry ... picks up the cooking smell too.' Agent D: 'I hear you all. I know the smell is strong. That's the food I grew up with...' D's remark emphasizes a competing cultural/practical interest rather than accepting constraints, making the disagreement clearer.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A proposes a concrete compromise: 'Could you cook it on Saturdays instead?' Agent D accepts: 'Okay. I can cook it on Saturdays.' This is an explicit, mutual spoken agreement on a concrete arrangement resolving the main incompatibility.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A: 'Okay, thanks.' Agent B: 'Okay, that works for me too.' These are confirmations after the agreement; no substantive disagreement is expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C: 'Saturday works for me.' Confirmation of the agreed schedule; no new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior round established a spoken agreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no new disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C repeats: 'Saturday works for me.' Repetition confirms the earlier agreement; no substantive conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent C repeats again: 'Saturday works for me.' No new disagreement introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded; agreement from round 3 remains in effect in the transcript.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no substantive issues raised.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded; transcript ends without revival of the disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The conflict was between a sensory nuisance affecting work and laundry versus a resident's cultural food practice; scheduling (time-based restriction) resolved the incompatibility.",
+      "A concrete, simple request (specific day) facilitated a quick resolution rather than a broad ban.",
+      "Explicit mutual verbal acceptance in a speech-only transcript counts as settlement even without observable actions."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T12:34:15.921114+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00749355,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2755,
+      "local_latency_ms": 44994.432,
+      "output_tokens": 3604,
+      "reasoning_tokens": 2176,
+      "successful_calls": 1,
+      "total_tokens": 6359
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJMI",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S105-MJMI-R01",
+    "scenario_id": "S105"
+  },
+  "schema_version": 2
+}

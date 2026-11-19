@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s108-case-mm1-mjce",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1916,
+    "completion_tokens": 653,
+    "total_tokens": 2569,
+    "cost": 0.010362,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010362,
+      "upstream_inference_prompt_cost": 0.003832,
+      "upstream_inference_completions_cost": 0.00653
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and when Agent D may cook strong-smelling food (e.g. curry) in the shared kitchen; settled on Tuesdays and Thursdays after 8 p.m.",
+  "pairs": {
+    "A-B": {
+      "start": 0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B agrees with A's ban (T2), likes A's fan idea (T18), and accepts after 8 p.m. (T24).",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.8,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs A's principle (T9, T3); C rejects Sunday (T15) and doubts the fan (T19), but accepts Tue/Thu after 8 (T27).",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A wanted a total ban (T1/T7), D resisted (T10); A offered Saturday, then after 8 p.m. (T21), D accepted (T22), and the Tue/Thu plan followed (T26-27).",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "B-C": {
+      "start": 0.8,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both supported the ban (T2, T3); C questioned the fan B liked (T19) but did not address B; both accept the final plan (T24, T27).",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.6,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "D",
+      "evidence": "B backed the ban (T2); D resisted (T10) but then accepted the after-8 p.m. arrangement (T22), which B called fine (T24).",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "C-D": {
+      "start": -0.7,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C backed the ban (T9) and D resisted (T10); C raised the laundry-night conflict (T25); D proposed Tue/Thu (T26) and C accepted (T27).",
+      "roles": "C-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 1.4
+    }
+  }
+}

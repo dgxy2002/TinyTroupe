@@ -1,0 +1,147 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who will complete Agent D's section / coverage of workload given Agent D's bereavement"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Tone is supportive and practical; participants move quickly from sympathy to concrete task coordination (e.g., turn 7: 'I'll take over your section.').",
+      "Minor verbatim repetition of D's explanation (turns 22 and 25) but otherwise concise information transfer about the handover and model.",
+      "Handover includes actionable details (data cleaned, note on Q3 outlier), enabling a genuine settlement rather than mere reassurance."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent A agreed to take over Agent D's section and Agent D agreed to hand it off and brief A, resolving the coverage conflict. Key lines: Agent A: \"I'll take over your section.\" Agent D: \"I can at least brief you on everything I've done so far.\" Agent A later confirms: \"Yes, I'm sure. It's the only way.\"",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from expressing sympathy to taking responsibility for the work ('I'll take over your section.'), a substantive position change.",
+      "Agent D initially proposed to work evenings ('I will work on it in the evenings from home.') but accepted A's offer to take over and agreed to brief A instead.",
+      "Agents B and C consistently declined additional work ('I can't take on any more.'; 'I also can't help...'), and did not change that position."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent D states the wake occupies the next two days and 'I have to be there.' No disagreement or incompatible claims are expressed in this round.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A notes the deadline pressure ('that does put us in a tight spot for the Thursday deadline'), and Agent B explicitly refuses extra work ('I can't take on any more'). This begins a clear substantive conflict about who will cover Agent D's section.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C also refuses to help ('I also can't help with the analysis'), leaving fewer options for coverage. Agent D offers to work evenings from home ('I will work on it in the evenings from home'), creating tension between the team's desire for D to be with family and the practical need to complete the work.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A offers a concrete handover ('I'll take over your section.'), and Agent D accepts the assistance and offers a briefing ('I can at least brief you on everything I've done so far.'). The main incompatibility (who will complete the section) is settled by A volunteering and D agreeing to hand over work.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Planning the briefing ('When works for you?') and expressions of gratitude ('Thanks, Agent A. That's a big help.') — no substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Mutual readiness to proceed ('We'll get it done.' and 'How about right now? I can walk you through everything before I go.'). No conflict; concrete handover offered.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Both agree to start the handover immediately ('Yes, now is perfect.' 'Okay. Let's start. I'll show you what I have.'). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D describes the state of the work (market share mostly done; forecast in progress). This is information transfer for the accepted handover; no disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D explains the modeling approach ('I was using a regression model...'). The same content is repeated, but no substantive disagreement appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Agent A confirms the immediate next steps ('Right. Validate the model, then write the summary. I can handle that.') and Agent D gives a caution about an outlier in Q3 data. This is task coordination, not conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Agent A reassures Agent D to be with family ('Don't worry about us. Go be with your family.') and Agent D thanks them. No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Closing expressions of thanks ('Thank you, Agent A. I really appreciate it.' / 'Of course.'). No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The only substantive conflict concerned task coverage after Agent D's bereavement; it was solved by one teammate (Agent A) voluntarily taking on the section.",
+      "Agent D had prepared materials (cleaned data, model state, and a note about a Q3 outlier), which made the accommodation feasible and reduced the burden on others.",
+      "Two teammates (Agents B and C) were unwilling/unable to take extra work, so a solution required either D working evenings or A taking over; A's offer removed the need for D to work during grieving."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T15:19:39.629533+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00920355,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3147,
+      "local_latency_ms": 46509.309,
+      "output_tokens": 4410,
+      "reasoning_tokens": 2816,
+      "successful_calls": 1,
+      "total_tokens": 7557
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BREC",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S119-BREC-R01",
+    "scenario_id": "S119"
+  },
+  "schema_version": 2
+}

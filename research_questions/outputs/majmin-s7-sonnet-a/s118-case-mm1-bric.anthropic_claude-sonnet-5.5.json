@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s118-case-mm1-bric",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1891,
+    "completion_tokens": 676,
+    "total_tokens": 2567,
+    "cost": 0.010542,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010542,
+      "upstream_inference_prompt_cost": 0.003782,
+      "upstream_inference_completions_cost": 0.00676
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who covers Agent D's unfinished analysis section before Thursday's pitch, and whether the deadline can be extended or scope simplified",
+  "pairs": {
+    "A-B": {
+      "start": -0.6,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A insists everyone must stretch and the 'if' is over (15, 21); B says she can't take more (14, 16, 22) and asks for an extension or simplification (24); A rejects it: 'No. We cannot ask for an extension' (26).",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-C": {
+      "start": -0.5,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C first backs A: 'He's right' (5), but then refuses the data/charts and Anil work (17, 19), and in 25 sides with B on an extension; A says 'No' (26).",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D agrees to hand over the work (8), and A plans to take the main analysis after the handover (13). D asks 'no one can take the work?' (20) and A keeps pushing without an extension (21, 26). D takes no position on an extension.",
+      "roles": "A-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "Both say they have no capacity (10, 11). C then backs B's extension idea: 'I agree, can we ask for an extension?' (25).",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "D never addresses B's position. D's 'So... no one can take the work?' (20) only echoes the shared problem, and D says nothing on the extension.",
+      "roles": "B-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "D's remark (20) comes after C's refusals (17, 19), but D takes no stance on C's extension request (25).",
+      "roles": "C-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

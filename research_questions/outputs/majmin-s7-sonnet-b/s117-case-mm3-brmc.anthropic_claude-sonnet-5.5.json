@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s117-case-mm3-brmc",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1915,
+    "completion_tokens": 607,
+    "total_tokens": 2522,
+    "cost": 0.0099,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0099,
+      "upstream_inference_prompt_cost": 0.00383,
+      "upstream_inference_completions_cost": 0.00607
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to get Agent D's unfinished section (and the pitch) done by Thursday given D's bereavement, with B and C refusing extra work and A pushing for a solution.",
+  "pairs": {
+    "A-B": {
+      "start": -0.4,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B rejects extra work (T4, T9, T13, T23); A pressures B (T8) and demands B justify their situation (T24); A's review request is refused.",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-C": {
+      "start": -0.3,
+      "end": -0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C refuses to take or review D's section (T7, T14, T16); A demands a solution from both (T22) and C does not yield.",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "A-D": {
+      "start": 0.2,
+      "end": -0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A forbids D from working (T18, T20) while D offers to work late on the section (T17, T19); D gives a passive 'Okay. I understand' (T21) but never drops the idea.",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": -0.5
+    },
+    "B-C": {
+      "start": 0.7,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C: 'I'm with Agent B' (T14); both refuse extra work and review.",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "D offers to do own section (T17) while B refuses extra work (T4, T9); they never address each other, though B's position isn't opposed to D's offer.",
+      "roles": "B-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C declines to cover D's section (T7); D's offer to work on it herself (T17, T19) is compatible but they never address each other.",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s107-case-mm3-mjic",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1500,
+    "completion_tokens": 627,
+    "total_tokens": 2127,
+    "cost": 0.00927,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00927,
+      "upstream_inference_prompt_cost": 0.003,
+      "upstream_inference_completions_cost": 0.00627
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether to restrict strong-smelling cooking in the shared flat; resolved as no very strong-smelling food on weekday evenings, with weekends allowed.",
+  "pairs": {
+    "A-B": {
+      "start": 0.9,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B agrees with A's ban (turn 2), then 'That sounds fair' (8) and 'Yes, that's fair' (44) to the weekday-evening rule.",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.9,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs A's concern (3) and says 'That works for me' (9) and 'Works for me' (45) to the weekday rule.",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D initially objected ('All cooking has smells', 4); A broadened it to everyone on weekdays (7); D accepted 'Weekends are fine' (10, 46); A: 'Weekday evenings it is' (47).",
+      "roles": "A-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 1.5
+    },
+    "B-C": {
+      "start": 0.9,
+      "end": 1.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both separately support A's request (2, 3) and the weekday compromise (8, 9, 44, 45), without addressing each other.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.6,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "D",
+      "evidence": "B supported the ban (2) while D resisted (4); D later accepted the weekday rule B endorsed (10, 46).",
+      "roles": "B-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "C-D": {
+      "start": -0.6,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "D",
+      "evidence": "C backed the ban (3) against D's objection (4); D later accepted weekday restriction with weekends fine (10, 46).",
+      "roles": "C-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 1.4
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s106-case-mm2-mjmc",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Farah"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Zarina"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1624,
+    "completion_tokens": 658,
+    "total_tokens": 2282,
+    "cost": 0.009828,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009828,
+      "upstream_inference_prompt_cost": 0.003248,
+      "upstream_inference_completions_cost": 0.00658
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can keep cooking strong-smelling fried salted fish in the shared kitchen, given the smell affects the others' rooms, laundry and work",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A asks for no strong-smelling cooking (1); B agrees the smell is bad (2) and later accepts D's weekend plan with notice (14), so both end on the same arrangement without addressing each other.",
+      "roles": "A-B",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C backs the complaint about smell (3), later accepts the weekend plan with the door closed (16), as A does (11).",
+      "roles": "A-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D says the cooking is normal (4) and A holds firm (5); then D offers once a week on weekends with notice and the yard door closed (10), and A says a weekend works (11).",
+      "roles": "A-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.5
+    },
+    "B-C": {
+      "start": 0.7,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B (8) and C (9) both say the smell is still a problem after 7 p.m.; both later accept D's weekend plan (14, 16).",
+      "roles": "B-C",
+      "cultures": "Malay - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.7,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B says the smell is still a problem after 7 (8); D proposes the weekly weekend plan with notice (10), and B accepts if told beforehand so they can close their door (14).",
+      "roles": "B-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "C-D": {
+      "start": -0.7,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C says the smell still gets into the laundry in the evenings (9); D asks if the plan is okay (15), and C accepts if it is on a weekend with the door closed (16).",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.4
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Who will complete Agent D's unfinished section",
+      "Workload allocation among team members"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants stated concrete constraints and capacities (e.g., B working late; C lacks analysis skill).",
+      "A quickly volunteered to absorb the extra work, producing a clear, practical plan.",
+      "Several rounds of near-duplicate 'Thank you' after settlement increase repetition but do not indicate unresolved conflict."
+    ],
+    "dialogue_repetition_score": 3,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent A agreed to take over Agent D's analysis section, Agent C and B accepted task reallocations, and Agent D agreed to hand off by walking Agent A through the remaining work. Key lines: Agent A: 'I'll take over Agent D's analysis section.' Agent C: 'Okay, that works.' Agent B: 'Okay, thanks.' Agent D: 'I can walk you through it now.'",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from offering condolences to taking on additional work ('I'll take over Agent D's analysis section.').",
+      "Agent B retained the position that they could not take more work but accepted the proposed plan once A volunteered.",
+      "Agent C maintained that they were behind and unable to do the analysis, then accepted A's offer to take it.",
+      "Agent D shifted from worrying about the unfinished work to accepting the handoff and offering a walkthrough ('I can walk you through it now.')."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A: 'Please, go home. We'll handle this.' — Agent D: 'What about my part of the pitch? It's only half done.' (A asks D to leave; D expresses concern about the unfinished work.)",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: 'Don't worry about it. The rest of us will finish your section.' — Agent B: 'Hang on, Agent A. I'm already covering for someone.' (B explicitly objects to taking on more work.)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B explains constraints: 'I've been working late every night this week to keep up with both workloads.' (Clarifies why B cannot easily take more work; reduces but does not remove the incompatibility about who will finish D's section.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent C: 'I'm also behind on my section. And I don't know how to do Agent D's analysis.' — Agent A proposes a new plan: 'I'll take over Agent D's analysis section. Agent C, you focus on getting your part done. Agent B, we'll try to keep your plate clear. Agent D, before you go, can you walk me through what's left?' (A's proposal begins to resolve the dispute but not everyone has accepted yet.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B: 'Okay, thanks.' — Agent C: 'Okay, that works.' (B and C accept A's proposal; D has not yet explicitly confirmed, so a small remaining concern persists until D acknowledges.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D: 'Okay, yes. Thank you, Agent A. I can walk you through it now.' — Agent A: 'Okay, thanks. Let's do it now.' (D explicitly agrees to hand off and to walk A through the remaining work; the prior incompatibility is settled.)",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D explains the work remaining and where files/data are: cooperative task-sharing information (no disagreement).",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent A: 'Okay, got it. ... We'll take it from here. You can go.' — Agent D: 'Thank you so much, Agent A.' (Reinforcement of the settled arrangement; no conflict.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D repeats thanks and Agent A reassures: continued polite closure after the agreement (no substantive disagreement).",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Agent D: 'Thank you.' (Only expressions of gratitude; no conflict.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D: 'Thank you.' (Continued closure; no substantive disagreement.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Agent D: 'Thank you.' (Final repeated thanks; no conflict.)",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The core incompatibility was practical (who will finish the half-done analysis) rather than normative.",
+      "Clarifying individual workloads and skills (B's current cover, C's inability to do the analysis) made a targeted accommodation feasible.",
+      "A's willingness to take on the analysis and D's offer to transfer knowledge (a walkthrough) together enabled a clean handoff."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T14:18:28.542333+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00869155,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2955,
+      "local_latency_ms": 60180.861,
+      "output_tokens": 4178,
+      "reasoning_tokens": 2624,
+      "successful_calls": 1,
+      "total_tokens": 7133
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BRCM",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S111-BRCM-R01",
+    "scenario_id": "S111"
+  },
+  "schema_version": 2
+}

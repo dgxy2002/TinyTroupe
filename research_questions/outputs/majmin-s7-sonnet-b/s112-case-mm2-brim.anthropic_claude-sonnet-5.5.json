@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s112-case-mm2-brim",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1879,
+    "completion_tokens": 645,
+    "total_tokens": 2524,
+    "cost": 0.010208,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010208,
+      "upstream_inference_prompt_cost": 0.003758,
+      "upstream_inference_completions_cost": 0.00645
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will complete Agent D's unfinished pitch section after D's bereavement; resolved with D running the analysis from home and C prepping the data.",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Both are sympathetic and say they'll sort it out (T3, T6), but B declines to help with the section (T12, T19) while A keeps organizing; no real conflict.",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "A asks C if C can do the analysis (T13) and C says no (T14); after A asks C to handle the data prep (T20), C agrees (T23).",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "A-D": {
+      "start": -0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A first says not to worry about work (T3, T9), D says the section is unfinished (T5); later A accepts D's offer to run the analysis ('Okay, if you're sure. Thank you', T18).",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.2
+    },
+    "B-C": {
+      "start": 0.3,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline the analysis (T12, T14) and neither addresses the other; C later takes on the data prep (T23) while B keeps declining (T19).",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B tells D 'We'll sort it out' (T6) while D says the section is unfinished; D's later plan (T15) and B's declining to help (T19) fit together without friction.",
+      "roles": "B-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C asks what the data prep involves (T21), D explains (T22), C agrees (T23), and D thanks C (T24).",
+      "roles": "C-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.9
+    }
+  }
+}

@@ -135,10 +135,111 @@ on start, 0.06 on end, "moved" identical in 235 of 264 pairs.
   the model; if the gap appears only with customs, it was the kind of need. I offered to sketch that scenario and check
   it against the 13 build rules before pricing; not started.
 
-**Next steps:** wait for the user to choose. Options on the table: (1) sketch the rule-matched scenario and price ~5 runs
-per cell; (2) score all fixed-cast runs including every control (about $0.20); (3) read a sample of transcripts
-against the pair scores; (4) switch the report script to run weighting. No runs without a cost estimate and the user's
-go-ahead.
+**Supervisor guidance (Shaoyang Xu, relayed by the user, 2026-11-17), replacing "set aside" above:**
+
+- **Minority means the room minority** (the "1" in "3 Chinese + 1 Indian"), not Singapore's population. Reverse the
+  composition (3 Indian + 1 Chinese) to see whether results come from group size or cultural identity.
+- **A focused conclusion** is a clear finding backed by consistent results; explanations from transcripts are a bonus,
+  no full causal mechanism needed. **Negative results are fine**; do not force a positive one.
+- **Existing data cannot answer the reversal:** no run has 3 Chinese + 1 Indian or 3 Indian + 1 Chinese, and the
+  only Chinese-majority room is S82. Rooms are mostly 3 Eurasian + 1, or 3 Malay + 1 (scenarios 6 and 8), so the
+  reversal needs new runs in one scenario.
+- **Next project (after wrapping this up):** real-world events involving Singapore and other countries (first example:
+  transboundary haze), each agent an average citizen of a country, still about conflict and resolution; compare
+  simulated disagreement, negotiation and cooperation with what happened, and find where the simulation fails. Prof
+  will discuss this week; an initial setup for one event is wanted before then.
+
+**Majority/minority design agreed with the user (2026-11-18; both scenarios built, run and scored):** two scenarios, 12 rooms each (3 of
+one culture + 1 D of another, every ordered pair of Chinese, Malay, Indian, Eurasian), 3 runs per room. The variant
+follows D (the minority holds the need); the majority only sets roles A-C. Scenario 15 (smells, no faith): D's family
+dish, plus a new Eurasian dish (devil curry); S98-S100 count as run 1 of their 3-Eurasian rooms; 33 new runs, about $21.
+Scenario 7 (bereavement): rebuilt with fixed casts per majority and faith in every biography, plus a new Catholic
+variant (rosary each night, funeral Mass Thursday); 36 new runs, about $24. Health controls left out for now. Pair
+agreement scores on every run (about $1.20), reported with each pair split by direction plus majority-majority pairs as
+a same-culture baseline. Pilot one room per scenario first and read it in full. **Names: fixed** (one name per culture
+for D in both scenarios: Xin Yi, Aisyah, Priya, plus a new Eurasian name; fixed A-C names per majority), and **the user
+decided to assume names have no effect for this research and not to report a name caveat.**
+
+**Scenario 15 majority/minority results (2026-11-18, 36 runs, $21.0 runs + $0.78 scoring).** Built in `s30_flat.py`
+(`_smell_room`, `SMELL_ROOM_PLAN`, `SMELL_ROOMS`: S102-S110) and `common.py` (`_MAJORITY_CASTS`, `MINORITY_NAMES`,
+cells MJ<majority><minority>, e.g. MJCE); 3-Eurasian rooms reuse S98-S100 (SM1-SM3). Folders `outputs/s1NN-case-mm1..3-<cell>`
+and `outputs/s98..s100-case-mm2..3-sm*`; scores `outputs/majmin-s15-sonnet-a`/`-b`; report
+`tools/majority_minority_report.py majmin-s15-sonnet-a majmin-s15-sonnet-b` (run-weighted, writes `runs.csv`). Per-run
+table in `good_runs.md`. 23 resolved, 6 partly, 7 unresolved.
+- **Focused conclusion: the room minority gives way, whatever its culture; culture changes nothing measurable.** D moved
+  alone more than the majority in 29 of 36 runs (share of judgements naming D alone minus majority alone +0.39, 95% CI
+  +0.26 to +0.51); D's fairness 0.32 lower than the majority's (CI +0.13 to +0.54). Majority-majority pairs start aligned
+  (+0.41 to +0.54) and majority-D pairs opposed (-0.22 to -0.61); by the end both sit near +0.6 (gap +0.04). Culture of
+  the majority (p=0.18 on end score) or of D (p=0.82) explains nothing; reversed rooms differ in both directions with no
+  pattern. Indian-majority rooms settled 9 of 9 (end +0.83), others 20 of 27: not reliable at n=9. No race or culture
+  word was said aloud in any run; D thought "three against one" / "ganging up" in 27 of 36, evenly by culture.
+- **Mechanism seen in transcripts:** each majority role has its own supplied complaint (A's calls, B's room, C's laundry),
+  so D concedes to them one at a time (hour, then days, then a heads-up); the majority offers a closed door or planned
+  laundry. Caveat: only D's cooking can change, so D giving way is partly built in, and group size is not separated from
+  being the one with the need (health controls, where the others gave way, were left out).
+
+**Scenario 7 majority/minority rooms (built and launched 2026-11-18, user approved "build, run pilot and run if it looks
+right"; haze setup not to be drafted yet).** S111-S122 in `s30_flat.py` (`_BEREAVEMENT_NEEDS`, `_bereavement_room`,
+`BEREAVEMENT_ROOM_PLAN`, `BEREAVEMENT_ROOMS`); cells BRxy in `common.py` (same fixed people as MJ/SM, with faith
+biographies via `_cast`). S55-S58 hashes verified unchanged after moving their needs into `_BEREAVEMENT_NEEDS`. **Change
+from the plan:** the Catholic need is "rosary at her wake tonight, funeral Mass and burial tomorrow", not "Mass
+Thursday", because Thursday 9 a.m. is the pitch and every variant asks for the same two days (rule 8). Tests: 216 pass.
+Pilot `outputs/s120-case-mm1-brce` (3 Chinese + Eurasian D, $0.58, read in full): unresolved; Jun Jie (A) accepted the
+need at once and insisted on covering alone, Hui Min and Shu Fen objected to the risk, Sarah kept offering to work after
+the wake; no faith word from her, aloud or in thought. No design flaw. All 36 runs (`s1NN-case-mm1..3-br*`), $25.97;
+scores `outputs/majmin-s7-sonnet-a`/`-b` ($0.71); per-run table in `good_runs.md`. 23 resolved, 2 partly, 11 unresolved.
+- **The scenario 15 finding does not repeat.** The majority accepted the need at once, so majority-D pairs start near 0
+  (+0.02; scenario 15 -0.45) and end +0.39; D moved more than the majority in 12 runs, less in 11. The dispute was mostly
+  inside the majority (A promised cover, B or C refused); majority-majority pairs end +0.27, below the mixed pairs.
+- **Culture again explains nothing reliable:** majority culture p 0.44-0.89; D's culture borderline only for settling
+  (Eurasian D 3 of 9 vs 22 of 27, p=0.084 over four groups, chosen post hoc, and the Catholic need is new wording).
+- D worked during the mourning in 16 of 36 (my reading of debriefs: D Chinese 2, Eurasian 3, Indian 5, Malay 6).
+- **Joint conclusion across both scenarios:** neither the majority's nor the outnumbered person's culture reliably
+  changes agreement, settling or who gives way. Who gives way follows the scenario's structure: where only the
+  outnumbered person can change (smells) they give way; where the others can cover (bereavement) the majority argues
+  among itself and the cost lands on either side. No race word was said aloud in any of the 72 runs.
+
+**Combined 72-run analysis (2026-11-19, no new runs; both `runs.csv` pooled).** The user asked for no bootstrap
+intervals in tables ("dont boostrap it"); use permutation tests that shuffle culture labels **within scenario**.
+The analysis scripts were in the session scratchpad and are not in the repo; everything below is recomputable from
+`outputs/majmin-s15-sonnet-a/runs.csv` and `outputs/majmin-s7-sonnet-a/runs.csv` (columns `mixed_start`,
+`mixed_end`, `mixed_change` = majority-D pairs averaged within the run; `same_*` = majority-majority pairs).
+- **By culture pair** (both directions, 12 runs each; start / end / change / settled): Chinese - Malay -0.20 / +0.46 /
+  +0.66 / 9 of 12; Chinese - Indian -0.19 / +0.57 / +0.75 / 10; Malay - Indian -0.20 / +0.68 / +0.88 / 11; Chinese -
+  Eurasian -0.33 / +0.43 / +0.76 / 9; Malay - Eurasian -0.12 / +0.48 / +0.60 / 8; Indian - Eurasian -0.15 / +0.42 / +0.56
+  / 7; same-culture pairs +0.25 / +0.46 / +0.22. A by-group table (by majority, by outnumbered) has two halves of 72
+  runs each (each culture is majority in 18 runs and outnumbered in 18); show them as two tables, not one.
+- **Tests:** all 20 stratified culture tests p > 0.10 (majority, minority, pair, direction; on end, change, settled, who
+  moved, fairness); reversal (direction within pair) p = 0.28. Scenario differs strongly (start and change p < 0.001;
+  who moved p = 0.0006): who gives way is smells 29 vs 4, bereavement 12 vs 11, so the pooled 41 vs 15 comes from
+  smells alone.
+- **Per-pair reversal of the majority (raw change gap, p):** Chinese - Malay 0.01 (0.92), Chinese - Indian 0.10 (0.67),
+  Chinese - Eurasian 0.00 (0.99), **Malay - Indian 0.35 (0.03)**, Malay - Eurasian 0.06 (0.74), Indian - Eurasian 0.20
+  (0.41, smells only: +0.43 vs -0.03). Malay - Indian was picked after looking (about 0.18 after correcting for six);
+  its gap is in the **start** (Indian-majority rooms start -0.40, Malay-majority -0.01; in bereavement the Malay majority
+  accepted the Indian D's need at once), and both directions end level (+0.65 vs +0.70) and settle about equally.
+- **Agreement, not resolution:** the pair score measures how aligned two agents are; resolution is the evaluator's
+  status (related: end per run unresolved -0.02, partly +0.34, resolved +0.74, but not the same). Change = how much
+  agreement rose, and it is capped by the start (+1 ceiling), so a low start inflates it. The user corrected me on
+  calling change "how well they resolve"; keep the terms apart.
+- **Standardised change (the user's slide uses this):** share of the possible rise achieved, (end - start) / (1 -
+  start), per run, then averaged. Majority-D, majority row / D column: Chinese: Malay 0.57, Indian 0.65, Eurasian 0.53;
+  Malay: Chinese 0.47, Indian 0.63, Eurasian 0.47; Indian: Chinese 0.61, Malay 0.74, Eurasian 0.53; Eurasian: Chinese
+  0.57, Malay 0.51, Indian 0.39. Overall 0.56. Reversal gaps shrink to 0.04-0.14 with no consistent direction (Malay -
+  Indian 0.35 -> 0.11, now level with Chinese - Malay 0.10). By pair (both directions): Malay - Indian 0.68 (highest in
+  both scenarios: 0.87 / 0.49), Chinese - Indian 0.63, Chinese - Eurasian 0.55, Chinese - Malay 0.52, Malay - Eurasian
+  0.49, Indian - Eurasian 0.46; Malay - Indian vs the rest p = 0.07 (post hoc), any pair differs p = 0.29. **Do not claim
+  Malay and Indian agents agree better:** in the earlier 65-transcript culture-pair table Malay - Indian rose least
+  (+0.20), so the two datasets disagree, which points to noise. Wording agreed for the slide: describe it, give p, cite
+  the contradiction.
+
+**Next steps:** the user is moving to another laptop and will commit this themselves (never push; avoid `git add .`).
+Open offers, none accepted yet: an Excel sheet of all runs (proposed scope: S36-S101 case studies plus the 72
+majority/minority runs, with roles, names, cultures, faiths, scenario, outcome, faith or culture named, who gave way,
+fairness and pair scores as columns; ask whether S30-S35 goes on a separate tab); a committed script for the combined
+72-run tables and standardised change. The haze setup waits for the user ("no need to draft haze setup yet"). Older
+options still open: (1) the rule-matched scenario; (2) score all fixed-cast runs including controls (about $0.20); (4)
+switch `pair_agreement_report.py` to run weighting. No runs without a cost estimate and the user's go-ahead.
 
 ## HANDOVER: start here (2026-11-09)
 

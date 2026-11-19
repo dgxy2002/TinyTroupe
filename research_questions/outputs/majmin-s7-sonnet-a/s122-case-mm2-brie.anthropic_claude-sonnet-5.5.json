@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s122-case-mm2-brie",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1904,
+    "completion_tokens": 624,
+    "total_tokens": 2528,
+    "cost": 0.010048,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010048,
+      "upstream_inference_prompt_cost": 0.003808,
+      "upstream_inference_completions_cost": 0.00624
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will cover Agent D's unfinished analysis section for Thursday's pitch while D is away for the funeral, given B and C say they lack capacity",
+  "pairs": {
+    "A-B": {
+      "start": -0.8,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "B objects to A volunteering them (T4-6, T11, T14: 'Looking won't change my workload'); A shifts to offering to do the analysis himself (T15) and B never agrees to help.",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": -0.6,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C refuses extra work (T7, T12), but A proposes splitting analysis from other parts (T15) and C says 'We can look' (T16); both then join D's walkthrough.",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.9
+    },
+    "A-D": {
+      "start": 0.6,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A tells D not to worry (T3); D offers a walkthrough (T17), A thanks D and they do it together (T18, T27-30).",
+      "roles": "A-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "B-C": {
+      "start": 0.7,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs B ('He's right', T7) and both resist taking on more; C later softens slightly to look (T16) while B stays firm.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B never addresses D or takes a position on D's walkthrough; B stops speaking after T14.",
+      "roles": "B-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C says they don't know how to do D's analysis (T12) and agrees to look (T16); D offers a walkthrough to everyone (T17), with no direct exchange.",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.3
+    }
+  }
+}

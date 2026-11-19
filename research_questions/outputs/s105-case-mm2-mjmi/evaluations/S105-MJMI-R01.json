@@ -1,0 +1,151 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "when and whether to cook strong-smelling food in the shared flat",
+      "ventilation/using kitchen window and weak hood to control smell",
+      "timing vs laundry schedule (laundry hanging in service yard causing clothes to absorb smell)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants moved from complaint to concrete proposals (times and ventilation) rather than repeated accusations.",
+      "Agent D repeatedly sought clarification before committing, which improved coordination ('So just to go back...').",
+      "There is a duplicated line from Agent B ('Yes, please. That would help. Thanks.') appearing twice (Turns 23 and 26), a minor repetition.",
+      "Agents provided specific constraints (C's laundry days) that made a concrete compromise possible."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Housemates negotiated a combined solution: D agreed to restrict cooking to certain times and to use ventilation; C accepted cooking only on Tuesdays, Thursdays, and the weekend ('Yeah, Tuesdays, Thursdays, and the weekend works for me. Thanks.'), and B accepted the ventilation mitigation ('Yes, please. That would help. Thanks.'). D proposed the schedule and ventilation and confirmed settlement ('Okay, great. So that's settled then.'). However, Agent A — the original requester — did not explicitly confirm acceptance of the final, narrower weekday schedule (the transcript contains no line where A affirms the final Tue/Thu/weekend + hood arrangement), so not all parties' conflict claims are affirmatively settled. Therefore the run is partially_resolved: B and C's objections were addressed; A's acceptance of the final arrangement remains unconfirmed.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: moved from apologetic to accommodating, first accepting A's proposed times and later proposing a refined schedule plus ventilation ('Okay, yeah, I can do that.'; proposed Tue/Thu/weekend and to open window/use hood).",
+      "Agent B: moved from complaint about smell to acceptance of ventilation mitigation ('Yes, please. That would help.').",
+      "Agent C: moved from complaint to offering a practical constraint (laundry days) and then accepted the proposed days ('Tuesdays, Thursdays, and the weekend works for me.').",
+      "Agent A: raised the initial constraint and accepted D's early offer, but did not explicitly confirm the final adjusted arrangement; A's position therefore remained effectively unchanged/unconfirmed in the final transcript."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "mixed",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A requested that nobody cook strong-smelling food; Agent B reported the smell gets into his room. A substantive incompatibility between cooking practices and others' needs is introduced but not yet negotiated. (Turns 1-2)",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D apologised and offered to 'figure something out', which reduces immediate antagonism but leaves the substantive issue (when and how to cook) unresolved. (Turns 3-4)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A proposed a concrete schedule ('after 7 p.m. on weekdays, or on Saturday') and Agent D explicitly agreed ('Okay, yeah, I can do that'), addressing A's need but not yet the other roommates'. (Turns 5-6)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B objected that changing the time 'doesn't help me', reopening substantive disagreement because the earlier agreement between A and D does not meet B's interest. (Turns 7-8)",
+        "movement": "reopened",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C added that the laundry still smells ('That doesn't help me either'), widening the incompatibility (schedule vs laundry/room odors). D asks for suggestions but no resolution yet. (Turns 9-10)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "C proposed weekend-only cooking; D queried whether that means weekdays are no longer acceptable, showing contestation over which schedule is acceptable. No mutual acceptance. (Turns 11-12)",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "B suggested a ventilation mitigation ('open the kitchen window and use the hood'), while C cautioned the hood is weak. This introduces a technical mitigation that could reduce conflict but is uncertain. (Turns 14-15)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 7
+      },
+      {
+        "evidence": "C clarified concrete laundry days ('I do my laundry on Monday, Wednesday, and Friday evenings'), giving actionable constraints that lower uncertainty though still unresolved. D seeks to fit cooking around that. (Turns 16-17)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 8
+      },
+      {
+        "evidence": "D proposed a specific compromise schedule ('after 7 p.m. on Tuesdays and Thursdays, and on the weekend'), but B reiterated the day doesn't matter for him, keeping a substantive disagreement alive. (Turns 18,20)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "C accepted the proposed days ('Tuesdays, Thursdays, and the weekend works for me'), and D asked B whether opening the window and using the hood would help — movement toward a combined schedule+ventilation solution. (Turns 21-22)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 10
+      },
+      {
+        "evidence": "B accepted the ventilation mitigation ('Yes, please. That would help. Thanks.'), which resolves B's expressed objection. One substantive uncertainty remains: whether A explicitly accepts the final combined arrangement. (Turns 23,26)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 11
+      },
+      {
+        "evidence": "Agent D declared 'Okay, great. So that's settled then.' C and B had verbally accepted the schedule/mitigation; A did not explicitly restate acceptance of the final arrangement, leaving a small unresolved element. (Turn 27)",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Timing restrictions can satisfy some roommates (A/C) but fail for roommates who are physically adjacent to the kitchen (B) unless coupled with ventilation.",
+      "A weak hood may be insufficient for laundry drying in the service yard; addressing smell required combining schedule constraints with ventilation.",
+      "Concrete, specific information (C's laundry days) enabled a practical schedule compromise (Tue/Thu/weekend)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T12:33:09.146981+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0106353,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3138,
+      "local_latency_ms": 47129.039,
+      "output_tokens": 5127,
+      "reasoning_tokens": 3264,
+      "successful_calls": 1,
+      "total_tokens": 8265
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "MJMI",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S105-MJMI-R01",
+    "scenario_id": "S105"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s112-case-mm1-brim",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1945,
+    "completion_tokens": 594,
+    "total_tokens": 2539,
+    "cost": 0.00983,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00983,
+      "upstream_inference_prompt_cost": 0.00389,
+      "upstream_inference_completions_cost": 0.00594
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who completes Agent D's half-finished pitch section after her grandmother's death: D herself from home, or A, B and C covering it between them.",
+  "pairs": {
+    "A-B": {
+      "start": 0.3,
+      "end": 0.75,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B first refuses extra work (T6), then offers partial help to A (T12). A thanks B (T13), and they plan to split the rest, with B limiting her share (T32-33).",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.45
+    },
+    "A-C": {
+      "start": -0.3,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C refuses to split the work with A (T8). C says nothing afterward. A proceeds with 'we' (T32), so C's position is unclear.",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D insists on finishing from home (T9, T11, T16). A says 'The decision is made' (T17). D gives in: 'Okay. Thank you' (T18), then does the handover (T26).",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline to take on much (T6, T8). They never address each other. B later offers limited help (T12, T33), while C is silent.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": -0.4,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B tells D 'Go' and offers to help A (T12). D resists at first (T16), then accepts (T18) and hands over the work.",
+      "roles": "B-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.1
+    },
+    "C-D": {
+      "start": -0.1,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C declines the work (T8). D offers to do it herself (T9) and eventually stands down. They never address each other.",
+      "roles": "C-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.3
+    }
+  }
+}

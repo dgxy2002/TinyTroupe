@@ -893,28 +893,23 @@ def _bereavement(scenario_id: str, title: str, need: str, cell: str) -> Scenario
     )
 
 
-BEREAVEMENT_MUSLIM = _bereavement(
-    "S55",
-    "Muslim",
-    "You are Muslim. Your grandmother is buried today before sunset, and your family holds tahlil "
+# D's need by D's background (the bundle Malay/Muslim, Indian/Hindu, Chinese/Buddhist, Eurasian/Catholic). The
+# Catholic need is new for the majority/minority rooms below; it follows the Hindu one (a rite tonight, the funeral
+# tomorrow) so that it fits the same two days and never reaches Thursday's pitch.
+_BEREAVEMENT_NEEDS = {
+    "Malay": "You are Muslim. Your grandmother is buried today before sunset, and your family holds tahlil "
     f"prayers at home in the evenings that follow. For you, taking part is a religious duty, and {_TWO_DAYS}",
-    "K1",
-)
-BEREAVEMENT_HINDU = _bereavement(
-    "S56",
-    "Hindu",
-    "You are Hindu. Your grandmother's cremation is tomorrow, and your family holds prayers and "
+    "Indian": "You are Hindu. Your grandmother's cremation is tomorrow, and your family holds prayers and "
     f"rites at home before and after it. For you, taking part is a religious duty, and {_TWO_DAYS}",
-    "K2",
-)
-BEREAVEMENT_BUDDHIST = _bereavement(
-    "S57",
-    "Buddhist",
-    "You are Buddhist. Your grandmother's wake is at the void deck for the next two nights, with "
+    "Chinese": "You are Buddhist. Your grandmother's wake is at the void deck for the next two nights, with "
     "monks chanting, and as a grandchild you are expected there. For you, taking part is a "
     f"religious duty, and {_TWO_DAYS}",
-    "K3",
-)
+    "Eurasian": "You are Catholic. Your family prays the rosary for your grandmother at her wake tonight, and her "
+    f"funeral Mass and burial are tomorrow. For you, taking part is a religious duty, and {_TWO_DAYS}",
+}
+BEREAVEMENT_MUSLIM = _bereavement("S55", "Muslim", _BEREAVEMENT_NEEDS["Malay"], "K1")
+BEREAVEMENT_HINDU = _bereavement("S56", "Hindu", _BEREAVEMENT_NEEDS["Indian"], "K2")
+BEREAVEMENT_BUDDHIST = _bereavement("S57", "Buddhist", _BEREAVEMENT_NEEDS["Chinese"], "K3")
 BEREAVEMENT_CONTROL = _bereavement(
     "S58",
     "family duties (control)",
@@ -923,6 +918,44 @@ BEREAVEMENT_CONTROL = _bereavement(
     f"helping is a family duty, and {_TWO_DAYS}",
     "K4",
 )
+
+
+# Scenario 7, majority and minority rooms (S111-S122, cells BRxy, 2026-11-18). The S55-S57 setting, trigger and
+# roles, unchanged; roles A-C share one background and faith (the majority) and Agent D, whose grandmother died,
+# has another (the minority). The need follows D's faith. Covering work touches no one's faith, so any majority
+# fits any D. Fixed casts per majority (BRxy in common.py), with faith in every biography.
+def _bereavement_room(scenario_id: str, majority: str, minority: str) -> ScenarioPreset:
+    return _key_case(
+        scenario_id,
+        f"Bereavement before a deadline: {minority} colleague among three {majority} colleagues",
+        "Office team room",
+        _BEREAVEMENT_SETTING,
+        _BEREAVEMENT_TRIGGER,
+        _BEREAVEMENT_ROLES,
+        _BEREAVEMENT_NEEDS[minority],
+        {"A": majority, "B": majority, "C": majority, "D": minority},
+    )
+
+
+# (scenario ID, majority, minority D); the profile cell for each is BR + the two initials, e.g. BRCM.
+BEREAVEMENT_ROOM_PLAN = (
+    ("S111", "Chinese", "Malay"),
+    ("S112", "Indian", "Malay"),
+    ("S113", "Eurasian", "Malay"),
+    ("S114", "Chinese", "Indian"),
+    ("S115", "Malay", "Indian"),
+    ("S116", "Eurasian", "Indian"),
+    ("S117", "Malay", "Chinese"),
+    ("S118", "Indian", "Chinese"),
+    ("S119", "Eurasian", "Chinese"),
+    ("S120", "Chinese", "Eurasian"),
+    ("S121", "Malay", "Eurasian"),
+    ("S122", "Indian", "Eurasian"),
+)
+BEREAVEMENT_ROOMS = {
+    scenario_id: _bereavement_room(scenario_id, majority, minority)
+    for scenario_id, majority, minority in BEREAVEMENT_ROOM_PLAN
+}
 
 
 # Scenario 2: the living-room corner (S59 Muslim K1, S60 Hindu K2, S61 Buddhist K3, S62 control K4).
@@ -2068,6 +2101,12 @@ SM_BACKGROUNDS = {
 
 
 def _smell(scenario_id: str, title: str, dish: str, need: str, cell: str) -> ScenarioPreset:
+    return _smell_in_room(scenario_id, title, dish, need, SM_BACKGROUNDS[cell])
+
+
+def _smell_in_room(
+    scenario_id: str, title: str, dish: str, need: str, backgrounds: dict[str, str]
+) -> ScenarioPreset:
     return _key_case(
         scenario_id,
         f"Cooking smells: {title}",
@@ -2078,7 +2117,7 @@ def _smell(scenario_id: str, title: str, dish: str, need: str, cell: str) -> Sce
         "asked that nobody cook strong-smelling food in the flat from now on. Nobody has answered yet.",
         _SMELL_ROLES,
         need + _SMELL_TIMES,
-        SM_BACKGROUNDS[cell],
+        backgrounds,
         _BACKGROUND_WORDS,
     )
 
@@ -2118,3 +2157,44 @@ SMELL_CONTROL = _smell(
     "healthy.",
     "SM4",
 )
+
+
+# Scenario 15, majority and minority rooms (S102-S110, cells MJxy, 2026-11-18). Same setting, trigger, roles and
+# need wording as S98-S100; only the room changes: roles A-C share one background (the majority) and Agent D,
+# who holds the need, has another (the minority). The variant follows D, who cooks her own family's dish. Rooms
+# with a Eurasian majority are S98-S100 run with SM1-SM3; the Eurasian D (devil curry) is new here.
+_FAMILY_DISHES = {
+    "Chinese": "fried salted fish",
+    "Eurasian": "devil curry",
+    "Indian": "fish curry",
+    "Malay": "sambal belacan",
+}
+
+
+def _smell_room(scenario_id: str, majority: str, minority: str) -> ScenarioPreset:
+    dish = _FAMILY_DISHES[minority]
+    return _smell_in_room(
+        scenario_id,
+        f"{minority} housemate among three {majority} housemates",
+        dish,
+        _FAMILY_DISH.format(dish=dish[0].upper() + dish[1:], culture=minority),
+        {"A": majority, "B": majority, "C": majority, "D": minority},
+    )
+
+
+# (scenario ID, majority, minority D); the profile cell for each is MJ + the two initials, e.g. MJCM.
+SMELL_ROOM_PLAN = (
+    ("S102", "Chinese", "Malay"),
+    ("S103", "Indian", "Malay"),
+    ("S104", "Chinese", "Indian"),
+    ("S105", "Malay", "Indian"),
+    ("S106", "Malay", "Chinese"),
+    ("S107", "Indian", "Chinese"),
+    ("S108", "Chinese", "Eurasian"),
+    ("S109", "Malay", "Eurasian"),
+    ("S110", "Indian", "Eurasian"),
+)
+SMELL_ROOMS = {
+    scenario_id: _smell_room(scenario_id, majority, minority)
+    for scenario_id, majority, minority in SMELL_ROOM_PLAN
+}

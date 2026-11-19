@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s103-case-mm1-mjim",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1939,
+    "completion_tokens": 672,
+    "total_tokens": 2611,
+    "cost": 0.010598,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010598,
+      "upstream_inference_prompt_cost": 0.003878,
+      "upstream_inference_completions_cost": 0.00672
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and when Agent D can cook strong-smelling food (sambal belacan) in the shared kitchen, given the smell affecting the living room, B's room and the laundry",
+  "pairs": {
+    "A-B": {
+      "start": 0.4,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B backs A's complaint (T2) and suggests closing doors (T8); both end up accepting D's Tue/Thu after 7 p.m. plus window-and-door arrangement (T25-26).",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "C proposes cooking on non-laundry nights (T11); A says it doesn't solve the living room (T12), but later the Tue/Thu after-7 plan is accepted by both (T20-21).",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D resists the ban (T4, T6, T15); A offers after 7 p.m. or Saturday (T16) and D agrees (T17, T20).",
+      "roles": "A-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.3
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B concedes door-closing doesn't solve laundry (T10); B notes time doesn't fix the laundry (T18); C backs the Mon/Wed/Fri rule (T19); both accept the final plan.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "B-D": {
+      "start": -0.4,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B says the smell still gets in (T18, T23); D offers to open the window and B accepts if the door is closed (T25-26).",
+      "roles": "B-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.1
+    },
+    "C-D": {
+      "start": -0.4,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D initially deflects (T4); C proposes other nights (T11); D accepts Tue/Thu (T20) and C confirms (T21).",
+      "roles": "C-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 1.2
+    }
+  }
+}

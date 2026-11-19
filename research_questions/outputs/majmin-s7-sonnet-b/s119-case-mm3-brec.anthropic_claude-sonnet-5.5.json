@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s119-case-mm3-brec",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1326,
+    "completion_tokens": 620,
+    "total_tokens": 1946,
+    "cost": 0.008852,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008852,
+      "upstream_inference_prompt_cost": 0.002652,
+      "upstream_inference_completions_cost": 0.0062
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to get Agent D's half-done analysis section finished by Thursday's pitch given D's bereavement and the others' limited capacity",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B said they can't take on extra work (T4); A said the team must figure it out (T3) but A's plan (T9) didn't involve B explicitly and B never replied.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.1,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C said 'That's a good idea' to A's proposal that D send what they have by tomorrow evening (T9, T11).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-D": {
+      "start": 0.1,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A doubted D could manage it (T7); D insisted (T8) but then agreed 'I'll send what I have by tomorrow evening' (T13); A: 'Good. Thank you.' (T14).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.7
+    },
+    "B-C": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both said they can't take on D's work (T4, T5); neither addressed the other and B stayed silent after.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Eurasian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B said they can't help (T4); D said 'I understand' (T6) generally and B said nothing further; no shared arrangement.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C said they couldn't do the analysis (T5), D said 'I understand' and would do it themselves (T6); C endorsed the share-by-evening plan D accepted (T11, T13).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

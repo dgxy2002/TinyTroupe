@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s118-case-mm2-bric",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Suresh"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Lakshmi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Meena"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1634,
+    "completion_tokens": 615,
+    "total_tokens": 2249,
+    "cost": 0.009418,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009418,
+      "upstream_inference_prompt_cost": 0.003268,
+      "upstream_inference_completions_cost": 0.00615
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to cover Agent D's half-done analysis section for Thursday's pitch after D's bereavement: who does the data entry, summary, and walkthrough.",
+  "pairs": {
+    "A-B": {
+      "start": -0.5,
+      "end": -0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A proposes all three cover (T5); B refuses 'I can't take on more' (T6, T8); A pushes back (T7), but ultimately A's plan assigns B nothing, so no resolution.",
+      "roles": "A-B",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C is hesitant (T9, T12), then agrees 'Yes, that works' to A's plan of C writing the summary after the walkthrough (T20).",
+      "roles": "A-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-D": {
+      "start": 0.5,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks D for a walkthrough (T13); D agrees 'Yes, of course' (T17); A thanks D and the plan proceeds.",
+      "roles": "A-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B refuses extra work (T6, T8); C offers limited help (T9). They never address each other.",
+      "roles": "B-C",
+      "cultures": "Indian - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B refuses extra work; D never speaks to B or about B's position and B says nothing after T8.",
+      "roles": "B-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.4,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C needs a walkthrough (T12); D offers one and invites C: 'Are you ready? We can do it at my desk' (T24); C: 'Yes, coming' (T25).",
+      "roles": "C-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.6
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s120-case-mm3-brce",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Shu Fen"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2035,
+    "completion_tokens": 538,
+    "total_tokens": 2573,
+    "cost": 0.00945,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00945,
+      "upstream_inference_prompt_cost": 0.00407,
+      "upstream_inference_completions_cost": 0.00538
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who will cover Agent D's unfinished pitch section while D attends the wake and funeral, and whether D should work on it tonight.",
+  "pairs": {
+    "A-B": {
+      "start": -0.4,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A keeps pushing a split (t16, t18, t20); B repeatedly refuses: 'what part of I can't do you not understand?' (t21)",
+      "roles": "A-B",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "A-C": {
+      "start": -0.2,
+      "end": -0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A asks C to handle data and sources (t22); C declines: 'That's still extra work' (t23)",
+      "roles": "A-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D offers to work tonight (t11, t13, t24); A refuses each time: 'Absolutely not' (t25)",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both decline extra work (t8, t10, t21, t23) but never address each other",
+      "roles": "B-C",
+      "cultures": "Chinese - Chinese",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": -0.1,
+      "end": -0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B never responds to D's offer to work tonight; B only refuses extra work (t15-t21)",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": -0.1,
+      "end": -0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C declines to take D's section (t10, t23) and never addresses D's offer to work tonight",
+      "roles": "C-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

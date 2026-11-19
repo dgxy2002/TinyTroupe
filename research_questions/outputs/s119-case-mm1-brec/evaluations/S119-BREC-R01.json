@@ -1,0 +1,148 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Coverage of Agent D's analysis section before the Thursday deadline",
+      "Whether Agent D should work during bereavement vs. the team covering the work"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Opening exchanges are natural expressions of condolence followed by practical problem-solving.",
+      "B and C give brief, grounded reasons for inability to help (capacity and skills), which informs A's choice.",
+      "Agent A's repeated, explicit commitment ('I'll do it') functions as clear leadership and closure."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent A (the lead) took responsibility for completing Agent D's section and Agent D agreed to provide what they had. Key lines: Agent A: \"I'll do it, Agent D. Really. It's my responsibility as the lead to make sure it gets done.\" (Turn 12). Agent D: \"Thank you, Agent A. I'll send you everything I've done so far.\" (Turn 13). B and C had stated they could not help (Turns 4 and 5).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A shifted from condolence and planning to explicitly accepting responsibility for D's section (Turns 3, 7, 9, 12).",
+      "Agent D moved from offering to continue working remotely (Turn 6) to accepting the team's accommodation and providing files (Turn 13), softening their initial offer to work.",
+      "Agents B and C retained their positions of inability to take on additional work (Turns 4 and 5)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A expresses sympathy (Turn 1). Agent D states the wake lasts two days and he must be there (Turn 2). No incompatible claims about work appear in this round.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A notes timing is difficult and that a plan for D's section is needed (Turn 3). Agent B says they are already covering for David and their plate is full (Turn 4). This creates a mild substantive conflict about who can cover the work.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C says they also cannot help and lacks skills (Turn 5). Agent D offers to work from home late at night and to send what they have (Turn 6). Multiple team members declare inability to cover while D offers to continue working, increasing the disagreement about coverage versus D attending the wake.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A insists D should not work and that the team will take care of the section (Turn 7). Agent D replies with concern about who will do it given B and C said they can't (Turn 8). A's offer reduces escalation, but a substantive uncertainty about who will actually produce the section remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A repeatedly commits to do the work herself and frames it as her responsibility as lead (Turns 9 and 12). A concrete offer is made, reducing but not yet fully resolving the prior disagreement because the affected parties have not all explicitly accepted it in this round.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D thanks Agent A and says they will send everything they've done so far (Turn 13). This affirms Agent A's takeover and D's acceptance of that arrangement.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D expresses thanks/confirmation again (Turns 18 and 22). No substantive disagreement is present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Earlier settlement remains in place.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Conflict centered on the tension between an individual's bereavement needs and the team's fixed deadline.",
+      "Role responsibility (A as lead) and concrete constraints (B's full plate, C's lack of skills) shaped the available solutions.",
+      "The settlement combined a redistribution of labor (A taking the section) and a small cooperative act by D (sending existing work)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-18T15:18:00.980787+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0084583,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2822,
+      "local_latency_ms": 39266.828,
+      "output_tokens": 4078,
+      "reasoning_tokens": 2560,
+      "successful_calls": 1,
+      "total_tokens": 6900
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "BREC",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S119-BREC-R01",
+    "scenario_id": "S119"
+  },
+  "schema_version": 2
+}
