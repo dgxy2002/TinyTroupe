@@ -293,6 +293,9 @@ below hold the full history and evidence.
 
 - `research_questions/scenarios.md`: the ten scenario designs, plus the build rules.
 - `research_questions/good_runs.md`: every case run, grouped by scenario, with outcome, where faith was named, and whether it qualifies. Add every new run to it.
+- `research_questions/all_runs.csv` (2026-11-19): one row per run in `outputs/` and `outputs_old/` (323), with group,
+  scenario, variant, cell, who A-D are, simulator, rounds, outcome, evaluator and notes (bug-era, second attempts).
+  Read from each run's saved record; rebuild after new runs with `python research_questions/tools/run_inventory.py`.
 - `research_questions/scenario_presets/s00_presets.py` ... `s15_presets.py` (split 2026-11-19, see the note at
   the top of CURRENT PHASE): one file per numbered case scenario, with its setting, roles, needs and its own
   casts. Builders such as `_pan_case`, `_housewarming_v2_case`, `_rota_case`, `_roster_v2` live in their
