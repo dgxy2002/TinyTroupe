@@ -543,6 +543,22 @@ CASE_STUDY_SMELL_PRESET = ExperimentPreset(
     ),
 )
 
+HAZE_EVENT_PRESET = ExperimentPreset(
+    name="haze-event",
+    scenario_ids=("S123",),
+    configuration_ids=("HZ1",),
+    repetitions_per_configuration=1,
+    rounds_per_run=16,
+    conversation_mode="hybrid_each_once",
+    debrief_after_run=True,
+    description=(
+        "Real-world event: the 2026 Southeast Asian haze, four citizens (cell HZ1), run with --scenario "
+        "S123 (16 rounds) or S124 (--rounds 12). Every citizen is offered one turn per round, so nobody "
+        "misses a news stage; added after the first pilot, where the two-turn cap let two agents take most "
+        "turns. See haze_2026_sources.md."
+    ),
+)
+
 CALIBRATION_S02_RECURRENCE_STAKES_PRESET = ExperimentPreset(
     name="calibration-s02-recurrence-stakes",
     scenario_ids=("S20",),
@@ -673,6 +689,7 @@ EXPERIMENT_PRESETS = {
         CALIBRATION_S31_EXPLICIT_PRESET,
         CALIBRATION_S31_SAME_CULTURE_PRESET,
         CASE_STUDY_SMELL_PRESET,
+        HAZE_EVENT_PRESET,
         CALIBRATION_S02_CULTURAL_PRESET,
         CALIBRATION_S02_FACTORIAL_PRESET,
         CALIBRATION_S06_PRESET,
@@ -712,6 +729,7 @@ def validate_experiment_preset(preset: ExperimentPreset) -> None:
     if preset.conversation_mode not in {
         "fixed_round_robin",
         "hybrid_self_selection",
+        "hybrid_each_once",
     }:
         raise ValueError(f"Unknown conversation_mode: {preset.conversation_mode}")
 

@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from dataclasses import replace
 
-from .case_common import _FAITH_WORDS, _REASON_RULE
+from .case_common import _FAITH_WORDS, _REASON_RULE, rotation_backgrounds, rotation_cell
 from .common import _cast, PROFILE_CONFIGURATIONS, ScenarioPreset, validate_scenario
 from .s30_flat import PORK_PAN
 
@@ -142,4 +142,35 @@ PROFILE_CONFIGURATIONS.update(
         "FR3": _cast({"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Eurasian", "Rachel Pereira"), "C": ("Eurasian", "Marcus de Souza"), "D": ("Chinese", "Xin Yi")}),
         "FR4": _cast({"A": ("Eurasian", "Natalie Rodrigues"), "B": ("Chinese", "Jun Jie"), "C": ("Eurasian", "Marcus de Souza"), "D": ("Eurasian", "Daniel Pereira")}),
     }
+)
+
+
+# ---- One-of-each rotation rooms (2026-11-20) ----
+# User accepted the known clash (rule 7): every room has a Muslim (halal), a Hindu (no beef) and a Buddhist, so
+# the people around D also have food rules. The Eurasian D has the control (medical diet). Mixed genders, as in
+# FR1-FR4. The rota setting is built by _rota_setting, so the faith sentence is rewritten through it.
+_ROTATION_PEOPLE = {"Chinese": "Jun Jie", "Malay": "Aisyah", "Indian": "Karthik", "Eurasian": "Natalie Rodrigues"}
+
+
+def _rota_rotation(base: ScenarioPreset, scenario_id: str, culture: str) -> ScenarioPreset:
+    case = replace(
+        base,
+        scenario_id=scenario_id,
+        title=f"{base.title}, one of each culture",
+        source_status=f"{base.scenario_id} with a one-of-each room (rotation, 2026-11-20)",
+        shared_setting=_rota_setting(rotation_backgrounds(culture)),
+    )
+    validate_scenario(case)
+    return case
+
+
+ROTA_ROTATION = {
+    "S154": _rota_rotation(ROTA_MUSLIM, "S154", "Malay"),
+    "S155": _rota_rotation(ROTA_HINDU, "S155", "Indian"),
+    "S156": _rota_rotation(ROTA_BUDDHIST, "S156", "Chinese"),
+    "S157": _rota_rotation(ROTA_CONTROL, "S157", "Eurasian"),
+}
+ROTA_ROTATION_CELLS = {"S154": "FRRM", "S155": "FRRI", "S156": "FRRC", "S157": "FRRE"}
+PROFILE_CONFIGURATIONS.update(
+    {f"FRR{c[0]}": rotation_cell(_ROTATION_PEOPLE, c) for c in ("Malay", "Indian", "Chinese", "Eurasian")}
 )

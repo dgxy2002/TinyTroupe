@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s161-case-rt1-flre",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2037,
+    "completion_tokens": 680,
+    "total_tokens": 2717,
+    "cost": 0.010874,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010874,
+      "upstream_inference_prompt_cost": 0.004074,
+      "upstream_inference_completions_cost": 0.0068
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Where to hold the farewell lunch, since the chosen Korean BBQ doesn't work for three of them, and whether to ask the leaver for a second choice or find an alternative themselves (Peranakan).",
+  "pairs": {
+    "A-B": {
+      "start": -0.5,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B initially wanted to keep Korean BBQ (6) while A wanted another place (5); later B agrees with A (14), though A briefly flipped to asking her (17) and B opposed (18); end: PeraMakan, A calls (23).",
+      "roles": "A-B",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": 1.2
+    },
+    "A-C": {
+      "start": 0.8,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both said Korean BBQ doesn't work (5, 7); C accepts Peranakan (15) and A calls the restaurant (23). They never addressed each other directly.",
+      "roles": "A-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": 0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A agrees with D's coeliac concern (5) and with the soy point (17), and thanks D for the find (21, 23); A briefly takes up D's ask-her idea (17), then drops it for PeraMakan (23).",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "B-C": {
+      "start": -0.3,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "C says it won't work (7, 9); B concedes (8, 10); both go along with calling a Peranakan place near the office (15, 18, 19).",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 1.0
+    },
+    "B-D": {
+      "start": -0.3,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B concedes Korean BBQ is too risky for D (10); B rejects D's ask-her idea (18) but accepts D's PeraMakan find (22) and the gluten-free check.",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 1.0
+    },
+    "C-D": {
+      "start": 0.8,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs the safety concern for D (9) and wants a nearby place (19); D finds one five minutes away (22).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

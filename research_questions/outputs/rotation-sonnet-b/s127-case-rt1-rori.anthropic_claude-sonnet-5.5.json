@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s127-case-rt1-rori",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1615,
+    "completion_tokens": 584,
+    "total_tokens": 2199,
+    "cost": 0.00907,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00907,
+      "upstream_inference_prompt_cost": 0.00323,
+      "upstream_inference_completions_cost": 0.00584
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who gets the working day before (and after) the Deepavali holiday off, given only two staff are needed and A, B and D all requested both days",
+  "pairs": {
+    "A-B": {
+      "start": -0.3,
+      "end": -0.1,
+      "engaged": false,
+      "moved": "B",
+      "evidence": "A needs both days (T1,T5); B needs the first day but offers to work the second (T6). They never address each other directly, but B's concession on day two eases the conflict.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-C": {
+      "start": 0.2,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C offers to work those days in exchange for Christmas off (T3), which would help A's request, but A never responds and C says nothing more.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": -0.8,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A: 'We can't both be off' (T15) and proposes a coin flip (T27); D: 'I'm not flipping a coin for my festival' (T31) and offers no alternative (T36).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "B-C": {
+      "start": 0.2,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C can work the days (T3) and B needs only the first day (T6), which are compatible, but neither refers to the other.",
+      "roles": "B-C",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.4,
+      "end": -0.3,
+      "engaged": false,
+      "moved": "B",
+      "evidence": "Both want the first day (T2, T8); B offers to work the second day (T6), but D keeps insisting on both and they never engage directly.",
+      "roles": "B-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C offers to cover those days (T3) while D insists on being off (T4), which is compatible in principle, but they never address each other.",
+      "roles": "C-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

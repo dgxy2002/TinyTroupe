@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s160-case-rt1-flrc",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1960,
+    "completion_tokens": 642,
+    "total_tokens": 2602,
+    "cost": 0.01034,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01034,
+      "upstream_inference_prompt_cost": 0.00392,
+      "upstream_inference_completions_cost": 0.00642
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether to keep the colleague's chosen Korean BBQ lunch or move to a new place where all five can eat together",
+  "pairs": {
+    "A-B": {
+      "start": -0.6,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B objects 'why do we have to change it?' (6, 12, 16, 20, 22); A insists 'We have to change it' (13) and 'we're finding a new place' (25).",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-C": {
+      "start": 0.8,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A says 'They have a point' (11) and rejects asking her, matching C (15, 19); both want a new place so all can eat together (25).",
+      "roles": "A-C",
+      "cultures": "Indian - Malay",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": 0.7,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A: 'Okay, so that's two people who can't eat there' (5); D agrees all should eat together (10), and A says 'Exactly' (25) to D's point (24).",
+      "roles": "A-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "B-C": {
+      "start": -0.7,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C: 'Then it's not really a team lunch' (7); B keeps pushing back on moving (20, 22); C replies 'We just tell her we moved it' (21, 23).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D sides with C (10, 18, 24) saying the awkward question shouldn't be asked, while B keeps defending her chosen place and asking her (14, 22).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": -0.2
+    },
+    "C-D": {
+      "start": 0.8,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D: 'I agree with Agent C' (10); 'Agent C has a point' (18); both say she'd prefer everyone there (23, 24).",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

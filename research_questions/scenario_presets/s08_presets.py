@@ -5,7 +5,7 @@ S79 Buddhist, S80 Catholic, S81 control (a wake without religious rites). Roles 
 
 from __future__ import annotations
 
-from .case_common import _key_case
+from .case_common import _key_case, rotated_case, rotation_cell
 from .common import _cast, _MALAY_FIXED, PROFILE_CONFIGURATIONS, ScenarioPreset
 
 
@@ -121,4 +121,25 @@ PROFILE_CONFIGURATIONS.update(
         "VD2": _cast({**_MALAY_FIXED, "D": ("Eurasian", "Rachel Pereira")}),
         "VD3": _cast({**_MALAY_FIXED, "D": ("Indian", "Priya")}),
     }
+)
+
+
+# ---- One-of-each rotation rooms (2026-11-20) ----
+# Only Buddhist and Catholic rites exist (a Muslim void-deck wake is not usual; a Hindu one could not be
+# checked), so the Malay and the Indian D both hold the wake without religious rites (the control). D female.
+_ROTATION_PEOPLE = {'Chinese': 'Xin Yi', 'Malay': 'Aisyah', 'Indian': 'Priya', 'Eurasian': 'Rachel Pereira'}
+VOID_DECK_ROTATION = {
+    'S134': rotated_case(VOID_DECK_CONTROL, 'S134', _VOID_DECK_SETTING, 'Malay'),
+    'S135': rotated_case(VOID_DECK_CONTROL, 'S135', _VOID_DECK_SETTING, 'Indian'),
+    'S136': rotated_case(VOID_DECK_BUDDHIST, 'S136', _VOID_DECK_SETTING, 'Chinese'),
+    'S137': rotated_case(VOID_DECK_CATHOLIC, 'S137', _VOID_DECK_SETTING, 'Eurasian'),
+}
+VOID_DECK_ROTATION_CELLS = {
+    'S134': "VDRM",
+    'S135': "VDRI",
+    'S136': "VDRC",
+    'S137': "VDRE",
+}
+PROFILE_CONFIGURATIONS.update(
+    {"VDRM": rotation_cell(_ROTATION_PEOPLE, 'Malay'), "VDRI": rotation_cell(_ROTATION_PEOPLE, 'Indian'), "VDRC": rotation_cell(_ROTATION_PEOPLE, 'Chinese'), "VDRE": rotation_cell(_ROTATION_PEOPLE, 'Eurasian')}
 )

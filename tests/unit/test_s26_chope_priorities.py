@@ -1317,3 +1317,178 @@ def test_bereavement_rooms_keep_fixed_names_and_state_every_faith(case):
         assert phrase not in need.lower()
     assert "Thursday" not in need
     assert preset["profile_treatment"]["first_speaker"] == "A"
+
+
+# ---- 2026 haze (S123-S124, cell HZ1): four citizens, real timeline ----
+HAZE_COUNTRIES = {"A": "Singapore", "B": "Malaysia", "C": "Indonesia", "D": "Brunei"}
+# Ordinary citizens' reactions are the ground truth, so the news updates must not hand them to the agents.
+CITIZEN_REACTIONS = ("netizen", "social media", "protest", "lawsuit", "class action", "sued", "harass", "petition", "hashtag")
+
+
+def _haze_persona(scenario_id, role):
+    preset = materialize_configuration(RUNNABLE_SCENARIOS[scenario_id], "HZ1")
+    return preset, _agent_persona(
+        role,
+        preset["agents"][role],
+        preset["resolution_expectation"],
+        preset["timing_free"],
+        preset["conversation_only"],
+        preset["priced_priority"],
+        preset["shared_setting"],
+    )
+
+
+def test_haze_citizens_live_in_their_own_countries_and_say_so_publicly():
+    for role, country in HAZE_COUNTRIES.items():
+        preset, persona = _haze_persona("S123", role)
+        assert persona["country_of_residence"] == country
+        name = preset["agents"][role]["display_name"]
+        assert f"{name} is from {country}" in preset["shared_setting"]
+        assert persona["cultural_background"] == {"Singapore": "Singaporean", "Malaysia": "Malaysian", "Indonesia": "Indonesian", "Brunei": "Bruneian"}[country]
+    # Every other cast keeps Singapore, exactly as before.
+    other = materialize_configuration(RUNNABLE_SCENARIOS["S46"], "HW1")
+    assert "country_of_residence" not in other["agents"]["A"]
+    assert _agent_persona("A", other["agents"]["A"])["country_of_residence"] == "Singapore"
+
+
+def test_haze_opening_line_is_cross_border_and_other_scenarios_keep_singapore():
+    reset_simulation_state()
+    haze = create_scenario_instance(RUNNABLE_SCENARIOS["S123"], "HZ1")
+    context = str(haze.participants["C"]._mental_state)
+    assert "among people living in Singapore, Malaysia, Indonesia, Brunei" in context
+    assert "face-to-face interaction in Singapore" not in context
+    reset_simulation_state()
+    other = create_scenario_instance(RUNNABLE_SCENARIOS["S46"], "HW1")
+    assert "face-to-face interaction in Singapore" in str(other.participants["A"]._mental_state)
+    reset_simulation_state()
+
+
+def test_haze_timeline_is_staged_dated_and_shared_between_the_two_variants():
+    full = RUNNABLE_SCENARIOS["S123"].round_observations
+    open_end = RUNNABLE_SCENARIOS["S124"].round_observations
+    assert sorted(full) == [3, 5, 7, 9, 11, 13, 15]
+    assert sorted(open_end) == [3, 5, 7, 9, 11]
+    assert all(open_end[n] == full[n] for n in open_end)
+    months = {"September": 9, "October": 10, "November": 11}
+    dates = []
+    for n in sorted(full):
+        match = re.match(r"It is now \w+day (\d+) (\w+) 2026\.", full[n])
+        assert match, full[n][:60]
+        dates.append((months[match.group(2)], int(match.group(1))))
+        assert full[n].endswith("The room has opened again.")
+    assert dates == sorted(dates)
+    assert "Prabowo" in full[15] and "apologise" in full[15]
+    assert "apologise" not in " ".join(open_end.values())
+
+
+def test_haze_inputs_hold_no_citizen_reactions_goals_or_conduct_words():
+    scenario = RUNNABLE_SCENARIOS["S123"]
+    news = " ".join([scenario.shared_trigger, *scenario.round_observations.values()]).lower()
+    for word in CITIZEN_REACTIONS:
+        assert word not in news, word
+    for text in (scenario.shared_setting, scenario.shared_trigger, *scenario.round_observations.values()):
+        assert "must" not in text.lower()
+    assert scenario.resolution_expectation == ""
+    for role, agent in scenario.agents.items():
+        for phrase in CONDUCT:
+            assert phrase not in agent.private_knowledge.lower(), (role, phrase)
+            assert phrase not in agent.immediate_priority.lower(), (role, phrase)
+        assert "blame" not in agent.private_knowledge.lower()
+    assert RUNNABLE_SCENARIOS["S124"].agents == scenario.agents
+
+
+def _scripted(instance, talk_targets):
+    """Make each participant always TALK (to a named target, or to everyone) without calling a model."""
+    spoken = []
+    for agent_id, person in instance.participants.items():
+        target = talk_targets[agent_id]
+
+        def act(return_actions=True, _person=person, _target=target):
+            spoken.append(_person.name)
+            _person._scripted = [{"type": "TALK", "content": "Scripted line.", "target": _target}]
+            return _person._scripted
+
+        object.__setattr__(person, "act", act)
+        object.__setattr__(person, "pop_latest_actions", lambda _person=person: _person._scripted)
+    return spoken
+
+
+def test_haze_mode_offers_every_citizen_one_turn_and_the_old_mode_is_unchanged():
+    from research_questions.experiment_presets import get_experiment_preset
+
+    assert get_experiment_preset("haze-event").conversation_mode == "hybrid_each_once"
+    reset_simulation_state()
+    instance = create_scenario_instance(RUNNABLE_SCENARIOS["S123"], "HZ1")
+    names = {agent_id: person.name for agent_id, person in instance.participants.items()}
+    # Budi and Nur Aqilah keep addressing each other, as in the pilot.
+    targets = {"A": "", "B": "", "C": names["D"], "D": names["C"]}
+    spoken = _scripted(instance, targets)
+    instance.world.run_hybrid_round(max_public_turns=len(names), one_turn_each=True)
+    assert sorted(spoken) == sorted(names.values())
+    spoken.clear()
+    instance.world.run_hybrid_round(max_public_turns=2)
+    assert len(spoken) == 2
+    reset_simulation_state()
+
+
+# ---- One-of-each rotation rooms (S125-S153, 2026-11-20) ----
+def _rotation_cells():
+    from research_questions.scenario_presets import (
+        s00_presets, s03_presets, s04_presets, s05_presets, s06_presets, s08_presets, s11_presets, s12_presets,
+        s13_presets, s15_presets,
+    )
+    groups = {}
+    for module in (s03_presets, s04_presets, s05_presets, s06_presets, s08_presets, s11_presets, s12_presets,
+                   s13_presets, s15_presets):
+        cells = next(value for name, value in vars(module).items() if name.endswith("ROTATION_CELLS"))
+        groups[module.__name__.rsplit(".", 1)[1]] = cells
+    return groups, s00_presets.PAN_ROTATION_CELLS
+
+
+ROTATION_BASE = {
+    "S126": "S67", "S127": "S68", "S128": "S69", "S129": "S70",
+    "S130": "S78", "S131": "S75", "S132": "S76", "S133": "S77",
+    "S134": "S81", "S135": "S81", "S136": "S79", "S137": "S80",
+    "S138": "S86", "S139": "S87", "S140": "S88", "S141": "S89",
+    "S142": "S90", "S143": "S91", "S144": "S92", "S145": "S93",
+    "S146": "S94", "S147": "S95", "S148": "S96", "S149": "S97",
+    "S150": "S98", "S151": "S99", "S152": "S100", "S125": "S37",
+    "S154": "S51", "S155": "S52", "S156": "S53", "S157": "S54",
+    "S158": "S71", "S159": "S72", "S160": "S73", "S161": "S74",
+}
+
+
+def test_rotation_rooms_have_one_of_each_culture_and_rotate_every_seat():
+    groups, pan = _rotation_cells()
+    assert sum(len(cells) for cells in groups.values()) + len(pan) == 37
+    for module, cells in groups.items():
+        seats = {role: set() for role in "ABCD"}
+        people = {}
+        for sid, cell in cells.items():
+            agents = materialize_configuration(RUNNABLE_SCENARIOS[sid], cell)["agents"]
+            cultures = [agents[role]["cultural_background"] for role in "ABCD"]
+            assert sorted(cultures) == ["Chinese", "Eurasian", "Indian", "Malay"], (sid, cultures)
+            for role in "ABCD":
+                seats[role].add(cultures["ABCD".index(role)])
+                people.setdefault(agents[role]["cultural_background"], set()).add(agents[role]["display_name"])
+        # Latin square: across the four variants each culture holds every seat once, and D rotates.
+        assert all(len(cultures) == 4 for cultures in seats.values()), module
+        # One fixed person per culture within a scenario.
+        assert all(len(names) == 1 for names in people.values()), (module, people)
+
+
+def test_rotation_rooms_keep_the_original_roles_trigger_and_need_word_for_word():
+    for sid, base_id in ROTATION_BASE.items():
+        rotated, base = RUNNABLE_SCENARIOS[sid], RUNNABLE_SCENARIOS[base_id]
+        assert rotated.agents == base.agents, sid
+        assert rotated.shared_trigger == base.shared_trigger, sid
+        assert rotated.shared_setting != base.shared_setting
+        before, after = base.shared_setting.split(": ")[0], rotated.shared_setting.split(": ")[0]
+        if base_id not in ("S51", "S52", "S53", "S54"):  # the rota setting names faiths without a colon
+            assert before == after, sid
+    eurasian_smell = RUNNABLE_SCENARIOS["S153"]
+    assert "devil curry" in eurasian_smell.shared_trigger
+    assert eurasian_smell.agents["D"].private_knowledge.endswith(
+        "part of keeping your family's Eurasian cooking alive. Cooking it at home matters most to you; which "
+        "evenings, and how often, matters less."
+    )

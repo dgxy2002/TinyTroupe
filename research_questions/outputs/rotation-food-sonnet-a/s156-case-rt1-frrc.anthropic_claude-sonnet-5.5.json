@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s156-case-rt1-frrc",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2052,
+    "completion_tokens": 674,
+    "total_tokens": 2726,
+    "cost": 0.010844,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010844,
+      "upstream_inference_prompt_cost": 0.004104,
+      "upstream_inference_completions_cost": 0.00674
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D, going vegetarian for a month, can keep taking part in the dinner rota by cooking a vegetarian meal on his night and cooking his own portion separately (before 6.30) on others' nights.",
+  "pairs": {
+    "A-B": {
+      "start": -0.4,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says D's early separate cooking is fine (T14, T21, T23, T26: 'What is the actual problem?'); A keeps objecting that it is not the same shared meal (T22, T27).",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": -0.4,
+      "engaged": false,
+      "moved": "C",
+      "evidence": "C first agreed with A that separate cooking defeats the rota (T7, T9), then accepted cooking before 6.30 (T18); A still objects (T27).",
+      "roles": "A-C",
+      "cultures": "Indian - Malay",
+      "includes_D": false,
+      "change": -0.7
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D keeps proposing that they eat together at the same table (T12, T15, T19); A insists it is not a shared meal (T13, T16, T27).",
+      "roles": "A-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": 0.1,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "C",
+      "evidence": "B (T14) and C (T18) both say cooking before 6.30 is fine. C earlier raised concerns (T7, T9).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.7
+    },
+    "B-D": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B accepts D's earlier cooking (T14) and defends it to A (T21, T23, T26); D's early-cooking proposal (T10) fits B's kitchen-timing concern (T6).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.6
+    },
+    "C-D": {
+      "start": -0.5,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C objected to simultaneous cooking (T9); D offered to cook before 6.30 (T10); C accepted: 'that's fine with me' (T18).",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.2
+    }
+  }
+}

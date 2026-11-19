@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s129-case-rt1-rore",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1992,
+    "completion_tokens": 688,
+    "total_tokens": 2680,
+    "cost": 0.010864,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010864,
+      "upstream_inference_prompt_cost": 0.003984,
+      "upstream_inference_completions_cost": 0.00688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to roster the days around National Day and Christmas so two staff are on duty each day, specifically whether Agent C must work both National Day days (C offered only one) in exchange for Christmas cover.",
+  "pairs": {
+    "A-B": {
+      "start": 0.7,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "T7-10 A and B agree on the swap (A works day 1, B day 2); T22 A proposes B covers Christmas and B accepted (T21). But at T30 B sides with C ('He said he'd work one day, not two'), against A's plan (T27).",
+      "roles": "A-B",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": -0.4
+    },
+    "A-C": {
+      "start": -0.2,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "T18/T20 A wants to lock National Day first, C refuses (T19); T23/T28 C objects that the plan has him working both days, A insists no one else is available (T27).",
+      "roles": "A-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "A-D": {
+      "start": 0.8,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "T11-12 A gives D both days off and D says 'works perfectly'; T20 A rules D out of Christmas, consistent with D's stance; no later change.",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "B-C": {
+      "start": 0.2,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "T21 B takes Christmas, which C accepts (T23); T30 B backs C: 'He said he'd work one day, not two.'",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "B-D": {
+      "start": 0.6,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both accepted the swap plan (T10, T12) with D off both days; B later backs C's objection (T30), which would challenge D's arrangement, but they never address each other.",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "C-D": {
+      "start": -0.1,
+      "end": -0.2,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "T14-16 C accepts D can't do Christmas but says the plan only suits the other three; D has both days off so C works both days, which C rejects (T28).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": -0.1
+    }
+  }
+}

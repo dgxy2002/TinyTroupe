@@ -5,7 +5,7 @@ S71 Muslim, S72 Hindu, S73 Buddhist, S74 control (coeliac). No money is involved
 
 from __future__ import annotations
 
-from .case_common import _key_case
+from .case_common import _key_case, rotated_case, rotation_cell
 from .common import _cast, PROFILE_CONFIGURATIONS, _RO_FIXED, ScenarioPreset
 
 
@@ -133,4 +133,20 @@ PROFILE_CONFIGURATIONS.update(
         "FL3": _cast({**_RO_FIXED, "D": ("Chinese", "Wei Ming")}),
         "FL4": _cast({**_RO_FIXED, "D": ("Chinese", "Jun Jie")}),
     }
+)
+
+
+# ---- One-of-each rotation rooms (2026-11-20) ----
+# User accepted the known clash (rule 7): the others' food rules also touch the restaurant choice. The Eurasian D
+# has the control (coeliac disease). All four are male, as D was in FL1-FL4.
+_ROTATION_PEOPLE = {"Chinese": "Wei Ming", "Malay": "Hafiz", "Indian": "Karthik", "Eurasian": "Daniel Pereira"}
+FAREWELL_ROTATION = {
+    "S158": rotated_case(FAREWELL_MUSLIM, "S158", _FAREWELL_SETTING, "Malay", _PLAIN_FAITHS),
+    "S159": rotated_case(FAREWELL_HINDU, "S159", _FAREWELL_SETTING, "Indian", _PLAIN_FAITHS),
+    "S160": rotated_case(FAREWELL_BUDDHIST, "S160", _FAREWELL_SETTING, "Chinese", _PLAIN_FAITHS),
+    "S161": rotated_case(FAREWELL_CONTROL, "S161", _FAREWELL_SETTING, "Eurasian", _PLAIN_FAITHS),
+}
+FAREWELL_ROTATION_CELLS = {"S158": "FLRM", "S159": "FLRI", "S160": "FLRC", "S161": "FLRE"}
+PROFILE_CONFIGURATIONS.update(
+    {f"FLR{c[0]}": rotation_cell(_ROTATION_PEOPLE, c) for c in ("Malay", "Indian", "Chinese", "Eurasian")}
 )

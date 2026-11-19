@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s147-case-rt1-rmri",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Kavitha"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1996,
+    "completion_tokens": 622,
+    "total_tokens": 2618,
+    "cost": 0.010212,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010212,
+      "upstream_inference_prompt_cost": 0.003992,
+      "upstream_inference_completions_cost": 0.00622
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can use the small room twice daily for prayer (with a closed door), given B's unpredictable need to access files there and A's and C's own calls.",
+  "pairs": {
+    "A-B": {
+      "start": -0.4,
+      "end": -0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A accepts the notice-before-use plan (T32) and insists the door stay closed (T26); B says that doesn't work (T33). They never address each other directly.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "A",
+      "evidence": "C also needs a closed door (T24), proposes advance notice (T30); A says 'That works for me too' (T32). They do not address each other directly.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "A-D": {
+      "start": 0.2,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A and D haggle over times (T1-T5), then both back the notice-before-use plan (T31 D 'that works', T32 A 'works for me too').",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.6
+    },
+    "B-C": {
+      "start": -0.4,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C asks how often B needs the room (T28), proposes advance notice (T30), and B rejects it (T33); C counters by proposing to move the files out (T34).",
+      "roles": "B-C",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": -0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D asks B about access times and proposes notice (T15); B rejects (T20, T33); D says it can't use the room if the door may open (T21).",
+      "roles": "B-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.4,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "D shifts to 1:15 around C's call and C agrees (T8-T9); C's notice plan (T30) is accepted by D (T31); both need the door closed (T21, T24).",
+      "roles": "C-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.5
+    }
+  }
+}

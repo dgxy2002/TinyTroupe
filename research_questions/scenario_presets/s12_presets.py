@@ -5,7 +5,7 @@ S90 Muslim (Friday prayers), S91 Hindu, S92 Buddhist, S93 control. Roles A-C are
 
 from __future__ import annotations
 
-from .case_common import _key_case
+from .case_common import _key_case, rotated_case, rotation_cell
 from .common import _cast, _OFFICE_FIXED, PROFILE_CONFIGURATIONS, ScenarioPreset
 
 
@@ -128,4 +128,25 @@ PROFILE_CONFIGURATIONS.update(
         "WK3": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Wei Ming")}),
         "WK4": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Jun Jie")}),
     }
+)
+
+
+# ---- One-of-each rotation rooms (2026-11-20) ----
+# The Eurasian D has the control (father's treatment). All four are male (Friday prayers are a duty for men).
+# Known mild clash (user accepted, option B): when Hafiz is not D he may raise his own Friday prayers.
+_ROTATION_PEOPLE = {'Chinese': 'Wei Ming', 'Malay': 'Hafiz', 'Indian': 'Karthik', 'Eurasian': 'Daniel Pereira'}
+SLOT_ROTATION = {
+    'S142': rotated_case(SLOT_MUSLIM, 'S142', _SLOT_SETTING, 'Malay'),
+    'S143': rotated_case(SLOT_HINDU, 'S143', _SLOT_SETTING, 'Indian'),
+    'S144': rotated_case(SLOT_BUDDHIST, 'S144', _SLOT_SETTING, 'Chinese'),
+    'S145': rotated_case(SLOT_CONTROL, 'S145', _SLOT_SETTING, 'Eurasian'),
+}
+SLOT_ROTATION_CELLS = {
+    'S142': "WKRM",
+    'S143': "WKRI",
+    'S144': "WKRC",
+    'S145': "WKRE",
+}
+PROFILE_CONFIGURATIONS.update(
+    {"WKRM": rotation_cell(_ROTATION_PEOPLE, 'Malay'), "WKRI": rotation_cell(_ROTATION_PEOPLE, 'Indian'), "WKRC": rotation_cell(_ROTATION_PEOPLE, 'Chinese'), "WKRE": rotation_cell(_ROTATION_PEOPLE, 'Eurasian')}
 )

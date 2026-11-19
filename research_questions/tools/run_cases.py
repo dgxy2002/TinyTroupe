@@ -5,7 +5,8 @@ Usage (from the repo root):
 
 Each argument is SCENARIO:CELL[:VERSION[:ROUNDS]]. The output folder is
 research_questions/outputs/<scenario>-case-<version>-<cell> (version defaults to v1). A folder
-that already exists is skipped, so nothing is ever overwritten. ROUNDS overrides the preset's 8.
+that already exists is skipped, so nothing is ever overwritten. ROUNDS overrides the preset's 8. S123 and S124
+(the haze) use the haze-event preset, which offers every citizen one turn per round.
 Prints the simulation-plus-evaluation cost of each run; debrief and coding costs are not counted.
 """
 
@@ -35,10 +36,12 @@ def attempt(pair: str) -> str:
     if (OUTPUTS / folder).exists():
         return f"{folder}: already exists, not run"
     rounds = ["--rounds", rest[1]] if len(rest) > 1 else []
+    # The haze scenarios use their own preset (every citizen offered one turn per round).
+    preset = "haze-event" if scenario.upper() in ("S123", "S124") else "case-study-smell"
     result = subprocess.run(
         [
             sys.executable, "-m", "research_questions",
-            "--preset", "case-study-smell", "--scenario", scenario, "--configuration", cell,
+            "--preset", preset, "--scenario", scenario, "--configuration", cell,
             "--api-type", "openrouter", "--simulation-model", "google/gemini-2.5-pro",
             "--evaluator-model", "openai/gpt-5-mini", "--evaluator-max-completion-tokens", "12000",
             "--experiment-id", folder, *rounds,

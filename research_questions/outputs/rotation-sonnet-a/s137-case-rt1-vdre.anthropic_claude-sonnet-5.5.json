@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s137-case-rt1-vdre",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2309,
+    "completion_tokens": 658,
+    "total_tokens": 2967,
+    "cost": 0.011198,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011198,
+      "upstream_inference_prompt_cost": 0.004618,
+      "upstream_inference_completions_cost": 0.00658
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How Agent D's wake tent and evening prayers (until 10.30pm) can be accommodated with neighbours' needs: wheelchair access (A), sleep before night shifts (B), and morning exercise space (C).",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A raises wheelchair access (T1, T3) and B raises sleep (T4, T6); neither addresses the other's concern.",
+      "roles": "A-B",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C asks for a shaded spot (T16); A suggests Block 124 (T18, T20); C accepts: 'Block 124 should work for us then' (T26).",
+      "roles": "A-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.6
+    },
+    "A-D": {
+      "start": 0.5,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A raises the blocked lift path; D says 'We can shift things around. Let's make sure there's space' (T2); A thanks D (T3). No dispute remains.",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B's sleep issue and C's exercise issue never intersect. C asks A and B about shade (T16) but B does not reply.",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.7,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D refuses to move the prayers (T22, T24). B insists on being able to sleep (T29). D offers to finish by 10 p.m. (T30), a partial concession; B has not yet accepted.",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.9
+    },
+    "C-D": {
+      "start": -0.2,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "D says the tent stays until Sunday night (T8). C accepts and relocates (T9): 'Okay, I understand.' D thanks C for understanding (T13).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.7
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s148-case-rt1-rmrc",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Kavitha"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1884,
+    "completion_tokens": 676,
+    "total_tokens": 2560,
+    "cost": 0.010528,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010528,
+      "upstream_inference_prompt_cost": 0.003768,
+      "upstream_inference_completions_cost": 0.00676
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and when Agent D can use the small room for 15-minute daily prayer/chanting slots without clashing with A's client calls, B's file access, and C's private call",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A objects on call timing (T1, T3) and B on file access (T4, T9); they never address each other, A leaves files to D and B (T22); B's later solution (T23) is not responded to by A.",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A and C raise separate time conflicts and never address each other; both end up with arrangements that work for them (T8/T20, T19).",
+      "roles": "A-C",
+      "cultures": "Indian - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A rejects 4:30 and the sign (T1, T6); D offers alternatives and A suggests 3:45 (T8); D says 'That time is fine' (T21) and A asks 'is 3.45 okay' (T20).",
+      "roles": "A-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B raises file access (T9, T11) and C a midday call (T12, T14); neither addresses the other, and both end up with workable arrangements.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "B says any time is a problem (T9, T11); then proposes archiving old files so she won't need the room (T23); D says 'good idea. I can help' (T25) and offers to start now (T27).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C says 1 p.m. is a problem (T12); D offers 12:45 or 1:15 and flexibility (T18); C says 'that works for me' (T19).",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.2
+    }
+  }
+}

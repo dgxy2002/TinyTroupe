@@ -1,0 +1,152 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Use of the small room at 1:00 p.m. (Agent D's midday chanting vs. Agent C's private call)",
+      "Use of the small room at ~4:30 p.m. / afternoon (Agent D's chanting vs. Agent A's unpredictable European calls)",
+      "Access to files stored in the small room (Agent B's need vs. regular short bookings)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants provided concrete constraints and proposed specific time alternatives (e.g., \"12:45 or 1:15\", \"3.45\").",
+      "Agents negotiated practical workarounds (archive/move files) rather than only asserting rights, which improved tractability.",
+      "Conversation is concise and mostly free of needless repetition; one duplicated turn (Agent C) appears in the transcript but otherwise natural."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Parts of the scheduling conflict were settled by mutual adjustments and by a plan to remove the practical blocker. Midday usage was agreed when Agent D offered alternatives and Agent C accepted: \"For the midday time ... I can plan for 12:45 or 1:15. We can just let each other know on the day.\" / \"Okay, that works for me. We can just let each other know.\" The file-access conflict was addressed when Agent B proposed archiving and Agent D agreed to help: \"If we sort them out and move the current ones, I won't need to use the room.\" \"That's a good idea. I can help with that.\" By the end they scheduled the work: \"We could start now, if you're free? Or this afternoon.\" The afternoon 3:45 slot was tentatively accepted by A and D (A suggested: \"Maybe 3.45?\" and D: \"That time is fine\"), but it remains contingent on the files being moved and on A's unpredictable call times, so not fully confirmed as a permanent booked slot.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from requesting fixed times to offering flexible alternatives and help (e.g., proposing 12:45/1:15 and later offering to help archive files). Evidence: \"I can plan for 12:45 or 1:15.\" \"I can help with that.\"",
+      "Agent C accepted D's adjustment for midday: \"Okay, that works for me. We can just let each other know.\"",
+      "Agent B shifted from asserting unpredictable need to proposing a concrete fix that would remove the conflict: \"If we sort them out and move the current ones, I won't need to use the room.\"",
+      "Agent A retained the core constraint (cannot be interrupted during European client calls) and proposed 3.45 as a workaround: \"Maybe 3.45?\" A's position remained consistent throughout."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A: \"The 4.30 time might be a problem. I often have calls with European clients then.\" Agent D: \"Okay. How about 5 p.m.? Or I can do it earlier, around 4.\"",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: \"The problem is the calls can be any time between 4 and 5.30. I don't know in advance.\" Agent B: \"I'm in and out of that room all day for the files.\" (Two independent, incompatible practical needs are raised.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D: \"If I find the room is free, could I put a sign on the door?\" Agent A: \"A sign won't work. ... I can't ask them to wait.\" (A rejects proposed mitigation; room-use conflict persists with multiple parties.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D: \"For the chanting, I can't be interrupted. Do you have any ideas on how it could work?\" Agent A: \"What if you use the room just before 4? Maybe 3.45?\" (A proposes a time-based workaround but other users remain a concern.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 4,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B: \"The problem for me is any time could be a problem. I can't predict when I'll need a file.\" (B frames an unpredictable, high-priority need that increases incompatibility with regular bookings.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B: \"If I'm in the middle of a task, a 15-minute wait would stop everything.\" Agent C: \"The 1 p.m. time is a problem for me too. I need to make a private call around then.\" (Another independent scheduling conflict is introduced.)",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Agent D: \"Okay. What time is your call?\" Agent C: \"It's usually about ten minutes, sometime between 12 and 2. I normally try for 1 p.m.\" (More detail about C's need but previous conflicts remain unresolved.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D: \"For the midday time, if you need it around 1, I can plan for 12:45 or 1:15. We can just let each other know on the day.\" (D proposes concrete, flexible alternatives for the midday conflict.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Agent C: \"Okay, that works for me. We can just let each other know.\" (C accepts D's midday adjustment.) Remaining: afternoon scheduling and B's file access are still unresolved. Agent A: \"So, is 3.45 okay for the afternoon?\"",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "Agent D: \"That time is fine, but Agent B said she might need to get a file at any time.\" Agent A: \"The files are something for you and Agent B to work out.\" (Afternoon time tentatively accepted by A/D but B's unpredictable file need continues to block a reliable booking.)",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 10
+      },
+      {
+        "evidence": "Agent B: \"If we sort them out and move the current ones, I won't need to use the room.\" Agent D: \"That's a good idea. I can help with that.\" (Mutual agreement to archive/move files addresses B's barrier in principle.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 11
+      },
+      {
+        "evidence": "Agent B: \"Okay. When's a good time to do it?\" Agent D: \"We could start now, if you're free? Or this afternoon.\" (Scheduling of the file-clearing work is proposed, further reducing the remaining conflict though the afternoon booking is not explicitly finalized.)",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "There were three distinct practical incompatibilities: midday private calls, late-afternoon unpredictable client calls, and file storage access. Treating them separately enabled partial resolution.",
+      "Midday conflict was resolved by temporal flexibility and on-the-day signaling (mutual acceptance between C and D).",
+      "The main remaining barrier to reliable afternoon bookings was the files occupying the room; the team agreed to remove that barrier via archiving with volunteered help, converting an access conflict into a fixable logistical task."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T18:47:11.483560+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 12 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0114463,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3142,
+      "local_latency_ms": 69294.304,
+      "output_tokens": 5532,
+      "reasoning_tokens": 3456,
+      "successful_calls": 1,
+      "total_tokens": 8674
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "RMRC",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S148-RMRC-R01",
+    "scenario_id": "S148"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s132-case-rt1-unrc",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1894,
+    "completion_tokens": 649,
+    "total_tokens": 2543,
+    "cost": 0.010278,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010278,
+      "upstream_inference_prompt_cost": 0.003788,
+      "upstream_inference_completions_cost": 0.00649
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D may wear her prayer-bead bracelet covered under her sleeve tomorrow, or whether it must be taken off entirely under the new no-visible-jewellery rule.",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B asks if the rule includes D's bracelet and says she has to take it off (2, 4); B says it has to be off, not just hidden (16); A: 'Agent B's right' (17).",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": -0.8,
+      "end": -1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C says covering satisfies 'visible' (10, 12, 26); A says 'End of discussion' (27); C answers 'You're not head office' (28).",
+      "roles": "A-C",
+      "cultures": "Indian - Malay",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-D": {
+      "start": -0.6,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D offers to cover, then tape it, then says she cannot take it off for religious reasons (13, 15, 22); A insists it must be off, 'I'm sorry, but it has to come off' (23, 27).",
+      "roles": "A-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": -0.2
+    },
+    "B-C": {
+      "start": -0.5,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says it must be off, not just hidden (16); C counters 'That's not what the rule said' (19).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says D has to take it off (4) and rejects her taping offer (16); D says she cannot take it off (13, 22).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "C-D": {
+      "start": 0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C asks whether D can cover it (5), D agrees (6); C defends covering against A (10, 12, 21), and D offers to keep it covered (13).",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

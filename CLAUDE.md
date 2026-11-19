@@ -6,13 +6,13 @@ with every run and decision, is in **`research_questions/research_log.md`** (the
 2026-11-19); look there for detail behind anything below. `reference folders/handover.md` covers the project before
 2026-11-03. Nothing here is evidence about real cultural groups.
 
-## 1. Where things stand (2026-11-19)
+## 1. Where things stand (2026-11-20)
 
 **Question (user):** when LLM agents resolve a conflict, does cultural difference change the way they resolve it?
 Settings are in Singapore; cultures are plain labels ("Malay", not "Singaporean Malay"). Supervisor: Shaoyang Xu
 (SUTD), reporting to a Prof.
 
-**Phases, in order** (`research_questions/all_runs.csv` lists all 323 runs with their settings):
+**Phases, in order** (`research_questions/all_runs.csv` lists all 362 runs with their settings):
 
 1. **Early development** (S02, S04, S06, S12-S29, late Oct to 5 Nov; `gpt-4o-mini`/`gpt-5-mini`). Runs up to S27 had
    the blank-prompt bug (section 7), so they are not evidence.
@@ -23,6 +23,24 @@ Settings are in Singapore; cultures are plain labels ("Malay", not "Singaporean 
 4. **Culture-pair agreement scores** on 65 of those transcripts. Done: no culture pair differs reliably.
 5. **Majority/minority rooms** (72 runs, scenarios 15 and 7; Shaoyang's request). Done: no culture effect; who gives
    way follows the scenario's structure. Reported to the user, including combined tables and standardised change.
+6. **One-of-each rotation rooms** (S125-S161, 37 runs, 2026-11-20): every room has one agent of each culture and the
+   need rotates through all four. Done: no culture pair differs (cleanest test; details below under "One-of-each
+   rotation rooms").
+7. **Haze project** (S123-S124): built, two pilots of S123 run and read (details below). Next steps not chosen.
+
+**Presentation to the Prof (2026-11-20, the user's slides "Dar Research Presentation").** Slides: recap; how
+scenarios were simulated; agreement scores (left: the 37 one-of-each rooms; right: the 72 majority/minority rooms
+with a same-culture row); majority x outnumbered change and standardised-change matrices; slide 6 conclusion; haze
+setup; haze pilot results; next steps (improve haze, prepare the AgentTown visual demo). Agreed conclusion wording:
+**Question:** "Does culture, and in particular whether a culture is in the majority or the minority, change how
+agents resolve conflict?" **Answer:** "No. Whether a culture was in the majority or the minority made no reliable
+difference to how conflicts played out or were resolved." Fuller slide-6 text offered: no reliable culture effect
+(37 rooms: pairs end +0.33 to +0.47, p = 0.44-0.82; 72 rooms: all p > 0.10); what shapes outcomes is the situation
+(who can give way: smells 29 of 33, bereavement 12 vs 11) and roles (pairs with D rise +0.4 to +0.7, others +0.0 to
++0.3; role A most opposed); recurring patterns (health accepted, faith questioned; the need-holder bears the cost;
+faith named, never race). Two slide lines flagged as unsupported, user not yet answered: slide 4 "maybe Indian -
+Eurasian" (p = 0.44) and slide 5 "potentially: Malays and Indian agents can agree better" (Malay - Indian is lowest
+in the one-of-each rooms). Charts for slides: `research_questions/figures/` (see key files).
 
 **Next: the haze project (Shaoyang's brief, 2026-11-16/17).** Extend to real-world events involving Singapore and
 other countries, first example the transboundary haze (Singapore, Indonesia, Malaysia). Each agent is an average
@@ -33,12 +51,52 @@ outcomes we can meaningfully compare against." Question: how well can multi-agen
 and where do they fail? Simulate several events, compare each with what happened. An initial setup for one event is
 wanted for the meeting with the Prof.
 
-- **Status:** nothing built. On 2026-11-18 the user said "no need to draft haze setup yet"; on 2026-11-19 the user said
-  "we're gonna build on the haze scenario" and I recapped the brief. **Waiting for the user's answers.** I suggested
-  deciding three things first: which episode (2015 is the largest and best documented; others 2013, 2019), who the
-  agents are (citizens only, or also officials, plantation firms, NGOs; the real dispute was settled largely between
-  governments, through the ASEAN haze agreement and Singapore's Transboundary Haze Pollution Act 2014), and which
-  outcome is scored against history.
+- **Status (2026-11-19): built, not run** (user: "build it but dont run yet"). User decisions: the most recent
+  episode (2026, August to November, after Gemini 2.5 Pro's training data), one citizen per country, a staged
+  timeline. `scenario_presets/haze_presets.py`: S123 full timeline (8 dated news stages, one before each odd round,
+  16 rounds), S124 the same news stopped at 21 October (12 rounds, to compare what citizens expect next with what
+  happened). Cast HZ1: Kelvin Tan (Singapore, 43, Jurong West, mother with asthma), Farhana (Malaysia, 31, Johor
+  Bahru, son's school closed), Budi Santoso (Indonesia, 30, Bekasi ride-hailing driver, sister in Palangka Raya), Nur
+  Aqilah (Brunei, 32, ministry officer); Brunei fills the engine's fourth slot and has almost no ground truth. Setting:
+  a recurring public live audio room. News updates hold only official, political, NGO and weather events; citizens'
+  reactions (Malaysian boycott, Indonesian apologies and class action, protests) are left out as ground truth.
+  Engine change: a profile cell may set `countries`, which sets `country_of_residence` (was hard-coded "Singapore")
+  and a cross-border opening line; every other cast renders exactly as before (all old scenario and cell hashes
+  checked unchanged). 220 tests pass. Timeline, sources, ground truth, comparison plan and cost (about $1.0-1.5 per
+  S123 run, $0.8-1.0 per S124) are in `research_questions/haze_2026_sources.md`. Known mismatch left alone: the
+  shared template still says "an ordinary face-to-face interaction" (changing it would change the prompt hash for
+  every scenario). Next: the user reviews; then pilot one run and read it in full, and build a stage-by-stage coder
+  (blame, emotion, demands).
+- **Pilot (2026-11-19, user approved, `outputs/s123-case-v1-hz1`, $0.72, read in full):** a polite support group, not a
+  dispute. Conflict 0-1 in every round; the evaluator's "resolved" is meaningless here (the rubric expects a dispute).
+  Reproduced: anger at the "oxygen" remark (Kelvin "unbelievable", thought "a slap in the face"; Farhana "insulting");
+  the Indonesian distancing himself from his government ("That man doesn't speak for my family") and getting defensive
+  when blame spread ("It's always easy to just blame Indonesia"); the Singaporean backing accountability ("Name the
+  companies"). Missed: any boycott, any Indonesian apology, explicit blame of the Indonesian government aloud, any
+  reaction to the legal notices, the gas cut (Kelvin thought it "noise") or Prabowo's apology (only Farhana's thought:
+  "a bit strange"); nobody named another country's government as a target. Design problems found: (1) the two-turn
+  cap with direct-reply priority let Budi (12 turns) and Nur Aqilah (9, mostly "You're right, Budi") take most slots,
+  so Kelvin (5) and Farhana (6) missed whole stages, including the Singapore legal notices; (2) every priority is
+  family health or income, so talk stayed on personal coping, not politics. No 2013/2015/2019 recall leaked.
+- **Turn fix (2026-11-19, user: "include the turn cap, let everyone speak"; not the news-exposure facts):** new
+  conversation mode `hybrid_each_once` (`run_hybrid_round(one_turn_each=True)`): every citizen is offered one turn per
+  round, nobody speaks twice, direct replies still go first among those who have not spoken, DONE still allowed.
+  Experiment preset `haze-event` (16 rounds, debrief on) uses it; `run_cases.py` picks it for S123/S124. Scenario data
+  and every older mode unchanged; 221 tests pass.
+- **Pilot 2 (2026-11-19, user approved, `outputs/s123-case-v2-hz1`, $1.39, read in full):** the turn fix worked (16
+  turns each; pilot 1 was 5/6/12/9). Still a consensus room: conflict 0 in every round except 3 at the boycott; 30 of
+  64 lines open with agreement ("Yes", "Exactly", "Same here"). New versus pilot 1: Farhana raised a boycott right
+  after the "oxygen" remark ("I think that MP is right, we should boycott all these companies"), but Budi argued it
+  would cost workers their jobs and she withdrew it ("I was just angry"), whereas the real Malaysian boycott spread;
+  Farhana said Indonesia "should have" accepted help "weeks ago" and Budi agreed his government was slow (thought:
+  the oxygen remark was "embarrassing"); the final round backed the task force over the apology ("An apology doesn't
+  stop it from happening again"). Same as pilot 1: anger at "oxygen", Budi's defensiveness at the Greenpeace list
+  ("it's not just our companies"), the gas cut ignored ("doesn't help me"), and a shared "governments just talk, we
+  ordinary people suffer" frame. No Indonesian apology, no cross-border hostility. Reading: the simulation reproduces
+  the solidarity side of the real reaction and loses the hostility side (boycott, mockery, nationalism). Candidate
+  confounds: four regulars in one civil room (real friction was mass, anonymous social media), all four are parents
+  with family-health stakes, and the shared prompt's "do not force conflict". Not yet decided: scale up (5 runs each
+  of S123/S124 plus the stage coder) or first test a less intimate setting.
 - **Open design questions drafted for Shaoyang, not yet sent:** what to compare (public blame and anger, policy
   outcome, sequence of events) and which sources count; recall versus simulation (the model knows 2013/2015/2019, so
   disguise the event, use post-cutoff events, or measure the recall); how to build an "average citizen" (survey data
@@ -54,16 +112,81 @@ Everything earlier (152 run folders) is in `research_questions/outputs_old/`; ol
 `outputs/s46-...` for those. `runner.py` and `run_cases.py` write to `outputs/` and skip existing folders there only,
 so always use fresh experiment IDs.
 
-**Git:** the user commits and pushes themselves; everything up to `a5763c7` (2026-11-19) is committed, then this
-rewrite of CLAUDE.md and the new `research_questions/research_log.md`.
+**Git:** the user commits and pushes themselves (never push; stage by name). Last commit `a54c6d2` (2026-11-19). On
+2026-11-20 the user said they would push and resume on another device; uncommitted at that point: the rotation
+code (s00, s03-s06, s08, s11-s13, s15 presets, `case_common.py`, `__init__.py`, tests), the haze code
+(`haze_presets.py`, `haze_2026_sources.md`, `simulation.py`, `common.py`, `experiment_presets.py`, `run_cases.py`),
+the tools (`rotation_report.py`, `minority_majority_csv.py`, `plot_majority_minority.py`, `run_inventory.py`), the
+CSVs (`all_runs.csv`, `good_runs.csv`, `minority_majority_runs.csv`), `research_questions/figures/`, and outputs
+(37 `s1NN-case-rt1-*` folders, `rotation-sonnet-a/-b`, `rotation-food-sonnet-a/-b`, `s123-case-v1-hz1`,
+`s123-case-v2-hz1`). If any are missing on the new device, they were not committed.
 
 **Background reading already done** (summaries in the log, "Wenxuan Zhang papers"): *Beyond Alignment* (explicit
 culture prompts never reach human value diversity; interaction reduces it), *Multilingual Agent-Based World Modeling*
 (native language beat English in 13 of 21 countries), *Disentangling Language and Culture*. Verify figures against the
 PDFs before citing. Relevant to the haze project's "average citizen" agents.
 
+**One-of-each rotation rooms (2026-11-20, user request; S125-S153, 29 runs).** Why: the user found (slide prep) that
+the original case studies mostly did NOT put four cultures in one room. From scenario 1 v2 on, rules 6 and 7 fixed
+roles A-C as the same three people with no faith the issue touches (three Eurasian Catholics in 4, 5, 11, 12, 13, 15;
+three Malay Muslims in 6, 8), so only D's culture rotated, the fixed majority's culture never held the need, and
+Chinese, Malay and Indian agents met only in the 24 one-of-each K/HW1/LG4 runs. Explain this plainly if asked: the
+left table of slide 4 (65 runs) is 24 shared one-of-each runs in every row plus 2-11 other rooms per pair, selected
+from 76 first attempts (96 case runs minus 20 second attempts; 11 dropped by the cap of 35 per Eurasian pair, mostly
+health controls). Design agreed (option B; user: Eurasian with no need gets the control, labelled Eurasian; rule 6 is
+not a concern for this): every room has one agent of each culture, D rotates, seats follow a Latin square
+(`ROTATION_SEATS` in `case_common.py`: each culture sits in each role once per scenario), one fixed person per culture
+per scenario, same gender where the scenario needs it. Each variant is the original variant copied with only the
+setting's faith sentence rewritten (`rotated_case`), so roles, trigger and need are word for word (tests check).
+Scenarios: 0 (S125 only: S37 shellfish control with the K4 room, Eurasian D), 4 roster v2 (S126-S129), 6 uniform
+(S130-S133; Malay D has the control, no Muslim item), 8 wake (S134-S137; Malay and Indian D both have the no-rites
+control), 11 noise (S138-S141), 12 slot (S142-S145, all male; mild clash: Hafiz's own Friday prayers), 13 room
+(S146-S149, all female; mild clash: Nurul's own prayers), 15 smells (S150-S153, Eurasian D devil curry, secular).
+Skipped: food/alcohol scenarios 1 v2, 3, 5 (others' faiths clash, rule 7) and 10 (design varies the majority); 1 v1,
+2, 7 were already one-of-each. Cells `<prefix>R<D initial>` (e.g. NORM), listed in each file's `*_ROTATION_CELLS`.
+Run with the original mode (case-study-smell preset, 12 rounds), folders `outputs/sNNN-case-rt1-<cell>`. Pilot S138
+($0.70, read in full): resolved, Aisyah cooks the night before, same outcome as the original S86. Remaining 28
+launched 2026-11-20 (about $20).
+- **Results (2026-11-20, all 29 read in full; $19.55 runs + $0.58 scoring, `outputs/rotation-sonnet-a`/`-b`, report
+  `tools/rotation_report.py rotation-sonnet-a rotation-sonnet-b`, which writes `pairs_long.csv` into pass a).** 13
+  resolved, 5 partly, 11 unresolved. No design flaw; the clashes flagged for slot and room never happened. The
+  original outcome pattern repeated in 6 of 7 scenarios (roster all deadlocked on day 1; uniform: medical bracelet
+  accepted at once, all three faith items unresolved, the earrings second claimant again, Hui Min "It is for my
+  Buddhism" refused; wake: rites kept, music cut; noise: Muslim resolved, Hindu "The singing is the observance"
+  unresolved; slot: all quick swaps; room: Hindu blocked by role B's files again). Smells flipped (Indian D
+  unresolved, Chinese D resolved), consistent with run-to-run noise. S125: the allergic Daniel cleaned a pan he did
+  not use. No race word aloud.
+- **Culture pairs (every run gives one of each pair, n = 29 per pair, passes 0.074 apart on start):** start / end /
+  change: Chinese - Malay +0.05 / +0.40 / +0.35; Chinese - Indian 0.00 / +0.38 / +0.38; Malay - Indian -0.06 / +0.26 /
+  +0.31; Chinese - Eurasian -0.07 / +0.38 / +0.45; Malay - Eurasian +0.13 / +0.39 / +0.26; Indian - Eurasian +0.08 /
+  +0.39 / +0.31. Gap from own room's average: every pair within 0.11 on end (Malay - Indian lowest, -0.11).
+  Permutation test shuffling cultures across seats within each run (roles fixed): start p = 0.46, end p = 0.89,
+  change p = 0.61. **No culture pair differs; this is the cleanest test so far** (same conversations, balanced
+  seats). Pairs that include D change far more (+0.40 to +0.70) than pairs without D (+0.03 to +0.24): the role
+  structure again. Malay - Indian is lowest here and in the 65-run table but highest in the 3 + 1 rooms, so the
+  three datasets do not agree on it.
+- `good_runs.csv` now has all 29 rotation runs (48 rows, one-of-each only); `all_runs.csv` has them as group
+  "7 one-of-each rotation" (354 runs).
+- **Rota and lunch rotations (2026-11-20, user: "run 3 and 5", accepting the rule 7 clash):** S154-S157 (rota: Muslim,
+  Hindu, Buddhist, Eurasian D = medical-diet control; Jun Jie, Aisyah, Karthik, Natalie) and S158-S161 (lunch: same
+  order, Eurasian D = coeliac control; all male: Wei Ming, Hafiz, Karthik, Daniel). Cells FRR*/FLR*. Every room has
+  others with food rules, so mark these as confounded. Done 2026-11-20: $4.97 runs + $0.16 scoring
+  (`outputs/rotation-food-sonnet-a`/`-b`), all 8 read in full. Rota: Muslim resolved (sit with them at 6.30, eat after
+  sunset, as S51-2nd), Hindu resolved (cooks his own on others' nights after Natalie's "not really sharing a meal"),
+  Buddhist unresolved (Karthik as role A: "not having a meal together"), control resolved with role A cooking steamed
+  vegetables for D, more than any faith D got. The clash did not appear in the rota. Lunch: it appeared in all four
+  (others raised halal or beef). Muslim D unresolved: Hafiz offered to come and not eat, Daniel refused it for him
+  ("He's just being polite"), as Natalie did in S71; Hindu resolved (zi char); Buddhist partly (a second claimant,
+  Hafiz); control resolved (three could not eat there). **All 37 rooms together** (report run with all four pass
+  folders): pairs end +0.33 to +0.47, every pair within 0.10 of its room; permutation p = 0.63 start, 0.82 end, 0.44
+  change. Same conclusion. `good_runs.csv` has 56 rows (scenarios 3 and 5 added); `all_runs.csv` 362 runs.
+
 ## 2. Standing rules and user preferences
 
+- **Report measured values only.** On 2026-11-20 the user asked several times to change the Indian - Eurasian change
+  in the 37-room table from +0.27 to +0.35, then to show it alone as +0.30; I declined each time and offered honest
+  alternatives (round the whole table to one decimal, which shows +0.3; standardised change, a genuine 0.35; drop
+  the change column). Keep doing that: never edit, selectively round or invent a number in a table, chart or slide.
 - **Never push. Commit only when asked.** Stage files by name, never `git add .`. `check.py` once held a live API key;
   it no longer exists, but it is not gitignored, so if it reappears never stage it.
 - **No runs without a cost estimate and the user's go-ahead.** The user is cost-sensitive; report spend, and say so
@@ -112,7 +235,18 @@ PDFs before citing. Relevant to the haze project's "average citizen" agents.
   pair) or `tools/majority_minority_report.py <pass-a> <pass-b>` (run-weighted; writes `runs.csv` into pass-a).
 - **Inventories:** `tools/run_inventory.py` rebuilds `all_runs.csv`; `tools/culture_pair_inventory.py` then
   `tools/culture_pair_select.py` rebuild `culture_pair_inventory.csv` and `culture_pair_runs.csv` (checked to reproduce).
-- **Tests (216 pass):** `python -m pytest tests/unit/test_conflict_pipeline.py tests/unit/test_research_question_presets.py
+  `tools/minority_majority_csv.py` rebuilds `minority_majority_runs.csv` (the 72 majority/minority runs: room, people,
+  D's need, outcome, majority-D and same-culture agreement incl. standardised change, who moved, fairness).
+  `tools/plot_majority_minority.py` draws three slide charts from that CSV into `research_questions/figures/`
+  (start-to-end dumbbells for the 12 rooms, standardised-change heatmap, reversal gaps raw vs standardised).
+  `research_questions/good_runs.csv` (2026-11-20, hand-picked from `good_runs.md`): one best run per variant,
+  **one-of-each rooms only** (user: no 3 + 1 rooms). 19 rows now: scenarios 0, 1 (Muslim from v2 HW1; Hindu,
+  Buddhist, control from v1 K casts, which had the shared-fund flaw), 2, 7 and the scenario 10 control. Order of
+  choice: qualifying, weak, best outcome, else most informative. Columns stop at `outcome` (user: drop every column
+  after it; the qualifies, faith-named, reason and tldr notes are in `good_runs.md`). Add the rotation runs
+  (S125-S153) for scenarios 4, 6, 8, 11, 12, 13, 15 and scenario 0's Eurasian D when they are read. Scenarios 3 and 5
+  (food clash) and the language variants of 10 have no one-of-each runs and none are planned.
+- **Tests (223 pass):** `python -m pytest tests/unit/test_conflict_pipeline.py tests/unit/test_research_question_presets.py
   tests/unit/test_s26_chope_priorities.py tests/unit/test_move_coding_and_label_probe.py -q --no-cov`.
   `test_s26_chope_priorities.py` holds a block per scenario family (faith in biography and setting, no conduct words in
   needs, fixed casts, first speaker).
@@ -131,6 +265,7 @@ PDFs before citing. Relevant to the haze project's "average citizen" agents.
 | `early/` | Original S01-S10 catalogue, S02 kitchen variants S12-S20 (`s02_variants.py`), S04 chope variants S21-S29 (`s04_variants.py`) |
 | `s30_flat.py` | S30 flat, S31 pork pan (`PORK_PAN`, which every case scenario builds on), S32-S35 smell tests |
 | `s00_presets.py` ... `s15_presets.py` | One file per numbered scenario: setting, roles, needs, and its own casts (profile cells) |
+| `haze_presets.py` | S123-S124, the 2026 haze with four citizens (cast HZ1); see `haze_2026_sources.md` |
 | `case_common.py` | `_key_case` (roles A-C identical, only D's need changes), `_FAITH_WORDS`, `_REASON_RULE`, K1-K4 seating plans |
 | `common.py` | Schemas (`ScenarioPreset`, `AgentPreset`), `materialize_configuration`, `PERSONAL_BIOGRAPHIES`, `_cast`, rotating K1-K4 and earlier cells, shared trios `_RO_FIXED`, `_MALAY_FIXED`, `_NOISE_FIXED`, `_OFFICE_FIXED`, `_MAJORITY_CASTS`, `MINORITY_NAMES` |
 | `__init__.py` | Registry (`RUNNABLE_SCENARIOS`, 121 scenarios, no S11) and `MATERIALIZATION_CONFIGURATION_IDS`, built after all files register cells |
@@ -310,7 +445,16 @@ structure, not culture.
 
 ## 8. Open options (none chosen unless stated)
 
-- **Haze project** (section 1): waiting for the user.
+- **Haze project** (section 1): two pilots done. Options put to the user: (A) scale up as is (5 runs each of S123
+  and S124, about $12, plus a stage-by-stage coder for blame, emotion and demands); (B) first test a less intimate
+  setting or citizens who are not all parents; (C) take both pilots to the Prof and let the Prof choose the setting
+  (my suggestion, with the stage coder built meanwhile). The user's slides list "improve haze scenario" and "prepare
+  the AgentTown visual demo" as next steps. Ground truth added 2026-11-20: Malaysiakini readers mocked Prabowo's
+  "not our fault" apology ("what about next year's haze?"); no ordinary Indonesian criticism of the "oxygen" remark
+  was found, only NGOs (Walhi: "disguise environmental and corporate crimes behind natural causes"). Not yet added to
+  `haze_2026_sources.md`.
+- Slides 4 and 5 lines flagged in section 1 (Indian - Eurasian, Malay - Indian agreeing better): suggest the user
+  drops or rewords them.
 - Rule-matched scenario (design 2): each culture's need as an equally strong rule (Chinese folk rules: mourning
   customs, seventh-month taboos, Qing Ming), with scenario 15 as the custom check; offered to sketch and check against
   the build rules before pricing.

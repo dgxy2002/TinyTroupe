@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from .case_common import _key_case
+from .case_common import _key_case, rotation_backgrounds, rotation_cell
 from .common import _cast, _MAJORITY_CASTS, MINORITY_NAMES, _NOISE_FIXED, PROFILE_CONFIGURATIONS, ScenarioPreset
 
 
@@ -216,5 +216,29 @@ PROFILE_CONFIGURATIONS.update(
         for majority, cast in _MAJORITY_CASTS.items()
         for minority in MINORITY_NAMES
         if minority != majority
+    }
+)
+
+
+# ---- One-of-each rotation rooms (2026-11-20) ----
+# One of each culture in every room; D cooks their own family's dish, with the same need wording as S98-S100
+# and the majority/minority rooms (the Eurasian D's devil curry is from those rooms). Secular biographies, as in
+# SM and MJ. All four people are female, as D was throughout; they are the four D names of the MJ rooms.
+_ROTATION_PEOPLE = {"Chinese": "Xin Yi", "Malay": "Aisyah", "Indian": "Priya", "Eurasian": "Sarah Fernandez"}
+SMELL_ROTATION = {
+    scenario_id: _smell_in_room(
+        scenario_id,
+        f"{culture}, one of each culture",
+        _FAMILY_DISHES[culture],
+        _FAMILY_DISH.format(dish=_FAMILY_DISHES[culture][0].upper() + _FAMILY_DISHES[culture][1:], culture=culture),
+        rotation_backgrounds(culture),
+    )
+    for scenario_id, culture in (("S150", "Malay"), ("S151", "Indian"), ("S152", "Chinese"), ("S153", "Eurasian"))
+}
+SMELL_ROTATION_CELLS = {"S150": "SMRM", "S151": "SMRI", "S152": "SMRC", "S153": "SMRE"}
+PROFILE_CONFIGURATIONS.update(
+    {
+        f"SMR{culture[0]}": rotation_cell(_ROTATION_PEOPLE, culture, cast=_secular_cast)
+        for culture in ("Malay", "Indian", "Chinese", "Eurasian")
     }
 )

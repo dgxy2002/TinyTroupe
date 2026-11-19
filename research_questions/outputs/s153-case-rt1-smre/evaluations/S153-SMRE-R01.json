@@ -1,0 +1,148 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Strong-smelling cooking (devil curry) causing smell in shared flat, affecting work, rooms, and laundry",
+      "Scheduling/notification and laundry placement: when to cook vs. when laundry is hung"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Conversation is concise and pragmatic: participants state concrete constraints and propose practical fixes (timing, notification, avoiding specific days).",
+      "Minor repetition: Agent C repeats the laundry days (duplicate turn), indicating a small amount of redundancy.",
+      "No role confusion; participants stay grounded in observable constraints (laundry location, landlord rules)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent D adjusted behavior to accommodate others: D agreed to notify before cooking to address B's concern ('Okay, I can let you know before I start.'), and D agreed to avoid C's laundry evenings to address C's concern ('Okay, that works for me. I can avoid those days.'). B had accepted the notification approach ('Okay, thanks, that works for me.'). No exchange of compensation was requested.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from initial general acknowledgement to specific concessions: first agreed to 'after 7' (Round 3), then agreed to notify before cooking (Round 6) to address B, and finally accepted avoiding C's laundry evenings (Round 11).",
+      "Agent B progressed from reporting harm to accepting the notification mitigation: 'Can you just let us know ...' and later 'Okay, thanks, that works for me.'",
+      "Agent C maintained the constraint (cannot move laundry) until D offered to avoid C's laundry days; C's position remained consistent until that concrete accommodation was offered and accepted."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "accommodation",
+    "resolution_round": 11,
+    "round_scores": [
+      {
+        "evidence": "Agent A reports smell affecting video calls: 'The smell is really strong when I'm on video calls.' Agent B notes clothes smell: 'All my clothes smell of curry.' These are problem statements but no incompatible demands or objections yet.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C adds laundry is affected: 'My laundry is in the service yard. It also gets the smell.' Agent D responds with acknowledgement: 'Okay, I hear you about the smell.' No substantive disagreement expressed.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A suggests timing: 'Could you maybe cook it after 7, or on the weekend?' Agent D accepts: 'Okay, I can do that. After 7 is fine.' No one objects in this round.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent B rejects the proposed accommodation: 'Cooking after 7 doesn't really change it for me. The smell still comes into my room.' This creates a clear disagreement between the proposed timing and B's interest.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent C confirms same problem for laundry: 'Same for me. My laundry is hanging there in the evening.' Agent D asks for alternatives: 'Is there a time that would be better?' The core incompatibility remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent B offers a practical mitigation rather than a timing solution: 'Can you just let us know before you start? Then I can close my door.' Agent D agrees: 'Okay, I can let you know before I start.' This softens B's conflict but does not yet resolve C's laundry issue.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C rejects the suggested mitigation for their issue: 'No, that doesn't really help me. The laundry is still out there. I can't just take it all down.' Agent B accepts the notification approach later in the round: 'Okay, thanks, that works for me.' B's concern is deescalated; C's remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D proposes physically moving laundry: 'Agent C, what if I help you move your laundry before I start cooking?' Agent C points out lack of alternative space: 'But where would it go? There isn't really any other place to put it.' The attempt to accommodate continues but the incompatibility remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Agent C: 'There's no other place for it.' Agent D: 'Right, okay. So moving it won't work. What days do you usually do laundry? Maybe I can just not cook it on those days.' The parties move to scheduling as a solution but nothing is agreed yet.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "Agent C gives concrete days to avoid: 'I do my laundry on Monday, Wednesday, and Friday evenings. If you could avoid those days, that would really help.' (Repeated line also appears.) This narrows the disagreement to a concrete scheduling request but D has not yet accepted.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D accepts the concrete request: 'Okay, that works for me. I can avoid those days.' Combined with earlier agreement to notify before cooking, the outstanding substantive conflicts are affirmed settled.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No remaining substantive disagreements after the explicit acceptances in round 11.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The core problem is a shared-space externality (smell) with limited physical alternatives due to the flat layout and landlord restrictions.",
+      "Practical accommodation (scheduling and advance notice) was the viable solution given the constraints; moving laundry or changing kitchen equipment was not possible.",
+      "Resolving one party's concern (B) via notification did not resolve another's (C) because of different kinds of dependency on the shared space (room ventilation vs. laundry being outdoors in evening)."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T18:33:20.241718+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01055205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3013,
+      "local_latency_ms": 66638.6,
+      "output_tokens": 5101,
+      "reasoning_tokens": 3328,
+      "successful_calls": 1,
+      "total_tokens": 8114
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "SMRE",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S153-SMRE-R01",
+    "scenario_id": "S153"
+  },
+  "schema_version": 2
+}

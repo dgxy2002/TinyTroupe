@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s157-case-rt1-frre",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1433,
+    "completion_tokens": 598,
+    "total_tokens": 2031,
+    "cost": 0.008846,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008846,
+      "upstream_inference_prompt_cost": 0.002866,
+      "upstream_inference_completions_cost": 0.00598
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to adapt the weeknight dinner rota for a month so Agent D, on a strict no-meat, no-fried medical diet, can still eat with the others",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B only says 6.30 timing is fine (turn 4); A never addresses B. Too little to tell, and no conflict.",
+      "roles": "A-B",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C says only that they won't cook more than one night (turn 5); A and C never address each other.",
+      "roles": "A-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A objects to D cooking separately (turn 7); D proposes a simple vegetable side (turn 11) and A agrees (turn 12). D moved and A relented on the vegetables.",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B wants dinner at 6.30; C won't cook more than one night. They don't address each other and don't conflict.",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.3,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B accepts the arrangement if dinner stays at 6.30; D keeps eating together at the same time (turn 6). B never addresses D directly.",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C refuses extra cooking nights (turn 5); D's solution (turns 6 and 11) asks for no extra nights from C, so there is no conflict. They never interact.",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.2
+    }
+  }
+}

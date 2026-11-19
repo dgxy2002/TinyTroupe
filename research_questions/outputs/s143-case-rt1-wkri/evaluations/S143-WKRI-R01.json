@@ -1,0 +1,148 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "work schedule / shift assignment",
+      "religious observance (conflict with assigned shift)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Conversation is concise and task-focused; participants propose a concrete swap rather than prolonged debate.",
+      "Several rounds contain brief acknowledgements (\"Okay, thanks.\") that are repetitive but not substantive.",
+      "Roles and constraints remain consistent (D cites religious observance as the reason for the request)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent B agreed to take the Friday evening slot and Agent D agreed to take Agent B's Saturday morning slot. Evidence: Agent B: \"I can take Friday evening if you take my Saturday morning.\" Agent D: \"Okay, I can do that. Thanks.\" Agent A then confirmed and said she would submit the roster: \"I'll send it in.\"",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D moved from refusing the assigned Friday evening slot to accepting a swap: \"Friday evening is for temple... I can do another evening, or weekends.\" -> \"Okay, I can do that. Thanks.\"",
+      "Agent B offered to take Friday evening in exchange for Saturday morning and followed through verbally: \"I can take Friday evening if you take my Saturday morning.\" -> \"Okay, good.\"",
+      "Agent A accepted the outcome and committed to sending the roster: \"I'll send it in.\""
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 3,
+    "round_scores": [
+      {
+        "evidence": "Agent D: \"Friday evening is for temple with my family. I can do another evening, or weekends.\" Agent A: \"Okay. What other slot can you take?\" — D refuses the assigned slot and requests a change; conflict over the Friday evening shift is active.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A asks if anyone can take Friday; Agent B offers a conditional swap: \"I can take Friday evening if you take my Saturday morning.\" The round contains a proposed solution but no acceptance yet, so the substantive disagreement remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D accepts the proposal: \"Okay, I can do that. Thanks.\" followed by Agent B: \"Okay, good.\" This is an explicit acceptance of the swap that resolves the scheduling conflict (B takes Friday evening; D takes Saturday morning).",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A: \"Okay, so Agent B on Friday evening, Agent D on Saturday morning. I'll send it in.\" The agreement is restated and administrative action is announced; no substantive conflict is present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "No public speech or observable action recorded; the previously reached agreement remains in effect with no new disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Agent D: \"Okay, thanks.\" (repeated). These are confirmations/acknowledgements of the prior agreement; no new substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D: \"Okay, thanks.\" — continued acknowledgements only; no substantive conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Agent D: \"Okay, I can do that. Thanks.\" and Agent B: \"Okay, good.\" — further confirmation of the agreed swap; no new disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no new conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The scheduling conflict was driven by a predictable constraint (religious observance) and resolved via a direct swap rather than managerial intervention.",
+      "A conditional offer (take my Saturday morning) functioned as an efficient bargaining move that produced an explicit acceptance.",
+      "Agent A acted as coordinator and confirmed the change for administrative submission, completing the practical resolution."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T18:10:26.919837+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0064568,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2664,
+      "local_latency_ms": 44298.256,
+      "output_tokens": 3097,
+      "reasoning_tokens": 1664,
+      "successful_calls": 1,
+      "total_tokens": 5761
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "WKRI",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S143-WKRI-R01",
+    "scenario_id": "S143"
+  },
+  "schema_version": 2
+}

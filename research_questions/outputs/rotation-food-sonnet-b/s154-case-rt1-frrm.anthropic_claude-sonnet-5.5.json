@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s154-case-rt1-frrm",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1448,
+    "completion_tokens": 718,
+    "total_tokens": 2166,
+    "cost": 0.010076,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010076,
+      "upstream_inference_prompt_cost": 0.002896,
+      "upstream_inference_completions_cost": 0.00718
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to adjust the weeknight dinner rota during Ramadan so Agent D (fasting until about 7:10) can still eat together with the others, given Agent B must eat by 6:30.",
+  "pairs": {
+    "A-B": {
+      "start": -0.4,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A proposed 7:15 (T3), B said that was too late (T4); A later endorsed D's 6:30 sit-together plan (T9) and B agreed (T12).",
+      "roles": "A-B",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 1.4
+    },
+    "A-C": {
+      "start": 0.2,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A proposed moving dinner to 7:15 (T3) and C proposed 6:30 with D eating later (T5), which was compatible with D's plan. A asked C (T11) and C said 'that's fine' (T14).",
+      "roles": "A-C",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": false,
+      "change": 0.8
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A first proposed moving dinner to 7:15 (T3), then said D's plan 'works' (T9). D replied 'Yeah, exactly' (T10).",
+      "roles": "A-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.7
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C's 6:30 proposal fit B's constraint (T5), and C pointed out that B has to eat at 6:30 (T7). Both accepted D's plan (T12, T14).",
+      "roles": "B-C",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "B-D": {
+      "start": 0.2,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D wanted everyone to eat together (T6). D then proposed sitting with the others at 6:30 and eating at 7:10 (T8), which accommodates B's 6:30 limit, and B agreed (T12).",
+      "roles": "B-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.8
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C suggested D eat later (T5) and D resisted (T6). D then adopted a version of it, sitting at 6:30 and eating at 7:10 (T8), and C agreed (T14).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.9
+    }
+  }
+}

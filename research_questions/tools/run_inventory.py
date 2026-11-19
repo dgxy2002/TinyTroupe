@@ -31,6 +31,18 @@ NUMBERED = {
     **{f"S{n}": "12 Weekly slot" for n in range(90, 94)},
     **{f"S{n}": "13 Spare office room" for n in range(94, 98)},
     **{f"S{n}": "15 Cooking smells" for n in range(98, 111)},
+    "S125": "0 Pan and incense",
+    **{f"S{n}": "4 Festival-week roster" for n in range(126, 130)},
+    **{f"S{n}": "6 Uniform rule" for n in range(130, 134)},
+    **{f"S{n}": "8 Void deck wake" for n in range(134, 138)},
+    **{f"S{n}": "11 Early-morning noise" for n in range(138, 142)},
+    **{f"S{n}": "12 Weekly slot" for n in range(142, 146)},
+    **{f"S{n}": "13 Spare office room" for n in range(146, 150)},
+    **{f"S{n}": "15 Cooking smells" for n in range(150, 154)},
+    **{f"S{n}": "3 Dinner rota" for n in range(154, 158)},
+    **{f"S{n}": "5 Farewell lunch" for n in range(158, 162)},
+    "S123": "Haze 2026 (full timeline)",
+    "S124": "Haze 2026 (news stops 21 Oct)",
 }
 EARLY = {"S02": "S02 kitchen (original)", "S04": "S04 chope (original)", "S06": "S06 hawker order (original)"}
 
@@ -60,6 +72,10 @@ def group(sid: str, folder: str) -> str:
         return "1 early development"
     if number <= 35:
         return "2 culture-method tests"
+    if 125 <= number <= 161:
+        return "7 one-of-each rotation"
+    if sid in ("S123", "S124"):
+        return "6 real-world events"
     if number >= 102 or "-mm" in folder:
         return "5 majority/minority"
     return "3 case study"

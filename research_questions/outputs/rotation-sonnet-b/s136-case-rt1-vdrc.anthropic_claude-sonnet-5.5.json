@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s136-case-rt1-vdrc",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2176,
+    "completion_tokens": 658,
+    "total_tokens": 2834,
+    "cost": 0.010932,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010932,
+      "upstream_inference_prompt_cost": 0.004352,
+      "upstream_inference_completions_cost": 0.00658
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D's wake setup at the void deck can be arranged to accommodate A's wheelchair access, B's sleep, and C's morning exercise spot",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A and B never address each other; both raise separate concerns and both end up accepting D's accommodations (turns 25, 28, 23).",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "No direct exchange; both raised concerns separately and both accept D's arrangement at the end (turns 19-25).",
+      "roles": "A-C",
+      "cultures": "Indian - Malay",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": 0.7,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D offers to shift the tent (turn 2); A confirms 'Yes, that's perfect' (turn 25) and 'that will be fine' (turn 28).",
+      "roles": "A-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "B-C": {
+      "start": 0.3,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B proposes moving to C's playground spot (turn 11); C says it works for evenings but not for 7 a.m. (turn 14); later both are satisfied with the compromise (turns 19, 23).",
+      "roles": "B-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D refuses to stop the chanting (turn 5) and rejects B's move (turn 12); B concedes (turn 16) and D agrees to point speakers away (turn 17); B thanks D (turn 23).",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D agrees with C's objection to moving every day (turn 15); C offers to shift exercise to 6:30 (turn 19); D thanks C (turn 20).",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 1.3
+    }
+  }
+}

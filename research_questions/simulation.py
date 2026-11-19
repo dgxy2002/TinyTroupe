@@ -111,14 +111,19 @@ class FaceToFaceWorld(TinyWorld):
         return rotating
 
     def run_hybrid_round(
-        self, *, max_public_turns: int = 4
+        self, *, max_public_turns: int = 4, one_turn_each: bool = False
     ) -> list[dict[str, list[Mapping]]]:
-        """Run direct-reply-priority turns until silence or the public-turn cap."""
+        """Run direct-reply-priority turns until silence or the public-turn cap.
+
+        With ``one_turn_each`` (the haze scenarios), nobody speaks twice in a round, so every
+        agent is offered a turn before the round ends; anyone may still stay silent with DONE.
+        """
 
         self._simulation_steps += 1
         attempts: list[dict[str, list[Mapping]]] = []
         public_turns = 0
         slot = 0
+        spoken: set[str] = set()
 
         while public_turns < max_public_turns:
             direct_reply = self.pending_reply_agent
@@ -128,6 +133,8 @@ class FaceToFaceWorld(TinyWorld):
             candidate_names = self._scheduler_candidate_names(
                 defer_direct_reply=defer_direct_reply
             )
+            if one_turn_each:
+                candidate_names = [name for name in candidate_names if name not in spoken]
             if not candidate_names:
                 break
             self.pending_reply_agent = None
@@ -191,6 +198,7 @@ class FaceToFaceWorld(TinyWorld):
                     else:
                         self.scheduler_direct_reply_streak = 0
                     public_turns += 1
+                    spoken.add(candidate_name)
                     selected = True
                     break
 
@@ -840,7 +848,8 @@ def _agent_persona(
     )
     persona: dict[str, Any] = {
         "age": agent_preset["age"],
-        "country_of_residence": "Singapore",
+        # Every scenario is set in Singapore except where a profile cell sets countries (the haze cast, HZ1).
+        "country_of_residence": agent_preset.get("country_of_residence", "Singapore"),
         "scenario_agent_id": agent_id,
         "scenario_role": agent_preset["role"],
         "common_language": "English",
@@ -985,8 +994,16 @@ def create_scenario_instance(
     if first_speaker:
         world.scheduler_cursor = list(participants).index(first_speaker)
 
+    # Casts that place agents in different countries (the haze cast, HZ1) get a cross-border opening line;
+    # every other scenario keeps the original wording.
+    countries = (preset.get("profile_treatment") or {}).get("countries")
     shared_context = [
-        "You are participating in a simulated ordinary face-to-face interaction in Singapore.",
+        (
+            "You are participating in a simulated ordinary live conversation, held online, among people "
+            f"living in {', '.join(dict.fromkeys(countries.values()))}."
+            if countries
+            else "You are participating in a simulated ordinary face-to-face interaction in Singapore."
+        ),
         preset["shared_setting"],
         preset["shared_trigger"],
         (
@@ -1043,6 +1060,13 @@ def run_one_round(
     # The simulated clock is never advanced: rounds are turn order only.
     if conversation_mode == "hybrid_self_selection":
         return [instance.world.run_hybrid_round(max_public_turns=2)]
+    if conversation_mode == "hybrid_each_once":
+        # Every participant is offered one turn per round (haze scenarios, from 2026-11-19).
+        return [
+            instance.world.run_hybrid_round(
+                max_public_turns=len(instance.participants), one_turn_each=True
+            )
+        ]
     if conversation_mode != "fixed_round_robin":
         raise ValueError(f"Unknown conversation mode: {conversation_mode}")
     return instance.world.run(

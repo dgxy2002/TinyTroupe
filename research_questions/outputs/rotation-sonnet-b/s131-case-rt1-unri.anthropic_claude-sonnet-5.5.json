@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s131-case-rt1-unri",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1874,
+    "completion_tokens": 602,
+    "total_tokens": 2476,
+    "cost": 0.009768,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009768,
+      "upstream_inference_prompt_cost": 0.003748,
+      "upstream_inference_completions_cost": 0.00602
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D may cover a red wrist thread with a plaster while Agent B is not allowed to cover her earrings with plasters, i.e. whether the uniform rule is being applied equally.",
+  "pairs": {
+    "A-B": {
+      "start": -0.6,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B: 'it's just a different rule for me' (25); A: 'It's my call, and this is how we're doing it' (31); neither yields.",
+      "roles": "A-B",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-C": {
+      "start": 0.8,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C suggests a plaster (5), A endorses it (8); A: 'She's right, Agent B' (14); both back the plaster/earring distinction.",
+      "roles": "A-C",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": 0.6,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D agrees a plaster would work (6); A: 'A plaster is fine' (8). D never speaks again.",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "B-C": {
+      "start": -0.6,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C: 'The plaster covers the accessory' (12), 'not noticeable' (17); B counters: 'The rule says visible, not noticeable' (20).",
+      "roles": "B-C",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": -0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B objects to D being treated differently (15) but D says nothing on it after turn 6; no direct exchange.",
+      "roles": "B-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "C-D": {
+      "start": 0.8,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C proposes covering with a plaster (5); D: 'I think that would work' (6); C: 'Good' (7).",
+      "roles": "C-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

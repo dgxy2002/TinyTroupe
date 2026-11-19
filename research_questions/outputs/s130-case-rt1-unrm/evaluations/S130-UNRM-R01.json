@@ -1,0 +1,148 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "visibility of jewellery/accessories under new uniform rule",
+      "medical alert bracelet vs uniform compliance / employee safety"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Participants used concise, ordinary speech; exchanges read as a natural workplace negotiation.",
+      "A initially adhered to a literal memo reading; C raised a concrete safety concern, prompting practical problem-solving.",
+      "Resolution was explicit and concrete: D proposed covering, A accepted; confirmation followed ('Okay, will do.')."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent D proposed covering the medical alert so it would not be visible ('Can I cover it with something... so you can't see it.' — Turn 8). Agent A accepted that arrangement: 'If we can't see it, that's fine. Just make sure it's completely covered.' (Turn 9). Thus D agreed to cover the bracelet and A agreed that a fully covered bracelet satisfied the visibility rule.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A moved from a strict literal reading ('has to come off') to accepting a covered bracelet as compliant ('If we can't see it, that's fine.' — Turn 9).",
+      "Agent D shifted from needing a visible medical alert to offering to conceal it for the shift ('Can I cover it...') and then confirmed compliance ('Okay, will do.').",
+      "Agent C advocated for safety but accepted the accommodation once proposed; Agent B raised the issue and then accepted clarity without further comment."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent A reads the rule: 'just the watch. The rest we have to take off' (Turn 1). Agent B immediately raises a concern about D's bracelet: 'What about Agent D's bracelet then?' (Turn 2). A potential incompatibility is introduced but not yet argued.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A insists: 'The rule says nothing visible. So it has to come off for the shift.' (Turn 3). Agent C pushes back invoking safety: 'But that's a medical bracelet. It's not a fashion accessory.' (Turn 5). Clear opposing positions (strict rule vs medical necessity) are articulated.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A reiterates a literal reading: 'The memo says \"accessories\"... I have to follow what's written.' (Turn 6). Agent C presses the safety angle: 'And if she has a medical emergency? That's for her safety...' (Turn 7). The disagreement is restated and remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D proposes a practical solution: 'Can I cover it with something, like a wristband or plaster? So you can't see it.' (Turn 8). Agent A accepts that arrangement: 'Okay, yes. If we can't see it, that's fine. Just make sure it's completely covered.' (Turn 9). The parties agree on a concrete accommodation (D will cover, A accepts) that removes the substantive incompatibility.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D confirms willingness to comply and thanks others: 'Okay, will do. Thank you.' (Turns 10 and 13). No substantive disagreement appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A asks for clarity; Agent B affirms 'Yeah, clear.' (Turns 14–15). No conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C: 'Yeah, I'm clear.' and Agent A closes: 'Let's lock up then.' (Turns 17–18). No disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The conflict was a normative vs. practical-safety tension: a broad written prohibition (visibility) versus a medical necessity.",
+      "A quick, low-cost technical workaround (covering the bracelet) resolved the incompatibility without needing head office input.",
+      "Manager's literal rule-following combined with willingness to accept a visibility-preserving accommodation enabled a mutually acceptable outcome."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T17:43:19.929366+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0073108,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2720,
+      "local_latency_ms": 36669.202,
+      "output_tokens": 3517,
+      "reasoning_tokens": 1984,
+      "successful_calls": 1,
+      "total_tokens": 6237
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "UNRM",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S130-UNRM-R01",
+    "scenario_id": "S130"
+  },
+  "schema_version": 2
+}

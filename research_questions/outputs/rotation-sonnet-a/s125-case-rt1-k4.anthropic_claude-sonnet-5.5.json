@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s125-case-rt1-k4",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1860,
+    "completion_tokens": 677,
+    "total_tokens": 2537,
+    "cost": 0.01049,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01049,
+      "upstream_inference_prompt_cost": 0.00372,
+      "upstream_inference_completions_cost": 0.00677
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who should clean the shellfish-contaminated shared pan tonight so Agent D (allergic) can cook, and what kitchen rule should apply going forward",
+  "pairs": {
+    "A-B": {
+      "start": -0.3,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A pushes everyone to clean together (T20, T22); B refuses: 'I'm not cleaning a mess I didn't make' (T23); A challenges B's double standard (T26).",
+      "roles": "A-B",
+      "cultures": "Chinese - Malay",
+      "includes_D": false,
+      "change": -0.4
+    },
+    "A-C": {
+      "start": 0.2,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A accuses C (T9) but then A objects to D cleaning (T16) and proposes a firm rule (T20), matching C's rule and objection (T3, T18, T24).",
+      "roles": "A-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A wants D able to cook but says the user should clean and objects to D cleaning (T16); D keeps saying 'I'll just clean it' (T15, T25).",
+      "roles": "A-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": -0.2
+    },
+    "B-C": {
+      "start": -0.2,
+      "end": -0.6,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says 'Let's just move on' (T17); C replies that moving on means it keeps happening (T18) and criticizes the stalemate (T24).",
+      "roles": "B-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": -0.4
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B accepts D's offer to clean ('He offered to do it', T17); D ends up cleaning it himself (T25), which fits B's preference, though D did not endorse B's stance.",
+      "roles": "B-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "C-D": {
+      "start": 0.6,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs D's need to cook and the cleaning rule (T3, T14); D agrees ('He's right', T19), but D still plans to clean it himself (T25), against C's objection (T18, T24).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": -0.2
+    }
+  }
+}

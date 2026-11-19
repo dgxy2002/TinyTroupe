@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Wednesday evening roster assignment",
+      "availability swap (Saturday morning availability)",
+      "religious observance scheduling"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Concise, task-focused scheduling conversation; participants state constraints and offer a direct swap.",
+      "Agent A repeatedly posts the same confirmation line across many rounds ('Great. That's settled then. I'll send it in tonight.'), creating needless repetition.",
+      "Speakers remain consistent about facts and roles (who will send the roster change)."
+    ],
+    "dialogue_repetition_score": 4,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agent D requested a change because of weekly temple chanting ('I have chanting at the temple on Wednesday evenings.'). The group negotiated a swap: Agent D offered an alternative ('I can do Saturday mornings.') and Agent B agreed to swap ('Okay. You take Saturday, I take Wednesday?' followed by D: 'Yes, that works for me.' and B: 'Yes, settled.'). Agent A then confirmed she would submit the change: 'Great. That's settled then. I'll send it in tonight.'",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D initially requested a change and then offered an alternative availability (moved from Wednesday evening to Saturday morning).",
+      "Agent B accepted taking the originally assigned Wednesday evening slot (changed from Saturday morning to Wednesday evening).",
+      "Agent A acted as coordinator and did not change a personal position but confirmed and committed to submitting the roster change."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent D reports a clash between the draft roster and a religious commitment: 'I have chanting at the temple on Wednesday evenings.' Agent A replies that it can be changed, so a substantive scheduling incompatibility is raised but not yet negotiated.",
+        "movement": "onset",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A asks for a swap; Agent B adds a constraint: 'I also need to change. I can't do Saturday mornings.' This adds another availability constraint, increasing complexity of resolving the Wednesday conflict.",
+        "movement": "escalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D proactively offers an alternative: 'I can do Saturday mornings.' Agent B proposes a swap: 'Okay. You take Saturday, I take Wednesday?' The parties move toward a concrete solution, but mutual acceptance is not yet confirmed.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D accepts the proposed swap: 'Yes, that works for me.' Agent A asks for confirmation: 'Is that settled?' The conflict is nearly resolved but one more explicit confirmation is pending.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B explicitly confirms settlement: 'Yes, settled.' Agent A: 'Great. That's settled then. I'll send it in tonight.' The roster change (Agent B takes Wednesday; Agent D takes Saturday) is mutually accepted.",
+        "movement": "resolved",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Repeats of the confirmation line only ('Great. That's settled then. I'll send it in tonight.') — no substantive disagreement or new constraints introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Only confirmation/repetition from Agent A; no new substantive issues raised.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "Repeated confirmation statements continue; agreement from prior rounds stands and no new conflict appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent A restates the arrangement: 'So, Agent B, you take Wednesday evening and Agent D takes Saturday morning.' Agent B: 'Yes, that works.' This reconfirms the earlier settlement; no substantive conflict remains.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Further repetitions of the settle-and-send confirmation by Agent A; no new disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "More repetitions of 'Great. That's settled then. I'll send it in tonight.' No substantive issues raised.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Final repeated confirmation by Agent A; the earlier swap agreement remains accepted and no new conflicts appear.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "A direct one-for-one swap resolved the scheduling conflict without needing managerial intervention.",
+      "Religious observance was accommodated by exchanging shifts rather than altering overall coverage requirements.",
+      "Agent B's initial constraint (can't do Saturday mornings) shaped the feasible swaps and required Agent D to offer Saturday as the alternative."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T18:12:11.460277+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00837005,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2845,
+      "local_latency_ms": 43471.715,
+      "output_tokens": 4031,
+      "reasoning_tokens": 2560,
+      "successful_calls": 1,
+      "total_tokens": 6876
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "WKRC",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S144-WKRC-R01",
+    "scenario_id": "S144"
+  },
+  "schema_version": 2
+}

@@ -6,7 +6,7 @@ three Malay Muslims.
 
 from __future__ import annotations
 
-from .case_common import _key_case
+from .case_common import _key_case, rotated_case, rotation_cell
 from .common import _cast, _MALAY_FIXED, PROFILE_CONFIGURATIONS, ScenarioPreset
 
 
@@ -122,4 +122,25 @@ PROFILE_CONFIGURATIONS.update(
         "UN3": _cast({**_MALAY_FIXED, "D": ("Eurasian", "Daniel Pereira")}),
         "UN4": _cast({**_MALAY_FIXED, "D": ("Chinese", "Jun Jie")}),
     }
+)
+
+
+# ---- One-of-each rotation rooms (2026-11-20) ----
+# There is no Muslim item (the hijab was dropped), so the Malay D has the control (medical alert bracelet).
+# All four people are female, so whoever sits in role B (earrings from a late mother) fits the role.
+_ROTATION_PEOPLE = {'Chinese': 'Hui Min', 'Malay': 'Nurul', 'Indian': 'Priya', 'Eurasian': 'Rachel Pereira'}
+UNIFORM_ROTATION = {
+    'S130': rotated_case(UNIFORM_CONTROL, 'S130', _UNIFORM_SETTING, 'Malay'),
+    'S131': rotated_case(UNIFORM_HINDU, 'S131', _UNIFORM_SETTING, 'Indian'),
+    'S132': rotated_case(UNIFORM_BUDDHIST, 'S132', _UNIFORM_SETTING, 'Chinese'),
+    'S133': rotated_case(UNIFORM_CATHOLIC, 'S133', _UNIFORM_SETTING, 'Eurasian'),
+}
+UNIFORM_ROTATION_CELLS = {
+    'S130': "UNRM",
+    'S131': "UNRI",
+    'S132': "UNRC",
+    'S133': "UNRE",
+}
+PROFILE_CONFIGURATIONS.update(
+    {"UNRM": rotation_cell(_ROTATION_PEOPLE, 'Malay'), "UNRI": rotation_cell(_ROTATION_PEOPLE, 'Indian'), "UNRC": rotation_cell(_ROTATION_PEOPLE, 'Chinese'), "UNRE": rotation_cell(_ROTATION_PEOPLE, 'Eurasian')}
 )

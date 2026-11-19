@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s141-case-rt1-nore",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2006,
+    "completion_tokens": 711,
+    "total_tokens": 2717,
+    "cost": 0.011122,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011122,
+      "upstream_inference_prompt_cost": 0.004012,
+      "upstream_inference_completions_cost": 0.00711
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D can keep showering and cooking at 4:45 a.m. daily, or must reduce the noise (e.g., do it the night before) for the others' sleep and work or study.",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A and B both raise their own needs (turns 3, 4) and both ask D for night-before accommodation (turns 6, 9). They never address each other.",
+      "roles": "A-B",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.4,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both are bothered by D's noise (turns 3, 12) and both end up accepting D's partial concessions (turns 8, 28). They never address each other.",
+      "roles": "A-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "A-D": {
+      "start": -0.3,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A asks for Sunday-night prep (turn 6). D agrees to shower the night before (turn 7) and A thanks D (turn 8), so they reach agreement.",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 1.0
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both want less noise from D (turns 9, 12). They don't address each other, and B's final position is unclear.",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": -0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B asks for night-before showers on Monday and Wednesday (turn 9). D refuses: 'I can't also give up my shower' (turn 10). B's narrowed request for Wednesday (turn 11) goes unmet, and D holds to one night (turn 13).",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": -0.6,
+      "end": 0.2,
+      "engaged": true,
+      "moved": "C",
+      "evidence": "C objects to the daily wake-ups (turns 12, 18). D refuses to give up the shower (turn 22). C then concedes: 'if you have to shower, be quick' (turn 23). D agrees (turn 27) and C thanks D (turn 31). The core objection is not resolved.",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.8
+    }
+  }
+}

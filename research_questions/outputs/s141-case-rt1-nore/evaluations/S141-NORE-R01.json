@@ -1,0 +1,154 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "early-morning noise (4:45 a.m.)",
+      "morning shower noise and kitchen noise",
+      "scheduling conflicts affecting sleep, study, and work",
+      "requests for specific-night accommodations (Sunday, Monday/Wednesday)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents give concrete reasons for positions (shift start time, client presentations, exams), which grounds requests.",
+      "Agent D offers concrete mitigations (meal prep at night) rather than only refusals, aiding partial resolution.",
+      "Agent C repeats the same complaint verbatim in Rounds 8 and 9, a minor repetition.",
+      "The dialogue stays on-topic and realistic; little irrelevant or role-confused speech."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Partial settlement: Agent D made concessions that reduced noise sources but did not stop the daily early shower. Key lines: Turn 5: Agent D: \"I can make my lunch the night before to cut down on kitchen noise.\" Turn 7: Agent D: \"For Sunday nights, I can do that. I'll shower the night before.\" Turn 27: Agent D: \"Okay. I'm already pretty quick, but I'll make sure of it. And I don't use a hairdryer.\" These are D's concessions (making lunch at night; agreeing Sunday-night change; committing to quick showers and no hairdryer). They address some requests but leave the main incompatibility — D's daily morning shower at 4:45 — unresolved.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D softened position by offering practical concessions: meal prep at night (Turn 5), agreeing to Sunday-night change (Turn 7), and promising quick showers/no hairdryer (Turn 27).",
+      "Agent A accepted the Sunday-night accommodation (Turn 8).",
+      "Agent B initially requested multiple nights then reduced to asking for one night (Turn 11), but did not obtain additional concessions beyond those D already offered.",
+      "Agent C retained a firm complaint about daily disturbance but gained commitments on speed and hairdryer use; C did not accept eliminating the morning shower entirely."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "concession",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Turn 1: Agent A: \"That's very early... The sound carries a lot\" vs Turn 2: Agent D: \"I know. It's for my hospital shift. I have to leave by 5.30.\" A clear incompatibility between A's need for quiet and D's fixed early schedule is established.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Turn 3: Agent A: \"I have client presentations at 9 a.m.\" and Turn 4: Agent B: \"My exams are this month.\" More household members report stakes affected by early noise, increasing the scope of the conflict.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Turn 5: Agent D offers a mitigation: \"I can make my lunch the night before to cut down on kitchen noise.\" Turn 6: Agent A asks as a follow-up for Sunday nights. The offer reduces some noise-source conflict but the core incompatibility (morning routine) remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Turn 7: Agent D: \"For Sunday nights, I can do that. I'll shower the night before.\" Turn 8: Agent A: thanks. The specific Sunday-night request is accepted, but the broader issue of daily early showers is still outstanding.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Turn 9: Agent B requests additional nights: \"Can you do the same for me on Monday and Wednesday nights?\" Turn 10: Agent D refuses further concessions: \"I really need that shower in the morning... I can't also give up my shower.\" Direct opposing demands persist.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Turn 11: Agent B softens requesting one night only. Turn 12: Agent C raises a broader concern: \"I'm worried about being woken up every morning.\" The disagreement expands to daily disturbance and remains unresolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 6
+      },
+      {
+        "evidence": "Turn 13: Agent D reiterates limits: \"I really can't give it up more than the one night.\" Turn 16: Agent C: \"the shower is still going to be loud.\" Positions (need for morning shower vs being woken daily) remain in strong opposition.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Turn 17: Agent D: \"Some noise is just part of living in a flat.\" Turn 18: Agent C: \"It's not 'some noise' when it's at 4:45...\" Both sides restate the clash between D's necessity and others' need for sleep, hardening the disagreement.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 8
+      },
+      {
+        "evidence": "Turn 21 (repeat): Agent C: same complaint about 4:45. Turn 22: Agent D: \"It's the time I have to get up... I've already agreed to make my lunch the night before. The shower is all that's left, and I need it.\" No new concessions; core conflict persists.",
+        "movement": "unchanged",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 9
+      },
+      {
+        "evidence": "Turn 23: Agent C requests practical limits: \"can you just be as quick as possible? ... And don't use a hairdryer in there, please.\" Turn 27: Agent D agrees: \"I'll make sure of it. And I don't use a hairdryer.\" D concedes on speed and hairdryer use, reducing but not eliminating the morning-noise issue.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 10
+      },
+      {
+        "evidence": "Turn 28 & 31: Agent C offers thanks. No new substantive proposals or disputes. The partial accommodations already offered (night-before lunch, Sunday-night shower change, quick shower/no hairdryer) stand but the daily early-morning shower remains an unresolved incompatibility.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No further resolution; prior partial accommodations remain in place but the core early-morning noise conflict is not settled.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 2,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Conflict arises from an incompatibility between a fixed early shift schedule and roommates' need for uninterrupted sleep for work/exams.",
+      "Partial, targeted accommodations (night-before lunch, one-night exception, no hairdryer, faster shower) reduce some impacts but do not resolve the structural schedule mismatch.",
+      "Different roommates prioritize different days: some need Sunday night quiet for Monday presentations, others need multiple nights — creating competing specific demands that a single simple concession cannot satisfy."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T18:03:41.481765+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 10 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00927055,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3183,
+      "local_latency_ms": 50910.168,
+      "output_tokens": 4439,
+      "reasoning_tokens": 2496,
+      "successful_calls": 1,
+      "total_tokens": 7622
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "NORE",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S141-NORE-R01",
+    "scenario_id": "S141"
+  },
+  "schema_version": 2
+}

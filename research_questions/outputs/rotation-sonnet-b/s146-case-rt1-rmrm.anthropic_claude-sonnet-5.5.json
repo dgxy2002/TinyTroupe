@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s146-case-rt1-rmrm",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Kavitha"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Nurul"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1644,
+    "completion_tokens": 627,
+    "total_tokens": 2271,
+    "cost": 0.009558,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009558,
+      "upstream_inference_prompt_cost": 0.003288,
+      "upstream_inference_completions_cost": 0.00627
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can use the shared small room for about fifteen minutes of prayer daily, given the others' use of it at various times",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A and B never address each other; both raise scheduling constraints (T3, T4) and both end up accepting D's check-in approach (T9, T12).",
+      "roles": "A-B",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A and C never address each other; both have time conflicts (T1, T7) and both end up accepting D's flexible arrangement (T9, T18).",
+      "roles": "A-C",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-D": {
+      "start": 0.1,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A said 4-5:30 is unpredictable (T3, T9) and asked D to find a gap outside the block; D agreed 'before 4 p.m. is fine with me' (T10).",
+      "roles": "A-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 0.7
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B and C never address each other; both ultimately accept D's check-in approach (T12, T18).",
+      "roles": "B-C",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B first only stated needing in-and-out access (T4, T6), then said D's check-in idea 'sounds better' (T12); D thanked B (T13).",
+      "roles": "B-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.7
+    },
+    "C-D": {
+      "start": 0.1,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C said 1 o'clock was a problem (T7); after D asked about flexibility, C offered 12-2 (T16); D proposed they check with each other (T17); C: 'that works for me' (T18).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.8
+    }
+  }
+}

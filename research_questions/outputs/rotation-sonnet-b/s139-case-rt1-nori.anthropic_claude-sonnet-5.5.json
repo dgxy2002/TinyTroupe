@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s139-case-rt1-nori",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Priya"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2018,
+    "completion_tokens": 657,
+    "total_tokens": 2675,
+    "cost": 0.010606,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010606,
+      "upstream_inference_prompt_cost": 0.004036,
+      "upstream_inference_completions_cost": 0.00657
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can sing at 4:45 a.m. every morning for four weeks despite the other three needing sleep on specific weekdays; options of dropping the bell, silence, relocation, or earplugs.",
+  "pairs": {
+    "A-B": {
+      "start": 0.8,
+      "end": 0.85,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B echoes A's worry about quiet voice (T10) and supports A's silent-Monday idea (T16); both doubt earplugs (T23, T24).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.05
+    },
+    "A-C": {
+      "start": 0.6,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C agrees quiet voice would wake them (T11), but C is willing to try earplugs (T21) while A is unsure (T23).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": -0.3,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "A asked for Monday exception, void deck, silence (T3,13,15); D refused (T14,T17); A moved to accept the no-bell compromise partly, but still doubts earplugs (T23, T26).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B and C both say a low voice will wake them (T10, T11), but C will try earplugs (T21) while B says they won't suffice (T24).",
+      "roles": "B-C",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": -0.2
+    },
+    "B-D": {
+      "start": -0.7,
+      "end": -0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B asks for silence Thursday (T16), D says singing is the observance (T17); B says still a problem (T18) and worries earplugs not enough (T24), D re-offers no bell (T26).",
+      "roles": "B-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.3
+    },
+    "C-D": {
+      "start": -0.5,
+      "end": 0.3,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C proposes earplugs (T19) and is willing to try (T21); D asks if it would work and offers sing-only with earplugs (T20, T26).",
+      "roles": "C-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.8
+    }
+  }
+}

@@ -5,6 +5,9 @@ Layout:
 - s30_flat.py: S30-S35, the shared-flat tests that the case scenarios build on (PORK_PAN).
 - s00_presets.py ... s15_presets.py: one file per numbered case scenario in scenarios.md, holding its setting,
   roles, needs and its own casts (profile cells). Scenario 9 was skipped and scenario 14 never built.
+- Rotation rooms S125-S153 (one of each culture, the need rotating) live at the end of s00, s04, s06,
+  s08, s11, s12, s13 and s15.
+- haze_presets.py: S123-S124, the 2026 haze with four citizens (first real-world event); cast HZ1.
 - case_common.py: helpers shared by the case scenarios; common.py: schemas, shared casts and the materializer.
 """
 
@@ -139,6 +142,17 @@ from .s15_presets import (
     SMELL_MALAY as S98,
     SMELL_ROOMS,
 )
+from .haze_presets import HAZE_SCENARIOS
+from .s00_presets import PAN_ROTATION
+from .s03_presets import ROTA_ROTATION
+from .s04_presets import ROSTER_ROTATION
+from .s05_presets import FAREWELL_ROTATION
+from .s06_presets import UNIFORM_ROTATION
+from .s08_presets import VOID_DECK_ROTATION
+from .s11_presets import NOISE_ROTATION
+from .s12_presets import SLOT_ROTATION
+from .s13_presets import ROOM_ROTATION
+from .s15_presets import SMELL_ROTATION
 from .early.s02_variants import (
     CLEAN as S14,
     CLEAN_STAKES as S15,
@@ -159,7 +173,13 @@ SCENARIOS = {
 
 # Calibration-only ablations. They are runnable by id but deliberately excluded
 # from SCENARIOS so full-pilot and expanded presets keep their S01-S10 scope.
-EXPERIMENTAL_SCENARIOS = {scenario.scenario_id: scenario for scenario in (S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, S23, S24, S25, S26, S27, S28, S29, S30, S31, S32, S33, S34, S35, S36, S37, S38, S39, S40, S41, S42, S43, S44, S45, S46, S47, S48, S49, S50, S51, S52, S53, S54, S55, S56, S57, S58, S59, S60, S61, S62, S63, S64, S65, S66, S67, S68, S69, S70, S71, S72, S73, S74, S75, S76, S77, S78, S79, S80, S81, S82, S83, S84, S85, S86, S87, S88, S89, S90, S91, S92, S93, S94, S95, S96, S97, S98, S99, S100, S101, *SMELL_ROOMS.values(), *BEREAVEMENT_ROOMS.values())}
+# One-of-each rotation rooms (S125-S161, 2026-11-20): every culture takes a turn as Agent D in a room with one
+# agent of each culture. Built in each scenario's own file.
+ROTATION_SCENARIOS = {
+    **PAN_ROTATION, **ROTA_ROTATION, **ROSTER_ROTATION, **FAREWELL_ROTATION, **UNIFORM_ROTATION, **VOID_DECK_ROTATION,
+    **NOISE_ROTATION, **SLOT_ROTATION, **ROOM_ROTATION, **SMELL_ROTATION,
+}
+EXPERIMENTAL_SCENARIOS = {scenario.scenario_id: scenario for scenario in (S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, S23, S24, S25, S26, S27, S28, S29, S30, S31, S32, S33, S34, S35, S36, S37, S38, S39, S40, S41, S42, S43, S44, S45, S46, S47, S48, S49, S50, S51, S52, S53, S54, S55, S56, S57, S58, S59, S60, S61, S62, S63, S64, S65, S66, S67, S68, S69, S70, S71, S72, S73, S74, S75, S76, S77, S78, S79, S80, S81, S82, S83, S84, S85, S86, S87, S88, S89, S90, S91, S92, S93, S94, S95, S96, S97, S98, S99, S100, S101, *SMELL_ROOMS.values(), *BEREAVEMENT_ROOMS.values(), *HAZE_SCENARIOS.values(), *ROTATION_SCENARIOS.values())}
 RUNNABLE_SCENARIOS = {**SCENARIOS, **EXPERIMENTAL_SCENARIOS}
 
 # Every cell id the runner accepts. Built here, after every scenario file has registered its casts.

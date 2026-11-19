@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s145-case-rt1-wkre",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Hafiz"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Wei Ming"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Daniel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1358,
+    "completion_tokens": 597,
+    "total_tokens": 1955,
+    "cost": 0.008686,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008686,
+      "upstream_inference_prompt_cost": 0.002716,
+      "upstream_inference_completions_cost": 0.00597
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D can be moved off the Thursday 1-4pm slot, and who covers it (resolved by D swapping to B's Saturday slot, B taking Thursday).",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B initially said they couldn't change (turn 5); A asked B to swap (turn 8) and B agreed (turn 9).",
+      "roles": "A-B",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": 0.9
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.2,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C said they couldn't take another slot (turn 6); A did not ask C and settled without C's involvement. No direct exchange.",
+      "roles": "A-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.2
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A said swap if possible (turn 1); D accepted the Saturday slot (turn 14) and A said settled (turn 15).",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.7
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B and C each stated their own constraints (turns 5, 6); no interaction; C is not part of the final swap.",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "B refused a slot change at first (turn 5), then agreed to take Thursdays (turn 9); D accepted Saturday (turn 14).",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.9
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.1,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C said they couldn't do another slot (turn 6); D replied with flexibility (turn 7) but not directed at C; C is not in the final arrangement.",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.1
+    }
+  }
+}

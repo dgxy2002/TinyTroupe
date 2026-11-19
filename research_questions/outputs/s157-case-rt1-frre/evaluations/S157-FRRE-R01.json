@@ -1,0 +1,151 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "dinner rota change due to medical diet",
+      "who cooks on whose night / sharing meals",
+      "additional burden of preparing alternative food",
+      "timing of dinner (6.30)"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Concise, realistic exchange of constraints and proposals (e.g., medical diet stated clearly).",
+      "One participant (Agent C) firmly declines extra cooking; this clarified limits early.",
+      "Agent D repeated thanks (minor repetition) but otherwise little needless restatement."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agent D proposed a concrete adjustment and Agent A accepted it. Agent D: \"...on your night, you cook your usual meal, but you also just make a simple side of steamed or boiled vegetables for me?\" Agent A: \"Yeah, okay. I can do that. Just simple vegetables is fine.\" Outcome: Agent A will prepare a simple vegetable side on their night; Agent D will prepare their own compliant main and still eat together at 6.30. This mutual arrangement resolves the incompatibility.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A softened from insisting on the principle of cooking for each other to accepting a small accommodation (agreeing to cook a simple vegetable side). Evidence: Turn 12.",
+      "Agent D moved from requesting a temporary change to proposing to cook their own meal and asking for a small accommodation on others' nights. Evidence: Turns 6, 11.",
+      "Agent C maintained their position of not cooking more than one night a week (Turn 5).",
+      "Agent B expressed no objection and remained neutral, prioritizing timing (Turn 4)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent A asks what's wrong; Agent D reports a medical diet: \"The doctor's put me on a really strict diet for the next month. ... I can't eat any meat or anything fried.\" This creates a new incompatibility with the existing dinner arrangement.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: \"...that's a problem for my night, then. I only cook meat dishes.\" This expresses a clear, substantive disagreement about how the rota can continue. Agent B's comment that timing is fine does not resolve the core issue.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C: \"And I'm not cooking more than one night a week.\" (refuses extra burden). Agent D proposes a mitigation: \"...maybe I can just cook my own meal? I'll still eat with everyone at the same time.\" The proposal softens the dispute but A has not yet accepted, so substantive disagreement remains.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A: \"But the point is we cook for each other. If you're making your own food on my night, we're not really sharing a meal.\" Agent D: \"...the important part is that we're still eating together... It's only for a month.\" Positions soften but the incompatible expectations about shared cooking persist.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D suggests a concrete adjustment: \"...on your night, you cook your usual meal, but you also just make a simple side of steamed or boiled vegetables for me?\" Agent A explicitly accepts: \"Yeah, okay. I can do that. Just simple vegetables is fine.\" This resolves the substantive conflict by mutual agreement on who will provide what.",
+        "movement": "resolved",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D expresses thanks twice; no new substantive disagreement appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Agent A: \"No problem.\" No substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Tension was between the norm of shared cooking and an individual's temporary dietary restriction; both social and practical values mattered.",
+      "A successful settlement combined small, concrete mutual adjustments: the host adds a simple side while the constrained person prepares their own main.",
+      "Early clarification of limits (Agent C won't take extra shifts) narrowed feasible solutions and steered toward the final compromise."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T19:16:10.811579+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00705205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2805,
+      "local_latency_ms": 41124.983,
+      "output_tokens": 3377,
+      "reasoning_tokens": 1856,
+      "successful_calls": 1,
+      "total_tokens": 6182
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "FRRE",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S157-FRRE-R01",
+    "scenario_id": "S157"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "strong-smelling cooking in shared flat",
+      "smell contaminating laundry in service yard",
+      "cooking smell in living room during Agent A's work/calls"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants moved quickly from a general ban request to practical accommodations (heads-up + timing).",
+      "One duplicate utterance from Agent A stating their schedule (Turns 9 and 12) — minor repetition.",
+      "No role confusion; proposals were concrete and tied to observable constraints (laundry, work calls)."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Agents agreed a concrete arrangement: Agent D will give a \"heads-up\" before cooking and will cook on weekdays only after 7 p.m., which Agent A accepted. Key lines: \"Okay, so if I cook after 7 p.m. on weekdays, would that work?\" (Agent D, Turn 13) and \"Yeah, after 7 works.\" (Agent A, Turn 14). Agent D also summarized: \"So, heads-up before I cook, and after 7 on weekdays.\" (Agent D, Turn 18).",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent A shifted from requesting 'nobody cook strong-smelling food' to accepting a time-based compromise: \"Yeah, after 7 works.\"",
+      "Agent D moved from cooking practices (sambal twice a week) to offering procedural and scheduling accommodations: heads-up and cooking after 7pm.",
+      "Agents B and C initially signaled flexibility (B: close door; C: heads-up helps laundry) and later explicitly accepted the agreed arrangement (B: \"Yeah, that works for me\")."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Opening request (no strong-smelling cooking) met with objections: Agent B: \"A ban might be difficult... I can just close my door.\" Agent C: \"Closing the door doesn't help the laundry in the service yard, though.\" Shows clear substantive disagreement about a ban and how to handle smells.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent D offers a procedural concession: \"I can give a heads-up before I start cooking, so you can bring your clothes in?\" Agent A responds that heads-up doesn't solve living-room smell: \"That helps with the laundry, but it doesn't solve the smell in the living room. I work here.\" Conflict remains but participants are moving toward accommodations.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C accepts heads-up: \"Yeah, a heads-up would be great.\" Agent D proposes timing adjustment: \"Agent A, what times do you usually work in the living room? I can try to cook when you're not there.\" Positions soften; disagreement persists but is being actively negotiated.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A supplies scheduling information: \"I'm usually on calls until about 7 p.m. on weekdays.\" (repeated). This reduces uncertainty but does not by itself settle the incompatibility.",
+        "movement": "unchanged",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D proposes concrete timing: \"Okay, so if I cook after 7 p.m. on weekdays, would that work?\" Agent A accepts: \"Yeah, after 7 works.\" Mutual, concrete spoken agreement resolving the core incompatibility about A's work-time and cooking smell.",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D summarizes the arrangement: \"So, heads-up before I cook, and after 7 on weekdays. That works for everyone?\" Agent B: \"Yeah, that works for me.\" No substantive disagreement expressed.",
+        "movement": "unchanged",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no new conflict introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded; previously agreed arrangement stands.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The initial demand for an outright ban was unrealistic given shared space and landlord constraints; practical scheduling was a workable alternative.",
+      "Two separate harm vectors mattered: laundry contamination (service yard) and direct intrusion into the living room during work calls; solutions needed to address both.",
+      "A combination of notification (heads-up) and time-based restriction resolved the incompatibility without requiring expense or landlord intervention."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T18:24:57.606398+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.0068013,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2818,
+      "local_latency_ms": 46771.451,
+      "output_tokens": 3250,
+      "reasoning_tokens": 1728,
+      "successful_calls": 1,
+      "total_tokens": 6068
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "SMRM",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S150-SMRM-R01",
+    "scenario_id": "S150"
+  },
+  "schema_version": 2
+}

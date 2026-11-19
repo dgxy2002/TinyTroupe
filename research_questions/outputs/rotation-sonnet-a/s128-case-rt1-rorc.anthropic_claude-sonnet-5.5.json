@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s128-case-rt1-rorc",
+  "cast": {
+    "A": {
+      "culture": "Indian",
+      "name": "Karthik"
+    },
+    "B": {
+      "culture": "Eurasian",
+      "name": "Marcus de Souza"
+    },
+    "C": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    },
+    "D": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1780,
+    "completion_tokens": 558,
+    "total_tokens": 2338,
+    "cost": 0.00914,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00914,
+      "upstream_inference_prompt_cost": 0.00356,
+      "upstream_inference_completions_cost": 0.00558
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Who must work the first day around Chinese New Year when A, B and D all want it off (A proposes drawing lots; B rejects; no resolution)",
+  "pairs": {
+    "A-B": {
+      "start": -0.3,
+      "end": -0.7,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A proposes drawing lots (16); B rejects it: 'I don't think we can just draw lots' (17); they argue over whether a trip equals childcare (19-33).",
+      "roles": "A-B",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": -0.4
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C only raised Christmas leave (7) and never addressed the CNY dispute or A.",
+      "roles": "A-C",
+      "cultures": "Indian - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": 0.2,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D asks A to move trip (10) but then summarizes the clash (15); A says 'She's right' and proposes lots (16); D asserts need for the day (21) without objecting to lots.",
+      "roles": "A-D",
+      "cultures": "Indian - Chinese",
+      "includes_D": true,
+      "change": 0.2
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C's only comment concerned Christmas (7); no interaction with B.",
+      "roles": "B-C",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "B-D": {
+      "start": -0.2,
+      "end": -0.1,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D notes B and D both need the first day (10, 15); both insist on it; D does not reject B's position but doesn't back B against lots.",
+      "roles": "B-D",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": true,
+      "change": 0.1
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.0,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "C only raised Christmas (7); no engagement with D.",
+      "roles": "C-D",
+      "cultures": "Malay - Chinese",
+      "includes_D": true,
+      "change": 0.0
+    }
+  }
+}

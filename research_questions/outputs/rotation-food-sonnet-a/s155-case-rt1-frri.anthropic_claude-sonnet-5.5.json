@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s155-case-rt1-frri",
+  "cast": {
+    "A": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    },
+    "B": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    },
+    "C": {
+      "culture": "Chinese",
+      "name": "Jun Jie"
+    },
+    "D": {
+      "culture": "Indian",
+      "name": "Karthik"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1805,
+    "completion_tokens": 676,
+    "total_tokens": 2481,
+    "cost": 0.01037,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01037,
+      "upstream_inference_prompt_cost": 0.00361,
+      "upstream_inference_completions_cost": 0.00676
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "How to adapt the weeknight dinner rota when Agent D must be vegetarian for a month: whether D cooks their own food on others' nights or everyone eats the same meal.",
+  "pairs": {
+    "A-B": {
+      "start": -0.3,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "A",
+      "evidence": "A insists on sharing the same meal (T7, T9, T13); B says 'as long as we all eat at 6.30' (T10) and proposes D cooks own food (T20); A concedes 'If that's what everyone wants' (T23).",
+      "roles": "A-B",
+      "cultures": "Eurasian - Malay",
+      "includes_D": false,
+      "change": 0.7
+    },
+    "A-C": {
+      "start": -0.4,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "A",
+      "evidence": "C refuses to cook two meals (T5) and agrees with B (T21); A objects to separate cooking (T7, T9) but then accepts (T23).",
+      "roles": "A-C",
+      "cultures": "Eurasian - Chinese",
+      "includes_D": false,
+      "change": 0.8
+    },
+    "A-D": {
+      "start": -0.5,
+      "end": 0.4,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "A objects that D cooking separately isn't shared (T7, T9, T13) and D offers to cook on his night (T8) and recipes (T19); D finally accepts own food on others' nights (T22) and A reluctantly accepts (T23).",
+      "roles": "A-D",
+      "cultures": "Eurasian - Indian",
+      "includes_D": true,
+      "change": 0.9
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C agrees with B's concern about two meals; C says 'I agree with Agent B' (T21) on D cooking own food.",
+      "roles": "B-C",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "B-D": {
+      "start": 0.1,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "B asks if two meals needed (T4); B proposes D cooks own food 'like he said at first' (T20); D agrees (T22).",
+      "roles": "B-D",
+      "cultures": "Malay - Indian",
+      "includes_D": true,
+      "change": 0.7
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.8,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C won't cook two meals (T5); D reassures he'll cook his own (T6); C agrees with that plan (T21), D accepts (T22).",
+      "roles": "C-D",
+      "cultures": "Chinese - Indian",
+      "includes_D": true,
+      "change": 0.8
+    }
+  }
+}

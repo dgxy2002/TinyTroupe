@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s149-case-rt1-rmre",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Kavitha"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Natalie Rodrigues"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1488,
+    "completion_tokens": 658,
+    "total_tokens": 2146,
+    "cost": 0.009556,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009556,
+      "upstream_inference_prompt_cost": 0.002976,
+      "upstream_inference_completions_cost": 0.00658
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether the small room can be reserved for Agent D's pumping at about 1 p.m. and 3.30 p.m. daily, and how A, B and C adjust to allow it",
+  "pairs": {
+    "A-B": {
+      "start": 0.0,
+      "end": 0.3,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A agreed to 1 and 3.30 (T1, T3); B first objected (T4) then offered to move boxes out (T10). They never addressed each other, but both end up accommodating D.",
+      "roles": "A-B",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": 0.3
+    },
+    "A-C": {
+      "start": 0.0,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "A accepts D's times (T3); C accepts 1 p.m. for the call, which leaves the room free for D at 1.15 (T13). They never spoke to each other; both are accommodating.",
+      "roles": "A-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.5
+    },
+    "A-D": {
+      "start": 0.4,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A refused 4.30 (T1); D proposed 3.30 (T2) and A said 'Yes, 3.30 is fine' (T3).",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "B-C": {
+      "start": 0.0,
+      "end": 0.4,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "B objected (T4) and C raised a conflict (T5); both then accommodate D (T10, T13). They did not address each other.",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "B-D": {
+      "start": -0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "B",
+      "evidence": "D asked B to wait (T8); B refused but offered to move the boxes out (T10); D: 'Yes, that would be great' (T11).",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 1.4
+    },
+    "C-D": {
+      "start": -0.3,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "C said 1 p.m. conflicted (T5), and D asked for C's timing (T6). C is flexible (T7), D proposed 1.15 (T8), and C agreed (T13).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 1.2
+    }
+  }
+}

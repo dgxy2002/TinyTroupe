@@ -1,0 +1,148 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "work schedule vs religious obligations (Friday prayers)",
+      "shift swap proposal between staff"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 5,
+    "dialogue_quality_notes": [
+      "Efficient, polite, and directly problem-focused conversation.",
+      "Clear proposal-offer-accept sequence: B proposed a swap, D accepted, then A approved.",
+      "No needless repetition; roles and constraints stayed consistent (who schedules, who can swap)."
+    ],
+    "dialogue_repetition_score": 0,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "A concrete swap was agreed: Agent B offered to 'take your Friday' and have Agent D 'take my Saturday'; Agent D accepted ('Okay, I can do Saturday morning'); Agent A approved and committed to change the roster ('Yes, that's fine... I'll change it now.'). This mutual agreement resolved the scheduling conflict.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D initially raised an incompatibility (need for Friday prayers) and then accepted a swap: 'Okay, I can do Saturday morning.'",
+      "Agent B changed proposed duty from Saturday morning to Friday noon, offering to 'take your Friday.'",
+      "Agent A moved from asking 'Is there a problem?' to approving and committing to change the roster: 'I'll change it now.'"
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 4,
+    "round_scores": [
+      {
+        "evidence": "Agent A: 'Is there a problem with that time?' Agent D: 'I need to go for Friday prayers.' — a direct incompatibility between the draft roster and Agent D's religious obligation was stated.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A: 'Can anyone swap with Agent D? Friday noon to three.' Agent B: 'I can't do my Saturday morning. Agent D, you want to swap? I take your Friday, you take my Saturday.' — a proposed solution was offered but not yet accepted by Agent D or approved by Agent A.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D: 'Okay, I can do Saturday morning.' Agent B: 'Great. Agent A, is that okay for the roster? I do Friday noon, Agent D does Saturday morning.' — the conflicted party (D) accepted the proposed swap and B confirmed the swap, reducing the substantive disagreement though final approval by A was still outstanding.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A: 'Yes, that's fine. Thanks for sorting it out. I'll change it now.' — explicit approval from A and a clear statement that the roster will be changed constitute a mutual, concrete agreement resolving the scheduling conflict.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D: 'Thanks, both of you.' — post-resolution thanks, no substantive disagreement present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A: 'No problem.' — continued confirmation that the issue is settled; no new conflict introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded; prior explicit agreement remains in place.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded; no new disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded; resolution previously achieved.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The conflict was factual/practical: a rostered shift conflicted with Agent D's religious prayer time.",
+      "A straightforward mutual swap satisfied interests without managerial refusal; B's willingness to swap enabled resolution.",
+      "Resolution required explicit managerial approval (Agent A), which was obtained verbally, satisfying speech-only settlement conditions."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T18:07:20.653754+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00684355,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2675,
+      "local_latency_ms": 39498.136,
+      "output_tokens": 3289,
+      "reasoning_tokens": 1920,
+      "successful_calls": 1,
+      "total_tokens": 5964
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "WKRM",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S142-WKRM-R01",
+    "scenario_id": "S142"
+  },
+  "schema_version": 2
+}

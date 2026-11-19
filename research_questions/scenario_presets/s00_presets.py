@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from dataclasses import replace
 
-from .case_common import _FAITH_WORDS, K1_BACKGROUNDS, K2_BACKGROUNDS, K3_BACKGROUNDS, _REASON_RULE
+from .case_common import _FAITH_WORDS, K1_BACKGROUNDS, K2_BACKGROUNDS, K3_BACKGROUNDS, K4_BACKGROUNDS, _REASON_RULE
 from .common import ScenarioPreset, validate_scenario
 from .s30_flat import PORK_PAN
 
@@ -252,3 +252,18 @@ MEDICATED_STEAM = _shared_space_case(
     "strong-smelling medicated oil in your room through the evening.",
     K3_BACKGROUNDS,
 )
+
+
+# ---- One-of-each rotation (2026-11-20) ----
+# Scenario 0 already had one of each culture in every room, but no Eurasian D. S125 is S37 (shellfish and an
+# allergy, the pan control) with the K4 room, whose Agent D is Daniel Pereira (Eurasian). Run with cell K4.
+PAN_EURASIAN_D = replace(
+    SHELLFISH_PAN,
+    scenario_id="S125",
+    title="Shared flat, pan only: shellfish and an allergy (control), Eurasian holder",
+    source_status="S37 with the K4 room (rotation, 2026-11-20)",
+    shared_setting=_pan_setting(K4_BACKGROUNDS),
+)
+validate_scenario(PAN_EURASIAN_D)
+PAN_ROTATION = {"S125": PAN_EURASIAN_D}
+PAN_ROTATION_CELLS = {"S125": "K4"}

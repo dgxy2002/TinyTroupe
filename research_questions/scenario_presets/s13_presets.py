@@ -5,7 +5,7 @@ S94 Muslim, S95 Hindu, S96 Buddhist, S97 control (a nursing mother). Roles A-C a
 
 from __future__ import annotations
 
-from .case_common import _key_case
+from .case_common import _key_case, rotated_case, rotation_cell
 from .common import _cast, _OFFICE_FIXED, PROFILE_CONFIGURATIONS, ScenarioPreset
 
 
@@ -134,4 +134,25 @@ PROFILE_CONFIGURATIONS.update(
         "RM3": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Xin Yi")}),
         "RM4": _cast({**_OFFICE_FIXED, "D": ("Chinese", "Hui Min")}),
     }
+)
+
+
+# ---- One-of-each rotation rooms (2026-11-20) ----
+# The Eurasian D has the control (nursing mother), so all four people are female. Known mild clash (user
+# accepted, option B): when Nurul is not D she may also want the room for her own prayers.
+_ROTATION_PEOPLE = {'Chinese': 'Xin Yi', 'Malay': 'Nurul', 'Indian': 'Kavitha', 'Eurasian': 'Natalie Rodrigues'}
+ROOM_ROTATION = {
+    'S146': rotated_case(ROOM_MUSLIM, 'S146', _ROOM_SETTING, 'Malay'),
+    'S147': rotated_case(ROOM_HINDU, 'S147', _ROOM_SETTING, 'Indian'),
+    'S148': rotated_case(ROOM_BUDDHIST, 'S148', _ROOM_SETTING, 'Chinese'),
+    'S149': rotated_case(ROOM_CONTROL, 'S149', _ROOM_SETTING, 'Eurasian'),
+}
+ROOM_ROTATION_CELLS = {
+    'S146': "RMRM",
+    'S147': "RMRI",
+    'S148': "RMRC",
+    'S149': "RMRE",
+}
+PROFILE_CONFIGURATIONS.update(
+    {"RMRM": rotation_cell(_ROTATION_PEOPLE, 'Malay'), "RMRI": rotation_cell(_ROTATION_PEOPLE, 'Indian'), "RMRC": rotation_cell(_ROTATION_PEOPLE, 'Chinese'), "RMRE": rotation_cell(_ROTATION_PEOPLE, 'Eurasian')}
 )

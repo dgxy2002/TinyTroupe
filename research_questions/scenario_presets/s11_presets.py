@@ -5,7 +5,7 @@ S86 Muslim, S87 Hindu, S88 Buddhist, S89 control. Roles A-C are three Catholics.
 
 from __future__ import annotations
 
-from .case_common import _key_case
+from .case_common import _key_case, rotated_case, rotation_cell
 from .common import _cast, _NOISE_FIXED, PROFILE_CONFIGURATIONS, ScenarioPreset
 
 
@@ -130,4 +130,24 @@ PROFILE_CONFIGURATIONS.update(
         "NO3": _cast({**_NOISE_FIXED, "D": ("Chinese", "Xin Yi")}),
         "NO4": _cast({**_NOISE_FIXED, "D": ("Chinese", "Hui Min")}),
     }
+)
+
+
+# ---- One-of-each rotation rooms (2026-11-20) ----
+# The Eurasian D has the control (early shift). All four people are female, as D was in NO1-NO4.
+_ROTATION_PEOPLE = {'Chinese': 'Xin Yi', 'Malay': 'Aisyah', 'Indian': 'Priya', 'Eurasian': 'Natalie Rodrigues'}
+NOISE_ROTATION = {
+    'S138': rotated_case(NOISE_MUSLIM, 'S138', _NOISE_SETTING, 'Malay'),
+    'S139': rotated_case(NOISE_HINDU, 'S139', _NOISE_SETTING, 'Indian'),
+    'S140': rotated_case(NOISE_BUDDHIST, 'S140', _NOISE_SETTING, 'Chinese'),
+    'S141': rotated_case(NOISE_CONTROL, 'S141', _NOISE_SETTING, 'Eurasian'),
+}
+NOISE_ROTATION_CELLS = {
+    'S138': "NORM",
+    'S139': "NORI",
+    'S140': "NORC",
+    'S141': "NORE",
+}
+PROFILE_CONFIGURATIONS.update(
+    {"NORM": rotation_cell(_ROTATION_PEOPLE, 'Malay'), "NORI": rotation_cell(_ROTATION_PEOPLE, 'Indian'), "NORC": rotation_cell(_ROTATION_PEOPLE, 'Chinese'), "NORE": rotation_cell(_ROTATION_PEOPLE, 'Eurasian')}
 )

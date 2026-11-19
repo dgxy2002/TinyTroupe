@@ -1,0 +1,149 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "music/noise vs. neighbour's sleep schedule",
+      "accessibility/path for wheelchair",
+      "shared space for morning exercise"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Agents provided concrete, context-aware reasons (need to sleep vs. cultural importance of music) and proposed specific mitigation steps.",
+      "There is a minor duplicate message by Agent B (Turn 9 and Turn 12 identical), producing some repetition.",
+      "Participants used courteous language and confirmations; offers included explicit actions and a conditional concession ('check at 8' and 'no music on Sunday' if still loud)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Parties agreed a concrete compromise: Agent D would move speakers, keep volume low, and 'I'll come check with you around 8 tonight. If you still can't rest, we won't play any music on Sunday.' Agent B accepted this procedure: 'Okay... Let's try it. So, you'll check with me at 8, and if it's still too loud, then no music on Sunday.' Earlier requests were also granted: Agent D agreed to keep a clear path ('Of course, we'll make sure there's a path') and to reserve a corner for Agent C's exercise group ('we'll keep a corner clear').",
+    "final_status": "resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent B softened from demanding no music both nights (initially 6–10) to accepting a trial with a check at 8 and conditional agreement to no music on Sunday: 'Okay... Let's try it.'",
+      "Agent D shifted from asserting the importance of music during visiting hours to offering mitigation and a conditional concession: moving speakers, lowering volume, and promising a check at 8 with potential cancellation on Sunday.",
+      "Agent A and Agent C maintained their requests (path and exercise corner) and had them accepted; they did not change position otherwise."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 6,
+    "round_scores": [
+      {
+        "evidence": "Agent A requested a clear path for a wheelchair and Agent D immediately agreed: 'Of course, we'll make sure there's a path.' No incompatible demands remained.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 1
+      },
+      {
+        "evidence": "Agent B raised a problem about music disturbing sleep but did not yet request a concrete change; Agent D had not yet responded. This round only introduced a potential issue.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 2
+      },
+      {
+        "evidence": "Agent B explicitly requested 'no music between 6 p.m. and 10 p.m.' which conflicts with the wake activities. Agent D had only offered to keep volume down earlier — a clear substantive disagreement emerged and remained unsettled at the end of the round.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D affirmed the music's importance for visiting relatives ('those hours from 6 to 10 are when most of our relatives come. The music is important for us') but proposed mitigation: 'what if we try moving the speakers to the other side of the tent, further from your window?' The core incompatibility (no music vs music during visiting hours) remained, but D offered a concrete compromise.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B insisted on a firmer demand (changed to 'no music from 7 p.m. to 10 p.m.' for tonight and Sunday) and expressed that 'maybe' mitigations aren't enough. The request hardened and the disagreement intensified; no agreement was reached this round.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 5
+      },
+      {
+        "evidence": "Agent D proposed a conditional, concrete arrangement: 'We'll move the speakers ... I'll come check with you around 8 tonight. If you still can't rest, we won't play any music on Sunday.' Agent B accepted: 'Okay... Let's try it. So, you'll check with me at 8, and if it's still too loud, then no music on Sunday.' The parties agreed on who would do what and the condition under which music would be stopped, settling the substantive dispute.",
+        "movement": "resolved",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "Participants reiterated the agreed plan ('Okay. Yes, I'll check in with you at 8.'). No substantive disagreement remained.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or actions recorded. The previously reached agreement stands; no new conflict appears.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "Agent D restated the check-in and Agent C offered well-wishes. No disagreement present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "Closing condolences and thanks between neighbours; no substantive conflict.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D continued to respond with thanks. No new or unresolved substantive disagreement.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "Final expressions of thanks from Agent D. No substantive conflict present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Conflict centered on scheduling and loudness trade-offs: neighbours' sleep/work schedule versus wake visitation rituals and music timing.",
+      "A conditional, time-bound check (Agent D checking with Agent B at 8) served as an effective mechanism to permit the ritual while protecting a neighbour's ability to sleep.",
+      "Other practical requests (wheelchair access, exercise corner) were straightforwardly accommodated early, reducing the number of simultaneous disputes to the noise issue."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T17:54:25.552906+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00853205,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3357,
+      "local_latency_ms": 46387.471,
+      "output_tokens": 4048,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 7405
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "VDRM",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S134-VDRM-R01",
+    "scenario_id": "S134"
+  },
+  "schema_version": 2
+}

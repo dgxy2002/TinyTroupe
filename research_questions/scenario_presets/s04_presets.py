@@ -6,7 +6,7 @@ wedding), deadlocked in all four runs. Version 2, S67-S70, gives each person one
 
 from __future__ import annotations
 
-from .case_common import _key_case
+from .case_common import _key_case, rotated_case, rotation_cell
 from .common import _cast, PROFILE_CONFIGURATIONS, _RO_FIXED, ScenarioPreset
 
 
@@ -223,4 +223,25 @@ PROFILE_CONFIGURATIONS.update(
         "RO3": _cast({**_RO_FIXED, "D": ("Chinese", "Xin Yi")}),
         "RO4": _cast({**_RO_FIXED, "D": ("Chinese", "Jun Jie")}),
     }
+)
+
+
+# ---- One-of-each rotation rooms (2026-11-20) ----
+# Version 2's needs, one of each culture in every room. The Eurasian D has no festival, so has the control
+# (sister's wedding). Mixed genders, as in RO1-RO4. People: Xin Yi, Aisyah, Karthik, Marcus de Souza.
+_ROTATION_PEOPLE = {'Chinese': 'Xin Yi', 'Malay': 'Aisyah', 'Indian': 'Karthik', 'Eurasian': 'Marcus de Souza'}
+ROSTER_ROTATION = {
+    'S126': rotated_case(ROSTER_V2_MUSLIM, 'S126', _ROSTER_V2_SETTING, 'Malay'),
+    'S127': rotated_case(ROSTER_V2_HINDU, 'S127', _ROSTER_V2_SETTING, 'Indian'),
+    'S128': rotated_case(ROSTER_V2_CHINESE, 'S128', _ROSTER_V2_SETTING, 'Chinese'),
+    'S129': rotated_case(ROSTER_V2_CONTROL, 'S129', _ROSTER_V2_SETTING, 'Eurasian'),
+}
+ROSTER_ROTATION_CELLS = {
+    'S126': "RORM",
+    'S127': "RORI",
+    'S128': "RORC",
+    'S129': "RORE",
+}
+PROFILE_CONFIGURATIONS.update(
+    {"RORM": rotation_cell(_ROTATION_PEOPLE, 'Malay'), "RORI": rotation_cell(_ROTATION_PEOPLE, 'Indian'), "RORC": rotation_cell(_ROTATION_PEOPLE, 'Chinese'), "RORE": rotation_cell(_ROTATION_PEOPLE, 'Eurasian')}
 )

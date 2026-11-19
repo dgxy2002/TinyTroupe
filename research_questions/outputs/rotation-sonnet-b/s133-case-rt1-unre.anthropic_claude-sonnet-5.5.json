@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s133-case-rt1-unre",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Nurul"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Hui Min"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Rachel Pereira"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1786,
+    "completion_tokens": 682,
+    "total_tokens": 2468,
+    "cost": 0.010392,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010392,
+      "upstream_inference_prompt_cost": 0.003572,
+      "upstream_inference_completions_cost": 0.00682
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether Agent D may keep wearing her cross tucked in or taped under her clothes tomorrow, or must take it off entirely to comply with the no-visible-jewellery rule.",
+  "pairs": {
+    "A-B": {
+      "start": 0.6,
+      "end": 1.0,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "A (T3) says rule applies to everyone, D must remove; B (T2, T4) pushes same; at T24-25 A says taping isn't the same as taking it off and B replies 'Right. It has to be the same for everyone.'",
+      "roles": "A-B",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "A-C": {
+      "start": -0.2,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C (T13) says A should just check it in the morning; A (T15) refuses; C (T20, T22) says taping works and it's settled; A (T24) says 'It's not settled' and that the cross must come off.",
+      "roles": "A-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": -0.6
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "D offers to tuck it in (T6, T8) and tape it (T16); A rejects each offer (T7, T9, T15) and at T24 insists the only sure way is to not wear it.",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": -0.1
+    },
+    "B-C": {
+      "start": -0.6,
+      "end": -0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B insists D must remove it like B's earrings (T10, T12, T21); C says it's different, 'It's settled. Let it go' (T11, T22).",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": -0.3
+    },
+    "B-D": {
+      "start": -0.8,
+      "end": -0.8,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says tucking and taping is still wearing it (T10, T17); D replies 'You can't wear earrings under a shirt' (T18); no shift by T25.",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.0
+    },
+    "C-D": {
+      "start": 0.7,
+      "end": 0.95,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "C backs tucking and a morning check (T13), D agrees (T14); C says 'Taping it works' (T20) in line with D's offer (T16).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.25
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s150-case-rt1-smrm",
+  "cast": {
+    "A": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    },
+    "B": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "C": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    },
+    "D": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1485,
+    "completion_tokens": 597,
+    "total_tokens": 2082,
+    "cost": 0.00894,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00894,
+      "upstream_inference_prompt_cost": 0.00297,
+      "upstream_inference_completions_cost": 0.00597
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether strong-smelling cooking is banned (A's request) or handled by a compromise of heads-up before cooking and cooking after 7 p.m. on weekdays",
+  "pairs": {
+    "A-B": {
+      "start": -0.5,
+      "end": 0.6,
+      "engaged": true,
+      "moved": "A",
+      "evidence": "B said a ban might be difficult and a heads-up is enough (T2); A accepted after-7 cooking (T14) and B said 'that works for me' (T20).",
+      "roles": "A-B",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": 1.1
+    },
+    "A-C": {
+      "start": -0.3,
+      "end": 0.6,
+      "engaged": false,
+      "moved": "A",
+      "evidence": "C backed the heads-up and said it works (T3, T7); A accepted the after-7 arrangement (T14). They did not address each other directly.",
+      "roles": "A-C",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": false,
+      "change": 0.9
+    },
+    "A-D": {
+      "start": -0.7,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "both",
+      "evidence": "D offered a heads-up and cooking when A isn't working (T4, T8, T13); A said 'after 7 works' (T14), dropping the ban request.",
+      "roles": "A-D",
+      "cultures": "Chinese - Malay",
+      "includes_D": true,
+      "change": 1.6
+    },
+    "B-C": {
+      "start": 0.4,
+      "end": 0.8,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both opposed a ban and accepted the heads-up (T2, T3, T7); B agreed to the final arrangement (T20).",
+      "roles": "B-C",
+      "cultures": "Indian - Eurasian",
+      "includes_D": false,
+      "change": 0.4
+    },
+    "B-D": {
+      "start": 0.4,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B was fine with a heads-up (T2); D proposed heads-up plus after 7 (T18) and B said 'that works for me' (T20).",
+      "roles": "B-D",
+      "cultures": "Indian - Malay",
+      "includes_D": true,
+      "change": 0.5
+    },
+    "C-D": {
+      "start": 0.5,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C raised the laundry point (T3); D conceded and offered a heads-up (T4); C said 'that works for me' (T7).",
+      "roles": "C-D",
+      "cultures": "Eurasian - Malay",
+      "includes_D": true,
+      "change": 0.4
+    }
+  }
+}

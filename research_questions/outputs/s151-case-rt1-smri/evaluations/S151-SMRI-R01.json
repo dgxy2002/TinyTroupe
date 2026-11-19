@@ -1,0 +1,152 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "Strong-smelling cooking odor affecting bedrooms, laundry, and work calls",
+      "When (which days/times) Agent D may cook strong-smelling food",
+      "Whether prior notice or schedule adjustments adequately mitigate the smell"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants provide concrete reasons (work calls, laundry schedule) and propose practical solutions (weekend-only cooking, prior notice, avoiding specific laundry days).",
+      "Agent D shifts from defensive to negotiative: initially \"it's my food\" then later makes scheduling concessions.",
+      "There is some repetition: Agent A's final concern is restated almost verbatim (Turn 29 and Turn 32).",
+      "Conversation stays on-topic and consistent with the setting (no role confusion)."
+    ],
+    "dialogue_repetition_score": 2,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "Partial accommodations were offered and accepted in the middle of the run (Agent D agreed to notify Agent B and to avoid cooking on Agent C's laundry days — \"Okay. I can do that.\"), but Agent A's main concern (weekday evening video calls until about 7 p.m. and lingering odor) remained unaddressed and was restated in Rounds 11–12 (\"if you cook on Tuesdays and Thursdays, the smell is still going to be a problem for my work calls\"; \"My calls are often until 7 p.m. And the smell stays in the air for hours\"). No agreement resolving A's incompatibility with D's cooking times was reached.",
+    "final_status": "unresolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D: moved from defensive ('that's my food. It's what I eat.') to making concrete concessions (agreed to cook on other days and to give B prior notice) — evidence: R2, R5, R8, R10.",
+      "Agent A: initially accepted a weekends-only proposal ('That works for me. Thanks, Agent D.' in R6) but later reasserted that weekends or given alternate days still conflict with work hours (R11–R12), showing a position reassessment.",
+      "Agent C: consistently concerned about laundry; obtained an explicit concession from D to avoid Mondays/Wednesdays/Fridays (R9–R10).",
+      "Agent B: moved from complaint to a minimal accommodation preference (advance notice) which D accepted (R8)."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "none",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent B: \"Yeah, my room still smells of it.\" Agent A: \"I have my work calls here in the living room. It's not great when the whole place smells.\" — initial complaint about cooking smell, no explicit opposition yet.",
+        "movement": "onset",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 1
+      },
+      {
+        "evidence": "Agent C: \"My laundry smells of it too.\" vs Agent D: \"I hear you, but that's my food. It's what I eat.\" — explicit incompatible claims (duty to cook preferred food vs request to stop strong smells).",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent A explains work impact: \"I'm on video calls...\" Agent D asks a clarifying question: \"Okay. When are your calls?\" — conflict remains but D engages and seeks information.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A: \"They're on weekdays, usually until about 7 p.m.\" Agent B: \"But if she cooks at night, the smell is still there in the morning.\" — constraints and persistence of odor reiterated; no settlement.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 4
+      },
+      {
+        "evidence": "Agent D offers a compromise: \"What if I only cook this kind of food on the weekends?\" — an attempt to reduce conflict, but no agreement yet from all.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A: \"That works for me.\" then Agent B objects: \"But the smell is still there on the weekend.\" — D's proposed compromise is challenged, raising the level of disagreement again.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 6
+      },
+      {
+        "evidence": "Agent C: weekend laundry is affected; Agent D: \"Okay, so weekends don't work for you. What's the solution then? Because I can't just not cook my food here.\" — D asserts inability to stop cooking, showing stronger opposition and entrenchment.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 7
+      },
+      {
+        "evidence": "Agent B proposes notice: \"Just tell me before you start. If I know, I can close my door.\" Agent D: \"Okay, I can do that, Agent B.\" — partial accommodation for B but not yet resolving other concerns.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Agent C: \"Telling me beforehand doesn't really help... I do my laundry on Mondays, Wednesdays, and Fridays. Could you cook it on the other days?\" — a scheduling request that still conflicts with D's practice until D responds.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 9
+      },
+      {
+        "evidence": "Agent D agrees to C's request: \"Okay. I can do that.\" Agent C: \"Okay, thanks.\" (At this point there is an explicit accommodation: D accepts to avoid cooking on C's laundry days; B also was offered prior notice.)",
+        "movement": "resolved",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "Agent A objects again: \"Sorry, but if you cook on Tuesdays and Thursdays, the smell is still going to be a problem for my work calls.\" vs Agent D: \"I thought your calls were during the day?\" — A's work-schedule concern reintroduces unresolved incompatibility.",
+        "movement": "reopened",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 11
+      },
+      {
+        "evidence": "Agent A reiterates: \"My calls are often until 7 p.m. And the smell stays in the air for hours.\" — restatement of the unresolved issue; no counterproposal or acceptance recorded.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "The odor lingers for hours, so solutions based solely on day-switching (weekends vs weekdays) may not protect those with evening constraints (A's calls until 7 p.m.).",
+      "Advance notice helps some residents (B can close a door) but does not help others (C cannot move hanging laundry).",
+      "Agent D is willing to adjust schedule for some housemates (agreed to avoid C's laundry days and to notify B), indicating scope for partial accommodations but not full elimination of conflict.",
+      "The core tension is between a resident's cultural/food practices and others' work/laundry needs in a shared, unmodifiable space."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T18:28:00.327492+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.01039005,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3061,
+      "local_latency_ms": 69318.063,
+      "output_tokens": 5014,
+      "reasoning_tokens": 3136,
+      "successful_calls": 1,
+      "total_tokens": 8075
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "SMRI",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S151-SMRI-R01",
+    "scenario_id": "S151"
+  },
+  "schema_version": 2
+}

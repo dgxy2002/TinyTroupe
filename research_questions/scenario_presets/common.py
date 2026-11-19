@@ -491,6 +491,8 @@ def materialize_configuration(
             payload["agents"][agent_id]["biography"] = override or (
                 PERSONAL_BIOGRAPHIES if profile["biography"] == "personal" else BIOGRAPHIES
             )[cultural_background]
+        if profile and "countries" in profile:
+            payload["agents"][agent_id]["country_of_residence"] = profile["countries"][agent_id]
         if profile and profile.get("home_language_thinking"):
             payload["agents"][agent_id]["thinking_language"] = HOME_LANGUAGES[cultural_background]
         if profile and profile.get("explicit_culture"):

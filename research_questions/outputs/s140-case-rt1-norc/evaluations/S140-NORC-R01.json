@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "early-morning religious chanting vs. roommates' sleep/work schedules",
+      "scheduling of a trial time to test noise"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants gave concrete personal constraints (A: client presentation; B: exams; C: light sleeper) which grounded their positions.",
+      "Agent D offered a conditional mitigation (whisper) and a practical test—this moved discussion from abstract claims to a verifiable plan.",
+      "C’s proximity reopened a previously appearing agreement, appropriately preventing premature settlement."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 4,
+    "final_reason": "The roommates reached a concrete, mutual agreement about when to run a noise trial: Agent D agreed to be quieter (‘I can be quieter’) and proposed a test morning; after negotiation the group agreed on a specific trial date — Agent D: 'Okay, so Friday morning it is.' This settles the immediate scheduling conflict (trial timing) but does not settle the broader incompatibility about daily 4:45 a.m. chanting for the next four weeks if the trial shows it remains audible.",
+    "final_status": "partially_resolved",
+    "independent_reasoning_score": 4,
+    "position_change_notes": [
+      "Agent D softened from 'I will chant every morning' to offering mitigation: 'I can be quieter' and to running a trial — explicit concessions to roommate concerns.",
+      "Agent A and Agent B maintained their constraints but conceded to a trial date (A: 'A trial is a good idea.'; A: 'Okay, Tuesday night works for me.' later switching to Friday), showing willingness to compromise on timing.",
+      "Agent C consistently retained concern and effectively reopened negotiations when previously unconsulted; C accepted a trial but requested Friday to avoid a work night."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": null,
+    "round_scores": [
+      {
+        "evidence": "Agent A objects to 4:45 every morning because of a Monday 9 a.m. presentation (‘I can't be tired’). Agent D immediately offers to be quieter (‘I can be quieter’), softening the conflict but not resolving it.",
+        "movement": "deescalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 2,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A requests specifics about 'quieter' given thin walls; Agent B adds their own constraint (exams on Tues/Thurs). More incompatible constraints appear, so conflict intensity increases.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent D specifies a 'very low whisper' but Agent A doubts even a whisper will be inaudible. Substantive disagreement about sufficiency of the mitigation remains.",
+        "movement": "unchanged",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 3
+      },
+      {
+        "evidence": "Agent D proposes a one-morning trial; Agent A accepts the idea but excludes Sunday night because of their Monday presentation. The parties narrow options, reducing but not eliminating the conflict.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 4
+      },
+      {
+        "evidence": "Agent B adds further constraints (cannot be Monday or Wednesday nights), creating a scheduling incompatibility among roommates and reopening intensity.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A agrees to Tuesday night and Agent D accepts; scheduling progress is made though not final and C has not yet weighed in.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 6
+      },
+      {
+        "evidence": "Agent B also agrees to Tuesday and Agent D says 'settled then.' Among A, B, D the trial appears settled, lowering conflict, but C remains unconsulted.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 7
+      },
+      {
+        "evidence": "Agent C objects that it's not settled because their room is next to D's and they'd be more affected. This reopens the substantive issue.",
+        "movement": "reopened",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 8
+      },
+      {
+        "evidence": "Agent C notes being a very light sleeper and doubts even a whisper; Agent D reiterates the trial's purpose as a test. The incompatibility remains unresolved.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 9
+      },
+      {
+        "evidence": "Agent D accepts that C is the 'main test' and says they'll find another plan if it wakes C; Agent C requests the trial be on Friday so it isn't a work night. No final date agreed yet.",
+        "movement": "unchanged",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 2,
+        "round": 10
+      },
+      {
+        "evidence": "Agent D says Friday is fine and asks A and B; Agent A accepts Friday. Scheduling moves toward agreement, lowering conflict.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 11
+      },
+      {
+        "evidence": "Agent B agrees to Friday and Agent D confirms: 'Okay, so Friday morning it is.' The trial date is mutually agreed, but the underlying question—whether daily chanting will be acceptable after the trial—remains unresolved.",
+        "movement": "deescalated",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 1,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "Core tension is between a short-term religious vow requiring early-morning chanting and roommates’ competing, concrete morning obligations (presentation, exams, light sleeping).",
+      "The trial functions as an evidentiary device: it shifts the dispute from normative claims about rights to an empirical test of audibility.",
+      "Scheduling trade-offs (which nights are acceptable) were the main negotiable dimension; the deeper issue of whether chanting will be tolerated over four weeks remains contingent on the trial outcome."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T18:01:43.646843+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [
+      "Removed resolution_round 12 because the final status is partially_resolved."
+    ],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00767305,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 3065,
+      "local_latency_ms": 45777.376,
+      "output_tokens": 3655,
+      "reasoning_tokens": 2368,
+      "successful_calls": 1,
+      "total_tokens": 6720
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "NORC",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S140-NORC-R01",
+    "scenario_id": "S140"
+  },
+  "schema_version": 2
+}

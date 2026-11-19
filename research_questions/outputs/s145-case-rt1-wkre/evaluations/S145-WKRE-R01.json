@@ -1,0 +1,150 @@
+{
+  "evaluation": {
+    "conflict_ever_observed": true,
+    "conflict_topics": [
+      "weekly roster assignment for Thursday 1–4pm",
+      "need to swap coverage due to Agent D's hospital obligation"
+    ],
+    "dialogue_groundedness_score": 5,
+    "dialogue_naturalness_score": 4,
+    "dialogue_quality_notes": [
+      "Participants provided concrete constraints (D's hospital duty, C's existing sick-day coverage).",
+      "Agent A efficiently coordinated and proposed a specific reciprocal swap.",
+      "There is a minor duplicated confirmation line in Round 6 ('Okay, settled then. I'll send this in tonight.' repeated).",
+      "Responses were direct and task-focused, with little off-topic discussion."
+    ],
+    "dialogue_repetition_score": 1,
+    "dialogue_substantiveness_score": 3,
+    "final_reason": "Agents agreed a reciprocal swap: Agent A proposed that Agent B take the Thursday slot and Agent D take Agent B's Saturday slot. Agent B accepted: 'Okay. I can do Thursdays.' Agent D confirmed acceptance of the reciprocal slot: 'Yes, the Saturday slot is fine. Thanks.' This mutual acceptance resolves the coverage conflict.",
+    "final_status": "resolved",
+    "independent_reasoning_score": 3,
+    "position_change_notes": [
+      "Agent B initially said 'I also can't do my slot. I'm rostered for Saturday morning.' This statement introduced a constraint, but B then agreed to take Thursdays ('Okay. I can do Thursdays.'), representing a change in assignment willingness.",
+      "Agent D moved from requesting a change to offering flexibility: 'I can take any other slot... it's just that specific time on Thursdays.' Agent D later confirmed acceptance of the Saturday slot.",
+      "Agent C maintained their position and declined additional regular slots ('I already cover the sick days. I can't do another regular slot.').",
+      "Agent A acted as coordinator and did not change a personal position; they proposed and confirmed the swap."
+    ],
+    "premature_consensus_observed": false,
+    "resolution_mechanism": "compromise",
+    "resolution_round": 5,
+    "round_scores": [
+      {
+        "evidence": "Agent D reports an incompatibility with the roster: 'I have to take my dad to the hospital on Thursdays.' Agent A indicates a swap is needed: 'If you can swap with someone, sure.' A clear scheduling conflict is present and unresolved.",
+        "movement": "onset",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 1
+      },
+      {
+        "evidence": "Agent A asks for volunteers to swap: 'Can anyone swap with Agent D?' Agent B replies: 'I also can't do my slot. I'm rostered for Saturday morning.' This adds constraints to available options and keeps the coverage problem unresolved.",
+        "movement": "escalated",
+        "peak_conflict_score": 3,
+        "remaining_conflict_score": 3,
+        "round": 2
+      },
+      {
+        "evidence": "Agent C declines: 'I already cover the sick days. I can't do another regular slot.' Agent D offers flexibility except for the Thursday slot: 'I can take any other slot. Weekends, evenings, any of them. It's just that specific time on Thursdays.' Multiple staff constraints increase the difficulty of finding a swap.",
+        "movement": "escalated",
+        "peak_conflict_score": 4,
+        "remaining_conflict_score": 4,
+        "round": 3
+      },
+      {
+        "evidence": "Agent A proposes a bilateral swap: 'Agent B, can you do Thursdays? Agent D can take your Saturday slot.' Agent B accepts: 'Okay. I can do Thursdays.' This reduces the conflict but does not fully resolve it until Agent D accepts the reciprocal Saturday slot.",
+        "movement": "deescalated",
+        "peak_conflict_score": 2,
+        "remaining_conflict_score": 1,
+        "round": 4
+      },
+      {
+        "evidence": "Agent A checks the reciprocal agreement: 'Great. Agent D, you're okay with the Saturday slot then?' Agent D confirms: 'Yes, the Saturday slot is fine. Thanks.' The swap is mutually accepted (B covers Thursdays; D takes Saturday), resolving the scheduling incompatibility.",
+        "movement": "resolved",
+        "peak_conflict_score": 1,
+        "remaining_conflict_score": 0,
+        "round": 5
+      },
+      {
+        "evidence": "Agent A confirms intention to submit the change: 'Okay, settled then. I'll send this in tonight.' (message repeated). No substantive disagreement present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 6
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Prior rounds contain explicit mutual agreement on the swap.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 7
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The swap had already been mutually agreed in earlier rounds.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 8
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No new issues introduced.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 9
+      },
+      {
+        "evidence": "No public speech or observable action recorded. Agreement from Rounds 4–5 remains in place.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 10
+      },
+      {
+        "evidence": "No public speech or observable action recorded. No unresolved scheduling dispute present.",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 11
+      },
+      {
+        "evidence": "No public speech or observable action recorded. The roster swap had been accepted earlier (B covers Thursdays; D covers Saturday).",
+        "movement": "no_conflict",
+        "peak_conflict_score": 0,
+        "remaining_conflict_score": 0,
+        "round": 12
+      }
+    ],
+    "substantive_insights": [
+      "A successful resolution required both someone to take the Thursday slot and Agent D to accept a different slot; partial acceptance (B agreeing to Thursdays) did not complete a resolution until D accepted the reciprocal Saturday slot.",
+      "Staffing is tightly constrained (no relief staff), so swaps must be bilateral and acceptable to both parties.",
+      "Individual personal obligations (D's regular hospital visits) can be accommodated by simple reciprocal trades when others have flexible availability."
+    ]
+  },
+  "evaluator": {
+    "evaluated_at": "2026-11-19T18:11:49.638160+00:00",
+    "input_names_anonymized": true,
+    "normalizations": [],
+    "prompt_sha256": "d8792184df31eae0fde28add2c1d6a8843d0f29fb7f3291ca36e2e4f7b5a449d",
+    "prompt_version": "conflict-trajectory-rubric-v2.6",
+    "resources": {
+      "calls": 1,
+      "cost_usd": 0.00778255,
+      "exact_cost_complete": true,
+      "failed_calls": 0,
+      "input_tokens": 2727,
+      "local_latency_ms": 46323.228,
+      "output_tokens": 3752,
+      "reasoning_tokens": 2176,
+      "successful_calls": 1,
+      "total_tokens": 6479
+    }
+  },
+  "run": {
+    "completed_rounds": 12,
+    "configuration_id": "WKRE",
+    "evaluator_model": "openai/gpt-5-mini",
+    "repetition": 1,
+    "run_id": "S145-WKRE-R01",
+    "scenario_id": "S145"
+  },
+  "schema_version": 2
+}

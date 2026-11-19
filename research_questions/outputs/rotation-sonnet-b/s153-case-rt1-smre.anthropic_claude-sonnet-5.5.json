@@ -1,0 +1,115 @@
+{
+  "rubric": "pair-agreement-v2-decimal",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "s153-case-rt1-smre",
+  "cast": {
+    "A": {
+      "culture": "Malay",
+      "name": "Aisyah"
+    },
+    "B": {
+      "culture": "Chinese",
+      "name": "Xin Yi"
+    },
+    "C": {
+      "culture": "Indian",
+      "name": "Priya"
+    },
+    "D": {
+      "culture": "Eurasian",
+      "name": "Sarah Fernandez"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1806,
+    "completion_tokens": 711,
+    "total_tokens": 2517,
+    "cost": 0.010722,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010722,
+      "upstream_inference_prompt_cost": 0.003612,
+      "upstream_inference_completions_cost": 0.00711
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "main_issue": "Whether and how Agent D can keep cooking strong-smelling devil curry given the smell affecting A, B and C, and what arrangement (timing, notice, avoiding laundry days) resolves it.",
+  "pairs": {
+    "A-B": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "Both complain about the smell (T1, T2); B says the after-7 timing A proposed doesn't help (T8), but B accepts D's notice arrangement (T16). They never directly clash.",
+      "roles": "A-B",
+      "cultures": "Malay - Chinese",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-C": {
+      "start": 0.5,
+      "end": 0.5,
+      "engaged": false,
+      "moved": "neither",
+      "evidence": "Both complain about the smell (T1, T3). C says the after-7 timing doesn't help (T9). C ends with the laundry-day avoidance (T23), and A is silent on it.",
+      "roles": "A-C",
+      "cultures": "Malay - Indian",
+      "includes_D": false,
+      "change": 0.0
+    },
+    "A-D": {
+      "start": 0.3,
+      "end": 0.7,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "A asks D to cook after 7 or at weekends (T5). D agrees (T6). A thanks D (T7). D later adds notice and laundry-day avoidance (T13, T27), and A says nothing against these.",
+      "roles": "A-D",
+      "cultures": "Malay - Eurasian",
+      "includes_D": true,
+      "change": 0.4
+    },
+    "B-C": {
+      "start": 0.6,
+      "end": 0.5,
+      "engaged": true,
+      "moved": "neither",
+      "evidence": "B says 'the smell still comes into my room' (T8). C replies 'Same for me' (T9). They end with different fixes: B accepts notice (T16), C wants laundry days avoided (T23).",
+      "roles": "B-C",
+      "cultures": "Chinese - Indian",
+      "includes_D": false,
+      "change": -0.1
+    },
+    "B-D": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "D asks B about timing (T10). B asks for notice (T12). D agrees (T13). B says 'that works for me' (T16).",
+      "roles": "B-D",
+      "cultures": "Chinese - Eurasian",
+      "includes_D": true,
+      "change": 0.9
+    },
+    "C-D": {
+      "start": 0.0,
+      "end": 0.9,
+      "engaged": true,
+      "moved": "D",
+      "evidence": "C rejects notice (T14) and moving the laundry (T18, T21). D offers to avoid Mon/Wed/Fri (T22). C requests it (T23) and D agrees (T27).",
+      "roles": "C-D",
+      "cultures": "Indian - Eurasian",
+      "includes_D": true,
+      "change": 0.9
+    }
+  }
+}
