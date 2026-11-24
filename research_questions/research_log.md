@@ -1411,3 +1411,90 @@ Proposed to the user at handoff, not yet chosen:
   text.
 - Role IDs A-D are stable in data; display names differ by configuration (C0 neutral;
   C1-C4 follow the background label).
+
+## 2026-11-24/25: haze society project (moved from CLAUDE.md section 1 on 2026-11-25, word for word)
+
+**Prof meeting outcome (user, 2026-11-24):** the culture-work conclusion is accepted (culture work closed). The
+project now focuses on the haze project. Prof's written feedback: (1) confirm the backbone and that agents cannot
+search (checked: Gemini 2.5 Pro via OpenRouter, no tools, no `:online`/web plugin, haze agents only THINK/TALK/DONE);
+(2) never judge "reproduced" from one run, report how often each reaction appears across runs; (3) quantitative
+per-agent, per-stage variables (anger 1-5, blame target, action proposed: boycott / legal action / apology ...);
+(4) main figure: per-country curves over the news stages, averaged across runs, with real events marked. The Prof
+also suggested a **society system** (citizens, governments etc., where some people can talk to some and not others);
+planning started 2026-11-24, nothing built. **Goal (user, 2026-11-24): "make a better simulator that can
+predict next actions".** User wants Brunei kept (it was affected) and affected business owners and others added.
+Decided 2026-11-24: Brunei gets 2 agents (1 government, 1 ordinary citizen); cast of about 12-14 (parents, business
+owners, Indonesian smallholder, plantation manager, residents, one government per country); **rolling-forecast
+design** (feed real history up to a cutoff stage, then every agent incl. governments acts freely, compare with the
+next real steps; repeat over several cutoffs and runs). 2026 is the held-out test; never tune on its later stages.
+Old episodes (2013/2015/2019) as practice or recall check: user said not needed. **Design note:
+`research_questions/haze_society_design.md`** (draft, 13 agents, channels, cutoffs, costs; awaiting review). User decided 2026-11-24: English only, one model
+(Gemini 2.5 Pro) for every agent, generic governments ("the Government of X"), batch size chosen after the pilot.
+**Society engine built 2026-11-24, not run:** `research_questions/society/` (preset HS1 in `haze_society.py`,
+`engine.py` with `ChannelWorld`), CLI `tools/run_society.py`, prompt `prompts/tiny_person_society.mustache`
+(one line changed from the pilots' template), tests `tests/unit/test_haze_society.py` (6; all 229 pass). Separate
+from the 4-agent engine, so no old hash changed. Memory window raised to 40 and news kept in the persona
+(`news_so_far`), because TinyTroupe shows only the last 20 memories. Coder rubric now v3 (allows governments). Any
+offline test that builds agents must disable `enable_memory_consolidation` (as `configure_simulation_runtime`
+does), or TinyTroupe calls the model. **Society pilot 1 (2026-11-24, user approved, `outputs/society-hs1-pilot1`, $4.14 for 182 calls, 32 min; coding
+$0.24 in `haze-coding-v3-society-pilot1-a`; read in full incl. thoughts):** mechanics work (channels respected, no
+leaks, agents know where they are; Indonesian government recalled the stage 3 Greenpeace list in free play, so the
+news_so_far fix works). History rounds: cross-border sympathy in the feed; anger rose against each citizen's OWN
+government (Kelvin: "They don't care about us. Only about the international image and the money from F1"); Indonesia
+group: Sutrisno fears scapegoating ("always the small farmer"), privately "clearing land is how we make money",
+never says burning; Andreas privately "making excuses for the burners" but stays conciliatory; Budi after Greenpeace
+"It's not only our fault". Free play: four near-identical government statements, citizens mocked them ("'Monitoring
+the situation' doesn't pay my staff's salaries"), governments then competed on relief packages and the diplomatic
+channel agreed unanimously every round (identical three-part packages). Matches reality loosely: Singapore invoked
+the Transboundary Haze Pollution Act in its first statement (real notices 16 Oct), Indonesia "firm action against any
+parties, domestic or foreign", masks. Misses: nobody outside Indonesia blamed Indonesia or its government, aloud or
+in thought (real Malaysians did; 2019 poll 84%); no Indonesian defensiveness or friction between governments;
+Indonesia did not accept foreign help. Caveat: cutoff 3 stops before the "oxygen" remark (stage 4), which drove much
+of the real cross-border anger. Design problems: governments are homogeneous PR voices; talk drifted to domestic
+relief packages (citizens' economic demands dominate what governments read); time is vague in free play (citizens
+invent "'next week' for two months"); turn order put Singapore's government last in round 9, so citizens attacked
+its "silence". **HS2 drafted 2026-11-24 (user asked; not run):** dated rounds, governments
+first in the feed, and sourced pre-2026 government facts (design note section 9, which flags the Indonesia 2013
+"like a child" line for the user's decision). Next: user reviews the wording; then a history-only pilot through
+stage 4 (about $3) was proposed.
+**HS2 history pilot (2026-11-25, user approved; both flagged lines kept; `outputs/society-hs2-history4`, stages 1-4
+real, no free play, $2.73 for 120 calls; coding $0.18 in `haze-coding-v3-society-hs2-history4-a`; read in full incl.
+thoughts):** dates worked ("Another week and a half gone"). Stages 1-3 as pilot 1 (sympathy across borders; Indonesians
+defensive at the Greenpeace list: Budi "their own people are helping burn our forests", Dewi "infuriating").
+At the "oxygen" remark (stage 4) cross-border anger appeared: Nur Aqilah "Tell that to the parents of sick children",
+Kelvin "disgusting"; all 7 public-feed citizens backed the MP's boycott, Indonesians Budi and Dewi too; Indonesians
+turned on their own government ("shameful", "embarrassing"); in the Indonesia group Andreas and Sutrisno opposed a
+boycott for jobs. Then Lim reframed it "this isn't about countries. It's us, the ordinary people, against the
+companies and the governments" and everyone agreed. Versus reality: anger at "oxygen", Indonesians blaming their own
+government and the boycott reproduced; but the real boycott hit Indonesian brands (national, partly a football
+rivalry), here it targeted "companies on the list" incl. Singaporean and Malaysian ones; no Indonesian apology; no
+nationalist counter-reaction. **Design artifact found:** citizens are told their government reads their group, but
+governments cannot speak before the cutoff, so "@Government of Singapore ... still no reply" became a major grievance
+(SG and MY citizens' anger at their own governments is partly this). Business owners escalated to "my business is
+finished" by stage 3-4.
+**HS3 (2026-11-25, user approved: "make the fix and run it, only run the test, do not run the batch yet"):** HS2 with
+governments monitoring their national groups silently (`hidden_readers`: they receive the group's lines; the
+setting, turn cue and citizens' contact lists no longer mention them; government facts say "its members are not told
+this"). HS1/HS2 hashes pinned in tests (234 pass). Free-play test launched: `outputs/society-hs3-pilot1` (cutoff 3, 4
+free rounds, about $4.2-4.5). **No batch until the user says so.**
+**HS3 test result (`outputs/society-hs3-pilot1`, $4.16 for 182 calls; coding $0.20 in
+`haze-coding-v3-society-hs3-pilot1-a`; read in full incl. government thoughts):** the fix worked (no "@Government ...
+no reply" grievance; citizens' anger at their own governments lower before free play). Governments differ a little
+now: Indonesia framed it as "an exceptionally difficult" El Nino year (coded as defending own country; real "this is
+truly nature" came on 10 Oct, inside this free-play window, and was not delivered) and proposed joint firefighting and
+data sharing (real: accepted foreign help 15 Oct); Singapore pushed "concrete and transparent enforcement actions
+against the companies responsible" (real notices 16 Oct) and did so in the public feed, which Indonesia privately
+called moving "our private discussion into the public feed" on a "sensitive issue": the only friction, in thought
+only. Still: every diplomatic proposal agreed unanimously; the added facts (2013 rebuke, investment, gas) never
+appeared in any thought; talk drifted again to relief for citizens (Singapore added "immediate ... mitigation" after
+the public outcry). Channel slip: Singapore wrote a message addressed "to diplomatic channel" while in the public feed
+(round 9; governments now post in the feed right after the diplomatic channel). Sutrisno silent after round 1;
+business owners "finished" by stage 2-3. **Tuning-rule caveat:** cutoff-3 pilots with 4 free rounds run to 18 Oct
+and get stage 5's physical facts in round 9, so they overlap the first test window (stage 5); the design note's
+"without touching stages 5-8" was wrong. Further behavioural tuning of governments would partly use test-window
+data; I recommended only mechanical fixes from here.
+**Stage coder built:** `tools/haze_stage_coder.py`, rubric `haze-stage-coding-v2` (v1 missed withdrawn proposals and
+overused legal action), checked on both pilots ($0.78 for four passes; outputs `haze-coding-v1-pilots-a/-b`,
+`haze-coding-v2-pilots-a/-b`; v2 passes agree anger 92%, stance 93%). Engine note: our world sends every TALK to everyone; TinyTroupe's
+`TinySocialNetwork` only changes who is listed as accessible and does not stop a broadcast, so channels need new
+routing code. Roles are fixed at A-D in the schemas, so more than four agents needs the engine generalised.

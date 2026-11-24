@@ -6,7 +6,7 @@ with every run and decision, is in **`research_questions/research_log.md`** (the
 2026-11-19); look there for detail behind anything below. `reference folders/handover.md` covers the project before
 2026-11-03. Nothing here is evidence about real cultural groups.
 
-## 1. Where things stand (2026-11-20)
+## 1. Where things stand (2026-11-25)
 
 **Question (user):** when LLM agents resolve a conflict, does cultural difference change the way they resolve it?
 Settings are in Singapore; cultures are plain labels ("Malay", not "Singaporean Malay"). Supervisor: Shaoyang Xu
@@ -26,7 +26,65 @@ Settings are in Singapore; cultures are plain labels ("Malay", not "Singaporean 
 6. **One-of-each rotation rooms** (S125-S161, 37 runs, 2026-11-20): every room has one agent of each culture and the
    need rotates through all four. Done: no culture pair differs (cleanest test; details below under "One-of-each
    rotation rooms").
-7. **Haze project** (S123-S124): built, two pilots of S123 run and read (details below). Next steps not chosen.
+7. **Haze project** (2026-11-16 on): four-citizen pilots S123 (2026-11-19), then a 13-agent society simulator
+   (presets HS1-HS4, three pilots, 2026-11-24/25). **The main focus since the Prof meeting (2026-11-24)**; see "Haze
+   society project" below. Batch not yet approved.
+
+**Prof meeting (2026-11-24):** culture conclusion accepted, culture work closed; focus now the haze project. Prof's
+feedback: (1) say the backbone and that agents cannot search (checked: Gemini 2.5 Pro via OpenRouter, no tools, no
+`:online` or web plugin; agents only THINK/TALK/DONE); (2) report how often each reaction appears across runs, never
+judge from one run; (3) per-agent, per-stage variables (anger 1-5, blame target, action proposed); (4) main figure:
+per-country curves over the stages, averaged across runs, real events marked; plus a society where some people can
+talk to some others and not to everyone. **Goal (user): "make a better simulator that can predict next actions".**
+
+**Haze society project (2026-11-24/25).** Design note `research_questions/haze_society_design.md` (cast, channels,
+cutoffs, costs; section 9 sources every government fact). Dated record of every run and decision:
+`research_log.md`, section "2026-11-24/25".
+- **User decisions:** rolling forecast (real news to a cutoff stage, then everyone incl. governments acts freely;
+  compare with the next real steps, over several cutoffs and runs); 2026 is the held-out test, never tune on its later
+  stages; no old episodes (2013/2015/2019) as practice; English only; one model (Gemini 2.5 Pro) for every agent;
+  generic governments ("the Government of X", no named officials); batch size chosen after the pilot; government
+  facts approved, including the flagged Indonesia 2013 "like a child" line and both pipeline-gas lines.
+- **Cast (13):** Singapore: Kelvin Tan (parent), Ahmad Faizal (events business), government. Malaysia: Farhana
+  (parent), Lim Chee Keong (tour agency), government. Indonesia: Budi Santoso (driver), Dewi Lestari (teacher,
+  Pontianak), Sutrisno (oil-palm smallholder), Andreas Wijaya (estate manager, Singapore-listed group), government.
+  Brunei: Nur Aqilah (parent), government.
+- **Channels:** private Singapore, Malaysia and Indonesia groups; a public regional feed (Sutrisno and Andreas only
+  read it); a diplomatic channel for the governments. Governments speak only after the cutoff (before it their
+  decisions are in the news); after it only physical facts (air, fires, rain) are delivered.
+- **Presets** (`research_questions/society/haze_society.py`; each run's preset hash pinned in tests; later switches
+  are left out of the hash while off): HS1 (pilot 1); HS2 = dated rounds, governments first in the feed, sourced
+  pre-2026 government facts; HS3 = HS2 with governments monitoring their national groups silently
+  (`hidden_readers`); **HS4 = HS3 plus a line in each turn cue saying whether the channel is public or private
+  (mechanical fix 2026-11-25, not yet run). HS4 is the candidate frozen design.**
+- **Runs** (all read in full, thoughts included; one run each, so describe, do not count): pilot 1, HS1,
+  `outputs/society-hs1-pilot1` (cutoff 3 + 4 free rounds, $4.14); HS2 history pilot `outputs/society-hs2-history4`
+  (stages 1-4, no free play, $2.73); HS3 test `outputs/society-hs3-pilot1` (cutoff 3 + 4 free rounds, $4.16).
+  Coding $0.18-0.24 each (`outputs/haze-coding-v3-*`). About $0.023 per agent turn; 15 turns a round before the
+  cutoff, 23 after.
+- **What they show:** mechanics work (no leaks; news recalled at the cutoff). Before the "oxygen" remark:
+  cross-border sympathy, no blame of Indonesia from outside, Indonesians defensive at the Greenpeace list. At the
+  remark (HS2): anger across borders, all 7 feed citizens backed a boycott (Indonesians too), Indonesians turned on
+  their own government, then "this isn't about countries" solidarity; the real boycott was national (Indonesian
+  brands), the simulated one hit "companies on the list"; no Indonesian apology, no nationalist pushback.
+  Governments: identical cooperative PR voices in HS1; in HS3 a little difference (Indonesia's El Nino framing and
+  joint-firefighting offer; Singapore pushing enforcement in public; Indonesia privately calling it a "sensitive
+  issue"), but every diplomatic proposal was agreed unanimously, the added facts were never used, and talk drifted to
+  relief for citizens. Business owners "finished" by late September; Sutrisno often silent.
+- **Tuning stopped (2026-11-25, my recommendation; the user asked only for the mechanical fix):** cutoff-3 pilots
+  with 4 free rounds reach 18 Oct and get stage 5's physical facts, so they overlap the first test window; more
+  behavioural tuning would partly use test data. The remaining gaps (unanimous governments, relief drift, no national
+  hostility) are to be measured as failure modes.
+- **Next (user's call; no batch until the user says so):** batch on HS4 with 2 cutoffs (after stage 4, 13 Oct; after
+  stage 6, 21 Oct). Forking (2-3 history runs per cutoff, forecasts started from `<run>-cutoff.json`): about $35 for
+  5 forecasts each, about $65 for 10 each; without forking about $55 for 5 each. Then stage coding and the main
+  figure. A forecast coder (each real next step yes / partly / no, with a quote) is still to build.
+- **Tools and engine notes:** stage coder `tools/haze_stage_coder.py`, rubric `haze-stage-coding-v3` (v2 checked on
+  the four-citizen pilots: two passes agree on anger 92%, stance 93%; v3 only rewords the opening for governments and
+  channels; a pass once dropped one agent's code). `research_questions/society/` is separate from the 4-agent engine,
+  so no old hash changed. Memory window 40 and news kept in the persona (`news_so_far`), because TinyTroupe shows only
+  the last 20 memories. Any offline test that builds agents must disable `enable_memory_consolidation`, or
+  TinyTroupe calls the model.
 
 **Presentation to the Prof (2026-11-20, the user's slides "Dar Research Presentation").** Slides: recap; how
 scenarios were simulated; agreement scores (left: the 37 one-of-each rooms; right: the 72 majority/minority rooms
@@ -42,7 +100,7 @@ faith named, never race). Two slide lines flagged as unsupported, user not yet a
 Eurasian" (p = 0.44) and slide 5 "potentially: Malays and Indian agents can agree better" (Malay - Indian is lowest
 in the one-of-each rooms). Charts for slides: `research_questions/figures/` (see key files).
 
-**Next: the haze project (Shaoyang's brief, 2026-11-16/17).** Extend to real-world events involving Singapore and
+**Haze project origin and the four-citizen pilots (Shaoyang's brief, 2026-11-16/17; superseded by the society).** Extend to real-world events involving Singapore and
 other countries, first example the transboundary haze (Singapore, Indonesia, Malaysia). Each agent is an average
 citizen of a country, not an individual. Still about conflict and resolution: "examine whether agents representing
 citizens from different countries exhibit similar disagreements, negotiation patterns, or cooperation outcomes to
@@ -112,14 +170,12 @@ Everything earlier (152 run folders) is in `research_questions/outputs_old/`; ol
 `outputs/s46-...` for those. `runner.py` and `run_cases.py` write to `outputs/` and skip existing folders there only,
 so always use fresh experiment IDs.
 
-**Git:** the user commits and pushes themselves (never push; stage by name). Last commit `a54c6d2` (2026-11-19). On
-2026-11-20 the user said they would push and resume on another device; uncommitted at that point: the rotation
-code (s00, s03-s06, s08, s11-s13, s15 presets, `case_common.py`, `__init__.py`, tests), the haze code
-(`haze_presets.py`, `haze_2026_sources.md`, `simulation.py`, `common.py`, `experiment_presets.py`, `run_cases.py`),
-the tools (`rotation_report.py`, `minority_majority_csv.py`, `plot_majority_minority.py`, `run_inventory.py`), the
-CSVs (`all_runs.csv`, `good_runs.csv`, `minority_majority_runs.csv`), `research_questions/figures/`, and outputs
-(37 `s1NN-case-rt1-*` folders, `rotation-sonnet-a/-b`, `rotation-food-sonnet-a/-b`, `s123-case-v1-hz1`,
-`s123-case-v2-hz1`). If any are missing on the new device, they were not committed.
+**Git:** the user commits and pushes themselves (never push; stage by name). Last commit `77850e8` (2026-11-20),
+which holds all the 2026-11-20 work (checked 2026-11-24). Uncommitted since: `CLAUDE.md`, `research_log.md`,
+`research_questions/haze_society_design.md`, `research_questions/society/`, `prompts/tiny_person_society.mustache`,
+`tools/haze_stage_coder.py`, `tools/run_society.py`, `tests/unit/test_haze_society.py`, and outputs
+(`society-hs1-pilot1`, `society-hs2-history4`, `society-hs3-pilot1`, their `.log` files, `haze-coding-v1-pilots-a/-b`,
+`haze-coding-v2-pilots-a/-b`, `haze-coding-v3-society-*`).
 
 **Background reading already done** (summaries in the log, "Wenxuan Zhang papers"): *Beyond Alignment* (explicit
 culture prompts never reach human value diversity; interaction reduces it), *Multilingual Agent-Based World Modeling*
@@ -246,8 +302,15 @@ launched 2026-11-20 (about $20).
   after it; the qualifies, faith-named, reason and tldr notes are in `good_runs.md`). Add the rotation runs
   (S125-S153) for scenarios 4, 6, 8, 11, 12, 13, 15 and scenario 0's Eurasian D when they are read. Scenarios 3 and 5
   (food clash) and the language variants of 10 have no one-of-each runs and none are planned.
-- **Tests (223 pass):** `python -m pytest tests/unit/test_conflict_pipeline.py tests/unit/test_research_question_presets.py
-  tests/unit/test_s26_chope_priorities.py tests/unit/test_move_coding_and_label_probe.py -q --no-cov`.
+- **Society runs (haze):** `python research_questions/tools/run_society.py --preset HS4 --out <new-folder>
+  --cutoff-stage 4 --free-rounds 4 --runs R01` (writes `outputs/<folder>/transcripts`, keeps
+  `checkpoints/R01-cutoff.json`); forecasts from a saved cutoff: same command with `--runs F01 F02 --fork-from
+  research_questions/outputs/<folder>/checkpoints/R01-cutoff.json`. Prints each run's cost.
+- **Haze stage coder:** `python research_questions/tools/haze_stage_coder.py --out <new-id> --folders <run folders>`
+  (Sonnet 5.5; one call per stage; refuses an existing `--out`; writes `codes_long.csv`). About $0.20 per 13-agent run.
+- **Tests (236 pass):** `python -m pytest tests/unit/test_conflict_pipeline.py tests/unit/test_research_question_presets.py
+  tests/unit/test_s26_chope_priorities.py tests/unit/test_move_coding_and_label_probe.py tests/unit/test_haze_society.py
+  -q --no-cov`. (`pytest --timeout` is blocked by the seleniumbase plugin; use the shell's `timeout`.)
   `test_s26_chope_priorities.py` holds a block per scenario family (faith in biography and setting, no conduct words in
   needs, fixed casts, first speaker).
 - **Provenance:** each transcript stores `provenance.scenario_configuration_sha256` (scenario plus cast); recompute with
@@ -300,10 +363,13 @@ biographies (`_secular_cast`), BR cells state each faith (`_cast`).
 Other modules: `runner.py` (CLI, provenance), `simulation.py` (worlds, agent persona), `evaluator.py`, `coding.py` and
 `coding_report.py` (move coding `move-coding-v3`), `debrief.py`, `label_probe.py` and `label_probe_posthoc.py`,
 `experiment_presets.py`, `models.py`, `storage.py`, `prompts/` (agent template `tiny_person_conflict_pilot.mustache`).
+`society/` (haze society: `haze_society.py` presets HS1-HS4, `engine.py` with `ChannelWorld`, rounds, cutoff,
+checkpoints and forks; prompt `prompts/tiny_person_society.mustache`, the pilots' template with one line changed).
 
 Documents: `scenarios.md` (designs and build rules), `good_runs.md` (per-run tables for every case and
 majority/minority run; add every new run), `all_runs.csv`, `culture_pair_inventory.csv`, `culture_pair_runs.csv`,
-`research_log.md` (history), `calibration_notes.md` (early, timed runs removed).
+`research_log.md` (history), `calibration_notes.md` (early, timed runs removed). Haze: `haze_2026_sources.md` (timeline, sources,
+ground truth), `haze_society_design.md` (society design, government-fact sources).
 
 ## 5. Build rules: check every one before spending (each was learned by wasting runs)
 
@@ -445,14 +511,11 @@ structure, not culture.
 
 ## 8. Open options (none chosen unless stated)
 
-- **Haze project** (section 1): two pilots done. Options put to the user: (A) scale up as is (5 runs each of S123
-  and S124, about $12, plus a stage-by-stage coder for blame, emotion and demands); (B) first test a less intimate
-  setting or citizens who are not all parents; (C) take both pilots to the Prof and let the Prof choose the setting
-  (my suggestion, with the stage coder built meanwhile). The user's slides list "improve haze scenario" and "prepare
-  the AgentTown visual demo" as next steps. Ground truth added 2026-11-20: Malaysiakini readers mocked Prabowo's
-  "not our fault" apology ("what about next year's haze?"); no ordinary Indonesian criticism of the "oxygen" remark
-  was found, only NGOs (Walhi: "disguise environmental and corporate crimes behind natural causes"). Not yet added to
-  `haze_2026_sources.md`.
+- **Haze batch** (section 1, "Next"): HS4, 2 cutoffs, with or without forking; awaiting the user. Ground truth to
+  add to `haze_2026_sources.md` (found 2026-11-20): Malaysiakini readers mocked Prabowo's "not our fault" apology
+  ("what about next year's haze?"); no ordinary Indonesian criticism of the "oxygen" remark was found, only NGOs
+  (Walhi: "disguise environmental and corporate crimes behind natural causes"). The user's slides also list "prepare
+  the AgentTown visual demo".
 - Slides 4 and 5 lines flagged in section 1 (Indian - Eurasian, Malay - Indian agreeing better): suggest the user
   drops or rewords them.
 - Rule-matched scenario (design 2): each culture's need as an equally strong rule (Chinese folk rules: mourning
