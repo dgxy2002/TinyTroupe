@@ -1,0 +1,160 @@
+{
+  "rubric": "haze-forecast-coding-v1",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B01",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5099,
+    "completion_tokens": 1411,
+    "total_tokens": 6510,
+    "cost": 0.024308,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.024308,
+      "upstream_inference_prompt_cost": 0.010198,
+      "upstream_inference_completions_cost": 0.01411
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "partly",
+      "who": "Indonesia government (forecast)",
+      "where": "forecast",
+      "quote": "Indonesia will quietly accept \"technical assistance\" from Japan or another neutral party"
+    },
+    "G2": {
+      "score": "partly",
+      "who": "Indonesian National Police (forecast)",
+      "where": "forecast",
+      "quote": "the Indonesian National Police will announce the arrest of several more plantation managers and the suspension of the license of one of the 95 companies under investigation"
+    },
+    "G3": {
+      "score": "yes",
+      "who": "Singapore government, Grace Fu / NEA (forecast)",
+      "where": "forecast",
+      "quote": "the National Environment Agency (NEA) has served legal notices on several Singapore-linked companies on the Greenpeace list"
+    },
+    "G4": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G7": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "yes",
+      "who": "Malaysian public/MP (forecast)",
+      "where": "forecast",
+      "quote": "The call for boycotts by the MP will gain traction."
+    },
+    "C2": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Singapore Ministry of Education",
+      "action": "Schools move to home-based learning from 19 Oct if PSI is very unhealthy; MOH advises work from home",
+      "quote": "schools will move to home-based learning for a few days starting from Monday, 19 October",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore government",
+      "action": "Distributes N95 masks to vulnerable and lower-income households through community centres",
+      "quote": "The government will begin distributing N95 masks to vulnerable and lower-income households through community centres.",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysian government (Foreign Minister Zambry)",
+      "action": "Summons the Indonesian ambassador to protest the 'oxygen' remark",
+      "quote": "will formally summon the Indonesian ambassador to Wisma Putra to lodge a protest",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian Minister of Domestic Trade",
+      "action": "Tacit endorsement of the boycott: consumers have the right to choose",
+      "quote": "consumers have the right to choose, effectively giving a tacit government endorsement to the boycott movement",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian PM Anwar Ibrahim",
+      "action": "Urges ASEAN to enforce the haze agreement more robustly",
+      "quote": "urging the ASEAN Secretariat to implement more robust enforcement mechanisms",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian Foreign Minister Retno Marsudi",
+      "action": "De-escalation statement that the 'oxygen' remark was one official's personal opinion; no apology",
+      "quote": "likely stating it was the personal opinion of one official",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian public",
+      "action": "#BoikotJerebu campaign and 'haze-free' shopping lists naming brands tied to Greenpeace-listed companies",
+      "quote": "#BoikotJerebu (#BoycottHaze) will become a trending hashtag",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei Ministry of Education",
+      "action": "Extends home-based learning for all schools by a week",
+      "quote": "announce an extension of home-based learning for all schools for another week",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian nationalist netizens",
+      "action": "Rally behind the 'oxygen' remark with memes mocking Singapore and Malaysia",
+      "quote": "rally behind Syahganda Nainggolan, creating memes that mock Singapore and Malaysia",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian government",
+      "action": "Publicly declines personnel and equipment offers from Malaysia and Singapore, citing sovereignty",
+      "quote": "continuing to publicly decline offers of personnel and equipment from Malaysia and Singapore",
+      "status": "not_real"
+    }
+  ]
+}

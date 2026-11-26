@@ -1,0 +1,178 @@
+{
+  "rubric": "haze-forecast-coding-v2",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B03",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5443,
+    "completion_tokens": 1664,
+    "total_tokens": 7107,
+    "cost": 0.027526,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.027526,
+      "upstream_inference_prompt_cost": 0.010886,
+      "upstream_inference_completions_cost": 0.01664
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "no",
+      "who": "Indonesian government (BNPB spokesperson)",
+      "where": "forecast",
+      "quote": "they will still not formally accept Malaysia's offer of assistance"
+    },
+    "G2": {
+      "score": "partly",
+      "who": "Indonesian National Police",
+      "where": "forecast",
+      "quote": "the National Police will announce the arrest of 15-20 more individuals, mostly smallholders and a few mid-level plantation managers"
+    },
+    "G3": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G4": {
+      "score": "yes",
+      "who": "Singapore government (SGX)",
+      "where": "forecast",
+      "quote": "The Singapore Exchange (SGX) will also formally query the listed companies named in the report"
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "yes",
+      "who": "Malaysian PM Anwar Ibrahim",
+      "where": "forecast",
+      "quote": "Malaysia is exploring legal avenues under the ASEAN Agreement on Transboundary Haze Pollution"
+    },
+    "G7": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "Malaysian public and consumer groups",
+      "where": "forecast",
+      "quote": "Consumer groups will publish lists of products produced by the companies named in the Greenpeace report."
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Indonesian citizens in fire-affected provinces and WALHI",
+      "where": "forecast",
+      "quote": "accusing their own government of incompetence and corruption"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Indonesian National Police",
+      "action": "Announce 15-20 more arrests and seal land of 3-4 more companies",
+      "quote": "the National Police will announce the arrest of 15-20 more individuals",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysia (Foreign Minister)",
+      "action": "Summon the Indonesian ambassador and hand over a diplomatic protest note",
+      "quote": "summon the Indonesian Ambassador to Malaysia to Wisma Putra",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore NEA/MSE",
+      "action": "Write to Indonesia for hotspot data and contact Singapore-linked companies named in the Greenpeace report for information",
+      "quote": "has also contacted the Singaporean-linked companies named in the Greenpeace report",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Singapore government",
+      "action": "Distribute N95 masks to vulnerable households through community centres",
+      "quote": "the distribution of N95 masks from the national stockpile to vulnerable and lower-income households",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysian government",
+      "action": "Extend school closures in Selangor, KL and other states",
+      "quote": "School closures in Selangor, Kuala Lumpur, and other affected states will be extended",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysian Minister Nik Nazmi",
+      "action": "Say the government does not endorse the boycott, and that the firefighting offer stands",
+      "quote": "the government does not officially endorse a public boycott",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore MAS",
+      "action": "Remind financial institutions of environmental risk duties in lending, aimed at banks financing implicated firms",
+      "quote": "The Monetary Authority of Singapore (MAS) will issue a statement reminding financial institutions",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian Foreign Ministry",
+      "action": "Call for regional unity and warn against counter-productive actions",
+      "quote": "calling for \"regional unity\" and warning against \"counter-productive actions\"",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian public",
+      "action": "Nationalist rally behind the 'oxygen' remark, #BelaIndonesia trending",
+      "quote": "The hashtag #BelaIndonesia (#DefendIndonesia) will trend.",
+      "status": "not_real"
+    },
+    {
+      "actor": "WALHI",
+      "action": "Hold symbolic protests outside the Ministry of Environment and Forestry",
+      "quote": "will hold small, symbolic protests outside the Ministry of Environment and Forestry",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian public",
+      "action": "#HazeFreeProducts campaign and pressure on supermarkets over sourcing",
+      "quote": "a grassroots campaign will emerge with the hashtag #HazeFreeProducts",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei government",
+      "action": "Co-sign an ASEAN joint statement and avoid unilateral condemnation of Indonesia",
+      "quote": "Brunei will co-sign any joint statement issued through the ASEAN Secretariat",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore Ministry of Education",
+      "action": "Switch to home-based learning if PSI goes above 300",
+      "quote": "schools will immediately switch to home-based learning",
+      "status": "not_real"
+    }
+  ]
+}

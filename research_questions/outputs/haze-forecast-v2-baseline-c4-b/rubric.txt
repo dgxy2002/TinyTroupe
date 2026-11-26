@@ -1,0 +1,72 @@
+You score a forecast of what happened in Southeast Asia's 2026 haze crisis in the days after 13 October
+2026, against what really happened. The forecast is either (a) a transcript of a simulation in which people and the
+governments of Singapore, Malaysia, Indonesia and Brunei talk in online channels, or (b) a written forecast. Treat an
+action done or announced in the simulation and a prediction in a written forecast the same way.
+
+For EACH target below, give "score": "yes", "partly" or "no", following its rules exactly; "who": who did or predicted
+it; "where": the round and channel (simulation) or "forecast"; "quote": the shortest exact quote that supports the
+score. No quote means "no". The quote must itself show what makes the score "yes" rather than "partly" (for C1,
+that the boycott is of Indonesian products or brands); if it does not, the score is at most "partly". The actor must match: a citizen saying the government should do something is not the
+government doing it. Vague lines ("we will act against those responsible", "we are investigating") do not earn
+"partly" unless the target's rule says so.
+
+TARGETS:
+G1 (Government of Indonesia, about 15 Oct): Indonesia agrees in principle to accept foreign firefighting help (offers had been left unanswered).
+  yes: The Indonesian government says it accepts, approves or welcomes other countries' firefighting help (aircraft, personnel) for its fires.
+  partly: The Indonesian government proposes coordinating firefighting with neighbours or says it is open to help, without accepting it.
+G2 (Government of Indonesia, 14-16 Oct): Indonesian police name 223 people and 9 companies as suspects.
+  yes: The Indonesian government says it has named, charged or arrested suspects (people or companies), or gives a number of suspects.
+  partly: The Indonesian government says it will name, charge or prosecute specific suspects soon. General lines such as 'investigating all parties' or 'firm action against those responsible' do NOT count.
+G3 (Government of Singapore, 15-19 Oct): Singapore serves notices under its Transboundary Haze Pollution Act on 7, then 10, Indonesian companies.
+  yes: The Singapore government says it has sent, or is sending, legal notices or legal action under its haze law to particular companies (named or counted).
+  partly: The Singapore government says legal action under its haze law could or will follow, or that it is identifying the companies responsible. A general wish for 'accountability' does NOT count.
+G4 (Government of Singapore, 19-20 Oct): Singapore says the Singapore Exchange is questioning 7 Singapore-listed agriculture companies.
+  yes: The Singapore government says it (or its stock exchange or regulators) is questioning or investigating Singapore-listed or Singapore-based companies over links to the fires.
+  partly: The Singapore government says Singapore-linked companies will be held to account or looked into, without saying it is doing so.
+G5 (Government of Malaysia, 16 Oct): Malaysia's cabinet is told no Malaysian plantation companies are involved in the fires.
+  yes: The Malaysian government says Malaysian companies are not involved or there is no evidence they are.
+  partly: The Malaysian government says it is checking whether Malaysian companies are involved.
+G6 (Government of Malaysia, 21 Oct): Malaysia says it is open to a law like Singapore's Transboundary Haze Pollution Act.
+  yes: The Malaysian government says it is considering or open to its own law to act against companies that cause haze in Malaysia.
+  partly: The Malaysian government mentions legal options against companies in general terms.
+G7 (Government of Indonesia, 21-22 Oct): Prabowo says foreign companies are involved, threatens to expose them and to revoke foreign firms' licences.
+  yes: The Indonesian government publicly blames foreign (e.g. Singapore- or Malaysia-linked) companies, or threatens to expose or punish them or revoke their licences.
+  partly: The Indonesian government says foreign companies are among those investigated, without blame or threat.
+G8 (Government of Indonesia, 21 Oct): Prabowo rebukes 'certain countries that like to insult the Indonesian nation' over the fires.
+  yes: The Indonesian government publicly rebukes neighbouring countries or their criticism (insult, lecturing, blaming Indonesia).
+  partly: The Indonesian government pushes back mildly on blame (e.g. 'this is a regional problem', 'not only Indonesia') without rebuking anyone.
+G9 (Government of Indonesia, 22 Oct): Indonesia's energy minister says Indonesia will reconsider energy exports to countries that do not respect it.
+  yes: The Indonesian government threatens or announces cutting energy or gas exports to Singapore or another country in connection with the dispute.
+  partly: The Indonesian government links trade or energy to the dispute without a threat.
+C1 (Malaysian public, from 13 Oct, reported 26 Oct): Malaysians boycott Indonesian products (Indocafe, Sosro, Kara coconut milk).
+  yes: A Malaysian citizen calls for or commits to boycotting Indonesian products or brands (a national boycott).
+  partly: A Malaysian citizen backs a boycott of companies linked to the fires (not of Indonesian products as such).
+C2 (Indonesian public, from 12 Oct, reported 22 Oct): Indonesians apologise online to neighbours and urge them to pressure Jakarta.
+  yes: An Indonesian citizen apologises to people of other countries for the haze, or asks other countries to pressure or sue Indonesia's government.
+  partly: An Indonesian citizen publicly criticises Indonesia's own government over the fires.
+
+Then list, under "other_actions", every other major action, announcement, policy or public campaign by a government
+or a public that appears in the forecast and is not one of the targets (at most 15, most important first). For each
+give "actor", "action" (one line), "quote", and "status": "real_in_window" if it matches one of the REAL IN WINDOW
+items, "real_later" if it matches one of the REAL LATER items, otherwise "not_real". Ignore routine expressions of
+concern, health advice and statements of intent with no content.
+
+REAL IN WINDOW (14-23 October 2026), also true:
+- Singapore PM Lawrence Wong: Singapore checking which companies are responsible; legal action could follow (15 Oct)
+- Singapore opens haze shelters, hands out N95 masks, schools stop outdoor activities (by 16 Oct)
+- Former Indonesian trade minister Lutfi challenges Singapore to raid the offices of Singapore-linked firms (19 Oct)
+- Singapore minister Shanmugam: Singapore will use every legal and regulatory lever; could change laws urgently (19 Oct)
+- Indonesia identifies 97 companies suspected of involvement (about 19 Oct)
+- NEA asks 10 Singapore-registered palm oil and forestry firms for information about Indonesian links (23 Oct)
+- Malaysia's government avoids criticising Indonesia; its foreign minister rules out formal protests or legal action (date not confirmed)
+- Malaysian school closures across several states
+
+REAL LATER (after 23 October 2026):
+- Indonesia cuts pipeline gas to Singapore by about 8-9% (24 Oct); 'Do not lecture us' (26 Oct)
+- Singapore and Indonesia agree a joint task force to follow the money, and ministerial hotlines (27 Oct)
+- Singapore amends its haze law, raising the maximum fine to S$20 million (4 Nov)
+- Prabowo apologises to Malaysia and Singapore at the ASEAN summit: 'It is not our fault' (15 Nov)
+
+Reply with JSON only:
+{"targets": {"G1": {"score": "no", "who": "", "where": "", "quote": ""}, ...},
+"other_actions": [{"actor": "", "action": "", "quote": "", "status": "not_real"}]}

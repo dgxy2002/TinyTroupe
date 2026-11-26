@@ -6,7 +6,7 @@ with every run and decision, is in **`research_questions/research_log.md`** (the
 2026-11-19); look there for detail behind anything below. `reference folders/handover.md` covers the project before
 2026-11-03. Nothing here is evidence about real cultural groups.
 
-## 1. Where things stand (2026-11-25)
+## 1. Where things stand (2026-11-27)
 
 **Question (user):** when LLM agents resolve a conflict, does cultural difference change the way they resolve it?
 Settings are in Singapore; cultures are plain labels ("Malay", not "Singaporean Malay"). Supervisor: Shaoyang Xu
@@ -75,10 +75,124 @@ cutoffs, costs; section 9 sources every government fact). Dated record of every 
   with 4 free rounds reach 18 Oct and get stage 5's physical facts, so they overlap the first test window; more
   behavioural tuning would partly use test data. The remaining gaps (unanimous governments, relief drift, no national
   hostility) are to be measured as failure modes.
-- **Next (user's call; no batch until the user says so):** batch on HS4 with 2 cutoffs (after stage 4, 13 Oct; after
+- **Earlier plan, superseded by the test below:** batch on HS4 with 2 cutoffs (after stage 4, 13 Oct; after
   stage 6, 21 Oct). Forking (2-3 history runs per cutoff, forecasts started from `<run>-cutoff.json`): about $35 for
   5 forecasts each, about $65 for 10 each; without forking about $55 for 5 each. Then stage coding and the main
   figure. A forecast coder (each real next step yes / partly / no, with a quote) is still to build.
+- **First prediction test (2026-11-26, $10.60; design note section 12):** cutoff after stage 4, targets re-researched
+  and fixed in `tools/haze_forecast_coder.py` (rubric v2; 9 government + 2 public targets, 14-23 Oct). Baseline (10
+  direct forecasts, `tools/haze_baseline_forecast.py`): 2.1 clear hits + 2.1 partly, 9.2 false alarms per forecast.
+  Society HS4 (R01 + 2 forks, `outputs/society-hs4-c4-test1`): 0.7 clear hits + 2.0 partly, 5.3 false alarms.
+  **No-go by the agreed rule; no batch.** Society governments stay vague (statements, meetings, relief); neither
+  method predicted Indonesia's escalation (rebuke, energy threat). Public/private slip persists in HS4. Cutoff 4 is
+  now seen; cutoff 6 is still an unseen test. Next step not chosen.
+- **Reframed (user, 2026-11-26): map where the simulator can and cannot predict** ("it's ok if we dont predict
+  everything"). `research_questions/haze_capability_map.md` (hand tags, CAMEO-style: cooperation/conflict x
+  said/done, enforcement threatened/done, domestic; actor; specificity; script `tools/haze_capability_tags.py`).
+  Cutoff-4 patterns: society 0 specific enforcement acts per forecast (baseline 3.2); society between-country moves
+  4.0 cooperation vs 1.3 conflict (baseline 3.6 vs 4.1; real 2 vs 4); baseline puts conflict on Malaysia's government
+  (summons in 9 of 10; really restrained), neither predicts Indonesia-initiated conflict; society citizens act less
+  (1.3 public actions vs 3.8). Hypotheses H1-H6 fixed for the unseen cutoff after 21 Oct; its real events drafted and
+  tagged (some marked "recheck"); rules not yet written; no run without the user's go-ahead.
+- **Per-stage similarity approach (user, 2026-11-26):** after each news injection, compare agents' reactions with
+  real reactions using structured fields scored by an external LLM. 12 dimensions agreed (emotion, blame, stance
+  between publics, public actions, demands, diversity of views, government cooperation, conflict, specificity,
+  division within a country, triggers, framing) plus 5 simulator properties (stability, invention, parroting,
+  recall, setup effect). Coverage check done: `research_questions/haze_ground_truth_coverage.md` (all 12 survive;
+  public dimensions scoreable only for the Malaysian and Indonesian publics; stages 3-5 and 8 richest; readable:
+  The Star, Malaysiakini, Mothership, asianews.network; blocked: Jakarta Post, Malay Mail, Straits Times, CNA, SCMP;
+  use ANN/Star reprints; no scraping without the user's decision).
+- **Real public reactions classified for stages 1-4 (2026-11-26, for the user's review):**
+  `research_questions/haze_ground_truth_stages1_4.csv` (30 reactions; quote, source, read status) and `.md`
+  (summary by stage and dimension); script `tools/build_haze_ground_truth.py`. Assigned by triggering news stage;
+  public side only (governments silent before the cutoff); actor type tagged (ordinary people, NGO, commentator,
+  politician). Malaysian public: mockery, apology demands, boycott of Indonesian products at stage 4. Indonesian
+  public: apologies, blame of own government, class action, protests. Singaporean public thin; Brunei none. Found:
+  forecast target G1 is ambiguous (Indonesia approved help ~15 Oct, said 19 Oct it needed none, took none up).
+  Government moves for windows W1-W4 (by date window, 19 rows, 11 later in injected news) in
+  `haze_ground_truth_government_w1_4.csv`; later-stage file `haze_ground_truth_later.csv` started. **User keeps
+  manually saved articles in `news_source/`** (first: `independentsg.md`, Abdul Khalik's 3 Nov op-ed via The
+  Independent SG); use that folder for articles blocked to automated reading.
+- **Option B and the full-timeline run (user, 2026-11-26: "option B, then start building the stages, if all seem good
+  then do one e2e run with evaluation"):** preset **HS5** = HS4 with each update split: the four governments'
+  statements become 23 scripted, dated posts by the government agents in the public feed (real words only, from the
+  sourced timeline); the rest stays as news. `Stage.posts`; engine `post_scripted`, events of type POST; posts kept in
+  personas (`government_statements_so_far`); left out of the hash when empty (HS1-HS4 hashes pinned; 239 tests pass).
+  Full timeline = cutoff 8, 16 rounds, governments never generate. Ground truth extended to stages 5-8
+  (`haze_ground_truth_later.csv`; 54 public reactions over 8 stages; gaps MY 2/5/7, ID 8, SG 1/6/8). Similarity
+  judge `tools/haze_similarity_judge.py` (rubric `haze-similarity-v1`, Sonnet 5.5; per stage x country: 7 public
+  dimensions match/partly/mismatch/no_data + overall 0-10; wrong-stage control, judge blind to it). Run launched:
+  `outputs/society-hs5-e2e1`: **$5.35, 240 calls, read in full; evaluation about $1.85 (incl. a judge pass that
+  crashed on malformed JSON and was discarded; retry added); total about $7.20.** Results (design note section 13):
+  judge passes agree 88%; matched stages 3.65/10 vs wrong-stage control 2.69, higher in 12 of 17 pairs (sign test
+  p = 0.08, one run); best: emotion and framing (0.58 vs 0.39), worst: demands (0.20 = control) and Indonesian public
+  actions (0.08: protests, class action never appear). Anger peaks at stage 4 in every country. Reproduces how people
+  feel and frame big moments; not what they did or demanded. No further runs without the user's go-ahead.
+- **HS6 built 2026-11-26 (user: "worth seeing what they say to each other"), not run:** HS5 plus the four governments
+  taking turns in the private diplomatic channel every round (switch `governments_private_talk`; citizens never see it;
+  public words stay scripted); each government is told its own scripted posts (`post_scripted(..., tell_source=True)`).
+  19 turns a round, 304 calls for the full timeline. HS5 hash pinned; 242 tests pass. Citizens' inputs equal HS5's, so
+  an HS6 run doubles as a second reproduction replicate. **Evaluation gap (user noticed):** the judge scored 7 of the 12
+  agreed dimensions; not yet scored: government cooperation, conflict, specificity (no generated government text in
+  HS5), division within a country, triggers; and none of the 5 simulator properties.
+- **Before the HS6 run (2026-11-26, user: "let government talk but the factual news of what government say should still
+  be injected. then see if theres any more improvements then run 1 run only and score it"):** judge **v2**
+  (`haze-similarity-v2`: + triggers, + division within a country; `--government` mode scores each government's
+  private diplomatic talk at stage k against its real moves in windows k and k+1 not yet posted, with a wrong-window
+  control; v1 and v2 not pooled, so HS5 needs v2 rescoring to compare). Government ground truth extended to W1-W7
+  (`haze_ground_truth_government.csv`, 42 moves; the older `_w1_4` file is superseded). `tools/haze_properties.py`
+  (free): HS5 echo 24% of citizen lines, parroting 2%, recall 4 of 143 codes (none leaked: the one "2015" is Kelvin's
+  biography). HS5 rescored on v2 ($0.97, `haze-similarity-v2-hs5-e2e1-a/-b`): matched 3.53 vs control 2.60, 9 higher,
+  3 lower, 5 tied (p = 0.15).
+- **HS6 run and scores (2026-11-26, `outputs/society-hs6-e2e1`, read in full; run $6.83, scoring $2.34; with the HS5
+  rescore $10.14).** Design note section 14. Public v2 (`haze-similarity-v2-hs6-e2e1-a/-b`, passes agree 85%): matched
+  3.24 vs control 2.58, 10 higher, 5 lower, 2 tied (p = 0.30); triggers 0.46 vs 0.14, emotion 0.50, framing 0.45,
+  demands 0.16 vs 0.12, Indonesian actions 0.00. Government mode (passes agree 90%; Brunei has no ground truth): matched
+  3.33 vs control 2.69, 11 higher, 6 lower, 4 tied (p = 0.33); tone 0.67, anticipation 0.30, specificity 0.30 (= control).
+  Governments: unanimous until 21 Oct, inventing a joint statement; then Indonesia blocked it over Singapore's "unilateral"
+  legal notices and "extraterritorial" law (first generated Indonesian pushback, same direction as the real rebuke, but
+  after the Prabowo/Lutfi news; never a concrete measure). Misses: Indonesia accepted help on 11 Sep (really no reply
+  until 15 Oct); Singapore's C-130 cloud seeding / SCDF / satellite package looks recalled from 2015 (not in its persona).
+  Citizens (same inputs as HS5, so a replicate): anger curves by country x stage correlate 0.77 with HS5 (mean gap 0.39);
+  no boycott backed (HS5: 3 codes); echo 23%, parroting 0%; the only year recalled is Kelvin's biographical 2015. Both
+  business owners closed their businesses twice (continuity error).
+- **HS6 replicates (2026-11-26, user: "ok run the 2 runs"; `outputs/society-hs6-e2e2`, `-e2e3`, both read in full; $9.01 +
+  $8.79 incl. scoring = $17.80, estimate $18.40).** Design note section 15; tables now from
+  `tools/haze_hs6_compare.py`. Public matched vs control: run 1 3.24 vs 2.59 (p = 0.30), run 2 3.50 vs 2.32 (12/2/3, p = 0.01), run
+  3 3.65 vs 2.32 (11/1/5, p = 0.01); pairs averaged over 3 runs: 13 of 17 higher (p = 0.049). Government: 3.33/3.62/3.26
+  vs 2.69/2.75/2.90; averaged pairs 13 higher, 5 lower, 3 tied (p = 0.10). Dimensions stable across runs (matched range
+  within 0.15): triggers 0.50, emotion 0.52, framing 0.52, stance 0.37, demands 0.16 (= control), Indonesian actions 0.08;
+  government tone 0.64, anticipation 0.38 (control 0.27), specificity 0.38 (control 0.39). Anger curves correlate 0.46-0.77
+  between runs (HS5 as a fourth); peak at stage 3 or 4 everywhere. Out of 3: Indonesia privately disowns "oxygen" 3;
+  Singapore and Malaysia promise to investigate their own listed firms 3 (real Malaysia: none involved); invented process
+  (meetings, contact points, working groups) 3; Indonesia pushes back on Singapore's notices 2 (run 2 from 16 Oct, two
+  tracks + sovereignty; run 3 never, even after the gas cut); Indonesia accepts help early 2; joint statement 1; gas cut
+  raised by any government 0; concrete Indonesian measure 0. Citizens: boycott backed 0 (Indonesians reject it in all 3),
+  Indonesians distance from own government at "oxygen" 3, explicit Indonesian apology 1 (run 3), gas cut noticed 3,
+  "not our fault" apology mocked 2, protests or class action 0. Run 2: citizens demanded relief from their governments
+  (17 codes) and governments answered "to public regional feed" from the diplomatic channel (8 lines, never delivered;
+  public/private slip). Inventions: Indonesia named "Mr. Hassan Wirajuda" (run 3); Malaysian relief package and Brunei
+  N95 handout (run 2, invisible to citizens). No leak: the only years recalled are from news or biography. No further
+  runs without the user's go-ahead.
+- **HS6 runs 4 and 5 (2026-11-27, user: "run 2 more, then update the values"; `outputs/society-hs6-e2e4`, `-e2e5`, both
+  read in full; $8.55 + $9.01 incl. scoring = $17.56).** Design note section 16. Five runs: public 3.54 vs control 2.46
+  (13 of 17 pairs, p = 0.049); government 3.33 vs 2.68 (15 of 21, p = 0.078). Summary
+  `research_questions/haze_hs6_results_summary.md` is now written entirely in **seven simple dimensions** (user,
+  2026-11-27), each the equal-weight average of the judge v2 dimensions it covers, set after seeing results, no new judge
+  calls: people Feel (emotion, triggers) 0.52, Blame (blame, framing, division) 0.38, Others (stance) 0.37, Act (actions,
+  demands) 0.20; governments Tone 0.64, Foresight (anticipation) 0.38, Moves (specificity + hand-scored cooperation and
+  conflict) 0.25. Hand scores per run: cooperation 0,1,0,0,0; conflict 0.5,0.5,0,0,0. Diversity of views (0.32) is
+  reported as a simulator property (echo 18-25%). Wrong-stage check: Feel 0.25, Blame 0.28, Others 0.18, Act 0.14; Tone
+  0.56, Foresight 0.25, Moves (specificity only) 0.39. Appendix B keeps the 12 original judge scores. Conclusions given
+  to the user: closest on feeling and framing, weakest on action and conflict (people Act, government Moves); tone is
+  high but generic; Indonesia takes help early (4 of 5) and pushes back only in words (2 of 5), never the gas cut. Rebuild
+  the summary with `python research_questions/tools/haze_hs6_summary.py --runs e2e1 ... e2e5` (reads the judge CSVs and
+  `research_questions/haze_hs6_hand_scores.json`, hand scores and echo per run; checked to reproduce the file exactly);
+  `tools/haze_hs6_compare.py [--anger]` prints the per-run comparison, sign tests, anger curves and action codes. When
+  adding runs, add their hand scores and echo to the JSON and recheck the quotes and comparison texts in the script. Run 5: first HS6 boycott (all
+  six feed speakers, Indonesians included, withdrawn a week later over workers' jobs) and Malaysia's government openly
+  rebuking Indonesia (real Malaysia was restrained); run 4 fully unanimous. Pending offers: judge v3 scoring the seven
+  dimensions directly (about $3-4 for five runs), a no-interaction control, more runs.
 - **Tools and engine notes:** stage coder `tools/haze_stage_coder.py`, rubric `haze-stage-coding-v3` (v2 checked on
   the four-citizen pilots: two passes agree on anger 92%, stance 93%; v3 only rewords the opening for governments and
   channels; a pass once dropped one agent's code). `research_questions/society/` is separate from the 4-agent engine,
@@ -170,12 +284,10 @@ Everything earlier (152 run folders) is in `research_questions/outputs_old/`; ol
 `outputs/s46-...` for those. `runner.py` and `run_cases.py` write to `outputs/` and skip existing folders there only,
 so always use fresh experiment IDs.
 
-**Git:** the user commits and pushes themselves (never push; stage by name). Last commit `77850e8` (2026-11-20),
-which holds all the 2026-11-20 work (checked 2026-11-24). Uncommitted since: `CLAUDE.md`, `research_log.md`,
-`research_questions/haze_society_design.md`, `research_questions/society/`, `prompts/tiny_person_society.mustache`,
-`tools/haze_stage_coder.py`, `tools/run_society.py`, `tests/unit/test_haze_society.py`, and outputs
-(`society-hs1-pilot1`, `society-hs2-history4`, `society-hs3-pilot1`, their `.log` files, `haze-coding-v1-pilots-a/-b`,
-`haze-coding-v2-pilots-a/-b`, `haze-coding-v3-society-*`).
+**Git:** the user commits and pushes themselves (never push; stage by name). Commits: `77850e8` (2026-11-20 work),
+`645e246` (haze society work to about 2026-11-25). On 2026-11-27 the user committed and pushed the rest of the haze
+work through HS6 runs 4-5 and the seven-dimension summary (see `git log` for the hash); check `git status` for anything
+newer.
 
 **Background reading already done** (summaries in the log, "Wenxuan Zhang papers"): *Beyond Alignment* (explicit
 culture prompts never reach human value diversity; interaction reduces it), *Multilingual Agent-Based World Modeling*
@@ -245,6 +357,10 @@ launched 2026-11-20 (about $20).
   the change column). Keep doing that: never edit, selectively round or invent a number in a table, chart or slide.
 - **Never push. Commit only when asked.** Stage files by name, never `git add .`. `check.py` once held a live API key;
   it no longer exists, but it is not gitignored, so if it reappears never stage it.
+- **Haze runs are end-to-end from now on (user, 2026-11-26: "every run from now should be e2e, so we can look at
+  everything").** Full timeline (cutoff 8, 16 rounds, all news), then the full scoring: similarity judge v2 public and
+  `--government` (two passes), stage coder (two passes), `haze_properties.py`. No cutoff-and-free-play forecast runs
+  unless the user asks again; prediction is read from the government anticipation score inside e2e runs.
 - **No runs without a cost estimate and the user's go-ahead.** The user is cost-sensitive; report spend, and say so
   mid-batch if runs cost more than estimated. Pilot one run of a new design and read it in full before the rest.
 - **Do not delete or overwrite anything in `outputs/`, `outputs_old/` or `reference folders/`** unless the user asks.

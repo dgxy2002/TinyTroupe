@@ -1,0 +1,172 @@
+{
+  "rubric": "haze-forecast-coding-v2",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B02",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5332,
+    "completion_tokens": 2719,
+    "total_tokens": 8051,
+    "cost": 0.037854,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.037854,
+      "upstream_inference_prompt_cost": 0.010664,
+      "upstream_inference_completions_cost": 0.02719
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 988,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "yes",
+      "who": "Indonesia's disaster agency (predicted)",
+      "where": "forecast",
+      "quote": "Indonesia's disaster agency will formally \"accept\" Malaysia's offer of assistance"
+    },
+    "G2": {
+      "score": "yes",
+      "who": "Indonesian National Police (predicted)",
+      "where": "forecast",
+      "quote": "the Indonesian National Police will announce the arrest of two plantation managers in Riau and Central Kalimantan"
+    },
+    "G3": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G4": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G7": {
+      "score": "partly",
+      "who": "Indonesian National Police (predicted)",
+      "where": "forecast",
+      "quote": "one of whom works for a subsidiary of a Malaysian-linked company mentioned in the Greenpeace report"
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "Malaysian public (predicted)",
+      "where": "forecast",
+      "quote": "A social media campaign, complete with shareable graphics listing consumer products made by the implicated parent companies"
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Indonesian public in Riau and Kalimantan (predicted)",
+      "where": "forecast",
+      "quote": "criticising both their own government's failures and the perceived arrogance of their neighbours"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Government of Malaysia",
+      "action": "Summons the Indonesian ambassador and delivers a formal diplomatic protest note",
+      "quote": "will summon the Indonesian Ambassador to Malaysia to Wisma Putra to deliver a formal diplomatic protest note",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Asks GLICs such as Khazanah and PNB to review or divest holdings in companies implicated in the fires",
+      "quote": "officially asking government-linked investment companies (GLICs) like Khazanah Nasional and Permodalan Nasional Berhad (PNB) to immediately review and potentially divest",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Extends school closures in Selangor, KL and Putrajaya and advises postponing outdoor events",
+      "quote": "will extend the school closures in Selangor, KL, and Putrajaya for another week",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Monetary Authority of Singapore",
+      "action": "Issues a circular to financial institutions on ESG and sustainable financing, implicitly warning against financing the companies linked to the fires",
+      "quote": "will issue a circular to all financial institutions, reminding them of their Environmental, Social, and Governance (ESG) commitments",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore (NEA)",
+      "action": "Activates a haze subsidy scheme and names Sumatra and Kalimantan regions as the source in daily advisories",
+      "quote": "will activate its \"Haze Subsidy Scheme,\"",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore (Grace Fu)",
+      "action": "Expresses \"grave disappointment\" at the lack of progress and repeats offers of assistance",
+      "quote": "publicly express Singapore's \"grave disappointment\" with the lack of progress",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia",
+      "action": "Suspends the operating licence of one of the 95 companies under investigation",
+      "quote": "the suspension of the operating license of one of the 95 companies under investigation",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia (Foreign Minister)",
+      "action": "Issues a clarifying statement distancing the government from the \"oxygen\" remark",
+      "quote": "will issue a \"clarifying\" statement to de-escalate the diplomatic fallout",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian public",
+      "action": "Viral #BoikotJerebu campaign cuts sales of targeted products at AEON and Jaya Grocer",
+      "quote": "Major retailers like AEON and Jaya Grocer will see a noticeable drop in sales of these targeted products",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian public",
+      "action": "Citizen groups hand out free N95 masks and set up shelters with air purifiers",
+      "quote": "local citizen groups will organize the distribution of free N95 masks and set up temporary shelters",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei",
+      "action": "Returns schools to online learning if PSI crosses 100",
+      "quote": "the Ministry of Education will immediately announce a return to online learning for all schools",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei",
+      "action": "Stays publicly quiet and raises concerns through ASEAN channels",
+      "quote": "Brunei's government will remain diplomatically quiet, preferring to voice its concerns through official ASEAN channels",
+      "status": "not_real"
+    }
+  ]
+}

@@ -53,6 +53,9 @@ class Stage:
     date: str
     news: str  # delivered when the stage is before or at the cutoff
     physical: str  # delivered instead after the cutoff: air, fires, rain only
+    # Option B (HS5): the four governments' real statements in this update, as (agent_id, date, text), posted by the
+    # government agents in the public feed after the news. Empty in HS1-HS4 (and then left out of the preset hash).
+    posts: tuple = ()
 
 
 @dataclass(frozen=True)
@@ -74,6 +77,9 @@ class SocietyPreset:
     # and citizens attacked its "silence").
     date_every_round: bool = False
     governments_post_first: bool = False
+    # HS6 (user, 2026-11-26): governments also talk in the private diplomatic channel before the cutoff (their public
+    # words stay scripted), and each government is told its own scripted posts so it knows what it said publicly.
+    governments_private_talk: bool = False
     style: str = (
         "Plain and conversational, the way people write in an online group or feed: short messages, "
         "in English."
@@ -437,3 +443,138 @@ HAZE_SOCIETY_V4 = SocietyPreset(
 )
 
 SOCIETY_PRESETS[HAZE_SOCIETY_V4.preset_id] = HAZE_SOCIETY_V4
+
+
+# ---- HS5: option B, governments' real statements posted by the government agents (user approved 2026-11-26) ----
+# HS4 delivered everything, including what governments said, as news text. In HS5 each update is split: statements and
+# announcements by the four national governments (positions, diplomacy, enforcement, leaders' words, energy) become
+# dated posts by the government agents in the public feed, scripted (the real words, nothing generated); everything
+# else stays in the news (physical facts, protective measures such as school closures, other countries, NGOs, MPs and
+# ex-ministers, companies). Wording comes only from the HS1-HS4 news texts (sources in haze_2026_sources.md); nothing
+# is added. Brunei's government made no statements in our timeline. For the full timeline run with cutoff 8, the
+# governments never generate anything; for a cutoff run, posts stop at the cutoff like the news.
+_NEWS_V5 = [
+    _NEWS[0],
+    "It is now Friday 18 September 2026. Air quality is unhealthy at half of Malaysia's 68 monitoring stations, and "
+    "the haze reached southern Vietnam on 14 September. Japan has sent military helicopters to help Indonesia fight "
+    "the fires.",
+    "It is now Friday 9 October 2026. On 7 October Greenpeace Malaysia published a list of the 20 entities most linked "
+    "to this year's fires in Indonesia; it includes Malaysian and Singaporean companies. All schools in Johor have been "
+    "closed since 7 October, and today schools were also ordered closed in Melaka, Negeri Sembilan, Selangor, Kuala "
+    "Lumpur and Putrajaya. In Singapore the 24-hour PSI reached 192 this evening, the highest this year, on the weekend "
+    "of the Formula One Grand Prix, which is going ahead.",
+    "It is now Tuesday 13 October 2026. A video of a remark by the head of Indonesia's Government Communications "
+    "Agency about the fires is being widely shared. Today a Malaysian MP told Parliament that Malaysians should boycott "
+    "companies linked to the burning (\"We need to hit them where they hurt the most\") and that banks should stop "
+    "financing them. Malaysia's Firefly airline has cancelled flights to Singapore because of the haze.",
+    "It is now Friday 16 October 2026. On 14 October fine-particle pollution in western Singapore reached its highest "
+    "level since 2015; Singapore has opened haze shelters, is giving out N95 masks and some schools have stopped "
+    "outdoor activities. Timor-Leste closed its schools. Some lawyers said Singapore's legal notices to Indonesian "
+    "companies could have diplomatic consequences. Singapore's 24-hour PSI reached 229 today, the very unhealthy "
+    "range, the 12th day in a row of unhealthy air. The haze has reached Jakarta.",
+    "It is now Wednesday 21 October 2026. On 19 October a former Indonesian trade minister, Muhammad Lutfi, said four "
+    "of the seven Indonesian companies that received Singapore's notices had Singapore ties and challenged Singapore "
+    "to raid their offices.",
+    "It is now Monday 26 October 2026. Singapore's air has been back in the moderate range since 22 October, after 18 "
+    "days of unhealthy air, and the first rains have fallen on Sumatra and Kalimantan.",
+    "It is now Monday 16 November 2026. Rain put out most of the fires in late October, and Singapore ended its haze "
+    "measures on 7 November.",
+]
+_POSTS_V5 = [
+    (),
+    (
+        ("MY-G", "September", "Malaysia has offered Indonesia one firefighting plane, three helicopters and 52 personnel "
+         "to help fight the fires."),
+        ("ID-G", "September", "Indonesian police are investigating 95 companies over the fires, along with many "
+         "individuals."),
+    ),
+    (
+        ("MY-G", "9 October", "Prime Minister Anwar Ibrahim said he had called Indonesia's President Prabowo Subianto, "
+         "who agreed to take the necessary steps."),
+    ),
+    (
+        ("ID-G", "10 October", "Syahganda Nainggolan, head of the Government Communications Agency: the fires are "
+         "\"beyond human error; this is truly nature\". \"We're not just sending over the haze. When there's no haze, we "
+         "send oxygen. The oxygen from Singapore and Malaysia is from our forests, right?\""),
+        ("ID-G", "October", "Indonesia's disaster agency: ground personnel are preferred to aircraft from neighbours."),
+        ("MY-G", "11 October", "Malaysia has still had no reply to its offer of help."),
+        ("ID-G", "12 October", "President Prabowo has ordered maximum efforts against the fires."),
+    ),
+    (
+        ("ID-G", "14-16 October", "Indonesian police have named 223 people and nine companies as suspects."),
+        ("ID-G", "15 October", "Indonesia's Foreign Minister: Indonesia will now accept foreign firefighting help."),
+        ("SG-G", "15 October", "Prime Minister Lawrence Wong: Singapore is checking which companies are responsible, "
+         "and legal action could follow."),
+        ("SG-G", "16 October", "Minister Grace Fu: notices have been sent to seven Indonesian companies under "
+         "Singapore's Transboundary Haze Pollution Act."),
+        ("MY-G", "16 October", "No Malaysian plantation companies are involved in the fires."),
+    ),
+    (
+        ("SG-G", "19 October", "Minister K. Shanmugam: the Singapore Exchange is questioning seven Singapore-listed "
+         "agriculture companies about links to the fires (Golden Agri-Resources, Bumitama Agri, First Resources, Wilmar "
+         "International, Kencana Agri, Indofood Agri Resources and TSH Resources); the government is also looking at "
+         "Asia Pulp and Paper; notices have gone to three more Indonesian companies, ten in all. \"We will pursue this "
+         "matter for as long as it takes.\" \"The Indonesian public is suffering as well.\""),
+        ("ID-G", "21 October", "President Prabowo: there are indications that foreign companies were involved in the "
+         "fires."),
+        ("MY-G", "21 October", "Malaysia's deputy environment minister: Malaysia is open to a haze law like "
+         "Singapore's."),
+    ),
+    (
+        ("ID-G", "22 October", "Energy minister Bahlil Lahadalia: Indonesia will reconsider energy exports to "
+         "countries that do not respect it."),
+        ("ID-G", "24 October", "Indonesia has cut its pipeline gas to Singapore by about 8 per cent of those exports, "
+         "citing domestic needs."),
+        ("SG-G", "25 October", "Prime Minister Wong: Singapore expects all parties to honour their commitments. The cut "
+         "is less than 2 per cent of Singapore's gas use."),
+        ("ID-G", "26 October", "Energy minister Bahlil: \"Do not lecture us, especially the energy ministry, on the "
+         "importance of honoring contracts.\""),
+    ),
+    (
+        ("SG-G", "27 October", "Foreign Minister Vivian Balakrishnan met Indonesia's Foreign Minister Arrmanatha Nasir "
+         "in Jakarta; they agreed to set up a joint task force to trace the money and corporate links of companies "
+         "behind the fires, and direct ministerial hotlines."),
+        ("ID-G", "27 October", "Foreign Minister Arrmanatha Nasir: \"Smoke can cross borders, so can money.\""),
+        ("SG-G", "November", "Singapore plans to push for an ASEAN coordinating centre on haze when it chairs ASEAN in "
+         "2027."),
+        ("ID-G", "15 November", "President Prabowo at the ASEAN Summit in Manila: \"I would like to apologise to my "
+         "neighbouring countries Malaysia and Singapore. It is not our fault, but once again we apologise. But we have "
+         "done our best.\" 17 company concessions have been revoked, 104 companies are under police investigation, "
+         "71,000 firefighters have been deployed and 16 people have died fighting the fires."),
+    ),
+]
+STAGES_V5 = tuple(
+    Stage(s.number, s.date, _NEWS_V5[i], s.physical, _POSTS_V5[i]) for i, s in enumerate(STAGES)
+)
+
+HAZE_SOCIETY_V5 = SocietyPreset(
+    preset_id="HS5",
+    title="2026 Southeast Asian haze: HS4 with governments' real statements posted by the government agents",
+    setting=SETTING_V3,
+    agents=HAZE_SOCIETY_V4.agents,
+    channels=CHANNELS_V4,
+    stages=STAGES_V5,
+    date_every_round=True,
+    governments_post_first=True,
+)
+
+SOCIETY_PRESETS[HAZE_SOCIETY_V5.preset_id] = HAZE_SOCIETY_V5
+
+
+# ---- HS6: HS5 plus the governments talking privately in the diplomatic channel (user, 2026-11-26) ----
+# "the news does contain what govt does next so it's worth seeing what they say to each other". Public words stay the
+# real, scripted posts; the four governments also take turns in the private diplomatic channel every round (citizens
+# never see it), and each is told its own scripted posts. Citizens' inputs are the same as in HS5.
+HAZE_SOCIETY_V6 = SocietyPreset(
+    preset_id="HS6",
+    title="2026 Southeast Asian haze: HS5 plus private diplomatic talk between the governments",
+    setting=SETTING_V3,
+    agents=HAZE_SOCIETY_V5.agents,
+    channels=CHANNELS_V4,
+    stages=STAGES_V5,
+    date_every_round=True,
+    governments_post_first=True,
+    governments_private_talk=True,
+)
+
+SOCIETY_PRESETS[HAZE_SOCIETY_V6.preset_id] = HAZE_SOCIETY_V6

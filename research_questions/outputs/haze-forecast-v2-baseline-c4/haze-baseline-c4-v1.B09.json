@@ -1,0 +1,160 @@
+{
+  "rubric": "haze-forecast-coding-v2",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B09",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5431,
+    "completion_tokens": 2726,
+    "total_tokens": 8157,
+    "cost": 0.038122,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.038122,
+      "upstream_inference_prompt_cost": 0.010862,
+      "upstream_inference_completions_cost": 0.02726
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1085,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "yes",
+      "who": "Government of Indonesia (forecast)",
+      "where": "forecast",
+      "quote": "they will accept the offer of 52 ground personnel but politely decline the aircraft"
+    },
+    "G2": {
+      "score": "yes",
+      "who": "Indonesian National Police (forecast)",
+      "where": "forecast",
+      "quote": "the Indonesian National Police will announce the arrest of at least one mid-level plantation manager from a foreign-linked company"
+    },
+    "G3": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G4": {
+      "score": "partly",
+      "who": "Singapore Exchange (forecast)",
+      "where": "forecast",
+      "quote": "The Singapore Exchange (SGX) will issue a \"Trade with Caution\" advisory on the Singapore-listed companies named in the Greenpeace report"
+    },
+    "G5": {
+      "score": "partly",
+      "who": "Malaysian Minister Nik Nazmi (forecast)",
+      "where": "forecast",
+      "quote": "the government is initiating a formal investigation into the Malaysian-linked companies named in the Greenpeace report"
+    },
+    "G6": {
+      "score": "partly",
+      "who": "Malaysian Minister Nik Nazmi (forecast)",
+      "where": "forecast",
+      "quote": "\"all economic and legal options are on the table,\""
+    },
+    "G7": {
+      "score": "partly",
+      "who": "Indonesian National Police (forecast)",
+      "where": "forecast",
+      "quote": "arrest of at least one mid-level plantation manager from a foreign-linked company"
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "Malaysian Consumers Association (FOMCA) (forecast)",
+      "where": "forecast",
+      "quote": "FOMCA will issue a statement supporting a consumer boycott of products from companies directly linked to the fires"
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Residents of Sumatra and Kalimantan (forecast)",
+      "where": "forecast",
+      "quote": "small, spontaneous protests outside local government offices demanding more masks and immediate healthcare assistance"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Malaysian government (Foreign Minister)",
+      "action": "Summons the Indonesian ambassador and issues a strongly worded protest",
+      "quote": "will summon the Indonesian ambassador to Malaysia to express a formal protest",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian Foreign Minister",
+      "action": "Disowns the \"oxygen\" comment and says Indonesia takes the haze seriously",
+      "quote": "clarifying that Mr. Nainggolan's remarks do not represent the official government position",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian government",
+      "action": "Extends school closures in Selangor, Kuala Lumpur and other states to 23 Oct",
+      "quote": "The school closures in Selangor, Kuala Lumpur, and other affected states will be extended until at least Friday, 23 October",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysian environmental NGOs",
+      "action": "Protest of 200-300 people outside the Indonesian Embassy in Kuala Lumpur",
+      "quote": "organize a peaceful protest of about 200-300 people outside the Indonesian Embassy in Kuala Lumpur",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore Minister Grace Fu",
+      "action": "Statement of grave concern, criticises the comment and repeats offer of a C-130 for cloud seeding",
+      "quote": "reiterate Singapore's standing offer to help Indonesia, including a C-130 aircraft for cloud seeding operations",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore NEA and Ministry of Education",
+      "action": "Stronger advisories and a home-based learning trigger if PSI exceeds 300",
+      "quote": "schools will immediately switch to home-based learning",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian Health Minister",
+      "action": "Distributes N95 masks at government clinics in the worst-hit areas",
+      "quote": "announcing the distribution of N95 masks at government clinics in the worst-hit areas",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei Ministry of Education",
+      "action": "Extends home-based learning to 23 Oct",
+      "quote": "the current period of home-based learning will be extended for at least another week, until 23 October",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei government",
+      "action": "No strong public statements against Indonesia; works through ASEAN channels",
+      "quote": "The government will not issue any strong public statements against Indonesia, preferring to work through ASEAN channels",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore public",
+      "action": "Rush on N95 masks and air purifiers; anger at Indonesia and Singapore firms; F1 post-mortem",
+      "quote": "Sales of high-quality N95 masks (especially 3M brands) and powerful air purifiers",
+      "status": "not_real"
+    }
+  ]
+}

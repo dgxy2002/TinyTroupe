@@ -1,0 +1,184 @@
+{
+  "rubric": "haze-forecast-coding-v1",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B03",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5383,
+    "completion_tokens": 1840,
+    "total_tokens": 7223,
+    "cost": 0.029166,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.029166,
+      "upstream_inference_prompt_cost": 0.010766,
+      "upstream_inference_completions_cost": 0.0184
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G2": {
+      "score": "partly",
+      "who": "Indonesian National Police (forecast)",
+      "where": "forecast",
+      "quote": "the National Police will announce the arrest of 15-20 more individuals, mostly smallholders and a few mid-level plantation managers"
+    },
+    "G3": {
+      "score": "partly",
+      "who": "Singapore MSE/NEA (forecast)",
+      "where": "forecast",
+      "quote": "has also contacted the Singaporean-linked companies named in the Greenpeace report, demanding they share information on their fire-prevention measures"
+    },
+    "G4": {
+      "score": "yes",
+      "who": "Singapore Exchange (forecast)",
+      "where": "forecast",
+      "quote": "The Singapore Exchange (SGX) will also formally query the listed companies named in the report"
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "partly",
+      "who": "Malaysian PM Anwar Ibrahim (forecast)",
+      "where": "forecast",
+      "quote": "Malaysia is exploring legal avenues under the ASEAN Agreement on Transboundary Haze Pollution"
+    },
+    "G7": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G8": {
+      "score": "partly",
+      "who": "Indonesian Foreign Ministry (forecast)",
+      "where": "forecast",
+      "quote": "warning against \"counter-productive actions\" (a veiled reference to the boycott calls in Malaysia)"
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "yes",
+      "who": "Malaysian public/consumer groups (forecast)",
+      "where": "forecast",
+      "quote": "The boycott call will gain significant traction."
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Indonesian citizens in fire-hit provinces (forecast)",
+      "where": "forecast",
+      "quote": "accusing their own government of incompetence and corruption"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Singapore government",
+      "action": "Distributes N95 masks to vulnerable households; schools to switch to home-based learning if PSI is hazardous",
+      "quote": "the government will announce the distribution of N95 masks from the national stockpile to vulnerable and lower-income households via community centres",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysian government",
+      "action": "Extends school closures in Selangor, KL and other states",
+      "quote": "School closures in Selangor, Kuala Lumpur, and other affected states will be extended until at least Friday, 16 October.",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysian foreign minister",
+      "action": "Summons the Indonesian ambassador and hands over a diplomatic protest note",
+      "quote": "will summon the Indonesian Ambassador to Malaysia to Wisma Putra (the Foreign Ministry) to hand over a diplomatic note of protest",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian government (BNPB)",
+      "action": "Declines Malaysia's firefighting offer, saying Indonesian ground personnel are more effective",
+      "quote": "they will still not formally accept Malaysia's offer of assistance",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian National Police",
+      "action": "Seals land of 3-4 more companies",
+      "quote": "They will also publicise the sealing of land belonging to 3-4 more companies.",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian government",
+      "action": "Clarifies that the 'we send oxygen' remark is not official government position",
+      "quote": "issue a statement clarifying that his comments do not represent the official government position",
+      "status": "not_real"
+    },
+    {
+      "actor": "Prabowo",
+      "action": "Phone call with Anwar; promises action and asks for patience",
+      "quote": "another, more terse, phone call with Malaysian PM Anwar Ibrahim",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore MAS",
+      "action": "Statement reminding financial institutions of environmental risk obligations in lending",
+      "quote": "will issue a statement reminding financial institutions of their obligation to consider environmental risks in their lending and investment decisions",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian environment minister Nik Nazmi",
+      "action": "Says government does not endorse boycott but repeats firefighting offer",
+      "quote": "the government does not officially endorse a public boycott",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian public",
+      "action": "Grassroots #HazeFreeProducts campaign and consumer group product lists",
+      "quote": "a grassroots campaign will emerge with the hashtag #HazeFreeProducts",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian public",
+      "action": "#BelaIndonesia nationalist hashtag trends",
+      "quote": "The hashtag #BelaIndonesia (#DefendIndonesia) will trend.",
+      "status": "not_real"
+    },
+    {
+      "actor": "WALHI",
+      "action": "Symbolic protests outside the Environment Ministry in Jakarta",
+      "quote": "Activist groups like WALHI (The Indonesian Forum for Environment) will hold small, symbolic protests",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei government",
+      "action": "Co-signs an ASEAN joint statement and avoids strong condemnation of Indonesia",
+      "quote": "Brunei will co-sign any joint statement issued through the ASEAN Secretariat",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian supermarkets",
+      "action": "Review sourcing policies under public pressure",
+      "quote": "may issue statements that they are \"reviewing their sourcing policies.\"",
+      "status": "not_real"
+    }
+  ]
+}

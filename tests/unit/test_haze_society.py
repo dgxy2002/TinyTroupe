@@ -256,3 +256,83 @@ def test_hs4_cue_says_public_or_private():
     world, people = build_world(hs3)
     assert engine._turn_cue(world, "public_feed", NAMES["SG-G"]).endswith("seen only there.")
     reset_simulation_state()
+
+
+def test_hs4_hash_unchanged_since_prediction_test():
+    # Recorded in outputs/society-hs4-c4-test1/manifest.json.
+    assert engine.preset_sha256(SOCIETY_PRESETS["HS4"]) == "59911de5e54e2a6dc77c7b016b453950ab6482a463a9072d15b293445703bbd9"
+
+
+def test_hs5_splits_government_statements_into_posts():
+    hs5, hs4 = SOCIETY_PRESETS["HS5"], SOCIETY_PRESETS["HS4"]
+    assert hs5.agents == hs4.agents and hs5.channels == hs4.channels and hs5.setting == hs4.setting
+    assert [s.physical for s in hs5.stages] == [s.physical for s in hs4.stages]
+    assert [s.date for s in hs5.stages] == [s.date for s in hs4.stages]
+    assert sum(len(s.posts) for s in hs5.stages) == 23
+    for stage in hs5.stages:
+        for agent_id, when, text in stage.posts:
+            assert agent_id in ("SG-G", "MY-G", "ID-G")
+            assert text and when
+        # government statements are no longer in the news text
+        assert "Prabowo" not in stage.news and "Grace Fu" not in stage.news and "Bahlil" not in stage.news
+    # every quoted government line in HS4's news is in some HS5 post
+    all_posts = " ".join(t for s in hs5.stages for _, _, t in s.posts)
+    for quote in ("we send oxygen", "We will pursue this matter for as long as it takes", "Do not lecture us",
+                  "Smoke can cross borders, so can money", "It is not our fault, but once again we apologise"):
+        assert quote in all_posts
+
+
+def test_hs5_full_timeline_delivers_posts_to_everyone(fake_agents, tmp_path):
+    hs5 = SOCIETY_PRESETS["HS5"]
+    transcript = run_society(
+        preset=hs5, run_id="E01", output_dir=tmp_path, cutoff_stage=8, free_rounds=0, simulation_model="m"
+    )
+    posts = [e for e in transcript["events"] if e["type"] == "POST"]
+    assert len(posts) == 23 and all(e["channel"] == "public_feed" for e in posts)
+    # governments never generate anything in a full-timeline run
+    gov = {NAMES[a] for a in ("SG-G", "MY-G", "ID-G", "BN-G")}
+    assert not [e for e in transcript["events"] if e["type"] == "TALK" and e["agent"] in gov]
+    assert max(e["round"] for e in transcript["events"]) == 16
+    # posts reached the citizens and stay in their personas; the coder's stage text includes them
+    scripted = [d for d in transcript["deliveries"] if d.get("scripted")]
+    assert len(scripted) == 23 and NAMES["ID3"] in scripted[0]["recipients"]
+    obs = transcript["scenario"]["round_observations"]
+    assert "Government posts in the public feed" in (obs.get(3) or obs.get("3"))
+    md = (tmp_path / "transcripts" / "E01.md").read_text(encoding="utf-8")
+    assert "(real statement, scripted)" in md
+    run = haze_stage_coder.load_run(str(tmp_path / "transcripts" / "E01.json"))
+    assert len(run["stages"]) == 8
+
+
+def test_hs5_hash_unchanged_since_full_run():
+    # Recorded in outputs/society-hs5-e2e1/manifest.json.
+    assert engine.preset_sha256(SOCIETY_PRESETS["HS5"]) == "09a62efba118199c032e61d8e577b8a26e7124e2fee029be3839cf327e97970a"
+
+
+def test_hs6_governments_talk_only_in_the_diplomatic_channel(fake_agents, tmp_path):
+    hs6 = SOCIETY_PRESETS["HS6"]
+    assert hs6.stages == SOCIETY_PRESETS["HS5"].stages and hs6.agents == SOCIETY_PRESETS["HS5"].agents
+    order = dict(channel_order(hs6, 3, after_cutoff=False))
+    assert set(order["diplomatic"]) == {"SG-G", "MY-G", "ID-G", "BN-G"}
+    assert not {"SG-G", "MY-G", "ID-G", "BN-G"} & set(order["public_feed"])
+    transcript = run_society(
+        preset=hs6, run_id="E01", output_dir=tmp_path, cutoff_stage=8, free_rounds=0, simulation_model="m"
+    )
+    gov = {NAMES[a] for a in ("SG-G", "MY-G", "ID-G", "BN-G")}
+    gov_talk = [e for e in transcript["events"] if e["type"] == "TALK" and e["agent"] in gov]
+    assert gov_talk and {e["channel"] for e in gov_talk} == {"diplomatic"}
+    assert len(gov_talk) == 4 * 16
+    # citizens never receive the diplomatic channel
+    diplomatic = [d for d in transcript["deliveries"] if d["channel"] == "diplomatic"]
+    assert all(set(d["recipients"]) <= gov for d in diplomatic)
+    # 23 scripted posts as in HS5, and 15 + 4 turns per round
+    assert len([e for e in transcript["events"] if e["type"] == "POST"]) == 23
+    assert sum(1 for e in transcript["events"] if e["type"] == "TALK" and e["round"] == 1) == 19
+
+
+def test_hs6_government_is_told_its_own_posts():
+    hs6 = SOCIETY_PRESETS["HS6"]
+    world, people = build_world(hs6)
+    world.post_scripted("public_feed", NAMES["ID-G"], "10 October", "we send oxygen", tell_source=True)
+    assert "You posted in the public regional feed (10 October): we send oxygen" in _last_text(people["ID-G"])
+    reset_simulation_state()

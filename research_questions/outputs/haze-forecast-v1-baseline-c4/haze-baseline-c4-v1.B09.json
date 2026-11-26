@@ -1,0 +1,172 @@
+{
+  "rubric": "haze-forecast-coding-v1",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B09",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5371,
+    "completion_tokens": 1698,
+    "total_tokens": 7069,
+    "cost": 0.027722,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.027722,
+      "upstream_inference_prompt_cost": 0.010742,
+      "upstream_inference_completions_cost": 0.01698
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "yes",
+      "who": "Government of Indonesia (forecast)",
+      "where": "forecast",
+      "quote": "they will accept the offer of 52 ground personnel but politely decline the aircraft"
+    },
+    "G2": {
+      "score": "partly",
+      "who": "Indonesian National Police (forecast)",
+      "where": "forecast",
+      "quote": "the Indonesian National Police will announce the arrest of at least one mid-level plantation manager from a foreign-linked company"
+    },
+    "G3": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G4": {
+      "score": "partly",
+      "who": "Singapore Exchange (forecast)",
+      "where": "forecast",
+      "quote": "The Singapore Exchange (SGX) will issue a \"Trade with Caution\" advisory on the Singapore-listed companies named in the Greenpeace report"
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "partly",
+      "who": "Malaysian Minister Nik Nazmi (forecast)",
+      "where": "forecast",
+      "quote": "\"all economic and legal options are on the table,\""
+    },
+    "G7": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "FOMCA (Malaysian consumers association) (forecast)",
+      "where": "forecast",
+      "quote": "FOMCA) will issue a statement supporting a consumer boycott of products from companies directly linked to the fires"
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Urban Indonesians (forecast)",
+      "where": "forecast",
+      "quote": "who will express embarrassment on social media"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Indonesian government (Retno Marsudi)",
+      "action": "Foreign minister distances government from Nainggolan's 'oxygen' comment",
+      "quote": "Foreign Minister Retno Marsudi will issue a statement within the next two days clarifying that Mr. Nainggolan's remarks do not represent the official government position",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian government (Zambry)",
+      "action": "Summons Indonesian ambassador to protest",
+      "quote": "will summon the Indonesian ambassador to Malaysia to express a formal protest",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian government (Nik Nazmi)",
+      "action": "Formal investigation into Malaysian-linked companies named by Greenpeace",
+      "quote": "the government is initiating a formal investigation into the Malaysian-linked companies named in the Greenpeace report",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian government",
+      "action": "School closures extended to at least 23 October",
+      "quote": "The school closures in Selangor, Kuala Lumpur, and other affected states will be extended until at least Friday, 23 October",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysian health ministry",
+      "action": "N95 mask distribution at government clinics",
+      "quote": "announcing the distribution of N95 masks at government clinics in the worst-hit areas",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian NGOs",
+      "action": "Protest outside Indonesian Embassy in KL",
+      "quote": "A coalition of environmental NGOs will organize a peaceful protest of about 200-300 people outside the Indonesian Embassy in Kuala Lumpur",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore Ministry of Education / NEA",
+      "action": "Enhanced advisories; home-based learning if PSI hazardous",
+      "quote": "schools will immediately switch to home-based learning",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore government (Grace Fu)",
+      "action": "Statement of grave concern, criticises comments, repeats C-130 offer",
+      "quote": "reiterate Singapore's standing offer to help Indonesia, including a C-130 aircraft for cloud seeding operations",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei Ministry of Education",
+      "action": "Extends home-based learning to 23 October",
+      "quote": "the current period of home-based learning will be extended for at least another week, until 23 October",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei government",
+      "action": "Quiet diplomacy via ASEAN, no strong statements",
+      "quote": "will not issue any strong public statements against Indonesia, preferring to work through ASEAN channels",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian citizens in Sumatra/Kalimantan",
+      "action": "Small protests demanding masks and healthcare; #KamiButuhUdaraBersih",
+      "quote": "small, spontaneous protests outside local government offices demanding more masks and immediate healthcare assistance",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian public",
+      "action": "Brand lists circulate; #HazeIsNotOxygen trends",
+      "quote": "Lists of these brands (e.g., specific cooking oils, paper products) will circulate widely on WhatsApp and Facebook",
+      "status": "not_real"
+    }
+  ]
+}

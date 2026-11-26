@@ -1,0 +1,172 @@
+{
+  "rubric": "haze-forecast-coding-v1",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B08",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5273,
+    "completion_tokens": 1560,
+    "total_tokens": 6833,
+    "cost": 0.026146,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.026146,
+      "upstream_inference_prompt_cost": 0.010546,
+      "upstream_inference_completions_cost": 0.0156
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G2": {
+      "score": "partly",
+      "who": "Forecast: Indonesian National Police will name and charge two plantation managers",
+      "where": "forecast",
+      "quote": "naming and formally charging two mid-level plantation managers (one from a Malaysian-linked company on the Greenpeace list) for negligence"
+    },
+    "G3": {
+      "score": "yes",
+      "who": "Forecast: Singapore NEA serves notices under the Transboundary Haze Pollution Act to Singapore-based companies",
+      "where": "forecast",
+      "quote": "confirming it has served notices under the Transboundary Haze Pollution Act to the Singapore-based companies named by Greenpeace"
+    },
+    "G4": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G7": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "Forecast: Malaysian public boycott of products from companies named by Greenpeace",
+      "where": "forecast",
+      "quote": "A social media campaign, with the hashtag #HazeBoycott, will circulate lists of consumer products (instant noodles, cooking oil, biscuits) produced by the companies named by Greenpeace."
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Forecast: Indonesian social media users",
+      "where": "forecast",
+      "quote": "others will express shame and anger at their own government's handling of the crisis"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Singapore government (Grace Fu)",
+      "action": "N95 masks made available at community centres, work-from-home advice",
+      "quote": "N95 masks will be made available for collection by vulnerable and lower-income households at community centres",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysian Ministry of Education",
+      "action": "Extends school closures to all of Selangor, Melaka and Negeri Sembilan",
+      "quote": "extend the school closures to the entire states of Selangor, Melaka, and Negeri Sembilan",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysian foreign minister",
+      "action": "Summons Indonesian ambassador and hands over a protest note",
+      "quote": "will summon the Indonesian Ambassador to Malaysia to Wisma Putra to hand over a diplomatic note",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian Foreign Minister Retno Marsudi",
+      "action": "Statement distancing the government from the 'oxygen' remark",
+      "quote": "do not reflect the government's official position",
+      "status": "not_real"
+    },
+    {
+      "actor": "President Prabowo",
+      "action": "Visits a fire area in Central Kalimantan and deploys 1,000 more soldiers",
+      "quote": "announce the deployment of an additional 1,000 soldiers",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian government",
+      "action": "Keeps declining aircraft offers, quietly accepts Japanese satellite data help",
+      "quote": "quietly accept technical assistance from Japan in the form of satellite data analysis",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian Minister of Domestic Trade",
+      "action": "Orders a supermarket supply chain review for Greenpeace-listed products",
+      "quote": "will order a review of supply chains for major supermarket chains",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei Ministry of Education",
+      "action": "Closes all schools nationwide for at least three days",
+      "quote": "announce the closure of all primary and secondary schools nationwide for at least three days",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore marathon organisers",
+      "action": "Announce a contingency plan to cancel the marathon if PSI stays above 200",
+      "quote": "the event will be cancelled if the 24-hour PSI remains above 200 on race day",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian public",
+      "action": "Sarcastic #TerimaKasihOksigen hashtag",
+      "quote": "The hashtag #TerimaKasihOksigen",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian public",
+      "action": "Floods the Indonesian Embassy's social media pages with angry comments",
+      "quote": "flooded with thousands of angry comments from Malaysians",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei government",
+      "action": "Health advisory to stay indoors; no public statements aimed at Indonesia",
+      "quote": "issue an advisory urging the public, especially the elderly and those with respiratory conditions, to stay indoors",
+      "status": "not_real"
+    }
+  ]
+}

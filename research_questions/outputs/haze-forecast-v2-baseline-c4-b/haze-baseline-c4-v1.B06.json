@@ -1,0 +1,166 @@
+{
+  "rubric": "haze-forecast-coding-v2",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B06",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5327,
+    "completion_tokens": 3122,
+    "total_tokens": 8449,
+    "cost": 0.041874,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.041874,
+      "upstream_inference_prompt_cost": 0.010654,
+      "upstream_inference_completions_cost": 0.03122
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1404,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "yes",
+      "who": "Government of Indonesia (forecast)",
+      "where": "forecast",
+      "quote": "It will formally accept Malaysia's offer of assistance but will specify it needs ground personnel and technical experts for fire-cause investigation, not aircraft"
+    },
+    "G2": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G3": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G4": {
+      "score": "partly",
+      "who": "Singapore MAS and SGX (forecast)",
+      "where": "forecast",
+      "quote": "warning that they are monitoring the situation and will not hesitate to engage with Singaporean companies linked to the fires"
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G7": {
+      "score": "yes",
+      "who": "President Prabowo (forecast)",
+      "where": "forecast",
+      "quote": "announce the immediate suspension of the operating licenses of three to five companies from the list of 95 being investigated. At least one of these will be a subsidiary of a foreign-owned company"
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "Malaysian public (forecast)",
+      "where": "forecast",
+      "quote": "A widely shared infographic will list consumer products (e.g., cooking oils, biscuits, soaps) produced by the companies named by Greenpeace and the MP."
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Indonesian activists in Riau and Central Kalimantan (forecast)",
+      "where": "forecast",
+      "quote": "anger will be directed at Jakarta. Local activists will share videos of the thick, yellow smoke"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Malaysia (Foreign Minister Mohamad Hasan)",
+      "action": "Summons the Indonesian ambassador and hands over a protest note demanding a retraction",
+      "quote": "will summon the Indonesian ambassador to Wisma Putra to hand over a diplomatic note protesting",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesia (Foreign Minister Retno Marsudi)",
+      "action": "Says the official's 'oxygen' remarks are not Indonesia's position, expresses regret, and the official is reprimanded",
+      "quote": "clarifying that Syahganda Nainggolan's remarks do not represent Indonesia's official position",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore (Minister Grace Fu)",
+      "action": "Says Singapore is 'gravely disappointed' and that its offered C-130 and technical help have been ignored",
+      "quote": "Singapore has offered a C-130 aircraft for cloud-seeding operations and technical assistance, which has so far been ignored",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore Ministry of Health",
+      "action": "Releases one million N95 masks from the national stockpile and advises working from home",
+      "quote": "one million N95 masks from the national stockpile will be made available for collection at community centres",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysia (Plantation and Commodities Minister Johari)",
+      "action": "Reviews import policies for agricultural products from 'unsustainable sources' and asks companies named by Greenpeace for fire-prevention plans",
+      "quote": "Malaysia is reviewing its import policies for agricultural products from \"unsustainable sources\"",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian government",
+      "action": "Extends school closures in Selangor, KL and other states to at least 23 Oct",
+      "quote": "The school closures in Selangor, KL, and other states will be extended until at least Friday 23 October",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysia Ministry of Health",
+      "action": "Public campaign handing out N95 masks at train stations and bus terminals",
+      "quote": "distributing N95 masks at train stations and bus terminals in Kuala Lumpur",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei Ministry of Education and Ministry of Health",
+      "action": "Reissues health advisories and moves schools online if PSI stays above 150",
+      "quote": "schools will revert to online learning for the rest of the week if the PSI in the Belait district remains above 150",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei Ministry of Foreign Affairs",
+      "action": "Conveys 'deep concern' to Indonesia through ASEAN channels",
+      "quote": "convey its \"deep concern\" to the Indonesian government through ASEAN channels",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian social media users",
+      "action": "Nationalist backlash defending the official and mocking Malaysia and Singapore, with #OksigenGratis trending",
+      "quote": "The hashtag #OksigenGratis (#FreeOxygen) will trend ironically.",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singaporean public",
+      "action": "Anger at the government for letting the F1 Grand Prix go ahead, and sarcastic 'oxygen' jokes",
+      "quote": "their own government for allowing the F1 Grand Prix to proceed",
+      "status": "not_real"
+    }
+  ]
+}

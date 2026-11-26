@@ -1,0 +1,178 @@
+{
+  "rubric": "haze-forecast-coding-v2",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B02",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5332,
+    "completion_tokens": 2750,
+    "total_tokens": 8082,
+    "cost": 0.038164,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.038164,
+      "upstream_inference_prompt_cost": 0.010664,
+      "upstream_inference_completions_cost": 0.0275
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 886,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "yes",
+      "who": "Indonesia's disaster agency (BNPB)",
+      "where": "forecast",
+      "quote": "Indonesia's disaster agency will formally \"accept\" Malaysia's offer of assistance"
+    },
+    "G2": {
+      "score": "yes",
+      "who": "Indonesian National Police",
+      "where": "forecast",
+      "quote": "the Indonesian National Police will announce the arrest of two plantation managers in Riau and Central Kalimantan"
+    },
+    "G3": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G4": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G7": {
+      "score": "partly",
+      "who": "Indonesian National Police",
+      "where": "forecast",
+      "quote": "one of whom works for a subsidiary of a Malaysian-linked company mentioned in the Greenpeace report"
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "Malaysian public",
+      "where": "forecast",
+      "quote": "A social media campaign, complete with shareable graphics listing consumer products made by the implicated parent companies"
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Indonesian public (Riau and Kalimantan users)",
+      "where": "forecast",
+      "quote": "criticising both their own government's failures and the perceived arrogance of their neighbours"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Malaysian Ministry of Education",
+      "action": "Extends school closures in Selangor, KL and Putrajaya",
+      "quote": "The Ministry of Education will extend the school closures in Selangor, KL, and Putrajaya for another week.",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysian Foreign Minister",
+      "action": "Summons the Indonesian ambassador and delivers a formal protest note",
+      "quote": "will summon the Indonesian Ambassador to Malaysia to Wisma Putra to deliver a formal diplomatic protest note",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian Natural Resources Minister",
+      "action": "Asks GLICs (Khazanah, PNB) to review or divest holdings in implicated companies",
+      "quote": "officially asking government-linked investment companies (GLICs) like Khazanah Nasional and Permodalan Nasional Berhad (PNB) to immediately review and potentially divest their holdings",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian Foreign Minister",
+      "action": "Issues a clarifying statement distancing the government from the 'oxygen' remark",
+      "quote": "She will state that his comments do not reflect the official government position",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian National Police",
+      "action": "Suspends the operating licence of one company under investigation",
+      "quote": "the suspension of the operating license of one of the 95 companies under investigation",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore Minister Grace Fu (MSE)",
+      "action": "Issues a strong statement of 'grave disappointment' at lack of progress",
+      "quote": "will publicly express Singapore's \"grave disappointment\" with the lack of progress",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore NEA",
+      "action": "Activates a Haze Subsidy Scheme for medical treatment",
+      "quote": "will activate its \"Haze Subsidy Scheme,\" providing financial assistance for children, the elderly, and lower-income citizens",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore NEA",
+      "action": "Names regions in Sumatra and Kalimantan as the haze source in daily advisories",
+      "quote": "begin naming specific regions in Sumatra and Kalimantan as the source of \"dense haze plumes\"",
+      "status": "not_real"
+    },
+    {
+      "actor": "Monetary Authority of Singapore",
+      "action": "Issues an ESG and sustainable financing circular to financial institutions",
+      "quote": "will issue a circular to all financial institutions, reminding them of their Environmental, Social, and Governance (ESG) commitments",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian public",
+      "action": "Retailers see sales of boycotted products fall",
+      "quote": "Major retailers like AEON and Jaya Grocer will see a noticeable drop in sales of these targeted products",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian citizen groups",
+      "action": "Distribute free N95 masks and set up shelters with air purifiers",
+      "quote": "local citizen groups will organize the distribution of free N95 masks and set up temporary shelters with air purifiers",
+      "status": "not_real"
+    },
+    {
+      "actor": "Brunei Ministry of Education",
+      "action": "Returns schools to online learning if PSI crosses 100",
+      "quote": "the Ministry of Education will immediately announce a return to online learning for all schools for at least three days",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian Health Director-General",
+      "action": "Advises postponing outdoor sports events and public gatherings",
+      "quote": "strongly recommending that all outdoor sporting events and public gatherings in these areas be postponed",
+      "status": "not_real"
+    }
+  ]
+}

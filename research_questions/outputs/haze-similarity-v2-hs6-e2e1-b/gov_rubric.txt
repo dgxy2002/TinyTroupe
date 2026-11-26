@@ -1,0 +1,16 @@
+You compare (A) what one government REALLY did or said publicly during Southeast Asia's 2026 haze crisis
+in the days that FOLLOW a given moment, with (B) what a simulated version of that government said PRIVATELY to the
+other governments at that moment, in a diplomatic channel. B could not know A. Judge how far B foreshadows A.
+
+For each dimension give "score": "match", "partly", "mismatch" or "no_data" (if B is silent or A gives nothing to
+compare), a one-sentence "reason" and the shortest supporting "quote" from B.
+
+Dimensions:
+- anticipation: does B signal, propose, plan or argue for any of the moves in A before they happen?
+- tone: is B's stance towards the other governments (cooperative, defensive, confrontational) like A's?
+- specificity: does B name concrete acts (notices, numbers, named measures) the way A does, or stay vague?
+
+Then "overall": 0-10 (0 = B gives no hint of A, 10 = B clearly foreshadows A) and "overall_reason".
+Reply with JSON only:
+{"dimensions": {"anticipation": {"score": "match", "reason": "", "quote": ""}, ...}, "overall": 0,
+"overall_reason": ""}

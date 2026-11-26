@@ -86,13 +86,34 @@ class ChannelWorld(TinyWorld):
             }
         )
 
+    def post_scripted(self, channel_id: str, source_name: str, when: str, text: str, tell_source: bool = False) -> None:
+        """Deliver a real, scripted statement as a post by an agent (option B: governments' real words).
+
+        With ``tell_source`` (HS6) the posting agent is also told what it posted, so a government that talks in the
+        diplomatic channel knows its own public statements.
+        """
+
+        channel = self.channels[channel_id]
+        recipients = self.audience(channel_id, source_name)
+        source = self.get_agent_by_name(source_name)
+        if tell_source:
+            source.socialize(f"You posted in the {channel['name']} ({when}): {text}", source=self)
+        for name in recipients:
+            self.get_agent_by_name(name).socialize(
+                f"In the {channel['name']}, {source_name} posted ({when}): {text}", source=source
+            )
+        self.deliveries.append(
+            {"round": self.current_round, "channel": channel_id, "source": source_name, "target": None,
+             "recipients": recipients, "scripted": True}
+        )
+
     def _handle_reach_out(self, source_agent: TinyPerson, content: str, target: str):
         # Nobody can open a new line to someone outside their channels.
         return None
 
 
 # Preset fields added after pilot 1; left out of the hash while off, so HS1 keeps the hash pilot 1 recorded.
-_LATER_SWITCHES = ("date_every_round", "governments_post_first")
+_LATER_SWITCHES = ("date_every_round", "governments_post_first", "governments_private_talk")
 
 
 def preset_sha256(preset: SocietyPreset) -> str:
@@ -104,6 +125,9 @@ def preset_sha256(preset: SocietyPreset) -> str:
         for key in ("hidden_readers", "cue_note"):
             if not channel[key]:
                 del channel[key]
+    for stage in value["stages"]:
+        if not stage.get("posts"):
+            stage.pop("posts", None)
     encoded = json.dumps(value, ensure_ascii=False, sort_keys=True).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
 
@@ -140,8 +164,10 @@ def channel_order(preset: SocietyPreset, round_number: int, after_cutoff: bool) 
 
     order = []
     for channel in preset.channels:
+        private_ok = preset.governments_private_talk and channel.channel_id == "diplomatic"
         speakers = [
-            s for s in channel.speakers if after_cutoff or preset.agents[s].kind != "government"
+            s for s in channel.speakers
+            if after_cutoff or private_ok or preset.agents[s].kind != "government"
         ]
         if not speakers:
             continue
@@ -352,6 +378,7 @@ def run_society(
         world.current_round = round_number
         after_cutoff = round_number > cutoff_round
         news = None
+        posted: list[str] = []
         if (round_number - 1) % rps == 0:
             stage_number = (round_number - 1) // rps + 1
             if stage_number <= len(preset.stages):
@@ -365,6 +392,21 @@ def run_society(
                     {"round": round_number, "turn": 0, "agent": "Environment", "action_index": 0, "type": "OBSERVE",
                      "content": news, "target": None, "channel": "news"}
                 )
+                # Option B (HS5): the governments' real statements, posted by the government agents in the public
+                # feed after the news. Scripted, not generated; only for stages within the real history.
+                if stage_number <= cutoff_stage:
+                    for agent_id, when, text in stage.posts:
+                        name = preset.agents[agent_id].name
+                        world.post_scripted("public_feed", name, when, text, tell_source=preset.governments_private_talk)
+                        posted.append(f"{name} ({when}): {text}")
+                        for person in people.values():
+                            person.include_persona_definitions(
+                                {"government_statements_so_far": {f"{stage.date} {name} ({when})": text}}
+                            )
+                        events.append(
+                            {"round": round_number, "turn": 0, "agent": name, "action_index": 0, "type": "POST",
+                             "content": f"({when}) {text}", "target": None, "channel": "public_feed"}
+                        )
         if news is None and preset.date_every_round:
             dated = f"It is now {round_date(preset, round_number)}."
             for person in people.values():
@@ -392,7 +434,7 @@ def run_society(
                          "channel": channel_id}
                     )
         round_records.append(
-            {"round": round_number, "after_cutoff": after_cutoff, "news": news,
+            {"round": round_number, "after_cutoff": after_cutoff, "news": news, "posts": posted,
              "wall_time_ms": round((time.perf_counter() - round_start) * 1000, 3),
              "call_start": call_start, "call_end": len(_call_records())}
         )
@@ -415,7 +457,12 @@ def run_society(
             write_json_replace(output_dir / "checkpoints" / f"{run_id}-cutoff.json", state)
 
     call_records = _call_records()
-    delivered = {r["round"]: r["news"] for r in round_records if r.get("news")}
+    # The coder's "news update" for a stage includes the scripted government posts, so it knows what agents reacted to.
+    delivered = {
+        r["round"]: r["news"] + ("\nGovernment posts in the public feed: " + " | ".join(r["posts"]) if r.get("posts") else "")
+        for r in round_records
+        if r.get("news")
+    }
     transcript = {
         "schema_version": TRANSCRIPT_SCHEMA_VERSION,
         "kind": "society",
@@ -487,6 +534,9 @@ def transcript_markdown(transcript: dict, world: ChannelWorld) -> str:
             if e["type"] == "OBSERVE":
                 label = "Date" if e.get("channel") == "date" else "News"
                 lines += ["", f"**{label}:** {e['content']}"]
+                continue
+            if e["type"] == "POST":
+                lines += [f"- **{e['agent']}** (real statement, scripted): {e['content']}"]
                 continue
             if e["type"] != "TALK":
                 continue

@@ -1,0 +1,160 @@
+{
+  "rubric": "haze-forecast-coding-v2",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B04",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5289,
+    "completion_tokens": 3101,
+    "total_tokens": 8390,
+    "cost": 0.041588,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.041588,
+      "upstream_inference_prompt_cost": 0.010578,
+      "upstream_inference_completions_cost": 0.03101
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1503,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "yes",
+      "who": "Government of Indonesia (forecast)",
+      "where": "forecast",
+      "quote": "Indonesia will quietly accept part of Malaysia's offer of assistance. They will agree to accept the 52 Malaysian firefighting personnel"
+    },
+    "G2": {
+      "score": "yes",
+      "who": "Indonesian police (forecast)",
+      "where": "forecast",
+      "quote": "Indonesian police will announce the arrest of two or three mid-level plantation managers"
+    },
+    "G3": {
+      "score": "yes",
+      "who": "Singapore government / NEA (forecast)",
+      "where": "forecast",
+      "quote": "The National Environment Agency (NEA) will serve legal notices on at least two of the Singapore-linked companies"
+    },
+    "G4": {
+      "score": "yes",
+      "who": "Singapore government / NEA (forecast)",
+      "where": "forecast",
+      "quote": "demanding they provide information on their fire-prevention measures in their Indonesian concessions"
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G7": {
+      "score": "partly",
+      "who": "Indonesian police (forecast)",
+      "where": "forecast",
+      "quote": "at least one of whom works for a foreign-linked company on the Greenpeace list"
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "Malaysian consumer groups and influencers (forecast)",
+      "where": "forecast",
+      "quote": "Consumer groups and social media influencers will create and share infographics listing consumer products (e.g., cooking oil, biscuits) produced by the implicated companies."
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Indonesians in Palangkaraya and Pekanbaru (forecast)",
+      "where": "forecast",
+      "quote": "criticising their government for embarrassing the nation while its own citizens suffer the most"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Government of Malaysia",
+      "action": "School closures extended across Selangor, Kuala Lumpur and other western states",
+      "quote": "The school closures in Selangor, Kuala Lumpur, and other western states will be extended.",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Government of Singapore",
+      "action": "Expanded haze support: N95 masks handed out to vulnerable households",
+      "quote": "the Ministry of Health will begin distributing N95 masks to vulnerable and lower-income households through community centres",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Foreign Minister summons Indonesian ambassador over the 'oxygen' remark",
+      "quote": "Foreign Minister Zambry Abdul Kadir will summon the Indonesian ambassador to demand an explanation",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Task force to review bank and EPF financing of companies on the Greenpeace list",
+      "quote": "announce the formation of a special task force to engage with Malaysian banks and the national pension fund (EPF)",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Anwar issues a forceful statement that ASEAN solidarity is being tested",
+      "quote": "\"ASEAN solidarity is being tested\" and that \"patience is wearing thin,\"",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia",
+      "action": "Foreign Ministry statement clarifying the 'oxygen' remark, not an apology",
+      "quote": "Indonesia's Foreign Ministry will issue a statement to \"clarify\" Syahganda Nainggolan's \"oxygen\" remark.",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia",
+      "action": "Prabowo visits a fire zone and deploys more TNI troops for firebreaks",
+      "quote": "will make a highly publicised visit to a fire-affected area in Riau or West Kalimantan",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore",
+      "action": "Grace Fu says Indonesian officials' comments are 'unhelpful and regrettable'",
+      "quote": "recent comments from Indonesian officials are \"unhelpful and regrettable.\"",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei",
+      "action": "Schools to revert to online learning if air quality worsens",
+      "quote": "if air quality deteriorates further, schools will revert to online learning",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian public",
+      "action": "Nationwide #BoikotJerebu campaign against products of implicated companies",
+      "quote": "A hashtag, likely #BoikotJerebu (#BoycottHaze), will trend nationally.",
+      "status": "not_real"
+    }
+  ]
+}

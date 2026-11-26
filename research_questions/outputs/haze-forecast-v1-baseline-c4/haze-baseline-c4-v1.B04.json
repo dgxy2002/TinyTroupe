@@ -1,0 +1,166 @@
+{
+  "rubric": "haze-forecast-coding-v1",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B04",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5229,
+    "completion_tokens": 1601,
+    "total_tokens": 6830,
+    "cost": 0.026468,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.026468,
+      "upstream_inference_prompt_cost": 0.010458,
+      "upstream_inference_completions_cost": 0.01601
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "yes",
+      "who": "Forecast: Indonesian government accepting 52 Malaysian firefighting personnel",
+      "where": "forecast",
+      "quote": "They will agree to accept the 52 Malaysian firefighting personnel for \"ground support knowledge sharing\""
+    },
+    "G2": {
+      "score": "partly",
+      "who": "Forecast: Indonesian police announcing arrests of plantation managers. The numbers are far smaller than the real 223 suspects and 9 companies, but they are arrests.",
+      "where": "forecast",
+      "quote": "Indonesian police will announce the arrest of two or three mid-level plantation managers"
+    },
+    "G3": {
+      "score": "yes",
+      "who": "Forecast: Singapore government (NEA) serving legal notices under the haze act on companies",
+      "where": "forecast",
+      "quote": "The National Environment Agency (NEA) will serve legal notices on at least two of the Singapore-linked companies on the Greenpeace list"
+    },
+    "G4": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G7": {
+      "score": "partly",
+      "who": "Forecast: Indonesian police arresting a manager of a foreign-linked company. This is not blame or a threat.",
+      "where": "forecast",
+      "quote": "at least one of whom works for a foreign-linked company on the Greenpeace list"
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "Forecast: Malaysian public boycott of products from companies implicated in the fires, not of Indonesian products as such",
+      "where": "forecast",
+      "quote": "A hashtag, likely #BoikotJerebu (#BoycottHaze), will trend nationally."
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Forecast: Indonesians in smog-choked cities criticising their government",
+      "where": "forecast",
+      "quote": "criticising their government for embarrassing the nation while its own citizens suffer the most"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Government of Singapore",
+      "action": "Singapore distributes N95 masks and expands haze support",
+      "quote": "the Ministry of Health will begin distributing N95 masks to vulnerable and lower-income households through community centres",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "School closures extended across western states",
+      "quote": "The school closures in Selangor, Kuala Lumpur, and other western states will be extended.",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Indonesian Foreign Ministry",
+      "action": "Statement to clarify the 'oxygen' remark and distance the government from it",
+      "quote": "Indonesia's Foreign Ministry will issue a statement to \"clarify\" Syahganda Nainggolan's \"oxygen\" remark.",
+      "status": "not_real"
+    },
+    {
+      "actor": "President Prabowo",
+      "action": "Visit to a fire area and deployment of more TNI troops",
+      "quote": "President Prabowo Subianto will make a highly publicised visit to a fire-affected area in Riau or West Kalimantan",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Foreign Minister summons the Indonesian ambassador",
+      "quote": "Foreign Minister Zambry Abdul Kadir will summon the Indonesian ambassador",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Task force to review bank and EPF financing of implicated companies",
+      "quote": "announce the formation of a special task force to engage with Malaysian banks and the national pension fund (EPF)",
+      "status": "not_real"
+    },
+    {
+      "actor": "Anwar Ibrahim",
+      "action": "Forceful public statement that patience is wearing thin",
+      "quote": "\"ASEAN solidarity is being tested\" and that \"patience is wearing thin,\"",
+      "status": "not_real"
+    },
+    {
+      "actor": "Grace Fu / Singapore",
+      "action": "Press statement calling Indonesian officials' comments unhelpful",
+      "quote": "stating that recent comments from Indonesian officials are \"unhelpful and regrettable.\"",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei",
+      "action": "Schools revert to online learning if air quality worsens",
+      "quote": "schools will revert to online learning",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore public",
+      "action": "Op-eds and letters demand financial and legal action against companies",
+      "quote": "demand stronger government action, with a focus on using financial and legal levers against culpable companies",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei",
+      "action": "Stays publicly silent on diplomacy",
+      "quote": "The government will remain publicly silent on the diplomatic front",
+      "status": "not_real"
+    }
+  ]
+}

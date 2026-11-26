@@ -1,0 +1,160 @@
+{
+  "rubric": "haze-forecast-coding-v2",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B05",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5224,
+    "completion_tokens": 2990,
+    "total_tokens": 8214,
+    "cost": 0.040348,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.040348,
+      "upstream_inference_prompt_cost": 0.010448,
+      "upstream_inference_completions_cost": 0.0299
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1324,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "no",
+      "who": "Indonesia's disaster agency (BNPB), predicted to decline",
+      "where": "forecast",
+      "quote": ""
+    },
+    "G2": {
+      "score": "yes",
+      "who": "Indonesian National Police",
+      "where": "forecast",
+      "quote": "the Indonesian National Police will announce the arrest of several more plantation managers and smallholders in Riau and Central Kalimantan"
+    },
+    "G3": {
+      "score": "yes",
+      "who": "Singapore NEA",
+      "where": "forecast",
+      "quote": "it has issued a \"Preventive Measures Notice\" under the Transboundary Haze Pollution Act to two Singapore-linked companies named by Greenpeace"
+    },
+    "G4": {
+      "score": "partly",
+      "who": "Singapore NEA / Grace Fu",
+      "where": "forecast",
+      "quote": "it has issued a \"Preventive Measures Notice\" under the Transboundary Haze Pollution Act to two Singapore-linked companies"
+    },
+    "G5": {
+      "score": "partly",
+      "who": "Malaysian Environment Minister Nik Nazmi",
+      "where": "forecast",
+      "quote": "the government is launching an official investigation into the Malaysian-linked companies named in the Greenpeace report"
+    },
+    "G6": {
+      "score": "partly",
+      "who": "Malaysian Environment Minister Nik Nazmi",
+      "where": "forecast",
+      "quote": "will not rule out legal action based on domestic environmental laws"
+    },
+    "G7": {
+      "score": "partly",
+      "who": "Indonesian National Police",
+      "where": "forecast",
+      "quote": "Indonesian citizens, not just foreign companies, are being prosecuted"
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "Malaysian shoppers and the Consumers' Association of Penang",
+      "where": "forecast",
+      "quote": "Supermarket shoppers will post photos on social media of themselves choosing alternative brands of cooking oil, paper, and tissue products."
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Indonesian citizens in Riau and Palangkaraya",
+      "where": "forecast",
+      "quote": "They will express fury at both the companies and their own government's incompetence"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Government of Malaysia",
+      "action": "Foreign Minister summons the Indonesian ambassador and hands over a protest note",
+      "quote": "will summon the Indonesian Ambassador to Malaysia to Wisma Putra to hand over a diplomatic note protesting",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia",
+      "action": "Foreign Minister Retno says the 'oxygen' remark is not government position",
+      "quote": "will state that it does not reflect the official government position",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia (BNPB)",
+      "action": "Declines Malaysia's offer of aircraft as a technical decision",
+      "quote": "will publicly decline Malaysia's offer of aircraft",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Anwar invokes the ASEAN haze agreement and calls for stronger accountability mechanisms",
+      "quote": "mechanisms for accountability need to be strengthened",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore",
+      "action": "Distributes N95 masks to lower-income households through community centres",
+      "quote": "The government will begin distributing N95 masks to lower-income households through community centres.",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Indonesian embassy in Kuala Lumpur",
+      "action": "Issues statements urging against boycotts",
+      "quote": "will issue statements urging against boycotts",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian public",
+      "action": "Nationalist #OksigenGratis backlash accusing Malaysia and Singapore of hypocrisy",
+      "quote": "The hashtag #OksigenGratis (#FreeOxygen) will trend",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore public",
+      "action": "Forum letters demand Temasek and banks divest from implicated companies",
+      "quote": "demanding that Singaporean banks and investment funds, including Temasek, divest",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei",
+      "action": "Moves schools to online learning if air quality is very unhealthy",
+      "quote": "will announce a return to online learning for all schools for at least a week",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian public",
+      "action": "Citizens organise N95 mask distribution to the homeless and outdoor workers",
+      "quote": "Citizen-led initiatives will organize to distribute N95 masks to the homeless and outdoor workers",
+      "status": "not_real"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "rubric": "haze-forecast-coding-v2",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B09",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5431,
+    "completion_tokens": 2618,
+    "total_tokens": 8049,
+    "cost": 0.037042,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.037042,
+      "upstream_inference_prompt_cost": 0.010862,
+      "upstream_inference_completions_cost": 0.02618
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 859,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "yes",
+      "who": "Government of Indonesia",
+      "where": "forecast",
+      "quote": "they will accept the offer of 52 ground personnel but politely decline the aircraft"
+    },
+    "G2": {
+      "score": "yes",
+      "who": "Indonesian National Police",
+      "where": "forecast",
+      "quote": "the Indonesian National Police will announce the arrest of at least one mid-level plantation manager from a foreign-linked company"
+    },
+    "G3": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G4": {
+      "score": "partly",
+      "who": "Singapore Exchange (SGX)",
+      "where": "forecast",
+      "quote": "The Singapore Exchange (SGX) will issue a \"Trade with Caution\" advisory on the Singapore-listed companies named in the Greenpeace report"
+    },
+    "G5": {
+      "score": "partly",
+      "who": "Malaysian Minister Nik Nazmi",
+      "where": "forecast",
+      "quote": "the government is initiating a formal investigation into the Malaysian-linked companies named in the Greenpeace report"
+    },
+    "G6": {
+      "score": "partly",
+      "who": "Malaysian Minister Nik Nazmi",
+      "where": "forecast",
+      "quote": "\"all economic and legal options are on the table,\""
+    },
+    "G7": {
+      "score": "partly",
+      "who": "Indonesian National Police",
+      "where": "forecast",
+      "quote": "arrest of at least one mid-level plantation manager from a foreign-linked company"
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "FOMCA (Malaysian Consumers Association)",
+      "where": "forecast",
+      "quote": "FOMCA) will issue a statement supporting a consumer boycott of products from companies directly linked to the fires"
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Indonesian residents in Sumatra and Kalimantan",
+      "where": "forecast",
+      "quote": "small, spontaneous protests outside local government offices demanding more masks and immediate healthcare assistance"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Government of Malaysia",
+      "action": "Foreign minister summons Indonesian ambassador and issues a strongly worded protest",
+      "quote": "will summon the Indonesian ambassador to Malaysia to express a formal protest",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia",
+      "action": "Foreign minister Retno distances government from Nainggolan's 'oxygen' remark",
+      "quote": "Mr. Nainggolan's remarks do not represent the official government position",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "School closures extended across Selangor, KL and other states until 23 Oct",
+      "quote": "school closures in Selangor, Kuala Lumpur, and other affected states will be extended until at least Friday, 23 October",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Health ministry distributes N95 masks at clinics and advises staying indoors",
+      "quote": "announcing the distribution of N95 masks at government clinics in the worst-hit areas",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian NGOs",
+      "action": "Protest outside the Indonesian Embassy in Kuala Lumpur",
+      "quote": "peaceful protest of about 200-300 people outside the Indonesian Embassy in Kuala Lumpur",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore",
+      "action": "Grace Fu statement criticising the remarks and repeating the offer of a C-130 for cloud seeding",
+      "quote": "reiterate Singapore's standing offer to help Indonesia, including a C-130 aircraft for cloud seeding operations",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore",
+      "action": "NEA upgrades advisory and MOE sets a home-based learning trigger",
+      "quote": "schools will immediately switch to home-based learning",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei",
+      "action": "Home-based learning extended to 23 Oct",
+      "quote": "current period of home-based learning will be extended for at least another week, until 23 October",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei",
+      "action": "Avoids strong public statements against Indonesia and works through ASEAN",
+      "quote": "will not issue any strong public statements against Indonesia, preferring to work through ASEAN channels",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian public",
+      "action": "Local #KamiButuhUdaraBersih campaign and protests over masks and healthcare",
+      "quote": "The hashtag #KamiButuhUdaraBersih (We Need Clean Air) will trend locally",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian public",
+      "action": "#HazeIsNotOxygen trends and boycott brand lists circulate",
+      "quote": "The hashtag #HazeIsNotOxygen will trend nationally",
+      "status": "not_real"
+    }
+  ]
+}

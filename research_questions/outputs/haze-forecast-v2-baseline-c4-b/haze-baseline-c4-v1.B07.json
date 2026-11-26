@@ -1,0 +1,160 @@
+{
+  "rubric": "haze-forecast-coding-v2",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B07",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5219,
+    "completion_tokens": 2710,
+    "total_tokens": 7929,
+    "cost": 0.037538,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.037538,
+      "upstream_inference_prompt_cost": 0.010438,
+      "upstream_inference_completions_cost": 0.0271
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1121,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G2": {
+      "score": "yes",
+      "who": "Indonesian National Police (predicted)",
+      "where": "forecast",
+      "quote": "the Indonesian National Police will announce the arrest of two mid-level managers from a plantation company in Kalimantan"
+    },
+    "G3": {
+      "score": "partly",
+      "who": "Singapore Minister Grace Fu (predicted)",
+      "where": "forecast",
+      "quote": "Singaporean companies found to be linked to the fires via the Transboundary Haze Pollution Act will \"face the full force of the law.\""
+    },
+    "G4": {
+      "score": "partly",
+      "who": "Singapore government (predicted)",
+      "where": "forecast",
+      "quote": "The government will announce the suspension of a \"Green Label\" certification for a Singapore-linked paper or palm oil product company named in the Greenpeace report"
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G7": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G8": {
+      "score": "partly",
+      "who": "Indonesian Foreign Minister Retno Marsudi (predicted)",
+      "where": "forecast",
+      "quote": "an expression of \"frustration that Indonesia is solely blamed for a complex issue.\""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "yes",
+      "who": "Malaysian MP (predicted)",
+      "where": "forecast",
+      "quote": "The Malaysian MP who called for a boycott will name a specific, popular Indonesian-made consumer product (e.g., a brand of instant noodles or coffee) in Parliament as a primary target for consumers to avoid."
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Citizens in Riau, Jambi and Central Kalimantan (predicted)",
+      "where": "forecast",
+      "quote": "criticism of the central government in Jakarta for its slow response and diplomatic posturing while they are \"suffering and choking.\""
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Government of Malaysia (Foreign Minister)",
+      "action": "Summons the Indonesian ambassador and issues a statement of \"extreme disappointment\"",
+      "quote": "will formally summon the Indonesian Ambassador to Malaysia",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia (PM Anwar)",
+      "action": "Prepares to initiate action under the ASEAN haze agreement's dispute resolution mechanism",
+      "quote": "Malaysia is preparing to initiate action under the ASEAN Agreement on Transboundary Haze Pollution's dispute resolution mechanism",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia (Foreign Minister Retno)",
+      "action": "Issues a \"clarification\" distancing the government from the \"oxygen\" remark, without apologising",
+      "quote": "will state that his words were \"not the official government position\"",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia (BNPB)",
+      "action": "Keeps declining foreign aircraft, calling them \"currently ineffective\"",
+      "quote": "The Indonesian government will continue to publicly decline offers of foreign aircraft.",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian police",
+      "action": "Seals land of two Indonesian-owned companies",
+      "quote": "They will also publicize the sealing of land belonging to another two companies",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian public",
+      "action": "#BoikotJerebu boycott campaign, with product lists and \"Haze Alert\" stickers in supermarkets",
+      "quote": "A hashtag, **#BoikotJerebu** (Boycott Haze), will trend nationally.",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore (NEA)",
+      "action": "Twice-daily haze advisories and possibly hourly PM2.5 readings",
+      "quote": "The National Environment Agency (NEA) will begin issuing twice-daily haze advisories",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore (Minister Grace Fu)",
+      "action": "Tells schools to prepare for home-based learning",
+      "quote": "She will advise all primary and secondary schools to be prepared for a switch to home-based learning if the situation worsens.",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei (Ministry of Health)",
+      "action": "Issues a stronger health warning against outdoor activity",
+      "quote": "The Ministry of Health will issue a stronger public health warning",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei",
+      "action": "Stays publicly quiet on diplomacy and extends home-based learning",
+      "quote": "The government will remain publicly quiet on the diplomatic front.",
+      "status": "not_real"
+    }
+  ]
+}

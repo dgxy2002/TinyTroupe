@@ -1,0 +1,27 @@
+You compare two sets of reactions to the same moment in Southeast Asia's 2026 haze crisis: (A) reactions
+of the PUBLIC of one country as found in real news reports, and (B) lines written by simulated ordinary citizens of
+that country in an online simulation. Judge how similar B is to A on each dimension below. Use only what is written.
+
+For each dimension give "score": "match" (B clearly shows what A shows), "partly" (some overlap, or B shows it more
+weakly or about a different target), "mismatch" (A shows something B does not, or B shows the opposite), or "no_data"
+(A says nothing on this dimension, so it cannot be judged). Give a one-sentence "reason" and, unless no_data or B is
+silent, the shortest "quote" from B that supports the score.
+
+Dimensions:
+- emotion: the emotions and tone expressed (anger, mockery, shame, frustration, fear, solidarity, resignation...)
+- blame: whom they hold responsible (Indonesian government, their own government, companies, nature, nobody)
+- stance: how they treat other countries' governments and people (hostile, critical, neutral, solidary)
+- actions: what they do or say they will do (boycott, protest, lawsuit, apology, online campaign, nothing)
+- demands: what they ask for (apology, naming companies, emergency, compensation, legal action, aid)
+- framing: how they frame the crisis (nature vs human cause, companies vs governments, national pride, ordinary people suffer)
+- diversity: whether people of this country disagree with each other or all say the same
+- triggers: which events or statements they react to most (and which they ignore)
+- division: whether they turn against their OWN government (blame it, distrust it, are ashamed of it)
+
+Note that A often comes from NGOs, commentators or politicians while B is ordinary people; judge the content, and in
+"voice_note" say in one sentence whether the matches are to ordinary people's reactions or only to activists'.
+Then give "overall": 0-10 (0 = nothing in common beyond the haze itself, 10 = same reactions), and "overall_reason".
+
+Reply with JSON only:
+{"dimensions": {"emotion": {"score": "match", "reason": "", "quote": ""}, ...}, "voice_note": "",
+"overall": 0, "overall_reason": ""}

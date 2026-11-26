@@ -1,0 +1,160 @@
+{
+  "rubric": "haze-forecast-coding-v2",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B06",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5327,
+    "completion_tokens": 2691,
+    "total_tokens": 8018,
+    "cost": 0.037564,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.037564,
+      "upstream_inference_prompt_cost": 0.010654,
+      "upstream_inference_completions_cost": 0.02691
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1136,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "yes",
+      "who": "Government of Indonesia (forecast)",
+      "where": "forecast",
+      "quote": "It will formally accept Malaysia's offer of assistance but will specify it needs ground personnel and technical experts"
+    },
+    "G2": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G3": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G4": {
+      "score": "partly",
+      "who": "MAS and SGX (Singapore regulators)",
+      "where": "forecast",
+      "quote": "they are monitoring the situation and will not hesitate to engage with Singaporean companies linked to the fires"
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G7": {
+      "score": "yes",
+      "who": "President Prabowo (Indonesia)",
+      "where": "forecast",
+      "quote": "announce the immediate suspension of the operating licenses of three to five companies from the list of 95 being investigated. At least one of these will be a subsidiary of a foreign-owned company"
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "Malaysian MP and Malaysian public",
+      "where": "forecast",
+      "quote": "A widely shared infographic will list consumer products (e.g., cooking oils, biscuits, soaps) produced by the companies named by Greenpeace and the MP."
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Indonesian activists in Riau and Central Kalimantan",
+      "where": "forecast",
+      "quote": "directly tagging President Prabowo and the Environment Ministry with captions like, \"This is the oxygen you are sending, sir?\""
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Government of Malaysia (Foreign Minister Mohamad Hasan)",
+      "action": "Summons the Indonesian ambassador and hands over a protest note over the 'oxygen' remarks",
+      "quote": "summon the Indonesian ambassador to Wisma Putra to hand over a diplomatic note protesting",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia (Foreign Minister Retno Marsudi)",
+      "action": "Disowns the official's remarks and expresses regret",
+      "quote": "Syahganda Nainggolan's remarks do not represent Indonesia's official position",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore (Ministry of Health)",
+      "action": "Releases one million N95 masks from the national stockpile at community centres",
+      "quote": "one million N95 masks from the national stockpile will be made available for collection at community centres",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Extends school closures in Selangor, KL and other states to at least 23 Oct",
+      "quote": "The school closures in Selangor, KL, and other states will be extended until at least Friday 23 October.",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Government of Malaysia (Minister Johari Abdul Ghani)",
+      "action": "Reviews agricultural import policies and urges named Malaysian firms to submit fire-prevention plans",
+      "quote": "Malaysia is reviewing its import policies for agricultural products from \"unsustainable sources\"",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore (Minister Grace Fu)",
+      "action": "Publicly states disappointment and says Singapore's C-130 and technical help offers were ignored",
+      "quote": "Singapore has offered a C-130 aircraft for cloud-seeding operations and technical assistance, which has so far been ignored",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore",
+      "action": "Issues an advisory encouraging employers to allow work from home",
+      "quote": "A national advisory will be issued strongly encouraging companies to allow employees",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia (Ministry of Health)",
+      "action": "Runs a campaign distributing N95 masks at train stations and bus terminals",
+      "quote": "distributing N95 masks at train stations and bus terminals in Kuala Lumpur",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei",
+      "action": "Conveys 'deep concern' to Indonesia through ASEAN channels and moves schools online",
+      "quote": "convey its \"deep concern\" to the Indonesian government through ASEAN channels",
+      "status": "not_real"
+    },
+    {
+      "actor": "Indonesian public",
+      "action": "Nationalist backlash online with the #OksigenGratis hashtag",
+      "quote": "The hashtag #OksigenGratis (#FreeOxygen) will trend ironically.",
+      "status": "not_real"
+    }
+  ]
+}

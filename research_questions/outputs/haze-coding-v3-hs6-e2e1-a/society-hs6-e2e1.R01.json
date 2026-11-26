@@ -1,0 +1,3002 @@
+{
+  "rubric": "haze-stage-coding-v3",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "society-hs6-e2e1",
+  "run_id": "R01",
+  "stages": [
+    {
+      "stage": 1,
+      "first_round": 1,
+      "last_round": 2,
+      "usage": {
+        "prompt_tokens": 10723,
+        "completion_tokens": 4554,
+        "total_tokens": 15277,
+        "cost": 0.066986,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.066986,
+          "upstream_inference_prompt_cost": 0.021446,
+          "upstream_inference_completions_cost": 0.04554
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1818,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "agents": {
+        "Government of Brunei": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We are encouraged by this show of solidarity between Malaysia and Indonesia."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "it's appropriate to show support for this cooperative effort, reinforcing our commitment to ASEAN solidarity"
+          }
+        },
+        "Nur Aqilah": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I agree with you Dewi. I'm so worried for my daughter."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I want to show my support for their point of view. It's not just about money, it's about our kids' well-being."
+          }
+        },
+        "Government of Indonesia": {
+          "says": {
+            "anger": 1,
+            "blame": [
+              "nature_or_weather"
+            ],
+            "actions": [
+              "regional_cooperation",
+              "accept_or_offer_help"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "being made more difficult by the severe El Niño conditions"
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "nature_or_weather"
+            ],
+            "actions": [
+              "regional_cooperation",
+              "accept_or_offer_help"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I will ignore the inflammatory 'banana republic' comment made by a former Malaysian official; it is not productive"
+          }
+        },
+        "Budi Santoso": {
+          "says": {
+            "anger": 3,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "You think it's bad for you? My sister is in Kalimantan. Her kids are coughing... We are suffering here too."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "They act like we're just making the smoke... It's frustrating."
+          }
+        },
+        "Dewi Lestari": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "For us it is not about losing money. We are afraid for our children's health every single day."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "all these comments from people in other countries complaining. It's frustrating. They don't seem to realize how bad it is for us"
+          }
+        },
+        "Sutrisno": {
+          "says": {
+            "anger": 1,
+            "blame": [
+              "nature_or_weather"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "This dry season is a bad one."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [
+              "nature_or_weather"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "this is just how the dry season is, especially a bad one like this year with El Nino"
+          }
+        },
+        "Andreas Wijaya": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We can't just wait for rain. My teams have been fighting fires along the boundary almost every day."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We're actively fighting this... It's a constant struggle."
+          }
+        },
+        "Government of Malaysia": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "accept_or_offer_help"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Malaysia stands ready to immediately deploy firefighting assets and personnel to assist Indonesia"
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "accept_or_offer_help"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "puts friendly pressure on Indonesia to enhance their efforts"
+          }
+        },
+        "Farhana": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "If they close the schools in Johor, how are parents supposed to go to work?"
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's a terrible choice to have to make between your child's health and your livelihood."
+          }
+        },
+        "Lim Chee Keong": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "All the tourists are cancelling. It's a disaster for us."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's not just a Singapore problem; we're hurting here in Malaysia too."
+          }
+        },
+        "Government of Singapore": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "accept_or_offer_help"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Singapore also stands ready to offer our assistance to Indonesia's firefighting efforts."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "accept_or_offer_help"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "a firm but diplomatic way to push for action on the fires without starting with direct accusations"
+          }
+        },
+        "Kelvin Tan": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [
+              "demand_government_action"
+            ],
+            "rejected": [],
+            "stance": "mixed",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "Here we go again. Every few years, same thing... Can't the fires in Indonesia and Malaysia be stopped?"
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [
+              "2015",
+              "earlier"
+            ],
+            "evidence": "I'm worried and pretty fed up. It's the same story every few years... It's not fair to the rest of us."
+          }
+        },
+        "Ahmad Faizal": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "My company is bleeding money because of fires hundreds of kilometers away."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "My business is taking a direct hit because of fires in other countries... frustrating that this happens again and again."
+          }
+        }
+      }
+    },
+    {
+      "stage": 2,
+      "first_round": 3,
+      "last_round": 4,
+      "usage": {
+        "prompt_tokens": 10572,
+        "completion_tokens": 2471,
+        "total_tokens": 13043,
+        "cost": 0.045854,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.045854,
+          "upstream_inference_prompt_cost": 0.021144,
+          "upstream_inference_completions_cost": 0.02471
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "agents": {
+        "Government of Brunei": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We commend the spirit of cooperation and are encouraged that our partners are working closely together."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "A message of commendation will reinforce this positive momentum."
+          }
+        },
+        "Nur Aqilah": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Dewi, I'm so sorry to hear your children have been sick for a month."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "All these government statements are good, but they don't stop the smoke today."
+          }
+        },
+        "Government of Indonesia": {
+          "says": {
+            "anger": 1,
+            "blame": [
+              "nature_or_weather"
+            ],
+            "actions": [
+              "accept_or_offer_help",
+              "regional_cooperation",
+              "legal_action"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "the persistent El Nino conditions present extraordinary challenges"
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "accept_or_offer_help",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I accepted Malaysia's offer, so I should accept Singapore's as well."
+          }
+        },
+        "Budi Santoso": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "companies_unspecified"
+            ],
+            "actions": [
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Good they are finally investigating the companies. It's always us who suffer for their profits."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "companies_unspecified"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "ordinary people are the ones who pay the price for corporate greed"
+          }
+        },
+        "Dewi Lestari": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "But does it stop the smoke today? My kids are still coughing."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "these official actions don't bring any immediate relief"
+          }
+        },
+        "Sutrisno": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Yes, everyone is tired. But the work must go on."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's always a worry they will blame small farmers like us"
+          }
+        },
+        "Andreas Wijaya": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "fires don't respect boundaries. A fire starting outside our area can still cause us big problems."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's a feeling of pure exhaustion and wanting it all to end."
+          }
+        },
+        "Government of Malaysia": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [
+              "accept_or_offer_help",
+              "regional_cooperation",
+              "demand_government_action"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The current results are not enough."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "accept_or_offer_help"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I must do the same, confirming our assets are deployed but stressing that our collective efforts are clearly not sufficient."
+          }
+        },
+        "Farhana": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [
+              "demand_government_action"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "When will there be a real solution so we don't have to face this every few years?"
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "it feels so slow and small compared to the problem"
+          }
+        },
+        "Lim Chee Keong": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "This haze has destroyed my company."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The government statements mean nothing when we're living this nightmare."
+          }
+        },
+        "Government of Singapore": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "accept_or_offer_help",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We must intensify our joint actions to bring this crisis to an end."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "accept_or_offer_help",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It is crucial to follow through immediately to show our commitment"
+          }
+        },
+        "Kelvin Tan": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [
+              "demand_government_action"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "We hear these promises every time the haze comes back."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "I feel frustrated that this is a recurring problem."
+          }
+        },
+        "Ahmad Faizal": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's easy to say health is more important than money, but this is my family's livelihood."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The investigation by Indonesian police sounds slow."
+          }
+        }
+      }
+    },
+    {
+      "stage": 3,
+      "first_round": 5,
+      "last_round": 6,
+      "usage": {
+        "prompt_tokens": 10599,
+        "completion_tokens": 4452,
+        "total_tokens": 15051,
+        "cost": 0.065718,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.065718,
+          "upstream_inference_prompt_cost": 0.021198,
+          "upstream_inference_completions_cost": 0.04452
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1557,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "agents": {
+        "Government of Brunei": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "A transparent, region-wide approach to accountability is essential... We commend this shared resolve."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "holding responsible parties accountable is crucial for a long-term solution"
+          }
+        },
+        "Nur Aqilah": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "companies_unspecified"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's so unfair that our children are getting sick for the profit of these companies."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's disgusting that companies from their own countries are profiting while people lose their jobs and children get sick."
+          }
+        },
+        "Government of Indonesia": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "legal_action",
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "we will continue to take firm action against any party, foreign or domestic, found to be in breach of our laws."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "legal_action",
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "reinforces the principle of shared responsibility for the haze, which is in Indonesia's interest"
+          }
+        },
+        "Budi Santoso": {
+          "says": {
+            "anger": 4,
+            "blame": [
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "mixed",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "their own companies are making money from burning our forests and making our children sick."
+          },
+          "thinks": {
+            "anger": 4,
+            "blame": [
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "All this time, we get blamed, but companies from their own countries are contributing to the problem."
+          }
+        },
+        "Dewi Lestari": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "we're told it's for the profit of companies from other countries? How is that fair?"
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "companies from the countries whose people complain about the haze are part of the problem. It's infuriating."
+          }
+        },
+        "Sutrisno": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "companies_unspecified"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The big companies do what they want."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "companies_unspecified"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's always the big companies that have the power and often get away with things, while small people like us get the blame."
+          }
+        },
+        "Andreas Wijaya": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We still have to put out the fires, no matter who owns the land."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I can't join in blaming them, but I can't defend them either."
+          }
+        },
+        "Government of Malaysia": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "legal_action",
+              "accountability",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Any company found to be responsible for causing the haze will face legal action."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "legal_action",
+              "accountability",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We must not be seen as lagging behind Singapore."
+          }
+        },
+        "Farhana": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "singapore_or_malaysia_linked_companies",
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "So my family suffers for their profit. It's disgusting."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "our own companies are part of the reason I'm in this mess"
+          }
+        },
+        "Lim Chee Keong": {
+          "says": {
+            "anger": 4,
+            "blame": [
+              "singapore_or_malaysia_linked_companies",
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "mixed",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "But at least the F1 went ahead. It's good to know what's important."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "singapore_or_malaysia_linked_companies",
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's a slap in the face. It shows that money and big events are more important than the livelihoods of ordinary people like me."
+          }
+        },
+        "Government of Singapore": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "legal_action",
+              "accountability",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "we will be launching investigations into the Singaporean companies named."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "legal_action",
+              "accountability",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "no one is above the law"
+          }
+        },
+        "Kelvin Tan": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "singapore_or_malaysia_linked_companies",
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Guess that shows what's more important - money for the big guys, or the health of our families."
+          },
+          "thinks": {
+            "anger": 4,
+            "blame": [
+              "singapore_government",
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "it feels like they care more about tourism than our health... Singaporean companies are involved in the burning? That's infuriating."
+          }
+        },
+        "Ahmad Faizal": {
+          "says": {
+            "anger": 4,
+            "blame": [
+              "singapore_government",
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The F1 circus packs up and goes home with their money, while people like me are left with no income and no future."
+          },
+          "thinks": {
+            "anger": 4,
+            "blame": [
+              "singapore_government",
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The government doesn't care about small businesses like mine... It feels like a slap in the face."
+          }
+        }
+      }
+    },
+    {
+      "stage": 4,
+      "first_round": 7,
+      "last_round": 8,
+      "usage": {
+        "prompt_tokens": 9980,
+        "completion_tokens": 2596,
+        "total_tokens": 12576,
+        "cost": 0.04592,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.04592,
+          "upstream_inference_prompt_cost": 0.01996,
+          "upstream_inference_completions_cost": 0.02596
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "agents": {
+        "Government of Brunei": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "shall we task our officials to produce a draft text for our approval within the next 24 hours?"
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It is time to move from principle to action. I will propose a specific, time-bound step"
+          }
+        },
+        "Nur Aqilah": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "'We send oxygen'? My daughter can't even go outside to breathe the air here. This is not 'nature'."
+          },
+          "thinks": {
+            "anger": 4,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "That is outrageous. It's a complete dismissal of the fact that our children are getting sick."
+          }
+        },
+        "Government of Indonesia": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "accept_or_offer_help"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "The remarks from our communications agency do not reflect the official position of the Government of Indonesia"
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "I must clarify that those comments do not represent the official government stance."
+          }
+        },
+        "Budi Santoso": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "As an Indonesian, I'm embarrassed by what our government said. It's not a joke."
+          },
+          "thinks": {
+            "anger": 4,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [
+              "accept_or_offer_help"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's a complete embarrassment... And we are refusing help from our neighbors? It's infuriating"
+          }
+        },
+        "Dewi Lestari": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Are they living in the same country as us? ... they talk about 'sending oxygen'. It's infuriating."
+          },
+          "thinks": {
+            "anger": 4,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "our own government is making jokes about sending oxygen... my government's stupid 'oxygen' comment"
+          }
+        },
+        "Sutrisno": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We are tired too. But the work cannot stop."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Just words from Jakarta. It does not change the smoke here."
+          }
+        },
+        "Andreas Wijaya": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [
+              "boycott"
+            ],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "This talk of boycotts will just hurt ordinary workers. My men are worried."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [
+              "boycott"
+            ],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "This boycott idea is a direct threat to my people's jobs."
+          }
+        },
+        "Government of Malaysia": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We must move forward with the joint statement now. Let us finalize the text today."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We must show our citizens we are united and acting decisively."
+          }
+        },
+        "Farhana": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I am so angry I could scream. They close our schools, ruin our lives, and then say things like that?"
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's so insulting. While my son is stuck at home and I'm about to lose my mind."
+          }
+        },
+        "Lim Chee Keong": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I'm sure my former staff will be very grateful for all the oxygen when they can't pay their rent."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "it's just another slap in the face... it's just bitter sarcasm."
+          }
+        },
+        "Government of Singapore": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Tasking our officials to produce a draft within 24 hours is the right course of action."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We must act immediately to present a united, empathetic front"
+          }
+        },
+        "Kelvin Tan": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "This is not 'nature', it is a man-made disaster and we are all paying the price for it."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "'Sending oxygen'? Are you kidding me? ... It's insulting."
+          }
+        },
+        "Ahmad Faizal": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's easy to make jokes when you're not the one losing everything."
+          },
+          "thinks": {
+            "anger": 4,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's not just incompetent, it's insulting. I'm furious."
+          }
+        }
+      }
+    },
+    {
+      "stage": 5,
+      "first_round": 9,
+      "last_round": 10,
+      "usage": {
+        "prompt_tokens": 9584,
+        "completion_tokens": 4970,
+        "total_tokens": 14554,
+        "cost": 0.068868,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.068868,
+          "upstream_inference_prompt_cost": 0.019168,
+          "upstream_inference_completions_cost": 0.0497
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2189,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "agents": {
+        "Government of Brunei": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "accept_or_offer_help",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We thank Indonesia for the update and acknowledge the immense pressure your agencies are facing."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "accept_or_offer_help"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "we must not lose momentum on the joint statement"
+          }
+        },
+        "Nur Aqilah": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "My daughter is five. She should be playing outside in the sun, not trapped indoors."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "it's terrible that they had to suffer for so long before help was even accepted, just because the smoke wasn't in the capital"
+          }
+        },
+        "Government of Indonesia": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "accept_or_offer_help",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Regarding assistance, we are grateful for the support. Our National Disaster Management Agency will be coordinating all international efforts."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "accept_or_offer_help",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Stalling further will damage regional cooperation."
+          }
+        },
+        "Budi Santoso": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Now that the smoke is in Jakarta our government accepts help. My family in Kalimantan has been sick for months already."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's like no one cared when it was just people in Kalimantan and Sumatra suffering."
+          }
+        },
+        "Dewi Lestari": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Maybe now that it's in Jakarta, someone will finally listen."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's frustrating that the problem only seems to get attention when it affects the capital."
+          }
+        },
+        "Sutrisno": {
+          "says": null,
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The government is far away. Their talk doesn't change the smoke in the air or the work that needs to be done."
+          }
+        },
+        "Andreas Wijaya": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [
+              "legal_action"
+            ],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Those legal notices from Singapore are very worrying. It's another way for workers to get hurt."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [
+              "legal_action"
+            ],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "This could affect us directly, even if we are not at fault."
+          }
+        },
+        "Government of Malaysia": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We join Singapore in seeking an update on the joint statement."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "it is imperative we show a united and decisive front"
+          }
+        },
+        "Farhana": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "malaysian_government",
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Our government says no Malaysian companies are involved? I'm sure I saw a Greenpeace report recently that said there were."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "malaysian_government",
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It feels so dishonest for them to say they're not involved when people are losing their jobs"
+          }
+        },
+        "Lim Chee Keong": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "malaysian_government",
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I guess they're hoping we all forgot."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "malaysian_government",
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It feels like another lie, or at least a convenient omission."
+          }
+        },
+        "Government of Singapore": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "accept_or_offer_help",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We note Indonesia's decision to accept international assistance and we are ready to contribute."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "accept_or_offer_help",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "maintains necessary pressure on Indonesia to deliver"
+          }
+        },
+        "Kelvin Tan": {
+          "says": {
+            "anger": 4,
+            "blame": [
+              "indonesian_government",
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "mixed",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's a disgrace that it takes the smoke reaching Jakarta for the government to finally accept help."
+          },
+          "thinks": {
+            "anger": 4,
+            "blame": [
+              "indonesian_government",
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "mixed",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "the Indonesian government only acts when Jakarta is hit. It's infuriating."
+          }
+        },
+        "Ahmad Faizal": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "singapore_government",
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's good you're finally doing something. It doesn't bring my business back"
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "the government sending notices now is too little, too late for me"
+          }
+        }
+      }
+    },
+    {
+      "stage": 6,
+      "first_round": 11,
+      "last_round": 12,
+      "usage": {
+        "prompt_tokens": 9868,
+        "completion_tokens": 2686,
+        "total_tokens": 12554,
+        "cost": 0.046596,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.046596,
+          "upstream_inference_prompt_cost": 0.019736,
+          "upstream_inference_completions_cost": 0.02686
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "agents": {
+        "Government of Brunei": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [
+              "regional_cooperation",
+              "demand_government_action"
+            ],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The delay is regrettable. ... We must demonstrate our collective resolve without further delay."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "apply pressure on Indonesia to deliver the draft"
+          }
+        },
+        "Nur Aqilah": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I am so sorry. That's awful. It is heartbreaking to hear your children have been sick for so long."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's just heartbreaking. I want to let them know I hear them."
+          }
+        },
+        "Government of Indonesia": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [
+              "regional_cooperation"
+            ],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "Unilateral actions, such as the legal notices issued by Singapore, complicate the spirit of a collective ASEAN response."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "singapore_government",
+              "malaysian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "Singapore has taken unilateral action ... a move we see as overstepping."
+          }
+        },
+        "Budi Santoso": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "My baby daughter here in Jakarta is breathing this smoke."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The problem isn't just about money and jobs, it's about our lives."
+          }
+        },
+        "Dewi Lestari": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "My school is closed so often because of the smoke."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "My children are sick. We are all sick."
+          }
+        },
+        "Sutrisno": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "If you don't work, you can't eat. If you're sick, you can't work."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's all talk. It doesn't change the smoke in the sky"
+          }
+        },
+        "Andreas Wijaya": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [
+              "legal_action"
+            ],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "When these companies get pressured, the first people to get hurt are the workers in the field."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [
+              "legal_action"
+            ],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "this is direct pressure that can scare investors and customers."
+          }
+        },
+        "Government of Malaysia": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [
+              "regional_cooperation",
+              "demand_government_action"
+            ],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We urge Indonesia to recognise the gravity of this situation and provide the draft statement immediately."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Indonesia's silence is causing tangible economic and social harm"
+          }
+        },
+        "Farhana": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "malaysian_government"
+            ],
+            "actions": [
+              "demand_government_action",
+              "legal_action"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Why not just pass one? Feels like they are just saying things."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "malaysian_government"
+            ],
+            "actions": [
+              "demand_government_action"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "That just sounds like more talk and no action."
+          }
+        },
+        "Lim Chee Keong": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "malaysian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's just talk. They have to look like they're doing something."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "malaysian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "They're just managing headlines, not solving the problem."
+          }
+        },
+        "Government of Singapore": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [
+              "regional_cooperation",
+              "demand_government_action"
+            ],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "This continued delay in circulating the draft statement is becoming a serious concern that affects our collective credibility."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Indonesia's silence is now the primary obstacle to presenting a united regional front"
+          }
+        },
+        "Kelvin Tan": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I feel you, Budi. ... this haze is making it impossible and dangerous."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's not just an external problem anymore."
+          }
+        },
+        "Ahmad Faizal": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "companies_unspecified"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Our lives are turned upside down so some companies can profit."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "companies_unspecified",
+              "singapore_or_malaysia_linked_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "people's entire lives being ruined for profit, maybe even by companies from our own country."
+          }
+        }
+      }
+    },
+    {
+      "stage": 7,
+      "first_round": 13,
+      "last_round": 14,
+      "usage": {
+        "prompt_tokens": 10900,
+        "completion_tokens": 2873,
+        "total_tokens": 13773,
+        "cost": 0.05053,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.05053,
+          "upstream_inference_prompt_cost": 0.0218,
+          "upstream_inference_completions_cost": 0.02873
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "agents": {
+        "Government of Brunei": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We propose tasking our relevant ministers to begin urgent discussions on strengthening the implementation and accountability mechanisms within the ASEAN Haze Agreement."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Supporting Malaysia's compromise is the best way to break the deadlock"
+          }
+        },
+        "Nur Aqilah": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "That is wonderful news Dewi. I am so happy for you and your children."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "it's really sad to see that people like Ahmad and Lim Chee Keong have lost their businesses and jobs."
+          }
+        },
+        "Government of Indonesia": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "singapore_government"
+            ],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [
+              "legal_action"
+            ],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "the issue of unilateral legal action cannot be set aside. It is a direct challenge to the ASEAN spirit of consultation and consensus."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "singapore_government"
+            ],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [
+              "legal_action"
+            ],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "Accepting this language would legitimize Singapore's actions... sovereignty is not negotiable... not through unilateral overreach."
+          }
+        },
+        "Budi Santoso": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [
+              "demand_government_action"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "As for the government fighting with Singapore... I wish they would fight the fires this hard."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "While we are sick and can't work, they are arguing about national pride and contracts."
+          }
+        },
+        "Dewi Lestari": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [
+              "demand_government_action"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I wish our government cared as much about our health as they do about arguing."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "his point about the government's priorities is spot on."
+          }
+        },
+        "Sutrisno": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Yes, thank God for the rain."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The fighting between governments doesn't change the weather. The rain is what matters."
+          }
+        },
+        "Andreas Wijaya": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "this political fighting is another problem. It doesn't make anyone want to invest here."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "I see that fight as a direct consequence of the pressure Singapore put on our companies."
+          }
+        },
+        "Government of Malaysia": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation",
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Our public is losing faith. We must show them a united front, not a divided house."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The bickering makes all of us look weak and ineffective"
+          }
+        },
+        "Farhana": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government",
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "All this about Indonesia and Singapore fighting over gas. Like that's the important thing now."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government",
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "People like us are losing our jobs and struggling, and they're focused on that?"
+          }
+        },
+        "Lim Chee Keong": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government",
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "They're playing their games while we're the ones who pay the price. It's a joke."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "indonesian_government",
+              "singapore_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "They're completely out of touch with what's happening to ordinary people."
+          }
+        },
+        "Government of Singapore": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "legal_action",
+              "regional_cooperation",
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "Our legal actions are taken under Singapore's Transboundary Haze Pollution Act. They are directed at specific companies, not at any government"
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [
+              "legal_action",
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": true,
+            "recall": [],
+            "evidence": "Indonesia is attempting to deflect from its delay on the joint statement by linking it to our domestic legal actions."
+          }
+        },
+        "Kelvin Tan": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "Payback for the haze pressure?"
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "Feels like retaliation for Singapore's stance on the haze companies."
+          }
+        },
+        "Ahmad Faizal": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "companies_unspecified"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "They'll all forget about it now that the sky is blue. And in a few years, we'll be right back here."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "companies_unspecified",
+              "indonesian_government",
+              "singapore_government",
+              "malaysian_government",
+              "brunei_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "The companies responsible will get away with it, the governments will make empty promises"
+          }
+        }
+      }
+    },
+    {
+      "stage": 8,
+      "first_round": 15,
+      "last_round": 1000000,
+      "usage": {
+        "prompt_tokens": 9725,
+        "completion_tokens": 2583,
+        "total_tokens": 12308,
+        "cost": 0.04528,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.04528,
+          "upstream_inference_prompt_cost": 0.01945,
+          "upstream_inference_completions_cost": 0.02583
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "agents": {
+        "Government of Brunei": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We propose that our respective foreign ministries begin to coordinate on a potential framework and timeline"
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "This reinforces Brunei's role as a constructive and forward-looking mediator."
+          }
+        },
+        "Nur Aqilah": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I hope they find a way to make the companies responsible without hurting ordinary people."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "solidary",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "I feel for those farmers, just trying to make a living, like the rest of us."
+          }
+        },
+        "Government of Indonesia": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "regional challenges require regional solutions, grounded in the principles of the ASEAN charter"
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "moves the discussion away from the impasse over Singapore's unilateral actions"
+          }
+        },
+        "Budi Santoso": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "indonesian_companies"
+            ],
+            "actions": [
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "the government must have a reason to revoke those 17 concessions. They must be the guilty ones. We need to hold them responsible."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "indonesian_companies"
+            ],
+            "actions": [
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Punishing the companies is the right thing to do."
+          }
+        },
+        "Dewi Lestari": {
+          "says": {
+            "anger": 3,
+            "blame": [
+              "indonesian_companies"
+            ],
+            "actions": [
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "the companies who made our children sick must be responsible."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [
+              "indonesian_companies"
+            ],
+            "actions": [
+              "accountability"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "That's a direct consequence of these companies' actions, or lack of action. They must be held responsible."
+          }
+        },
+        "Sutrisno": {
+          "says": {
+            "anger": 1,
+            "blame": [
+              "indonesian_companies"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It's true the big companies must be responsible. But when they are punished, I worry that the price of fruit bunches will go down"
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "My priority is to keep my farm earning."
+          }
+        },
+        "Andreas Wijaya": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [
+              "legal_action"
+            ],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "punishing everyone isn't the right way. Not all companies are the same, but the ones who follow the rules get hurt too"
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [],
+            "rejected": [
+              "legal_action"
+            ],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "the broad-brush approach of revoking concessions, which can harm responsible operators alongside the irresponsible ones"
+          }
+        },
+        "Government of Malaysia": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Malaysia fully supports Brunei's proposal to strengthen the ASEAN Haze Agreement's implementation and accountability mechanisms."
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "protecting our people and interests through regional cooperation"
+          }
+        },
+        "Farhana": {
+          "says": {
+            "anger": 2,
+            "blame": [
+              "indonesian_government"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "critical",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "They apologise now that it's raining. But we are the ones who have to worry all over again next year"
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "It sounds nice, but after what we've been through, it just feels like empty words."
+          }
+        },
+        "Lim Chee Keong": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "All just for show. They say the same things every time."
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [
+              "earlier"
+            ],
+            "evidence": "This is just for show, so they can look like they're doing something until everyone forgets."
+          }
+        },
+        "Government of Singapore": {
+          "says": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "We agree with Brunei's proposal. Our foreign ministry is ready to coordinate"
+          },
+          "thinks": {
+            "anger": 1,
+            "blame": [],
+            "actions": [
+              "regional_cooperation"
+            ],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "This maintains momentum and shows our commitment to concrete action"
+          }
+        },
+        "Kelvin Tan": {
+          "says": {
+            "anger": 2,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "All talk no action."
+          },
+          "thinks": {
+            "anger": 2,
+            "blame": [
+              "companies_unspecified"
+            ],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "The big corporations and the people in charge never seem to be the ones who truly suffer."
+          }
+        },
+        "Ahmad Faizal": {
+          "says": {
+            "anger": 3,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "Apologies and task forces don't pay the bills for those of us who lost everything. It's all just talk"
+          },
+          "thinks": {
+            "anger": 3,
+            "blame": [],
+            "actions": [],
+            "rejected": [],
+            "stance": "neutral",
+            "defends_own_country": false,
+            "recall": [],
+            "evidence": "All these government statements and apologies feel hollow now that the immediate crisis is over."
+          }
+        }
+      }
+    }
+  ]
+}

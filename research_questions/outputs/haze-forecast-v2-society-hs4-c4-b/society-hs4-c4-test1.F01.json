@@ -1,0 +1,148 @@
+{
+  "rubric": "haze-forecast-coding-v2",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "society-hs4-c4-test1",
+  "doc": "F01",
+  "kind": "society",
+  "usage": {
+    "prompt_tokens": 11239,
+    "completion_tokens": 2387,
+    "total_tokens": 13626,
+    "cost": 0.046348,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.046348,
+      "upstream_inference_prompt_cost": 0.022478,
+      "upstream_inference_completions_cost": 0.02387
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1053,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "partly",
+      "who": "Government of Indonesia",
+      "where": "Round 9 [diplomatic]",
+      "quote": "We appreciate the offers of assistance and are evaluating how external support can best be integrated with our extensive ongoing operations on the ground."
+    },
+    "G2": {
+      "score": "partly",
+      "who": "Government of Indonesia",
+      "where": "Round 9 [diplomatic]",
+      "quote": "our law enforcement is actively pursuing legal action and has already opened investigations into 95 companies"
+    },
+    "G3": {
+      "score": "partly",
+      "who": "Government of Singapore",
+      "where": "Round 9 [public_feed]",
+      "quote": "will not hesitate to take strong action against any companies found responsible for the haze under our Transboundary Haze Pollution Act"
+    },
+    "G4": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G5": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G6": {
+      "score": "partly",
+      "who": "Government of Malaysia",
+      "where": "Round 12 [public_feed]",
+      "quote": "we are pursuing every diplomatic and legal avenue with the utmost urgency to secure clean air for our people"
+    },
+    "G7": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "partly",
+      "who": "Lim Chee Keong (Malaysian citizen)",
+      "where": "Round 11 [public_feed]",
+      "quote": "Boycott the companies setting the fires."
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Budi Santoso (Indonesian citizen)",
+      "where": "Round 12 [public_feed]",
+      "quote": "Due process for the companies. What about us who are breathing the smoke every day? The law is slow."
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Government of Indonesia",
+      "action": "Says it has opened investigations into 95 companies",
+      "quote": "has already opened investigations into 95 companies",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Closes schools in affected areas",
+      "quote": "including the closure of schools in affected areas",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Proposes an urgent virtual meeting on firefighting aid and sharing information on companies; Indonesia, Singapore and Brunei agree",
+      "quote": "Malaysia proposes we convene an urgent virtual meeting within the next 24 hours",
+      "status": "not_real"
+    },
+    {
+      "actor": "Governments of Singapore, Malaysia and Brunei",
+      "action": "Jointly demand that Indonesia hand over the list of companies under investigation",
+      "quote": "We reiterate our joint request for this list.",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia",
+      "action": "Proposes sharing findings only once cases are concluded, then offers a ministers' meeting to set up a confidential protocol for sharing information",
+      "quote": "we propose an immediate virtual meeting between our relevant ministers to establish a secure and confidential protocol for this exchange",
+      "status": "not_real"
+    },
+    {
+      "actor": "Singapore and Malaysian citizens (Kelvin Tan, Nur Aqilah, Lim Chee Keong)",
+      "action": "Campaign to boycott the companies behind the fires",
+      "quote": "The boycott idea is the best one I've heard. It's time they felt this in their wallets.",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore",
+      "action": "Says it will take parallel measures of its own to protect its people",
+      "quote": "This information is urgently needed to allow us to take our own parallel measures to protect our people.",
+      "status": "not_real"
+    },
+    {
+      "actor": "Governments of Singapore and Malaysia",
+      "action": "Offer firefighting assistance to Indonesia",
+      "quote": "Malaysia has also offered direct assistance to Indonesia and we are ready to deploy it.",
+      "status": "not_real"
+    }
+  ]
+}

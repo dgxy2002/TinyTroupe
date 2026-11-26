@@ -1,0 +1,166 @@
+{
+  "rubric": "haze-forecast-coding-v1",
+  "model": "anthropic/claude-sonnet-5.5",
+  "folder": "haze-baseline-c4-v1",
+  "doc": "B10",
+  "kind": "baseline",
+  "usage": {
+    "prompt_tokens": 5207,
+    "completion_tokens": 1645,
+    "total_tokens": 6852,
+    "cost": 0.026864,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.026864,
+      "upstream_inference_prompt_cost": 0.010414,
+      "upstream_inference_completions_cost": 0.01645
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "targets": {
+    "G1": {
+      "score": "partly",
+      "who": "Indonesian government (Prabowo), as predicted",
+      "where": "forecast",
+      "quote": "will now formally invite \"technical experts\" from Malaysia and Singapore to share best practices on peatland fire management, pointedly avoiding the acceptance of aircraft or personnel"
+    },
+    "G2": {
+      "score": "yes",
+      "who": "BNPB / Indonesian government, as predicted",
+      "where": "forecast",
+      "quote": "They will also announce the arrest of 15-20 more individuals, including a mid-level manager from one of the investigated plantation companies."
+    },
+    "G3": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G4": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G5": {
+      "score": "partly",
+      "who": "Malaysian PM Anwar Ibrahim, as predicted",
+      "where": "forecast",
+      "quote": "begin an immediate audit of the Malaysian companies named in the Greenpeace report"
+    },
+    "G6": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G7": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G8": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "G9": {
+      "score": "no",
+      "who": "",
+      "where": "",
+      "quote": ""
+    },
+    "C1": {
+      "score": "yes",
+      "who": "Malaysian public, as predicted",
+      "where": "forecast",
+      "quote": "The call from the Malaysian MP to boycott will be acted upon immediately."
+    },
+    "C2": {
+      "score": "partly",
+      "who": "Citizens and NGOs in Pekanbaru and Palangkaraya, as predicted",
+      "where": "forecast",
+      "quote": "Local environmental NGOs in Kalimantan will directly condemn the government's slow response"
+    }
+  },
+  "other_actions": [
+    {
+      "actor": "Government of Singapore",
+      "action": "Cancels or postpones outdoor events and distributes N95 masks to households",
+      "quote": "major outdoor sporting and community events scheduled for the upcoming weekend are to be cancelled or postponed. The government will also activate a plan to distribute N95 masks",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Malaysian Ministry of Education",
+      "action": "Extends school closures in Selangor, KL and Putrajaya until at least 23 Oct",
+      "quote": "will extend the school closures in Selangor, Kuala Lumpur, and Putrajaya until at least 23 October",
+      "status": "real_in_window"
+    },
+    {
+      "actor": "Government of Indonesia (BNPB)",
+      "action": "Deploys 2,000 more military and police personnel and publicises water-bombing sorties",
+      "quote": "deployment of an additional 2,000 military and police personnel to Riau and Central Kalimantan",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia (Zambry)",
+      "action": "Summons Indonesian ambassador and hands over a protest note",
+      "quote": "will summon the Indonesian Ambassador to Malaysia to Wisma Putra to hand over a diplomatic note protesting",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Indonesia (Foreign Ministry)",
+      "action": "Walks back the 'oxygen' comment of an Indonesian official",
+      "quote": "issue a clarifying statement to \"walk back\" Syahganda Nainggolan's \"oxygen\" comment",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia (Anwar)",
+      "action": "Warns of penalties including suspension of operating licences abroad for Malaysian firms",
+      "quote": "warns of penalties, including the potential suspension of operating licenses abroad",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Malaysia",
+      "action": "Declares a state of emergency in Muar or another Johor district",
+      "quote": "will also likely declare a state of emergency in Muar or another badly affected district in Johor",
+      "status": "not_real"
+    },
+    {
+      "actor": "Monetary Authority of Singapore",
+      "action": "Directive reminding financial institutions to review financing of firms implicated in burning",
+      "quote": "issue a directive \"reminding\" financial institutions in Singapore to review their exposure to and financing of companies implicated",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Singapore (MFA)",
+      "action": "Reiterates offer of C-130 aircraft, firefighters and satellite imagery",
+      "quote": "publicly reiterate its standing offer of a C-130 aircraft, a team of firefighters, and high-resolution satellite imagery",
+      "status": "not_real"
+    },
+    {
+      "actor": "Government of Brunei",
+      "action": "Continues home-based learning until 23 Oct and backs a joint ASEAN ministerial statement",
+      "quote": "home-based learning will continue for all schools until at least Friday, 23 October",
+      "status": "not_real"
+    },
+    {
+      "actor": "Malaysian and Singaporean public",
+      "action": "Boycott of companies named in the Greenpeace report",
+      "quote": "Citizen-led economic pressure, such as boycotts, will gain significant traction in Malaysia and Singapore",
+      "status": "not_real"
+    }
+  ]
+}
